@@ -1,5 +1,5 @@
 {
-  "name": "self-provisioning-cities",
+  "name": "self-sustaining-cities",
   "version": "1.0.0",
   "description": "",
   "main": "index.js",
@@ -13,15 +13,15 @@
   },
   "repository": {
     "type": "git",
-    "url": "git+https://github.com/dhmit/boilerplate.git"
+    "url": "git+https://github.com/dhmit/self-sustaining-cities.git"
   },
   "keywords": [],
   "author": "",
   "license": "ISC",
   "bugs": {
-    "url": "https://github.com/dhmit/boilerplate/issues"
+    "url": "https://github.com/dhmit/self-sustaining-cities/issues"
   },
-  "homepage": "https://github.com/dhmit/boilerplate#readme",
+  "homepage": "https://github.com/dhmit/self-sustaining-cities#readme",
   "devDependencies": {
     "@babel/core": "^7.14.6",
     "@babel/preset-env": "^7.14.5",

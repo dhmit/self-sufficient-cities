@@ -5,7 +5,7 @@ const Nav = () => {
 
     return (
         <nav className="navbar navbar-light bg-light navbar-expand-sm">
-            <a className="navbar-brand link-home" href="/">Boilerplate app</a>
+            <a className="navbar-brand link-home" href="/">Self-Sustaining Cities</a>
             <ul className="navbar-nav mr-auto">
                 <li className="nav-item">
                     <a href="/example/1">Example</a>
