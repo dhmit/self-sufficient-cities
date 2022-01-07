@@ -56,3 +56,17 @@ def example(request, example_id=None):
         'component_name': 'ExampleId'
     }
     return render(request, 'index.html', context)
+
+
+def map(request, map_id=None):
+    """
+    Map page
+    """
+
+    context = {
+        'page_metadata': {
+            'title': 'Map page'
+        },
+        'component_name': 'Map'
+    }
+    return render(request, 'index.html', context)
