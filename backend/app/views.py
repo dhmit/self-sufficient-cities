@@ -58,7 +58,7 @@ def example(request, example_id=None):
     return render(request, 'index.html', context)
 
 
-def map(request, map_id=None):
+def map_page(request, map_id=None):
     """
     Map page
     """

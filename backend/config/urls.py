@@ -29,5 +29,5 @@ urlpatterns = [
     path('', views.index),
     path('example/', views.example),
     path('example/<example_id>', views.example),
-    path('map', views.map),
+    path('map', views.map_page),
 ]
