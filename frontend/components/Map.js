@@ -1,57 +1,60 @@
 import {MapContainer, Marker, Popup, TileLayer, Polygon} from "react-leaflet";
 import React from "react";
 
-const TESTDATA = [{
-    location: "Test title",
+const TEST_DATA = [{
+    name: "Test title",
     date: "Test date",
     info: "Test info",
-    position: [38.8051606, -77.0036513],
+    coordinates: [38.8051606, -77.0036513]
 }];
 
-const MAINLOCATION = {
-    position: [38.9051606, -77.0036513],
-    location: "Deanwood neighborhood, Washington DC",
+const MAIN_LOCATION = {
+    name: "Deanwood neighborhood, Washington DC",
     date: "Test date",
     info: "Test info",
+    coordinates: [38.9051606, -77.0036513]
 };
 
-const TESTREGION = [
+const TEST_REGION = [
     [38.8151606, -77.0036513],
     [38.8941606, -77.0036513],
     [38.8051606, -77.0136513],
-    [38.8051606, -77.0006513],
+    [38.8051606, -77.0006513]
 ];
 
 export default class Map extends React.Component {
-    state = {
-        position: [38.9051606, -77.0036513],
-        location: "Deanwood neighborhood, Washington DC"
+    constructor(props) {
+        super(props);
+
+        TEST_DATA.push(MAIN_LOCATION);
+        this.state = {
+            mainLocation: MAIN_LOCATION,
+            markerData: TEST_DATA
+        };
     }
 
     render() {
-        // REMOVE THIS FROM RENDER
-        TESTDATA.push(MAINLOCATION);
-        const markerObjects = TESTDATA.map((x, i) => (
-            <Marker key={i} position={x.position}>
+        const markerObjects = this.state.markerData.map((location, i) => (
+            <Marker key={i} position={location.coordinates}>
                 <Popup>
-                    A pretty CSS3 popup. <br/> Easily customizable.
+                    {location.name}
                 </Popup>
             </Marker>
         ));
 
         return <div id="map">
-            <h1>{this.state.location}</h1>
-            <MapContainer center={this.state.position} zoom={13} scrollWheelZoom={true}>
+            <h1>{this.state.mainLocation.name}</h1>
+            <MapContainer center={this.state.mainLocation.coordinates} zoom={13} scrollWheelZoom={true}>
                 <TileLayer
                     attribution='&copy; <a href="https://www.openstreetmap.org/copyright">OpenStreetMap</a> contributors'
                     url="https://{s}.tile.openstreetmap.org/{z}/{x}/{y}.png"
                 />
                 {markerObjects}
-                <Polygon eventHandlers={{
-                    click: () => {
-                        console.log('marker clicked');
-                    },
-                }} pathOptions={{ color: "purple" }} positions={TESTREGION} />
+                <Polygon
+                    eventHandlers={{click: () => {console.log("marker clicked");}}}
+                    pathOptions={{color: "purple"}}
+                    positions={TEST_REGION}
+                />
             </MapContainer>
         </div>;
     }
