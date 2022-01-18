@@ -1,7 +1,7 @@
 import React, { useContext, useState } from 'react';
 import * as PropTypes from "prop-types";
 import ShowcaseItem from "./ShowcaseItem";
-import { TimelineContext } from '../../contexts/TimelineContext';
+import { TimelineContext } from "../contexts/TimelineContext";
 
 const DocumentShowcase = ({documents, timelineInterval}) => {
     const state = useContext(TimelineContext);
