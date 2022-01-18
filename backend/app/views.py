@@ -70,3 +70,17 @@ def map_page(request, map_id=None):
         'component_name': 'Map'
     }
     return render(request, 'index.html', context)
+
+def timeline(request):
+    """
+    Timeline page
+    """
+
+    context = {
+        'page_metadata': {
+            'title': 'Timeline'
+        },
+        'component_name': 'ZoomTesting'
+    }
+
+    return render(request, 'index.html', context)
