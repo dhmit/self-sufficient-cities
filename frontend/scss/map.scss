@@ -4,4 +4,20 @@
     .leaflet-container {
         height: 100%;
     }
+    width: 90%;
+}
+
+.main-element {
+    height: 400px;
+    display: flex;
+    flex-direction: row;
+    align-content: space-between;
+}
+
+.event-selector {
+    width: 250px;
+}
+
+.event-selector-dropdown {
+    width: 100%;
 }

@@ -1,5 +1,6 @@
 import {MapContainer, Marker, Popup, TileLayer, Polygon} from "react-leaflet";
 import React from "react";
+import DropdownMultiselect from "react-multiselect-dropdown-bootstrap";
 import Grid from "@material-ui/core/Grid";
 import Input from "@material-ui/core/Input";
 import Slider from "@material-ui/core/Slider";
@@ -103,7 +104,8 @@ export default class Map extends React.Component {
             mainLocation: MAIN_LOCATION,
             markerData: TEST_DATA,
             sliderState: [0, 2022],
-            timeRange: [0, 2022]
+            timeRange: [0, 2022],
+            names: ["Australia", "Canada", "USA", "Poland", "Spain", "France"]
         };
     }
 
@@ -173,30 +175,42 @@ export default class Map extends React.Component {
             </Marker>
         ));
 
-        return <div id="map">
+        return (<>
             <h1>{this.state.mainLocation.name}</h1>
-            <MapContainer
-                center={this.state.mainLocation.coordinates} zoom={13} scrollWheelZoom={true}
-            >
-                <TileLayer
-                    attribution='&copy; <a href="https://www.openstreetmap.org/copyright">OpenStreetMap</a> contributors'
-                    url="https://{s}.tile.openstreetmap.org/{z}/{x}/{y}.png"
-                />
-                {markerObjects}
-                <Polygon
-                    eventHandlers={{click: () => {console.log("marker clicked");}}}
-                    pathOptions={{color: "purple"}}
-                    positions={TEST_REGION}
-                />
-            </MapContainer>
-            {timeSlider(
-                "Time Slider",
-                this.state.sliderState,
-                this.state.timeRange,
-                this.handleSliderChange,
-                this.handleSliderInputChange,
-                this.handleSliderBlur
-            )}
-        </div>;
+            <div className="main-element">
+                <div className="event-selector">
+                    <h3 className="event-selector-title">Event Selector</h3>
+                    <DropdownMultiselect
+                        className="event-selector-dropdown"
+                        options={this.state.names}
+                        name="countries"
+                    />
+                </div>
+                <div id="map">
+                    <MapContainer
+                        center={this.state.mainLocation.coordinates} zoom={13} scrollWheelZoom={true}
+                    >
+                        <TileLayer
+                            attribution='&copy; <a href="https://www.openstreetmap.org/copyright">OpenStreetMap</a> contributors'
+                            url="https://{s}.tile.openstreetmap.org/{z}/{x}/{y}.png"
+                        />
+                        {markerObjects}
+                        <Polygon
+                            eventHandlers={{click: () => {console.log("marker clicked");}}}
+                            pathOptions={{color: "purple"}}
+                            positions={TEST_REGION}
+                        />
+                    </MapContainer>
+                    {timeSlider(
+                        "Time Slider",
+                        this.state.sliderState,
+                        this.state.timeRange,
+                        this.handleSliderChange,
+                        this.handleSliderInputChange,
+                        this.handleSliderBlur
+                    )}
+                </div>
+            </div>
+        </>);
     }
 }
