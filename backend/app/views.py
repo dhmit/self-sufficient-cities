@@ -74,7 +74,7 @@ def map_page(request, map_id=None):
 
 def timeline_page(request, timeline_id=None):
     """
-    Map page
+    Timeline page
     """
 
     context = {
