@@ -11,7 +11,7 @@ const Nav = () => {
                     <a href={"/map"}>Map</a>
                 </li>
                 <li className="nav-item mr-2">
-                    <a href={"/example/1"}>Example</a>
+                    <a href={"/timeline"}>Timeline</a>
                 </li>
             </ul>
             <a className="lab-link" href="https://digitalhumanities.mit.edu/" target="_blank"
