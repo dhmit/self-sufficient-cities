@@ -2,7 +2,7 @@
 These view functions and classes implement both standard GET routes and API endpoints.
 
 GET routes produce largely empty HTML pages that expect a React component to attach to them and
-handle most view concerns. You can supply a few pieces of data in the render function's context
+handle most view concerns. You can supply a few pieces of data in the render function's contexts
 argument to support this expectation.
 
 Of particular use are the properties: page_metadata, component_props, and component_name:
@@ -13,7 +13,7 @@ component_name: this should reference the exact name of the React component
 you intend to load onto the page.
 
 Example:
-context = {
+contexts = {
     'page_metadata': {
         'title': 'Example ID page'
     },

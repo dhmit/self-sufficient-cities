@@ -5,7 +5,7 @@ import "bootstrap/dist/css/bootstrap.min.css";
 import Base from "./components/global/Base";
 import ErrorNotFoundComponent from "./components/ErrorNotFoundComponent";
 import ExampleId from "./components/ExampleId";
-import Home from "./components/Home";
+import Home from "./components/Home";j
 import Map from "./components/Map";
 
 const COMPONENT_PROPS_RAW = document.getElementById("component_props").text;
