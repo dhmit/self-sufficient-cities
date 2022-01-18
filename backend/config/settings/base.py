@@ -33,6 +33,7 @@ INSTALLED_APPS = [
     'django.contrib.sessions',
     'django.contrib.messages',
     'django.contrib.staticfiles',
+    'django_extensions',
 
     # 3rd party
     'rest_framework',
@@ -41,6 +42,7 @@ INSTALLED_APPS = [
 
     # our application code
     'app',
+
 ]
 
 MIDDLEWARE = [
@@ -156,4 +158,9 @@ WEBPACK_LOADER = {
         'BUNDLE_DIR_NAME': './assets/bundles/',
         'STATS_FILE': os.path.join(PROJECT_ROOT, 'webpack-stats.json'),
     }
+}
+
+GRAPH_MODELS = {
+    'all_applications': True,
+    'group_models': True,
 }
