@@ -7,7 +7,8 @@ import ErrorNotFoundComponent from "./components/ErrorNotFoundComponent";
 import ExampleId from "./components/ExampleId";
 import Home from "./components/Home";
 import Map from "./components/Map";
-import ZoomTesting from "./components/ZoomTesting";
+// import ZoomTesting from "./components/ZoomTesting";
+import magnifyTest from "./components/magnifyTest";
 
 const COMPONENT_PROPS_RAW = document.getElementById("component_props").text;
 const COMPONENT_NAME_RAW = document.getElementById("component_name").text;
@@ -19,7 +20,8 @@ const COMPONENTS = {
     ExampleId,
     Home,
     Map,
-    ZoomTesting,
+    // ZoomTesting,
+    magnifyTest,
 };
 
 const PreselectedComponent = COMPONENTS[COMPONENT_NAME || "ErrorNotFoundComponent"];

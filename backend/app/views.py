@@ -71,6 +71,7 @@ def map_page(request, map_id=None):
     }
     return render(request, 'index.html', context)
 
+
 def timeline(request):
     """
     Timeline page
@@ -80,7 +81,7 @@ def timeline(request):
         'page_metadata': {
             'title': 'Timeline'
         },
-        'component_name': 'ZoomTesting'
+        'component_name': 'magnifyTest'
     }
 
     return render(request, 'index.html', context)
