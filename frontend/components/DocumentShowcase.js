@@ -1,6 +1,6 @@
 import React, { useContext, useState } from 'react';
 import ShowcaseItem from "./ShowcaseItem";
-import { TimelineContext } from "../contexts/TimelineContext";
+import {Interval, TimelineContext} from "../contexts/TimelineContext";
 import HEAR_CALL_GARDEN from "../images/hear_call_of_the_garden.png";
 import WASHINGTON_BEE_12_3_1910 from "../images/washington_bee_dec_3_1910.png";
 import WASHINGTON_BEE_11_15_1913 from "../images/washington_bee_nov_15_1913.png";
@@ -26,6 +26,16 @@ const DocumentShowcase = () => {
     ]);
 
     const [intervalDocuments, setIntervalDocuments] = useState([]);
+
+    // handles when a user clicks forward in the arrow
+    const handleForward = () => {
+        // console.log(`${state.timelineRange.start} - ${state.timelineRange.end}`);
+        const newStartYear = state.timelineRange.end;
+        const newEndYear = newStartYear + 10;
+        state.setTimelineRange(new Interval(newStartYear, newEndYear));
+        // console.log(`${state.timelineRange.start} - ${state.timelineRange.end}`);
+
+    };
 
     return (
         <div id="document-showcase">

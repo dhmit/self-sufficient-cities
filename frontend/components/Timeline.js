@@ -5,8 +5,8 @@ import Slider from "./Slider";
 
 
 export function Timeline() {
-    const [intervalSelected, setIntervalSelected] = useState(new Interval(0, 0));
-    const [timelineRange, setTimelineRange] = useState(new Interval(0, 0));
+    const [intervalSelected, setIntervalSelected] = useState(new Interval(1910, 1920));
+    const [timelineRange, setTimelineRange] = useState(new Interval(1910, 1920));
     const contextState = {
         intervalSelected,
         timelineRange,
