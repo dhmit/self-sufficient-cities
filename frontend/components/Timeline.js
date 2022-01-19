@@ -7,8 +7,13 @@ import Slider from "./Slider";
 export function Timeline() {
     const [intervalSelected, setIntervalSelected] = useState(new Interval(1910, 1920));
     const [timelineRange, setTimelineRange] = useState(new Interval(1910, 1920));
+    const minYear = '1910';
+    const maxYear = '2022';
+
     const contextState = {
         intervalSelected,
+        maxYear,
+        minYear,
         timelineRange,
         setIntervalSelected,
         setTimelineRange,

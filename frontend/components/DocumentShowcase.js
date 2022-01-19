@@ -27,14 +27,39 @@ const DocumentShowcase = () => {
 
     const [intervalDocuments, setIntervalDocuments] = useState([]);
 
-    // handles when a user clicks forward in the arrow
-    const handleForward = () => {
+    /**
+     * Handles when a user clicks the right arrow to render the next 10-year interval on the
+     * timeline. Returns true if the end year is less than or equal to the max year defined in the
+     * timeline context.
+     */
+    const handleNextInterval = () => {
         // console.log(`${state.timelineRange.start} - ${state.timelineRange.end}`);
         const newStartYear = state.timelineRange.end;
         const newEndYear = newStartYear + 10;
-        state.setTimelineRange(new Interval(newStartYear, newEndYear));
-        // console.log(`${state.timelineRange.start} - ${state.timelineRange.end}`);
+        if (newEndYear <= state.maxYear) {
+            // console.log(`${state.timelineRange.start} - ${state.timelineRange.end}`);
+            state.setTimelineRange(new Interval(newStartYear, newEndYear));
+            return true;
+        }
+        // console.log("not changing!");
+        return false;
+    };
 
+    /**
+     * Handles when a user clicks the left arrow to render the previous interval on the timeline.
+     * Returns true if the start year is greater than or equal to the min year defined in the
+     * timeline context.
+     */
+    const handlePreviousInterval = () => {
+        // console.log(`${state.timelineRange.start} - ${state.timelineRange.end}`);
+        const newEndYear = state.timelineRange.start;
+        const newStartYear = newEndYear - 10;
+        if ( newStartYear >= state.minYear) {
+            state.setTimelineRange(new Interval(newStartYear, newEndYear));
+            // console.log(`${state.timelineRange.start} - ${state.timelineRange.end}`);
+            return true;
+        }
+        return false;
     };
 
     return (
