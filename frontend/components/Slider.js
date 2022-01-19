@@ -12,7 +12,9 @@ for (let i = minY; i < maxY + 1; i++) {
     if (i === minY || i === maxY) {
         marks[i] = <strong>{str}</strong>
     }
-    marks[i] = str
+    else {
+        marks[i] = str
+    }
 }
 
 function log(value) {
@@ -21,7 +23,7 @@ function log(value) {
 
 const Slider = () => {
         return (
-            <div>
+            <div id = "slider">
                 <div style={style}>
                     <p> Timeline Slider </p>
                     <Slider.Range min={minY} max={maxY} marks={marks} step={5} onChange={log}
@@ -31,9 +33,7 @@ const Slider = () => {
         );
 }
 
-export default Slider
-
-
+export default Slider;
 
 
 
