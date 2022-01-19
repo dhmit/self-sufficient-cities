@@ -1,5 +1,6 @@
 import React, {useState} from "react";
 import {Interval, TimelineContext} from "../contexts/TimelineContext";
+import DocumentShowcase from "./DocumentShowcase";
 
 
 export function Timeline() {
@@ -13,6 +14,7 @@ export function Timeline() {
         <React.Fragment>
             <TimelineContext.Provider value={contextState}>
                 <p> This is our timeline! </p>
+                <DocumentShowcase/>
             </TimelineContext.Provider>
         </React.Fragment>
         );

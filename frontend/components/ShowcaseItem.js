@@ -16,7 +16,7 @@ const ShowcaseItem = ({title, date, imageRef}) => {
 
 ShowcaseItem.propTypes = {
     title: PropTypes.string,
-    date: PropTypes.object,
+    date: PropTypes.string,
     imageRef: PropTypes.string,
 };
 
