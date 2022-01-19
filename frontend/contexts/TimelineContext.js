@@ -2,11 +2,14 @@ import React from "react";
 
 // object that represents an interval in the timeline with a start year `start` and end year `end`
 export class Interval {
-  constructor(startYear, endYear) {
-    this.start = startYear;
-    this.end = endYear;
-  }
-}
+    constructor(startYear, endYear) {
+        this.start = startYear;
+        this.end = endYear;
+    };
+    toString() {
+        return `${this.start} - ${this.end}`;
+    }
+};
 
 export const TimelineContext = React.createContext({
     // represents the min and max year the timeline can be

@@ -28,41 +28,66 @@ const DocumentShowcase = () => {
     const [intervalDocuments, setIntervalDocuments] = useState([]);
 
     /**
-     * Handles when a user clicks the right arrow to render the next 10-year interval on the
-     * timeline. Returns true if the end year is less than or equal to the max year defined in the
-     * timeline context.
+     * Returns the next 10-year interval in the timeline. Returns the interval if the end
+     * year is less than or equal to the max year defined in the timeline context. Otherwise,
+     * returns undefined.
      */
-    const handleNextInterval = () => {
-        // console.log(`${state.timelineRange.start} - ${state.timelineRange.end}`);
+    const getNextInterval = () => {
         const newStartYear = state.timelineRange.end;
         const newEndYear = newStartYear + 10;
         if (newEndYear <= state.maxYear) {
-            // console.log(`${state.timelineRange.start} - ${state.timelineRange.end}`);
-            state.setTimelineRange(new Interval(newStartYear, newEndYear));
+            return new Interval(newStartYear, newEndYear);
+        }
+        return undefined;
+    };
+
+    /**
+     * Handles when a user clicks the right arrow to render the next 10-year interval on the
+     * timeline. Returns true if an interval exists. Otherwise, returns false.
+     */
+    const handleNextInterval = () => {
+        const nextInterval = getNextInterval();
+        if (nextInterval) {
+            state.setTimelineRange(nextInterval);
             return true;
         }
-        // console.log("not changing!");
         return false;
     };
 
     /**
-     * Handles when a user clicks the left arrow to render the previous interval on the timeline.
-     * Returns true if the start year is greater than or equal to the min year defined in the
-     * timeline context.
+     * Returns the previous 10-year interval in the timeline. Returns the interval if the start year
+     * is greater than or equal to the min year defined in the timeline context. Otherwise,
+     * returns undefined.
      */
-    const handlePreviousInterval = () => {
-        // console.log(`${state.timelineRange.start} - ${state.timelineRange.end}`);
+    const getPreviousInterval = () => {
         const newEndYear = state.timelineRange.start;
         const newStartYear = newEndYear - 10;
-        if ( newStartYear >= state.minYear) {
-            state.setTimelineRange(new Interval(newStartYear, newEndYear));
-            // console.log(`${state.timelineRange.start} - ${state.timelineRange.end}`);
+        if (newStartYear >= state.minYear) {
+            return new Interval(newStartYear, newEndYear);
+        }
+        return undefined;
+    };
+
+    /**
+     * Handles when a user clicks the left arrow to render the previous interval on the timeline.
+     * Returns true if an interval exists. Otherwise, returns false.
+     */
+    const handlePreviousInterval = () => {
+        const newInterval = getPreviousInterval();
+        if (newInterval) {
+            state.setTimelineRange(newInterval);
             return true;
         }
         return false;
     };
 
     return (
+        <>
+        <button onClick={handlePreviousInterval}> {
+            getPreviousInterval()
+                ? getPreviousInterval().toString()
+                : "don't display, todo"
+        } </button>
         <div id="document-showcase">
             {documents.map((document, index) =>
                 <ShowcaseItem
@@ -74,6 +99,13 @@ const DocumentShowcase = () => {
                 />
             )}
         </div>
+            <button onClick={handleNextInterval}> {
+                getNextInterval()
+                    ? getNextInterval().toString()
+                    : "don't display, todo"
+            }
+            </button>
+        </>
     );
 };
 
