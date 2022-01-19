@@ -3,7 +3,7 @@ import * as PropTypes from "prop-types";
 import ShowcaseItem from "./ShowcaseItem";
 import { TimelineContext } from "../contexts/TimelineContext";
 
-const DocumentShowcase = ({timelineInterval}) => {
+const DocumentShowcase = () => {
     const state = useContext(TimelineContext);
     const [documents, setDocuments] = useState([
         {
@@ -40,10 +40,6 @@ const DocumentShowcase = ({timelineInterval}) => {
             </ul>
         </div>
     );
-};
-
-DocumentShowcase.propTypes = {
-    timelineInterval: PropTypes.object,
 };
 
 export default DocumentShowcase;
