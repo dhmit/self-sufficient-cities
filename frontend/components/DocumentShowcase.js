@@ -29,9 +29,9 @@ const DocumentShowcase = () => {
 
     return (
         <div id="document-showcase">
-            {documents.map((document) =>
+            {documents.map((document, index) =>
                 <ShowcaseItem
-                    key={document.toString()}
+                    key={`${document.toString()}_${index}`}
                     value={document}
                     title={document.title}
                     date={document.date}
