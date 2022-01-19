@@ -3,8 +3,26 @@ import * as PropTypes from "prop-types";
 import ShowcaseItem from "./ShowcaseItem";
 import { TimelineContext } from "../contexts/TimelineContext";
 
-const DocumentShowcase = ({documents, timelineInterval}) => {
+const DocumentShowcase = ({timelineInterval}) => {
     const state = useContext(TimelineContext);
+    const [documents, setDocuments] = useState([
+        {
+            title: "HEAR CALL OF THE GARDEN",
+            date: "March 6, 1914",
+            imageRef: "../images/hear_call_of_the_garden.png",
+        },
+        {
+            title: "Washington Bee",
+            date: "March 6, 1914",
+            imageRef: "../images/hear_call_of_the_garden.png",
+        },
+        {
+            title: "Washington Bee",
+            date: "March 6, 1914",
+            imageRef: "../images/hear_call_of_the_garden.png",
+        },
+    ]);
+
     const [intervalDocuments, setIntervalDocuments] = useState([]);
 
     return (
@@ -25,7 +43,6 @@ const DocumentShowcase = ({documents, timelineInterval}) => {
 };
 
 DocumentShowcase.propTypes = {
-    documents: PropTypes.array,
     timelineInterval: PropTypes.object,
 };
 
