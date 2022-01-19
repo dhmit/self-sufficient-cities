@@ -24,6 +24,11 @@ context = {
 }
 """
 from django.shortcuts import render
+from rest_framework.decorators import api_view
+from rest_framework.response import Response
+
+from .models import Person
+from .serializers import PersonSerializer
 
 
 def index(request):
@@ -70,3 +75,11 @@ def map_page(request, map_id=None):
         'component_name': 'Map'
     }
     return render(request, 'index.html', context)
+
+@api_view(['POST'])
+def create_person(request):
+    attributes = request.data
+
+    new_person_obj = Person.objects.create(**attributes)
+    serializer = PersonSerializer(new_person_obj)
+    return Response(serializer.data)

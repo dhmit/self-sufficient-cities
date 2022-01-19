@@ -15,7 +15,7 @@ class Person(models.Model):
     last_name = models.CharField(max_length=32)
     ethnicity = models.CharField(max_length=32, blank=True)
     date_of_birth = models.DateField()
-    country_of_origin = models.CharField(max_length=64)
+    country_of_origin = models.CharField(max_length=64) #May one to restrict to 2 character # country CODES
 
 
 class Event(models.Model):
