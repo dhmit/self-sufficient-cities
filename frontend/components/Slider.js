@@ -19,19 +19,19 @@ function log(value) {
   console.log(value);
 }
 
-export default class Slider extends React.component {
-    render() {
+const Slider = () => {
         return (
             <div>
                 <div style={style}>
                     <p> Timeline Slider </p>
-                    <Slider.Range min={minY} max={maxY} marks={marks} step={10} onChange={log}
+                    <Slider.Range min={minY} max={maxY} marks={marks} step={5} onChange={log}
                                   defaultValue={[1900, 2000]}/>
                 </div>
             </div>
         );
-    }
 }
+
+export default Slider
 
 
 
