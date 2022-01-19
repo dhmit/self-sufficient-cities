@@ -1,25 +1,27 @@
 import React, { useContext, useState } from 'react';
-import * as PropTypes from "prop-types";
 import ShowcaseItem from "./ShowcaseItem";
 import { TimelineContext } from "../contexts/TimelineContext";
+import HEAR_CALL_GARDEN from "../images/hear_call_of_the_garden.png";
+import WASHINGTON_BEE_12_3_1910 from "../images/washington_bee_dec_3_1910.png";
+import WASHINGTON_BEE_11_15_1913 from "../images/washington_bee_nov_15_1913.png";
 
 const DocumentShowcase = () => {
     const state = useContext(TimelineContext);
     const [documents, setDocuments] = useState([
         {
+            title: "Washington Bee",
+            date: "December 3, 1910",
+            imageRef: WASHINGTON_BEE_12_3_1910,
+        },
+        {
+            title: "Washington Bee",
+            date: "November 15, 1913",
+            imageRef: WASHINGTON_BEE_11_15_1913,
+        },
+        {
             title: "HEAR CALL OF THE GARDEN",
             date: "March 6, 1914",
-            imageRef: "../images/hear_call_of_the_garden.png",
-        },
-        {
-            title: "Washington Bee",
-            date: "March 6, 1914",
-            imageRef: "../images/hear_call_of_the_garden.png",
-        },
-        {
-            title: "Washington Bee",
-            date: "March 6, 1914",
-            imageRef: "../images/hear_call_of_the_garden.png",
+            imageRef: HEAR_CALL_GARDEN,
         },
     ]);
 

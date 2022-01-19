@@ -1,0 +1,9 @@
+#document-showcase {
+    display: flex;
+    justify-content: space-evenly;
+}
+
+.showcase-item {
+    cursor: pointer;
+    height: fit-content;
+}
