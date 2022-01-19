@@ -9,6 +9,10 @@ export class Interval {
 }
 
 export const TimelineContext = React.createContext({
-    'interval': new Interval(0, 0),
-    'setInterval': () => {},
+    // interval that the user selected from the timeline range
+    'intervalSelected': new Interval(0, 0),
+    'setIntervalSelected': () => {},
+    // interval representing the range of years that the timeline shows
+    'timelineRange': new Interval(0, 0),
+    'setTimelineRange': new Interval(0, 0),
 });
