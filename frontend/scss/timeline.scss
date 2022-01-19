@@ -1,9 +1,15 @@
 #document-showcase {
     display: flex;
+    flex-flow: row wrap;
     justify-content: space-evenly;
 }
 
 .showcase-item {
     cursor: pointer;
-    height: fit-content;
+    margin-bottom: 16px;
+    
+    img {
+        width: 15vw;
+        height: 50vh;
+    }
 }
