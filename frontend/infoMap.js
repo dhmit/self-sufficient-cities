@@ -17,5 +17,6 @@ import Map from "./components/Map";
         crossOrigin=""></script>
 
 ReactDOM.Render(
-  <p>hello world!</p>
+    <p>hello world!</p>
+    <div id="map"></div>
 );
