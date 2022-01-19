@@ -31,7 +31,7 @@ const TimeSlider = () => {
                 </div>
             </div>
         );
-}
+};
 
 export default TimeSlider;
 
