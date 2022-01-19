@@ -8,12 +8,12 @@ const minY = 1910;
 const maxY = 1920;
 
 for (let i = minY; i < maxY + 1; i++) {
-    const str = String(i)
+    const str = String(i);
     if (i === minY || i === maxY) {
-        marks[i] = <strong>{str}</strong>
+        marks[i] = <strong>{str}</strong>;
     }
     else {
-        marks[i] = str
+        marks[i] = str;
     }
 }
 
