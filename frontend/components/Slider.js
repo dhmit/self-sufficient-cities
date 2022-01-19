@@ -21,7 +21,7 @@ function log(value) {
   console.log(value);
 }
 
-const Slider = () => {
+const TimeSlider = () => {
         return (
             <div id = "slider">
                 <div style={style}>
@@ -33,7 +33,7 @@ const Slider = () => {
         );
 }
 
-export default Slider;
+export default TimeSlider;
 
 
 
