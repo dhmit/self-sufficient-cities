@@ -28,8 +28,8 @@ from rest_framework.decorators import api_view
 from rest_framework.response import Response
 from django.shortcuts import get_object_or_404
 
-from .models import Person
-from .serializers import PersonSerializer
+from .models import Person, Event
+from .serializers import PersonSerializer, EventSerializer
 
 
 def index(request):
@@ -77,6 +77,7 @@ def map_page(request, map_id=None):
     }
     return render(request, 'index.html', context)
 
+
 @api_view(['POST'])
 def create_person(request):
     attributes = request.data
@@ -85,15 +86,33 @@ def create_person(request):
     serializer = PersonSerializer(new_person_obj)
     return Response(serializer.data)
 
+
 @api_view(['GET'])
 def get_people(request):
     people = Person.objects.order_by('first_name')
-    serializer = PersonSerializer(people,many=True)
+    serializer = PersonSerializer(people, many=True)
     return Response(serializer.data)
 
+
 @api_view(['GET'])
-def get_person(request,**keywords):
+def get_person(request, **keywords):
     print(keywords)
-    person = get_list_or_404(Person,**keywords)
-    serializer = PersonSerializer(person,many=True)
+    person = get_list_or_404(Person, **keywords)
+    serializer = PersonSerializer(person, many=True)
+    return Response(serializer.data)
+
+
+@api_view(['POST'])
+def create_event(request):
+    attributes = request.data
+
+    new_event_obj = Event.objects.create(**attributes)
+    serializer = EventSerializer(new_event_obj)
+    return Response(serializer.data)
+
+
+@api_view(['GET'])
+def get_event(request):
+    event = Event.objects.order_by('name')
+    serializer = EventSerializer(event, many=True)
     return Response(serializer.data)

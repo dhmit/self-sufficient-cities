@@ -4,10 +4,9 @@ Models for the Self-Sustaining Cities web app.
 
 from django.db import models
 
-
 class Location(models.Model):
     name = models.CharField(max_length=128)
-    # coordinates = models.Polygon()
+    #coordinates = models.Polygon()
 
 
 class Person(models.Model):
