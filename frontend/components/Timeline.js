@@ -33,12 +33,8 @@ export function Timeline() {
     }, []);
 
     const minYear = '1910';
-<<<<<<< HEAD
-    const maxYear = '2020';
+    const maxYear = '2020'; // todo (ang) : make this 2022
 
-=======
-    const maxYear = '2022';
->>>>>>> 9612154b5253b3c2085563270583bbfbaa25f66b
     const contextState = {
         intervalSelected,
         maxYear,
