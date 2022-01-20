@@ -98,3 +98,17 @@ def map_micro_page(request):
         'component_name': 'MapMicro'
     }
     return render(request, 'index.html', context)
+
+
+def timeline_test(request):
+    """
+    Testing Page for loading timeline modal
+    """
+
+    context = {
+        'page_metadata': {
+            'title': 'Timeline Modal Test'
+        },
+        'component_name': 'TimelineTest'
+    }
+    return render(request, 'index.html', context)
