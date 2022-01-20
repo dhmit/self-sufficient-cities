@@ -12,10 +12,14 @@
 
 :global(.carousel-control-next){
     align-items: flex-end;
+    margin-top: auto;
+    height: 5vh;
 }
 
 :global(.carousel-control-prev){
     align-items: flex-end;
+    margin-top:auto;
+    height: 5vh;
 }
 
 .articleHeight {
