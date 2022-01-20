@@ -105,14 +105,18 @@ export function TimelineArrow({isLeft}) {
                         <i
                             className="bi-chevron-compact-left arrow-icon"
                             style={{
-                                paddingRight: onMouseOver ? '10px' : '0px',
+                                paddingRight: onMouseOver
+                                    ? '10px'
+                                    : '0px',
                             }}
                         />
                         :
                         <i
                             className="bi-chevron-compact-right arrow-icon"
                             style={{
-                                paddingLeft: onMouseOver ? '10px' : '0px',
+                                paddingLeft: onMouseOver
+                                    ? '10px'
+                                    : '0px',
                             }}
                         />
                 }
