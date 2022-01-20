@@ -105,7 +105,7 @@ function timeSlider(
 }
 
 
-export default class Map extends React.Component {
+export default class MapMicro extends React.Component {
     constructor(props) {
         super(props);
 
