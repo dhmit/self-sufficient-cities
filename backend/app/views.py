@@ -74,7 +74,7 @@ def map_page(request, map_id=None):
 
 def timeline(request):
     """
-    Timeline page
+    Timeline Zoom testing page
     """
 
     context = {
@@ -82,6 +82,21 @@ def timeline(request):
             'title': 'Timeline'
         },
         'component_name': 'magnifyTest'
+    }
+
+    return render(request, 'index.html', context)
+
+
+def timeline_modal(request):
+    """
+    Timeline modal testing page
+    """
+
+    context = {
+        'page_metadata': {
+            'title': 'Timeline Modal'
+        },
+        'component_name': 'TimelineTest'
     }
 
     return render(request, 'index.html', context)

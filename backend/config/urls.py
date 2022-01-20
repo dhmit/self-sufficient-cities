@@ -31,4 +31,5 @@ urlpatterns = [
     path('example/<example_id>', views.example),
     path('map', views.map_page),
     path('timeline', views.timeline),
+    path('timeline-test', views.timeline_modal),
 ]
