@@ -29,7 +29,7 @@ const DocumentShowcase = () => {
     const [intervalDocuments, setIntervalDocuments] = useState([]);
 
     return (
-        <>
+        <div id="showcase">
             <TimelineArrow isLeft={true}/>
             <div id="document-showcase">
                 {documents.map((document, index) =>
@@ -43,7 +43,7 @@ const DocumentShowcase = () => {
                 )}
             </div>
             <TimelineArrow isLeft={false}/>
-        </>
+        </div>
     );
 };
 

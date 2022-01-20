@@ -1,3 +1,9 @@
+#showcase {
+    display: flex;
+    flex-flow: row;
+    justify-content: space-evenly;
+}
+
 #document-showcase {
     display: flex;
     flex-flow: row wrap;
@@ -17,7 +23,8 @@
 .arrow {
     font-size: 5rem;
     background: none;
-    //border: none;
+    margin: auto;
+
 }
 
 .arrow:hover {
