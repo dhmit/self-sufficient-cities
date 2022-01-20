@@ -49,7 +49,23 @@ export function TimelineArrow({isLeft}) {
             : getNextInterval();
         return interval
             ? " " + interval.toString() + " "
-            : "todo: invalid interval";
+            : "";
+    };
+
+    /**
+     * Returns false
+     * if the arrow points to left and the current interval's start year is the min
+     * year possible in the timeline or if the arrow points to right and end year is
+     * the max year possible in the timeline.
+     */
+    const showArrow = () => {
+        if (isLeft && Number(state.intervalSelected.start) === Number(state.minYear)) {
+            return false;
+        }
+        else if (!isLeft && Number(state.intervalSelected.end) === Number(state.maxYear)) {
+            return false;
+        }
+        return true;
     };
 
     /** Event Handling **/
@@ -98,6 +114,9 @@ export function TimelineArrow({isLeft}) {
                     onMouseOut={() => handleOnMouseArrow(false)}
                     onClick={handleOnClickArrow}
                     className="arrow"
+                    style={{
+                        visibility : showArrow() ? 'visible' : 'hidden',
+                    }}
             >
                 {
                     isLeft
