@@ -11,10 +11,10 @@ const Nav = () => {
                     <a href={"/map"}>Map Template</a>
                 </li>
                 <li className="nav-item mr-2">
-                    <a href={"/map-micro"}><b>MapMacro (morning)</b></a>
+                    <a href={"/map-macro"}><b>MapMacro (morning)</b></a>
                 </li>
                 <li className="nav-item mr-2">
-                    <a href={"/map-macro"}><b>MapMicro (afternoon)</b></a>
+                    <a href={"/map-micro"}><b>MapMicro (afternoon)</b></a>
                 </li>
                 <li className="nav-item mr-2">
                     <a href={"/example/1"}>Example</a>
