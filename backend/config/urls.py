@@ -29,5 +29,6 @@ urlpatterns = [
     path('', views.index),
     path('example/', views.example),
     path('example/<example_id>', views.example),
-    path('map', views.map_page),
+    path('map/', views.map_page),
+    path('api/get_census_data/', views.get_census_data)
 ]
