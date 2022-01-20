@@ -157,3 +157,4 @@ webpack-stats.json
 token.pickle
 
 node_modules
+webpack-stats.json

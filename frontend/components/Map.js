@@ -17,7 +17,8 @@ export default class Map extends React.Component {
                 />
                 <Marker position={this.state.position}>
                     <Popup>
-                        A pretty CSS3 popup. <br/> Easily customizable.
+                        <b>Deanwood</b>
+                        <br/> Self-sustaining city until around the 1950s.
                     </Popup>
                 </Marker>
             </MapContainer>
