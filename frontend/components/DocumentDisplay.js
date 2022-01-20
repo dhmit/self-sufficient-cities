@@ -1,4 +1,4 @@
-import React, {useState} from "react";
+import React from "react";
 import * as PropTypes from "prop-types";
 import "bootstrap/dist/css/bootstrap.min.css";
 import TEST_IMAGE from "../images/testing.jpg";
@@ -13,7 +13,7 @@ const DocumentDisplay = ({document}) => {
     // TODO: import magnifying feature and call it with document image from backend
     return(
         <>
-            <img className={STYLES.docImage} src={TEST_IMAGE} />
+            <img className={STYLES.docImage} src={document.image ? document.image : TEST_IMAGE} />
         </>
     );
 
