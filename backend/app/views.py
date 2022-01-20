@@ -83,3 +83,9 @@ def create_person(request):
     new_person_obj = Person.objects.create(**attributes)
     serializer = PersonSerializer(new_person_obj)
     return Response(serializer.data)
+
+@api_view(['GET'])
+def get_person(request):
+    people = Person.objects.order_by('first_name')
+    serializer = PersonSerializer(people,many=True)
+    return Response(serializer.data)

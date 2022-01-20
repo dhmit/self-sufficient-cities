@@ -30,5 +30,6 @@ urlpatterns = [
     path('example/', views.example),
     path('example/<example_id>', views.example),
     path('map', views.map_page),
-    path('api/create_person', views.create_person)
+    path('api/create_person', views.create_person),
+    path('api/get_person', views.get_person)
 ]
