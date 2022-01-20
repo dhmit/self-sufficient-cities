@@ -60,7 +60,7 @@ def example(request, example_id=None):
     return render(request, 'index.html', context)
 
 
-def map_page(request, map_id=None):
+def map_page(request):
     """
     Map page
     """
@@ -70,6 +70,34 @@ def map_page(request, map_id=None):
             'title': 'Map page'
         },
         'component_name': 'Map'
+    }
+    return render(request, 'index.html', context)
+
+
+def map_macro_page(request):
+    """
+    Map page
+    """
+
+    context = {
+        'page_metadata': {
+            'title': 'Map Macro page'
+        },
+        'component_name': 'MapMacro'
+    }
+    return render(request, 'index.html', context)
+
+
+def map_micro_page(request):
+    """
+    Map page
+    """
+
+    context = {
+        'page_metadata': {
+            'title': 'Map Micro page'
+        },
+        'component_name': 'MapMicro'
     }
     return render(request, 'index.html', context)
 

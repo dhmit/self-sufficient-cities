@@ -1,21 +1,10 @@
-import {MapContainer, Marker, Popup, TileLayer, GeoJSON} from "react-leaflet";
+import {MapContainer, Marker, Popup, TileLayer} from "react-leaflet";
 import React from "react";
-import axios from "axios";
-
-const URL = "/api/get_census_data/";
 
 export default class Map extends React.Component {
     state = {
-        position: [38.897665, -76.925919],
+        position: [38.9051606, -77.0036513],
         location: "Deanwood neighborhood, Washington DC",
-        censusdata: {}
-    }
-
-    componentDidMount() {
-        axios.get(URL)
-            .then((res) => {
-                this.setState({censusdata: res.data});
-            });
     }
 
     render() {
@@ -31,9 +20,6 @@ export default class Map extends React.Component {
                         A pretty CSS3 popup. <br/> Easily customizable.
                     </Popup>
                 </Marker>
-                {Object.keys(this.state.censusdata).length > 0 &&
-                    <GeoJSON data={this.state.censusdata}/>
-                }
             </MapContainer>
         </div>;
     }
