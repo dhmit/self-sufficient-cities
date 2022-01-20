@@ -1,12 +1,12 @@
 import React from "react";
 import {MapContainer, Marker, Popup, TileLayer} from "react-leaflet";
+// MORNING TEAM
 
-export default class Map extends React.Component {
+export default class MapMacro extends React.Component {
     state = {
         position: [38.9051606, -77.0036513],
         location: "Deanwood neighborhood, Washington DC"
     }
-// TODO: check if markers can be deterined using coordinates
 
     render() {
         return <div id="map">
@@ -14,8 +14,7 @@ export default class Map extends React.Component {
             <MapContainer center={this.state.position} zoom={13} scrollWheelZoom={true}>
                 <Marker position={this.state.position}>
                     <Popup>
-                        <b>Deanwood</b>
-                        <br/> Self-sustaining city until around the 1950s.
+                        A pretty CSS3 popup. <br/> Easily customizable.
                     </Popup>
                 </Marker>
                 <TileLayer
