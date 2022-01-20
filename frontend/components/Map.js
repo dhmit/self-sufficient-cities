@@ -1,50 +1,21 @@
-import {MapContainer, Marker, Popup, TileLayer} from "react-leaflet";
+import {MapContainer, Marker, Popup, TileLayer, GeoJSON} from "react-leaflet";
 import React from "react";
+import axios from "axios";
 
-// import "calvinmetcalf/leaflet-ajax";
-
-// $.getJSON("usa_adm.geojson",function(data){
-//     // L.geoJson function is used to parse geojson file and load on to map
-//     L.geoJson(data).addTo(newMap);
-// });
-// const DCTractsGeoJson = new L.GeoJSON.AJAX("tl_2021_11_tract.geojson");
-// const DCTractsGeoJson = L.geoJson("tl_2021_11_tract.geojson");
-// console.log(L.geoJson("tl_2021_11_tract.geojson"));
-
-
-// $.ajax({
-//     type: "POST",
-//     url: "tl_2021_11_tract.geojson",
-//     dataType: 'json',
-//     success: function (response) {
-//         let DCTractsGeoJson = L.geoJson(response);
-//         console.log(DCTractsGeoJson);
-//     }
-// });
-
-// fetch("frontend/components/tl_2021_11_tract.geojson", {
-//     method: 'get'
-// }).then(function(response){
-//     // success
-//     console.log(response);
-//     });
-
-// Using Axios?????????
-
-// let xhr = new XMLHttpRequest();
-// xhr.open('GET', 'tl_2021_11_tract.geojson');
-// xhr.setRequestHeader('Content-Type', 'application/json');
-// xhr.responseType = 'json';
-// xhr.onload = function() {
-//     if (xhr.status !== 200) return;
-//     console.log(xhr.response);
-// };
-// xhr.send();
+const URL = "/api/get_census_data/";
 
 export default class Map extends React.Component {
     state = {
-        position: [38.9051606, -77.0036513],
-        location: "Deanwood neighborhood, Washington DC"
+        position: [38.897665, -76.925919],
+        location: "Deanwood neighborhood, Washington DC",
+        censusdata: {}
+    }
+
+    componentDidMount() {
+        axios.get(URL)
+            .then((res) => {
+                this.setState({censusdata: res.data});
+            });
     }
 
     render() {
@@ -60,6 +31,9 @@ export default class Map extends React.Component {
                         A pretty CSS3 popup. <br/> Easily customizable.
                     </Popup>
                 </Marker>
+                {Object.keys(this.state.censusdata).length > 0 &&
+                    <GeoJSON data={this.state.censusdata}/>
+                }
             </MapContainer>
         </div>;
     }
