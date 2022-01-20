@@ -8,6 +8,8 @@ import * as PropTypes from "prop-types";
  */
 export function TimelineArrow({isLeft}) {
     const state = useContext(TimelineContext);
+    // controls the status when a user hovers over an arrow
+    const [onMouseOver, setOnMouseOver] = useState(false);
 
     /**
      * Returns the next 10-year interval in the timeline. Returns the interval if the end
@@ -63,20 +65,58 @@ export function TimelineArrow({isLeft}) {
         return false;
     };
 
+    const handleArrowMouseOver = () => {
+        setOnMouseOver(true);
+    };
+
+    const handleArrowMouseOut = () => {
+        setOnMouseOver(false);
+    };
+
     return (
         <>
-        {isLeft
-            ?
-            <button onClick={handlePreviousInterval} className="bi-chevron-compact-left arrow">
-                <p className="date">   {" " + (getPreviousInterval()
-                ? getPreviousInterval().toString()
-                : "don't display, todo") + " "} </p>
+            {isLeft ? <button onMouseOver={handleArrowMouseOver}
+                    onMouseOut={handleArrowMouseOut}
+                    onClick={handlePreviousInterval}
+                    className="arrow"
+            >
+                <i
+                    className="bi-chevron-compact-left arrow-icon"
+                    style={{
+                        paddingRight: onMouseOver ? '10px' : '0px',
+                    }}
+                />
+                <p
+                    className="arrow-date"
+                    style={{
+                    color: onMouseOver ? 'black' : 'lightgray',
+                }}>
+                    {" " + (getPreviousInterval()
+                    ? getPreviousInterval().toString()
+                    : "don't display, todo") + " "}
+                </p>
             </button>
             :
-            <button onClick={handleNextInterval} className="bi-chevron-compact-right arrow">
-                <p className="date">   {" " + (getNextInterval()
-                ? getNextInterval().toString()
-                : "don't display, todo") + " "} </p>
+            <button onMouseOver={handleArrowMouseOver}
+                    onMouseOut={handleArrowMouseOut}
+                    onClick={handleNextInterval}
+                    className="arrow"
+            >
+                <i
+                    className="bi-chevron-compact-right arrow-icon"
+                    style={{
+                        paddingLeft: onMouseOver ? '10px' : '0px',
+                    }}
+                />
+                <p
+                    className="arrow-date"
+                    style={{
+                    color: onMouseOver ? 'black' : 'lightgray',
+                }}>
+                    {" " + (getNextInterval()
+                    ? getNextInterval().toString()
+                    : "don't display, todo") + " "}
+                </p>
             </button>
         }
         </>
