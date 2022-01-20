@@ -3,7 +3,7 @@ import Slider from 'rc-slider';
 import * as PropTypes from "prop-types";
 import 'rc-slider/assets/index.css';
 
-const style = {width: 1800, margin: 25};
+const style = {width: 1600, margin: 40};
 const marks = {};
 const minY = 1910;
 const maxY = 2000;
@@ -18,15 +18,20 @@ for (let i = minY; i < maxY + 1; i += 5) {
     }
 }
 
+let leftVal = 1910;
+let rightVal = 1915;
+
 function log(value) {
-  console.log(value);
+  leftVal = value[0];
+  rightVal = value[1];
+  console.log([leftVal, rightVal]);
 }
 
 const TimeSlider = ({leftEnd, rightEnd}) => {
         return (
             <div id = "slider">
                 <div style={style}>
-                    <Slider.Range min={minY} max={maxY} marks={marks} step={1} onChange={log}
+                    <Slider.Range min={minY} max={maxY} dots={true} marks={marks} step={1} onChange={log}
                                   defaultValue={[leftEnd, rightEnd]} />
                 <div id = "line-break">
                     <br/>
