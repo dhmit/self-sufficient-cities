@@ -105,7 +105,10 @@ def map_micro_page(request):
 ########## API Views ##########
 
 def get_census_data(request):
-    with open("app/data/2021_11_tract78.geojson") as f:
+    """
+    API endpoint for getting the census data in json format
+    """
+    with open("app/data/2021_11_tract78.geojson", encoding="utf-8") as f:
         census_data = json.load(f)
 
     return JsonResponse(census_data)
