@@ -1,12 +1,13 @@
 import React, { useContext, useState } from 'react';
 import ShowcaseItem from "./ShowcaseItem";
-import { TimelineContext } from "../contexts/TimelineContext";
+// import {Interval, TimelineContext} from "../contexts/TimelineContext";
 import HEAR_CALL_GARDEN from "../images/hear_call_of_the_garden.png";
 import WASHINGTON_BEE_12_3_1910 from "../images/washington_bee_dec_3_1910.png";
 import WASHINGTON_BEE_11_15_1913 from "../images/washington_bee_nov_15_1913.png";
+import {TimelineArrow} from "./TimelineArrow";
 
 const DocumentShowcase = () => {
-    const state = useContext(TimelineContext);
+    // const state = useContext(TimelineContext);
     const [documents, setDocuments] = useState([
         {
             title: "Washington Bee",
@@ -28,16 +29,20 @@ const DocumentShowcase = () => {
     const [intervalDocuments, setIntervalDocuments] = useState([]);
 
     return (
-        <div id="document-showcase">
-            {documents.map((document) =>
-                <ShowcaseItem
-                    key={document.toString()}
-                    value={document}
-                    title={document.title}
-                    date={document.date}
-                    imageRef={document.imageRef}
-                />
-            )}
+        <div id="showcase">
+            <TimelineArrow isLeft={true}/>
+            <div id="document-showcase">
+                {documents.map((document, index) =>
+                    <ShowcaseItem
+                        key={`${document.toString()}_${index}`}
+                        value={document}
+                        title={document.title}
+                        date={document.date}
+                        imageRef={document.imageRef}
+                    />
+                )}
+            </div>
+            <TimelineArrow isLeft={false}/>
         </div>
     );
 };
