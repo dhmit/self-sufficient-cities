@@ -10,6 +10,7 @@ import STYLES from "./DocumentDisplay.module.scss";
  */
 const DocumentDisplay = ({document}) => {
 
+    // TODO: import magnifying feature and call it with document image from backend
     return(
         <>
             <img className={STYLES.docImage} src={TEST_IMAGE} />

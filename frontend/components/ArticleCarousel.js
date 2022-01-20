@@ -7,13 +7,15 @@ import STYLE from "./ArticleCarousel.module.scss";
  * Displays the articles in the document in carousel-style.
  *
  * @param articles list of articles being displayed
- * @param setArticle the current article being shown
+ * @param setArticle the current article being shown (for future add-on that has the document
+ * image zoom in to displayed article)
  */
 const ArticleCarousel = ({articles, setArticle}) => {
     const [index, setIndex] = useState(0);
 
     const handleSelect = (selectedIndex) => {
         setIndex(selectedIndex);
+        setArticle(selectedIndex);
     };
 
     return(
