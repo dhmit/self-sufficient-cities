@@ -1,19 +1,19 @@
 import React, {useState} from "react";
 import * as PropTypes from "prop-types";
 import "bootstrap/dist/css/bootstrap.min.css";
-import Image from "react-bootstrap/Image";
+import TEST_IMAGE from "../images/testing.jpg";
+import STYLES from "./DocumentDisplay.module.scss";
 /**
  * Displays the Document and provides an option to zoom in
  * @param document document metadata (title, etc.)
  *
  */
-const DocumentDisplay = (document) => {
+const DocumentDisplay = ({document}) => {
 
     return(
-        <div>
-            <h1>{document.title}</h1>
-            <Image src='{Imagepath}' />
-        </div>
+        <>
+            <img className={STYLES.docImage} src={TEST_IMAGE} />
+        </>
     );
 
 };

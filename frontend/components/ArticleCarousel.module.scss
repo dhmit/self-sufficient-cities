@@ -1,4 +1,23 @@
-.carousel-item img {
-    width: 100%;
-    height: 100%;
+:global(.carousel) {
+    height: inherit;
+}
+
+:global(.carousel-inner) {
+    height: inherit;
+}
+
+:global(.carousel-item) {
+    height: 90%;
+}
+
+:global(.carousel-control-next){
+    align-items: flex-end;
+}
+
+:global(.carousel-control-prev){
+    align-items: flex-end;
+}
+
+.articleHeight {
+    height: inherit;
 }

@@ -1,8 +1,7 @@
 import React, {useState} from "react";
 import * as PropTypes from "prop-types";
 import {Carousel} from "react-bootstrap";
-import TEST_BACKGROUND from "../images/test.jpg";
-
+import STYLE from "./ArticleCarousel.module.scss";
 
 /**
  * Displays the articles in the document in carousel-style.
@@ -18,15 +17,12 @@ const ArticleCarousel = ({articles, setArticle}) => {
     };
 
     return(
-        <Carousel activeIndex={index} onSelect={handleSelect} interval={null}>
+        <Carousel variant="dark" activeIndex={index} onSelect={handleSelect} interval={null}>
             {
                 articles.map((article, i) => (
                     <Carousel.Item key={i}>
-                        <img src={TEST_BACKGROUND}/>
-                        <Carousel.Caption>
-                            <h1>{article.title}</h1>
-                            <p>{article.text}</p>
-                        </Carousel.Caption>
+                        <h3 className="text-center">{article.title}</h3>
+                        <p className={`overflow-scroll ${STYLE.articleHeight}`}>{article.text}</p>
                     </Carousel.Item>
                 ))
             }
