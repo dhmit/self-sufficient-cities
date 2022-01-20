@@ -67,27 +67,18 @@ export function TimelineArrow({isLeft}) {
         <>
         {isLeft
             ?
-            <button className="bi-chevron-compact-left arrow">
+            <button onClick={handlePreviousInterval} className="bi-chevron-compact-left arrow">
                 <p className="date">   {" " + (getPreviousInterval()
                 ? getPreviousInterval().toString()
                 : "don't display, todo") + " "} </p>
             </button>
             :
-            <button onClick={handleNextInterval}> {
-                getNextInterval()
-                    ? getNextInterval().toString()
-                    : "don't display, todo"
-            }
+            <button onClick={handleNextInterval} className="bi-chevron-compact-right arrow">
+                <p className="date">   {" " + (getNextInterval()
+                ? getNextInterval().toString()
+                : "don't display, todo") + " "} </p>
             </button>
         }
-        {/*</div>*/}
-        {/*<button onClick={handlePreviousInterval} className="btn btn-primary">*/}
-        {/*    {*/}
-        {/*        " " + (getPreviousInterval()*/}
-        {/*        ? getPreviousInterval().toString()*/}
-        {/*        : "don't display, todo") + " "*/}
-        {/*    }*/}
-        {/*</button>*/}
         </>
     );
 };
