@@ -14,6 +14,7 @@ const DocumentDisplay = (document) => {
             <h1>{document.title}</h1>
             <Image src='{Imagepath}' />
         </div>
+    );
 
 };
 
