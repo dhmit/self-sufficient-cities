@@ -24,25 +24,13 @@
     font-size: 5rem;
     background: none;
     margin: auto;
-
+    border: none;
 }
 
-.arrow:hover {
-    padding-left: 1px;
+.arrow-icon {
+    color: black;
 }
 
-.date {
+.arrow-date {
     font-size: 1rem;
-    color: lightgray;
-}
-
-.date:hover {
-    color: darkblue;
-    padding: 0px;
-}
-
-.col {
-    display: flex;
-    flex-direction: column;
-    align-items: center;
 }
