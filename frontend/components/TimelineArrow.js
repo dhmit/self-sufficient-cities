@@ -17,7 +17,7 @@ export function TimelineArrow({isLeft}) {
      * returns undefined.
      */
     const getNextInterval = () => {
-        const newStartYear = state.timelineRange.end;
+        const newStartYear = state.intervalSelected.end;
         const newEndYear = newStartYear + 10;
         if (newEndYear <= state.maxYear) {
             return new Interval(newStartYear, newEndYear);
@@ -32,7 +32,7 @@ export function TimelineArrow({isLeft}) {
     const handleNextInterval = () => {
         const nextInterval = getNextInterval();
         if (nextInterval) {
-            state.setTimelineRange(nextInterval);
+            state.setIntervalSelected(nextInterval);
             return true;
         }
         return false;
@@ -44,7 +44,7 @@ export function TimelineArrow({isLeft}) {
      * returns undefined.
      */
     const getPreviousInterval = () => {
-        const newEndYear = state.timelineRange.start;
+        const newEndYear = state.intervalSelected.start;
         const newStartYear = newEndYear - 10;
         if (newStartYear >= state.minYear) {
             return new Interval(newStartYear, newEndYear);
@@ -59,7 +59,7 @@ export function TimelineArrow({isLeft}) {
     const handlePreviousInterval = () => {
         const newInterval = getPreviousInterval();
         if (newInterval) {
-            state.setTimelineRange(newInterval);
+            state.setIntervalSelected(newInterval);
             return true;
         }
         return false;
