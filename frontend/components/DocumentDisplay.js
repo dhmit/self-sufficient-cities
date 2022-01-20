@@ -18,7 +18,7 @@ const DocumentDisplay = (document) => {
 };
 
 DocumentDisplay.propTypes = {
-    document: PropTypes.object,
+    document: PropTypes.object
 };
 
 export default DocumentDisplay;
