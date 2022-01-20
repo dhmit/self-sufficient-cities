@@ -4,7 +4,7 @@ import React from "react";
 export default class Map extends React.Component {
     state = {
         position: [38.9051606, -77.0036513],
-        location: "Deanwood neighborhood, Washington DC",
+        location: "Deanwood neighborhood, Washington DC"
     }
 
     render() {
