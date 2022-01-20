@@ -29,5 +29,7 @@ urlpatterns = [
     path('', views.index),
     path('example/', views.example),
     path('example/<example_id>', views.example),
-    path('map', views.map_page),
+    path('map/', views.map_page),
+    path('map-macro/', views.map_macro_page),
+    path('map-micro/', views.map_micro_page),
 ]

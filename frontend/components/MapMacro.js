@@ -1,7 +1,8 @@
 import React from "react";
 import {MapContainer, Marker, Popup, TileLayer} from "react-leaflet";
+// MORNING TEAM
 
-export default class Map extends React.Component {
+export default class MapMacro extends React.Component {
     state = {
         position: [38.9051606, -77.0036513],
         location: "Deanwood neighborhood, Washington DC"
