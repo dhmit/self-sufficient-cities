@@ -15,7 +15,7 @@ Including another URL configuration
     2. Add a URL to urlpatterns:  path('blog/', include('blog.urls'))
 """
 from django.contrib import admin
-from django.urls import path
+from django.urls import path, re_path
 
 try:
     from ..app import views
@@ -31,5 +31,10 @@ urlpatterns = [
     path('example/<example_id>', views.example),
     path('map', views.map_page),
     path('api/create_person', views.create_person),
-    path('api/get_person', views.get_person)
+    path('api/get_all_people', views.get_people),
+    re_path(r'^api\/get_person\/(?P<first_name>[a-zA-Z0-9_]+)/(?P<last_name>[a-zA-Z0-9_]+)$',
+            views.get_person),
+
+    re_path(r'^api\/get_person\/(?P<country_of_origin>[a-zA-Z0-9_]+)$',
+            views.get_person)
 ]

@@ -23,9 +23,10 @@ context = {
     'component_name': 'ExampleId'
 }
 """
-from django.shortcuts import render
+from django.shortcuts import render, get_list_or_404
 from rest_framework.decorators import api_view
 from rest_framework.response import Response
+from django.shortcuts import get_object_or_404
 
 from .models import Person
 from .serializers import PersonSerializer
@@ -85,7 +86,14 @@ def create_person(request):
     return Response(serializer.data)
 
 @api_view(['GET'])
-def get_person(request):
+def get_people(request):
     people = Person.objects.order_by('first_name')
     serializer = PersonSerializer(people,many=True)
+    return Response(serializer.data)
+
+@api_view(['GET'])
+def get_person(request,**keywords):
+    print(keywords)
+    person = get_list_or_404(Person,**keywords)
+    serializer = PersonSerializer(person,many=True)
     return Response(serializer.data)
