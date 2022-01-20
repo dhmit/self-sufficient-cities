@@ -6,6 +6,9 @@ import WASHINGTON_BEE_12_3_1910 from "../images/washington_bee_dec_3_1910.png";
 import WASHINGTON_BEE_11_15_1913 from "../images/washington_bee_nov_15_1913.png";
 import {TimelineArrow} from "./TimelineArrow";
 
+
+
+
 const DocumentShowcase = () => {
     // const state = useContext(TimelineContext);
     const [documents, setDocuments] = useState([
@@ -25,6 +28,7 @@ const DocumentShowcase = () => {
             imageRef: HEAR_CALL_GARDEN,
         },
     ]);
+
 
     const [intervalDocuments, setIntervalDocuments] = useState([]);
 

@@ -9,7 +9,6 @@ export function Timeline() {
     const [timelineRange, setTimelineRange] = useState(new Interval(1910, 1920));
     const minYear = '1910';
     const maxYear = '2022';
-
     const contextState = {
         intervalSelected,
         maxYear,
@@ -29,3 +28,4 @@ export function Timeline() {
         </React.Fragment>
         );
 }
+
