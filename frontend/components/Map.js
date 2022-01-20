@@ -5,21 +5,21 @@ const TESTDATA = [{
     location: "Test title",
     date: "Test date",
     info: "Test info",
-    position: [38.8051606, -77.0036513],
+    position: [38.8051606, -77.0036513]
 }];
 
 const MAINLOCATION = {
     position: [38.9051606, -77.0036513],
     location: "Deanwood neighborhood, Washington DC",
     date: "Test date",
-    info: "Test info",
+    info: "Test info"
 };
 
 const TESTREGION = [
     [38.8151606, -77.0036513],
     [38.8941606, -77.0036513],
     [38.8051606, -77.0136513],
-    [38.8051606, -77.0006513],
+    [38.8051606, -77.0006513]
 ];
 
 export default class Map extends React.Component {
@@ -48,9 +48,9 @@ export default class Map extends React.Component {
                 {markerObjects}
                 <Polygon eventHandlers={{
                     click: () => {
-                        console.log('marker clicked');
-                    },
-                }} pathOptions={{ color: "purple" }} positions={TESTREGION} />
+                        console.log("marker clicked");
+                    }
+                }} pathOptions={{color: "purple"}} positions={TESTREGION}/>
             </MapContainer>
         </div>;
     }
