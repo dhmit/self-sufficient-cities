@@ -1,6 +1,6 @@
 import React, {useContext} from "react";
 import Slider from "rc-slider";
-import {Interval, TimelineContext} from "../contexts/TimelineContext";
+import {TimelineContext} from "../contexts/TimelineContext";
 import "rc-slider/assets/index.css";
 
 /**
