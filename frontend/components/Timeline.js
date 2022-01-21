@@ -1,7 +1,7 @@
 import React, {useEffect, useState} from "react";
 import {Interval, TimelineContext} from "../contexts/TimelineContext";
 import DocumentShowcase from "./DocumentShowcase";
-import Slider from "./Slider";
+import {TimelineSlider} from "./TimelineSlider";
 import HEAR_CALL_GARDEN from "../images/hear_call_of_the_garden.png";
 import WASHINGTON_BEE_12_3_1910 from "../images/washington_bee_dec_3_1910.png";
 import WASHINGTON_BEE_11_15_1913 from "../images/washington_bee_nov_15_1913.png";
@@ -61,7 +61,7 @@ export function Timeline() {
         <React.Fragment>
             <TimelineContext.Provider value={contextState}>
                 <p> This is our timeline! </p>
-                <Slider/>
+                <TimelineSlider/>
                 <DocumentShowcase documents={documents} />
             </TimelineContext.Provider>
         </React.Fragment>

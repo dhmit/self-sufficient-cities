@@ -31,7 +31,7 @@ function log(value) {
 
 
 
-const TimeSlider = ({leftEnd, rightEnd}) => {
+export const TimelineSlider = ({leftEnd, rightEnd}) => {
         const state = useContext(TimelineContext);
         /*function change() {
             const interval = new Interval(leftVal, rightVal);
@@ -50,17 +50,16 @@ const TimeSlider = ({leftEnd, rightEnd}) => {
         );
 };
 
-TimeSlider.defaultProps = {
+TimelineSlider.defaultProps = {
     leftEnd: 1910,
     rightEnd: 1915
 };
 
-TimeSlider.propTypes = {
+TimelineSlider.propTypes = {
     leftEnd: PropTypes.number.isRequired,
     rightEnd: PropTypes.number.isRequired,
 };
 
-export default TimeSlider;
 export {leftVal, rightVal};
 
 
