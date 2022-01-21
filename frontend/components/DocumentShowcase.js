@@ -1,4 +1,4 @@
-import React, { useEffect, useContext, useState } from 'react';
+import React, {useEffect, useContext, useState} from "react";
 import ShowcaseItem from "./ShowcaseItem";
 import {TimelineArrow} from "./TimelineArrow";
 import {TimelineContext} from "../contexts/TimelineContext";
@@ -31,17 +31,16 @@ const DocumentShowcase = ({documents}) => {
         <div id="showcase">
             <TimelineArrow isLeft={true}/>
             <div id="document-showcase">
-                {intervalDocuments.length > 0 ?
-                    intervalDocuments.map((document, index) =>
-                    <ShowcaseItem
-                        key={`${document.toString()}_${index}`}
-                        value={document}
-                        title={document.title}
-                        date={document.date}
-                        imageRef={document.imageRef}
-                    />)
-                    :
-                    <p className="empty-message">No documents to display for this interval</p>
+                {intervalDocuments.length > 0 
+                    ? intervalDocuments.map((document, index) =>
+                        <ShowcaseItem
+                            key={`${document.toString()}_${index}`}
+                            value={document}
+                            title={document.title}
+                            date={document.date}
+                            imageRef={document.imageRef}
+                        />)
+                    : <p className="empty-message">No documents to display for this interval</p>
                 }
             </div>
             <TimelineArrow isLeft={false}/>
@@ -50,7 +49,7 @@ const DocumentShowcase = ({documents}) => {
 };
 
 DocumentShowcase.propTypes = {
-    documents: PropTypes.array,
+    documents: PropTypes.array
 };
 
 export default DocumentShowcase;
