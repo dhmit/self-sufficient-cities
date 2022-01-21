@@ -23,7 +23,9 @@ context = {
     'component_name': 'ExampleId'
 }
 """
+import json
 from django.shortcuts import render
+from django.http import JsonResponse
 
 
 def index(request):
@@ -112,3 +114,14 @@ def timeline_test(request):
         'component_name': 'TimelineTest'
     }
     return render(request, 'index.html', context)
+
+########## API Views ##########
+
+def get_census_data(request):
+    """
+    API endpoint for getting the census data in json format
+    """
+    with open("app/data/2021_11_tract78.geojson", encoding="utf-8") as f:
+        census_data = json.load(f)
+
+    return JsonResponse(census_data)
