@@ -1,5 +1,5 @@
-import React from "react";
 import {MapContainer, Marker, Popup, TileLayer} from "react-leaflet";
+import React from "react";
 
 export default class Map extends React.Component {
     state = {
@@ -11,17 +11,17 @@ export default class Map extends React.Component {
     render() {
         return <div id="map">
             <h1>{this.state.location}</h1>
-            <MapContainer center={this.state.position} zoom={13} scrollWheelZoom={true}>
+            <MapContainer center={this.state.position} zoom={13} scrollWheelZoom={false}>
+                <TileLayer
+                    attribution='&copy; <a href="https://www.openstreetmap.org/copyright">OpenStreetMap</a> contributors'
+                    url="https://{s}.tile.openstreetmap.org/{z}/{x}/{y}.png"
+                />
                 <Marker position={this.state.position}>
                     <Popup>
                         <b>Deanwood</b>
                         <br/> Self-sustaining city until around the 1950s.
                     </Popup>
                 </Marker>
-                <TileLayer
-                    attribution='&copy; <a href="https://www.openstreetmap.org/copyright">OpenStreetMap</a> contributors'
-                    url="https://{s}.tile.openstreetmap.org/{z}/{x}/{y}.png"
-                />
             </MapContainer>
         </div>;
     }

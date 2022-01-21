@@ -45,6 +45,7 @@
     "webpack-dev-server": "^3.11.2"
   },
   "dependencies": {
+    "axios": "^0.25.0",
     "bootstrap": "^4.6.0",
     "css-loader": "^5.2.6",
     "leaflet": "^1.7.1",
