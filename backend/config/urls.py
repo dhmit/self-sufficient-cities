@@ -32,9 +32,6 @@ urlpatterns = [
     path('map', views.map_page),
     path('api/create_person', views.create_person),
     path('api/get_all_people', views.get_people),
-    re_path(r'^api\/get_person\/(?P<first_name>[a-zA-Z0-9_]+)/(?P<last_name>[a-zA-Z0-9_]+)$',
-            views.get_person),
-
-    re_path(r'^api\/get_person\/(?P<country_of_origin>[a-zA-Z0-9_]+)$',
-            views.get_person)
+    path('api/get_person/<search_string>', views.get_person) # search_string is in the format
+    # <attribute1_name>:<attribute1_value>|<attribute2_name>:<attribute2_value>|<...>
 ]

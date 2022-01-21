@@ -27,6 +27,7 @@ from django.shortcuts import render, get_list_or_404
 from rest_framework.decorators import api_view
 from rest_framework.response import Response
 from django.shortcuts import get_object_or_404
+import datetime
 
 from .models import Person
 from .serializers import PersonSerializer
@@ -92,8 +93,23 @@ def get_people(request):
     return Response(serializer.data)
 
 @api_view(['GET'])
-def get_person(request,**keywords):
-    print(keywords)
-    person = get_list_or_404(Person,**keywords)
+def get_person(request, search_string):
+    search_list = search_string.split("|")
+    search_dict = {}
+    for substring in search_list:
+        pair = substring.split(":") # pair[0] is the exact name of a Person attribute, and pair[
+        # 1] is its value
+
+        if pair[0] == "date_of_birth":
+            # Convert the string representing the birthdate into the datetime datatype
+            birthdate = [int(n) for n in pair[1].split("-")]
+            value = datetime.datetime(*birthdate)
+        else:
+            value = pair[1]
+
+        # Add the name-value pair to the dictionary
+        search_dict[pair[0]] = value
+
+    person = get_list_or_404(Person,**search_dict)
     serializer = PersonSerializer(person,many=True)
     return Response(serializer.data)
