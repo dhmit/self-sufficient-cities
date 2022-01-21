@@ -16,18 +16,18 @@ export function Timeline() {
         {
             title: "Washington Bee",
             date: "December 3, 1910",
-            imageRef: WASHINGTON_BEE_12_3_1910,
+            imageRef: WASHINGTON_BEE_12_3_1910
         },
         {
             title: "Washington Bee",
             date: "November 15, 1913",
-            imageRef: WASHINGTON_BEE_11_15_1913,
+            imageRef: WASHINGTON_BEE_11_15_1913
         },
         {
             title: "HEAR CALL OF THE GARDEN",
             date: "March 6, 1914",
-            imageRef: HEAR_CALL_GARDEN,
-        },
+            imageRef: HEAR_CALL_GARDEN
+        }
     ]);
 
     useEffect(() => {
@@ -40,15 +40,15 @@ export function Timeline() {
         minYear,
         timelineRange,
         setIntervalSelected,
-        setTimelineRange,
+        setTimelineRange
     };
 
     /**
      * GET request to retrieve documents for timeline
      */
-     const getDocuments = async () => {
+    const getDocuments = async () => {
         try {
-            const response = await fetch('/api/documents');
+            const response = await fetch("/api/documents");
             const data = await response.json();
             setDocuments(data);
         } catch (e) {
@@ -63,6 +63,5 @@ export function Timeline() {
                 <DocumentShowcase documents={documents} />
             </TimelineContext.Provider>
         </React.Fragment>
-        );
+    );
 }
-
