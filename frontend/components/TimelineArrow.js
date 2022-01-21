@@ -109,11 +109,10 @@ export function TimelineArrow({isLeft}) {
     };
 
     return (
-        <>
             <button onMouseOver={() => handleOnMouseArrow(true)}
                     onMouseOut={() => handleOnMouseArrow(false)}
                     onClick={handleOnClickArrow}
-                    className="arrow"
+                    className={isLeft ? 'showcase-arrow-prev' : 'showcase-arrow-next'}
                     style={{
                         visibility : showArrow() ? 'visible' : 'hidden',
                     }}
@@ -147,7 +146,6 @@ export function TimelineArrow({isLeft}) {
                     { getIntervalText() }
                 </p>
             </button>
-        </>
     );
 };
 
