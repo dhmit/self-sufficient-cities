@@ -31,10 +31,8 @@ function log(value) {
 export const TimelineSlider = () => {
     const state = useContext(TimelineContext);
     const marks = getMarks(state.minYear, state.maxYear);
-    /*function change() {
-        const interval = new Interval(leftVal, rightVal);
-        state.setTimelineRange(interval);
-    }*/
+
+
     return (
         <Slider.Range
             className="timeline-slider"
