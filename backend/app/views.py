@@ -126,18 +126,22 @@ def create_event(request):
     Required keys in body of request for successfully adding people:
         - name
         - date
-        - location (linked to Location table)
+        - locations (linked to Location table)
         - people (linked to Person table)
     """
     attributes = request.data
+    print(attributes)
 
-    new_event_obj = Event.objects.create(**attributes)
+    converted_attributes = {k: v for k, v in attributes.items() if k in ['name', 'date']}
+    print(converted_attributes)
+
+    new_event_obj = Event.objects.create(**converted_attributes)
     serializer = EventSerializer(new_event_obj)
     return Response(serializer.data)
 
 
 @api_view(['GET'])
-def get_event(request):
+def get_event(request, **keywords):
     """
     API endpoint for pulling up all events from the Event table
     """
