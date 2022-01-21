@@ -4,6 +4,12 @@
     justify-content: space-evenly;
     flex-grow: 2;
     margin: 0px 64px;
+
+    .empty-message {
+        position: fixed;
+        top: 40vh;
+        font-size: 2rem;
+    }
 }
 
 .showcase-item {
