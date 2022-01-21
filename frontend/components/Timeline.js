@@ -60,7 +60,6 @@ export function Timeline() {
     return (
         <React.Fragment>
             <TimelineContext.Provider value={contextState}>
-                <p> This is our timeline! </p>
                 <TimelineSlider/>
                 <DocumentShowcase documents={documents} />
             </TimelineContext.Provider>
