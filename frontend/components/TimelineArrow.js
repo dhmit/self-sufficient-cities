@@ -1,4 +1,4 @@
-import React, {useContext, useState} from 'react';
+import React, {useContext} from "react";
 import {Interval, TimelineContext} from "../contexts/TimelineContext";
 import * as PropTypes from "prop-types";
 
@@ -8,8 +8,6 @@ import * as PropTypes from "prop-types";
  */
 export function TimelineArrow({isLeft}) {
     const state = useContext(TimelineContext);
-    // controls the status when a user hovers over an arrow
-    const [onMouseOver, setOnMouseOver] = useState(false);
 
     /**
      * Returns the next 5-year interval in the timeline. Returns the interval if the end
@@ -70,7 +68,7 @@ export function TimelineArrow({isLeft}) {
 
     /** Event Handling **/
 
-      /**
+    /**
      * Handles when a user clicks the right arrow to render the next 10-year interval on the
      * timeline. Returns true if an interval exists. Otherwise, returns false.
      */
@@ -103,40 +101,32 @@ export function TimelineArrow({isLeft}) {
             : handleNextInterval();
     };
 
-    // handles event where a user hovers over the arrow
-    const handleOnMouseArrow = (isMouseOver) => {
-        setOnMouseOver(isMouseOver);
-    };
-
     return (
-            <button onMouseOver={() => handleOnMouseArrow(true)}
-                    onMouseOut={() => handleOnMouseArrow(false)}
-                    onClick={handleOnClickArrow}
-                    className={`showcase-arrow
-                    ${isLeft
-                        ? "showcase-arrow-prev"
-                        : "showcase-arrow-next"}`}
-                    style={{
-                        visibility : showArrow()
-                            ? 'visible'
-                            : 'hidden',
-                    }}
+        <button onClick={handleOnClickArrow} className={`showcase-arrow
+                ${isLeft
+                    ? "showcase-arrow-prev"
+                    : "showcase-arrow-next"}`}
+                style={{
+                    visibility : showArrow()
+                        ? "visible"
+                        : "hidden"
+                }}
+        >
+            <i
+                className={`arrow-icon
+                ${isLeft
+                    ? "bi-chevron-compact-left"
+                    : "bi-chevron-compact-right"}`}
+            />
+            <p
+                className="arrow-date"
             >
-                <i
-                    className={`arrow-icon
-                    ${isLeft
-                        ? "bi-chevron-compact-left"
-                        : "bi-chevron-compact-right"}`}
-                />
-                <p
-                    className="arrow-date"
-                >
-                    { getIntervalText() }
-                </p>
-            </button>
+                { getIntervalText() }
+            </p>
+        </button>
     );
 };
 
 TimelineArrow.propTypes = {
-    isLeft: PropTypes.bool.isRequired,
+    isLeft: PropTypes.bool.isRequired
 };
