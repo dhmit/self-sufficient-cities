@@ -8,8 +8,10 @@ import WASHINGTON_BEE_11_15_1913 from "../images/washington_bee_nov_15_1913.png"
 
 
 export function Timeline() {
-    const [intervalSelected, setIntervalSelected] = useState(new Interval(1910, 1915));
-    const [timelineRange, setTimelineRange] = useState(new Interval(1910, 2020));
+    const maxYear = 2020; // todo ang: make 2022
+    const minYear = 1910;
+    const [intervalSelected, setIntervalSelected] = useState(new Interval(minYear, minYear + 5));
+    const [timelineRange, setTimelineRange] = useState(new Interval(minYear, maxYear));
     const [documents, setDocuments] = useState([
         {
             title: "Washington Bee",
@@ -31,9 +33,6 @@ export function Timeline() {
     useEffect(() => {
         // WHEN BACKEND READY: getDocuments();
     }, []);
-
-    const minYear = 1910;
-    const maxYear = 2020; // todo (ang) : make this 2022
 
     const contextState = {
         intervalSelected,
