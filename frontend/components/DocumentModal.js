@@ -74,7 +74,7 @@ const DocumentModal = ({id, modalShow, toggleHide}) => {
                 {document === null
                     ? <div>Loading document...</div>
                     : <div className="row h-100">
-                        <div className="col-6 col-height">
+                        <div className="col-6 col-height article-carousel">
                             <ArticleCarousel articles={document.articles}
                                 setArticle={setActiveArticle}/>
                         </div>

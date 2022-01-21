@@ -18,7 +18,8 @@ const ArticleCarousel = ({articles, setArticle}) => {
     };
 
     return(
-        <Carousel variant="dark" activeIndex={index} onSelect={handleSelect} interval={null}>
+        <Carousel variant="dark" activeIndex={index}
+            onSelect={handleSelect} interval={null}>
             {
                 articles.map((article, i) => (
                     <Carousel.Item key={i}>
