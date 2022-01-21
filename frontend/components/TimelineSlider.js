@@ -4,11 +4,9 @@ import {Interval, TimelineContext} from "../contexts/TimelineContext";
 import * as PropTypes from "prop-types";
 import 'rc-slider/assets/index.css';
 
-const style = {width: 1375, margin: 0};
 const marks = {};
 const minY = 1910;
 const maxY = 2000;
-
 
 for (let i = minY; i < maxY + 1; i += 5) {
     const str = String(i);
@@ -30,7 +28,6 @@ function log(value) {
 }
 
 
-
 export const TimelineSlider = ({leftEnd, rightEnd}) => {
         const state = useContext(TimelineContext);
         /*function change() {
@@ -38,15 +35,11 @@ export const TimelineSlider = ({leftEnd, rightEnd}) => {
             state.setTimelineRange(interval);
         }*/
         return (
-            <div id = "slider">
-                <div style={style}>
-                    <Slider.Range min={minY} max={maxY} dots={true} marks={marks} step={1} onChange={log}
-                                  value = {[state.intervalSelected.start, state.intervalSelected.end]} />
-                <div id = "line-break">
-                    <br/>
-                </div>
-                </div>
-            </div>
+            <Slider.Range
+                className="timeline-slider"
+                min={minY} max={maxY} dots={true} marks={marks} step={1} onChange={log}
+                value = {[state.intervalSelected.start, state.intervalSelected.end]} 
+            />
         );
 };
 
