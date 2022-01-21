@@ -32,20 +32,33 @@ button[class^='showcase-arrow'] {
     padding: 0;
 }
 
-.showcase-arrow-prev {
-    left: 8px;
+button[class^='showcase-arrow']:hover {
+    .arrow-date {
+        color:black;
+    }
+    .bi-chevron-compact-left {
+        padding-right: 10px;
+    }
+    .bi-chevron-compact-right {
+        padding-left: 10px;
+    }
 }
 
-.showcase-arrow-next {
-    right: 8px;
+.arrow-date {
+    font-size: 1rem;
+    color: lightgray;
 }
 
 .arrow-icon {
     color: black;
 }
 
-.arrow-date {
-    font-size: 1rem;
+.showcase-arrow-prev {
+    left: 8px;
+}
+
+.showcase-arrow-next {
+    right: 8px;
 }
 
 .timeline-slider {

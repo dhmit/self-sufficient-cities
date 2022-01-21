@@ -1,4 +1,4 @@
-import React, {useEffect, useState} from "react";
+import React, {useState} from "react";
 import {Interval, TimelineContext} from "../contexts/TimelineContext";
 import DocumentShowcase from "./DocumentShowcase";
 import {TimelineSlider} from "./TimelineSlider";
@@ -8,31 +8,30 @@ import WASHINGTON_BEE_11_15_1913 from "../images/washington_bee_nov_15_1913.png"
 
 
 export function Timeline() {
-    const maxYear = 2020; // todo ang: make 2022
+    // will change to make it 2022
+    const maxYear = 2020;
     const minYear = 1910;
     const [intervalSelected, setIntervalSelected] = useState(new Interval(minYear, minYear + 5));
     const [timelineRange, setTimelineRange] = useState(new Interval(minYear, maxYear));
-    const [documents, setDocuments] = useState([
+    // once backend is ready, we will make a request to the api to retrieve the documents & store
+    // it as state
+    const documents = [
         {
             title: "Washington Bee",
             date: "December 3, 1910",
-            imageRef: WASHINGTON_BEE_12_3_1910,
+            imageRef: WASHINGTON_BEE_12_3_1910
         },
         {
             title: "Washington Bee",
             date: "November 15, 1913",
-            imageRef: WASHINGTON_BEE_11_15_1913,
+            imageRef: WASHINGTON_BEE_11_15_1913
         },
         {
             title: "HEAR CALL OF THE GARDEN",
             date: "March 6, 1914",
-            imageRef: HEAR_CALL_GARDEN,
-        },
-    ]);
-
-    useEffect(() => {
-        // WHEN BACKEND READY: getDocuments();
-    }, []);
+            imageRef: HEAR_CALL_GARDEN
+        }
+    ];
 
     const contextState = {
         intervalSelected,
@@ -40,20 +39,7 @@ export function Timeline() {
         minYear,
         timelineRange,
         setIntervalSelected,
-        setTimelineRange,
-    };
-
-    /**
-     * GET request to retrieve documents for timeline
-     */
-     const getDocuments = async () => {
-        try {
-            const response = await fetch('/api/documents');
-            const data = await response.json();
-            setDocuments(data);
-        } catch (e) {
-            console.log(e);
-        }
+        setTimelineRange
     };
 
     return (
@@ -63,6 +49,5 @@ export function Timeline() {
                 <DocumentShowcase documents={documents} />
             </TimelineContext.Provider>
         </React.Fragment>
-        );
+    );
 }
-
