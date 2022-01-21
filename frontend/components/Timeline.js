@@ -8,7 +8,8 @@ import WASHINGTON_BEE_11_15_1913 from "../images/washington_bee_nov_15_1913.png"
 
 
 export function Timeline() {
-    const maxYear = 2020; // todo ang: make 2022
+    // will change to make it 2022
+    const maxYear = 2020;
     const minYear = 1910;
     const [intervalSelected, setIntervalSelected] = useState(new Interval(minYear, minYear + 5));
     const [timelineRange, setTimelineRange] = useState(new Interval(minYear, maxYear));
