@@ -61,10 +61,10 @@ function sliderInput(value, bound, defaultRange, inputChangeFunc, sliderBlurFunc
 
 
 function timeSlider(
-    sliderName, currentRange, defaultRange, sliderChangeFunc, inputChangeFunc, sliderBlurFunc
+    sliderName, currentRange, defaultRange, lastValid, sliderChangeFunc, inputChangeFunc, sliderBlurFunc
 ) {
     const [minValue, maxValue] = defaultRange;
-
+    console.log("This is the last valid", lastValid);
     return (
         <div key={sliderName}>
             <Typography id="range-slider" gutterBottom>
@@ -82,7 +82,7 @@ function timeSlider(
                 </Grid>
                 <Grid item xs>
                     <Slider
-                        value={typeof currentRange === "object" ? currentRange : defaultRange}
+                        value={typeof lastValid === "object" ? lastValid : defaultRange}
                         onChange={(e, v) => sliderChangeFunc(e, v)}
                         min={minValue}
                         max={maxValue}
@@ -114,6 +114,7 @@ export default class MapMicro extends React.Component {
             markerData: ADDRESS_DATA,
             sliderState: [1900, 2022],
             timeRange: [1900, 2022],
+            lastValid: [1900, 2022],
             names: ["Australia", "Canada", "USA", "Poland", "Spain", "France"]
         };
     }
@@ -121,7 +122,8 @@ export default class MapMicro extends React.Component {
     setSliderValue(newLowerBound, newUpperBound) {
         this.setState({
             ...this.state,
-            sliderState: [newLowerBound, newUpperBound]
+            sliderState: [newLowerBound, newUpperBound],
+            lastValid: [newLowerBound, newUpperBound],
         });
     }
 
@@ -134,7 +136,7 @@ export default class MapMicro extends React.Component {
         const [currentLowerValue, currentUpperValue] = this.state.sliderState;
         const [minValue, maxValue] = this.state.timeRange;
         let newSliderState = this.state.sliderState;
-
+        let newValidState = [...this.state.lastValid];
         // Do nothing if the slider input is blank
         if (event.target.value === "") {
             return;
@@ -143,23 +145,31 @@ export default class MapMicro extends React.Component {
         let newValue = Number(event.target.value);
         if (bound === "lower") {
             if (newValue > currentUpperValue) {
-                newValue = currentUpperValue;
+                console.log("New value not updated to prevent crossing");
             } else if (newValue < minValue) {
-                newValue = minValue;
+                console.log("New value was not updated to min");
+            }
+            else{
+                newValidState = [newValue, currentUpperValue];
             }
             newSliderState = [newValue, currentUpperValue];
+
         } else if (bound === "upper") {
             if (newValue < currentLowerValue) {
-                newValue = currentLowerValue;
+                console.log("New value not updated to prevent crossing");
             } else if (newValue > maxValue) {
-                newValue = maxValue;
+                console.log("New value was not updated to max");
+            }
+            else{
+                newValidState = [currentLowerValue, newValue];
             }
             newSliderState = [currentLowerValue, newValue];
         }
 
         this.setState({
             ...this.state,
-            sliderState: newSliderState
+            sliderState: newSliderState,
+            lastValid: newValidState,
         });
     };
 
@@ -217,9 +227,10 @@ export default class MapMicro extends React.Component {
                         "Time Slider",
                         this.state.sliderState,
                         this.state.timeRange,
+                        this.state.lastValid,
                         this.handleSliderChange,
                         this.handleSliderInputChange,
-                        this.handleSliderBlur
+                        this.handleSliderBlur,
                     )}
                 </div>
             </div>
