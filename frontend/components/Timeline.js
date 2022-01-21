@@ -8,8 +8,8 @@ import WASHINGTON_BEE_11_15_1913 from "../images/washington_bee_nov_15_1913.png"
 
 
 export function Timeline() {
-    const [intervalSelected, setIntervalSelected] = useState(new Interval(1910, 1920));
-    const [timelineRange, setTimelineRange] = useState(new Interval(1910, 1920));
+    const [intervalSelected, setIntervalSelected] = useState(new Interval(1910, 1915));
+    const [timelineRange, setTimelineRange] = useState(new Interval(1910, 2020));
     const [documents, setDocuments] = useState([
         {
             title: "Washington Bee",
