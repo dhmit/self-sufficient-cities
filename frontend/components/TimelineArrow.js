@@ -1,4 +1,4 @@
-import React, { useContext, useState } from 'react';
+import React, {useContext, useState} from 'react';
 import {Interval, TimelineContext} from "../contexts/TimelineContext";
 import * as PropTypes from "prop-types";
 
@@ -112,37 +112,25 @@ export function TimelineArrow({isLeft}) {
             <button onMouseOver={() => handleOnMouseArrow(true)}
                     onMouseOut={() => handleOnMouseArrow(false)}
                     onClick={handleOnClickArrow}
-                    className={isLeft ? 'showcase-arrow-prev' : 'showcase-arrow-next'}
+                    className={`showcase-arrow
+                    ${isLeft
+                        ? "showcase-arrow-prev"
+                        : "showcase-arrow-next"}`}
                     style={{
-                        visibility : showArrow() ? 'visible' : 'hidden',
+                        visibility : showArrow()
+                            ? 'visible'
+                            : 'hidden',
                     }}
             >
-                {
-                    isLeft
-                        ?
-                        <i
-                            className="bi-chevron-compact-left arrow-icon"
-                            style={{
-                                paddingRight: onMouseOver
-                                    ? '10px'
-                                    : '0px',
-                            }}
-                        />
-                        :
-                        <i
-                            className="bi-chevron-compact-right arrow-icon"
-                            style={{
-                                paddingLeft: onMouseOver
-                                    ? '10px'
-                                    : '0px',
-                            }}
-                        />
-                }
+                <i
+                    className={`arrow-icon
+                    ${isLeft
+                        ? "bi-chevron-compact-left"
+                        : "bi-chevron-compact-right"}`}
+                />
                 <p
                     className="arrow-date"
-                    style={{
-                        color: onMouseOver ? 'black' : 'lightgray',
-                    }}>
+                >
                     { getIntervalText() }
                 </p>
             </button>
