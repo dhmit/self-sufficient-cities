@@ -80,6 +80,15 @@ def map_page(request, map_id=None):
 
 @api_view(['POST'])
 def create_person(request):
+    """
+    API Endpoint for adding a person to the database
+    Required keys in body of request for successfully adding people:
+        - first_name
+        - last_name
+        - ethnicity
+        - date_of_birth
+        - country_of_origin
+    """
     attributes = request.data
 
     new_person_obj = Person.objects.create(**attributes)
@@ -89,6 +98,9 @@ def create_person(request):
 
 @api_view(['GET'])
 def get_people(request):
+    """
+    API endpoint for pulling up all people in the Person table
+    """
     people = Person.objects.order_by('first_name')
     serializer = PersonSerializer(people, many=True)
     return Response(serializer.data)
@@ -96,6 +108,11 @@ def get_people(request):
 
 @api_view(['GET'])
 def get_person(request, **keywords):
+    """
+    API Endpoint for searching for people by specific fields
+    Using the keywords passed, this will attempt to select all people in the
+    Person table matching them
+    """
     print(keywords)
     person = get_list_or_404(Person, **keywords)
     serializer = PersonSerializer(person, many=True)
@@ -104,6 +121,14 @@ def get_person(request, **keywords):
 
 @api_view(['POST'])
 def create_event(request):
+    """
+    API Endpoint for adding an event to the database
+    Required keys in body of request for successfully adding people:
+        - name
+        - date
+        - location (linked to Location table)
+        - people (linked to Person table)
+    """
     attributes = request.data
 
     new_event_obj = Event.objects.create(**attributes)
@@ -113,6 +138,9 @@ def create_event(request):
 
 @api_view(['GET'])
 def get_event(request):
+    """
+    API endpoint for pulling up all events from the Event table
+    """
     event = Event.objects.order_by('name')
     serializer = EventSerializer(event, many=True)
     return Response(serializer.data)
