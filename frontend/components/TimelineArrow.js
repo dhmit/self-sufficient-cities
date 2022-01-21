@@ -103,10 +103,9 @@ export function TimelineArrow({isLeft}) {
 
     return (
         <button onClick={handleOnClickArrow}
-            className={`showcase-arrow
-            ${isLeft
-            ? "showcase-arrow-prev"
-            : "showcase-arrow-next"}`}
+            className={isLeft
+                ? "showcase-arrow-prev"
+                : "showcase-arrow-next"}
             style={{
                 visibility : showArrow()
                     ? "visible"

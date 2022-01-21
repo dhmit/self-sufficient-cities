@@ -32,16 +32,7 @@ button[class^='showcase-arrow'] {
     padding: 0;
 }
 
-.arrow-date {
-    font-size: 1rem;
-    color: lightgray;
-}
-
-.arrow-icon {
-    color: black;
-}
-
-.showcase-arrow:hover {
+button[class^='showcase-arrow']:hover {
     .arrow-date {
         color:black;
     }
@@ -51,6 +42,15 @@ button[class^='showcase-arrow'] {
     .bi-chevron-compact-right {
         padding-left: 10px;
     }
+}
+
+.arrow-date {
+    font-size: 1rem;
+    color: lightgray;
+}
+
+.arrow-icon {
+    color: black;
 }
 
 .showcase-arrow-prev {
