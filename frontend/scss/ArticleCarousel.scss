@@ -1,27 +1,27 @@
-:global(.carousel) {
+.carousel {
     height: inherit;
 }
 
-:global(.carousel-inner) {
+.carousel-inner {
     height: inherit;
 }
 
-:global(.carousel-item) {
+.carousel-item {
     height: 90%;
 }
 
-:global(.carousel-control-next){
+.carousel-control-next{
     align-items: flex-end;
     margin-top: auto;
     height: 5vh;
 }
 
-:global(.carousel-control-prev){
+.carousel-control-prev{
     align-items: flex-end;
     margin-top:auto;
     height: 5vh;
 }
 
-.articleHeight {
+.article-height {
     height: inherit;
 }

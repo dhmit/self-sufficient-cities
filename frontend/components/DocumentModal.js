@@ -3,7 +3,6 @@ import * as PropTypes from "prop-types";
 import ArticleCarousel from "./ArticleCarousel";
 import DocumentDisplay from "./DocumentDisplay";
 import {Modal} from "react-bootstrap";
-import STYLES from "./DocumentModal.module.scss";
 
 /**
  * Main component for displaying document data in a fullscreen modal
@@ -75,11 +74,11 @@ const DocumentModal = ({id, modalShow, toggleHide}) => {
                 {document === null
                     ? <div>Loading document...</div>
                     : <div className="row h-100">
-                        <div className={`col-6 ${STYLES.colHeight}`}>
+                        <div className="col-6 col-height">
                             <ArticleCarousel articles={document.articles}
                                 setArticle={setActiveArticle}/>
                         </div>
-                        <div className={`col-6 text-center ${STYLES.colHeight}`}>
+                        <div className="col-6 text-center col-height">
                             <DocumentDisplay document={document} activeArticle={activeArticle} />
                         </div>
                     </div>}

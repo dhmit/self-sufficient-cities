@@ -1,7 +1,6 @@
 import React, {useState} from "react";
 import * as PropTypes from "prop-types";
 import {Carousel} from "react-bootstrap";
-import STYLE from "./ArticleCarousel.module.scss";
 
 /**
  * Displays the articles in the document in carousel-style.
@@ -24,7 +23,7 @@ const ArticleCarousel = ({articles, setArticle}) => {
                 articles.map((article, i) => (
                     <Carousel.Item key={i}>
                         <h3 className="text-center">{article.title}</h3>
-                        <p className={`overflow-scroll ${STYLE.articleHeight}`}>{article.text}</p>
+                        <p className="overflow-scroll article-height">{article.text}</p>
                     </Carousel.Item>
                 ))
             }
