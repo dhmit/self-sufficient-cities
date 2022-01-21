@@ -1,13 +1,15 @@
-#showcase {
-    display: flex;
-    flex-flow: row;
-    justify-content: space-evenly;
-}
-
 #document-showcase {
     display: flex;
     flex-flow: row wrap;
     justify-content: space-evenly;
+    flex-grow: 2;
+    margin: 0px 64px;
+
+    .empty-message {
+        position: fixed;
+        top: 45vh;
+        font-size: 2rem;
+    }
 }
 
 .showcase-item {
@@ -20,11 +22,22 @@
     }
 }
 
-.arrow {
+button[class^='showcase-arrow'] {
+    position: fixed;
+    width: 96px;
+    top: 40vh;
     font-size: 5rem;
     background: none;
-    margin: auto;
     border: none;
+    padding: 0;
+}
+
+.showcase-arrow-prev {
+    left: 8px;
+}
+
+.showcase-arrow-next {
+    right: 8px;
 }
 
 .arrow-icon {
@@ -33,4 +46,9 @@
 
 .arrow-date {
     font-size: 1rem;
+}
+
+.timeline-slider {
+    width: 100vw;
+    margin-bottom: 64px;
 }

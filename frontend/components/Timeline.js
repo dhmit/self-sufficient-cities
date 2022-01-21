@@ -1,15 +1,17 @@
 import React, {useEffect, useState} from "react";
 import {Interval, TimelineContext} from "../contexts/TimelineContext";
 import DocumentShowcase from "./DocumentShowcase";
-import Slider from "./Slider";
+import {TimelineSlider} from "./TimelineSlider";
 import HEAR_CALL_GARDEN from "../images/hear_call_of_the_garden.png";
 import WASHINGTON_BEE_12_3_1910 from "../images/washington_bee_dec_3_1910.png";
 import WASHINGTON_BEE_11_15_1913 from "../images/washington_bee_nov_15_1913.png";
 
 
 export function Timeline() {
-    const [intervalSelected, setIntervalSelected] = useState(new Interval(1910, 1920));
-    const [timelineRange, setTimelineRange] = useState(new Interval(1910, 1920));
+    const maxYear = 2020; // todo ang: make 2022
+    const minYear = 1910;
+    const [intervalSelected, setIntervalSelected] = useState(new Interval(minYear, minYear + 5));
+    const [timelineRange, setTimelineRange] = useState(new Interval(minYear, maxYear));
     const [documents, setDocuments] = useState([
         {
             title: "Washington Bee",
@@ -32,8 +34,6 @@ export function Timeline() {
         // WHEN BACKEND READY: getDocuments();
     }, []);
 
-    const minYear = '1910';
-    const maxYear = '2022';
     const contextState = {
         intervalSelected,
         maxYear,
@@ -59,8 +59,7 @@ export function Timeline() {
     return (
         <React.Fragment>
             <TimelineContext.Provider value={contextState}>
-                <p> This is our timeline! </p>
-                <Slider/>
+                <TimelineSlider/>
                 <DocumentShowcase documents={documents} />
             </TimelineContext.Provider>
         </React.Fragment>
