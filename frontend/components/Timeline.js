@@ -1,4 +1,4 @@
-import React, {useEffect, useState} from "react";
+import React, {useState} from "react";
 import {Interval, TimelineContext} from "../contexts/TimelineContext";
 import DocumentShowcase from "./DocumentShowcase";
 import {TimelineSlider} from "./TimelineSlider";
@@ -12,7 +12,9 @@ export function Timeline() {
     const minYear = 1910;
     const [intervalSelected, setIntervalSelected] = useState(new Interval(minYear, minYear + 5));
     const [timelineRange, setTimelineRange] = useState(new Interval(minYear, maxYear));
-    const [documents, setDocuments] = useState([
+    // once backend is ready, we will make a request to the api to retrieve the documents & store
+    // it as state
+    const documents = [
         {
             title: "Washington Bee",
             date: "December 3, 1910",
@@ -28,11 +30,7 @@ export function Timeline() {
             date: "March 6, 1914",
             imageRef: HEAR_CALL_GARDEN
         }
-    ]);
-
-    useEffect(() => {
-        // WHEN BACKEND READY: getDocuments();
-    }, []);
+    ];
 
     const contextState = {
         intervalSelected,
@@ -41,19 +39,6 @@ export function Timeline() {
         timelineRange,
         setIntervalSelected,
         setTimelineRange
-    };
-
-    /**
-     * GET request to retrieve documents for timeline
-     */
-    const getDocuments = async () => {
-        try {
-            const response = await fetch("/api/documents");
-            const data = await response.json();
-            setDocuments(data);
-        } catch (e) {
-            console.log(e);
-        }
     };
 
     return (
