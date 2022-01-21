@@ -32,8 +32,8 @@ export function Timeline() {
         // WHEN BACKEND READY: getDocuments();
     }, []);
 
-    const minYear = '1910';
-    const maxYear = '2020'; // todo (ang) : make this 2022
+    const minYear = 1910;
+    const maxYear = 2020; // todo (ang) : make this 2022
 
     const contextState = {
         intervalSelected,
