@@ -102,21 +102,21 @@ export function TimelineArrow({isLeft}) {
     };
 
     return (
-        <button onClick={handleOnClickArrow} className={`showcase-arrow
-                ${isLeft
-                    ? "showcase-arrow-prev"
-                    : "showcase-arrow-next"}`}
-                style={{
-                    visibility : showArrow()
-                        ? "visible"
-                        : "hidden"
-                }}
+        <button onClick={handleOnClickArrow}
+            className={`showcase-arrow
+            ${isLeft
+            ? "showcase-arrow-prev"
+            : "showcase-arrow-next"}`}
+            style={{
+                visibility : showArrow()
+                    ? "visible"
+                    : "hidden"
+            }}
         >
-            <i
-                className={`arrow-icon
-                ${isLeft
-                    ? "bi-chevron-compact-left"
-                    : "bi-chevron-compact-right"}`}
+            <i className={`arrow-icon
+            ${isLeft
+            ? "bi-chevron-compact-left"
+            : "bi-chevron-compact-right"}`}
             />
             <p
                 className="arrow-date"
