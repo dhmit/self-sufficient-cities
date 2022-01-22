@@ -18,7 +18,7 @@ export function TimelineDropdown() {
     }
 
     return (
-        <DropdownButton id="dropdown-basic-button" title={sortType}>
+        <DropdownButton title={sortType} variant="secondary" size="sm">
             <Dropdown.Item
                 onSelect={sortChronologically}>{SORT_TYPES.CHRONOLOGICALLY}
             </Dropdown.Item>
