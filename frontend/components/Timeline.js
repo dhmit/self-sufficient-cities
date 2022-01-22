@@ -46,8 +46,8 @@ export function Timeline() {
     return (
         <React.Fragment>
             <TimelineContext.Provider value={contextState}>
-                <TimelineDropdown/>
                 <TimelineSlider/>
+                <TimelineDropdown/>
                 <DocumentShowcase documents={documents} />
             </TimelineContext.Provider>
         </React.Fragment>
