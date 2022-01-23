@@ -1,0 +1,35 @@
+.article-height {
+    height: inherit;
+}
+
+.article-carousel .carousel {
+    height: inherit;
+}
+
+.article-carousel .carousel-control-next{
+    align-items: flex-end;
+    margin-top: auto;
+    height: 5vh;
+}
+
+.article-carousel .carousel-control-prev{
+    align-items: flex-end;
+    margin-top:auto;
+    height: 5vh;
+}
+
+.article-carousel .carousel-inner {
+    height: inherit;
+}
+
+.article-carousel .carousel-item {
+    height: 90%;
+}
+
+.col-height {
+    height: inherit;
+}
+
+.doc-image {
+    max-height: 100%;
+}
