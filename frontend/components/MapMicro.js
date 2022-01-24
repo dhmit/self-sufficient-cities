@@ -223,24 +223,15 @@ export default class MapMicro extends React.Component {
         }
 
         let newValue = Number(event.target.value);
+        // Only valid bound inputs will affect the slider by changing the newValidState
         if (bound === "lower") {
-            if (newValue > currentUpperValue) {
-                console.log("New value not updated to prevent crossing");
-            } else if (newValue < minValue) {
-                console.log("New value was not updated to min");
-            }
-            else{
+            if (newValue <= currentUpperValue && newValue >= minValue) {
                 newValidState = [newValue, currentUpperValue];
             }
             newSliderState = [newValue, currentUpperValue];
 
         } else if (bound === "upper") {
-            if (newValue < currentLowerValue) {
-                console.log("New value not updated to prevent crossing");
-            } else if (newValue > maxValue) {
-                console.log("New value was not updated to max");
-            }
-            else{
+            if (newValue >= currentLowerValue && newValue <= maxValue) {
                 newValidState = [currentLowerValue, newValue];
             }
             newSliderState = [currentLowerValue, newValue];
