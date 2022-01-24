@@ -1,417 +1,401 @@
-import React from "react";
+import React from 'react';
+// import JsonData from './data.json';
 
-const Table8 = () => {
-    return (
-        <>
-            <body>
-                <input type = "button" onClick={CreateTableFromJSON()} value="Create Table From JSON" />
-                <p className="ShowData"/>
-            </body>
-            <script>
-                 function CreateTableFromJSON(){
-                    var data8=[
-                        {
-                            "subject": "TYPE OF STRUCTURE  "
-                        },
-                        {
-                            "subject": "All dwelling units",
-                            "total": 2860
-                        },
-                        {
-                            "subject": "1-family detatched",
-                            "total": 2027
-                        },
-                        {
-                            "subject": "1-family attached ",
-                            "total": 414
-                        },
-                        {
-                            "subject": "2 family side-by-side",
-                            "total": 136
-                        },
-                        {
-                            "subject": "2 family other",
-                            "total": 136
-                        },
-                        {
-                            "subject": "3-family",
-                            "total": 21
-                        },
-                        {
-                            "subject": "4-family",
-                            "total": 32
-                        },
-                        {
-                            "subject": "1- to 4-family with business",
-                            "total": 70
-                        },
-                        {
-                            "subject": "5- to 9-family ",
-                            "total": "- "
-                        },
-                        {
-                            "subject": "10 to 9 family",
-                            "total": 16
-                        },
-                        {
-                            "subject": "20-family or more",
-                            "total": "-"
-                        },
-                        {
-                            "subject": "Other dwelling place",
-                            "total": 8
-                        },
-                        {
-                            "subject": "STATE OF REPAIR AND PLUMBING "
-                        },
-                        {
-                            "subject": "All dwelling units",
-                            "total": 2860
-                        },
-                        {
-                            "subject": "Not needing major repairs",
-                            "total": 2478
-                        },
-                        {
-                            "subject": "With private bath and priv. flush toilet",
-                            "total": 2044
-                        },
-                        {
-                            "subject": "With private flush toilet, no priv. bath",
-                            "total": 77
-                        },
-                        {
-                            "subject": "With running water, no priv. flush toilet",
-                            "total": 185
-                        },
-                        {
-                            "subject": "No running water in dwelling unit",
-                            "total": 172
-                        },
-                        {
-                            "subject": "Needing major repair",
-                            "total": 240
-                        },
-                        {
-                            "subject": "With private bath and priv. flush toilet",
-                            "total": 102
-                        },
-                        {
-                            "subject": "With private flush toilet, no priv. bath",
-                            "total": 35
-                        },
-                        {
-                            "subject": "With running water, no priv. flush toilet",
-                            "total": 29
-                        },
-                        {
-                            "subject": "No running water in dwelling unit",
-                            "total": 74
-                        },
-                        {
-                            "subject": "Not reporting repair or plumbing",
-                            "total": 142
-                        },
-                        {
-                            "subject": "NUMBER OF PERSONS IN HOUSEHOLD"
-                        },
-                        {
-                            "subject": "All occupied units",
-                            "total": 2676
-                        },
-                        {
-                            "subject": "1 person",
-                            "total": 86
-                        },
-                        {
-                            "subject": "2 persons",
-                            "total": 488
-                        },
-                        {
-                            "subject": "3 persons",
-                            "total": 504
-                        },
-                        {
-                            "subject": "4 persons",
-                            "total": 459
-                        },
-                        {
-                            "subject": "5 persons",
-                            "total": 370
-                        },
-                        {
-                            "subject": "6 persons",
-                            "total": 247
-                        },
-                        {
-                            "subject": "7 persons",
-                            "total": 173
-                        },
-                        {
-                            "subject": "8 persons",
-                            "total": 124
-                        },
-                        {
-                            "subject": "9 persons",
-                            "total": 89
-                        },
-                        {
-                            "subject": "10 persons",
-                            "total": 60
-                        },
-                        {
-                            "subject": "11 persons or more ",
-                            "total": 76
-                        },
-                        {
-                            "subject": "MEDIAN NUMBER OF PERSONS"
-                        },
-                        {
-                            "subject": "All occupied units",
-                            "total": "4.07"
-                        },
-                        {
-                            "subject": "Owner-occupied units",
-                            "total": "3.74"
-                        },
-                        {
-                            "subject": "Tenant-occupied units",
-                            "total": "4.63"
-                        },
-                        {
-                            "subject": "PERSONS PER ROOM "
-                        },
-                        {
-                            "subject": "All occupied units",
-                            "total": 2676
-                        },
-                        {
-                            "subject": "0.50 or less",
-                            "total": 666
-                        },
-                        {
-                            "subject": "0.51 to 0.75",
-                            "total": 541
-                        },
-                        {
-                            "subject": "0.76 to 1.00",
-                            "total": 758
-                        },
-                        {
-                            "subject": "1.01 to 1.50",
-                            "total": 411
-                        },
-                        {
-                            "subject": "1.51 to 2.00",
-                            "total": 209
-                        },
-                        {
-                            "subject": "2.01 or more",
-                            "total": 71
-                        },
-                        {
-                            "subject": "Not reporting persons per room",
-                            "total": 25
-                        },
-                        {
-                            "subject": "Tenant-occupied units",
-                            "total": 1113
-                        },
-                        {
-                            "subject": "0.50 or less",
-                            "total": 140
-                        },
-                        {
-                            "subject": "0.51 to 0.75",
-                            "total": 203
-                        },
-                        {
-                            "subject": "0.76 to 1.00",
-                            "total": 329
-                        },
-                        {
-                            "subject": "1.01 to 1.50",
-                            "total": 221
-                        },
-                        {
-                            "subject": "1.51 to 2.00",
-                            "total": 145
-                        },
-                        {
-                            "subject": "2.01 or more",
-                            "total": 58
-                        },
-                        {
-                            "subject": "Not reporting persons per room",
-                            "total": 17
-                        },
-                        {
-                            "subject": "RADIO"
-                        },
-                        {
-                            "subject": "All occupied units",
-                            "total": 2676
-                        },
-                        {
-                            "subject": "With radio",
-                            "total": 2441
-                        },
-                        {
-                            "subject": "Percent with radio",
-                            "total": 93.3
-                        },
-                        {
-                            "subject": "No radio",
-                            "total": 174
-                        },
-                        {
-                            "subject": "No reporting radio",
-                            "total": 61
-                        },
-                        {
-                            "subject": "REFRIGIRATION EQUIPMENT"
-                        },
-                        {
-                            "subject": "All occupied units",
-                            "total": 2676
-                        },
-                        {
-                            "subject": "Mechanical",
-                            "total": 1682
-                        },
-                        {
-                            "subject": "Ice",
-                            "total": 901
-                        },
-                        {
-                            "subject": "Other",
-                            "total": 4
-                        },
-                        {
-                            "subject": "None",
-                            "total": 58
-                        },
-                        {
-                            "subject": "Not reporting refrigeration equipment",
-                            "total": 31
-                        },
-                        {
-                            "subject": "HEATING FUEL BY CENTRAL HEATING"
-                        },
-                        {
-                            "subject": "All occupied units",
-                            "total": 2676
-                        },
-                        {
-                            "subject": "With central heating",
-                            "total": 1887
-                        },
-                        {
-                            "subject": "Coal or coke",
-                            "total": 1265
-                        },
-                        {
-                            "subject": "Wood",
-                            "total": 2
-                        },
-                        {
-                            "subject": "Gas ",
-                            "total": 98
-                        },
-                        {
-                            "subject": "Fuel oil",
-                            "total": 520
-                        },
-                        {
-                            "subject": "Other fuel",
-                            "total": 1
-                        },
-                        {
-                            "subject": "Not reporting fuel",
-                            "total": 1
-                        },
-                        {
-                            "subject": "Without central heating",
-                            "total": 762
-                        },
-                        {
-                            "subject": "Coal or coke",
-                            "total": 616
-                        },
-                        {
-                            "subject": "Wood",
-                            "total": 35
-                        },
-                        {
-                            "subject": "Gas ",
-                            "total": 5
-                        },
-                        {
-                            "subject": "Fuel oil",
-                            "total": 20
-                        },
-                        {
-                            "subject": "Kerosene or gasoline",
-                            "total": 81
-                        },
-                        {
-                            "subject": "Other fuel",
-                            "total": " -"
-                        },
-                        {
-                            "subject": "None",
-                            "total": " -"
-                        },
-                        {
-                            "subject": "Not reporting fuel",
-                            "total": 5
-                        },
-                        {
-                            "subject": "Not reporting heating equipment",
-                            "total": 27
-                        }
-                    ]
+let JsonData= [
+    {
+        "subject": "TYPE OF STRUCTURE  "
+    },
+    {
+        "subject": "All dwelling units",
+        "total": 2860
+    },
+    {
+        "subject": "1-family detached",
+        "total": 2027
+    },
+    {
+        "subject": "1-family attached ",
+        "total": 414
+    },
+    {
+        "subject": "2 family side-by-side",
+        "total": 136
+    },
+    {
+        "subject": "2 family other",
+        "total": 136
+    },
+    {
+        "subject": "3-family",
+        "total": 21
+    },
+    {
+        "subject": "4-family",
+        "total": 32
+    },
+    {
+        "subject": "1- to 4-family with business",
+        "total": 70
+    },
+    {
+        "subject": "5- to 9-family ",
+        "total": "- "
+    },
+    {
+        "subject": "10 to 9 family",
+        "total": 16
+    },
+    {
+        "subject": "20-family or more",
+        "total": "-"
+    },
+    {
+        "subject": "Other dwelling place",
+        "total": 8
+    },
+    {
+        "subject": "STATE OF REPAIR AND PLUMBING "
+    },
+    {
+        "subject": "All dwelling units",
+        "total": 2860
+    },
+    {
+        "subject": "Not needing major repairs",
+        "total": 2478
+    },
+    {
+        "subject": "With private bath and priv. flush toilet",
+        "total": 2044
+    },
+    {
+        "subject": "With private flush toilet, no priv. bath",
+        "total": 77
+    },
+    {
+        "subject": "With running water, no priv. flush toilet",
+        "total": 185
+    },
+    {
+        "subject": "No running water in dwelling unit",
+        "total": 172
+    },
+    {
+        "subject": "Needing major repair",
+        "total": 240
+    },
+    {
+        "subject": "With private bath and priv. flush toilet",
+        "total": 102
+    },
+    {
+        "subject": "With private flush toilet, no priv. bath",
+        "total": 35
+    },
+    {
+        "subject": "With running water, no priv. flush toilet",
+        "total": 29
+    },
+    {
+        "subject": "No running water in dwelling unit",
+        "total": 74
+    },
+    {
+        "subject": "Not reporting repair or plumbing",
+        "total": 142
+    },
+    {
+        "subject": "NUMBER OF PERSONS IN HOUSEHOLD"
+    },
+    {
+        "subject": "All occupied units",
+        "total": 2676
+    },
+    {
+        "subject": "1 person",
+        "total": 86
+    },
+    {
+        "subject": "2 persons",
+        "total": 488
+    },
+    {
+        "subject": "3 persons",
+        "total": 504
+    },
+    {
+        "subject": "4 persons",
+        "total": 459
+    },
+    {
+        "subject": "5 persons",
+        "total": 370
+    },
+    {
+        "subject": "6 persons",
+        "total": 247
+    },
+    {
+        "subject": "7 persons",
+        "total": 173
+    },
+    {
+        "subject": "8 persons",
+        "total": 124
+    },
+    {
+        "subject": "9 persons",
+        "total": 89
+    },
+    {
+        "subject": "10 persons",
+        "total": 60
+    },
+    {
+        "subject": "11 persons or more ",
+        "total": 76
+    },
+    {
+        "subject": "MEDIAN NUMBER OF PERSONS"
+    },
+    {
+        "subject": "All occupied units",
+        "total": "4.07"
+    },
+    {
+        "subject": "Owner-occupied units",
+        "total": "3.74"
+    },
+    {
+        "subject": "Tenant-occupied units",
+        "total": "4.63"
+    },
+    {
+        "subject": "PERSONS PER ROOM "
+    },
+    {
+        "subject": "All occupied units",
+        "total": 2676
+    },
+    {
+        "subject": "0.50 or less",
+        "total": 666
+    },
+    {
+        "subject": "0.51 to 0.75",
+        "total": 541
+    },
+    {
+        "subject": "0.76 to 1.00",
+        "total": 758
+    },
+    {
+        "subject": "1.01 to 1.50",
+        "total": 411
+    },
+    {
+        "subject": "1.51 to 2.00",
+        "total": 209
+    },
+    {
+        "subject": "2.01 or more",
+        "total": 71
+    },
+    {
+        "subject": "Not reporting persons per room",
+        "total": 25
+    },
+    {
+        "subject": "Tenant-occupied units",
+        "total": 1113
+    },
+    {
+        "subject": "0.50 or less",
+        "total": 140
+    },
+    {
+        "subject": "0.51 to 0.75",
+        "total": 203
+    },
+    {
+        "subject": "0.76 to 1.00",
+        "total": 329
+    },
+    {
+        "subject": "1.01 to 1.50",
+        "total": 221
+    },
+    {
+        "subject": "1.51 to 2.00",
+        "total": 145
+    },
+    {
+        "subject": "2.01 or more",
+        "total": 58
+    },
+    {
+        "subject": "Not reporting persons per room",
+        "total": 17
+    },
+    {
+        "subject": "RADIO"
+    },
+    {
+        "subject": "All occupied units",
+        "total": 2676
+    },
+    {
+        "subject": "With radio",
+        "total": 2441
+    },
+    {
+        "subject": "Percent with radio",
+        "total": 93.3
+    },
+    {
+        "subject": "No radio",
+        "total": 174
+    },
+    {
+        "subject": "No reporting radio",
+        "total": 61
+    },
+    {
+        "subject": "REFRIGIRATION EQUIPMENT"
+    },
+    {
+        "subject": "All occupied units",
+        "total": 2676
+    },
+    {
+        "subject": "Mechanical",
+        "total": 1682
+    },
+    {
+        "subject": "Ice",
+        "total": 901
+    },
+    {
+        "subject": "Other",
+        "total": 4
+    },
+    {
+        "subject": "None",
+        "total": 58
+    },
+    {
+        "subject": "Not reporting refrigeration equipment",
+        "total": 31
+    },
+    {
+        "subject": "HEATING FUEL BY CENTRAL HEATING"
+    },
+    {
+        "subject": "All occupied units",
+        "total": 2676
+    },
+    {
+        "subject": "With central heating",
+        "total": 1887
+    },
+    {
+        "subject": "Coal or coke",
+        "total": 1265
+    },
+    {
+        "subject": "Wood",
+        "total": 2
+    },
+    {
+        "subject": "Gas ",
+        "total": 98
+    },
+    {
+        "subject": "Fuel oil",
+        "total": 520
+    },
+    {
+        "subject": "Other fuel",
+        "total": 1
+    },
+    {
+        "subject": "Not reporting fuel",
+        "total": 1
+    },
+    {
+        "subject": "Without central heating",
+        "total": 762
+    },
+    {
+        "subject": "Coal or coke",
+        "total": 616
+    },
+    {
+        "subject": "Wood",
+        "total": 35
+    },
+    {
+        "subject": "Gas ",
+        "total": 5
+    },
+    {
+        "subject": "Fuel oil",
+        "total": 20
+    },
+    {
+        "subject": "Kerosene or gasoline",
+        "total": 81
+    },
+    {
+        "subject": "Other fuel",
+        "total": " -"
+    },
+    {
+        "subject": "None",
+        "total": " -"
+    },
+    {
+        "subject": "Not reporting fuel",
+        "total": 5
+    },
+    {
+        "subject": "Not reporting heating equipment",
+        "total": 27
+    }
+];
 
-                    //Extracting the keys, tract78 and count
-                    var col = [];
-                    for (var i = 0; i < data8.length; i++) {
-                      for (var key in data8[i]) {
-                        if (col.indexOf(key) === -1) {
-                        col.push(key);
-                        }
-                      }
-                    }
 
-                    //Creating the table
-                    var table= document.createElement("table");
-
-                    //The table headers using the keys extracted above
-                    var tr=table.insertRow(-1);
-
-                    for(var i=0; i<col.length;i++){
-                        var th=document.createElement("th");
-                        th.innerHTML = col[i];
-                        tr.appendChild(th);
-                    }
-
-                    //Adding the JSON data as rows
-                    for(var i=0; i<data8.length; i++){
-                        tr=table.insertRow(-1);
-
-                        for (var j=0; j<col.length; j++) {
-                            var tabCell = tr.insertCell(-1);
-                            tabCell.innerHTML = data8[i][col[j]];
-                        }
-                    }
-
-                    //Adding the table to a container
-                    var divContainer = document.getElementById('showData');
-                    divContainer.innerHTML="";
-                    divContainer.appendChild(table);
-                }
-            </script>
-        </>
+ function Table8(){
+    const DisplayData=JsonData.map(
+        (info)=>{
+            return(
+                <tr key={info.count}>
+                    <td>{info.subject}</td>
+                    <td>{info.total}</td>
+                </tr>
+            );
+        }
     );
-};
 
-export default Table8;
+    return(
+        <div>
+            <table className="table formatting">
+                <thead>
+                    <tr>
+                    <th>Subject</th>
+                    <th>Total</th>
+                    </tr>
+                </thead>
+                <tbody>
+
+
+                    {DisplayData}
+
+                </tbody>
+            </table>
+
+        </div>
+    );
+ }
+
+ export default Table8;
