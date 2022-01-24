@@ -20,7 +20,7 @@ class Person(models.Model):
 
 
 class Event(models.Model):
-    name = models.CharField(max_length=128)
+    name = models.CharField(max_length=128) # maybe make this unique?
     date = models.DateField()
     locations = models.ManyToManyField(Location)
     people = models.ManyToManyField(Person)

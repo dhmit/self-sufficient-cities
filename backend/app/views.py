@@ -128,12 +128,28 @@ def create_event(request):
         - date
     """
     attributes = request.data
-    
+
     new_event_obj = Event.objects.create(**attributes)
     serializer = EventSerializer(new_event_obj)
     return Response(serializer.data)
 
 # need to add endpoints for updating locations/people event
+@api_view(['GET'])
+def get_people_from_event(request, event_name=None):
+    """
+    API endpoint for pulling up a list of people from an event
+    """
+    event = Event.objects.filter(name=event_name).first()
+    print(event.people)
+    people = PersonSerializer(event.people, many=True)
+    return Response(people)
+
+@api_view(['PUT'])
+def update_people_for_event(request, event_name=None):
+    """
+    API endpoint for updating the list of people for an event
+    """
+    return Response()
 
 
 @api_view(['GET'])

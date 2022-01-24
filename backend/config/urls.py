@@ -33,6 +33,8 @@ urlpatterns = [
     path('api/create_person', views.create_person),
     path('api/create_event', views.create_event),
     path('api/get_all_people', views.get_people),
+    path('api/get_people_from_event/<event_name>', views.get_people_from_event),
+    path('api/update_people_for_event/<event_name>', views.update_people_for_event),
     re_path(r'^api\/get_person\/(?P<first_name>[a-zA-Z0-9_]+)/(?P<last_name>[a-zA-Z0-9_]+)$',
             views.get_person),
 
