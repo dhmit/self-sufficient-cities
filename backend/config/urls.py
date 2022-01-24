@@ -29,7 +29,6 @@ urlpatterns = [
     path('', views.index),
     path('example/', views.example),
     path('example/<example_id>', views.example),
-    path('map', views.map_page),
     path('api/create_person', views.create_person),
     path('api/create_event', views.create_event),
     path('api/get_all_people', views.get_people),
@@ -43,4 +42,9 @@ urlpatterns = [
 
     re_path(r'^api\/get_event\/(?P<name>[a-zA-Z0-9_]+)$',
             views.get_event)
+    path('map/', views.map_page),
+    path('map-macro/', views.map_macro_page),
+    path('map-micro/', views.map_micro_page),
+    path('timeline-test', views.timeline_test),
+    path('api/get_census_data/', views.get_census_data),
 ]

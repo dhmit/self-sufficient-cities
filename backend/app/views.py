@@ -23,10 +23,11 @@ context = {
     'component_name': 'ExampleId'
 }
 """
-from django.shortcuts import render, get_list_or_404
+import json
+from django.shortcuts import render, get_list_or_404, get_object_or_404
+from django.http import JsonResponse
 from rest_framework.decorators import api_view
 from rest_framework.response import Response
-from django.shortcuts import get_object_or_404
 
 from .models import Person, Event
 from .serializers import PersonSerializer, EventSerializer
@@ -64,7 +65,7 @@ def example(request, example_id=None):
     return render(request, 'index.html', context)
 
 
-def map_page(request, map_id=None):
+def map_page(request):
     """
     Map page
     """
@@ -160,3 +161,56 @@ def get_event(request, **keywords):
     event = Event.objects.order_by('name')
     serializer = EventSerializer(event, many=True)
     return Response(serializer.data)
+
+def map_macro_page(request):
+    """
+    Map page
+    """
+
+    context = {
+        'page_metadata': {
+            'title': 'Map Macro page'
+        },
+        'component_name': 'MapMacro'
+    }
+    return render(request, 'index.html', context)
+
+
+def map_micro_page(request):
+    """
+    Map page
+    """
+
+    context = {
+        'page_metadata': {
+            'title': 'Map Micro page'
+        },
+        'component_name': 'MapMicro'
+    }
+    return render(request, 'index.html', context)
+
+
+def timeline_test(request):
+    """
+    Testing Page for loading timeline modal
+    """
+
+    context = {
+        'page_metadata': {
+            'title': 'Timeline Modal Test'
+        },
+        'component_name': 'TimelineTest'
+    }
+    return render(request, 'index.html', context)
+
+########## API Views ##########
+
+def get_census_data(request):
+    """
+    API endpoint for getting the census data in json format
+    """
+    with open("app/data/2021_11_tract78.geojson", encoding="utf-8") as f:
+        census_data = json.load(f)
+
+    return JsonResponse(census_data)
+
