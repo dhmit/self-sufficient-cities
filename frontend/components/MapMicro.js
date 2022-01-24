@@ -249,8 +249,9 @@ export default class MapMicro extends React.Component {
 
     render() {
         const currentMarkerObjects = this.state.markerData.filter((location) => (
-            location.year>=this.state.sliderState[0] && location.year<=this.state.sliderState[1])
+            location.year>=this.state.lastValid[0] && location.year<=this.state.lastValid[1])
         );
+
         const markerObjects = currentMarkerObjects.map((location, i) => (
             <Marker key={i} position={location.coordinates}>
                 <Popup>
