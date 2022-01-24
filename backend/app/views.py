@@ -74,6 +74,19 @@ def map_page(request):
     return render(request, 'index.html', context)
 
 
+def timeline_page(request):
+    """
+    Timeline page
+    """
+    context = {
+        'page_metadata': {
+            'title': 'Timeline page'
+        },
+        'component_name': 'Timeline'
+    }
+    return render(request, 'index.html', context)
+
+
 def map_macro_page(request):
     """
     Map page
@@ -85,6 +98,7 @@ def map_macro_page(request):
         },
         'component_name': 'MapMacro'
     }
+
     return render(request, 'index.html', context)
 
 
@@ -114,6 +128,7 @@ def timeline_test(request):
         'component_name': 'TimelineTest'
     }
     return render(request, 'index.html', context)
+
 
 ########## API Views ##########
 

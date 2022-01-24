@@ -9,6 +9,9 @@ const Nav = () => {
                 <a className="navbar-brand link-home" href="/">Self-Sustaining Cities</a>
                 <ul className="navbar-nav me-auto">
                     <li className="nav-item mr-2">
+                        <a className="nav-link" href={"/timeline"}>Timeline</a>
+                    </li>
+                    <li className="nav-item mr-2">
                         <a className="nav-link" href={"/map"}>Map Template</a>
                     </li>
                     <li className="nav-item mr-2">
