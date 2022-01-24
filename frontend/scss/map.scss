@@ -21,3 +21,11 @@
 .event-selector-dropdown {
     width: 100%;
 }
+
+.dropdown-scroll {
+    position: relative;
+    width: 100%;
+    height: 300px;
+    overflow: scroll;
+    scroll-behaviour: smooth;
+}

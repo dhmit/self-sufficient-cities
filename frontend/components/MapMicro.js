@@ -4,7 +4,7 @@ import Input from "@material-ui/core/Input";
 import Typography from "@material-ui/core/Typography";
 import Grid from "@material-ui/core/Grid";
 import Slider from "@material-ui/core/Slider";
-import DropdownMultiselect from "react-multiselect-dropdown-bootstrap";
+import Dropdown from 'react-bootstrap/Dropdown';
 // AFTERNOON TEAM
 
 const ADDRESS_DATA = [
@@ -265,11 +265,18 @@ export default class MapMicro extends React.Component {
             <div className="main-element">
                 <div className="event-selector">
                     <h3 className="event-selector-title">Event Selector</h3>
-                    <DropdownMultiselect
-                        className="event-selector-dropdown"
-                        options={this.state.names}
-                        name="countries"
-                    />
+                    <Dropdown className="d-inline mx-2" autoClose="outside">
+                        <Dropdown.Toggle id="dropdown-autoclose-outside">
+                            Manual Close
+                        </Dropdown.Toggle>
+                        <Dropdown.Menu className="dropdown-scroll">
+                            {ADDRESS_DATA.map((location, i) => (
+                                <Dropdown.Item key={i}>
+                                    {location.name}
+                                </Dropdown.Item>
+                            ))}
+                        </Dropdown.Menu>
+                    </Dropdown>
                 </div>
                 <div id="map">
                     <MapContainer
