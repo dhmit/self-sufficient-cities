@@ -128,9 +128,8 @@ def create_event(request):
         - date
     """
     attributes = request.data
-    print(attributes)
-
-    new_event_obj = Event.objects.create(attributes)
+    
+    new_event_obj = Event.objects.create(**attributes)
     serializer = EventSerializer(new_event_obj)
     return Response(serializer.data)
 
