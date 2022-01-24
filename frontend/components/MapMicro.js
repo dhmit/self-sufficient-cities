@@ -112,12 +112,6 @@ const MAIN_LOCATION = {
     info: "Test info"
 };
 
-// const TESTREGION = [
-//     [38.8151606, -77.0036513],
-//     [38.8941606, -77.0036513],
-//     [38.8051606, -77.0136513],
-//     [38.8051606, -77.0006513]
-// ];
 
 function sliderInput(value, bound, defaultRange, inputChangeFunc, sliderBlurFunc) {
     const [minValue, maxValue] = defaultRange;
@@ -144,7 +138,6 @@ function timeSlider(
     sliderName, currentRange, defaultRange, lastValid, sliderChangeFunc, inputChangeFunc, sliderBlurFunc
 ) {
     const [minValue, maxValue] = defaultRange;
-    console.log("This is the last valid", lastValid);
     return (
         <div key={sliderName}>
             <Typography id="range-slider" gutterBottom>
@@ -201,8 +194,7 @@ export default class MapMicro extends React.Component {
 
     setSliderValue(newLowerBound, newUpperBound) {
         this.setState({
-            ...this.state,
-            sliderState: [newLowerBound, newUpperBound],
+            sliderState:[newLowerBound, newUpperBound],
             lastValid: [newLowerBound, newUpperBound],
         });
     }
@@ -238,7 +230,6 @@ export default class MapMicro extends React.Component {
         }
 
         this.setState({
-            ...this.state,
             sliderState: newSliderState,
             lastValid: newValidState,
         });
@@ -288,11 +279,6 @@ export default class MapMicro extends React.Component {
                             url="https://{s}.tile.openstreetmap.org/{z}/{x}/{y}.png"
                         />
                         {markerObjects}
-                        {/*<Polygon*/}
-                        {/*    eventHandlers={{click: () => {console.log("marker clicked");}}}*/}
-                        {/*    pathOptions={{color: "purple"}}*/}
-                        {/*    positions={TEST_REGION}*/}
-                        {/*/>*/}
                     </MapContainer>
                     {timeSlider(
                         "Time Slider",
