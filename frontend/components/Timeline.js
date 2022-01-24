@@ -30,7 +30,7 @@ export function Timeline() {
             title: "HEAR CALL OF THE GARDEN",
             date: "March 6, 1914",
             imageRef: HEAR_CALL_GARDEN
-        }
+        },
     ];
 
     const contextState = {

@@ -1,6 +1,6 @@
-import React, {useContext} from "react";
+import React, {useEffect, useContext, useState} from "react";
 import Slider from "rc-slider";
-import {TimelineContext} from "../contexts/TimelineContext";
+import {Interval, TimelineContext} from "../contexts/TimelineContext";
 import "rc-slider/assets/index.css";
 
 /**
@@ -22,16 +22,27 @@ function getMarks(minYear, maxYear) {
     return marks;
 }
 
-function log(value) {
-    const leftVal = value[0];
-    const rightVal = value[1];
-    console.log([leftVal, rightVal]);
-}
-
 export const TimelineSlider = () => {
     const state = useContext(TimelineContext);
     const marks = getMarks(state.minYear, state.maxYear);
+    const [sliderValue, setSliderValue] = useState([]);
 
+    useEffect(() => {
+        updateSliderValues();
+    }, [state.intervalSelected.start, state.intervalSelected.end]);
+
+    const handleSliderChange = (selectedYears) => {
+        setSliderValue(selectedYears);
+        // Update interval selected context
+        const newStartYear = selectedYears[0];
+        const newEndYear = selectedYears[1];
+        const newIntervalSelected = new Interval(newStartYear, newEndYear);
+        state.setIntervalSelected(newIntervalSelected);
+    };
+
+    const updateSliderValues = () => {
+        setSliderValue([state.intervalSelected.start, state.intervalSelected.end]);
+    };
 
     return (
         <Slider.Range
@@ -41,8 +52,9 @@ export const TimelineSlider = () => {
             dots={true}
             marks={marks}
             step={1}
-            onChange={log}
-            value = {[state.intervalSelected.start, state.intervalSelected.end]}
+            onChange={handleSliderChange}
+            value={sliderValue}
+            pushable={true}
         />
     );
 };
