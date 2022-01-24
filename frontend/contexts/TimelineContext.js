@@ -14,7 +14,7 @@ export class Interval {
 export const TimelineContext = React.createContext({
     // represents the min and max year the timeline can be
     "minYear": 1910,
-    "maxYear": 2020,
+    "maxYear": 1925,
     // interval that the user selected from the timeline range
     "intervalSelected": new Interval(1910, 1920),
     "setIntervalSelected": () => {},
