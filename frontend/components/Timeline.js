@@ -9,8 +9,7 @@ import {TimelineDropdown} from "./global/TimelineDropdown";
 
 
 export function Timeline() {
-    // will change to make it 2022
-    const maxYear = 2020;
+    const maxYear = 1925;
     const minYear = 1910;
     const [intervalSelected, setIntervalSelected] = useState(new Interval(minYear, minYear + 5));
     const [timelineRange, setTimelineRange] = useState(new Interval(minYear, maxYear));
