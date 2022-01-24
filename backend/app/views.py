@@ -23,14 +23,15 @@ context = {
     'component_name': 'ExampleId'
 }
 """
-from django.shortcuts import render, get_list_or_404
+import json
+from django.shortcuts import render, get_list_or_404, get_object_or_404
+from django.http import JsonResponse
 from rest_framework.decorators import api_view
 from rest_framework.response import Response
-from django.shortcuts import get_object_or_404
 import datetime
 
-from .models import Person
-from .serializers import PersonSerializer
+from .models import Person, Event
+from .serializers import PersonSerializer, EventSerializer
 
 
 def index(request):
@@ -65,7 +66,7 @@ def example(request, example_id=None):
     return render(request, 'index.html', context)
 
 
-def map_page(request, map_id=None):
+def map_page(request):
     """
     Map page
     """
@@ -78,22 +79,42 @@ def map_page(request, map_id=None):
     }
     return render(request, 'index.html', context)
 
+
 @api_view(['POST'])
 def create_person(request):
+    """
+    API Endpoint for adding a person to the database
+    Required keys in body of request for successfully adding people:
+        - first_name
+        - last_name
+        - ethnicity
+        - date_of_birth
+        - country_of_origin
+    """
     attributes = request.data
 
     new_person_obj = Person.objects.create(**attributes)
     serializer = PersonSerializer(new_person_obj)
     return Response(serializer.data)
 
+
 @api_view(['GET'])
 def get_people(request):
+    """
+    API endpoint for pulling up all people in the Person table
+    """
     people = Person.objects.order_by('first_name')
-    serializer = PersonSerializer(people,many=True)
+    serializer = PersonSerializer(people, many=True)
     return Response(serializer.data)
+
 
 @api_view(['GET'])
 def get_person(request, search_string):
+    """
+    API Endpoint for searching for people by specific fields
+    Using the keywords passed, this will attempt to select all people in the
+    Person table matching them
+    """
     search_list = search_string.split("|")
     search_dict = {}
     for substring in search_list:
@@ -112,4 +133,98 @@ def get_person(request, search_string):
 
     person = get_list_or_404(Person,**search_dict)
     serializer = PersonSerializer(person,many=True)
+
+@api_view(['POST'])
+def create_event(request):
+    """
+    API Endpoint for adding an event to the database
+    Required keys in body of request for successfully adding people:
+        - name
+        - date
+    """
+    attributes = request.data
+
+    new_event_obj = Event.objects.create(**attributes)
+    serializer = EventSerializer(new_event_obj)
     return Response(serializer.data)
+
+# need to add endpoints for updating locations/people event
+@api_view(['GET'])
+def get_people_from_event(request, event_name=None):
+    """
+    API endpoint for pulling up a list of people from an event
+    """
+    event = Event.objects.filter(name=event_name).first()
+    print(event.people)
+    people = PersonSerializer(event.people, many=True)
+    return Response(people)
+
+@api_view(['PUT'])
+def update_people_for_event(request, event_name=None):
+    """
+    API endpoint for updating the list of people for an event
+    """
+    return Response()
+
+
+@api_view(['GET'])
+def get_event(request, **keywords):
+    """
+    API endpoint for pulling up all events from the Event table
+    """
+    event = Event.objects.order_by('name')
+    serializer = EventSerializer(event, many=True)
+    return Response(serializer.data)
+
+def map_macro_page(request):
+    """
+    Map page
+    """
+
+    context = {
+        'page_metadata': {
+            'title': 'Map Macro page'
+        },
+        'component_name': 'MapMacro'
+    }
+    return render(request, 'index.html', context)
+
+
+def map_micro_page(request):
+    """
+    Map page
+    """
+
+    context = {
+        'page_metadata': {
+            'title': 'Map Micro page'
+        },
+        'component_name': 'MapMicro'
+    }
+    return render(request, 'index.html', context)
+
+
+def timeline_test(request):
+    """
+    Testing Page for loading timeline modal
+    """
+
+    context = {
+        'page_metadata': {
+            'title': 'Timeline Modal Test'
+        },
+        'component_name': 'TimelineTest'
+    }
+    return render(request, 'index.html', context)
+
+########## API Views ##########
+
+def get_census_data(request):
+    """
+    API endpoint for getting the census data in json format
+    """
+    with open("app/data/2021_11_tract78.geojson", encoding="utf-8") as f:
+        census_data = json.load(f)
+
+    return JsonResponse(census_data)
+
