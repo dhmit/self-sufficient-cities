@@ -31,7 +31,6 @@ const DocumentDisplay = ({document}) => {
 
         </>
     );
-
 };
 
 DocumentDisplay.propTypes = {
