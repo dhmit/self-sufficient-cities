@@ -2,28 +2,28 @@ import React, {useState} from "react";
 import {Dropdown, DropdownButton} from "react-bootstrap";
 
 const SORT_TYPES = {
-    CHRONOLOGICALLY: "Chronologically",
-    MOST_RECENT: "Most Recent"
+    CHRONOLOGICAL: "Chronological",
+    REVERSE_CHRONOLOGICAL: "Reverse Chronological"
 };
 
 export function TimelineDropdown() {
-    const [sortType, setSortType] = useState(SORT_TYPES.CHRONOLOGICALLY);
+    const [sortType, setSortType] = useState(SORT_TYPES.CHRONOLOGICAL);
 
     function sortChronologically() {
-        setSortType(SORT_TYPES.CHRONOLOGICALLY);
+        setSortType(SORT_TYPES.CHRONOLOGICAL);
     }
 
-    function sortMostRecent() {
-        setSortType(SORT_TYPES.MOST_RECENT);
+    function sortReverse() {
+        setSortType(SORT_TYPES.REVERSE_CHRONOLOGICAL);
     }
 
     return (
         <DropdownButton title={"Sort: " + sortType} variant="secondary" size="sm">
             <Dropdown.Item
-                onSelect={sortChronologically}>{SORT_TYPES.CHRONOLOGICALLY}
+                onSelect={sortChronologically}>{SORT_TYPES.CHRONOLOGICAL}
             </Dropdown.Item>
             <Dropdown.Item
-                onSelect={sortMostRecent}>{SORT_TYPES.MOST_RECENT}
+                onSelect={sortReverse}>{SORT_TYPES.REVERSE_CHRONOLOGICAL}
             </Dropdown.Item>
         </DropdownButton>
     );
