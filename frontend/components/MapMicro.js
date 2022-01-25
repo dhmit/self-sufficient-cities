@@ -209,20 +209,26 @@ export default class MapMicro extends React.Component {
         const [minValue, maxValue] = this.state.timeRange;
         let newSliderState = this.state.sliderState;
         let newValidState = [...this.state.lastValid];
-        // Do nothing if the slider input is blank
+        const isLower = (bound === "lower");
+        const isUpper = (bound === "upper");
+
         if (event.target.value === "") {
+            this.setState({
+                sliderState: [isLower? "":currentLowerValue, isUpper? "":currentUpperValue],
+                lastValid: newValidState,
+            });
             return;
         }
 
-        let newValue = Number(event.target.value);
+        const newValue = Number(event.target.value);
         // Only valid bound inputs will affect the slider by changing the newValidState
-        if (bound === "lower") {
+        if (isLower) {
             if (newValue <= currentUpperValue && newValue >= minValue) {
                 newValidState = [newValue, currentUpperValue];
             }
             newSliderState = [newValue, currentUpperValue];
 
-        } else if (bound === "upper") {
+        } else if (isUpper) {
             if (newValue >= currentLowerValue && newValue <= maxValue) {
                 newValidState = [currentLowerValue, newValue];
             }
@@ -240,10 +246,11 @@ export default class MapMicro extends React.Component {
         // Needed if inputs are not bounded by the slider's maximum and minimum values
         const [currentLowerValue, currentUpperValue] = this.state.sliderState;
         const [minValue, maxValue] = this.state.timeRange;
-        if (currentLowerValue < minValue) {
-            this.setSliderValue(minValue, currentUpperValue);
-        } else if (currentUpperValue > maxValue) {
-            this.setSliderValue(currentLowerValue, maxValue);
+        const [lastLowerValid, lastUpperValid] = this.state.lastValid;
+        if (currentLowerValue < minValue || currentLowerValue > lastUpperValid) {
+            this.setSliderValue(lastLowerValid, currentUpperValue);
+        } else if (currentUpperValue > maxValue || currentUpperValue < lastLowerValid) {
+            this.setSliderValue(currentLowerValue, lastUpperValid);
         }
     };
 
