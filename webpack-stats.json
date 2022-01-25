@@ -3,38 +3,268 @@
   "assets": {
     "37c3082d3ec2f6a0b416184f56beaa49.png": {
       "name": "37c3082d3ec2f6a0b416184f56beaa49.png",
-      "path": "/Users/sharafrashid2/Documents/GitHub/self-sustaining-cities/assets/bundles/37c3082d3ec2f6a0b416184f56beaa49.png",
+      "path": "/Users/anastasia/Documents/Github/self-sustaining-cities/assets/bundles/37c3082d3ec2f6a0b416184f56beaa49.png",
       "publicPath": "http://localhost:3000/build/37c3082d3ec2f6a0b416184f56beaa49.png"
     },
     "413baf6bd1bc947594d08328626c97e5.png": {
       "name": "413baf6bd1bc947594d08328626c97e5.png",
-      "path": "/Users/sharafrashid2/Documents/GitHub/self-sustaining-cities/assets/bundles/413baf6bd1bc947594d08328626c97e5.png",
+      "path": "/Users/anastasia/Documents/Github/self-sustaining-cities/assets/bundles/413baf6bd1bc947594d08328626c97e5.png",
       "publicPath": "http://localhost:3000/build/413baf6bd1bc947594d08328626c97e5.png"
     },
     "d6039ab00547f567982d789537230cff.png": {
       "name": "d6039ab00547f567982d789537230cff.png",
-      "path": "/Users/sharafrashid2/Documents/GitHub/self-sustaining-cities/assets/bundles/d6039ab00547f567982d789537230cff.png",
+      "path": "/Users/anastasia/Documents/Github/self-sustaining-cities/assets/bundles/d6039ab00547f567982d789537230cff.png",
       "publicPath": "http://localhost:3000/build/d6039ab00547f567982d789537230cff.png"
     },
     "f6cf50e029aebb893651ef9cdeb29fae.svg": {
       "name": "f6cf50e029aebb893651ef9cdeb29fae.svg",
-      "path": "/Users/sharafrashid2/Documents/GitHub/self-sustaining-cities/assets/bundles/f6cf50e029aebb893651ef9cdeb29fae.svg",
+      "path": "/Users/anastasia/Documents/Github/self-sustaining-cities/assets/bundles/f6cf50e029aebb893651ef9cdeb29fae.svg",
       "publicPath": "http://localhost:3000/build/f6cf50e029aebb893651ef9cdeb29fae.svg"
     },
     "080f1963dc70e04445ea79dcc24414d6.jpg": {
       "name": "080f1963dc70e04445ea79dcc24414d6.jpg",
-      "path": "/Users/sharafrashid2/Documents/GitHub/self-sustaining-cities/assets/bundles/080f1963dc70e04445ea79dcc24414d6.jpg",
+      "path": "/Users/anastasia/Documents/Github/self-sustaining-cities/assets/bundles/080f1963dc70e04445ea79dcc24414d6.jpg",
       "publicPath": "http://localhost:3000/build/080f1963dc70e04445ea79dcc24414d6.jpg"
     },
     "index.bundle.css": {
       "name": "index.bundle.css",
-      "path": "/Users/sharafrashid2/Documents/GitHub/self-sustaining-cities/assets/bundles/index.bundle.css",
+      "path": "/Users/anastasia/Documents/Github/self-sustaining-cities/assets/bundles/index.bundle.css",
       "publicPath": "http://localhost:3000/build/index.bundle.css"
     },
     "index.bundle.js": {
       "name": "index.bundle.js",
-      "path": "/Users/sharafrashid2/Documents/GitHub/self-sustaining-cities/assets/bundles/index.bundle.js",
+      "path": "/Users/anastasia/Documents/Github/self-sustaining-cities/assets/bundles/index.bundle.js",
       "publicPath": "http://localhost:3000/build/index.bundle.js"
+    },
+    "index.389cc7d4d1dbbd3fe0c3.hot-update.js": {
+      "name": "index.389cc7d4d1dbbd3fe0c3.hot-update.js",
+      "path": "/Users/anastasia/Documents/Github/self-sustaining-cities/assets/bundles/index.389cc7d4d1dbbd3fe0c3.hot-update.js",
+      "publicPath": "http://localhost:3000/build/index.389cc7d4d1dbbd3fe0c3.hot-update.js"
+    },
+    "index.389cc7d4d1dbbd3fe0c3.hot-update.json": {
+      "name": "index.389cc7d4d1dbbd3fe0c3.hot-update.json",
+      "path": "/Users/anastasia/Documents/Github/self-sustaining-cities/assets/bundles/index.389cc7d4d1dbbd3fe0c3.hot-update.json",
+      "publicPath": "http://localhost:3000/build/index.389cc7d4d1dbbd3fe0c3.hot-update.json"
+    },
+    "index.711ac0075b867cab8d86.hot-update.js": {
+      "name": "index.711ac0075b867cab8d86.hot-update.js",
+      "path": "/Users/anastasia/Documents/Github/self-sustaining-cities/assets/bundles/index.711ac0075b867cab8d86.hot-update.js",
+      "publicPath": "http://localhost:3000/build/index.711ac0075b867cab8d86.hot-update.js"
+    },
+    "index.711ac0075b867cab8d86.hot-update.json": {
+      "name": "index.711ac0075b867cab8d86.hot-update.json",
+      "path": "/Users/anastasia/Documents/Github/self-sustaining-cities/assets/bundles/index.711ac0075b867cab8d86.hot-update.json",
+      "publicPath": "http://localhost:3000/build/index.711ac0075b867cab8d86.hot-update.json"
+    },
+    "index.b0a86b2d7a8dd1a04239.hot-update.js": {
+      "name": "index.b0a86b2d7a8dd1a04239.hot-update.js",
+      "path": "/Users/anastasia/Documents/Github/self-sustaining-cities/assets/bundles/index.b0a86b2d7a8dd1a04239.hot-update.js",
+      "publicPath": "http://localhost:3000/build/index.b0a86b2d7a8dd1a04239.hot-update.js"
+    },
+    "index.b0a86b2d7a8dd1a04239.hot-update.json": {
+      "name": "index.b0a86b2d7a8dd1a04239.hot-update.json",
+      "path": "/Users/anastasia/Documents/Github/self-sustaining-cities/assets/bundles/index.b0a86b2d7a8dd1a04239.hot-update.json",
+      "publicPath": "http://localhost:3000/build/index.b0a86b2d7a8dd1a04239.hot-update.json"
+    },
+    "index.96b172816995eb8d9c3f.hot-update.js": {
+      "name": "index.96b172816995eb8d9c3f.hot-update.js",
+      "path": "/Users/anastasia/Documents/Github/self-sustaining-cities/assets/bundles/index.96b172816995eb8d9c3f.hot-update.js",
+      "publicPath": "http://localhost:3000/build/index.96b172816995eb8d9c3f.hot-update.js"
+    },
+    "index.96b172816995eb8d9c3f.hot-update.json": {
+      "name": "index.96b172816995eb8d9c3f.hot-update.json",
+      "path": "/Users/anastasia/Documents/Github/self-sustaining-cities/assets/bundles/index.96b172816995eb8d9c3f.hot-update.json",
+      "publicPath": "http://localhost:3000/build/index.96b172816995eb8d9c3f.hot-update.json"
+    },
+    "index.a9b74ac1b3ea69a57872.hot-update.js": {
+      "name": "index.a9b74ac1b3ea69a57872.hot-update.js",
+      "path": "/Users/anastasia/Documents/Github/self-sustaining-cities/assets/bundles/index.a9b74ac1b3ea69a57872.hot-update.js",
+      "publicPath": "http://localhost:3000/build/index.a9b74ac1b3ea69a57872.hot-update.js"
+    },
+    "index.a9b74ac1b3ea69a57872.hot-update.json": {
+      "name": "index.a9b74ac1b3ea69a57872.hot-update.json",
+      "path": "/Users/anastasia/Documents/Github/self-sustaining-cities/assets/bundles/index.a9b74ac1b3ea69a57872.hot-update.json",
+      "publicPath": "http://localhost:3000/build/index.a9b74ac1b3ea69a57872.hot-update.json"
+    },
+    "index.baaba556563edd96211f.hot-update.js": {
+      "name": "index.baaba556563edd96211f.hot-update.js",
+      "path": "/Users/anastasia/Documents/Github/self-sustaining-cities/assets/bundles/index.baaba556563edd96211f.hot-update.js",
+      "publicPath": "http://localhost:3000/build/index.baaba556563edd96211f.hot-update.js"
+    },
+    "index.baaba556563edd96211f.hot-update.json": {
+      "name": "index.baaba556563edd96211f.hot-update.json",
+      "path": "/Users/anastasia/Documents/Github/self-sustaining-cities/assets/bundles/index.baaba556563edd96211f.hot-update.json",
+      "publicPath": "http://localhost:3000/build/index.baaba556563edd96211f.hot-update.json"
+    },
+    "index.bfb7cdc3904c0b9371fb.hot-update.js": {
+      "name": "index.bfb7cdc3904c0b9371fb.hot-update.js",
+      "path": "/Users/anastasia/Documents/Github/self-sustaining-cities/assets/bundles/index.bfb7cdc3904c0b9371fb.hot-update.js",
+      "publicPath": "http://localhost:3000/build/index.bfb7cdc3904c0b9371fb.hot-update.js"
+    },
+    "index.bfb7cdc3904c0b9371fb.hot-update.json": {
+      "name": "index.bfb7cdc3904c0b9371fb.hot-update.json",
+      "path": "/Users/anastasia/Documents/Github/self-sustaining-cities/assets/bundles/index.bfb7cdc3904c0b9371fb.hot-update.json",
+      "publicPath": "http://localhost:3000/build/index.bfb7cdc3904c0b9371fb.hot-update.json"
+    },
+    "index.341a3a9d57654d0eb395.hot-update.js": {
+      "name": "index.341a3a9d57654d0eb395.hot-update.js",
+      "path": "/Users/anastasia/Documents/Github/self-sustaining-cities/assets/bundles/index.341a3a9d57654d0eb395.hot-update.js",
+      "publicPath": "http://localhost:3000/build/index.341a3a9d57654d0eb395.hot-update.js"
+    },
+    "index.341a3a9d57654d0eb395.hot-update.json": {
+      "name": "index.341a3a9d57654d0eb395.hot-update.json",
+      "path": "/Users/anastasia/Documents/Github/self-sustaining-cities/assets/bundles/index.341a3a9d57654d0eb395.hot-update.json",
+      "publicPath": "http://localhost:3000/build/index.341a3a9d57654d0eb395.hot-update.json"
+    },
+    "index.7e4564c2b7c6cb8eb656.hot-update.js": {
+      "name": "index.7e4564c2b7c6cb8eb656.hot-update.js",
+      "path": "/Users/anastasia/Documents/Github/self-sustaining-cities/assets/bundles/index.7e4564c2b7c6cb8eb656.hot-update.js",
+      "publicPath": "http://localhost:3000/build/index.7e4564c2b7c6cb8eb656.hot-update.js"
+    },
+    "index.7e4564c2b7c6cb8eb656.hot-update.json": {
+      "name": "index.7e4564c2b7c6cb8eb656.hot-update.json",
+      "path": "/Users/anastasia/Documents/Github/self-sustaining-cities/assets/bundles/index.7e4564c2b7c6cb8eb656.hot-update.json",
+      "publicPath": "http://localhost:3000/build/index.7e4564c2b7c6cb8eb656.hot-update.json"
+    },
+    "index.bec786b358fba8521fbf.hot-update.js": {
+      "name": "index.bec786b358fba8521fbf.hot-update.js",
+      "path": "/Users/anastasia/Documents/Github/self-sustaining-cities/assets/bundles/index.bec786b358fba8521fbf.hot-update.js",
+      "publicPath": "http://localhost:3000/build/index.bec786b358fba8521fbf.hot-update.js"
+    },
+    "index.bec786b358fba8521fbf.hot-update.json": {
+      "name": "index.bec786b358fba8521fbf.hot-update.json",
+      "path": "/Users/anastasia/Documents/Github/self-sustaining-cities/assets/bundles/index.bec786b358fba8521fbf.hot-update.json",
+      "publicPath": "http://localhost:3000/build/index.bec786b358fba8521fbf.hot-update.json"
+    },
+    "index.a23285249ea9e50e7449.hot-update.js": {
+      "name": "index.a23285249ea9e50e7449.hot-update.js",
+      "path": "/Users/anastasia/Documents/Github/self-sustaining-cities/assets/bundles/index.a23285249ea9e50e7449.hot-update.js",
+      "publicPath": "http://localhost:3000/build/index.a23285249ea9e50e7449.hot-update.js"
+    },
+    "index.a23285249ea9e50e7449.hot-update.json": {
+      "name": "index.a23285249ea9e50e7449.hot-update.json",
+      "path": "/Users/anastasia/Documents/Github/self-sustaining-cities/assets/bundles/index.a23285249ea9e50e7449.hot-update.json",
+      "publicPath": "http://localhost:3000/build/index.a23285249ea9e50e7449.hot-update.json"
+    },
+    "index.45225fa8fefb4a931c93.hot-update.js": {
+      "name": "index.45225fa8fefb4a931c93.hot-update.js",
+      "path": "/Users/anastasia/Documents/Github/self-sustaining-cities/assets/bundles/index.45225fa8fefb4a931c93.hot-update.js",
+      "publicPath": "http://localhost:3000/build/index.45225fa8fefb4a931c93.hot-update.js"
+    },
+    "index.45225fa8fefb4a931c93.hot-update.json": {
+      "name": "index.45225fa8fefb4a931c93.hot-update.json",
+      "path": "/Users/anastasia/Documents/Github/self-sustaining-cities/assets/bundles/index.45225fa8fefb4a931c93.hot-update.json",
+      "publicPath": "http://localhost:3000/build/index.45225fa8fefb4a931c93.hot-update.json"
+    },
+    "index.86b199ff94d44f76ce81.hot-update.js": {
+      "name": "index.86b199ff94d44f76ce81.hot-update.js",
+      "path": "/Users/anastasia/Documents/Github/self-sustaining-cities/assets/bundles/index.86b199ff94d44f76ce81.hot-update.js",
+      "publicPath": "http://localhost:3000/build/index.86b199ff94d44f76ce81.hot-update.js"
+    },
+    "index.86b199ff94d44f76ce81.hot-update.json": {
+      "name": "index.86b199ff94d44f76ce81.hot-update.json",
+      "path": "/Users/anastasia/Documents/Github/self-sustaining-cities/assets/bundles/index.86b199ff94d44f76ce81.hot-update.json",
+      "publicPath": "http://localhost:3000/build/index.86b199ff94d44f76ce81.hot-update.json"
+    },
+    "index.826b4e063555374503de.hot-update.js": {
+      "name": "index.826b4e063555374503de.hot-update.js",
+      "path": "/Users/anastasia/Documents/Github/self-sustaining-cities/assets/bundles/index.826b4e063555374503de.hot-update.js",
+      "publicPath": "http://localhost:3000/build/index.826b4e063555374503de.hot-update.js"
+    },
+    "index.826b4e063555374503de.hot-update.json": {
+      "name": "index.826b4e063555374503de.hot-update.json",
+      "path": "/Users/anastasia/Documents/Github/self-sustaining-cities/assets/bundles/index.826b4e063555374503de.hot-update.json",
+      "publicPath": "http://localhost:3000/build/index.826b4e063555374503de.hot-update.json"
+    },
+    "index.0f1e4e1dcc3e222ece8c.hot-update.js": {
+      "name": "index.0f1e4e1dcc3e222ece8c.hot-update.js",
+      "path": "/Users/anastasia/Documents/Github/self-sustaining-cities/assets/bundles/index.0f1e4e1dcc3e222ece8c.hot-update.js",
+      "publicPath": "http://localhost:3000/build/index.0f1e4e1dcc3e222ece8c.hot-update.js"
+    },
+    "index.0f1e4e1dcc3e222ece8c.hot-update.json": {
+      "name": "index.0f1e4e1dcc3e222ece8c.hot-update.json",
+      "path": "/Users/anastasia/Documents/Github/self-sustaining-cities/assets/bundles/index.0f1e4e1dcc3e222ece8c.hot-update.json",
+      "publicPath": "http://localhost:3000/build/index.0f1e4e1dcc3e222ece8c.hot-update.json"
+    },
+    "index.ce7d621575a14431eb5e.hot-update.js": {
+      "name": "index.ce7d621575a14431eb5e.hot-update.js",
+      "path": "/Users/anastasia/Documents/Github/self-sustaining-cities/assets/bundles/index.ce7d621575a14431eb5e.hot-update.js",
+      "publicPath": "http://localhost:3000/build/index.ce7d621575a14431eb5e.hot-update.js"
+    },
+    "index.ce7d621575a14431eb5e.hot-update.json": {
+      "name": "index.ce7d621575a14431eb5e.hot-update.json",
+      "path": "/Users/anastasia/Documents/Github/self-sustaining-cities/assets/bundles/index.ce7d621575a14431eb5e.hot-update.json",
+      "publicPath": "http://localhost:3000/build/index.ce7d621575a14431eb5e.hot-update.json"
+    },
+    "index.5c38b9f846ec3c761d60.hot-update.js": {
+      "name": "index.5c38b9f846ec3c761d60.hot-update.js",
+      "path": "/Users/anastasia/Documents/Github/self-sustaining-cities/assets/bundles/index.5c38b9f846ec3c761d60.hot-update.js",
+      "publicPath": "http://localhost:3000/build/index.5c38b9f846ec3c761d60.hot-update.js"
+    },
+    "index.5c38b9f846ec3c761d60.hot-update.json": {
+      "name": "index.5c38b9f846ec3c761d60.hot-update.json",
+      "path": "/Users/anastasia/Documents/Github/self-sustaining-cities/assets/bundles/index.5c38b9f846ec3c761d60.hot-update.json",
+      "publicPath": "http://localhost:3000/build/index.5c38b9f846ec3c761d60.hot-update.json"
+    },
+    "index.b336a478439290c7a587.hot-update.js": {
+      "name": "index.b336a478439290c7a587.hot-update.js",
+      "path": "/Users/anastasia/Documents/Github/self-sustaining-cities/assets/bundles/index.b336a478439290c7a587.hot-update.js",
+      "publicPath": "http://localhost:3000/build/index.b336a478439290c7a587.hot-update.js"
+    },
+    "index.b336a478439290c7a587.hot-update.json": {
+      "name": "index.b336a478439290c7a587.hot-update.json",
+      "path": "/Users/anastasia/Documents/Github/self-sustaining-cities/assets/bundles/index.b336a478439290c7a587.hot-update.json",
+      "publicPath": "http://localhost:3000/build/index.b336a478439290c7a587.hot-update.json"
+    },
+    "index.69740ab8a6cd118f68f4.hot-update.js": {
+      "name": "index.69740ab8a6cd118f68f4.hot-update.js",
+      "path": "/Users/anastasia/Documents/Github/self-sustaining-cities/assets/bundles/index.69740ab8a6cd118f68f4.hot-update.js",
+      "publicPath": "http://localhost:3000/build/index.69740ab8a6cd118f68f4.hot-update.js"
+    },
+    "index.69740ab8a6cd118f68f4.hot-update.json": {
+      "name": "index.69740ab8a6cd118f68f4.hot-update.json",
+      "path": "/Users/anastasia/Documents/Github/self-sustaining-cities/assets/bundles/index.69740ab8a6cd118f68f4.hot-update.json",
+      "publicPath": "http://localhost:3000/build/index.69740ab8a6cd118f68f4.hot-update.json"
+    },
+    "index.3bac9fa8720f1d56c86d.hot-update.js": {
+      "name": "index.3bac9fa8720f1d56c86d.hot-update.js",
+      "path": "/Users/anastasia/Documents/Github/self-sustaining-cities/assets/bundles/index.3bac9fa8720f1d56c86d.hot-update.js",
+      "publicPath": "http://localhost:3000/build/index.3bac9fa8720f1d56c86d.hot-update.js"
+    },
+    "index.3bac9fa8720f1d56c86d.hot-update.json": {
+      "name": "index.3bac9fa8720f1d56c86d.hot-update.json",
+      "path": "/Users/anastasia/Documents/Github/self-sustaining-cities/assets/bundles/index.3bac9fa8720f1d56c86d.hot-update.json",
+      "publicPath": "http://localhost:3000/build/index.3bac9fa8720f1d56c86d.hot-update.json"
+    },
+    "index.6fee303c752a218e33f8.hot-update.js": {
+      "name": "index.6fee303c752a218e33f8.hot-update.js",
+      "path": "/Users/anastasia/Documents/Github/self-sustaining-cities/assets/bundles/index.6fee303c752a218e33f8.hot-update.js",
+      "publicPath": "http://localhost:3000/build/index.6fee303c752a218e33f8.hot-update.js"
+    },
+    "index.6fee303c752a218e33f8.hot-update.json": {
+      "name": "index.6fee303c752a218e33f8.hot-update.json",
+      "path": "/Users/anastasia/Documents/Github/self-sustaining-cities/assets/bundles/index.6fee303c752a218e33f8.hot-update.json",
+      "publicPath": "http://localhost:3000/build/index.6fee303c752a218e33f8.hot-update.json"
+    },
+    "index.d9505e7e79967d4fdae6.hot-update.js": {
+      "name": "index.d9505e7e79967d4fdae6.hot-update.js",
+      "path": "/Users/anastasia/Documents/Github/self-sustaining-cities/assets/bundles/index.d9505e7e79967d4fdae6.hot-update.js",
+      "publicPath": "http://localhost:3000/build/index.d9505e7e79967d4fdae6.hot-update.js"
+    },
+    "index.d9505e7e79967d4fdae6.hot-update.json": {
+      "name": "index.d9505e7e79967d4fdae6.hot-update.json",
+      "path": "/Users/anastasia/Documents/Github/self-sustaining-cities/assets/bundles/index.d9505e7e79967d4fdae6.hot-update.json",
+      "publicPath": "http://localhost:3000/build/index.d9505e7e79967d4fdae6.hot-update.json"
+    },
+    "index.ca7cd7b338241141dfb9.hot-update.js": {
+      "name": "index.ca7cd7b338241141dfb9.hot-update.js",
+      "path": "/Users/anastasia/Documents/Github/self-sustaining-cities/assets/bundles/index.ca7cd7b338241141dfb9.hot-update.js",
+      "publicPath": "http://localhost:3000/build/index.ca7cd7b338241141dfb9.hot-update.js"
+    },
+    "index.ca7cd7b338241141dfb9.hot-update.json": {
+      "name": "index.ca7cd7b338241141dfb9.hot-update.json",
+      "path": "/Users/anastasia/Documents/Github/self-sustaining-cities/assets/bundles/index.ca7cd7b338241141dfb9.hot-update.json",
+      "publicPath": "http://localhost:3000/build/index.ca7cd7b338241141dfb9.hot-update.json"
     }
   },
   "chunks": {
@@ -43,5 +273,7 @@
       "index.bundle.js"
     ]
   },
-  "publicPath": "http://localhost:3000/build/"
+  "publicPath": "http://localhost:3000/build/",
+  "error": "ESLintError",
+  "message": "\n/Users/anastasia/Documents/Github/self-sustaining-cities/frontend/components/MapMacro.js\n  35:18  error  'GeoJSON' is not defined  react/jsx-no-undef\n\n✖ 1 problem (1 error, 0 warnings)\n"
 }
