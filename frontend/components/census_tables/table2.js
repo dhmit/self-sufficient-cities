@@ -1,6 +1,6 @@
 import React from "react";
 
-let JsonData= [
+let JsonData = [
     {
         "tract78": "All classes"
     },
@@ -643,14 +643,12 @@ function Table2(){
                     </tr>
                 </thead>
                 <tbody>
-
-
                     {DisplayData}
-
                 </tbody>
             </table>
 
         </div>
     );
 }
+
 export default Table2;

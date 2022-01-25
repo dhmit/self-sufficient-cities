@@ -1,13 +1,7 @@
 import React from "react";
 import {MapContainer, Marker, Popup, TileLayer} from "react-leaflet";
-// import JsonDataDisplay from "./table1";
-import Table2 from "./table2";
-// import Table3 from "./table3";
-// import Table4 from "./table4";
-// import Table5 from "./table5";
-// import Table6 from "./table6";
-// import Table7 from "./table7";
-// import Table8 from "./table8";
+import Table2 from "./census_tables/table2";
+
 // MORNING TEAM
 
 export default class MapMacro extends React.Component {

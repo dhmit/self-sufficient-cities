@@ -1,6 +1,6 @@
 import React from "react";
 
-let JsonData= [
+let JsonData = [
     {
         "subject": "VALUE OF HOME"
     },
@@ -345,10 +345,10 @@ let JsonData= [
     }
 ];
 
-function Table7(){
-    const DisplayData=JsonData.map(
-        (info)=>{
-            return(
+function Table7() {
+    const DisplayData = JsonData.map(
+        (info) => {
+            return (
                 <tr key={info.count}>
                     <td>{info.subject}</td>
                     <td>{info.tract78}</td>
@@ -356,19 +356,19 @@ function Table7(){
             );
         }
     );
-    return(
+    return (
         <div>
             <table className="table formatting">
                 <thead>
-                    <tr>
-                        <th>Subject</th>
-                        <th>Tract 78</th>
-                    </tr>
+                <tr>
+                    <th>Subject</th>
+                    <th>Tract 78</th>
+                </tr>
                 </thead>
                 <tbody>
 
 
-                    {DisplayData}
+                {DisplayData}
 
                 </tbody>
             </table>
@@ -376,4 +376,5 @@ function Table7(){
         </div>
     );
 }
+
 export default Table7;

@@ -1,6 +1,6 @@
 import React from "react";
 
-let JsonData= [
+let JsonData = [
     {
         "subject": "TYPE OF STRUCTURE  "
     },
@@ -364,10 +364,10 @@ let JsonData= [
 ];
 
 
-function Table8(){
-    const DisplayData=JsonData.map(
-        (info)=>{
-            return(
+function Table8() {
+    const DisplayData = JsonData.map(
+        (info) => {
+            return (
                 <tr key={info.count}>
                     <td>{info.subject}</td>
                     <td>{info.total}</td>
@@ -375,19 +375,19 @@ function Table8(){
             );
         }
     );
-    return(
+    return (
         <div>
             <table className="table formatting">
                 <thead>
-                    <tr>
-                        <th>Subject</th>
-                        <th>Total</th>
-                    </tr>
+                <tr>
+                    <th>Subject</th>
+                    <th>Total</th>
+                </tr>
                 </thead>
                 <tbody>
 
 
-                    {DisplayData}
+                {DisplayData}
 
                 </tbody>
             </table>
@@ -395,4 +395,5 @@ function Table8(){
         </div>
     );
 }
+
 export default Table8;
