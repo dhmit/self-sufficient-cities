@@ -215,8 +215,8 @@ export default class MapMicro extends React.Component {
 
         if (event.target.value === "") {
             this.setState({
-                sliderState: [isLower? "":currentLowerValue, isUpper? "":currentUpperValue],
-                lastValid: newValidState,
+                sliderState: [isLower ? "" : currentLowerValue, isUpper ? "" : currentUpperValue],
+                lastValid: newValidState
             });
             return;
         }
