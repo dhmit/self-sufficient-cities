@@ -1,21 +1,21 @@
-import React from "react";
-import {GeoJSON, MapContainer, Marker, Popup, TileLayer} from "react-leaflet";
 import axios from "axios";
+import React from "react";
+import {MapContainer, Marker, Popup, TileLayer, GeoJSON} from "react-leaflet";
+import Table2 from "./census_tables/table2";
 // MORNING TEAM
-
 const URL = "/api/get_census_data/";
 
 export default class MapMacro extends React.Component {
     state = {
         position: [38.897665, -76.925919],
         location: "Deanwood neighborhood, Washington DC",
-        censusdata: {}
+        censustract: {}
     }
 
     componentDidMount() {
         axios.get(URL)
             .then((res) => {
-                this.setState({censusdata: res.data});
+                this.setState({censustract: res.data});
             });
     }
 
@@ -32,10 +32,11 @@ export default class MapMacro extends React.Component {
                     attribution='&copy; <a href="https://www.openstreetmap.org/copyright">OpenStreetMap</a> contributors'
                     url="https://{s}.tile.openstreetmap.org/{z}/{x}/{y}.png"
                 />
-                {Object.keys(this.state.censusdata).length > 0 &&
-                    <GeoJSON data={this.state.censusdata}/>
-                };
+                {Object.keys(this.state.censustract).length > 0 &&
+                <GeoJSON data={this.state.censustract}/>
+                }
             </MapContainer>
+            <Table2/>
         </div>;
     }
 }
