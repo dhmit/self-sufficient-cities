@@ -23,7 +23,8 @@ context = {
     'component_name': 'ExampleId'
 }
 """
-import json, datetime
+import json
+import datetime
 from django.shortcuts import render, get_list_or_404
 from django.http import JsonResponse
 from rest_framework.decorators import api_view
