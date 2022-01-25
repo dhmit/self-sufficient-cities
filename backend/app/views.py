@@ -102,7 +102,11 @@ def get_people(request):
     """
     API endpoint for pulling up all people in the Person table
     """
-    people = Person.objects.order_by('first_name')
+    params = request.GET.dict()
+    print(params)
+
+    people = Person.objects.filter(**params)
+    print(people)
     serializer = PersonSerializer(people, many=True)
     return Response(serializer.data)
 

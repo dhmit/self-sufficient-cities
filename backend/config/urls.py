@@ -31,7 +31,7 @@ urlpatterns = [
     path('example/<example_id>', views.example),
     path('api/create_person', views.create_person),
     path('api/create_event', views.create_event),
-    path('api/get_all_people', views.get_people),
+    path('api/get_people', views.get_people),
     path('api/get_people_from_event/<event_name>', views.get_people_from_event),
     path('api/update_people_for_event/<event_name>', views.update_people_for_event),
     path('api/get_person/<search_string>', views.get_person), # search_string is in the format
