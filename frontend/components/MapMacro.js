@@ -1,7 +1,7 @@
 import React from "react";
 import {MapContainer, Marker, Popup, TileLayer} from "react-leaflet";
-// import JsonDataDisplay from "./table1";
-import Table2 from "./table2";
+import JsonDataDisplay from "./table1";
+// import Table2 from "./table2";
 // import Table3 from "./table3";
 // import Table4 from "./table4";
 // import Table5 from "./table5";
@@ -19,7 +19,6 @@ export default class MapMacro extends React.Component {
     render() {
         return <div id="map">
             <h1>{this.state.location}</h1>
-            <Table2/>
             <MapContainer center={this.state.position} zoom={13} scrollWheelZoom={true}>
                 <Marker position={this.state.position}>
                     <Popup>
@@ -31,6 +30,7 @@ export default class MapMacro extends React.Component {
                     url="https://{s}.tile.openstreetmap.org/{z}/{x}/{y}.png"
                 />
             </MapContainer>
+            <JsonDataDisplay/>
         </div>;
     }
 }
