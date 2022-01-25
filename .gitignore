@@ -125,6 +125,7 @@ dmypy.json
 .idea/usage.statistics.xml
 .idea/tasks.xml
 .idea/runConfigurations
+.idea/misc.xml
 
 # dependencies
 frontend/node_modules
@@ -157,3 +158,4 @@ webpack-stats.json
 token.pickle
 
 node_modules
+webpack-stats.json

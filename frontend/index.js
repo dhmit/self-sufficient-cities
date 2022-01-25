@@ -7,8 +7,10 @@ import ErrorNotFoundComponent from "./components/ErrorNotFoundComponent";
 import ExampleId from "./components/ExampleId";
 import Home from "./components/Home";
 import Map from "./components/Map";
+import {Timeline} from "./components/Timeline";
 import MapMicro from "./components/MapMicro";
 import MapMacro from "./components/MapMacro";
+import TimelineTest from "./components/TimelineTest";
 
 const COMPONENT_PROPS_RAW = document.getElementById("component_props").text;
 const COMPONENT_NAME_RAW = document.getElementById("component_name").text;
@@ -20,8 +22,10 @@ const COMPONENTS = {
     ExampleId,
     Home,
     Map,
+    Timeline,
     MapMicro,
-    MapMacro
+    MapMacro,
+    TimelineTest
 };
 
 const PreselectedComponent = COMPONENTS[COMPONENT_NAME || "ErrorNotFoundComponent"];
