@@ -1,5 +1,4 @@
-import React from 'react';
-// import JsonData from './data.json';
+import React from "react";
 
 let JsonData= [
     {
@@ -365,7 +364,7 @@ let JsonData= [
 ];
 
 
- function Table8(){
+function Table8(){
     const DisplayData=JsonData.map(
         (info)=>{
             return(
@@ -376,15 +375,14 @@ let JsonData= [
             );
         }
     );
-
     return(
         <div>
             <table className="table formatting">
                 <thead>
-                    <tr>
+                <tr>
                     <th>Subject</th>
                     <th>Total</th>
-                    </tr>
+                </tr>
                 </thead>
                 <tbody>
 
@@ -396,6 +394,5 @@ let JsonData= [
 
         </div>
     );
- }
-
- export default Table8;
+}
+export default Table8;

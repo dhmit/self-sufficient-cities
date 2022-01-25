@@ -1,5 +1,4 @@
-import React from 'react';
-// import JsonData from './data.json';
+import React from "react";
 
 let JsonData= [
     {
@@ -49,11 +48,11 @@ let JsonData= [
         "tract78": 1113
     },
     {
-        "occupancy": "Vacant",
+        "occupancy": "Vacant"
     },
     {
         "occupancy": "For sale or rent",
-        "tract78": 181,
+        "tract78": 181
     },
     {
         "occupancy": "Not for sale or rent",
@@ -76,8 +75,7 @@ let JsonData= [
     }
 ];
 
-
- function Table5(){
+function Table5(){
     const DisplayData=JsonData.map(
         (info)=>{
             return(
@@ -88,14 +86,13 @@ let JsonData= [
             );
         }
     );
-
     return(
         <div>
             <table className="table formatting">
                 <thead>
                     <tr>
-                    <th>Occupancy</th>
-                    <th>Count</th>
+                        <th>Occupancy</th>
+                        <th>Count</th>
                     </tr>
                 </thead>
                 <tbody>
@@ -108,6 +105,5 @@ let JsonData= [
 
         </div>
     );
- }
-
- export default Table5;
+}
+export default Table5;
