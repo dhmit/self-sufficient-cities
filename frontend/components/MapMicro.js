@@ -1,5 +1,5 @@
 import React from "react";
-import {MapContainer, Marker, Popup, TileLayer, Polygon} from "react-leaflet";
+import {MapContainer, Marker, Popup, TileLayer} from "react-leaflet";
 import Input from "@material-ui/core/Input";
 import Typography from "@material-ui/core/Typography";
 import Grid from "@material-ui/core/Grid";
