@@ -100,7 +100,9 @@ def create_person(request):
 @api_view(['GET'])
 def get_people(request):
     """
-    API endpoint for pulling up all people in the Person table
+    API endpoint for searching for people by specific fields
+    Using the keywords passed, this will attempt to select all people in the
+    Person table matching them
     """
     params = request.GET.dict()
     print(params)
@@ -108,36 +110,6 @@ def get_people(request):
     people = Person.objects.filter(**params)
     print(people)
     serializer = PersonSerializer(people, many=True)
-    return Response(serializer.data)
-
-
-@api_view(['GET'])
-def get_person(request, search_string):
-    """
-    API Endpoint for searching for people by specific fields
-    Using the keywords passed, this will attempt to select all people in the
-    Person table matching them
-    TODO: implement using query strings
-    """
-    search_list = search_string.split("|")
-    search_dict = {}
-    for substring in search_list:
-        pair = substring.split(":")  # pair[0] is the exact name of a Person attribute, and pair[
-        # 1] is its value
-
-        if pair[0] == "date_of_birth":
-            # Convert the string representing the birthdate into the datetime datatype
-            birthdate = [int(n) for n in pair[1].split("-")]
-            value = datetime.datetime(*birthdate)
-        else:
-            value = pair[1]
-
-        # Add the name-value pair to the dictionary
-        search_dict[pair[0]] = value
-
-    person = get_list_or_404(Person, **search_dict)
-    serializer = PersonSerializer(person, many=True)
-
     return Response(serializer.data)
 
 
