@@ -180,6 +180,18 @@ def get_event(request, **keywords):
     serializer = EventSerializer(event, many=True)
     return Response(serializer.data)
 
+def timeline_page(request):
+    """
+    Timeline page
+    """
+    context = {
+        'page_metadata': {
+            'title': 'Timeline page'
+        },
+        'component_name': 'Timeline'
+    }
+    return render(request, 'index.html', context)
+
 
 def map_macro_page(request):
     """
@@ -192,6 +204,7 @@ def map_macro_page(request):
         },
         'component_name': 'MapMacro'
     }
+
     return render(request, 'index.html', context)
 
 
@@ -224,7 +237,6 @@ def timeline_test(request):
 
 
 # API Views
-
 def get_census_data(request):
     """
     API endpoint for getting the census data in json format

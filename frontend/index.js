@@ -7,6 +7,7 @@ import ErrorNotFoundComponent from "./components/ErrorNotFoundComponent";
 import ExampleId from "./components/ExampleId";
 import Home from "./components/Home";
 import Map from "./components/Map";
+import {Timeline} from "./components/Timeline";
 import MapMicro from "./components/MapMicro";
 import MapMacro from "./components/MapMacro";
 import TimelineTest from "./components/TimelineTest";
@@ -21,6 +22,7 @@ const COMPONENTS = {
     ExampleId,
     Home,
     Map,
+    Timeline,
     MapMicro,
     MapMacro,
     TimelineTest

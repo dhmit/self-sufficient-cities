@@ -1,1 +1,47 @@
-{"status":"done","chunks":{"index":["index.bundle.css","index.bundle.js","index.1dde35dfa5b79cbb2838.hot-update.js"]},"publicPath":"http://localhost:3000/build/","assets":{"94a183b9acb0444f72608141482a33df.svg":{"name":"94a183b9acb0444f72608141482a33df.svg","path":"C:\\Users\\quinc\\Documents\\GitHub\\self-sustaining-cities\\assets\\bundles\\94a183b9acb0444f72608141482a33df.svg","publicPath":"http://localhost:3000/build/94a183b9acb0444f72608141482a33df.svg"},"index.bundle.css":{"name":"index.bundle.css","path":"C:\\Users\\quinc\\Documents\\GitHub\\self-sustaining-cities\\assets\\bundles\\index.bundle.css","publicPath":"http://localhost:3000/build/index.bundle.css"},"index.bundle.js":{"name":"index.bundle.js","path":"C:\\Users\\quinc\\Documents\\GitHub\\self-sustaining-cities\\assets\\bundles\\index.bundle.js","publicPath":"http://localhost:3000/build/index.bundle.js"},"index.1dde35dfa5b79cbb2838.hot-update.js":{"name":"index.1dde35dfa5b79cbb2838.hot-update.js","path":"C:\\Users\\quinc\\Documents\\GitHub\\self-sustaining-cities\\assets\\bundles\\index.1dde35dfa5b79cbb2838.hot-update.js","publicPath":"http://localhost:3000/build/index.1dde35dfa5b79cbb2838.hot-update.js"},"index.1dde35dfa5b79cbb2838.hot-update.json":{"name":"index.1dde35dfa5b79cbb2838.hot-update.json","path":"C:\\Users\\quinc\\Documents\\GitHub\\self-sustaining-cities\\assets\\bundles\\index.1dde35dfa5b79cbb2838.hot-update.json","publicPath":"http://localhost:3000/build/index.1dde35dfa5b79cbb2838.hot-update.json"}}}
+{
+  "status": "done",
+  "assets": {
+    "37c3082d3ec2f6a0b416184f56beaa49.png": {
+      "name": "37c3082d3ec2f6a0b416184f56beaa49.png",
+      "path": "/Users/sharafrashid2/Documents/GitHub/self-sustaining-cities/assets/bundles/37c3082d3ec2f6a0b416184f56beaa49.png",
+      "publicPath": "http://localhost:3000/build/37c3082d3ec2f6a0b416184f56beaa49.png"
+    },
+    "413baf6bd1bc947594d08328626c97e5.png": {
+      "name": "413baf6bd1bc947594d08328626c97e5.png",
+      "path": "/Users/sharafrashid2/Documents/GitHub/self-sustaining-cities/assets/bundles/413baf6bd1bc947594d08328626c97e5.png",
+      "publicPath": "http://localhost:3000/build/413baf6bd1bc947594d08328626c97e5.png"
+    },
+    "d6039ab00547f567982d789537230cff.png": {
+      "name": "d6039ab00547f567982d789537230cff.png",
+      "path": "/Users/sharafrashid2/Documents/GitHub/self-sustaining-cities/assets/bundles/d6039ab00547f567982d789537230cff.png",
+      "publicPath": "http://localhost:3000/build/d6039ab00547f567982d789537230cff.png"
+    },
+    "f6cf50e029aebb893651ef9cdeb29fae.svg": {
+      "name": "f6cf50e029aebb893651ef9cdeb29fae.svg",
+      "path": "/Users/sharafrashid2/Documents/GitHub/self-sustaining-cities/assets/bundles/f6cf50e029aebb893651ef9cdeb29fae.svg",
+      "publicPath": "http://localhost:3000/build/f6cf50e029aebb893651ef9cdeb29fae.svg"
+    },
+    "080f1963dc70e04445ea79dcc24414d6.jpg": {
+      "name": "080f1963dc70e04445ea79dcc24414d6.jpg",
+      "path": "/Users/sharafrashid2/Documents/GitHub/self-sustaining-cities/assets/bundles/080f1963dc70e04445ea79dcc24414d6.jpg",
+      "publicPath": "http://localhost:3000/build/080f1963dc70e04445ea79dcc24414d6.jpg"
+    },
+    "index.bundle.css": {
+      "name": "index.bundle.css",
+      "path": "/Users/sharafrashid2/Documents/GitHub/self-sustaining-cities/assets/bundles/index.bundle.css",
+      "publicPath": "http://localhost:3000/build/index.bundle.css"
+    },
+    "index.bundle.js": {
+      "name": "index.bundle.js",
+      "path": "/Users/sharafrashid2/Documents/GitHub/self-sustaining-cities/assets/bundles/index.bundle.js",
+      "publicPath": "http://localhost:3000/build/index.bundle.js"
+    }
+  },
+  "chunks": {
+    "index": [
+      "index.bundle.css",
+      "index.bundle.js"
+    ]
+  },
+  "publicPath": "http://localhost:3000/build/"
+}
