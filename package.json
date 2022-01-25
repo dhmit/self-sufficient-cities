@@ -39,6 +39,7 @@
     "eslint-plugin-react-hooks": "^4.2.0",
     "eslint-webpack-plugin": "^2.5.4",
     "file-loader": "^6.2.0",
+    "material-ui": "^0.20.2",
     "mini-css-extract-plugin": "^1.6.0",
     "react-sound": "^1.2.0",
     "webpack": "^5.38.1",
