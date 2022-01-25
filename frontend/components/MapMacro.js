@@ -19,6 +19,26 @@ export default class MapMacro extends React.Component {
             });
     }
 
+    showTableData(event) {
+        // console.log(event.latlng.lat + " " + event.latlng.lng);
+        event.target.setStyle({
+            fillColor: "green"
+        });
+    }
+
+    onEachBlock = (block, layer) => {
+        const blockName = block.properties.NAMELSAD;
+        // layer.bindPopup(blockName);
+
+        layer.on({
+            click: this.showTableData,
+
+            mouseover: (event) => {
+                event.target.bindPopup(blockName).openPopup();
+            }
+        });
+    }
+
     render() {
         return <div id="map">
             <h1>{this.state.location}</h1>
@@ -33,7 +53,7 @@ export default class MapMacro extends React.Component {
                     url="https://{s}.tile.openstreetmap.org/{z}/{x}/{y}.png"
                 />
                 {Object.keys(this.state.censusdata).length > 0 &&
-                    <GeoJSON data={this.state.censusdata}/>
+                    <GeoJSON data={this.state.censusdata} onEachFeature={this.onEachBlock}/>
                 };
             </MapContainer>
         </div>;
