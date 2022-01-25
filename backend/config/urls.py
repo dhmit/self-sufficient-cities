@@ -30,7 +30,9 @@ urlpatterns = [
     path('example/', views.example),
     path('example/<example_id>', views.example),
     path('map/', views.map_page),
+    path('timeline/', views.timeline_page, name='timeline'),
     path('map-macro/', views.map_macro_page),
     path('map-micro/', views.map_micro_page),
-    path('api/get_census_data/', views.get_census_data)
+    path('timeline-test', views.timeline_test),
+    path('api/get_census_data/', views.get_census_data),
 ]
