@@ -379,10 +379,10 @@ function Table8(){
         <div>
             <table className="table formatting">
                 <thead>
-                <tr>
-                    <th>Subject</th>
-                    <th>Total</th>
-                </tr>
+                    <tr>
+                        <th>Subject</th>
+                        <th>Total</th>
+                    </tr>
                 </thead>
                 <tbody>
 

@@ -390,4 +390,4 @@ function Table6(){
         </div>
     );
 }
-export default Table6
+export default Table6;
