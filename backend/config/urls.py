@@ -38,6 +38,7 @@ urlpatterns = [
     # <attribute1_name>:<attribute1_value>|<attribute2_name>:<attribute2_value>|<...>
     re_path(r'^api\/get_event\/(?P<name>[a-zA-Z0-9_]+)$', views.get_event),
     path('map/', views.map_page),
+    path('timeline/', views.timeline_page, name='timeline'),
     path('map-macro/', views.map_macro_page),
     path('map-micro/', views.map_micro_page),
     path('timeline-test', views.timeline_test),
