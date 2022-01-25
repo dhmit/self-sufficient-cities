@@ -652,5 +652,5 @@ function Table2(){
 
         </div>
     );
- }
- export default Table2;
+}
+export default Table2;
