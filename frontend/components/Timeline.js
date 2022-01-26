@@ -26,6 +26,19 @@ export function Timeline() {
                 {title: "Washington Bee Article 1", text: "Lorem ipsum dolor sit amet"},
                 {title: "Washington Bee Article 2", text: "Sample 2"}
             ],
+            entities: {
+                "places": [
+                    "near Deanwood, D. C.",
+                    "1014 W St. N.W."
+                ],
+                "people": [
+                    "CLARENCE M. DeVEILE"
+                ],
+                "dates": [
+                    "December 8, 1917"
+                ],
+                "events": []
+            },
             imageRef: WASHINGTON_BEE_12_3_1910
         },
         {
@@ -35,6 +48,26 @@ export function Timeline() {
                 {title: "Washington Bee Article 1", text: "Lorem ipsum dolor sit amet"},
                 {title: "Washington Bee Article 2", text: "Sample 2"}
             ],
+            entities: {
+                "places": [
+                    "Ellicott City",
+                    "The Howard Co. Colored People Independent League",
+                    "Altholton M. E. Church",
+                    "1711 Lorman St., Baltimore, Md."
+                ],
+                "people": [
+                    "Mr. Stephen Watkins",
+                    "Mr. James Carter",
+                    "Rev. Wm. N. Holt"
+                ],
+                "dates": [
+                    "August 14, 1915",
+                    "September 2nd, 1915"
+                ],
+                "events": [
+                    "First Great Annual State Bazaar and Carnival"
+                ]
+            },
             imageRef: WASHINGTON_BEE_11_15_1913
         },
         {
@@ -44,6 +77,19 @@ export function Timeline() {
                 {title: "Hear Call of the Garden Article 1", text: "Lorem ipsum dolor sit amet"},
                 {title: "Hear Call of the Garden Article 2", text: "Sample 2"}
             ],
+            entities: {
+                "places": [
+                    "near Deanwood, D. C.",
+                    "1014 W St. N.W."
+                ],
+                "people": [
+                    "CLARENCE M. DeVEILE"
+                ],
+                "dates": [
+                    "December 8, 1917"
+                ],
+                "events": []
+            },
             imageRef: HEAR_CALL_GARDEN
         }
     ];
