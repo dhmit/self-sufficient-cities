@@ -6,6 +6,7 @@ export default class Map extends React.Component {
         position: [38.9051606, -77.0036513],
         location: "Deanwood neighborhood, Washington DC"
     }
+    // TODO: check if markers can be deterined using coordinates
 
     render() {
         return <div id="map">
@@ -17,7 +18,8 @@ export default class Map extends React.Component {
                 />
                 <Marker position={this.state.position}>
                     <Popup>
-                        A pretty CSS3 popup. <br/> Easily customizable.
+                        <b>Deanwood</b>
+                        <br/> Self-sustaining city until around the 1950s.
                     </Popup>
                 </Marker>
             </MapContainer>
