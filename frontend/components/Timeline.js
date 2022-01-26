@@ -62,7 +62,7 @@ export function Timeline() {
     return (
         <React.Fragment>
             <TimelineContext.Provider value={contextState}>
-                {Object.keys(documentModal).length && <DocumentModal document={documentModal}/>}
+                {Object.keys(documentModal).length > 0 && <DocumentModal document={documentModal}/>}
                 <TimelineSlider/>
                 <div className={"btn-group"}>
                     <TimelineDropdown/>
