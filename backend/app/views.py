@@ -104,10 +104,7 @@ def get_people(request):
     Person table matching them
     """
     params = request.GET.dict()
-    print(params)
-
     people = Person.objects.filter(**params)
-    print(people)
     serializer = PersonSerializer(people, many=True)
     return Response(serializer.data)
 
@@ -129,26 +126,26 @@ def create_event(request):
 
 # need to add endpoints for updating locations/people event
 @api_view(['GET'])
-def get_people_from_event(request, event_name=None):
+def get_people_from_event(request, event_id=None):
     """
     API endpoint for pulling up a list of people from an event
     """
-    event = Event.objects.filter(name=event_name).first()
-    print(event.people)
+    event = Event.objects.get(id=event_id)
     people = PersonSerializer(event.people, many=True)
     return Response(people)
 
 
 @api_view(['PUT'])
-def update_people_for_event(request, event_name=None):
+def update_people_for_event(request, event_id=None):
     """
     API endpoint for updating the list of people for an event
+    Currently not implemented, so it returns an empty Response object
     """
     return Response()
 
 
 @api_view(['GET'])
-def get_event(request, **keywords):
+def get_events(request):
     """
     API endpoint for pulling up all events from the Event table
     """
