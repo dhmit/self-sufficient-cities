@@ -2,6 +2,7 @@
 Models for the Self-Sustaining Cities web app.
 """
 
+import json, os
 from django.db import models
 
 
@@ -27,17 +28,22 @@ class Person(models.Model):
 
         `date_of_birth`: date of birth
 
-        `country_of_origin`: representation of country of origin (
-        TODO: restrict this to 2 or 3 character country codes
-        )
+        `country_of_origin`: representation of country of origin
     """
     first_name = models.CharField(max_length=32)
     last_name = models.CharField(max_length=32)
     ethnicity = models.CharField(max_length=32, blank=True)
     date_of_birth = models.DateField()
-    country_of_origin = models.CharField(
-        max_length=64)  # May want to restrict to 2 character country
-    # CODES
+
+    dir = os.path.dirname(__file__)
+    abs_file_path = os.path.join(dir, "data/country_codes.json")
+
+    # Country Data obtained from https://datahub.io/core/country-list#data
+    f = open(abs_file_path)
+    data = json.load(f)
+    COUNTRY_CODES = [(country['Code'],country['Name']) for country in data]
+    f.close()
+    country_of_origin = models.CharField(max_length=2,choices=COUNTRY_CODES)
 
 
 class Event(models.Model):
@@ -56,3 +62,6 @@ class Event(models.Model):
     date = models.DateField()
     locations = models.ManyToManyField(Location)
     people = models.ManyToManyField(Person)
+
+
+
