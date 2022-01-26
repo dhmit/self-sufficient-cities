@@ -31,14 +31,12 @@ const DocumentShowcase = ({documents}) => {
         <div id="showcase">
             <TimelineArrow isLeft={true}/>
             <div id="document-showcase">
-                {intervalDocuments.length > 0 
+                {intervalDocuments.length > 0
                     ? intervalDocuments.map((document, index) =>
                         <ShowcaseItem
                             key={`${document.toString()}_${index}`}
                             value={document}
-                            title={document.title}
-                            date={document.date}
-                            imageRef={document.imageRef}
+                            document={document}
                         />)
                     : <p className="empty-message">No documents to display for this interval</p>
                 }

@@ -20,5 +20,8 @@ export const TimelineContext = React.createContext({
     "setIntervalSelected": () => {},
     // interval representing the range of years that the timeline shows
     "timelineRange": new Interval(1910, 1920),
-    "setTimelineRange": () => {}
+    "setTimelineRange": () => {},
+    // represents the document to display in a modal, if there is no document to display then {}
+    "documentModal": {},
+    "setDocumentModal": () => {}
 });

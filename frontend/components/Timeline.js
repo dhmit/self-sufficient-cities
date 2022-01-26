@@ -7,6 +7,7 @@ import WASHINGTON_BEE_12_3_1910 from "../images/washington_bee_dec_3_1910.png";
 import WASHINGTON_BEE_11_15_1913 from "../images/washington_bee_nov_15_1913.png";
 import {TimelineDropdown} from "./global/TimelineDropdown";
 import {ResetDefault} from "./ResetDefault";
+import DocumentModal from "./DocumentModal";
 
 
 export function Timeline() {
@@ -14,31 +15,46 @@ export function Timeline() {
     const minYear = 1910;
     const [intervalSelected, setIntervalSelected] = useState(new Interval(minYear, minYear + 5));
     const [timelineRange, setTimelineRange] = useState(new Interval(minYear, maxYear));
+    const [documentModal, setDocumentModal] = useState({});
     // once backend is ready, we will make a request to the api to retrieve the documents & store
     // it as state
     const documents = [
         {
             title: "Washington Bee",
             date: "December 3, 1910",
+            articles: [
+                {title: "Washington Bee Article 1", text: "Lorem ipsum dolor sit amet"},
+                {title: "Washington Bee Article 2", text: "Sample 2"}
+            ],
             imageRef: WASHINGTON_BEE_12_3_1910
         },
         {
             title: "Washington Bee",
             date: "November 15, 1913",
+            articles: [
+                {title: "Washington Bee Article 1", text: "Lorem ipsum dolor sit amet"},
+                {title: "Washington Bee Article 2", text: "Sample 2"}
+            ],
             imageRef: WASHINGTON_BEE_11_15_1913
         },
         {
             title: "HEAR CALL OF THE GARDEN",
             date: "March 6, 1914",
+            articles: [
+                {title: "Hear Call of the Garden Article 1", text: "Lorem ipsum dolor sit amet"},
+                {title: "Hear Call of the Garden Article 2", text: "Sample 2"}
+            ],
             imageRef: HEAR_CALL_GARDEN
         }
     ];
 
     const contextState = {
+        documentModal,
         intervalSelected,
         maxYear,
         minYear,
         timelineRange,
+        setDocumentModal,
         setIntervalSelected,
         setTimelineRange
     };
@@ -46,6 +62,7 @@ export function Timeline() {
     return (
         <React.Fragment>
             <TimelineContext.Provider value={contextState}>
+                {Object.keys(documentModal).length && <DocumentModal document={documentModal}/>}
                 <TimelineSlider/>
                 <div className={"btn-group"}>
                     <TimelineDropdown/>
