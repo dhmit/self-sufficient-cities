@@ -12,7 +12,6 @@ class Location(models.Model):
         `name`: name of the location
     """
     name = models.CharField(max_length=128)
-    # coordinates = models.Polygon()
 
 
 class Person(models.Model):
@@ -34,7 +33,7 @@ class Person(models.Model):
     first_name = models.CharField(max_length=32)
     last_name = models.CharField(max_length=32)
     ethnicity = models.CharField(max_length=32, blank=True)
-    date_of_birth = models.DateField()
+    date_of_birth = models.DateField(verbose_name="Date of birth: YYYY-MM-DD")
     country_of_origin = models.CharField(
         max_length=64)  # May want to restrict to 2 character country
     # CODES
@@ -53,6 +52,6 @@ class Event(models.Model):
         `people`: people that are related to this event, manytomany link to Person model
     """
     name = models.CharField(max_length=128)  # maybe make this unique?
-    date = models.DateField()
+    date = models.DateField(verbose_name="Event Date: YYYY-MM-DD")
     locations = models.ManyToManyField(Location)
     people = models.ManyToManyField(Person)
