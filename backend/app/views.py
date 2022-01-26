@@ -26,6 +26,10 @@ context = {
 import json
 from django.shortcuts import render
 from django.http import JsonResponse
+from rest_framework.decorators import api_view
+from rest_framework.response import Response
+from .models import Person, Event
+from .serializers import PersonSerializer, EventSerializer
 
 
 def index(request):
@@ -73,6 +77,84 @@ def map_page(request):
     }
     return render(request, 'index.html', context)
 
+
+@api_view(['POST'])
+def create_person(request):
+    """
+    API Endpoint for adding a person to the database
+    Required keys in body of request for successfully adding people:
+        - first_name
+        - last_name
+        - ethnicity
+        - date_of_birth
+        - country_of_origin
+    """
+    attributes = request.data
+
+    new_person_obj = Person.objects.create(**attributes)
+    serializer = PersonSerializer(new_person_obj)
+    return Response(serializer.data)
+
+
+@api_view(['GET'])
+def get_people(request):
+    """
+    API endpoint for searching for people by specific fields
+    Using the keywords passed, this will attempt to select all people in the
+    Person table matching them
+    """
+    params = request.GET.dict()
+    print(params)
+
+    people = Person.objects.filter(**params)
+    print(people)
+    serializer = PersonSerializer(people, many=True)
+    return Response(serializer.data)
+
+
+@api_view(['POST'])
+def create_event(request):
+    """
+    API Endpoint for adding an event to the database
+    Required keys in body of request for successfully adding people:
+        - name
+        - date
+    """
+    attributes = request.data
+
+    new_event_obj = Event.objects.create(**attributes)
+    serializer = EventSerializer(new_event_obj)
+    return Response(serializer.data)
+
+
+# need to add endpoints for updating locations/people event
+@api_view(['GET'])
+def get_people_from_event(request, event_name=None):
+    """
+    API endpoint for pulling up a list of people from an event
+    """
+    event = Event.objects.filter(name=event_name).first()
+    print(event.people)
+    people = PersonSerializer(event.people, many=True)
+    return Response(people)
+
+
+@api_view(['PUT'])
+def update_people_for_event(request, event_name=None):
+    """
+    API endpoint for updating the list of people for an event
+    """
+    return Response()
+
+
+@api_view(['GET'])
+def get_event(request, **keywords):
+    """
+    API endpoint for pulling up all events from the Event table
+    """
+    event = Event.objects.order_by('name')
+    serializer = EventSerializer(event, many=True)
+    return Response(serializer.data)
 
 def timeline_page(request):
     """
@@ -130,8 +212,7 @@ def timeline_test(request):
     return render(request, 'index.html', context)
 
 
-########## API Views ##########
-
+# API Views
 def get_census_data(request):
     """
     API endpoint for getting the census data in json format

@@ -41,6 +41,7 @@ INSTALLED_APPS = [
 
     # our application code
     'app',
+
 ]
 
 MIDDLEWARE = [
