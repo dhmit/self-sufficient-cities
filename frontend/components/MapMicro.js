@@ -1,10 +1,11 @@
 import React from "react";
+import PropTypes from 'prop-types';
 import {MapContainer, Marker, Popup, TileLayer} from "react-leaflet";
 import Input from "@material-ui/core/Input";
 import Typography from "@material-ui/core/Typography";
 import Grid from "@material-ui/core/Grid";
 import Slider from "@material-ui/core/Slider";
-import Dropdown from "react-bootstrap/Dropdown";
+import Dropdown from 'react-bootstrap/Dropdown';
 // AFTERNOON TEAM
 
 const ADDRESS_DATA = [
@@ -178,6 +179,89 @@ function timeSlider(
     );
 }
 
+export class MapDropdown extends React.Component {
+    constructor(props) {
+        super(props);
+
+        this.state = {
+            open: false,
+            selected: [],
+        };
+    }
+
+    toggleItemSelect = (event) => {
+        // Implementation does not allow selecting items with the same name individually
+
+        const value = event.target.getAttribute('value');
+        const newSelected = this.state.selected;
+        if (this.state.selected.includes(value)) {
+            const valueIdx = newSelected.indexOf(value);
+            newSelected.splice(valueIdx, 1);
+            event.target.classList.remove("map-dropdown-item-selected");
+            event.target.classList.add("map-dropdown-item");
+        } else {
+            newSelected.push(value);
+            event.target.classList.remove("map-dropdown-item");
+            event.target.classList.add("map-dropdown-item-selected");
+        }
+        this.setState({selected: newSelected});
+        console.log(this.state.selected);
+    }
+
+    toggleDropdownItems = () => {
+        this.setState({open: !this.state.open});
+    }
+
+    getDropdownItems() {
+        if (!this.state.open) {
+            return <></>;
+        }
+        const dropdownItems = (
+            this.props.items.map((location, i) => (
+                // TODO: Change dropdown element to a component with an accessible value attribute
+                <div
+                    key={i}
+                    className={
+                        this.state.selected.includes(location.name) ?
+                        "map-dropdown-item-selected" : "map-dropdown-item"
+                    }
+                    value={location.name}
+                    onClick={this.toggleItemSelect}
+                >
+                    {location.name}
+                </div>
+            ))
+        );
+        return (
+            <div className="map-dropdown-scroll-bg">
+                <div className="map-dropdown-scroll">
+                    {dropdownItems}
+                </div>
+            </div>
+        );
+    }
+
+    render() {
+        const dropdownItems = this.getDropdownItems();
+        return (
+            <div className="map-dropdown">
+                <Dropdown.Toggle
+                    id="dropdown-autoclose-outside"
+                    className="map-dropdown-toggle"
+                    onClick={this.toggleDropdownItems}
+                >
+                    {this.props.name}
+                </Dropdown.Toggle>
+                {dropdownItems}
+            </div>
+        );
+    }
+}
+
+MapDropdown.propTypes = {
+    name: PropTypes.string,
+    items: PropTypes.array,
+};
 
 export default class MapMicro extends React.Component {
     constructor(props) {
@@ -273,18 +357,7 @@ export default class MapMicro extends React.Component {
             <div className="main-element">
                 <div className="event-selector">
                     <h3 className="event-selector-title">Event Selector</h3>
-                    <Dropdown className="d-inline mx-2" autoClose="outside">
-                        <Dropdown.Toggle id="dropdown-autoclose-outside">
-                            Manual Close
-                        </Dropdown.Toggle>
-                        <Dropdown.Menu className="dropdown-scroll">
-                            {ADDRESS_DATA.map((location, i) => (
-                                <Dropdown.Item key={i}>
-                                    {location.name}
-                                </Dropdown.Item>
-                            ))}
-                        </Dropdown.Menu>
-                    </Dropdown>
+                    <MapDropdown name="Addresses" items={ADDRESS_DATA}/>
                 </div>
                 <div id="map">
                     <MapContainer
