@@ -1,11 +1,11 @@
 import React from "react";
-import PropTypes from 'prop-types';
+import PropTypes from "prop-types";
 import {MapContainer, Marker, Popup, TileLayer} from "react-leaflet";
 import Input from "@material-ui/core/Input";
 import Typography from "@material-ui/core/Typography";
 import Grid from "@material-ui/core/Grid";
 import Slider from "@material-ui/core/Slider";
-import Dropdown from 'react-bootstrap/Dropdown';
+import Dropdown from "react-bootstrap/Dropdown";
 // AFTERNOON TEAM
 
 const ADDRESS_DATA = [
@@ -185,14 +185,14 @@ export class MapDropdown extends React.Component {
 
         this.state = {
             open: false,
-            selected: [],
+            selected: []
         };
     }
 
     toggleItemSelect = (event) => {
         // Implementation does not allow selecting items with the same name individually
 
-        const value = event.target.getAttribute('value');
+        const value = event.target.getAttribute("value");
         const newSelected = this.state.selected;
         if (this.state.selected.includes(value)) {
             const valueIdx = newSelected.indexOf(value);
@@ -216,14 +216,15 @@ export class MapDropdown extends React.Component {
         if (!this.state.open) {
             return <></>;
         }
+        const selected = "map-dropdown-item-selected";
+        const normal = "map-dropdown-item";
         const dropdownItems = (
             this.props.items.map((location, i) => (
                 // TODO: Change dropdown element to a component with an accessible value attribute
                 <div
                     key={i}
                     className={
-                        this.state.selected.includes(location.name) ?
-                        "map-dropdown-item-selected" : "map-dropdown-item"
+                        this.state.selected.includes(location.name) ? selected : normal
                     }
                     value={location.name}
                     onClick={this.toggleItemSelect}
@@ -260,7 +261,7 @@ export class MapDropdown extends React.Component {
 
 MapDropdown.propTypes = {
     name: PropTypes.string,
-    items: PropTypes.array,
+    items: PropTypes.array
 };
 
 export default class MapMicro extends React.Component {
