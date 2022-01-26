@@ -6,8 +6,10 @@ import HEAR_CALL_GARDEN from "../images/hear_call_of_the_garden.png";
 import WASHINGTON_BEE_12_3_1910 from "../images/washington_bee_dec_3_1910.png";
 import WASHINGTON_BEE_11_15_1913 from "../images/washington_bee_nov_15_1913.png";
 import {TimelineDropdown} from "./global/TimelineDropdown";
+import {DocSearch} from "./DocSearch";
 import {ResetDefault} from "./ResetDefault";
 import DocumentModal from "./DocumentModal";
+import {articles}
 
 
 export function Timeline() {
@@ -105,18 +107,26 @@ export function Timeline() {
         setTimelineRange
     };
 
+    const layoutStyle = {
+        display: "flex",
+        align: "center"
+    };
+
     return (
         <React.Fragment>
             <TimelineContext.Provider value={contextState}>
                 {Object.keys(documentModal).length > 0 && <DocumentModal document={documentModal}/>}
                 <TimelineSlider/>
-                <div className={"btn-group"}>
+                <div style = {layoutStyle}>
+                    <DocSearch/>
+                    <>&nbsp;</> <>&nbsp;</>
                     <TimelineDropdown/>
-                    &nbsp;&nbsp;&nbsp;
+                    <>&nbsp;</> <>&nbsp;</>
                     <ResetDefault/>
                 </div>
+                <br></br>
                 <DocumentShowcase documents={documents} />
             </TimelineContext.Provider>
         </React.Fragment>
     );
-}
+};
