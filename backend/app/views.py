@@ -28,8 +28,8 @@ from django.shortcuts import render
 from django.http import JsonResponse
 from rest_framework.decorators import api_view
 from rest_framework.response import Response
-from .models import Person, Event
-from .serializers import PersonSerializer, EventSerializer
+from .models import Person, Event, Location
+from .serializers import PersonSerializer, EventSerializer, LocationSerializer
 
 
 def index(request):
@@ -113,7 +113,7 @@ def get_people(request):
 def create_event(request):
     """
     API Endpoint for adding an event to the database
-    Required keys in body of request for successfully adding people:
+    Required keys in body of request for successfully adding events:
         - name
         - date
     """
@@ -123,8 +123,20 @@ def create_event(request):
     serializer = EventSerializer(new_event_obj)
     return Response(serializer.data)
 
+@api_view(['POST'])
+def create_location(request):
+    """
+    API Endpoint for adding a person to the database
+    Required keys in body of request for successfully adding a location:
+        - name
+    """
+    attributes = request.data
 
-# need to add endpoints for updating locations/people event
+    new_location_obj = Location.objects.create(**attributes)
+    serializer = LocationSerializer(new_location_obj)
+    return Response(serializer.data)
+
+
 @api_view(['GET'])
 def get_people_from_event(request, event_id=None):
     """
@@ -140,7 +152,7 @@ def get_people_from_event(request, event_id=None):
 def update_people_for_event(request, event_id=None):
     """
     API endpoint for updating the list of people for an event. This endpoints takes a list
-    of people and adds people to the event that are not already there. Returns a response
+    of people ids and adds people to the event that are not already there. Returns a response
     object containing a representation of the updated event object.
 
     Required keys in body of request for successfully updating people:
@@ -151,6 +163,36 @@ def update_people_for_event(request, event_id=None):
     people = Person.objects.filter(id__in=people_ids)
 
     event.people.add(*people)
+    serializer = EventSerializer(event)
+    return Response(serializer.data)
+
+
+@api_view(['GET'])
+def get_locations_from_event(request, event_id=None):
+    """
+    API endpoint for pulling up a list of locations related to an event
+    """
+    event = Event.objects.get(id=event_id)
+    locations = event.locations.all()
+    serializer = LocationSerializer(locations, many=True)
+    return Response(serializer.data)
+
+
+@api_view(['PUT'])
+def update_locations_for_event(request, event_id=None):
+    """
+    API endpoint for updating the list of locations related to an event. This endpoints takes a list
+    of location ids and adds locations to the event that are not already there. Returns a response
+    object containing a representation of the updated event object.
+
+    Required keys in body of request for successfully updating locations:
+        - id_list: list of unique ids for locations that are to be added
+    """
+    event = Event.objects.get(id=event_id)
+    location_ids = request.data["id_list"]
+    locations = Location.objects.filter(id__in=location_ids)
+    event.locations.add(*locations)
+
     serializer = EventSerializer(event)
     return Response(serializer.data)
 
