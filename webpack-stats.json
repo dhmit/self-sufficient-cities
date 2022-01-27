@@ -1,5 +1,5 @@
 {
-  "status": "done",
+  "status": "error",
   "assets": {
     "37c3082d3ec2f6a0b416184f56beaa49.png": {
       "name": "37c3082d3ec2f6a0b416184f56beaa49.png",
@@ -525,16 +525,26 @@
       "name": "index.f3756689fccdfad6b88e.hot-update.json",
       "path": "/Users/sharafrashid2/Documents/GitHub/self-sustaining-cities/assets/bundles/index.f3756689fccdfad6b88e.hot-update.json",
       "publicPath": "http://localhost:3000/build/index.f3756689fccdfad6b88e.hot-update.json"
+    },
+    "index.6f4745bd53230c243dec.hot-update.js": {
+      "name": "index.6f4745bd53230c243dec.hot-update.js",
+      "path": "/Users/sharafrashid2/Documents/GitHub/self-sustaining-cities/assets/bundles/index.6f4745bd53230c243dec.hot-update.js",
+      "publicPath": "http://localhost:3000/build/index.6f4745bd53230c243dec.hot-update.js"
+    },
+    "index.6f4745bd53230c243dec.hot-update.json": {
+      "name": "index.6f4745bd53230c243dec.hot-update.json",
+      "path": "/Users/sharafrashid2/Documents/GitHub/self-sustaining-cities/assets/bundles/index.6f4745bd53230c243dec.hot-update.json",
+      "publicPath": "http://localhost:3000/build/index.6f4745bd53230c243dec.hot-update.json"
     }
   },
   "chunks": {
     "index": [
       "index.bundle.css",
       "index.bundle.js",
-      "index.f3756689fccdfad6b88e.hot-update.js"
+      "index.6f4745bd53230c243dec.hot-update.js"
     ]
   },
   "publicPath": "http://localhost:3000/build/",
-  "error": "ESLintError",
-  "message": "\n/Users/sharafrashid2/Documents/GitHub/self-sustaining-cities/frontend/components/DocSearch.js\n  66:27  error  Missing \"key\" prop for element in iterator  react/jsx-key\n  69:43  error  HTML entity, `>` , must be escaped          react/no-unescaped-entities\n\n✖ 14 problems (2 errors, 12 warnings)\n  0 errors and 8 warnings potentially fixable with the `--fix` option.\n"
+  "error": "ModuleBuildError",
+  "message": "Module build failed (from ./node_modules/babel-loader/lib/index.js):\nSyntaxError: /Users/sharafrashid2/Documents/GitHub/self-sustaining-cities/frontend/components/Timeline.js: Identifier 'documents' has already been declared. (43:10)\n\n  41 |     // once backend is ready, we will make a request to the api to retrieve the documents & store\n  42 |     // it as state\n> 43 |     const documents = [\n     |           ^\n  44 |         {\n  45 |             title: \"Washington Bee\",\n  46 |             date: \"December 3, 1910\",\n    at Object._raise (/Users/sharafrashid2/Documents/GitHub/self-sustaining-cities/node_modules/@babel/parser/lib/index.js:506:17)\n    at Object.raiseWithData (/Users/sharafrashid2/Documents/GitHub/self-sustaining-cities/node_modules/@babel/parser/lib/index.js:499:17)\n    at Object.raise (/Users/sharafrashid2/Documents/GitHub/self-sustaining-cities/node_modules/@babel/parser/lib/index.js:460:17)\n    at ScopeHandler.checkRedeclarationInScope (/Users/sharafrashid2/Documents/GitHub/self-sustaining-cities/node_modules/@babel/parser/lib/index.js:1668:12)\n    at ScopeHandler.declareName (/Users/sharafrashid2/Documents/GitHub/self-sustaining-cities/node_modules/@babel/parser/lib/index.js:1634:12)\n    at Object.checkLVal (/Users/sharafrashid2/Documents/GitHub/self-sustaining-cities/node_modules/@babel/parser/lib/index.js:11481:24)\n    at Object.parseVarId (/Users/sharafrashid2/Documents/GitHub/self-sustaining-cities/node_modules/@babel/parser/lib/index.js:14680:10)\n    at Object.parseVar (/Users/sharafrashid2/Documents/GitHub/self-sustaining-cities/node_modules/@babel/parser/lib/index.js:14651:12)\n    at Object.parseVarStatement (/Users/sharafrashid2/Documents/GitHub/self-sustaining-cities/node_modules/@babel/parser/lib/index.js:14458:10)\n    at Object.parseStatementContent (/Users/sharafrashid2/Documents/GitHub/self-sustaining-cities/node_modules/@babel/parser/lib/index.js:14017:21)"
 }

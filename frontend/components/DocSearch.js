@@ -80,4 +80,3 @@ export const DocSearch = ({documents}) => {
 DocSearch.propTypes = {
     documents: PropTypes.array
 };
-

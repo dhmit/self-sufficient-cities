@@ -82,8 +82,13 @@ def timeline_page(request):
         'page_metadata': {
             'title': 'Timeline page'
         },
-        'component_name': 'Timeline'
+        'component_name': 'Timeline',
+        'component_props': {
+            'data': {}
+        },
     }
+    with open("app/data/documents.json", encoding="utf-8") as f:
+        context['component_props']['data'] = json.load(f)
     return render(request, 'index.html', context)
 
 
@@ -140,3 +145,13 @@ def get_census_data(request):
         census_data = json.load(f)
 
     return JsonResponse(census_data)
+
+
+def get_documents_data(request):
+    """
+    API endpoint for getting the documents data in json format
+    """
+    with open("app/data/documents.json", encoding="utf-8") as f:
+        documents_data = json.load(f)
+
+    return JsonResponse(documents_data)

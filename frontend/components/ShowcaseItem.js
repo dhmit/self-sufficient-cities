@@ -12,9 +12,9 @@ const ShowcaseItem = ({document}) => {
     return (
         <Card className="showcase-item" onClick={handleOnClick}>
             <Card.Body>
-                <Card.Title> { document.title }</Card.Title>
+                <Card.Title> {document.publication}</Card.Title>
                 <Card.Subtitle className="mb-2 text-muted"> { document.date } </Card.Subtitle>
-                <Card.Img src={document.imageRef} alt={`Image of ${document.title}`}/>
+                <Card.Img src={document.imageRef} alt={`Image of ${document.publication}`}/>
             </Card.Body>
         </Card>
     );
