@@ -1,7 +1,5 @@
-
-
-const data = require('.../backend/app/data/articles.json')
-console.log(data)
+// const data = require('.../backend/app/data/articles.json');
+// console.log(data);
 
 
 
