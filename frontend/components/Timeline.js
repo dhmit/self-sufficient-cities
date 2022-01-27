@@ -40,10 +40,10 @@ export const Timeline = ({data}) => {
 
     // todo: change to get image from backend
     documents[0]["imageRef"] = HEAR_CALL_OF_THE_GARDEN;
-    documents[0]["imageRef"] = WASHINGTON_BEE_12_8_1917;
-    documents[1]["imageRef"] = WASHINGTON_BEE_8_14_1915;
-    documents[2]["imageRef"] = WASHINGTON_BEE_4_26_1919;
-    documents[3]["imageRef"] = WASHINGTON_BEE_3_26_1921;
+    documents[1]["imageRef"] = WASHINGTON_BEE_12_8_1917;
+    documents[2]["imageRef"] = WASHINGTON_BEE_8_14_1915;
+    documents[3]["imageRef"] = WASHINGTON_BEE_4_26_1919;
+    documents[4]["imageRef"] = WASHINGTON_BEE_3_26_1921;
 
     const contextState = {
         documentModal,
