@@ -138,10 +138,20 @@ def get_people_from_event(request, event_id=None):
 @api_view(['PUT'])
 def update_people_for_event(request, event_id=None):
     """
-    API endpoint for updating the list of people for an event
-    Currently not implemented, so it returns an empty Response object
+    API endpoint for updating the list of people for an event. This endpoints takes a list
+    of people and adds people to the event that are not already there. Returns a response
+    object containing a representation of the updated event object.
+
+    Required keys in body of request for successfully updating people:
+        - id_list: list of unique ids for people that are to be added
     """
-    return Response()
+    event = Event.objects.get(id=event_id)
+    people_ids = request.data["id_list"]
+    people = Person.objects.filter(id__in=people_ids)
+
+    event.people.add(*people)
+    serializer = EventSerializer(event)
+    return Response(serializer.data)
 
 
 @api_view(['GET'])
