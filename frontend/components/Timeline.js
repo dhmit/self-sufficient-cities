@@ -9,7 +9,7 @@ import {TimelineDropdown} from "./global/TimelineDropdown";
 import {DocSearch} from "./DocSearch";
 import {ResetDefault} from "./ResetDefault";
 import DocumentModal from "./DocumentModal";
-import {articles}
+
 
 
 export function Timeline() {
@@ -34,7 +34,7 @@ export function Timeline() {
                     "1014 W St. N.W."
                 ],
                 "people": [
-                    "CLARENCE M. DeVEILE"
+                    "Clarence M. DeVeile"
                 ],
                 "dates": [
                     "December 8, 1917"
@@ -108,8 +108,7 @@ export function Timeline() {
     };
 
     const layoutStyle = {
-        display: "flex",
-        align: "center"
+        display: "flex"
     };
 
     return (
@@ -118,7 +117,7 @@ export function Timeline() {
                 {Object.keys(documentModal).length > 0 && <DocumentModal document={documentModal}/>}
                 <TimelineSlider/>
                 <div style = {layoutStyle}>
-                    <DocSearch/>
+                    <DocSearch documents={documents}/>
                     <>&nbsp;</> <>&nbsp;</>
                     <TimelineDropdown/>
                     <>&nbsp;</> <>&nbsp;</>

@@ -15,7 +15,7 @@ export const ResetDefault = () => {
     };
     return (
         <Button
-            variant='info'
+            variant='secondary'
             size='med'
             onClick={onClick}
         >
