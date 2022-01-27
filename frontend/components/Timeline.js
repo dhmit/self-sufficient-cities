@@ -13,12 +13,29 @@ import {ResetDefault} from "./ResetDefault";
 import * as PropTypes from "prop-types";
 import DocumentModal from "./DocumentModal";
 
-export function Timeline({data}) {
+/**
+ * Generates the five-year intervals that will be used for the timeline slider
+ *
+ * @returns {Array} list of the intervals starting at minYear and ending in maxYear
+ */
+const getTimelineIntervals = (minYear, maxYear, intervalLength) => {
+    const intervals = [];
+    for (let i = minYear; i < maxYear; i += intervalLength) {
+        const newInterval = new Interval(i, i + intervalLength);
+        intervals.push(newInterval);
+    }
+    return intervals;
+};
+
+export const Timeline = ({data}) => {
     const documents = data.documents;
     const maxYear = 1925;
     const minYear = 1910;
-    const [intervalSelected, setIntervalSelected] = useState(new Interval(minYear, minYear + 5));
-    const [timelineRange, setTimelineRange] = useState(new Interval(minYear, maxYear));
+    const intervalLength = 5;
+    const [intervalSelected, setIntervalSelected] = useState(
+        new Interval(minYear, minYear + intervalLength)
+    );
+    const timelineIntervals = getTimelineIntervals(minYear, maxYear, intervalLength);
     const [documentModal, setDocumentModal] = useState({});
 
     // todo: change to get image from backend
@@ -33,10 +50,10 @@ export function Timeline({data}) {
         intervalSelected,
         maxYear,
         minYear,
-        timelineRange,
+        intervalLength,
+        timelineIntervals,
         setDocumentModal,
-        setIntervalSelected,
-        setTimelineRange
+        setIntervalSelected
     };
 
     const layoutStyle = {
