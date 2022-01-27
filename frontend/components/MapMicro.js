@@ -192,7 +192,7 @@ export class MapDropdown extends React.Component {
     toggleItemSelect = (event) => {
         // Implementation does not allow selecting items with the same name individually
 
-        const value = event.target.getAttribute("value");
+        const value = event.target.innerText;
         const newSelected = this.state.selected;
         if (this.state.selected.includes(value)) {
             const valueIdx = newSelected.indexOf(value);
@@ -220,13 +220,11 @@ export class MapDropdown extends React.Component {
         const normal = "map-dropdown-item";
         const dropdownItems = (
             this.props.items.map((location, i) => (
-                // TODO: Change dropdown element to a component with an accessible value attribute
                 <div
                     key={i}
                     className={
                         this.state.selected.includes(location.name) ? selected : normal
                     }
-                    value={location.name}
                     onClick={this.toggleItemSelect}
                 >
                     {location.name}
