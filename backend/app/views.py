@@ -78,6 +78,7 @@ def map_page(request):
     return render(request, 'index.html', context)
 
 
+# DJANGO OBJECT CREATION ENDPOINTS
 @api_view(['POST'])
 def create_person(request):
     """
@@ -96,19 +97,6 @@ def create_person(request):
     return Response(serializer.data)
 
 
-@api_view(['GET'])
-def get_people(request):
-    """
-    API endpoint for searching for people by specific fields
-    Using the keywords passed, this will attempt to select all people in the
-    Person table matching them
-    """
-    params = request.GET.dict()
-    people = Person.objects.filter(**params)
-    serializer = PersonSerializer(people, many=True)
-    return Response(serializer.data)
-
-
 @api_view(['POST'])
 def create_event(request):
     """
@@ -122,6 +110,7 @@ def create_event(request):
     new_event_obj = Event.objects.create(**attributes)
     serializer = EventSerializer(new_event_obj)
     return Response(serializer.data)
+
 
 @api_view(['POST'])
 def create_location(request):
@@ -137,6 +126,30 @@ def create_location(request):
     return Response(serializer.data)
 
 
+# DJANGO OBJECT SEARCH ENDPOINTS
+@api_view(['GET'])
+def get_people(request):
+    """
+    API endpoint for searching for people by specific fields
+    Using the keywords passed, this will attempt to select all people in the
+    Person table matching them
+    """
+    params = request.GET.dict()
+    people = Person.objects.filter(**params)
+    serializer = PersonSerializer(people, many=True)
+    return Response(serializer.data)
+
+
+@api_view(['GET'])
+def get_events(request):
+    """
+    API endpoint for pulling up all events from the Event table
+    """
+    event = Event.objects.order_by('name')
+    serializer = EventSerializer(event, many=True)
+    return Response(serializer.data)
+
+
 @api_view(['GET'])
 def get_people_from_event(request, event_id=None):
     """
@@ -148,6 +161,18 @@ def get_people_from_event(request, event_id=None):
     return Response(serializer.data)
 
 
+@api_view(['GET'])
+def get_locations_from_event(request, event_id=None):
+    """
+    API endpoint for pulling up a list of locations related to an event
+    """
+    event = Event.objects.get(id=event_id)
+    locations = event.locations.all()
+    serializer = LocationSerializer(locations, many=True)
+    return Response(serializer.data)
+
+
+# DJANGO OBJECT UPDATE METHODS
 @api_view(['PUT'])
 def update_people_for_event(request, event_id=None):
     """
@@ -167,17 +192,6 @@ def update_people_for_event(request, event_id=None):
     return Response(serializer.data)
 
 
-@api_view(['GET'])
-def get_locations_from_event(request, event_id=None):
-    """
-    API endpoint for pulling up a list of locations related to an event
-    """
-    event = Event.objects.get(id=event_id)
-    locations = event.locations.all()
-    serializer = LocationSerializer(locations, many=True)
-    return Response(serializer.data)
-
-
 @api_view(['PUT'])
 def update_locations_for_event(request, event_id=None):
     """
@@ -194,16 +208,6 @@ def update_locations_for_event(request, event_id=None):
     event.locations.add(*locations)
 
     serializer = EventSerializer(event)
-    return Response(serializer.data)
-
-
-@api_view(['GET'])
-def get_events(request):
-    """
-    API endpoint for pulling up all events from the Event table
-    """
-    event = Event.objects.order_by('name')
-    serializer = EventSerializer(event, many=True)
     return Response(serializer.data)
 
 
