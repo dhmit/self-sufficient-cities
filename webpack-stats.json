@@ -90,13 +90,28 @@
       "name": "index.03950c9356ba29356706.hot-update.json",
       "path": "/Users/angcast/Documents/GitHub/self-sustaining-cities/assets/bundles/index.03950c9356ba29356706.hot-update.json",
       "publicPath": "http://localhost:3000/build/index.03950c9356ba29356706.hot-update.json"
+    },
+    "adf582d715386cf1e375e1e6fb0bdea1.png": {
+      "name": "adf582d715386cf1e375e1e6fb0bdea1.png",
+      "path": "/Users/angcast/Documents/GitHub/self-sustaining-cities/assets/bundles/adf582d715386cf1e375e1e6fb0bdea1.png",
+      "publicPath": "http://localhost:3000/build/adf582d715386cf1e375e1e6fb0bdea1.png"
+    },
+    "index.5756fd9023f9dae0b90d.hot-update.js": {
+      "name": "index.5756fd9023f9dae0b90d.hot-update.js",
+      "path": "/Users/angcast/Documents/GitHub/self-sustaining-cities/assets/bundles/index.5756fd9023f9dae0b90d.hot-update.js",
+      "publicPath": "http://localhost:3000/build/index.5756fd9023f9dae0b90d.hot-update.js"
+    },
+    "index.5756fd9023f9dae0b90d.hot-update.json": {
+      "name": "index.5756fd9023f9dae0b90d.hot-update.json",
+      "path": "/Users/angcast/Documents/GitHub/self-sustaining-cities/assets/bundles/index.5756fd9023f9dae0b90d.hot-update.json",
+      "publicPath": "http://localhost:3000/build/index.5756fd9023f9dae0b90d.hot-update.json"
     }
   },
   "chunks": {
     "index": [
       "index.bundle.css",
       "index.bundle.js",
-      "index.03950c9356ba29356706.hot-update.js"
+      "index.5756fd9023f9dae0b90d.hot-update.js"
     ]
   },
   "publicPath": "http://localhost:3000/build/",

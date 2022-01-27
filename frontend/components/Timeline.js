@@ -5,7 +5,7 @@ import {TimelineSlider} from "./TimelineSlider";
 import HEAR_CALL_OF_THE_GARDEN from "../images/hear_call_of_the_garden.png";
 import WASHINGTON_BEE_12_8_1917 from "../images/washington_bee_dec_8_1917.png";
 import WASHINGTON_BEE_8_14_1915 from "../images/washington_bee_aug_14_1915.png";
-import WASHINGTON_BEE_4_26_1919 from "../images/washington_bee_aug_14_1915.png";
+import WASHINGTON_BEE_4_26_1919 from "../images/washington_bee_april_26_1919.png";
 import WASHINGTON_BEE_3_26_1921 from "../images/washington_bee_march_26_1921.png";
 import {TimelineDropdown} from "./global/TimelineDropdown";
 // import {DocSearch} from "./DocSearch";
