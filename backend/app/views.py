@@ -153,6 +153,7 @@ def get_events(request):
     serializer = EventSerializer(event, many=True)
     return Response(serializer.data)
 
+
 def timeline_page(request):
     """
     Timeline page
