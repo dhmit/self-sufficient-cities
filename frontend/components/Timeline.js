@@ -14,7 +14,6 @@ import {ResetDefault} from "./ResetDefault";
 import * as PropTypes from "prop-types";
 import DocumentModal from "./DocumentModal";
 
-
 /**
  * Generates the five-year intervals that will be used for the timeline slider
  *
@@ -39,14 +38,13 @@ export const Timeline = ({data}) => {
     );
     const timelineIntervals = getTimelineIntervals(minYear, maxYear, intervalLength);
     const [documentModal, setDocumentModal] = useState({});
-    // once backend is ready, we will make a request to the api to retrieve the documents & store
-    // it as state
 
-     documents[0]["imageRef"] = HEAR_CALL_OF_THE_GARDEN;
-     documents[1]["imageRef"] = WASHINGTON_BEE_12_8_1917;
-     documents[2]["imageRef"] = WASHINGTON_BEE_8_14_1915;
-     documents[3]["imageRef"] = WASHINGTON_BEE_4_26_1919;
-     documents[4]["imageRef"] = WASHINGTON_BEE_3_26_1921;
+    // todo: change to get image from backend
+    documents[0]["imageRef"] = HEAR_CALL_OF_THE_GARDEN;
+    documents[1]["imageRef"] = WASHINGTON_BEE_12_8_1917;
+    documents[2]["imageRef"] = WASHINGTON_BEE_8_14_1915;
+    documents[3]["imageRef"] = WASHINGTON_BEE_4_26_1919;
+    documents[4]["imageRef"] = WASHINGTON_BEE_3_26_1921;
 
     const contextState = {
         documentModal,
@@ -60,7 +58,8 @@ export const Timeline = ({data}) => {
     };
 
     const layoutStyle = {
-        display: "flex"
+        display: "flex",
+        align: "center"
     };
 
     return (

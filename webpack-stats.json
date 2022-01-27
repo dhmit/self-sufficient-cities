@@ -445,16 +445,26 @@
       "name": "index.10aed83a40b42ebcfc91.hot-update.json",
       "path": "/Users/sharafrashid2/Documents/GitHub/self-sustaining-cities/assets/bundles/index.10aed83a40b42ebcfc91.hot-update.json",
       "publicPath": "http://localhost:3000/build/index.10aed83a40b42ebcfc91.hot-update.json"
+    },
+    "index.aea28b09c54f5712c7df.hot-update.js": {
+      "name": "index.aea28b09c54f5712c7df.hot-update.js",
+      "path": "/Users/sharafrashid2/Documents/GitHub/self-sustaining-cities/assets/bundles/index.aea28b09c54f5712c7df.hot-update.js",
+      "publicPath": "http://localhost:3000/build/index.aea28b09c54f5712c7df.hot-update.js"
+    },
+    "index.aea28b09c54f5712c7df.hot-update.json": {
+      "name": "index.aea28b09c54f5712c7df.hot-update.json",
+      "path": "/Users/sharafrashid2/Documents/GitHub/self-sustaining-cities/assets/bundles/index.aea28b09c54f5712c7df.hot-update.json",
+      "publicPath": "http://localhost:3000/build/index.aea28b09c54f5712c7df.hot-update.json"
     }
   },
   "chunks": {
     "index": [
       "index.bundle.css",
       "index.bundle.js",
-      "index.10aed83a40b42ebcfc91.hot-update.js"
+      "index.aea28b09c54f5712c7df.hot-update.js"
     ]
   },
   "publicPath": "http://localhost:3000/build/",
-  "error": "ESLintError",
-  "message": "\n/Users/sharafrashid2/Documents/GitHub/self-sustaining-cities/frontend/components/DocSearch.js\n  11:30  error  Missing semicolon  semi\n  18:64  error  Missing semicolon  semi\n\n✖ 16 problems (2 errors, 14 warnings)\n  2 errors and 13 warnings potentially fixable with the `--fix` option.\n"
+  "error": "ModuleBuildError",
+  "message": "Module build failed (from ./node_modules/babel-loader/lib/index.js):\nSyntaxError: /Users/sharafrashid2/Documents/GitHub/self-sustaining-cities/frontend/components/Timeline.js: Unexpected token (11:1)\n\n   9 | import WASHINGTON_BEE_3_26_1921 from \"../images/washington_bee_march_26_1921.png\";\n  10 | import {TimelineDropdown} from \"./global/TimelineDropdown\";\n> 11 | <<<<<<< HEAD\n     |  ^\n  12 | import {ShowAll} from \"./ShowAll\";\n  13 | =======\n  14 | >>>>>>> af9e74de688b1f6d6d5d4eb11dabca17b78ea2f3\n    at Object._raise (/Users/sharafrashid2/Documents/GitHub/self-sustaining-cities/node_modules/@babel/parser/lib/index.js:506:17)\n    at Object.raiseWithData (/Users/sharafrashid2/Documents/GitHub/self-sustaining-cities/node_modules/@babel/parser/lib/index.js:499:17)\n    at Object.raise (/Users/sharafrashid2/Documents/GitHub/self-sustaining-cities/node_modules/@babel/parser/lib/index.js:460:17)\n    at Object.unexpected (/Users/sharafrashid2/Documents/GitHub/self-sustaining-cities/node_modules/@babel/parser/lib/index.js:3699:16)\n    at Object.jsxParseIdentifier (/Users/sharafrashid2/Documents/GitHub/self-sustaining-cities/node_modules/@babel/parser/lib/index.js:7451:12)\n    at Object.jsxParseNamespacedName (/Users/sharafrashid2/Documents/GitHub/self-sustaining-cities/node_modules/@babel/parser/lib/index.js:7461:23)\n    at Object.jsxParseElementName (/Users/sharafrashid2/Documents/GitHub/self-sustaining-cities/node_modules/@babel/parser/lib/index.js:7472:21)\n    at Object.jsxParseOpeningElementAt (/Users/sharafrashid2/Documents/GitHub/self-sustaining-cities/node_modules/@babel/parser/lib/index.js:7569:22)\n    at Object.jsxParseElementAt (/Users/sharafrashid2/Documents/GitHub/self-sustaining-cities/node_modules/@babel/parser/lib/index.js:7602:33)\n    at Object.jsxParseElement (/Users/sharafrashid2/Documents/GitHub/self-sustaining-cities/node_modules/@babel/parser/lib/index.js:7685:17)"
 }
