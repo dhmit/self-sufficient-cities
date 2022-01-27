@@ -32,7 +32,7 @@ class Person(models.Model):
     first_name = models.CharField(max_length=32)
     last_name = models.CharField(max_length=32)
     ethnicity = models.CharField(max_length=32, blank=True)
-    date_of_birth = models.DateField()
+    date_of_birth = models.DateField(verbose_name="Date of Birth: YYYY-MM-DD")
 
     dir = os.path.dirname(__file__)
     abs_file_path = os.path.join(dir, "data/country_codes.json")
