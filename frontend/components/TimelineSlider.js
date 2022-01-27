@@ -4,27 +4,27 @@ import {Interval, TimelineContext} from "../contexts/TimelineContext";
 import "rc-slider/assets/index.css";
 
 /**
- * Gets the marks of the slider separated by 5 year intervals.
- * @param minYear the minimum year of the timeline
- * @param maxYear the maximum year of the timeline
- * @returns {{}} the marks starting at minYear and ending in maxYear
+ * Gets the marks of the slider
+ * 
+ * @param timelineIntervals the minimum year of the timeline 
+ * @returns {number: ReactNode} the translated slider marks from timelineIntervals
  */
-function getMarks(minYear, maxYear) {
+function getMarks(timelineIntervals) {
     const marks = {};
-    for (let i = minYear; i < maxYear + 1; i += 5) {
-        if (i === minYear || i === maxYear) {
-            marks[i] = <strong>{i}</strong>;
+    timelineIntervals.forEach((interval, i) => {
+        if (i !== timelineIntervals.length - 1) {
+            marks[interval.start] = <strong>{interval.start}</strong>;
+        } else {
+            marks[interval.start] = <strong>{interval.start}</strong>;
+            marks[interval.end] = <strong>{interval.end}</strong>;
         }
-        else {
-            marks[i] = i;
-        }
-    }
+    });
     return marks;
 }
 
 export const TimelineSlider = () => {
     const state = useContext(TimelineContext);
-    const marks = getMarks(state.minYear, state.maxYear);
+    const marks = getMarks(state.timelineIntervals);
     const [sliderValue, setSliderValue] = useState([]);
 
     useEffect(() => {

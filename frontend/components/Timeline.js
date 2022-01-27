@@ -12,11 +12,28 @@ import DocumentModal from "./DocumentModal";
 // import data from "../../backend/app/data/documents.json";
 
 
-export function Timeline() {
+/**
+ * Generates the five-year intervals that will be used for the timeline slider
+ * 
+ * @returns {Array} list of the intervals starting at minYear and ending in maxYear
+ */
+const getTimelineIntervals = (minYear, maxYear, intervalLength) => {
+    const intervals = [];
+    for (let i = minYear; i < maxYear; i += intervalLength) {
+        const newInterval = new Interval(i, i + intervalLength);
+        intervals.push(newInterval);
+    }
+    return intervals;
+};
+
+export const Timeline = () => {
     const maxYear = 1925;
     const minYear = 1910;
-    const [intervalSelected, setIntervalSelected] = useState(new Interval(minYear, minYear + 5));
-    const [timelineRange, setTimelineRange] = useState(new Interval(minYear, maxYear));
+    const intervalLength = 5;
+    const [intervalSelected, setIntervalSelected] = useState(
+        new Interval(minYear, minYear + intervalLength)
+    );
+    const timelineIntervals = getTimelineIntervals(minYear, maxYear, intervalLength);
     const [documentModal, setDocumentModal] = useState({});
     // once backend is ready, we will make a request to the api to retrieve the documents & store
     // it as state
@@ -101,10 +118,10 @@ export function Timeline() {
         intervalSelected,
         maxYear,
         minYear,
-        timelineRange,
+        intervalLength,
+        timelineIntervals,
         setDocumentModal,
-        setIntervalSelected,
-        setTimelineRange
+        setIntervalSelected
     };
 
     const layoutStyle = {
