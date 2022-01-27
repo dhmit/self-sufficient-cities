@@ -1,550 +1,70 @@
 {
-  "status": "error",
+  "status": "done",
   "assets": {
     "37c3082d3ec2f6a0b416184f56beaa49.png": {
       "name": "37c3082d3ec2f6a0b416184f56beaa49.png",
-      "path": "/Users/sharafrashid2/Documents/GitHub/self-sustaining-cities/assets/bundles/37c3082d3ec2f6a0b416184f56beaa49.png",
+      "path": "/Users/angcast/Documents/GitHub/self-sustaining-cities/assets/bundles/37c3082d3ec2f6a0b416184f56beaa49.png",
       "publicPath": "http://localhost:3000/build/37c3082d3ec2f6a0b416184f56beaa49.png"
     },
-    "413baf6bd1bc947594d08328626c97e5.png": {
-      "name": "413baf6bd1bc947594d08328626c97e5.png",
-      "path": "/Users/sharafrashid2/Documents/GitHub/self-sustaining-cities/assets/bundles/413baf6bd1bc947594d08328626c97e5.png",
-      "publicPath": "http://localhost:3000/build/413baf6bd1bc947594d08328626c97e5.png"
+    "f80d9c56faa05ea20ec559b09766de36.png": {
+      "name": "f80d9c56faa05ea20ec559b09766de36.png",
+      "path": "/Users/angcast/Documents/GitHub/self-sustaining-cities/assets/bundles/f80d9c56faa05ea20ec559b09766de36.png",
+      "publicPath": "http://localhost:3000/build/f80d9c56faa05ea20ec559b09766de36.png"
     },
-    "d6039ab00547f567982d789537230cff.png": {
-      "name": "d6039ab00547f567982d789537230cff.png",
-      "path": "/Users/sharafrashid2/Documents/GitHub/self-sustaining-cities/assets/bundles/d6039ab00547f567982d789537230cff.png",
-      "publicPath": "http://localhost:3000/build/d6039ab00547f567982d789537230cff.png"
+    "99322ec6eddf710a1048772e49767391.png": {
+      "name": "99322ec6eddf710a1048772e49767391.png",
+      "path": "/Users/angcast/Documents/GitHub/self-sustaining-cities/assets/bundles/99322ec6eddf710a1048772e49767391.png",
+      "publicPath": "http://localhost:3000/build/99322ec6eddf710a1048772e49767391.png"
+    },
+    "adf582d715386cf1e375e1e6fb0bdea1.png": {
+      "name": "adf582d715386cf1e375e1e6fb0bdea1.png",
+      "path": "/Users/angcast/Documents/GitHub/self-sustaining-cities/assets/bundles/adf582d715386cf1e375e1e6fb0bdea1.png",
+      "publicPath": "http://localhost:3000/build/adf582d715386cf1e375e1e6fb0bdea1.png"
+    },
+    "cadf5e8dc04281f865575d9a1ec00daf.png": {
+      "name": "cadf5e8dc04281f865575d9a1ec00daf.png",
+      "path": "/Users/angcast/Documents/GitHub/self-sustaining-cities/assets/bundles/cadf5e8dc04281f865575d9a1ec00daf.png",
+      "publicPath": "http://localhost:3000/build/cadf5e8dc04281f865575d9a1ec00daf.png"
     },
     "f6cf50e029aebb893651ef9cdeb29fae.svg": {
       "name": "f6cf50e029aebb893651ef9cdeb29fae.svg",
-      "path": "/Users/sharafrashid2/Documents/GitHub/self-sustaining-cities/assets/bundles/f6cf50e029aebb893651ef9cdeb29fae.svg",
+      "path": "/Users/angcast/Documents/GitHub/self-sustaining-cities/assets/bundles/f6cf50e029aebb893651ef9cdeb29fae.svg",
       "publicPath": "http://localhost:3000/build/f6cf50e029aebb893651ef9cdeb29fae.svg"
     },
     "080f1963dc70e04445ea79dcc24414d6.jpg": {
       "name": "080f1963dc70e04445ea79dcc24414d6.jpg",
-      "path": "/Users/sharafrashid2/Documents/GitHub/self-sustaining-cities/assets/bundles/080f1963dc70e04445ea79dcc24414d6.jpg",
+      "path": "/Users/angcast/Documents/GitHub/self-sustaining-cities/assets/bundles/080f1963dc70e04445ea79dcc24414d6.jpg",
       "publicPath": "http://localhost:3000/build/080f1963dc70e04445ea79dcc24414d6.jpg"
     },
     "index.bundle.css": {
       "name": "index.bundle.css",
-      "path": "/Users/sharafrashid2/Documents/GitHub/self-sustaining-cities/assets/bundles/index.bundle.css",
+      "path": "/Users/angcast/Documents/GitHub/self-sustaining-cities/assets/bundles/index.bundle.css",
       "publicPath": "http://localhost:3000/build/index.bundle.css"
     },
     "index.bundle.js": {
       "name": "index.bundle.js",
-      "path": "/Users/sharafrashid2/Documents/GitHub/self-sustaining-cities/assets/bundles/index.bundle.js",
+      "path": "/Users/angcast/Documents/GitHub/self-sustaining-cities/assets/bundles/index.bundle.js",
       "publicPath": "http://localhost:3000/build/index.bundle.js"
     },
-    "index.a1fd5baacaf92da557e2.hot-update.js": {
-      "name": "index.a1fd5baacaf92da557e2.hot-update.js",
-      "path": "/Users/sharafrashid2/Documents/GitHub/self-sustaining-cities/assets/bundles/index.a1fd5baacaf92da557e2.hot-update.js",
-      "publicPath": "http://localhost:3000/build/index.a1fd5baacaf92da557e2.hot-update.js"
-    },
-    "index.a1fd5baacaf92da557e2.hot-update.json": {
-      "name": "index.a1fd5baacaf92da557e2.hot-update.json",
-      "path": "/Users/sharafrashid2/Documents/GitHub/self-sustaining-cities/assets/bundles/index.a1fd5baacaf92da557e2.hot-update.json",
-      "publicPath": "http://localhost:3000/build/index.a1fd5baacaf92da557e2.hot-update.json"
-    },
-    "index.1d4dabe90d8b9b8dbdb0.hot-update.js": {
-      "name": "index.1d4dabe90d8b9b8dbdb0.hot-update.js",
-      "path": "/Users/sharafrashid2/Documents/GitHub/self-sustaining-cities/assets/bundles/index.1d4dabe90d8b9b8dbdb0.hot-update.js",
-      "publicPath": "http://localhost:3000/build/index.1d4dabe90d8b9b8dbdb0.hot-update.js"
-    },
-    "index.1d4dabe90d8b9b8dbdb0.hot-update.json": {
-      "name": "index.1d4dabe90d8b9b8dbdb0.hot-update.json",
-      "path": "/Users/sharafrashid2/Documents/GitHub/self-sustaining-cities/assets/bundles/index.1d4dabe90d8b9b8dbdb0.hot-update.json",
-      "publicPath": "http://localhost:3000/build/index.1d4dabe90d8b9b8dbdb0.hot-update.json"
-    },
-    "index.f546c399b48a372eb09c.hot-update.js": {
-      "name": "index.f546c399b48a372eb09c.hot-update.js",
-      "path": "/Users/sharafrashid2/Documents/GitHub/self-sustaining-cities/assets/bundles/index.f546c399b48a372eb09c.hot-update.js",
-      "publicPath": "http://localhost:3000/build/index.f546c399b48a372eb09c.hot-update.js"
-    },
-    "index.f546c399b48a372eb09c.hot-update.json": {
-      "name": "index.f546c399b48a372eb09c.hot-update.json",
-      "path": "/Users/sharafrashid2/Documents/GitHub/self-sustaining-cities/assets/bundles/index.f546c399b48a372eb09c.hot-update.json",
-      "publicPath": "http://localhost:3000/build/index.f546c399b48a372eb09c.hot-update.json"
-    },
-    "index.6e23c49e364efcd5308f.hot-update.js": {
-      "name": "index.6e23c49e364efcd5308f.hot-update.js",
-      "path": "/Users/sharafrashid2/Documents/GitHub/self-sustaining-cities/assets/bundles/index.6e23c49e364efcd5308f.hot-update.js",
-      "publicPath": "http://localhost:3000/build/index.6e23c49e364efcd5308f.hot-update.js"
-    },
-    "index.6e23c49e364efcd5308f.hot-update.json": {
-      "name": "index.6e23c49e364efcd5308f.hot-update.json",
-      "path": "/Users/sharafrashid2/Documents/GitHub/self-sustaining-cities/assets/bundles/index.6e23c49e364efcd5308f.hot-update.json",
-      "publicPath": "http://localhost:3000/build/index.6e23c49e364efcd5308f.hot-update.json"
-    },
-    "index.dd52ca602729bd424e28.hot-update.js": {
-      "name": "index.dd52ca602729bd424e28.hot-update.js",
-      "path": "/Users/sharafrashid2/Documents/GitHub/self-sustaining-cities/assets/bundles/index.dd52ca602729bd424e28.hot-update.js",
-      "publicPath": "http://localhost:3000/build/index.dd52ca602729bd424e28.hot-update.js"
-    },
-    "index.dd52ca602729bd424e28.hot-update.json": {
-      "name": "index.dd52ca602729bd424e28.hot-update.json",
-      "path": "/Users/sharafrashid2/Documents/GitHub/self-sustaining-cities/assets/bundles/index.dd52ca602729bd424e28.hot-update.json",
-      "publicPath": "http://localhost:3000/build/index.dd52ca602729bd424e28.hot-update.json"
-    },
-    "index.d9b324bf28cde4b0dfdd.hot-update.js": {
-      "name": "index.d9b324bf28cde4b0dfdd.hot-update.js",
-      "path": "/Users/sharafrashid2/Documents/GitHub/self-sustaining-cities/assets/bundles/index.d9b324bf28cde4b0dfdd.hot-update.js",
-      "publicPath": "http://localhost:3000/build/index.d9b324bf28cde4b0dfdd.hot-update.js"
-    },
-    "index.d9b324bf28cde4b0dfdd.hot-update.json": {
-      "name": "index.d9b324bf28cde4b0dfdd.hot-update.json",
-      "path": "/Users/sharafrashid2/Documents/GitHub/self-sustaining-cities/assets/bundles/index.d9b324bf28cde4b0dfdd.hot-update.json",
-      "publicPath": "http://localhost:3000/build/index.d9b324bf28cde4b0dfdd.hot-update.json"
-    },
-    "index.0b776a5cab050ffa33c6.hot-update.js": {
-      "name": "index.0b776a5cab050ffa33c6.hot-update.js",
-      "path": "/Users/sharafrashid2/Documents/GitHub/self-sustaining-cities/assets/bundles/index.0b776a5cab050ffa33c6.hot-update.js",
-      "publicPath": "http://localhost:3000/build/index.0b776a5cab050ffa33c6.hot-update.js"
-    },
-    "index.0b776a5cab050ffa33c6.hot-update.json": {
-      "name": "index.0b776a5cab050ffa33c6.hot-update.json",
-      "path": "/Users/sharafrashid2/Documents/GitHub/self-sustaining-cities/assets/bundles/index.0b776a5cab050ffa33c6.hot-update.json",
-      "publicPath": "http://localhost:3000/build/index.0b776a5cab050ffa33c6.hot-update.json"
-    },
-    "index.b2174d50f1aa32d01f88.hot-update.js": {
-      "name": "index.b2174d50f1aa32d01f88.hot-update.js",
-      "path": "/Users/sharafrashid2/Documents/GitHub/self-sustaining-cities/assets/bundles/index.b2174d50f1aa32d01f88.hot-update.js",
-      "publicPath": "http://localhost:3000/build/index.b2174d50f1aa32d01f88.hot-update.js"
-    },
-    "index.b2174d50f1aa32d01f88.hot-update.json": {
-      "name": "index.b2174d50f1aa32d01f88.hot-update.json",
-      "path": "/Users/sharafrashid2/Documents/GitHub/self-sustaining-cities/assets/bundles/index.b2174d50f1aa32d01f88.hot-update.json",
-      "publicPath": "http://localhost:3000/build/index.b2174d50f1aa32d01f88.hot-update.json"
-    },
-    "index.dd1a0718a355bf8d4b9b.hot-update.js": {
-      "name": "index.dd1a0718a355bf8d4b9b.hot-update.js",
-      "path": "/Users/sharafrashid2/Documents/GitHub/self-sustaining-cities/assets/bundles/index.dd1a0718a355bf8d4b9b.hot-update.js",
-      "publicPath": "http://localhost:3000/build/index.dd1a0718a355bf8d4b9b.hot-update.js"
-    },
-    "index.dd1a0718a355bf8d4b9b.hot-update.json": {
-      "name": "index.dd1a0718a355bf8d4b9b.hot-update.json",
-      "path": "/Users/sharafrashid2/Documents/GitHub/self-sustaining-cities/assets/bundles/index.dd1a0718a355bf8d4b9b.hot-update.json",
-      "publicPath": "http://localhost:3000/build/index.dd1a0718a355bf8d4b9b.hot-update.json"
-    },
-    "index.2c35c7d80ec9bf3ab2e7.hot-update.js": {
-      "name": "index.2c35c7d80ec9bf3ab2e7.hot-update.js",
-      "path": "/Users/sharafrashid2/Documents/GitHub/self-sustaining-cities/assets/bundles/index.2c35c7d80ec9bf3ab2e7.hot-update.js",
-      "publicPath": "http://localhost:3000/build/index.2c35c7d80ec9bf3ab2e7.hot-update.js"
-    },
-    "index.2c35c7d80ec9bf3ab2e7.hot-update.json": {
-      "name": "index.2c35c7d80ec9bf3ab2e7.hot-update.json",
-      "path": "/Users/sharafrashid2/Documents/GitHub/self-sustaining-cities/assets/bundles/index.2c35c7d80ec9bf3ab2e7.hot-update.json",
-      "publicPath": "http://localhost:3000/build/index.2c35c7d80ec9bf3ab2e7.hot-update.json"
-    },
-    "index.63cba7541f42f837cfaa.hot-update.js": {
-      "name": "index.63cba7541f42f837cfaa.hot-update.js",
-      "path": "/Users/sharafrashid2/Documents/GitHub/self-sustaining-cities/assets/bundles/index.63cba7541f42f837cfaa.hot-update.js",
-      "publicPath": "http://localhost:3000/build/index.63cba7541f42f837cfaa.hot-update.js"
-    },
-    "index.63cba7541f42f837cfaa.hot-update.json": {
-      "name": "index.63cba7541f42f837cfaa.hot-update.json",
-      "path": "/Users/sharafrashid2/Documents/GitHub/self-sustaining-cities/assets/bundles/index.63cba7541f42f837cfaa.hot-update.json",
-      "publicPath": "http://localhost:3000/build/index.63cba7541f42f837cfaa.hot-update.json"
-    },
-    "index.e68d91f14219525cd3fe.hot-update.js": {
-      "name": "index.e68d91f14219525cd3fe.hot-update.js",
-      "path": "/Users/sharafrashid2/Documents/GitHub/self-sustaining-cities/assets/bundles/index.e68d91f14219525cd3fe.hot-update.js",
-      "publicPath": "http://localhost:3000/build/index.e68d91f14219525cd3fe.hot-update.js"
-    },
-    "index.e68d91f14219525cd3fe.hot-update.json": {
-      "name": "index.e68d91f14219525cd3fe.hot-update.json",
-      "path": "/Users/sharafrashid2/Documents/GitHub/self-sustaining-cities/assets/bundles/index.e68d91f14219525cd3fe.hot-update.json",
-      "publicPath": "http://localhost:3000/build/index.e68d91f14219525cd3fe.hot-update.json"
-    },
-    "index.e87162b4d353c0ff7eb3.hot-update.js": {
-      "name": "index.e87162b4d353c0ff7eb3.hot-update.js",
-      "path": "/Users/sharafrashid2/Documents/GitHub/self-sustaining-cities/assets/bundles/index.e87162b4d353c0ff7eb3.hot-update.js",
-      "publicPath": "http://localhost:3000/build/index.e87162b4d353c0ff7eb3.hot-update.js"
-    },
-    "index.e87162b4d353c0ff7eb3.hot-update.json": {
-      "name": "index.e87162b4d353c0ff7eb3.hot-update.json",
-      "path": "/Users/sharafrashid2/Documents/GitHub/self-sustaining-cities/assets/bundles/index.e87162b4d353c0ff7eb3.hot-update.json",
-      "publicPath": "http://localhost:3000/build/index.e87162b4d353c0ff7eb3.hot-update.json"
-    },
-    "index.a67fc86495536af3252e.hot-update.js": {
-      "name": "index.a67fc86495536af3252e.hot-update.js",
-      "path": "/Users/sharafrashid2/Documents/GitHub/self-sustaining-cities/assets/bundles/index.a67fc86495536af3252e.hot-update.js",
-      "publicPath": "http://localhost:3000/build/index.a67fc86495536af3252e.hot-update.js"
-    },
-    "index.a67fc86495536af3252e.hot-update.json": {
-      "name": "index.a67fc86495536af3252e.hot-update.json",
-      "path": "/Users/sharafrashid2/Documents/GitHub/self-sustaining-cities/assets/bundles/index.a67fc86495536af3252e.hot-update.json",
-      "publicPath": "http://localhost:3000/build/index.a67fc86495536af3252e.hot-update.json"
-    },
-    "index.69f220f6790b6ab68afd.hot-update.js": {
-      "name": "index.69f220f6790b6ab68afd.hot-update.js",
-      "path": "/Users/sharafrashid2/Documents/GitHub/self-sustaining-cities/assets/bundles/index.69f220f6790b6ab68afd.hot-update.js",
-      "publicPath": "http://localhost:3000/build/index.69f220f6790b6ab68afd.hot-update.js"
-    },
-    "index.69f220f6790b6ab68afd.hot-update.json": {
-      "name": "index.69f220f6790b6ab68afd.hot-update.json",
-      "path": "/Users/sharafrashid2/Documents/GitHub/self-sustaining-cities/assets/bundles/index.69f220f6790b6ab68afd.hot-update.json",
-      "publicPath": "http://localhost:3000/build/index.69f220f6790b6ab68afd.hot-update.json"
-    },
-    "index.688de221663e4a6279c7.hot-update.js": {
-      "name": "index.688de221663e4a6279c7.hot-update.js",
-      "path": "/Users/sharafrashid2/Documents/GitHub/self-sustaining-cities/assets/bundles/index.688de221663e4a6279c7.hot-update.js",
-      "publicPath": "http://localhost:3000/build/index.688de221663e4a6279c7.hot-update.js"
-    },
-    "index.688de221663e4a6279c7.hot-update.json": {
-      "name": "index.688de221663e4a6279c7.hot-update.json",
-      "path": "/Users/sharafrashid2/Documents/GitHub/self-sustaining-cities/assets/bundles/index.688de221663e4a6279c7.hot-update.json",
-      "publicPath": "http://localhost:3000/build/index.688de221663e4a6279c7.hot-update.json"
-    },
-    "index.1b38adb85dc9598da307.hot-update.js": {
-      "name": "index.1b38adb85dc9598da307.hot-update.js",
-      "path": "/Users/sharafrashid2/Documents/GitHub/self-sustaining-cities/assets/bundles/index.1b38adb85dc9598da307.hot-update.js",
-      "publicPath": "http://localhost:3000/build/index.1b38adb85dc9598da307.hot-update.js"
-    },
-    "index.1b38adb85dc9598da307.hot-update.json": {
-      "name": "index.1b38adb85dc9598da307.hot-update.json",
-      "path": "/Users/sharafrashid2/Documents/GitHub/self-sustaining-cities/assets/bundles/index.1b38adb85dc9598da307.hot-update.json",
-      "publicPath": "http://localhost:3000/build/index.1b38adb85dc9598da307.hot-update.json"
-    },
-    "index.102283b272c2da4a5e28.hot-update.js": {
-      "name": "index.102283b272c2da4a5e28.hot-update.js",
-      "path": "/Users/sharafrashid2/Documents/GitHub/self-sustaining-cities/assets/bundles/index.102283b272c2da4a5e28.hot-update.js",
-      "publicPath": "http://localhost:3000/build/index.102283b272c2da4a5e28.hot-update.js"
-    },
-    "index.102283b272c2da4a5e28.hot-update.json": {
-      "name": "index.102283b272c2da4a5e28.hot-update.json",
-      "path": "/Users/sharafrashid2/Documents/GitHub/self-sustaining-cities/assets/bundles/index.102283b272c2da4a5e28.hot-update.json",
-      "publicPath": "http://localhost:3000/build/index.102283b272c2da4a5e28.hot-update.json"
-    },
-    "index.aabfa339cf6e38a05597.hot-update.js": {
-      "name": "index.aabfa339cf6e38a05597.hot-update.js",
-      "path": "/Users/sharafrashid2/Documents/GitHub/self-sustaining-cities/assets/bundles/index.aabfa339cf6e38a05597.hot-update.js",
-      "publicPath": "http://localhost:3000/build/index.aabfa339cf6e38a05597.hot-update.js"
-    },
-    "index.aabfa339cf6e38a05597.hot-update.json": {
-      "name": "index.aabfa339cf6e38a05597.hot-update.json",
-      "path": "/Users/sharafrashid2/Documents/GitHub/self-sustaining-cities/assets/bundles/index.aabfa339cf6e38a05597.hot-update.json",
-      "publicPath": "http://localhost:3000/build/index.aabfa339cf6e38a05597.hot-update.json"
-    },
-    "index.7734494362f1268fe36e.hot-update.js": {
-      "name": "index.7734494362f1268fe36e.hot-update.js",
-      "path": "/Users/sharafrashid2/Documents/GitHub/self-sustaining-cities/assets/bundles/index.7734494362f1268fe36e.hot-update.js",
-      "publicPath": "http://localhost:3000/build/index.7734494362f1268fe36e.hot-update.js"
-    },
-    "index.7734494362f1268fe36e.hot-update.json": {
-      "name": "index.7734494362f1268fe36e.hot-update.json",
-      "path": "/Users/sharafrashid2/Documents/GitHub/self-sustaining-cities/assets/bundles/index.7734494362f1268fe36e.hot-update.json",
-      "publicPath": "http://localhost:3000/build/index.7734494362f1268fe36e.hot-update.json"
-    },
-    "index.cf9f5debc891189e72fd.hot-update.js": {
-      "name": "index.cf9f5debc891189e72fd.hot-update.js",
-      "path": "/Users/sharafrashid2/Documents/GitHub/self-sustaining-cities/assets/bundles/index.cf9f5debc891189e72fd.hot-update.js",
-      "publicPath": "http://localhost:3000/build/index.cf9f5debc891189e72fd.hot-update.js"
-    },
-    "index.cf9f5debc891189e72fd.hot-update.json": {
-      "name": "index.cf9f5debc891189e72fd.hot-update.json",
-      "path": "/Users/sharafrashid2/Documents/GitHub/self-sustaining-cities/assets/bundles/index.cf9f5debc891189e72fd.hot-update.json",
-      "publicPath": "http://localhost:3000/build/index.cf9f5debc891189e72fd.hot-update.json"
-    },
-    "index.7cd8fe181c51f9cfb256.hot-update.js": {
-      "name": "index.7cd8fe181c51f9cfb256.hot-update.js",
-      "path": "/Users/sharafrashid2/Documents/GitHub/self-sustaining-cities/assets/bundles/index.7cd8fe181c51f9cfb256.hot-update.js",
-      "publicPath": "http://localhost:3000/build/index.7cd8fe181c51f9cfb256.hot-update.js"
-    },
-    "index.7cd8fe181c51f9cfb256.hot-update.json": {
-      "name": "index.7cd8fe181c51f9cfb256.hot-update.json",
-      "path": "/Users/sharafrashid2/Documents/GitHub/self-sustaining-cities/assets/bundles/index.7cd8fe181c51f9cfb256.hot-update.json",
-      "publicPath": "http://localhost:3000/build/index.7cd8fe181c51f9cfb256.hot-update.json"
-    },
-    "index.bb6f27edc26c3f8cd2b0.hot-update.js": {
-      "name": "index.bb6f27edc26c3f8cd2b0.hot-update.js",
-      "path": "/Users/sharafrashid2/Documents/GitHub/self-sustaining-cities/assets/bundles/index.bb6f27edc26c3f8cd2b0.hot-update.js",
-      "publicPath": "http://localhost:3000/build/index.bb6f27edc26c3f8cd2b0.hot-update.js"
-    },
-    "index.bb6f27edc26c3f8cd2b0.hot-update.json": {
-      "name": "index.bb6f27edc26c3f8cd2b0.hot-update.json",
-      "path": "/Users/sharafrashid2/Documents/GitHub/self-sustaining-cities/assets/bundles/index.bb6f27edc26c3f8cd2b0.hot-update.json",
-      "publicPath": "http://localhost:3000/build/index.bb6f27edc26c3f8cd2b0.hot-update.json"
-    },
-    "index.22382771dea8af502082.hot-update.js": {
-      "name": "index.22382771dea8af502082.hot-update.js",
-      "path": "/Users/sharafrashid2/Documents/GitHub/self-sustaining-cities/assets/bundles/index.22382771dea8af502082.hot-update.js",
-      "publicPath": "http://localhost:3000/build/index.22382771dea8af502082.hot-update.js"
-    },
-    "index.22382771dea8af502082.hot-update.json": {
-      "name": "index.22382771dea8af502082.hot-update.json",
-      "path": "/Users/sharafrashid2/Documents/GitHub/self-sustaining-cities/assets/bundles/index.22382771dea8af502082.hot-update.json",
-      "publicPath": "http://localhost:3000/build/index.22382771dea8af502082.hot-update.json"
-    },
-    "index.2bcd3cc81a8195df46da.hot-update.js": {
-      "name": "index.2bcd3cc81a8195df46da.hot-update.js",
-      "path": "/Users/sharafrashid2/Documents/GitHub/self-sustaining-cities/assets/bundles/index.2bcd3cc81a8195df46da.hot-update.js",
-      "publicPath": "http://localhost:3000/build/index.2bcd3cc81a8195df46da.hot-update.js"
-    },
-    "index.2bcd3cc81a8195df46da.hot-update.json": {
-      "name": "index.2bcd3cc81a8195df46da.hot-update.json",
-      "path": "/Users/sharafrashid2/Documents/GitHub/self-sustaining-cities/assets/bundles/index.2bcd3cc81a8195df46da.hot-update.json",
-      "publicPath": "http://localhost:3000/build/index.2bcd3cc81a8195df46da.hot-update.json"
-    },
-    "index.67f33eb30a1b4f43cc76.hot-update.js": {
-      "name": "index.67f33eb30a1b4f43cc76.hot-update.js",
-      "path": "/Users/sharafrashid2/Documents/GitHub/self-sustaining-cities/assets/bundles/index.67f33eb30a1b4f43cc76.hot-update.js",
-      "publicPath": "http://localhost:3000/build/index.67f33eb30a1b4f43cc76.hot-update.js"
-    },
-    "index.67f33eb30a1b4f43cc76.hot-update.json": {
-      "name": "index.67f33eb30a1b4f43cc76.hot-update.json",
-      "path": "/Users/sharafrashid2/Documents/GitHub/self-sustaining-cities/assets/bundles/index.67f33eb30a1b4f43cc76.hot-update.json",
-      "publicPath": "http://localhost:3000/build/index.67f33eb30a1b4f43cc76.hot-update.json"
-    },
-    "index.37af4c2c60eaaef65fc6.hot-update.js": {
-      "name": "index.37af4c2c60eaaef65fc6.hot-update.js",
-      "path": "/Users/sharafrashid2/Documents/GitHub/self-sustaining-cities/assets/bundles/index.37af4c2c60eaaef65fc6.hot-update.js",
-      "publicPath": "http://localhost:3000/build/index.37af4c2c60eaaef65fc6.hot-update.js"
-    },
-    "index.37af4c2c60eaaef65fc6.hot-update.json": {
-      "name": "index.37af4c2c60eaaef65fc6.hot-update.json",
-      "path": "/Users/sharafrashid2/Documents/GitHub/self-sustaining-cities/assets/bundles/index.37af4c2c60eaaef65fc6.hot-update.json",
-      "publicPath": "http://localhost:3000/build/index.37af4c2c60eaaef65fc6.hot-update.json"
-    },
-    "index.38dbb52e41ffbb7ee00a.hot-update.js": {
-      "name": "index.38dbb52e41ffbb7ee00a.hot-update.js",
-      "path": "/Users/sharafrashid2/Documents/GitHub/self-sustaining-cities/assets/bundles/index.38dbb52e41ffbb7ee00a.hot-update.js",
-      "publicPath": "http://localhost:3000/build/index.38dbb52e41ffbb7ee00a.hot-update.js"
-    },
-    "index.38dbb52e41ffbb7ee00a.hot-update.json": {
-      "name": "index.38dbb52e41ffbb7ee00a.hot-update.json",
-      "path": "/Users/sharafrashid2/Documents/GitHub/self-sustaining-cities/assets/bundles/index.38dbb52e41ffbb7ee00a.hot-update.json",
-      "publicPath": "http://localhost:3000/build/index.38dbb52e41ffbb7ee00a.hot-update.json"
-    },
-    "index.c7c6cca67edbf5aabea2.hot-update.js": {
-      "name": "index.c7c6cca67edbf5aabea2.hot-update.js",
-      "path": "/Users/sharafrashid2/Documents/GitHub/self-sustaining-cities/assets/bundles/index.c7c6cca67edbf5aabea2.hot-update.js",
-      "publicPath": "http://localhost:3000/build/index.c7c6cca67edbf5aabea2.hot-update.js"
-    },
-    "index.c7c6cca67edbf5aabea2.hot-update.json": {
-      "name": "index.c7c6cca67edbf5aabea2.hot-update.json",
-      "path": "/Users/sharafrashid2/Documents/GitHub/self-sustaining-cities/assets/bundles/index.c7c6cca67edbf5aabea2.hot-update.json",
-      "publicPath": "http://localhost:3000/build/index.c7c6cca67edbf5aabea2.hot-update.json"
-    },
-    "index.c1db4d488b64aa3dddd7.hot-update.js": {
-      "name": "index.c1db4d488b64aa3dddd7.hot-update.js",
-      "path": "/Users/sharafrashid2/Documents/GitHub/self-sustaining-cities/assets/bundles/index.c1db4d488b64aa3dddd7.hot-update.js",
-      "publicPath": "http://localhost:3000/build/index.c1db4d488b64aa3dddd7.hot-update.js"
-    },
-    "index.c1db4d488b64aa3dddd7.hot-update.json": {
-      "name": "index.c1db4d488b64aa3dddd7.hot-update.json",
-      "path": "/Users/sharafrashid2/Documents/GitHub/self-sustaining-cities/assets/bundles/index.c1db4d488b64aa3dddd7.hot-update.json",
-      "publicPath": "http://localhost:3000/build/index.c1db4d488b64aa3dddd7.hot-update.json"
-    },
-    "index.16e2a34b36d5eb57fa3a.hot-update.js": {
-      "name": "index.16e2a34b36d5eb57fa3a.hot-update.js",
-      "path": "/Users/sharafrashid2/Documents/GitHub/self-sustaining-cities/assets/bundles/index.16e2a34b36d5eb57fa3a.hot-update.js",
-      "publicPath": "http://localhost:3000/build/index.16e2a34b36d5eb57fa3a.hot-update.js"
-    },
-    "index.16e2a34b36d5eb57fa3a.hot-update.json": {
-      "name": "index.16e2a34b36d5eb57fa3a.hot-update.json",
-      "path": "/Users/sharafrashid2/Documents/GitHub/self-sustaining-cities/assets/bundles/index.16e2a34b36d5eb57fa3a.hot-update.json",
-      "publicPath": "http://localhost:3000/build/index.16e2a34b36d5eb57fa3a.hot-update.json"
-    },
-    "index.d766f0f1fc9c0aeb1307.hot-update.js": {
-      "name": "index.d766f0f1fc9c0aeb1307.hot-update.js",
-      "path": "/Users/sharafrashid2/Documents/GitHub/self-sustaining-cities/assets/bundles/index.d766f0f1fc9c0aeb1307.hot-update.js",
-      "publicPath": "http://localhost:3000/build/index.d766f0f1fc9c0aeb1307.hot-update.js"
-    },
-    "index.d766f0f1fc9c0aeb1307.hot-update.json": {
-      "name": "index.d766f0f1fc9c0aeb1307.hot-update.json",
-      "path": "/Users/sharafrashid2/Documents/GitHub/self-sustaining-cities/assets/bundles/index.d766f0f1fc9c0aeb1307.hot-update.json",
-      "publicPath": "http://localhost:3000/build/index.d766f0f1fc9c0aeb1307.hot-update.json"
-    },
-    "index.9851096d411de9aeb1fd.hot-update.js": {
-      "name": "index.9851096d411de9aeb1fd.hot-update.js",
-      "path": "/Users/sharafrashid2/Documents/GitHub/self-sustaining-cities/assets/bundles/index.9851096d411de9aeb1fd.hot-update.js",
-      "publicPath": "http://localhost:3000/build/index.9851096d411de9aeb1fd.hot-update.js"
-    },
-    "index.9851096d411de9aeb1fd.hot-update.json": {
-      "name": "index.9851096d411de9aeb1fd.hot-update.json",
-      "path": "/Users/sharafrashid2/Documents/GitHub/self-sustaining-cities/assets/bundles/index.9851096d411de9aeb1fd.hot-update.json",
-      "publicPath": "http://localhost:3000/build/index.9851096d411de9aeb1fd.hot-update.json"
-    },
-    "index.9972b336837ee7e1827b.hot-update.js": {
-      "name": "index.9972b336837ee7e1827b.hot-update.js",
-      "path": "/Users/sharafrashid2/Documents/GitHub/self-sustaining-cities/assets/bundles/index.9972b336837ee7e1827b.hot-update.js",
-      "publicPath": "http://localhost:3000/build/index.9972b336837ee7e1827b.hot-update.js"
-    },
-    "index.9972b336837ee7e1827b.hot-update.json": {
-      "name": "index.9972b336837ee7e1827b.hot-update.json",
-      "path": "/Users/sharafrashid2/Documents/GitHub/self-sustaining-cities/assets/bundles/index.9972b336837ee7e1827b.hot-update.json",
-      "publicPath": "http://localhost:3000/build/index.9972b336837ee7e1827b.hot-update.json"
-    },
-    "index.c05b830ae40f89b026fa.hot-update.js": {
-      "name": "index.c05b830ae40f89b026fa.hot-update.js",
-      "path": "/Users/sharafrashid2/Documents/GitHub/self-sustaining-cities/assets/bundles/index.c05b830ae40f89b026fa.hot-update.js",
-      "publicPath": "http://localhost:3000/build/index.c05b830ae40f89b026fa.hot-update.js"
-    },
-    "index.c05b830ae40f89b026fa.hot-update.json": {
-      "name": "index.c05b830ae40f89b026fa.hot-update.json",
-      "path": "/Users/sharafrashid2/Documents/GitHub/self-sustaining-cities/assets/bundles/index.c05b830ae40f89b026fa.hot-update.json",
-      "publicPath": "http://localhost:3000/build/index.c05b830ae40f89b026fa.hot-update.json"
-    },
-    "index.7ac21e47f218cbb83533.hot-update.js": {
-      "name": "index.7ac21e47f218cbb83533.hot-update.js",
-      "path": "/Users/sharafrashid2/Documents/GitHub/self-sustaining-cities/assets/bundles/index.7ac21e47f218cbb83533.hot-update.js",
-      "publicPath": "http://localhost:3000/build/index.7ac21e47f218cbb83533.hot-update.js"
-    },
-    "index.7ac21e47f218cbb83533.hot-update.json": {
-      "name": "index.7ac21e47f218cbb83533.hot-update.json",
-      "path": "/Users/sharafrashid2/Documents/GitHub/self-sustaining-cities/assets/bundles/index.7ac21e47f218cbb83533.hot-update.json",
-      "publicPath": "http://localhost:3000/build/index.7ac21e47f218cbb83533.hot-update.json"
-    },
-    "index.329ee65e84b3fbe9341b.hot-update.js": {
-      "name": "index.329ee65e84b3fbe9341b.hot-update.js",
-      "path": "/Users/sharafrashid2/Documents/GitHub/self-sustaining-cities/assets/bundles/index.329ee65e84b3fbe9341b.hot-update.js",
-      "publicPath": "http://localhost:3000/build/index.329ee65e84b3fbe9341b.hot-update.js"
-    },
-    "index.329ee65e84b3fbe9341b.hot-update.json": {
-      "name": "index.329ee65e84b3fbe9341b.hot-update.json",
-      "path": "/Users/sharafrashid2/Documents/GitHub/self-sustaining-cities/assets/bundles/index.329ee65e84b3fbe9341b.hot-update.json",
-      "publicPath": "http://localhost:3000/build/index.329ee65e84b3fbe9341b.hot-update.json"
-    },
-    "index.a5118fd369fe969d9599.hot-update.js": {
-      "name": "index.a5118fd369fe969d9599.hot-update.js",
-      "path": "/Users/sharafrashid2/Documents/GitHub/self-sustaining-cities/assets/bundles/index.a5118fd369fe969d9599.hot-update.js",
-      "publicPath": "http://localhost:3000/build/index.a5118fd369fe969d9599.hot-update.js"
-    },
-    "index.a5118fd369fe969d9599.hot-update.json": {
-      "name": "index.a5118fd369fe969d9599.hot-update.json",
-      "path": "/Users/sharafrashid2/Documents/GitHub/self-sustaining-cities/assets/bundles/index.a5118fd369fe969d9599.hot-update.json",
-      "publicPath": "http://localhost:3000/build/index.a5118fd369fe969d9599.hot-update.json"
-    },
-    "index.97aa900a8f1dbe610cac.hot-update.js": {
-      "name": "index.97aa900a8f1dbe610cac.hot-update.js",
-      "path": "/Users/sharafrashid2/Documents/GitHub/self-sustaining-cities/assets/bundles/index.97aa900a8f1dbe610cac.hot-update.js",
-      "publicPath": "http://localhost:3000/build/index.97aa900a8f1dbe610cac.hot-update.js"
-    },
-    "index.97aa900a8f1dbe610cac.hot-update.json": {
-      "name": "index.97aa900a8f1dbe610cac.hot-update.json",
-      "path": "/Users/sharafrashid2/Documents/GitHub/self-sustaining-cities/assets/bundles/index.97aa900a8f1dbe610cac.hot-update.json",
-      "publicPath": "http://localhost:3000/build/index.97aa900a8f1dbe610cac.hot-update.json"
-    },
-    "index.d5b595333258efaa71f0.hot-update.js": {
-      "name": "index.d5b595333258efaa71f0.hot-update.js",
-      "path": "/Users/sharafrashid2/Documents/GitHub/self-sustaining-cities/assets/bundles/index.d5b595333258efaa71f0.hot-update.js",
-      "publicPath": "http://localhost:3000/build/index.d5b595333258efaa71f0.hot-update.js"
-    },
-    "index.d5b595333258efaa71f0.hot-update.json": {
-      "name": "index.d5b595333258efaa71f0.hot-update.json",
-      "path": "/Users/sharafrashid2/Documents/GitHub/self-sustaining-cities/assets/bundles/index.d5b595333258efaa71f0.hot-update.json",
-      "publicPath": "http://localhost:3000/build/index.d5b595333258efaa71f0.hot-update.json"
-    },
-    "index.84096bb134cdbbefec6c.hot-update.js": {
-      "name": "index.84096bb134cdbbefec6c.hot-update.js",
-      "path": "/Users/sharafrashid2/Documents/GitHub/self-sustaining-cities/assets/bundles/index.84096bb134cdbbefec6c.hot-update.js",
-      "publicPath": "http://localhost:3000/build/index.84096bb134cdbbefec6c.hot-update.js"
-    },
-    "index.84096bb134cdbbefec6c.hot-update.json": {
-      "name": "index.84096bb134cdbbefec6c.hot-update.json",
-      "path": "/Users/sharafrashid2/Documents/GitHub/self-sustaining-cities/assets/bundles/index.84096bb134cdbbefec6c.hot-update.json",
-      "publicPath": "http://localhost:3000/build/index.84096bb134cdbbefec6c.hot-update.json"
-    },
-    "index.6adf5cfd60c6b34113ce.hot-update.js": {
-      "name": "index.6adf5cfd60c6b34113ce.hot-update.js",
-      "path": "/Users/sharafrashid2/Documents/GitHub/self-sustaining-cities/assets/bundles/index.6adf5cfd60c6b34113ce.hot-update.js",
-      "publicPath": "http://localhost:3000/build/index.6adf5cfd60c6b34113ce.hot-update.js"
-    },
-    "index.6adf5cfd60c6b34113ce.hot-update.json": {
-      "name": "index.6adf5cfd60c6b34113ce.hot-update.json",
-      "path": "/Users/sharafrashid2/Documents/GitHub/self-sustaining-cities/assets/bundles/index.6adf5cfd60c6b34113ce.hot-update.json",
-      "publicPath": "http://localhost:3000/build/index.6adf5cfd60c6b34113ce.hot-update.json"
-    },
-    "index.4b80618f38af742267f0.hot-update.js": {
-      "name": "index.4b80618f38af742267f0.hot-update.js",
-      "path": "/Users/sharafrashid2/Documents/GitHub/self-sustaining-cities/assets/bundles/index.4b80618f38af742267f0.hot-update.js",
-      "publicPath": "http://localhost:3000/build/index.4b80618f38af742267f0.hot-update.js"
-    },
-    "index.4b80618f38af742267f0.hot-update.json": {
-      "name": "index.4b80618f38af742267f0.hot-update.json",
-      "path": "/Users/sharafrashid2/Documents/GitHub/self-sustaining-cities/assets/bundles/index.4b80618f38af742267f0.hot-update.json",
-      "publicPath": "http://localhost:3000/build/index.4b80618f38af742267f0.hot-update.json"
-    },
-    "index.6df53a6df042dd98e15f.hot-update.js": {
-      "name": "index.6df53a6df042dd98e15f.hot-update.js",
-      "path": "/Users/sharafrashid2/Documents/GitHub/self-sustaining-cities/assets/bundles/index.6df53a6df042dd98e15f.hot-update.js",
-      "publicPath": "http://localhost:3000/build/index.6df53a6df042dd98e15f.hot-update.js"
-    },
-    "index.6df53a6df042dd98e15f.hot-update.json": {
-      "name": "index.6df53a6df042dd98e15f.hot-update.json",
-      "path": "/Users/sharafrashid2/Documents/GitHub/self-sustaining-cities/assets/bundles/index.6df53a6df042dd98e15f.hot-update.json",
-      "publicPath": "http://localhost:3000/build/index.6df53a6df042dd98e15f.hot-update.json"
-    },
-    "index.e59603381a94dd7b4975.hot-update.js": {
-      "name": "index.e59603381a94dd7b4975.hot-update.js",
-      "path": "/Users/sharafrashid2/Documents/GitHub/self-sustaining-cities/assets/bundles/index.e59603381a94dd7b4975.hot-update.js",
-      "publicPath": "http://localhost:3000/build/index.e59603381a94dd7b4975.hot-update.js"
-    },
-    "index.e59603381a94dd7b4975.hot-update.json": {
-      "name": "index.e59603381a94dd7b4975.hot-update.json",
-      "path": "/Users/sharafrashid2/Documents/GitHub/self-sustaining-cities/assets/bundles/index.e59603381a94dd7b4975.hot-update.json",
-      "publicPath": "http://localhost:3000/build/index.e59603381a94dd7b4975.hot-update.json"
-    },
-    "index.ed548ada07580a0bd899.hot-update.js": {
-      "name": "index.ed548ada07580a0bd899.hot-update.js",
-      "path": "/Users/sharafrashid2/Documents/GitHub/self-sustaining-cities/assets/bundles/index.ed548ada07580a0bd899.hot-update.js",
-      "publicPath": "http://localhost:3000/build/index.ed548ada07580a0bd899.hot-update.js"
-    },
-    "index.ed548ada07580a0bd899.hot-update.json": {
-      "name": "index.ed548ada07580a0bd899.hot-update.json",
-      "path": "/Users/sharafrashid2/Documents/GitHub/self-sustaining-cities/assets/bundles/index.ed548ada07580a0bd899.hot-update.json",
-      "publicPath": "http://localhost:3000/build/index.ed548ada07580a0bd899.hot-update.json"
-    },
-    "index.8b14a685169defc59b1c.hot-update.js": {
-      "name": "index.8b14a685169defc59b1c.hot-update.js",
-      "path": "/Users/sharafrashid2/Documents/GitHub/self-sustaining-cities/assets/bundles/index.8b14a685169defc59b1c.hot-update.js",
-      "publicPath": "http://localhost:3000/build/index.8b14a685169defc59b1c.hot-update.js"
-    },
-    "index.8b14a685169defc59b1c.hot-update.json": {
-      "name": "index.8b14a685169defc59b1c.hot-update.json",
-      "path": "/Users/sharafrashid2/Documents/GitHub/self-sustaining-cities/assets/bundles/index.8b14a685169defc59b1c.hot-update.json",
-      "publicPath": "http://localhost:3000/build/index.8b14a685169defc59b1c.hot-update.json"
-    },
-    "index.a019cdbd6565d9533051.hot-update.js": {
-      "name": "index.a019cdbd6565d9533051.hot-update.js",
-      "path": "/Users/sharafrashid2/Documents/GitHub/self-sustaining-cities/assets/bundles/index.a019cdbd6565d9533051.hot-update.js",
-      "publicPath": "http://localhost:3000/build/index.a019cdbd6565d9533051.hot-update.js"
-    },
-    "index.a019cdbd6565d9533051.hot-update.json": {
-      "name": "index.a019cdbd6565d9533051.hot-update.json",
-      "path": "/Users/sharafrashid2/Documents/GitHub/self-sustaining-cities/assets/bundles/index.a019cdbd6565d9533051.hot-update.json",
-      "publicPath": "http://localhost:3000/build/index.a019cdbd6565d9533051.hot-update.json"
-    },
-    "index.f3756689fccdfad6b88e.hot-update.js": {
-      "name": "index.f3756689fccdfad6b88e.hot-update.js",
-      "path": "/Users/sharafrashid2/Documents/GitHub/self-sustaining-cities/assets/bundles/index.f3756689fccdfad6b88e.hot-update.js",
-      "publicPath": "http://localhost:3000/build/index.f3756689fccdfad6b88e.hot-update.js"
-    },
-    "index.f3756689fccdfad6b88e.hot-update.json": {
-      "name": "index.f3756689fccdfad6b88e.hot-update.json",
-      "path": "/Users/sharafrashid2/Documents/GitHub/self-sustaining-cities/assets/bundles/index.f3756689fccdfad6b88e.hot-update.json",
-      "publicPath": "http://localhost:3000/build/index.f3756689fccdfad6b88e.hot-update.json"
-    },
-    "index.6f4745bd53230c243dec.hot-update.js": {
-      "name": "index.6f4745bd53230c243dec.hot-update.js",
-      "path": "/Users/sharafrashid2/Documents/GitHub/self-sustaining-cities/assets/bundles/index.6f4745bd53230c243dec.hot-update.js",
-      "publicPath": "http://localhost:3000/build/index.6f4745bd53230c243dec.hot-update.js"
-    },
-    "index.6f4745bd53230c243dec.hot-update.json": {
-      "name": "index.6f4745bd53230c243dec.hot-update.json",
-      "path": "/Users/sharafrashid2/Documents/GitHub/self-sustaining-cities/assets/bundles/index.6f4745bd53230c243dec.hot-update.json",
-      "publicPath": "http://localhost:3000/build/index.6f4745bd53230c243dec.hot-update.json"
+    "index.a7504823269afae390e1.hot-update.js": {
+      "name": "index.a7504823269afae390e1.hot-update.js",
+      "path": "/Users/angcast/Documents/GitHub/self-sustaining-cities/assets/bundles/index.a7504823269afae390e1.hot-update.js",
+      "publicPath": "http://localhost:3000/build/index.a7504823269afae390e1.hot-update.js"
+    },
+    "index.a7504823269afae390e1.hot-update.json": {
+      "name": "index.a7504823269afae390e1.hot-update.json",
+      "path": "/Users/angcast/Documents/GitHub/self-sustaining-cities/assets/bundles/index.a7504823269afae390e1.hot-update.json",
+      "publicPath": "http://localhost:3000/build/index.a7504823269afae390e1.hot-update.json"
     }
   },
   "chunks": {
     "index": [
       "index.bundle.css",
       "index.bundle.js",
-      "index.6f4745bd53230c243dec.hot-update.js"
+      "index.a7504823269afae390e1.hot-update.js"
     ]
   },
   "publicPath": "http://localhost:3000/build/",
-  "error": "ModuleBuildError",
-  "message": "Module build failed (from ./node_modules/babel-loader/lib/index.js):\nSyntaxError: /Users/sharafrashid2/Documents/GitHub/self-sustaining-cities/frontend/components/Timeline.js: Identifier 'documents' has already been declared. (43:10)\n\n  41 |     // once backend is ready, we will make a request to the api to retrieve the documents & store\n  42 |     // it as state\n> 43 |     const documents = [\n     |           ^\n  44 |         {\n  45 |             title: \"Washington Bee\",\n  46 |             date: \"December 3, 1910\",\n    at Object._raise (/Users/sharafrashid2/Documents/GitHub/self-sustaining-cities/node_modules/@babel/parser/lib/index.js:506:17)\n    at Object.raiseWithData (/Users/sharafrashid2/Documents/GitHub/self-sustaining-cities/node_modules/@babel/parser/lib/index.js:499:17)\n    at Object.raise (/Users/sharafrashid2/Documents/GitHub/self-sustaining-cities/node_modules/@babel/parser/lib/index.js:460:17)\n    at ScopeHandler.checkRedeclarationInScope (/Users/sharafrashid2/Documents/GitHub/self-sustaining-cities/node_modules/@babel/parser/lib/index.js:1668:12)\n    at ScopeHandler.declareName (/Users/sharafrashid2/Documents/GitHub/self-sustaining-cities/node_modules/@babel/parser/lib/index.js:1634:12)\n    at Object.checkLVal (/Users/sharafrashid2/Documents/GitHub/self-sustaining-cities/node_modules/@babel/parser/lib/index.js:11481:24)\n    at Object.parseVarId (/Users/sharafrashid2/Documents/GitHub/self-sustaining-cities/node_modules/@babel/parser/lib/index.js:14680:10)\n    at Object.parseVar (/Users/sharafrashid2/Documents/GitHub/self-sustaining-cities/node_modules/@babel/parser/lib/index.js:14651:12)\n    at Object.parseVarStatement (/Users/sharafrashid2/Documents/GitHub/self-sustaining-cities/node_modules/@babel/parser/lib/index.js:14458:10)\n    at Object.parseStatementContent (/Users/sharafrashid2/Documents/GitHub/self-sustaining-cities/node_modules/@babel/parser/lib/index.js:14017:21)"
+  "error": "ESLintError",
+  "message": "\n/Users/angcast/Documents/GitHub/self-sustaining-cities/frontend/components/Timeline.js\n  70:22  error  'DocSearch' is not defined  react/jsx-no-undef\n\n✖ 1 problem (1 error, 0 warnings)\n"
 }
