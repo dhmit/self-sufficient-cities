@@ -1,4 +1,5 @@
 import React from "react";
+import PropTypes from "prop-types";
 import {MapContainer, Marker, Popup, TileLayer} from "react-leaflet";
 import Input from "@material-ui/core/Input";
 import Typography from "@material-ui/core/Typography";
@@ -9,100 +10,100 @@ import Dropdown from "react-bootstrap/Dropdown";
 
 const ADDRESS_DATA = [
     {
-        name: 'For rent: 2124 8th St',
+        name: "For rent: 2124 8th St",
         coordinates: [38.9183777,-77.0254307],
-        year: 1915,
+        year: 1915
     },
     {
-        name: 'For rent: 2124 11th St.',
+        name: "For rent: 2124 11th St.",
         coordinates: [38.9187446,-77.0296913],
-        year: 1915,
+        year: 1915
     },
     {
-        name: 'For rent: 1139 6th St.',
+        name: "For rent: 1139 6th St.",
         coordinates: [38.9053336,-77.0217962],
-        year: 1915,
+        year: 1915
     },
     {
-        name: 'For rent: 3108 Sherman Ave. N. W.',
+        name: "For rent: 3108 Sherman Ave. N. W.",
         coordinates: [38.9290822,-77.0287721],
-        year: 1913,
+        year: 1913
     },
     {
-        name: 'For rent: 1005 Maryland Ave. S. W.',
+        name: "For rent: 1005 Maryland Ave. S. W.",
         coordinates: [38.8844613,-77.0303063],
-        year: 1913,
+        year: 1913
     },
     {
-        name: 'For rent: 41 Patterson St. N. E.',
+        name: "For rent: 41 Patterson St. N. E.",
         coordinates: [38.9062153,-77.0099283],
-        year: 1913,
+        year: 1913
     },
     {
-        name: 'For rent: 1045 47th St.',
+        name: "For rent: 1045 47th St.",
         coordinates: [38.9045554,-76.9366048],
-        year: 1913,
+        year: 1913
     },
     {
-        name: 'For rent: 2047 9th St. N. W.',
+        name: "For rent: 2047 9th St. N. W.",
         coordinates: [38.9181871,-77.02582],
-        year: 1913,
+        year: 1913
     },
     {
-        name: 'For rent: 2654 15th St. N. W.',
+        name: "For rent: 2654 15th St. N. W.",
         coordinates: [38.9245707,-77.0378564],
-        year: 1913,
+        year: 1913
     },
     {
-        name: 'For rent: 506 Fifth Street Northwest',
+        name: "For rent: 506 Fifth Street Northwest",
         coordinates: [38.8967959,-77.0215881],
-        year: 1913,
+        year: 1913
     },
     {
-        name: 'Pianoforte Lessons, Mrs. M. Harvey Clickscales: 1232 Linden Street Northeast',
+        name: "Pianoforte Lessons, Mrs. M. Harvey Clickscales: 1232 Linden Street Northeast",
         coordinates: [38.8997081,-76.991249],
-        year: 1913,
+        year: 1913
     },
     {
-        name: 'Land for Sale: Miss Elizabeth Shaw, 1613 Thirteenth Street Northwest',
+        name: "Land for Sale: Miss Elizabeth Shaw, 1613 Thirteenth Street Northwest",
         coordinates: [38.8688428,-76.9892379],
-        year: 1913,
+        year: 1913
     },
     {
-        name: 'The Washington Bee: 1109 Eye Street Northwest',
+        name: "The Washington Bee: 1109 Eye Street Northwest",
         coordinates: [38.9016879,-77.0293254],
-        year: 1913,
+        year: 1913
     },
     {
-        name: 'Dr. Geo. H. Richardson: 309 Eleventh St. N. E.',
+        name: "Dr. Geo. H. Richardson: 309 Eleventh St. N. E.",
         coordinates: [38.8938675,-76.993485],
-        year: 1913,
+        year: 1913
     },
     {
-        name: 'A.D. Powell, Dealer in Coal, Wood, and Ice: 1200 R Street N. W.',
+        name: "A.D. Powell, Dealer in Coal, Wood, and Ice: 1200 R Street N. W.",
         coordinates: [38.9126088,-77.0301461],
-        year: 1913,
+        year: 1913
     },
     {
-        name: 'Xanders Famous Cocktails: 909 7th St.',
+        name: "Xanders Famous Cocktails: 909 7th St.",
         coordinates: [38.901508,-77.0236903],
-        year: 1913,
+        year: 1913
     },
     {
-        name: 'Elite Photo Studio: 1814 Fourteenth Street, N. W.',
+        name: "Elite Photo Studio: 1814 Fourteenth Street, N. W.",
         coordinates: [38.9146532,-77.0344107],
-        year: 1913,
+        year: 1913
     },
     {
-        name: 'For Rent, High Class Apartments; The Minerva: 1838 Fourth Street Northwest',
+        name: "For Rent, High Class Apartments; The Minerva: 1838 Fourth Street Northwest",
         coordinates: [38.9154674,-77.0197966],
-        year: 1913,
+        year: 1913
     },
     {
-        name: 'Shannon & Luchs, Renting Service: 713 Fourteenth St. N. W.',
+        name: "Shannon & Luchs, Renting Service: 713 Fourteenth St. N. W.",
         coordinates: [38.89867,-77.0337179],
-        year: 1913,
-    },
+        year: 1913
+    }
 ];
 
 const MAIN_LOCATION = {
@@ -178,6 +179,90 @@ function timeSlider(
     );
 }
 
+export class MapDropdown extends React.Component {
+    constructor(props) {
+        super(props);
+
+        this.state = {
+            open: false,
+            selected: []
+        };
+    }
+
+    toggleItemSelect = (event) => {
+        // Implementation does not allow selecting items with the same name individually
+
+        const value = event.target.getAttribute("value");
+        const newSelected = this.state.selected;
+        if (this.state.selected.includes(value)) {
+            const valueIdx = newSelected.indexOf(value);
+            newSelected.splice(valueIdx, 1);
+            event.target.classList.remove("map-dropdown-item-selected");
+            event.target.classList.add("map-dropdown-item");
+        } else {
+            newSelected.push(value);
+            event.target.classList.remove("map-dropdown-item");
+            event.target.classList.add("map-dropdown-item-selected");
+        }
+        this.setState({selected: newSelected});
+        console.log(this.state.selected);
+    }
+
+    toggleDropdownItems = () => {
+        this.setState({open: !this.state.open});
+    }
+
+    getDropdownItems() {
+        if (!this.state.open) {
+            return <></>;
+        }
+        const selected = "map-dropdown-item-selected";
+        const normal = "map-dropdown-item";
+        const dropdownItems = (
+            this.props.items.map((location, i) => (
+                // TODO: Change dropdown element to a component with an accessible value attribute
+                <div
+                    key={i}
+                    className={
+                        this.state.selected.includes(location.name) ? selected : normal
+                    }
+                    value={location.name}
+                    onClick={this.toggleItemSelect}
+                >
+                    {location.name}
+                </div>
+            ))
+        );
+        return (
+            <div className="map-dropdown-scroll-bg">
+                <div className="map-dropdown-scroll">
+                    {dropdownItems}
+                </div>
+            </div>
+        );
+    }
+
+    render() {
+        const dropdownItems = this.getDropdownItems();
+        return (
+            <div className="map-dropdown">
+                <Dropdown.Toggle
+                    id="dropdown-autoclose-outside"
+                    className="map-dropdown-toggle"
+                    onClick={this.toggleDropdownItems}
+                >
+                    {this.props.name}
+                </Dropdown.Toggle>
+                {dropdownItems}
+            </div>
+        );
+    }
+}
+
+MapDropdown.propTypes = {
+    name: PropTypes.string,
+    items: PropTypes.array
+};
 
 export default class MapMicro extends React.Component {
     constructor(props) {
@@ -273,18 +358,7 @@ export default class MapMicro extends React.Component {
             <div className="main-element">
                 <div className="event-selector">
                     <h3 className="event-selector-title">Event Selector</h3>
-                    <Dropdown className="d-inline mx-2" autoClose="outside">
-                        <Dropdown.Toggle id="dropdown-autoclose-outside">
-                            Manual Close
-                        </Dropdown.Toggle>
-                        <Dropdown.Menu className="dropdown-scroll">
-                            {ADDRESS_DATA.map((location, i) => (
-                                <Dropdown.Item key={i}>
-                                    {location.name}
-                                </Dropdown.Item>
-                            ))}
-                        </Dropdown.Menu>
-                    </Dropdown>
+                    <MapDropdown name="Addresses" items={ADDRESS_DATA}/>
                 </div>
                 <div id="map">
                     <MapContainer

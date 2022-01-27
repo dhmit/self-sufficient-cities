@@ -140,3 +140,16 @@ def get_census_data(request):
         census_data = json.load(f)
 
     return JsonResponse(census_data)
+
+def get_addresses(request):
+    """
+    API endpoint for getting addresses from articles data
+    """
+    with open("app/data/articles.json", encoding="utf-8") as f:
+        article_data = json.load(f)
+
+    addresses = []
+    for article in article_data:
+        addresses.extend(article_data[article]["entities"]["places"])
+
+    return JsonResponse({"addresses": addresses})
