@@ -131,8 +131,9 @@ def get_people_from_event(request, event_id=None):
     API endpoint for pulling up a list of people from an event
     """
     event = Event.objects.get(id=event_id)
-    people = PersonSerializer(event.people, many=True)
-    return Response(people)
+    people = event.people.all()
+    serializer = PersonSerializer(people, many=True)
+    return Response(serializer.data)
 
 
 @api_view(['PUT'])
