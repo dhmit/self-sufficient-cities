@@ -20,7 +20,7 @@ const DocumentModal = ({document}) => {
         <Modal show={true} onHide={onHide} fullscreen={true}>
             <Modal.Header className="text-center" closeButton>
                 <Modal.Title className="w-100">
-                    <h1>{document ? document.title : ""}</h1>
+                    <h1>{document ? document.publication : ""}</h1>
                 </Modal.Title>
             </Modal.Header>
             <Modal.Body>

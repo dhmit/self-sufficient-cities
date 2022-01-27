@@ -12,7 +12,7 @@ const DocumentDisplay = ({document}) => {
     // TODO: import magnifying feature and call it with document image from backend
     return(
         <>
-            <img className="doc-image" src={document.image ? document.image : TEST_IMAGE} />
+            <img className="doc-image" src={document.imageRef ? document.imageRef : TEST_IMAGE} />
         </>
     );
 

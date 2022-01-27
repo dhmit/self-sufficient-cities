@@ -35,4 +35,5 @@ urlpatterns = [
     path('map-micro/', views.map_micro_page),
     path('timeline-test', views.timeline_test),
     path('api/get_census_data/', views.get_census_data),
+    path('api/documents/', views.get_documents_data),
 ]

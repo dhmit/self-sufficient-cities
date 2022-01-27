@@ -1,171 +1,214 @@
 {
-    "0": {
-        "date": "December 8, 1917",
-        "publication": "Washington Bee",
-        "articles": [
+   "documents":[
+       {
+         "date":"March 6, 1914",
+         "publication":"The Washington Post",
+         "articles":[
             {
-                "title": "FOR RENT",
-                "text": "Fine garage and stable, for two or three automobiles or wagons.\nNew 6-room house, water and gas, large front and back yards; convenient to cars, churches and schools; in Southeast. Rent only $11.50.\nFive-room frame, badly in need of repairs, for $8.50 per month, to any person who will make repairs; in Northwest. \nTen-room house, and eight lots, shed, stables, etc., convenient to cars, churches, and schools, near Deanwood, D. C. Rent only $13.50 per month.\nAlso furnished rooms. Apply CLARENCE M. DeVEILE, Esq., Real Estate Broker, and Money Lender, Office and Residence 1014 W St. N.W. Phone, North 1644",
-                "entities": {
-                    "places": [
-                        "near Deanwood, D. C.",
-                        "1014 W St. N.W."
-                    ],
-                    "people": [
-                        "CLARENCE M. DeVEILE"
-                    ],
-                    "dates": [
-                        "December 8, 1917"
-                    ],
-                    "events": []
-                }
+               "title":"HEAR CALL OF THE GARDEN. Pupils of District Schools Are Preparing to Plant Seeds Soon.",
+               "text":"With warm weather but a few weeks distant the thoughts of teachers and pupils of the District schools are already turning to their gardens. Boxes filled with rich earth are making their appearances in the rooms. Last season more than 40 gardens were maintained by the pupils. Ernest H. Daniel., Vice President of the board of education, has been urging the adoption of an agriculture course in the schools of the cities, and each year Congress is asked for increased appropriations.\nThe individual plot system with the youthful gardener owner of all he raises, is the system being taught in the East, while in the West the commercial side of the question holds a place equal to that of cultivation. The products are sold for the benefit of the school, and the children are taught business methods of marketing.\nMiss Susie B. Sipe, who is in charge of the nature study and botanical classes in the District Normal School, and who has for several years past conducted the work of the school children in the Speedway gardens and those at the Deanwood and Wallach schools, says the work is progressing.\nIn the gardens under her direction he work is carried on by volunteer pupils. They raise corn, tomatoes, potatoes, peas, and all sorts of “truck” products, and in addition to these three large gardens where vegetables are raised the grounds of nearly 50 schools are kept in condition by the pupils of the institution.\nAccording to all reports the District is far behind other cities of the country in garden work, although a continual fight for more funds and larger grounds for the purpose is being waged.",
+               "entities":{
+                  "places":[
+                      "District Normal School",
+                      "Speedway gardens",
+                      "Deanwood",
+                      "Wallach schools"
+                  ],
+                  "people":[
+                      "Ernest H.Daniel",
+                      "Miss Susie B. Sipe",
+                      "Congress"
+                  ],
+                  "dates":[
+                     "March 6, 1914"
+                  ],
+                  "events":[
+
+                  ]
+               }
             }
-        ]
-    },
-    "1": {
-        "date": "August 14, 1915",
-        "publication": "Washington Bee",
-        "articles": [
+         ],
+         "imageRef": "../images/hear_call_of_the_garden.png"
+      },
+      {
+         "date":"December 8, 1917",
+         "publication":"Washington Bee",
+         "articles":[
             {
-                "title": "First Great Annual State Bazaar and Carnival",
-                "text": "YOU ARE INVITED TO THE FIRST GREAT ANNUAL STATE BAZAAR AND CARNIVAL\nOn the beautiful farm of Mr. Stephen Watkins, Ellicott City, Mr.\nTHURSDAY, SEPTEMBER 2ND, 1915\nBy The Howard Co. Colored People Independent League and the Altholton M. E. Church\nFeatures: Automobile Show, Baseball and Tennis, Marathon Race, Orations on the progress of the Race, Grand Course and Colt Show, Beauty and Health Contest, Grand Parade, Grand Concert and Display of Fireworks at night, Awarding of Prizes.\nTICKETS 25 CENTS\nMr. Stephen Watkins, president, Ellicott City; Mr. James Carter, Secretary, Gilford, Md.; Rev. Wm. N. Holt, Manager, 1711 Lorman St., Baltimore, Md.\nCONTEST PRIZES:\nTo the mother having the largest number of children present\nTo the mother having the largest number of twins present\nTo the mother having the largest number of relatives present\nTo the mother having the largest number of married children, each husband and wife being present\nTo any Organization having the largest number of members present and turning out in the parade\nTo the prettiest woman, the neatest woman, most refined woman, most popular woman, the most handsome man, most stylish man, most popular man, the healthiest person present, age 15 to 50\n1st and 2nd prizes for Automobile show\n1st and 2nd prizes for Horse and Colt show, etc.",
-                "entities": {
-                    "places": [
-                        "Ellicott City",
-                        "The Howard Co. Colored People Independent League",
-                        "Altholton M. E. Church",
-                        "1711 Lorman St., Baltimore, Md."
-                    ],
-                    "people": [
-                        "Mr. Stephen Watkins",
-                        "Mr. James Carter",
-                        "Rev. Wm. N. Holt"
-                    ],
-                    "dates": [
-                        "August 14, 1915",
-                        "September 2nd, 1915"
-                    ],
-                    "events": [
-                        "First Great Annual State Bazaar and Carnival"
-                    ]
-                }
+               "title":"FOR RENT",
+               "text":"Fine garage and stable, for two or three automobiles or wagons.\nNew 6-room house, water and gas, large front and back yards; convenient to cars, churches and schools; in Southeast. Rent only $11.50.\nFive-room frame, badly in need of repairs, for $8.50 per month, to any person who will make repairs; in Northwest. \nTen-room house, and eight lots, shed, stables, etc., convenient to cars, churches, and schools, near Deanwood, D. C. Rent only $13.50 per month.\nAlso furnished rooms. Apply CLARENCE M. DeVEILE, Esq., Real Estate Broker, and Money Lender, Office and Residence 1014 W St. N.W. Phone, North 1644",
+               "entities":{
+                  "places":[
+                     "near Deanwood, D. C.",
+                     "1014 W St. N.W."
+                  ],
+                  "people":[
+                     "CLARENCE M. DeVEILE"
+                  ],
+                  "dates":[
+                     "December 8, 1917"
+                  ],
+                  "events":[
+
+                  ]
+               }
+            }
+         ],
+         "imageRef": "../images/washington_bee_dec_8_1917.png"
+      },
+      {
+         "date":"August 14, 1915",
+         "publication":"Washington Bee",
+         "articles":[
+            {
+               "title":"First Great Annual State Bazaar and Carnival",
+               "text":"YOU ARE INVITED TO THE FIRST GREAT ANNUAL STATE BAZAAR AND CARNIVAL\nOn the beautiful farm of Mr. Stephen Watkins, Ellicott City, Mr.\nTHURSDAY, SEPTEMBER 2ND, 1915\nBy The Howard Co. Colored People Independent League and the Altholton M. E. Church\nFeatures: Automobile Show, Baseball and Tennis, Marathon Race, Orations on the progress of the Race, Grand Course and Colt Show, Beauty and Health Contest, Grand Parade, Grand Concert and Display of Fireworks at night, Awarding of Prizes.\nTICKETS 25 CENTS\nMr. Stephen Watkins, president, Ellicott City; Mr. James Carter, Secretary, Gilford, Md.; Rev. Wm. N. Holt, Manager, 1711 Lorman St., Baltimore, Md.\nCONTEST PRIZES:\nTo the mother having the largest number of children present\nTo the mother having the largest number of twins present\nTo the mother having the largest number of relatives present\nTo the mother having the largest number of married children, each husband and wife being present\nTo any Organization having the largest number of members present and turning out in the parade\nTo the prettiest woman, the neatest woman, most refined woman, most popular woman, the most handsome man, most stylish man, most popular man, the healthiest person present, age 15 to 50\n1st and 2nd prizes for Automobile show\n1st and 2nd prizes for Horse and Colt show, etc.",
+               "entities":{
+                  "places":[
+                     "Ellicott City",
+                     "The Howard Co. Colored People Independent League",
+                     "Altholton M. E. Church",
+                     "1711 Lorman St., Baltimore, Md."
+                  ],
+                  "people":[
+                     "Mr. Stephen Watkins",
+                     "Mr. James Carter",
+                     "Rev. Wm. N. Holt"
+                  ],
+                  "dates":[
+                     "August 14, 1915",
+                     "September 2nd, 1915"
+                  ],
+                  "events":[
+                     "First Great Annual State Bazaar and Carnival"
+                  ]
+               }
             },
             {
-                "title": "For Rent",
-                "text": "2124 8th St. NW, (5 rooms), $12.00\n2124 11th St. NW, (10 rooms, 2 baths, laundry), $32.50\n1139 6th St. NE, (6 rooms, bath), $20.50\n1613 Church St. NE, (8 rooms, bath), $23.50\n782 Kenyon St. NW, (5 rooms), $10.50\n784 Kenyon St. NW, (1 room), $5.00\n2656 Nichols Ave., (6 rooms, pantry, cellar, furnace, 1-2 acre garden), $17.50\n1 Cottage Row, (6 rooms), $11.00\nJefferson St., (3 rooms), $5.00\nEastern Ave., (6 rooms), $10.00\n1461 Swann St. NW, (7 rooms, modern improvements)\n44th and Sheriff Rd., (store), $8.00\n1812 1-2 11th St. NW, (8 rooms, bath), $30.50\n151 Blair Rd., (6 rooms, large yard, one car line), $10.50\n\n\nThomas Walker\nAttorney-at-Law\n506 5th St. NW\nPhone Main 4662",
-                "entities": {
-                    "places": [
-                        "2124 8th St. NW",
-                        "2124 11th St. NW",
-                        "1139 6th St. NE",
-                        "1613 Church St. NE",
-                        "782 Kenyon St. NW",
-                        "784 Kenyon St. NW",
-                        "2656 Nichols Ave.",
-                        "1 Cottage Row",
-                        "Jefferson St.",
-                        "Eastern Ave",
-                        "1461 Swann St. NW",
-                        "44th and Sheriff Rd.",
-                        "1812 1-2 11th St. NW",
-                        "151 Blair Rd.",
-                        "506 5th St. NW"
-                    ],
-                    "people": [
-                        "Thomas Walker"
-                    ],
-                    "dates": [
-                        "August 14 1915"
-                    ],
-                    "events": []
-                }
+               "title":"For Rent",
+               "text":"2124 8th St. NW, (5 rooms), $12.00\n2124 11th St. NW, (10 rooms, 2 baths, laundry), $32.50\n1139 6th St. NE, (6 rooms, bath), $20.50\n1613 Church St. NE, (8 rooms, bath), $23.50\n782 Kenyon St. NW, (5 rooms), $10.50\n784 Kenyon St. NW, (1 room), $5.00\n2656 Nichols Ave., (6 rooms, pantry, cellar, furnace, 1-2 acre garden), $17.50\n1 Cottage Row, (6 rooms), $11.00\nJefferson St., (3 rooms), $5.00\nEastern Ave., (6 rooms), $10.00\n1461 Swann St. NW, (7 rooms, modern improvements)\n44th and Sheriff Rd., (store), $8.00\n1812 1-2 11th St. NW, (8 rooms, bath), $30.50\n151 Blair Rd., (6 rooms, large yard, one car line), $10.50\n\n\nThomas Walker\nAttorney-at-Law\n506 5th St. NW\nPhone Main 4662",
+               "entities":{
+                  "places":[
+                     "2124 8th St. NW",
+                     "2124 11th St. NW",
+                     "1139 6th St. NE",
+                     "1613 Church St. NE",
+                     "782 Kenyon St. NW",
+                     "784 Kenyon St. NW",
+                     "2656 Nichols Ave.",
+                     "1 Cottage Row",
+                     "Jefferson St.",
+                     "Eastern Ave",
+                     "1461 Swann St. NW",
+                     "44th and Sheriff Rd.",
+                     "1812 1-2 11th St. NW",
+                     "151 Blair Rd.",
+                     "506 5th St. NW"
+                  ],
+                  "people":[
+                     "Thomas Walker"
+                  ],
+                  "dates":[
+                     "August 14 1915"
+                  ],
+                  "events":[
+
+                  ]
+               }
             }
-        ]
-    },
-    "2": {
-        "date": "April 26 1919",
-        "publication": "Washington Bee",
-        "articles": [
+         ],
+          "imageRef": "../images/washington_bee_aug_14_1915.png"
+      },
+      {
+         "date":"April 26 1919",
+         "publication":"Washington Bee",
+         "articles":[
             {
-                "title": "For Sale",
-                "text": "Among the four hundred and fifty houses Mr. DeVeile has for sale is a very large press-brick front 8-room house, 4 rooms and on each floor, dry concrete cellar, hot-water heat, bath,all modern improvements. Price is only $4,500; $500 cash, $25 per month.\n\nSix-room house in Deanwood, D.C., nice garden spot, $1,950 – $350 cash, $15 per month.\n\nFor sale by Clarence M. DeVeile, real estate, loans and insurance. Office, 1014 W street northwest. Phone North 1644. Open from 9 a.m. until 6:30 p.m. \n\nFree automobile service for the aged and inform at all hours.\n\nMr. DeVeile is one of the largest real estate brokers in Washington; has plenty of houses in all sections to sell, on easy terms, and the only one who will loan you money to help you get your home. He is very reasonable in his charges, and has his clients' interest at heart. Advice and private consultations free. Do not fail to call and see him.",
-                "entities": {
-                    "places": [
-                        "Deanwood, D.C.",
-                        "1014 W street northwest",
-                        "Washington"
-                    ],
-                    "people": [
-                        "Clarence M. DeVeile"
-                    ],
-                    "dates": [
-                        "April 26 1919"
-                    ],
-                    "events": []
-                }
+               "title":"For Sale",
+               "text":"Among the four hundred and fifty houses Mr. DeVeile has for sale is a very large press-brick front 8-room house, 4 rooms and on each floor, dry concrete cellar, hot-water heat, bath,all modern improvements. Price is only $4,500; $500 cash, $25 per month.\n\nSix-room house in Deanwood, D.C., nice garden spot, $1,950 – $350 cash, $15 per month.\n\nFor sale by Clarence M. DeVeile, real estate, loans and insurance. Office, 1014 W street northwest. Phone North 1644. Open from 9 a.m. until 6:30 p.m. \n\nFree automobile service for the aged and inform at all hours.\n\nMr. DeVeile is one of the largest real estate brokers in Washington; has plenty of houses in all sections to sell, on easy terms, and the only one who will loan you money to help you get your home. He is very reasonable in his charges, and has his clients' interest at heart. Advice and private consultations free. Do not fail to call and see him.",
+               "entities":{
+                  "places":[
+                     "Deanwood, D.C.",
+                     "1014 W street northwest",
+                     "Washington"
+                  ],
+                  "people":[
+                     "Clarence M. DeVeile"
+                  ],
+                  "dates":[
+                     "April 26 1919"
+                  ],
+                  "events":[
+
+                  ]
+               }
             }
-        ]
-    },
-    "3": {
-        "date": "March 26, 1921",
-        "publication": "Washington Bee",
-        "articles": [
+         ],
+          "imageRef": "../images/washington_bee_april_26_1919.png"
+      },
+      {
+         "date":"March 26, 1921",
+         "publication":"Washington Bee",
+         "articles":[
             {
-                "title": "ANACOSTIA NEWS",
-                "text": "",
-                "entities": {
-                    "places": [
-                        "Community Grocery Store",
-                        "New York City",
-                        "1332 R street northwest",
-                        "Birney School",
-                        "Douglas road",
-                        "Bureau of Engraving",
-                        "Stanton road, Anacostia",
-                        "Howard road",
-                        "Freedman’s Hospital",
-                        "Elvans road"
-                    ],
-                    "people": [
-                        "E. S. Hoffman",
-                        "Samuel J. Jones",
-                        "Henry Braxton",
-                        "Matt Taylor",
-                        "Rev. J. E. Scott",
-                        "Attorney J.M. Ricks",
-                        "Narvain Tallifero",
-                        "William Edwards",
-                        "Governor Banks",
-                        "Silas Blunt",
-                        "Arthur Delaney",
-                        "Philip Diggs",
-                        "G. Banks",
-                        "Mrs. Mamie K. Cook",
-                        "Mrs. M. A. Hoffman",
-                        "Miss Edith Madden",
-                        "Mr. William Edwards",
-                        "Mrs. I. C. G. Craig",
-                        "Mr. A. W. Craig",
-                        "Mrs. Zeta Phillips",
-                        "Miss Marian Brown",
-                        "Miss Emma V. Smith",
-                        "Congressman Burrow"
-                    ],
-                    "dates": [
-                        "March 26, 1921"
-                    ],
-                    "events": [
-                        "Barry Farm Citizens’ Association meeting",
-                        "family visit",
-                        "sudden passing",
-                        "mourning",
-                        "divorce",
-                        "return from hospital",
-                        "meeting"
-                    ]
-                }
-            }]
-    }
+               "title":"ANACOSTIA NEWS",
+               "text":"Here is the news!",
+               "entities":{
+                  "places":[
+                     "Community Grocery Store",
+                     "New York City",
+                     "1332 R street northwest",
+                     "Birney School",
+                     "Douglas road",
+                     "Bureau of Engraving",
+                     "Stanton road, Anacostia",
+                     "Howard road",
+                     "Freedman’s Hospital",
+                     "Elvans road"
+                  ],
+                  "people":[
+                     "E. S. Hoffman",
+                     "Samuel J. Jones",
+                     "Henry Braxton",
+                     "Matt Taylor",
+                     "Rev. J. E. Scott",
+                     "Attorney J.M. Ricks",
+                     "Narvain Tallifero",
+                     "William Edwards",
+                     "Governor Banks",
+                     "Silas Blunt",
+                     "Arthur Delaney",
+                     "Philip Diggs",
+                     "G. Banks",
+                     "Mrs. Mamie K. Cook",
+                     "Mrs. M. A. Hoffman",
+                     "Miss Edith Madden",
+                     "Mr. William Edwards",
+                     "Mrs. I. C. G. Craig",
+                     "Mr. A. W. Craig",
+                     "Mrs. Zeta Phillips",
+                     "Miss Marian Brown",
+                     "Miss Emma V. Smith",
+                     "Congressman Burrow"
+                  ],
+                  "dates":[
+                     "March 26, 1921"
+                  ],
+                  "events":[
+                     "Barry Farm Citizens’ Association meeting",
+                     "family visit",
+                     "sudden passing",
+                     "mourning",
+                     "divorce",
+                     "return from hospital",
+                     "meeting"
+                  ]
+               }
+            }
+         ],
+          "imageRef": "../images/washington_bee_march_26_1921.png"
+      }
+   ]
 }
 
 
