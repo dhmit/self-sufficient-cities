@@ -1,5 +1,5 @@
 import React, {useContext} from "react";
-import {Interval, TimelineContext} from "../contexts/TimelineContext";
+import {TimelineContext} from "../contexts/TimelineContext";
 import * as PropTypes from "prop-types";
 
 /**
@@ -9,16 +9,41 @@ import * as PropTypes from "prop-types";
 export function TimelineArrow({isLeft}) {
     const state = useContext(TimelineContext);
 
+    const getContainingInterval = (selectedYear, isPrev) => {
+        // includes index of array in the case where left and right arrow overlap
+        // and left arrow takes precedence
+        const containingInterval = {};
+        for (const [i, interval] of state.timelineIntervals.entries()) {
+            const isAfterStart = selectedYear >= interval.start;
+            const isBeforeEnd = selectedYear <= interval.end;
+            if (isAfterStart && isBeforeEnd) {
+                containingInterval["interval"] = interval;
+                containingInterval["index"] = i;
+                if (isPrev) {
+                    break;
+                }
+            }
+        }
+        return containingInterval;
+    };
+
     /**
      * Returns the next 5-year interval in the timeline. Returns the interval if the end
      * year is less than or equal to the max year defined in the timeline context. Otherwise,
      * returns undefined.
      */
     const getNextInterval = () => {
-        const newStartYear = state.intervalSelected.end;
-        const newEndYear = newStartYear + 5;
-        if (newEndYear <= state.maxYear) {
-            return new Interval(newStartYear, newEndYear);
+        if (state.intervalSelected.end < state.maxYear) {
+            const {interval, index} = getContainingInterval(state.intervalSelected.end, false);
+            // General case: If the containing interval overlaps for
+            // both the left and right arrows, then left gets precedence
+            if (index !== state.timelineIntervals.length -1) {
+                const prevInterval = getPreviousInterval();
+                if (prevInterval !== undefined && interval.start === prevInterval.start) {
+                    return state.timelineIntervals[index+1];
+                }
+            }
+            return interval;
         }
         return undefined;
     };
@@ -29,10 +54,17 @@ export function TimelineArrow({isLeft}) {
      * returns undefined.
      */
     const getPreviousInterval = () => {
-        const newEndYear = state.intervalSelected.start;
-        const newStartYear = newEndYear - 5;
-        if (newStartYear >= state.minYear) {
-            return new Interval(newStartYear, newEndYear);
+        if (state.intervalSelected.start > state.minYear) {
+            const {interval, index} = getContainingInterval(state.intervalSelected.start, true);
+            // Special case: If the containing interval overlaps on the 
+            // the last interval, then the right arrow is given precedence
+            if (index === state.timelineIntervals.length - 1) {
+                const nextInterval = getNextInterval();
+                if (nextInterval !== undefined && interval.start === nextInterval.start) {
+                    return state.timelineIntervals[index-1];
+                }
+            }
+            return interval;
         }
         return undefined;
     };
