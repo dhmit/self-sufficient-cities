@@ -5,57 +5,22 @@ import {Badge} from "react-bootstrap";
 // import {TimelineContext} from "../contexts/TimelineContext";
 
 const TimelinePills = ({document}) => {
-    const entities = document.entities;
+    const documentEntities = document.entities;
+    const pillLabels = documentEntities.people
+        .concat(documentEntities.places.concat(documentEntities.events));
     return (
-    <div className="pills">
-        { entities.people &&
-            <div>
-            <p> People: </p>
-                {entities.people.map((person, index) =>
-                    <>
+        <div className="pills">
+            { pillLabels && pillLabels.map((label, index) =>
+                <>
                     <Badge
-                        key={`${person}_${index}`}
+                        key={`${label}_${index}`}
                         bg="success"
                         className="badge-size"
                     >
-                        {person}
-                    </Badge>{' '}
-                    </>)
-                }
-            </div>
-          }
-          { entities.places &&
-            <div>
-            <p> Places: </p>
-                {entities.places.map((place, index) =>
-                    <>
-                    <Badge
-                        key={`${place}_${index}`}
-                        bg="secondary"
-                        className="badge-size"
-                    >
-                        {place}
-                    </Badge>{' '}
-                    </>)
-                }
-            </div>
-          }
-          { entities.events &&
-            <div>
-            <p> Events: </p>
-                {entities.events.map((event, index) =>
-                    <>
-                    <Badge
-                        key={`${event}_${index}`}
-                        bg="danger"
-                        className="badge-size"
-                    >
-                        {event}
-                    </Badge>{' '}
-                    </>)
-                }
-            </div>
-          }
+                        {label}
+                    </Badge>{" "}
+                </>)
+            }
         </div>
     );
 };
