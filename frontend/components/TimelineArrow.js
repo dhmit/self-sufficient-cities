@@ -4,7 +4,7 @@ import * as PropTypes from "prop-types";
 
 /**
  * Represents an arrow on the timeline used to go back or forward between the 5-year intervals
- * @param {boolean} isLeft if true, then when a user clicks it will go back. Otherwise, it goes forward.
+ * @param {boolean} isLeft If true, when a user clicks it will go back. Otherwise, goes forward.
  */
 export function TimelineArrow({isLeft}) {
     const state = useContext(TimelineContext);
@@ -13,8 +13,9 @@ export function TimelineArrow({isLeft}) {
      * Returns the 5-year timeline interval that contains the point `selectedYear`
      * 
      * @param {number} selectedYear current year in the timeline being considered
-     * @param {boolean} isPrev if true, then the containing interval is the first match found, otherwise last 
-     * @returns {Object} containing interval for the selectedYear with the index of the timeinline interval
+     * @param {boolean} isPrev If true, the containing interval is the first match found. 
+     *                         Otherwise, last found.
+     * @returns {Object} containing interval for the selectedYear with the index of the interval
      */
     const getContainingInterval = (selectedYear, isPrev) => {
         const containingInterval = {};
