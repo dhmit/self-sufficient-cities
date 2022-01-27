@@ -1,22 +1,32 @@
-import React, {useState} from "react";
-import {MDBModal, MDBModalHeader, MDBModalBody, MDBModalFooter, MDBInput, MDBListGroup, MDBListGroupItem} from "mdbreact";
-import {Button} from "react-bootstrap";
+import React, {useContext, useState} from "react";
+import {MDBModal, MDBModalHeader, MDBModalBody, MDBModalFooter, MDBInput} from "mdbreact";
+import {Button, ListGroup, ListGroupItem} from "react-bootstrap";
 import * as PropTypes from "prop-types";
+import {TimelineContext} from "../contexts/TimelineContext";
 
 export const DocSearch = ({documents}) => {
+    const state = useContext(TimelineContext);
+
     const titles = [];
+    const titles_to_docs = {};
+
     for (let doc of documents) {
-        titles.push(doc.title + " " + doc.date);
+        titles.push(doc.publication + ", " + doc.date);
     }
 
-    let [dataSet, setDataSet] = useState(titles);
+    for (let doc of documents) {
+        titles_to_docs[doc.publication + ", " + doc.date] = doc;
+    }
+
+    let [dataSet] = useState(titles);
     let [filteredSet, setFilteredSet] = useState(titles);
     let [searchValue, setSearchValue] = useState("");
     let [modalOpen, setModalOpen] = useState(false);
 
+
     const toggleModal = () => {
         setModalOpen(!modalOpen);
-        console.log(modalOpen);
+        console.log(documents);
     };
 
     const searchForDoc = () => {
@@ -24,8 +34,11 @@ export const DocSearch = ({documents}) => {
         setFilteredSet(dataSet.filter(item => item.toLowerCase().match(searchValue.toLowerCase())));
     };
 
-    const searchClick = () => {
-        console.log("Hello");
+
+    const searchClick = (item) => {
+            return function () {
+                state.setDocumentModal(titles_to_docs[item]);
+            };
     };
 
     return (
@@ -43,7 +56,6 @@ export const DocSearch = ({documents}) => {
                 toggle={toggleModal}
                 backdrop={false}
                 size="lg"
-                side-position="top-right"
             >
                 <MDBModalHeader
                     toggle={toggleModal}
@@ -55,20 +67,23 @@ export const DocSearch = ({documents}) => {
                     <MDBInput
                         value={searchValue}
                         onChange={searchForDoc}
-                        hint="Search for document"
+                        hint="Search"
                         type="text"
                         containerClass="mt-0"
                     />
 
-                    <MDBListGroup>
+                    <ListGroup>
                       {
                         filteredSet.map(item => (
-                          <MDBListGroupItem
-                              key={item}>{item}
-                          </MDBListGroupItem>
+                          <ListGroupItem
+                              action onClick={searchClick(item)}
+                              key={item}
+                          >
+                              {item}
+                          </ListGroupItem>
                         ))
                       }
-                    </MDBListGroup>
+                    </ListGroup>
                 </MDBModalBody>
 
             </MDBModal>
