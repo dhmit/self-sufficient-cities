@@ -9,16 +9,16 @@ const Nav = () => {
                 <a className="navbar-brand link-home" href="/">Self-Sustaining Cities</a>
                 <ul className="navbar-nav me-auto">
                     <li className="nav-item mr-2">
-                        <a className="nav-link" href={"/map"}>Map Template</a>
+                        <a className="nav-link" href={"/api"}>API</a>
                     </li>
                     <li className="nav-item mr-2">
-                        <a className="nav-link" href={"/map-macro"}><b>MapMacro (morning)</b></a>
+                        <a className="nav-link" href={"/timeline"}>Timeline</a>
                     </li>
                     <li className="nav-item mr-2">
-                        <a className="nav-link" href={"/map-micro"}><b>MapMicro (afternoon)</b></a>
+                        <a className="nav-link" href={"/map-macro"}>MapMacro (morning)</a>
                     </li>
                     <li className="nav-item mr-2">
-                        <a className="nav-link" href={"/example/1"}>Example</a>
+                        <a className="nav-link" href={"/map-micro"}>MapMicro (afternoon)</a>
                     </li>
                 </ul>
                 <a className="lab-link" href="https://digitalhumanities.mit.edu/" target="_blank"
