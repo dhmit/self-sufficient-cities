@@ -1,5 +1,5 @@
 import React, {useState} from "react";
-import {Interval, TimelineContext} from "../contexts/TimelineContext";
+import {Interval, SORT_TYPES, TimelineContext} from "../contexts/TimelineContext";
 import DocumentShowcase from "./DocumentShowcase";
 import {TimelineSlider} from "./TimelineSlider";
 import HEAR_CALL_OF_THE_GARDEN from "../images/hear_call_of_the_garden.png";
@@ -7,36 +7,38 @@ import WASHINGTON_BEE_12_8_1917 from "../images/washington_bee_dec_8_1917.png";
 import WASHINGTON_BEE_8_14_1915 from "../images/washington_bee_aug_14_1915.png";
 import WASHINGTON_BEE_4_26_1919 from "../images/washington_bee_april_26_1919.png";
 import WASHINGTON_BEE_3_26_1921 from "../images/washington_bee_march_26_1921.png";
-import {TimelineDropdown} from "./global/TimelineDropdown";
 import {ShowAll} from "./ShowAll";
 import {DocSearch} from "./DocSearch";
+import {TimelineDropdown} from "./TimelineDropdown";
 import {ResetDefault} from "./ResetDefault";
 import * as PropTypes from "prop-types";
 import DocumentModal from "./DocumentModal";
-
-/**
- * Generates the five-year intervals that will be used for the timeline slider
- *
- * @returns {Array} list of the intervals starting at minYear and ending in maxYear
- */
-const getTimelineIntervals = (minYear, maxYear, intervalLength) => {
-    const intervals = [];
-    for (let i = minYear; i < maxYear; i += intervalLength) {
-        const newInterval = new Interval(i, i + intervalLength);
-        intervals.push(newInterval);
-    }
-    return intervals;
-};
 
 export const Timeline = ({data}) => {
     const documents = data.documents;
     const maxYear = 1925;
     const minYear = 1910;
     const intervalLength = 5;
+    const [sortType, setSortType] = useState(SORT_TYPES.CHRONOLOGICAL);
+
+    /**
+     * Generates the five-year intervals that will be used for the timeline slider
+     * 
+     * @returns {Array} list of the intervals starting at minYear and ending in maxYear
+     */
+    const getTimelineIntervals = () => {
+        const intervals = [];
+        for (let i = minYear; i < maxYear; i += intervalLength) {
+            const newInterval = new Interval(i, i + intervalLength);
+            intervals.push(newInterval);
+        }
+        return intervals;
+    };
+
     const [intervalSelected, setIntervalSelected] = useState(
         new Interval(minYear, minYear + intervalLength)
     );
-    const timelineIntervals = getTimelineIntervals(minYear, maxYear, intervalLength);
+    const [timelineIntervals, setTimelineIntervals] = useState(getTimelineIntervals());
     const [documentModal, setDocumentModal] = useState({});
 
     // todo: change to get image from backend
@@ -51,8 +53,11 @@ export const Timeline = ({data}) => {
         intervalSelected,
         maxYear,
         minYear,
+        sortType,
         intervalLength,
         timelineIntervals,
+        setSortType,
+        setTimelineIntervals,
         setDocumentModal,
         setIntervalSelected
     };
