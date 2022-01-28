@@ -46,25 +46,23 @@
       "path": "/Users/angcast/Documents/GitHub/self-sustaining-cities/assets/bundles/index.bundle.js",
       "publicPath": "http://localhost:3000/build/index.bundle.js"
     },
-    "index.a7504823269afae390e1.hot-update.js": {
-      "name": "index.a7504823269afae390e1.hot-update.js",
-      "path": "/Users/angcast/Documents/GitHub/self-sustaining-cities/assets/bundles/index.a7504823269afae390e1.hot-update.js",
-      "publicPath": "http://localhost:3000/build/index.a7504823269afae390e1.hot-update.js"
+    "index.98d5d935dad89bf1a7db.hot-update.js": {
+      "name": "index.98d5d935dad89bf1a7db.hot-update.js",
+      "path": "/Users/angcast/Documents/GitHub/self-sustaining-cities/assets/bundles/index.98d5d935dad89bf1a7db.hot-update.js",
+      "publicPath": "http://localhost:3000/build/index.98d5d935dad89bf1a7db.hot-update.js"
     },
-    "index.a7504823269afae390e1.hot-update.json": {
-      "name": "index.a7504823269afae390e1.hot-update.json",
-      "path": "/Users/angcast/Documents/GitHub/self-sustaining-cities/assets/bundles/index.a7504823269afae390e1.hot-update.json",
-      "publicPath": "http://localhost:3000/build/index.a7504823269afae390e1.hot-update.json"
+    "index.98d5d935dad89bf1a7db.hot-update.json": {
+      "name": "index.98d5d935dad89bf1a7db.hot-update.json",
+      "path": "/Users/angcast/Documents/GitHub/self-sustaining-cities/assets/bundles/index.98d5d935dad89bf1a7db.hot-update.json",
+      "publicPath": "http://localhost:3000/build/index.98d5d935dad89bf1a7db.hot-update.json"
     }
   },
   "chunks": {
     "index": [
       "index.bundle.css",
       "index.bundle.js",
-      "index.a7504823269afae390e1.hot-update.js"
+      "index.98d5d935dad89bf1a7db.hot-update.js"
     ]
   },
-  "publicPath": "http://localhost:3000/build/",
-  "error": "ESLintError",
-  "message": "\n/Users/angcast/Documents/GitHub/self-sustaining-cities/frontend/components/Timeline.js\n  70:22  error  'DocSearch' is not defined  react/jsx-no-undef\n\n✖ 1 problem (1 error, 0 warnings)\n"
+  "publicPath": "http://localhost:3000/build/"
 }

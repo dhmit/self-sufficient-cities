@@ -6,7 +6,7 @@ import * as PropTypes from "prop-types";
 export const DocSearch = ({documents}) => {
     const titles = [];
     for (let doc of documents) {
-        titles.push(doc.title + " " + doc.date);
+        titles.push(doc.publication + " " + doc.date);
     }
 
     let [dataSet, setDataSet] = useState(titles);
