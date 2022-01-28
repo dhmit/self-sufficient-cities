@@ -24,8 +24,11 @@ context = {
 }
 """
 import json
+import geopandas
+import geopy
 from django.shortcuts import render
 from django.http import JsonResponse
+from geopy.geocoders import Nominatim
 
 
 def index(request):
@@ -141,6 +144,7 @@ def get_census_data(request):
 
     return JsonResponse(census_data)
 
+
 def get_addresses(request):
     """
     API endpoint for getting addresses from articles data
@@ -153,3 +157,60 @@ def get_addresses(request):
         addresses.extend(article_data[article]["entities"]["places"])
 
     return JsonResponse({"addresses": addresses})
+
+
+def get_latlon(request, address_str):
+    parsed_address = address_str.replace("+", " ")
+    app = Nominatim(user_agent="tutorial")
+
+    full_addr = parsed_address + ", Washington, D.C."
+    location = app.geocode(full_addr).raw
+    lat = location["lat"]
+    lon = location["lon"]
+
+    return JsonResponse({"coordinates": [float(lat), float(lon)]})
+
+
+def get_all_latlon(request):
+    with open("app/data/articles.json", encoding="utf-8") as f:
+        article_data = json.load(f)
+
+    addresses = []
+    for article in article_data:
+        article_addresses = article_data[article]["entities"]["places"]
+
+        for address in article_addresses:
+            app = Nominatim(user_agent="tutorial")
+            full_addr = address + ", Washington, D.C."
+            new_address = {
+                "address": full_addr,
+                "coordinates": [],
+            }
+            lat = ""
+            lon = ""
+            print(full_addr, "address")
+            try:
+                location = app.geocode(full_addr).raw
+                lat = location["lat"]
+                lon = location["lon"]
+            except (AttributeError, Exception):
+                pass
+
+            new_address["coordinates"] = [lat, lon]
+
+            addresses.append(new_address)
+
+    with open("app/data/address_data.json", "w") as outfile:
+        json.dump(addresses, outfile)
+
+    return JsonResponse({"address_lat_lon": addresses})
+
+
+def get_address_data(request):
+    with open("app/data/address_data.json", encoding="utf-8") as f:
+        address_data = json.load(f)
+
+    return JsonResponse({"address_data": address_data})
+
+
+

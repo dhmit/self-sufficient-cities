@@ -36,4 +36,7 @@ urlpatterns = [
     path('timeline-test', views.timeline_test),
     path('api/get_census_data/', views.get_census_data),
     path('api/get_addresses/', views.get_addresses),
+    path('api/get_latlon/<address_str>', views.get_latlon),
+    path('api/get_latlon/', views.get_all_latlon),
+    path('api/get_address_data/', views.get_address_data),
 ]

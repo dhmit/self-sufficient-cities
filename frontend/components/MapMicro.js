@@ -366,6 +366,20 @@ export default class MapMicro extends React.Component {
         };
     }
 
+    componentDidMount() {
+        fetch("/api/get_address_data/")
+            .then(response => {
+                return response.json();
+            })
+            .then(data => {
+                this.setState({
+                    markerData: [...this.state.markerData, ...data["address_data"]]
+                });
+            });
+    };
+
+
+
     setSliderValue = (newLowerBound, newUpperBound) => {
         this.setState({
             sliderState: [newLowerBound, newUpperBound],
@@ -429,14 +443,16 @@ export default class MapMicro extends React.Component {
     };
 
     render() {
-        const currentMarkerObjects = this.state.markerData.filter((location) => (
-            location.year >= this.state.lastValid[0] && location.year <= this.state.lastValid[1])
-        );
+        const validAddresses = this.state.markerData.filter((location) => (
+            (location.year &&
+            location.year >= this.state.lastValid[0] && location.year <= this.state.lastValid[1]) ||
+            (!location.year)
+        ));
 
-        const markerObjects = currentMarkerObjects.map((location, i) => (
+        const markerObjects = validAddresses.map((location, i) => (
             <Marker key={i} position={location.coordinates}>
                 <Popup>
-                    {location.name}
+                    {location.address}
                 </Popup>
             </Marker>
         ));
