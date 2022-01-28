@@ -12,9 +12,6 @@ const Nav = () => {
                         <a className="nav-link" href={"/timeline"}>Timeline</a>
                     </li>
                     <li className="nav-item mr-2">
-                        <a className="nav-link" href={"/map"}>Map Template</a>
-                    </li>
-                    <li className="nav-item mr-2">
                         <a className="nav-link" href={"/map-macro"}><b>MapMacro (morning)</b></a>
                     </li>
                     <li className="nav-item mr-2">

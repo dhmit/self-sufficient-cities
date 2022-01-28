@@ -15,4 +15,6 @@ SECRET_KEY = 'qqucn931x78rx054n(6g(s_3vxppjw$f24e(9&v6rsbd0&0$2e'
 # SECURITY WARNING: don't run with debug turned on in production!
 DEBUG = True
 
+INSTALLED_APPS += ['django_extensions']
+
 ALLOWED_HOSTS = []  # wildcard
