@@ -39,7 +39,7 @@ class Person(models.Model):
     abs_file_path = os.path.join(dir, "data/country_codes.json")
 
     # Country Data obtained from https://datahub.io/core/country-list#data
-    with open(abs_file_path, "r") as country_code_file:
+    with open(abs_file_path, "r", encoding="utf8") as country_code_file:
         data = json.load(country_code_file)
         COUNTRY_CODES = [(country['Code'], country['Name']) for country in data]
 
