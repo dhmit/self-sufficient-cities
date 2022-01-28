@@ -10,6 +10,7 @@ import {Timeline} from "./components/Timeline";
 import MapMicro from "./components/MapMicro";
 import MapMacro from "./components/MapMacro";
 import TimelineTest from "./components/TimelineTest";
+import API from "./components/API";
 
 const COMPONENT_PROPS_RAW = document.getElementById("component_props").text;
 const COMPONENT_NAME_RAW = document.getElementById("component_name").text;
@@ -23,7 +24,8 @@ const COMPONENTS = {
     Timeline,
     MapMicro,
     MapMacro,
-    TimelineTest
+    TimelineTest,
+    API
 };
 
 const PreselectedComponent = COMPONENTS[COMPONENT_NAME || "ErrorNotFoundComponent"];
