@@ -15,7 +15,7 @@ Including another URL configuration
     2. Add a URL to urlpatterns:  path('blog/', include('blog.urls'))
 """
 from django.contrib import admin
-from django.urls import path, re_path
+from django.urls import path
 
 try:
     from ..app import views
@@ -31,10 +31,13 @@ urlpatterns = [
     path('example/<example_id>', views.example),
     path('api/create_person', views.create_person),
     path('api/create_event', views.create_event),
+    path('api/create_location', views.create_location),
     path('api/get_people', views.get_people),
-    path('api/get_people_from_event/<event_name>', views.get_people_from_event),
-    path('api/update_people_for_event/<event_name>', views.update_people_for_event),
-    re_path(r'^api\/get_event\/(?P<name>[a-zA-Z0-9_]+)$', views.get_event),
+    path('api/get_events', views.get_events),
+    path('api/get_people_from_event/<event_id>', views.get_people_from_event),
+    path('api/get_locations_from_event/<event_id>', views.get_locations_from_event),
+    path('api/update_people_for_event/<event_id>', views.update_people_for_event),
+    path('api/update_locations_for_event/<event_id>', views.update_locations_for_event),
     path('map/', views.map_page),
     path('timeline/', views.timeline_page, name='timeline'),
     path('map-macro/', views.map_macro_page),
