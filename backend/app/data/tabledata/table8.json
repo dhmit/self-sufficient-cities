@@ -1,6 +1,4 @@
-import React from "react";
-
-let JsonData = [
+[
     {
         "subject": "TYPE OF STRUCTURE  "
     },
@@ -361,39 +359,4 @@ let JsonData = [
         "subject": "Not reporting heating equipment",
         "total": 27
     }
-];
-
-
-function Table8() {
-    const DisplayData = JsonData.map(
-        (info) => {
-            return (
-                <tr key={info.count}>
-                    <td>{info.subject}</td>
-                    <td>{info.total}</td>
-                </tr>
-            );
-        }
-    );
-    return (
-        <div>
-            <table className="table formatting">
-                <thead>
-                <tr>
-                    <th>Subject</th>
-                    <th>Total</th>
-                </tr>
-                </thead>
-                <tbody>
-
-
-                {DisplayData}
-
-                </tbody>
-            </table>
-
-        </div>
-    );
-}
-
-export default Table8;
+]
