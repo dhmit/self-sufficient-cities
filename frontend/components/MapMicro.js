@@ -113,7 +113,6 @@ const MAIN_LOCATION = {
     info: "Test info"
 };
 
-
 function sliderInput(value, bound, defaultRange, inputChangeFunc, sliderBlurFunc) {
     const [minValue, maxValue] = defaultRange;
 
@@ -178,6 +177,97 @@ function timeSlider(
         </div>
     );
 }
+
+export class TimeControl extends React.Component{
+    // Modify these to change the step of each increment
+    static OFF = 0;
+    static Reverse = -10;
+    static Forward = 10;
+
+    constructor(props) {
+        // Props given to TimeControl from its parent (MapMicro):
+        //      change: Function that changes MapMicro's sliderState which causes the slider to move
+        //      sliderState: The current slider's values
+        //      defaultTime: The default min and max possible range of of the slider
+        super(props);
+        // There are only 3 possible active states for TimeControl: OFF, Reverse, and Forward
+        this.state = {
+            active: TimeControl.OFF
+        };
+    }
+
+    componentDidMount(){
+        // Modify timeout to change how often increment is called
+        this.time = setInterval(this.increment, 1000);
+    };
+
+    componentWillUnmount() {
+        clearInterval(this.time);
+    };
+
+    increment = () => {
+        const [currentLow, currentHigh] = this.props.sliderState;
+        const [minLow, maxHigh] = this.props.defaultTime;
+        // Code here must prevent crossing
+        switch(this.state.active){
+
+        case TimeControl.OFF:
+            break;
+
+        case TimeControl.Forward:
+            let newLowest = currentLow + TimeControl.Forward;
+            if (newLowest > currentHigh){
+                newLowest = minLow;
+            }
+            this.props.change(newLowest, currentHigh);
+            break;
+
+        case TimeControl.Reverse:
+            let newHighest = currentHigh + TimeControl.Reverse;
+            if (newHighest < currentLow){
+                newHighest = maxHigh;
+            }
+            this.props.change(currentLow, newHighest);
+            break;
+
+        default:
+            throw new Error("Should not get up to this point");
+
+        }
+    }
+    changeState = (change) => {
+        switch(change){
+
+        case TimeControl.Reverse:
+            return () => this.setState({active:TimeControl.Reverse});
+
+        case TimeControl.Forward:
+            return () => this.setState({active:TimeControl.Forward});
+
+        case TimeControl.OFF:
+            return () => this.setState({active:TimeControl.OFF});
+
+        default:
+            throw new Error("Should not get to this point");
+        }
+
+    }
+    render() {
+        return (
+            <div className="timeControl">
+                <button onClick = {this.changeState(TimeControl.Reverse)}>Reverse</button>
+                <button onClick = {this.changeState(TimeControl.OFF)}>Stop</button>
+                <button onClick ={this.changeState(TimeControl.Forward)}>Forward</button>
+            </div>
+        );
+    }
+}
+
+TimeControl.propTypes = {
+    change: PropTypes.func,
+    sliderState: PropTypes.array,
+    defaultTime: PropTypes.array
+};
 
 export class MapDropdown extends React.Component {
     constructor(props) {
@@ -276,7 +366,7 @@ export default class MapMicro extends React.Component {
         };
     }
 
-    setSliderValue(newLowerBound, newUpperBound) {
+    setSliderValue = (newLowerBound, newUpperBound) => {
         this.setState({
             sliderState: [newLowerBound, newUpperBound],
             lastValid: [newLowerBound, newUpperBound]
@@ -378,6 +468,10 @@ export default class MapMicro extends React.Component {
                         this.handleSliderInputChange,
                         this.handleSliderBlur
                     )}
+                    <TimeControl
+                        sliderState={this.state.sliderState} change = {this.setSliderValue}
+                        defaultTime = {this.state.timeRange}>
+                    </TimeControl>
                 </div>
             </div>
         </>);
