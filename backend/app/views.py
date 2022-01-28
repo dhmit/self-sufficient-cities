@@ -140,3 +140,18 @@ def get_census_data(request):
         census_data = json.load(f)
 
     return JsonResponse(census_data)
+
+
+def get_table_data(request, table_name):
+    """
+    API endpoint for getting table data for census tract 78 in json format
+    """
+    file_name = str(table_name) + ".json"
+    file_path = "app/data/tabledata/" + file_name
+    try:
+        with open(file_path, encoding="utf-8") as f:
+            table_data = json.load(f)
+        return JsonResponse(table_data, safe=False)
+    except IOError:
+        response = {"detail": "invalid table name"}
+        return JsonResponse(response)
