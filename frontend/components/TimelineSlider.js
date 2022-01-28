@@ -1,30 +1,33 @@
 import React, {useEffect, useContext, useState} from "react";
 import Slider from "rc-slider";
-import {Interval, TimelineContext} from "../contexts/TimelineContext";
+import {Interval, SORT_TYPES, TimelineContext} from "../contexts/TimelineContext";
 import "rc-slider/assets/index.css";
-
-/**
- * Gets the marks of the slider
- * 
- * @param timelineIntervals the minimum year of the timeline 
- * @returns {number: ReactNode} the translated slider marks from timelineIntervals
- */
-function getMarks(timelineIntervals) {
-    const marks = {};
-    timelineIntervals.forEach((interval, i) => {
-        if (i !== timelineIntervals.length - 1) {
-            marks[interval.start] = <strong>{interval.start}</strong>;
-        } else {
-            marks[interval.start] = <strong>{interval.start}</strong>;
-            marks[interval.end] = <strong>{interval.end}</strong>;
-        }
-    });
-    return marks;
-}
 
 export const TimelineSlider = () => {
     const state = useContext(TimelineContext);
-    const marks = getMarks(state.timelineIntervals);
+    const isReverseSorting = state.sortType === SORT_TYPES.REVERSE_CHRONOLOGICAL;
+
+    /**
+     * Gets the marks of the slider
+     * 
+     * @returns {number: ReactNode} the translated slider marks from timelineIntervals
+     */
+    const getMarks = () => {
+        const marks = {};
+        for (const [i, interval] of state.timelineIntervals.entries()) {
+            const precedingLabel = isReverseSorting ? interval.end : interval.start;
+            const finalLabel = isReverseSorting ? interval.start : interval.end;
+            if (i !== state.timelineIntervals.length - 1) {
+                marks[precedingLabel] = <strong>{precedingLabel}</strong>;
+            } else {
+                marks[precedingLabel] = <strong>{precedingLabel}</strong>;
+                marks[finalLabel] = <strong>{finalLabel}</strong>;
+            }
+        }
+        return marks;
+    };
+
+    const marks = getMarks();
     const [sliderValue, setSliderValue] = useState([]);
 
     useEffect(() => {
@@ -52,6 +55,7 @@ export const TimelineSlider = () => {
             dots={true}
             marks={marks}
             step={1}
+            reverse={isReverseSorting}
             onChange={handleSliderChange}
             value={sliderValue}
             pushable={true}
