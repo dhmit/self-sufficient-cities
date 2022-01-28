@@ -38,7 +38,6 @@ export const Timeline = ({data}) => {
     );
     const timelineIntervals = getTimelineIntervals(minYear, maxYear, intervalLength);
     const [documentModal, setDocumentModal] = useState({});
-
     // todo: change to get image from backend
     documents[0]["imageRef"] = HEAR_CALL_OF_THE_GARDEN;
     documents[1]["imageRef"] = WASHINGTON_BEE_12_8_1917;
@@ -62,6 +61,7 @@ export const Timeline = ({data}) => {
         align: "center"
     };
 
+
     return (
         <React.Fragment>
             <TimelineContext.Provider value={contextState}>
@@ -73,6 +73,7 @@ export const Timeline = ({data}) => {
                     <TimelineDropdown/>
                     <>&nbsp;</> <>&nbsp;</>
                     <ShowAll/>
+                    <>&nbsp;</> <>&nbsp;</>
                     <ResetDefault/>
                 </div>
                 <br></br>

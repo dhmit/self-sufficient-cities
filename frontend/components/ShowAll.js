@@ -5,7 +5,8 @@ import {Interval, TimelineContext} from "../contexts/TimelineContext";
 export const ShowAll = () => {
     const state = useContext(TimelineContext);
 
-    if (state.intervalSelected.start === state.minYear && state.intervalSelected.end === state.maxYear) {
+    if (state.intervalSelected.start === state.minYear &&
+        state.intervalSelected.end === state.maxYear) {
         return null;
     }
 

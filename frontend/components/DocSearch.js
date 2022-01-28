@@ -1,5 +1,5 @@
 import React, {useContext, useState} from "react";
-import {MDBModal, MDBModalHeader, MDBModalBody, MDBModalFooter, MDBInput} from "mdbreact";
+import {MDBModal, MDBModalHeader, MDBModalBody, MDBInput} from "mdbreact";
 import {Button, ListGroup, ListGroupItem} from "react-bootstrap";
 import * as PropTypes from "prop-types";
 import {TimelineContext} from "../contexts/TimelineContext";
@@ -36,9 +36,9 @@ export const DocSearch = ({documents}) => {
 
 
     const searchClick = (item) => {
-            return function () {
-                state.setDocumentModal(titles_to_docs[item]);
-            };
+        return function () {
+            state.setDocumentModal(titles_to_docs[item]);
+        };
     };
 
     return (
@@ -73,16 +73,16 @@ export const DocSearch = ({documents}) => {
                     />
 
                     <ListGroup>
-                      {
-                        filteredSet.map(item => (
-                          <ListGroupItem
-                              action onClick={searchClick(item)}
-                              key={item}
-                          >
-                              {item}
-                          </ListGroupItem>
-                        ))
-                      }
+                        {
+                            filteredSet.map(item => (
+                                <ListGroupItem
+                                    action onClick={searchClick(item)}
+                                    key={item}
+                                >
+                                    {item}
+                                </ListGroupItem>
+                            ))
+                        }
                     </ListGroup>
                 </MDBModalBody>
 
