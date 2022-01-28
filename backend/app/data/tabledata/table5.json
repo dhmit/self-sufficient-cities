@@ -1,6 +1,4 @@
-import React from "react";
-
-let JsonData = [
+[
     {
         "occupancy": "Owner Occupied"
     },
@@ -73,38 +71,4 @@ let JsonData = [
         "occupancy": "Total Dwelling Units",
         "tract78": 2860
     }
-];
-
-function Table5() {
-    const DisplayData = JsonData.map(
-        (info) => {
-            return (
-                <tr key={info.count}>
-                    <td>{info.occupancy}</td>
-                    <td>{info.tract78}</td>
-                </tr>
-            );
-        }
-    );
-    return (
-        <div>
-            <table className="table formatting">
-                <thead>
-                <tr>
-                    <th>Occupancy</th>
-                    <th>Count</th>
-                </tr>
-                </thead>
-                <tbody>
-
-
-                {DisplayData}
-
-                </tbody>
-            </table>
-
-        </div>
-    );
-}
-
-export default Table5;
+]

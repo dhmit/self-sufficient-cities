@@ -2,7 +2,8 @@
 Models for the Self-Sustaining Cities web app.
 """
 
-import json, os
+import json
+import os
 from django.db import models
 
 
@@ -38,10 +39,10 @@ class Person(models.Model):
     abs_file_path = os.path.join(dir, "data/country_codes.json")
 
     # Country Data obtained from https://datahub.io/core/country-list#data
-    f = open(abs_file_path)
-    data = json.load(f)
-    COUNTRY_CODES = [(country['Code'],country['Name']) for country in data]
-    f.close()
+    with open(abs_file_path, "r", encoding="utf8") as country_code_file:
+        data = json.load(country_code_file)
+        COUNTRY_CODES = [(country['Code'], country['Name']) for country in data]
+
     country_of_origin = models.CharField(max_length=2,choices=COUNTRY_CODES)
 
 
@@ -61,6 +62,3 @@ class Event(models.Model):
     date = models.DateField(verbose_name="Event Date: YYYY-MM-DD")
     locations = models.ManyToManyField(Location)
     people = models.ManyToManyField(Person)
-
-
-

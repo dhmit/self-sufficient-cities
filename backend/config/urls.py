@@ -15,7 +15,7 @@ Including another URL configuration
     2. Add a URL to urlpatterns:  path('blog/', include('blog.urls'))
 """
 from django.contrib import admin
-from django.urls import path, re_path
+from django.urls import path
 
 try:
     from ..app import views
@@ -44,4 +44,5 @@ urlpatterns = [
     path('map-micro/', views.map_micro_page),
     path('timeline-test', views.timeline_test),
     path('api/get_census_data/', views.get_census_data),
+    path('api/get_table_data/<str:table_name>', views.get_table_data)
 ]
