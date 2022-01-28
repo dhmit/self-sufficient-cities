@@ -30,8 +30,8 @@ from django.core.exceptions import ValidationError
 from rest_framework import status
 from rest_framework.decorators import api_view
 from rest_framework.response import Response
-from .models import Person, Event
-from .serializers import PersonSerializer, EventSerializer
+from .models import Person, Event, Location
+from .serializers import PersonSerializer, EventSerializer, LocationSerializer
 
 
 
@@ -81,6 +81,7 @@ def map_page(request):
     return render(request, 'index.html', context)
 
 
+# DJANGO OBJECT CREATION ENDPOINTS
 @api_view(['POST'])
 def create_person(request):
     """
@@ -101,6 +102,36 @@ def create_person(request):
     return Response(serializer.errors, status=status.HTTP_422_UNPROCESSABLE_ENTITY)
 
 
+@api_view(['POST'])
+def create_event(request):
+    """
+    API Endpoint for adding an event to the database
+    Required keys in body of request for successfully adding events:
+        - name
+        - date
+    """
+    attributes = request.data
+
+    new_event_obj = Event.objects.create(**attributes)
+    serializer = EventSerializer(new_event_obj)
+    return Response(serializer.data)
+
+
+@api_view(['POST'])
+def create_location(request):
+    """
+    API Endpoint for adding a person to the database
+    Required keys in body of request for successfully adding a location:
+        - name
+    """
+    attributes = request.data
+
+    new_location_obj = Location.objects.create(**attributes)
+    serializer = LocationSerializer(new_location_obj)
+    return Response(serializer.data)
+
+
+# DJANGO OBJECT SEARCH ENDPOINTS
 @api_view(['GET'])
 def get_people(request):
     """
@@ -114,41 +145,6 @@ def get_people(request):
     return Response(serializer.data)
 
 
-@api_view(['POST'])
-def create_event(request):
-    """
-    API Endpoint for adding an event to the database
-    Required keys in body of request for successfully adding people:
-        - name
-        - date
-    """
-    attributes = request.data
-
-    new_event_obj = Event.objects.create(**attributes)
-    serializer = EventSerializer(new_event_obj)
-    return Response(serializer.data)
-
-
-# need to add endpoints for updating locations/people event
-@api_view(['GET'])
-def get_people_from_event(request, event_id=None):
-    """
-    API endpoint for pulling up a list of people from an event
-    """
-    event = Event.objects.get(id=event_id)
-    people = PersonSerializer(event.people, many=True)
-    return Response(people)
-
-
-@api_view(['PUT'])
-def update_people_for_event(request, event_id=None):
-    """
-    API endpoint for updating the list of people for an event
-    Currently not implemented, so it returns an empty Response object
-    """
-    return Response()
-
-
 @api_view(['GET'])
 def get_events(request):
     """
@@ -157,6 +153,68 @@ def get_events(request):
     event = Event.objects.order_by('name')
     serializer = EventSerializer(event, many=True)
     return Response(serializer.data)
+
+
+@api_view(['GET'])
+def get_people_from_event(request, event_id=None):
+    """
+    API endpoint for pulling up a list of people from an event
+    """
+    event = Event.objects.get(id=event_id)
+    people = event.people.all()
+    serializer = PersonSerializer(people, many=True)
+    return Response(serializer.data)
+
+
+@api_view(['GET'])
+def get_locations_from_event(request, event_id=None):
+    """
+    API endpoint for pulling up a list of locations related to an event
+    """
+    event = Event.objects.get(id=event_id)
+    locations = event.locations.all()
+    serializer = LocationSerializer(locations, many=True)
+    return Response(serializer.data)
+
+
+# DJANGO OBJECT UPDATE METHODS
+@api_view(['PUT'])
+def update_people_for_event(request, event_id=None):
+    """
+    API endpoint for updating the list of people for an event. This endpoints takes a list
+    of people ids and adds people to the event that are not already there. Returns a response
+    object containing a representation of the updated event object.
+
+    Required keys in body of request for successfully updating people:
+        - id_list: list of unique ids for people that are to be added
+    """
+    event = Event.objects.get(id=event_id)
+    people_ids = request.data["id_list"]
+    people = Person.objects.filter(id__in=people_ids)
+
+    event.people.add(*people)
+    serializer = EventSerializer(event)
+    return Response(serializer.data)
+
+
+@api_view(['PUT'])
+def update_locations_for_event(request, event_id=None):
+    """
+    API endpoint for updating the list of locations related to an event. This endpoints takes a list
+    of location ids and adds locations to the event that are not already there. Returns a response
+    object containing a representation of the updated event object.
+
+    Required keys in body of request for successfully updating locations:
+        - id_list: list of unique ids for locations that are to be added
+    """
+    event = Event.objects.get(id=event_id)
+    location_ids = request.data["id_list"]
+    locations = Location.objects.filter(id__in=location_ids)
+    event.locations.add(*locations)
+
+    serializer = EventSerializer(event)
+    return Response(serializer.data)
+
 
 def timeline_page(request):
     """
