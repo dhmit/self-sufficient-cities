@@ -26,10 +26,13 @@ context = {
 import json
 from django.shortcuts import render
 from django.http import JsonResponse
+from django.core.exceptions import ValidationError
+from rest_framework import status
 from rest_framework.decorators import api_view
 from rest_framework.response import Response
 from .models import Person, Event
 from .serializers import PersonSerializer, EventSerializer
+
 
 
 def index(request):
@@ -90,10 +93,12 @@ def create_person(request):
         - country_of_origin
     """
     attributes = request.data
-
     new_person_obj = Person.objects.create(**attributes)
-    serializer = PersonSerializer(new_person_obj)
-    return Response(serializer.data)
+    serializer = PersonSerializer(new_person_obj,data=request.data)
+
+    if serializer.is_valid():
+        return Response(serializer.data)
+    return Response(serializer.errors, status=status.HTTP_422_UNPROCESSABLE_ENTITY)
 
 
 @api_view(['GET'])
