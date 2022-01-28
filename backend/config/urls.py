@@ -38,6 +38,7 @@ urlpatterns = [
     path('api/get_locations_from_event/<event_id>', views.get_locations_from_event),
     path('api/update_people_for_event/<event_id>', views.update_people_for_event),
     path('api/update_locations_for_event/<event_id>', views.update_locations_for_event),
+    path('api/', views.api_page),
     path('map/', views.map_page),
     path('timeline/', views.timeline_page, name='timeline'),
     path('map-macro/', views.map_macro_page),

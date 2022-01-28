@@ -313,3 +313,17 @@ def get_table_data(request, table_name):
     except IOError:
         response = {"detail": "invalid table name"}
         return JsonResponse(response)
+
+
+def api_page(request):
+    """
+    Testing Page for loading timeline modal
+    """
+
+    context = {
+        'page_metadata': {
+            'title': 'API'
+        },
+        'component_name': 'API'
+    }
+    return render(request, 'index.html', context)
