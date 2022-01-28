@@ -113,8 +113,10 @@ def create_event(request):
     attributes = request.data
 
     new_event_obj = Event.objects.create(**attributes)
-    serializer = EventSerializer(new_event_obj)
-    return Response(serializer.data)
+    serializer = EventSerializer(new_event_obj,data=request.data)
+    if serializer.is_valid():
+        return Response(serializer.data)
+    return Response(serializer.errors, status=status.HTTP_422_UNPROCESSABLE_ENTITY)
 
 
 @api_view(['POST'])
@@ -127,8 +129,10 @@ def create_location(request):
     attributes = request.data
 
     new_location_obj = Location.objects.create(**attributes)
-    serializer = LocationSerializer(new_location_obj)
-    return Response(serializer.data)
+    serializer = LocationSerializer(new_location_obj,data=request.data)
+    if serializer.is_valid():
+        return Response(serializer.data)
+    return Response(serializer.errors, status=status.HTTP_422_UNPROCESSABLE_ENTITY)
 
 
 # DJANGO OBJECT SEARCH ENDPOINTS
@@ -193,7 +197,7 @@ def update_people_for_event(request, event_id=None):
     people = Person.objects.filter(id__in=people_ids)
 
     event.people.add(*people)
-    serializer = EventSerializer(event)
+    serializer = EventSerializer(event,data=request.data)
     return Response(serializer.data)
 
 
@@ -212,7 +216,7 @@ def update_locations_for_event(request, event_id=None):
     locations = Location.objects.filter(id__in=location_ids)
     event.locations.add(*locations)
 
-    serializer = EventSerializer(event)
+    serializer = EventSerializer(event,data=request.data)
     return Response(serializer.data)
 
 
