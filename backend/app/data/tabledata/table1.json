@@ -1,6 +1,4 @@
-import React from "react";
-
-let JsonData = [
+[
     {
         "tract78": "All Classes"
     },
@@ -61,39 +59,4 @@ let JsonData = [
         "tract78": "Population per occupied dwelling unit",
         "count": 4.63
     }
-];
-
-
-function JsonDataDisplay() {
-    const DisplayData = JsonData.map(
-        (info) => {
-            return (
-                <tr key={info.count}>
-                    <td>{info.tract78}</td>
-                    <td>{info.count}</td>
-                </tr>
-            );
-        }
-    );
-    return (
-        <div>
-            <table className="table formatting">
-                <thead>
-                <tr>
-                    <th>Tract 78</th>
-                    <th>Count</th>
-                </tr>
-                </thead>
-                <tbody>
-
-
-                {DisplayData}
-
-                </tbody>
-            </table>
-
-        </div>
-    );
-}
-
-export default JsonDataDisplay;
+]

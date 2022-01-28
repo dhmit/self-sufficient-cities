@@ -1,6 +1,4 @@
-import React from "react";
-
-let JsonData = [
+[
     {
         "nonwhitePop": "Persons 25 years or older",
         "total": 5067,
@@ -247,42 +245,4 @@ let JsonData = [
         "male": 10,
         "female": 12
     }
-];
-
-function Table4() {
-    const DisplayData = JsonData.map(
-        (info) => {
-            return (
-                <tr key={info.count}>
-                    <td>{info.nonwhitePop}</td>
-                    <td>{info.total}</td>
-                    <td> {info.male}</td>
-                    <td> {info.female}</td>
-                </tr>
-            );
-        }
-    );
-    return (
-        <div>
-            <table className="table formatting">
-                <thead>
-                <tr>
-                    <th>Non-white population</th>
-                    <th>Total</th>
-                    <th>Male</th>
-                    <th>Female</th>
-                </tr>
-                </thead>
-                <tbody>
-
-
-                {DisplayData}
-
-                </tbody>
-            </table>
-
-        </div>
-    );
-}
-
-export default Table4;
+]
