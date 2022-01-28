@@ -33,7 +33,6 @@ from .models import Person, Event, Location
 from .serializers import PersonSerializer, EventSerializer, LocationSerializer
 
 
-
 def index(request):
     """
     Home page
@@ -94,7 +93,7 @@ def create_person(request):
     """
     attributes = request.data
     new_person_obj = Person.objects.create(**attributes)
-    serializer = PersonSerializer(new_person_obj,data=request.data)
+    serializer = PersonSerializer(new_person_obj, data=request.data)
 
     if serializer.is_valid():
         return Response(serializer.data)
@@ -112,7 +111,7 @@ def create_event(request):
     attributes = request.data
 
     new_event_obj = Event.objects.create(**attributes)
-    serializer = EventSerializer(new_event_obj,data=request.data)
+    serializer = EventSerializer(new_event_obj, data=request.data)
     if serializer.is_valid():
         return Response(serializer.data)
     return Response(serializer.errors, status=status.HTTP_422_UNPROCESSABLE_ENTITY)
@@ -128,7 +127,7 @@ def create_location(request):
     attributes = request.data
 
     new_location_obj = Location.objects.create(**attributes)
-    serializer = LocationSerializer(new_location_obj,data=request.data)
+    serializer = LocationSerializer(new_location_obj, data=request.data)
     if serializer.is_valid():
         return Response(serializer.data)
     return Response(serializer.errors, status=status.HTTP_422_UNPROCESSABLE_ENTITY)
@@ -196,7 +195,7 @@ def update_people_for_event(request, event_id=None):
     people = Person.objects.filter(id__in=people_ids)
 
     event.people.add(*people)
-    serializer = EventSerializer(event,data=request.data)
+    serializer = EventSerializer(event, data=request.data)
     return Response(serializer.data)
 
 
@@ -215,7 +214,7 @@ def update_locations_for_event(request, event_id=None):
     locations = Location.objects.filter(id__in=location_ids)
     event.locations.add(*locations)
 
-    serializer = EventSerializer(event,data=request.data)
+    serializer = EventSerializer(event, data=request.data)
     return Response(serializer.data)
 
 
@@ -227,8 +226,13 @@ def timeline_page(request):
         'page_metadata': {
             'title': 'Timeline page'
         },
-        'component_name': 'Timeline'
+        'component_name': 'Timeline',
+        'component_props': {
+            'data': {}
+        },
     }
+    with open("app/data/documents.json", encoding="utf-8") as f:
+        context['component_props']['data'] = json.load(f)
     return render(request, 'index.html', context)
 
 
@@ -284,6 +288,16 @@ def get_census_data(request):
         census_data = json.load(f)
 
     return JsonResponse(census_data)
+
+
+def get_documents_data(request):
+    """
+    API endpoint for getting the documents data in json format
+    """
+    with open("app/data/documents.json", encoding="utf-8") as f:
+        documents_data = json.load(f)
+
+    return JsonResponse(documents_data)
 
 
 def get_table_data(request, table_name):

@@ -1,54 +1,93 @@
 import React, {useState} from "react";
-import {Interval, TimelineContext} from "../contexts/TimelineContext";
+import {Interval, SORT_TYPES, TimelineContext} from "../contexts/TimelineContext";
 import DocumentShowcase from "./DocumentShowcase";
 import {TimelineSlider} from "./TimelineSlider";
-import HEAR_CALL_GARDEN from "../images/hear_call_of_the_garden.png";
-import WASHINGTON_BEE_12_3_1910 from "../images/washington_bee_dec_3_1910.png";
-import WASHINGTON_BEE_11_15_1913 from "../images/washington_bee_nov_15_1913.png";
-import {TimelineDropdown} from "./global/TimelineDropdown";
+import HEAR_CALL_OF_THE_GARDEN from "../images/hear_call_of_the_garden.png";
+import WASHINGTON_BEE_12_8_1917 from "../images/washington_bee_dec_8_1917.png";
+import WASHINGTON_BEE_8_14_1915 from "../images/washington_bee_aug_14_1915.png";
+import WASHINGTON_BEE_4_26_1919 from "../images/washington_bee_april_26_1919.png";
+import WASHINGTON_BEE_3_26_1921 from "../images/washington_bee_march_26_1921.png";
+import {ShowAll} from "./ShowAll";
+import {DocSearch} from "./DocSearch";
+import {TimelineDropdown} from "./TimelineDropdown";
+import {ResetDefault} from "./ResetDefault";
+import * as PropTypes from "prop-types";
+import DocumentModal from "./DocumentModal";
 
-
-export function Timeline() {
+export const Timeline = ({data}) => {
+    const documents = data.documents;
     const maxYear = 1925;
     const minYear = 1910;
-    const [intervalSelected, setIntervalSelected] = useState(new Interval(minYear, minYear + 5));
-    const [timelineRange, setTimelineRange] = useState(new Interval(minYear, maxYear));
-    // once backend is ready, we will make a request to the api to retrieve the documents & store
-    // it as state
-    const documents = [
-        {
-            title: "Washington Bee",
-            date: "December 3, 1910",
-            imageRef: WASHINGTON_BEE_12_3_1910
-        },
-        {
-            title: "Washington Bee",
-            date: "November 15, 1913",
-            imageRef: WASHINGTON_BEE_11_15_1913
-        },
-        {
-            title: "HEAR CALL OF THE GARDEN",
-            date: "March 6, 1914",
-            imageRef: HEAR_CALL_GARDEN
+    const intervalLength = 5;
+    const [sortType, setSortType] = useState(SORT_TYPES.CHRONOLOGICAL);
+
+    /**
+     * Generates the five-year intervals that will be used for the timeline slider
+     * 
+     * @returns {Array} list of the intervals starting at minYear and ending in maxYear
+     */
+    const getTimelineIntervals = () => {
+        const intervals = [];
+        for (let i = minYear; i < maxYear; i += intervalLength) {
+            const newInterval = new Interval(i, i + intervalLength);
+            intervals.push(newInterval);
         }
-    ];
+        return intervals;
+    };
+
+    const [intervalSelected, setIntervalSelected] = useState(
+        new Interval(minYear, minYear + intervalLength)
+    );
+    const [timelineIntervals, setTimelineIntervals] = useState(getTimelineIntervals());
+    const [documentModal, setDocumentModal] = useState({});
+    // todo: change to get image from backend
+    documents[0]["imageRef"] = HEAR_CALL_OF_THE_GARDEN;
+    documents[1]["imageRef"] = WASHINGTON_BEE_12_8_1917;
+    documents[2]["imageRef"] = WASHINGTON_BEE_8_14_1915;
+    documents[3]["imageRef"] = WASHINGTON_BEE_4_26_1919;
+    documents[4]["imageRef"] = WASHINGTON_BEE_3_26_1921;
 
     const contextState = {
+        documentModal,
         intervalSelected,
         maxYear,
         minYear,
-        timelineRange,
-        setIntervalSelected,
-        setTimelineRange
+        sortType,
+        intervalLength,
+        timelineIntervals,
+        setSortType,
+        setTimelineIntervals,
+        setDocumentModal,
+        setIntervalSelected
     };
+
+    const layoutStyle = {
+        display: "flex",
+        align: "center"
+    };
+
 
     return (
         <React.Fragment>
             <TimelineContext.Provider value={contextState}>
+                {Object.keys(documentModal).length > 0 && <DocumentModal document={documentModal}/>}
                 <TimelineSlider/>
-                <TimelineDropdown/>
-                <DocumentShowcase documents={documents} />
+                <div style = {layoutStyle}>
+                    <DocSearch documents={data.documents}/>
+                    <>&nbsp;</> <>&nbsp;</>
+                    <TimelineDropdown/>
+                    <>&nbsp;</> <>&nbsp;</>
+                    <ShowAll/>
+                    <>&nbsp;</> <>&nbsp;</>
+                    <ResetDefault/>
+                </div>
+                <br></br>
+                <DocumentShowcase documents={data.documents} />
             </TimelineContext.Provider>
         </React.Fragment>
     );
-}
+};
+
+Timeline.propTypes = {
+    data: PropTypes.object
+};
