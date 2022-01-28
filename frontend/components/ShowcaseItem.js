@@ -2,6 +2,7 @@ import React, {useContext} from "react";
 import * as PropTypes from "prop-types";
 import {Card} from "react-bootstrap";
 import {TimelineContext} from "../contexts/TimelineContext";
+import TimelinePills from "./TimelinePills";
 
 const ShowcaseItem = ({document}) => {
     const state = useContext(TimelineContext);
@@ -16,6 +17,7 @@ const ShowcaseItem = ({document}) => {
                 <Card.Subtitle className="mb-2 text-muted"> { document.date } </Card.Subtitle>
                 <Card.Img src={document.imageRef} alt={`Image of ${document.publication}`}/>
             </Card.Body>
+            <TimelinePills document={document}/>
         </Card>
     );
 };

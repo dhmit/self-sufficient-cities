@@ -145,16 +145,586 @@
       "name": "index.d648f6827452865d402f.hot-update.json",
       "path": "/Users/angcast/Documents/GitHub/self-sustaining-cities/assets/bundles/index.d648f6827452865d402f.hot-update.json",
       "publicPath": "http://localhost:3000/build/index.d648f6827452865d402f.hot-update.json"
+    },
+    "index.638328beba78f5780f17.hot-update.js": {
+      "name": "index.638328beba78f5780f17.hot-update.js",
+      "path": "/Users/angcast/Documents/GitHub/self-sustaining-cities/assets/bundles/index.638328beba78f5780f17.hot-update.js",
+      "publicPath": "http://localhost:3000/build/index.638328beba78f5780f17.hot-update.js"
+    },
+    "index.638328beba78f5780f17.hot-update.json": {
+      "name": "index.638328beba78f5780f17.hot-update.json",
+      "path": "/Users/angcast/Documents/GitHub/self-sustaining-cities/assets/bundles/index.638328beba78f5780f17.hot-update.json",
+      "publicPath": "http://localhost:3000/build/index.638328beba78f5780f17.hot-update.json"
+    },
+    "index.bc0724ec9896b48f143a.hot-update.js": {
+      "name": "index.bc0724ec9896b48f143a.hot-update.js",
+      "path": "/Users/angcast/Documents/GitHub/self-sustaining-cities/assets/bundles/index.bc0724ec9896b48f143a.hot-update.js",
+      "publicPath": "http://localhost:3000/build/index.bc0724ec9896b48f143a.hot-update.js"
+    },
+    "index.bc0724ec9896b48f143a.hot-update.json": {
+      "name": "index.bc0724ec9896b48f143a.hot-update.json",
+      "path": "/Users/angcast/Documents/GitHub/self-sustaining-cities/assets/bundles/index.bc0724ec9896b48f143a.hot-update.json",
+      "publicPath": "http://localhost:3000/build/index.bc0724ec9896b48f143a.hot-update.json"
+    },
+    "index.7b1bf11802b6ccd9c862.hot-update.js": {
+      "name": "index.7b1bf11802b6ccd9c862.hot-update.js",
+      "path": "/Users/angcast/Documents/GitHub/self-sustaining-cities/assets/bundles/index.7b1bf11802b6ccd9c862.hot-update.js",
+      "publicPath": "http://localhost:3000/build/index.7b1bf11802b6ccd9c862.hot-update.js"
+    },
+    "index.7b1bf11802b6ccd9c862.hot-update.json": {
+      "name": "index.7b1bf11802b6ccd9c862.hot-update.json",
+      "path": "/Users/angcast/Documents/GitHub/self-sustaining-cities/assets/bundles/index.7b1bf11802b6ccd9c862.hot-update.json",
+      "publicPath": "http://localhost:3000/build/index.7b1bf11802b6ccd9c862.hot-update.json"
+    },
+    "index.4f466e866a5c2208d4e7.hot-update.js": {
+      "name": "index.4f466e866a5c2208d4e7.hot-update.js",
+      "path": "/Users/angcast/Documents/GitHub/self-sustaining-cities/assets/bundles/index.4f466e866a5c2208d4e7.hot-update.js",
+      "publicPath": "http://localhost:3000/build/index.4f466e866a5c2208d4e7.hot-update.js"
+    },
+    "index.4f466e866a5c2208d4e7.hot-update.json": {
+      "name": "index.4f466e866a5c2208d4e7.hot-update.json",
+      "path": "/Users/angcast/Documents/GitHub/self-sustaining-cities/assets/bundles/index.4f466e866a5c2208d4e7.hot-update.json",
+      "publicPath": "http://localhost:3000/build/index.4f466e866a5c2208d4e7.hot-update.json"
+    },
+    "index.0b2bb473ac75eef11d91.hot-update.js": {
+      "name": "index.0b2bb473ac75eef11d91.hot-update.js",
+      "path": "/Users/angcast/Documents/GitHub/self-sustaining-cities/assets/bundles/index.0b2bb473ac75eef11d91.hot-update.js",
+      "publicPath": "http://localhost:3000/build/index.0b2bb473ac75eef11d91.hot-update.js"
+    },
+    "index.0b2bb473ac75eef11d91.hot-update.json": {
+      "name": "index.0b2bb473ac75eef11d91.hot-update.json",
+      "path": "/Users/angcast/Documents/GitHub/self-sustaining-cities/assets/bundles/index.0b2bb473ac75eef11d91.hot-update.json",
+      "publicPath": "http://localhost:3000/build/index.0b2bb473ac75eef11d91.hot-update.json"
+    },
+    "index.3ff867660b521bdac163.hot-update.js": {
+      "name": "index.3ff867660b521bdac163.hot-update.js",
+      "path": "/Users/angcast/Documents/GitHub/self-sustaining-cities/assets/bundles/index.3ff867660b521bdac163.hot-update.js",
+      "publicPath": "http://localhost:3000/build/index.3ff867660b521bdac163.hot-update.js"
+    },
+    "index.3ff867660b521bdac163.hot-update.json": {
+      "name": "index.3ff867660b521bdac163.hot-update.json",
+      "path": "/Users/angcast/Documents/GitHub/self-sustaining-cities/assets/bundles/index.3ff867660b521bdac163.hot-update.json",
+      "publicPath": "http://localhost:3000/build/index.3ff867660b521bdac163.hot-update.json"
+    },
+    "index.6695dab5770535fa8e5c.hot-update.js": {
+      "name": "index.6695dab5770535fa8e5c.hot-update.js",
+      "path": "/Users/angcast/Documents/GitHub/self-sustaining-cities/assets/bundles/index.6695dab5770535fa8e5c.hot-update.js",
+      "publicPath": "http://localhost:3000/build/index.6695dab5770535fa8e5c.hot-update.js"
+    },
+    "index.6695dab5770535fa8e5c.hot-update.json": {
+      "name": "index.6695dab5770535fa8e5c.hot-update.json",
+      "path": "/Users/angcast/Documents/GitHub/self-sustaining-cities/assets/bundles/index.6695dab5770535fa8e5c.hot-update.json",
+      "publicPath": "http://localhost:3000/build/index.6695dab5770535fa8e5c.hot-update.json"
+    },
+    "index.a366ec9bc9ee3022859b.hot-update.js": {
+      "name": "index.a366ec9bc9ee3022859b.hot-update.js",
+      "path": "/Users/angcast/Documents/GitHub/self-sustaining-cities/assets/bundles/index.a366ec9bc9ee3022859b.hot-update.js",
+      "publicPath": "http://localhost:3000/build/index.a366ec9bc9ee3022859b.hot-update.js"
+    },
+    "index.a366ec9bc9ee3022859b.hot-update.json": {
+      "name": "index.a366ec9bc9ee3022859b.hot-update.json",
+      "path": "/Users/angcast/Documents/GitHub/self-sustaining-cities/assets/bundles/index.a366ec9bc9ee3022859b.hot-update.json",
+      "publicPath": "http://localhost:3000/build/index.a366ec9bc9ee3022859b.hot-update.json"
+    },
+    "index.64ced18be75d0e083ac8.hot-update.js": {
+      "name": "index.64ced18be75d0e083ac8.hot-update.js",
+      "path": "/Users/angcast/Documents/GitHub/self-sustaining-cities/assets/bundles/index.64ced18be75d0e083ac8.hot-update.js",
+      "publicPath": "http://localhost:3000/build/index.64ced18be75d0e083ac8.hot-update.js"
+    },
+    "index.64ced18be75d0e083ac8.hot-update.json": {
+      "name": "index.64ced18be75d0e083ac8.hot-update.json",
+      "path": "/Users/angcast/Documents/GitHub/self-sustaining-cities/assets/bundles/index.64ced18be75d0e083ac8.hot-update.json",
+      "publicPath": "http://localhost:3000/build/index.64ced18be75d0e083ac8.hot-update.json"
+    },
+    "index.585f54b6f5d96bf4a9ac.hot-update.js": {
+      "name": "index.585f54b6f5d96bf4a9ac.hot-update.js",
+      "path": "/Users/angcast/Documents/GitHub/self-sustaining-cities/assets/bundles/index.585f54b6f5d96bf4a9ac.hot-update.js",
+      "publicPath": "http://localhost:3000/build/index.585f54b6f5d96bf4a9ac.hot-update.js"
+    },
+    "index.585f54b6f5d96bf4a9ac.hot-update.json": {
+      "name": "index.585f54b6f5d96bf4a9ac.hot-update.json",
+      "path": "/Users/angcast/Documents/GitHub/self-sustaining-cities/assets/bundles/index.585f54b6f5d96bf4a9ac.hot-update.json",
+      "publicPath": "http://localhost:3000/build/index.585f54b6f5d96bf4a9ac.hot-update.json"
+    },
+    "index.46d16225285af8d3e0c1.hot-update.js": {
+      "name": "index.46d16225285af8d3e0c1.hot-update.js",
+      "path": "/Users/angcast/Documents/GitHub/self-sustaining-cities/assets/bundles/index.46d16225285af8d3e0c1.hot-update.js",
+      "publicPath": "http://localhost:3000/build/index.46d16225285af8d3e0c1.hot-update.js"
+    },
+    "index.46d16225285af8d3e0c1.hot-update.json": {
+      "name": "index.46d16225285af8d3e0c1.hot-update.json",
+      "path": "/Users/angcast/Documents/GitHub/self-sustaining-cities/assets/bundles/index.46d16225285af8d3e0c1.hot-update.json",
+      "publicPath": "http://localhost:3000/build/index.46d16225285af8d3e0c1.hot-update.json"
+    },
+    "index.f6fab1bac61ed54ad285.hot-update.js": {
+      "name": "index.f6fab1bac61ed54ad285.hot-update.js",
+      "path": "/Users/angcast/Documents/GitHub/self-sustaining-cities/assets/bundles/index.f6fab1bac61ed54ad285.hot-update.js",
+      "publicPath": "http://localhost:3000/build/index.f6fab1bac61ed54ad285.hot-update.js"
+    },
+    "index.f6fab1bac61ed54ad285.hot-update.json": {
+      "name": "index.f6fab1bac61ed54ad285.hot-update.json",
+      "path": "/Users/angcast/Documents/GitHub/self-sustaining-cities/assets/bundles/index.f6fab1bac61ed54ad285.hot-update.json",
+      "publicPath": "http://localhost:3000/build/index.f6fab1bac61ed54ad285.hot-update.json"
+    },
+    "index.4f87aae4988bfbb211f2.hot-update.js": {
+      "name": "index.4f87aae4988bfbb211f2.hot-update.js",
+      "path": "/Users/angcast/Documents/GitHub/self-sustaining-cities/assets/bundles/index.4f87aae4988bfbb211f2.hot-update.js",
+      "publicPath": "http://localhost:3000/build/index.4f87aae4988bfbb211f2.hot-update.js"
+    },
+    "index.4f87aae4988bfbb211f2.hot-update.json": {
+      "name": "index.4f87aae4988bfbb211f2.hot-update.json",
+      "path": "/Users/angcast/Documents/GitHub/self-sustaining-cities/assets/bundles/index.4f87aae4988bfbb211f2.hot-update.json",
+      "publicPath": "http://localhost:3000/build/index.4f87aae4988bfbb211f2.hot-update.json"
+    },
+    "index.84e1a996e21a21de7027.hot-update.js": {
+      "name": "index.84e1a996e21a21de7027.hot-update.js",
+      "path": "/Users/angcast/Documents/GitHub/self-sustaining-cities/assets/bundles/index.84e1a996e21a21de7027.hot-update.js",
+      "publicPath": "http://localhost:3000/build/index.84e1a996e21a21de7027.hot-update.js"
+    },
+    "index.84e1a996e21a21de7027.hot-update.json": {
+      "name": "index.84e1a996e21a21de7027.hot-update.json",
+      "path": "/Users/angcast/Documents/GitHub/self-sustaining-cities/assets/bundles/index.84e1a996e21a21de7027.hot-update.json",
+      "publicPath": "http://localhost:3000/build/index.84e1a996e21a21de7027.hot-update.json"
+    },
+    "index.53e3c4af625c1ca5d6a6.hot-update.js": {
+      "name": "index.53e3c4af625c1ca5d6a6.hot-update.js",
+      "path": "/Users/angcast/Documents/GitHub/self-sustaining-cities/assets/bundles/index.53e3c4af625c1ca5d6a6.hot-update.js",
+      "publicPath": "http://localhost:3000/build/index.53e3c4af625c1ca5d6a6.hot-update.js"
+    },
+    "index.53e3c4af625c1ca5d6a6.hot-update.json": {
+      "name": "index.53e3c4af625c1ca5d6a6.hot-update.json",
+      "path": "/Users/angcast/Documents/GitHub/self-sustaining-cities/assets/bundles/index.53e3c4af625c1ca5d6a6.hot-update.json",
+      "publicPath": "http://localhost:3000/build/index.53e3c4af625c1ca5d6a6.hot-update.json"
+    },
+    "index.d229b4acebe42fa927ba.hot-update.js": {
+      "name": "index.d229b4acebe42fa927ba.hot-update.js",
+      "path": "/Users/angcast/Documents/GitHub/self-sustaining-cities/assets/bundles/index.d229b4acebe42fa927ba.hot-update.js",
+      "publicPath": "http://localhost:3000/build/index.d229b4acebe42fa927ba.hot-update.js"
+    },
+    "index.d229b4acebe42fa927ba.hot-update.json": {
+      "name": "index.d229b4acebe42fa927ba.hot-update.json",
+      "path": "/Users/angcast/Documents/GitHub/self-sustaining-cities/assets/bundles/index.d229b4acebe42fa927ba.hot-update.json",
+      "publicPath": "http://localhost:3000/build/index.d229b4acebe42fa927ba.hot-update.json"
+    },
+    "index.59184efab2c7cc39299b.hot-update.js": {
+      "name": "index.59184efab2c7cc39299b.hot-update.js",
+      "path": "/Users/angcast/Documents/GitHub/self-sustaining-cities/assets/bundles/index.59184efab2c7cc39299b.hot-update.js",
+      "publicPath": "http://localhost:3000/build/index.59184efab2c7cc39299b.hot-update.js"
+    },
+    "index.59184efab2c7cc39299b.hot-update.json": {
+      "name": "index.59184efab2c7cc39299b.hot-update.json",
+      "path": "/Users/angcast/Documents/GitHub/self-sustaining-cities/assets/bundles/index.59184efab2c7cc39299b.hot-update.json",
+      "publicPath": "http://localhost:3000/build/index.59184efab2c7cc39299b.hot-update.json"
+    },
+    "index.d421ee70bf7cd8f15fbc.hot-update.js": {
+      "name": "index.d421ee70bf7cd8f15fbc.hot-update.js",
+      "path": "/Users/angcast/Documents/GitHub/self-sustaining-cities/assets/bundles/index.d421ee70bf7cd8f15fbc.hot-update.js",
+      "publicPath": "http://localhost:3000/build/index.d421ee70bf7cd8f15fbc.hot-update.js"
+    },
+    "index.d421ee70bf7cd8f15fbc.hot-update.json": {
+      "name": "index.d421ee70bf7cd8f15fbc.hot-update.json",
+      "path": "/Users/angcast/Documents/GitHub/self-sustaining-cities/assets/bundles/index.d421ee70bf7cd8f15fbc.hot-update.json",
+      "publicPath": "http://localhost:3000/build/index.d421ee70bf7cd8f15fbc.hot-update.json"
+    },
+    "index.eb99005198656fe02d38.hot-update.js": {
+      "name": "index.eb99005198656fe02d38.hot-update.js",
+      "path": "/Users/angcast/Documents/GitHub/self-sustaining-cities/assets/bundles/index.eb99005198656fe02d38.hot-update.js",
+      "publicPath": "http://localhost:3000/build/index.eb99005198656fe02d38.hot-update.js"
+    },
+    "index.eb99005198656fe02d38.hot-update.json": {
+      "name": "index.eb99005198656fe02d38.hot-update.json",
+      "path": "/Users/angcast/Documents/GitHub/self-sustaining-cities/assets/bundles/index.eb99005198656fe02d38.hot-update.json",
+      "publicPath": "http://localhost:3000/build/index.eb99005198656fe02d38.hot-update.json"
+    },
+    "index.e396f7d4e148e54278f5.hot-update.js": {
+      "name": "index.e396f7d4e148e54278f5.hot-update.js",
+      "path": "/Users/angcast/Documents/GitHub/self-sustaining-cities/assets/bundles/index.e396f7d4e148e54278f5.hot-update.js",
+      "publicPath": "http://localhost:3000/build/index.e396f7d4e148e54278f5.hot-update.js"
+    },
+    "index.e396f7d4e148e54278f5.hot-update.json": {
+      "name": "index.e396f7d4e148e54278f5.hot-update.json",
+      "path": "/Users/angcast/Documents/GitHub/self-sustaining-cities/assets/bundles/index.e396f7d4e148e54278f5.hot-update.json",
+      "publicPath": "http://localhost:3000/build/index.e396f7d4e148e54278f5.hot-update.json"
+    },
+    "index.5af1db5fdc178ba1157c.hot-update.js": {
+      "name": "index.5af1db5fdc178ba1157c.hot-update.js",
+      "path": "/Users/angcast/Documents/GitHub/self-sustaining-cities/assets/bundles/index.5af1db5fdc178ba1157c.hot-update.js",
+      "publicPath": "http://localhost:3000/build/index.5af1db5fdc178ba1157c.hot-update.js"
+    },
+    "index.5af1db5fdc178ba1157c.hot-update.json": {
+      "name": "index.5af1db5fdc178ba1157c.hot-update.json",
+      "path": "/Users/angcast/Documents/GitHub/self-sustaining-cities/assets/bundles/index.5af1db5fdc178ba1157c.hot-update.json",
+      "publicPath": "http://localhost:3000/build/index.5af1db5fdc178ba1157c.hot-update.json"
+    },
+    "index.709e607085d43e0bff15.hot-update.js": {
+      "name": "index.709e607085d43e0bff15.hot-update.js",
+      "path": "/Users/angcast/Documents/GitHub/self-sustaining-cities/assets/bundles/index.709e607085d43e0bff15.hot-update.js",
+      "publicPath": "http://localhost:3000/build/index.709e607085d43e0bff15.hot-update.js"
+    },
+    "index.709e607085d43e0bff15.hot-update.json": {
+      "name": "index.709e607085d43e0bff15.hot-update.json",
+      "path": "/Users/angcast/Documents/GitHub/self-sustaining-cities/assets/bundles/index.709e607085d43e0bff15.hot-update.json",
+      "publicPath": "http://localhost:3000/build/index.709e607085d43e0bff15.hot-update.json"
+    },
+    "index.752f8232353b61312e3b.hot-update.js": {
+      "name": "index.752f8232353b61312e3b.hot-update.js",
+      "path": "/Users/angcast/Documents/GitHub/self-sustaining-cities/assets/bundles/index.752f8232353b61312e3b.hot-update.js",
+      "publicPath": "http://localhost:3000/build/index.752f8232353b61312e3b.hot-update.js"
+    },
+    "index.752f8232353b61312e3b.hot-update.json": {
+      "name": "index.752f8232353b61312e3b.hot-update.json",
+      "path": "/Users/angcast/Documents/GitHub/self-sustaining-cities/assets/bundles/index.752f8232353b61312e3b.hot-update.json",
+      "publicPath": "http://localhost:3000/build/index.752f8232353b61312e3b.hot-update.json"
+    },
+    "index.6a26b76bf80a18f65bef.hot-update.js": {
+      "name": "index.6a26b76bf80a18f65bef.hot-update.js",
+      "path": "/Users/angcast/Documents/GitHub/self-sustaining-cities/assets/bundles/index.6a26b76bf80a18f65bef.hot-update.js",
+      "publicPath": "http://localhost:3000/build/index.6a26b76bf80a18f65bef.hot-update.js"
+    },
+    "index.6a26b76bf80a18f65bef.hot-update.json": {
+      "name": "index.6a26b76bf80a18f65bef.hot-update.json",
+      "path": "/Users/angcast/Documents/GitHub/self-sustaining-cities/assets/bundles/index.6a26b76bf80a18f65bef.hot-update.json",
+      "publicPath": "http://localhost:3000/build/index.6a26b76bf80a18f65bef.hot-update.json"
+    },
+    "index.32118ebf650bd0a32ace.hot-update.js": {
+      "name": "index.32118ebf650bd0a32ace.hot-update.js",
+      "path": "/Users/angcast/Documents/GitHub/self-sustaining-cities/assets/bundles/index.32118ebf650bd0a32ace.hot-update.js",
+      "publicPath": "http://localhost:3000/build/index.32118ebf650bd0a32ace.hot-update.js"
+    },
+    "index.32118ebf650bd0a32ace.hot-update.json": {
+      "name": "index.32118ebf650bd0a32ace.hot-update.json",
+      "path": "/Users/angcast/Documents/GitHub/self-sustaining-cities/assets/bundles/index.32118ebf650bd0a32ace.hot-update.json",
+      "publicPath": "http://localhost:3000/build/index.32118ebf650bd0a32ace.hot-update.json"
+    },
+    "index.7c0e03a37f820fef1d56.hot-update.js": {
+      "name": "index.7c0e03a37f820fef1d56.hot-update.js",
+      "path": "/Users/angcast/Documents/GitHub/self-sustaining-cities/assets/bundles/index.7c0e03a37f820fef1d56.hot-update.js",
+      "publicPath": "http://localhost:3000/build/index.7c0e03a37f820fef1d56.hot-update.js"
+    },
+    "index.7c0e03a37f820fef1d56.hot-update.json": {
+      "name": "index.7c0e03a37f820fef1d56.hot-update.json",
+      "path": "/Users/angcast/Documents/GitHub/self-sustaining-cities/assets/bundles/index.7c0e03a37f820fef1d56.hot-update.json",
+      "publicPath": "http://localhost:3000/build/index.7c0e03a37f820fef1d56.hot-update.json"
+    },
+    "index.c66bb9430b38d6b09029.hot-update.js": {
+      "name": "index.c66bb9430b38d6b09029.hot-update.js",
+      "path": "/Users/angcast/Documents/GitHub/self-sustaining-cities/assets/bundles/index.c66bb9430b38d6b09029.hot-update.js",
+      "publicPath": "http://localhost:3000/build/index.c66bb9430b38d6b09029.hot-update.js"
+    },
+    "index.c66bb9430b38d6b09029.hot-update.json": {
+      "name": "index.c66bb9430b38d6b09029.hot-update.json",
+      "path": "/Users/angcast/Documents/GitHub/self-sustaining-cities/assets/bundles/index.c66bb9430b38d6b09029.hot-update.json",
+      "publicPath": "http://localhost:3000/build/index.c66bb9430b38d6b09029.hot-update.json"
+    },
+    "index.0202683d26336446f728.hot-update.js": {
+      "name": "index.0202683d26336446f728.hot-update.js",
+      "path": "/Users/angcast/Documents/GitHub/self-sustaining-cities/assets/bundles/index.0202683d26336446f728.hot-update.js",
+      "publicPath": "http://localhost:3000/build/index.0202683d26336446f728.hot-update.js"
+    },
+    "index.0202683d26336446f728.hot-update.json": {
+      "name": "index.0202683d26336446f728.hot-update.json",
+      "path": "/Users/angcast/Documents/GitHub/self-sustaining-cities/assets/bundles/index.0202683d26336446f728.hot-update.json",
+      "publicPath": "http://localhost:3000/build/index.0202683d26336446f728.hot-update.json"
+    },
+    "index.cf565361c2f754bb0569.hot-update.js": {
+      "name": "index.cf565361c2f754bb0569.hot-update.js",
+      "path": "/Users/angcast/Documents/GitHub/self-sustaining-cities/assets/bundles/index.cf565361c2f754bb0569.hot-update.js",
+      "publicPath": "http://localhost:3000/build/index.cf565361c2f754bb0569.hot-update.js"
+    },
+    "index.cf565361c2f754bb0569.hot-update.json": {
+      "name": "index.cf565361c2f754bb0569.hot-update.json",
+      "path": "/Users/angcast/Documents/GitHub/self-sustaining-cities/assets/bundles/index.cf565361c2f754bb0569.hot-update.json",
+      "publicPath": "http://localhost:3000/build/index.cf565361c2f754bb0569.hot-update.json"
+    },
+    "index.3a60d348fb3448d5a8cf.hot-update.js": {
+      "name": "index.3a60d348fb3448d5a8cf.hot-update.js",
+      "path": "/Users/angcast/Documents/GitHub/self-sustaining-cities/assets/bundles/index.3a60d348fb3448d5a8cf.hot-update.js",
+      "publicPath": "http://localhost:3000/build/index.3a60d348fb3448d5a8cf.hot-update.js"
+    },
+    "index.3a60d348fb3448d5a8cf.hot-update.json": {
+      "name": "index.3a60d348fb3448d5a8cf.hot-update.json",
+      "path": "/Users/angcast/Documents/GitHub/self-sustaining-cities/assets/bundles/index.3a60d348fb3448d5a8cf.hot-update.json",
+      "publicPath": "http://localhost:3000/build/index.3a60d348fb3448d5a8cf.hot-update.json"
+    },
+    "index.d09c56c4d1b30453d46d.hot-update.js": {
+      "name": "index.d09c56c4d1b30453d46d.hot-update.js",
+      "path": "/Users/angcast/Documents/GitHub/self-sustaining-cities/assets/bundles/index.d09c56c4d1b30453d46d.hot-update.js",
+      "publicPath": "http://localhost:3000/build/index.d09c56c4d1b30453d46d.hot-update.js"
+    },
+    "index.d09c56c4d1b30453d46d.hot-update.json": {
+      "name": "index.d09c56c4d1b30453d46d.hot-update.json",
+      "path": "/Users/angcast/Documents/GitHub/self-sustaining-cities/assets/bundles/index.d09c56c4d1b30453d46d.hot-update.json",
+      "publicPath": "http://localhost:3000/build/index.d09c56c4d1b30453d46d.hot-update.json"
+    },
+    "index.12482d0e9dfde2b0a205.hot-update.js": {
+      "name": "index.12482d0e9dfde2b0a205.hot-update.js",
+      "path": "/Users/angcast/Documents/GitHub/self-sustaining-cities/assets/bundles/index.12482d0e9dfde2b0a205.hot-update.js",
+      "publicPath": "http://localhost:3000/build/index.12482d0e9dfde2b0a205.hot-update.js"
+    },
+    "index.12482d0e9dfde2b0a205.hot-update.json": {
+      "name": "index.12482d0e9dfde2b0a205.hot-update.json",
+      "path": "/Users/angcast/Documents/GitHub/self-sustaining-cities/assets/bundles/index.12482d0e9dfde2b0a205.hot-update.json",
+      "publicPath": "http://localhost:3000/build/index.12482d0e9dfde2b0a205.hot-update.json"
+    },
+    "index.37d0be8d027678e03f02.hot-update.js": {
+      "name": "index.37d0be8d027678e03f02.hot-update.js",
+      "path": "/Users/angcast/Documents/GitHub/self-sustaining-cities/assets/bundles/index.37d0be8d027678e03f02.hot-update.js",
+      "publicPath": "http://localhost:3000/build/index.37d0be8d027678e03f02.hot-update.js"
+    },
+    "index.37d0be8d027678e03f02.hot-update.json": {
+      "name": "index.37d0be8d027678e03f02.hot-update.json",
+      "path": "/Users/angcast/Documents/GitHub/self-sustaining-cities/assets/bundles/index.37d0be8d027678e03f02.hot-update.json",
+      "publicPath": "http://localhost:3000/build/index.37d0be8d027678e03f02.hot-update.json"
+    },
+    "index.ea3d4a06641a57dea8e4.hot-update.js": {
+      "name": "index.ea3d4a06641a57dea8e4.hot-update.js",
+      "path": "/Users/angcast/Documents/GitHub/self-sustaining-cities/assets/bundles/index.ea3d4a06641a57dea8e4.hot-update.js",
+      "publicPath": "http://localhost:3000/build/index.ea3d4a06641a57dea8e4.hot-update.js"
+    },
+    "index.ea3d4a06641a57dea8e4.hot-update.json": {
+      "name": "index.ea3d4a06641a57dea8e4.hot-update.json",
+      "path": "/Users/angcast/Documents/GitHub/self-sustaining-cities/assets/bundles/index.ea3d4a06641a57dea8e4.hot-update.json",
+      "publicPath": "http://localhost:3000/build/index.ea3d4a06641a57dea8e4.hot-update.json"
+    },
+    "index.912f674e83a65937629f.hot-update.js": {
+      "name": "index.912f674e83a65937629f.hot-update.js",
+      "path": "/Users/angcast/Documents/GitHub/self-sustaining-cities/assets/bundles/index.912f674e83a65937629f.hot-update.js",
+      "publicPath": "http://localhost:3000/build/index.912f674e83a65937629f.hot-update.js"
+    },
+    "index.912f674e83a65937629f.hot-update.json": {
+      "name": "index.912f674e83a65937629f.hot-update.json",
+      "path": "/Users/angcast/Documents/GitHub/self-sustaining-cities/assets/bundles/index.912f674e83a65937629f.hot-update.json",
+      "publicPath": "http://localhost:3000/build/index.912f674e83a65937629f.hot-update.json"
+    },
+    "index.690cd17dd4f1057da4bc.hot-update.js": {
+      "name": "index.690cd17dd4f1057da4bc.hot-update.js",
+      "path": "/Users/angcast/Documents/GitHub/self-sustaining-cities/assets/bundles/index.690cd17dd4f1057da4bc.hot-update.js",
+      "publicPath": "http://localhost:3000/build/index.690cd17dd4f1057da4bc.hot-update.js"
+    },
+    "index.690cd17dd4f1057da4bc.hot-update.json": {
+      "name": "index.690cd17dd4f1057da4bc.hot-update.json",
+      "path": "/Users/angcast/Documents/GitHub/self-sustaining-cities/assets/bundles/index.690cd17dd4f1057da4bc.hot-update.json",
+      "publicPath": "http://localhost:3000/build/index.690cd17dd4f1057da4bc.hot-update.json"
+    },
+    "index.497c17f36d78c23e277d.hot-update.js": {
+      "name": "index.497c17f36d78c23e277d.hot-update.js",
+      "path": "/Users/angcast/Documents/GitHub/self-sustaining-cities/assets/bundles/index.497c17f36d78c23e277d.hot-update.js",
+      "publicPath": "http://localhost:3000/build/index.497c17f36d78c23e277d.hot-update.js"
+    },
+    "index.497c17f36d78c23e277d.hot-update.json": {
+      "name": "index.497c17f36d78c23e277d.hot-update.json",
+      "path": "/Users/angcast/Documents/GitHub/self-sustaining-cities/assets/bundles/index.497c17f36d78c23e277d.hot-update.json",
+      "publicPath": "http://localhost:3000/build/index.497c17f36d78c23e277d.hot-update.json"
+    },
+    "index.d5d5a70c6b2fc038b20f.hot-update.js": {
+      "name": "index.d5d5a70c6b2fc038b20f.hot-update.js",
+      "path": "/Users/angcast/Documents/GitHub/self-sustaining-cities/assets/bundles/index.d5d5a70c6b2fc038b20f.hot-update.js",
+      "publicPath": "http://localhost:3000/build/index.d5d5a70c6b2fc038b20f.hot-update.js"
+    },
+    "index.d5d5a70c6b2fc038b20f.hot-update.json": {
+      "name": "index.d5d5a70c6b2fc038b20f.hot-update.json",
+      "path": "/Users/angcast/Documents/GitHub/self-sustaining-cities/assets/bundles/index.d5d5a70c6b2fc038b20f.hot-update.json",
+      "publicPath": "http://localhost:3000/build/index.d5d5a70c6b2fc038b20f.hot-update.json"
+    },
+    "index.b6e8df832fa5890bfdbf.hot-update.js": {
+      "name": "index.b6e8df832fa5890bfdbf.hot-update.js",
+      "path": "/Users/angcast/Documents/GitHub/self-sustaining-cities/assets/bundles/index.b6e8df832fa5890bfdbf.hot-update.js",
+      "publicPath": "http://localhost:3000/build/index.b6e8df832fa5890bfdbf.hot-update.js"
+    },
+    "index.b6e8df832fa5890bfdbf.hot-update.json": {
+      "name": "index.b6e8df832fa5890bfdbf.hot-update.json",
+      "path": "/Users/angcast/Documents/GitHub/self-sustaining-cities/assets/bundles/index.b6e8df832fa5890bfdbf.hot-update.json",
+      "publicPath": "http://localhost:3000/build/index.b6e8df832fa5890bfdbf.hot-update.json"
+    },
+    "index.6cc6f4bea662666a9963.hot-update.js": {
+      "name": "index.6cc6f4bea662666a9963.hot-update.js",
+      "path": "/Users/angcast/Documents/GitHub/self-sustaining-cities/assets/bundles/index.6cc6f4bea662666a9963.hot-update.js",
+      "publicPath": "http://localhost:3000/build/index.6cc6f4bea662666a9963.hot-update.js"
+    },
+    "index.6cc6f4bea662666a9963.hot-update.json": {
+      "name": "index.6cc6f4bea662666a9963.hot-update.json",
+      "path": "/Users/angcast/Documents/GitHub/self-sustaining-cities/assets/bundles/index.6cc6f4bea662666a9963.hot-update.json",
+      "publicPath": "http://localhost:3000/build/index.6cc6f4bea662666a9963.hot-update.json"
+    },
+    "index.dc4d75b998b880cab37a.hot-update.js": {
+      "name": "index.dc4d75b998b880cab37a.hot-update.js",
+      "path": "/Users/angcast/Documents/GitHub/self-sustaining-cities/assets/bundles/index.dc4d75b998b880cab37a.hot-update.js",
+      "publicPath": "http://localhost:3000/build/index.dc4d75b998b880cab37a.hot-update.js"
+    },
+    "index.dc4d75b998b880cab37a.hot-update.json": {
+      "name": "index.dc4d75b998b880cab37a.hot-update.json",
+      "path": "/Users/angcast/Documents/GitHub/self-sustaining-cities/assets/bundles/index.dc4d75b998b880cab37a.hot-update.json",
+      "publicPath": "http://localhost:3000/build/index.dc4d75b998b880cab37a.hot-update.json"
+    },
+    "index.2c30f9d9975cf9c66c96.hot-update.js": {
+      "name": "index.2c30f9d9975cf9c66c96.hot-update.js",
+      "path": "/Users/angcast/Documents/GitHub/self-sustaining-cities/assets/bundles/index.2c30f9d9975cf9c66c96.hot-update.js",
+      "publicPath": "http://localhost:3000/build/index.2c30f9d9975cf9c66c96.hot-update.js"
+    },
+    "index.2c30f9d9975cf9c66c96.hot-update.json": {
+      "name": "index.2c30f9d9975cf9c66c96.hot-update.json",
+      "path": "/Users/angcast/Documents/GitHub/self-sustaining-cities/assets/bundles/index.2c30f9d9975cf9c66c96.hot-update.json",
+      "publicPath": "http://localhost:3000/build/index.2c30f9d9975cf9c66c96.hot-update.json"
+    },
+    "index.d04080379900ae639884.hot-update.js": {
+      "name": "index.d04080379900ae639884.hot-update.js",
+      "path": "/Users/angcast/Documents/GitHub/self-sustaining-cities/assets/bundles/index.d04080379900ae639884.hot-update.js",
+      "publicPath": "http://localhost:3000/build/index.d04080379900ae639884.hot-update.js"
+    },
+    "index.d04080379900ae639884.hot-update.json": {
+      "name": "index.d04080379900ae639884.hot-update.json",
+      "path": "/Users/angcast/Documents/GitHub/self-sustaining-cities/assets/bundles/index.d04080379900ae639884.hot-update.json",
+      "publicPath": "http://localhost:3000/build/index.d04080379900ae639884.hot-update.json"
+    },
+    "index.3c4d800e343a1feceb36.hot-update.js": {
+      "name": "index.3c4d800e343a1feceb36.hot-update.js",
+      "path": "/Users/angcast/Documents/GitHub/self-sustaining-cities/assets/bundles/index.3c4d800e343a1feceb36.hot-update.js",
+      "publicPath": "http://localhost:3000/build/index.3c4d800e343a1feceb36.hot-update.js"
+    },
+    "index.3c4d800e343a1feceb36.hot-update.json": {
+      "name": "index.3c4d800e343a1feceb36.hot-update.json",
+      "path": "/Users/angcast/Documents/GitHub/self-sustaining-cities/assets/bundles/index.3c4d800e343a1feceb36.hot-update.json",
+      "publicPath": "http://localhost:3000/build/index.3c4d800e343a1feceb36.hot-update.json"
+    },
+    "index.29552fd6259d6d869caa.hot-update.js": {
+      "name": "index.29552fd6259d6d869caa.hot-update.js",
+      "path": "/Users/angcast/Documents/GitHub/self-sustaining-cities/assets/bundles/index.29552fd6259d6d869caa.hot-update.js",
+      "publicPath": "http://localhost:3000/build/index.29552fd6259d6d869caa.hot-update.js"
+    },
+    "index.29552fd6259d6d869caa.hot-update.json": {
+      "name": "index.29552fd6259d6d869caa.hot-update.json",
+      "path": "/Users/angcast/Documents/GitHub/self-sustaining-cities/assets/bundles/index.29552fd6259d6d869caa.hot-update.json",
+      "publicPath": "http://localhost:3000/build/index.29552fd6259d6d869caa.hot-update.json"
+    },
+    "index.f3826c6c6a765af7040a.hot-update.js": {
+      "name": "index.f3826c6c6a765af7040a.hot-update.js",
+      "path": "/Users/angcast/Documents/GitHub/self-sustaining-cities/assets/bundles/index.f3826c6c6a765af7040a.hot-update.js",
+      "publicPath": "http://localhost:3000/build/index.f3826c6c6a765af7040a.hot-update.js"
+    },
+    "index.f3826c6c6a765af7040a.hot-update.json": {
+      "name": "index.f3826c6c6a765af7040a.hot-update.json",
+      "path": "/Users/angcast/Documents/GitHub/self-sustaining-cities/assets/bundles/index.f3826c6c6a765af7040a.hot-update.json",
+      "publicPath": "http://localhost:3000/build/index.f3826c6c6a765af7040a.hot-update.json"
+    },
+    "index.1b19917e7662a82fdc4e.hot-update.js": {
+      "name": "index.1b19917e7662a82fdc4e.hot-update.js",
+      "path": "/Users/angcast/Documents/GitHub/self-sustaining-cities/assets/bundles/index.1b19917e7662a82fdc4e.hot-update.js",
+      "publicPath": "http://localhost:3000/build/index.1b19917e7662a82fdc4e.hot-update.js"
+    },
+    "index.1b19917e7662a82fdc4e.hot-update.json": {
+      "name": "index.1b19917e7662a82fdc4e.hot-update.json",
+      "path": "/Users/angcast/Documents/GitHub/self-sustaining-cities/assets/bundles/index.1b19917e7662a82fdc4e.hot-update.json",
+      "publicPath": "http://localhost:3000/build/index.1b19917e7662a82fdc4e.hot-update.json"
+    },
+    "index.1b8c9253ab7973d49f53.hot-update.js": {
+      "name": "index.1b8c9253ab7973d49f53.hot-update.js",
+      "path": "/Users/angcast/Documents/GitHub/self-sustaining-cities/assets/bundles/index.1b8c9253ab7973d49f53.hot-update.js",
+      "publicPath": "http://localhost:3000/build/index.1b8c9253ab7973d49f53.hot-update.js"
+    },
+    "index.1b8c9253ab7973d49f53.hot-update.json": {
+      "name": "index.1b8c9253ab7973d49f53.hot-update.json",
+      "path": "/Users/angcast/Documents/GitHub/self-sustaining-cities/assets/bundles/index.1b8c9253ab7973d49f53.hot-update.json",
+      "publicPath": "http://localhost:3000/build/index.1b8c9253ab7973d49f53.hot-update.json"
+    },
+    "index.8a5a595cdf3e1a0014d0.hot-update.js": {
+      "name": "index.8a5a595cdf3e1a0014d0.hot-update.js",
+      "path": "/Users/angcast/Documents/GitHub/self-sustaining-cities/assets/bundles/index.8a5a595cdf3e1a0014d0.hot-update.js",
+      "publicPath": "http://localhost:3000/build/index.8a5a595cdf3e1a0014d0.hot-update.js"
+    },
+    "index.8a5a595cdf3e1a0014d0.hot-update.json": {
+      "name": "index.8a5a595cdf3e1a0014d0.hot-update.json",
+      "path": "/Users/angcast/Documents/GitHub/self-sustaining-cities/assets/bundles/index.8a5a595cdf3e1a0014d0.hot-update.json",
+      "publicPath": "http://localhost:3000/build/index.8a5a595cdf3e1a0014d0.hot-update.json"
+    },
+    "index.7b7b02a6f0d351b08492.hot-update.js": {
+      "name": "index.7b7b02a6f0d351b08492.hot-update.js",
+      "path": "/Users/angcast/Documents/GitHub/self-sustaining-cities/assets/bundles/index.7b7b02a6f0d351b08492.hot-update.js",
+      "publicPath": "http://localhost:3000/build/index.7b7b02a6f0d351b08492.hot-update.js"
+    },
+    "index.7b7b02a6f0d351b08492.hot-update.json": {
+      "name": "index.7b7b02a6f0d351b08492.hot-update.json",
+      "path": "/Users/angcast/Documents/GitHub/self-sustaining-cities/assets/bundles/index.7b7b02a6f0d351b08492.hot-update.json",
+      "publicPath": "http://localhost:3000/build/index.7b7b02a6f0d351b08492.hot-update.json"
+    },
+    "index.a4619da42144e6c2dff8.hot-update.js": {
+      "name": "index.a4619da42144e6c2dff8.hot-update.js",
+      "path": "/Users/angcast/Documents/GitHub/self-sustaining-cities/assets/bundles/index.a4619da42144e6c2dff8.hot-update.js",
+      "publicPath": "http://localhost:3000/build/index.a4619da42144e6c2dff8.hot-update.js"
+    },
+    "index.a4619da42144e6c2dff8.hot-update.json": {
+      "name": "index.a4619da42144e6c2dff8.hot-update.json",
+      "path": "/Users/angcast/Documents/GitHub/self-sustaining-cities/assets/bundles/index.a4619da42144e6c2dff8.hot-update.json",
+      "publicPath": "http://localhost:3000/build/index.a4619da42144e6c2dff8.hot-update.json"
+    },
+    "index.5109eb9946f485d19dbd.hot-update.js": {
+      "name": "index.5109eb9946f485d19dbd.hot-update.js",
+      "path": "/Users/angcast/Documents/GitHub/self-sustaining-cities/assets/bundles/index.5109eb9946f485d19dbd.hot-update.js",
+      "publicPath": "http://localhost:3000/build/index.5109eb9946f485d19dbd.hot-update.js"
+    },
+    "index.5109eb9946f485d19dbd.hot-update.json": {
+      "name": "index.5109eb9946f485d19dbd.hot-update.json",
+      "path": "/Users/angcast/Documents/GitHub/self-sustaining-cities/assets/bundles/index.5109eb9946f485d19dbd.hot-update.json",
+      "publicPath": "http://localhost:3000/build/index.5109eb9946f485d19dbd.hot-update.json"
+    },
+    "index.806151e2acbe4e01ac50.hot-update.js": {
+      "name": "index.806151e2acbe4e01ac50.hot-update.js",
+      "path": "/Users/angcast/Documents/GitHub/self-sustaining-cities/assets/bundles/index.806151e2acbe4e01ac50.hot-update.js",
+      "publicPath": "http://localhost:3000/build/index.806151e2acbe4e01ac50.hot-update.js"
+    },
+    "index.806151e2acbe4e01ac50.hot-update.json": {
+      "name": "index.806151e2acbe4e01ac50.hot-update.json",
+      "path": "/Users/angcast/Documents/GitHub/self-sustaining-cities/assets/bundles/index.806151e2acbe4e01ac50.hot-update.json",
+      "publicPath": "http://localhost:3000/build/index.806151e2acbe4e01ac50.hot-update.json"
+    },
+    "index.73398b0ede64bb2e697d.hot-update.js": {
+      "name": "index.73398b0ede64bb2e697d.hot-update.js",
+      "path": "/Users/angcast/Documents/GitHub/self-sustaining-cities/assets/bundles/index.73398b0ede64bb2e697d.hot-update.js",
+      "publicPath": "http://localhost:3000/build/index.73398b0ede64bb2e697d.hot-update.js"
+    },
+    "index.73398b0ede64bb2e697d.hot-update.json": {
+      "name": "index.73398b0ede64bb2e697d.hot-update.json",
+      "path": "/Users/angcast/Documents/GitHub/self-sustaining-cities/assets/bundles/index.73398b0ede64bb2e697d.hot-update.json",
+      "publicPath": "http://localhost:3000/build/index.73398b0ede64bb2e697d.hot-update.json"
+    },
+    "index.35d7b581bdf0f5f662fd.hot-update.js": {
+      "name": "index.35d7b581bdf0f5f662fd.hot-update.js",
+      "path": "/Users/angcast/Documents/GitHub/self-sustaining-cities/assets/bundles/index.35d7b581bdf0f5f662fd.hot-update.js",
+      "publicPath": "http://localhost:3000/build/index.35d7b581bdf0f5f662fd.hot-update.js"
+    },
+    "index.35d7b581bdf0f5f662fd.hot-update.json": {
+      "name": "index.35d7b581bdf0f5f662fd.hot-update.json",
+      "path": "/Users/angcast/Documents/GitHub/self-sustaining-cities/assets/bundles/index.35d7b581bdf0f5f662fd.hot-update.json",
+      "publicPath": "http://localhost:3000/build/index.35d7b581bdf0f5f662fd.hot-update.json"
+    },
+    "index.ed3f7266a8a039de6421.hot-update.js": {
+      "name": "index.ed3f7266a8a039de6421.hot-update.js",
+      "path": "/Users/angcast/Documents/GitHub/self-sustaining-cities/assets/bundles/index.ed3f7266a8a039de6421.hot-update.js",
+      "publicPath": "http://localhost:3000/build/index.ed3f7266a8a039de6421.hot-update.js"
+    },
+    "index.ed3f7266a8a039de6421.hot-update.json": {
+      "name": "index.ed3f7266a8a039de6421.hot-update.json",
+      "path": "/Users/angcast/Documents/GitHub/self-sustaining-cities/assets/bundles/index.ed3f7266a8a039de6421.hot-update.json",
+      "publicPath": "http://localhost:3000/build/index.ed3f7266a8a039de6421.hot-update.json"
+    },
+    "index.c58b8dc000e6d9c50afc.hot-update.js": {
+      "name": "index.c58b8dc000e6d9c50afc.hot-update.js",
+      "path": "/Users/angcast/Documents/GitHub/self-sustaining-cities/assets/bundles/index.c58b8dc000e6d9c50afc.hot-update.js",
+      "publicPath": "http://localhost:3000/build/index.c58b8dc000e6d9c50afc.hot-update.js"
+    },
+    "index.c58b8dc000e6d9c50afc.hot-update.json": {
+      "name": "index.c58b8dc000e6d9c50afc.hot-update.json",
+      "path": "/Users/angcast/Documents/GitHub/self-sustaining-cities/assets/bundles/index.c58b8dc000e6d9c50afc.hot-update.json",
+      "publicPath": "http://localhost:3000/build/index.c58b8dc000e6d9c50afc.hot-update.json"
     }
   },
   "chunks": {
     "index": [
       "index.bundle.css",
       "index.bundle.js",
-      "index.d648f6827452865d402f.hot-update.js"
+      "index.c58b8dc000e6d9c50afc.hot-update.js"
     ]
   },
   "publicPath": "http://localhost:3000/build/",
-  "error": "ModuleBuildError",
-  "message": "Module build failed (from ./node_modules/babel-loader/lib/index.js):\nSyntaxError: /Users/angcast/Documents/GitHub/self-sustaining-cities/frontend/components/DocSearch.js: Unexpected token (14:1)\n\n  12 |\n  13 |     for (let doc of documents) {\n> 14 | <<<<<<< HEAD\n     |  ^\n  15 |         titles.push(doc.publication + \" \" + doc.date);\n  16 | =======\n  17 |         titles.push(doc.publication + \", \" + doc.date);\n    at Object._raise (/Users/angcast/Documents/GitHub/self-sustaining-cities/node_modules/@babel/parser/lib/index.js:506:17)\n    at Object.raiseWithData (/Users/angcast/Documents/GitHub/self-sustaining-cities/node_modules/@babel/parser/lib/index.js:499:17)\n    at Object.raise (/Users/angcast/Documents/GitHub/self-sustaining-cities/node_modules/@babel/parser/lib/index.js:460:17)\n    at Object.unexpected (/Users/angcast/Documents/GitHub/self-sustaining-cities/node_modules/@babel/parser/lib/index.js:3699:16)\n    at Object.jsxParseIdentifier (/Users/angcast/Documents/GitHub/self-sustaining-cities/node_modules/@babel/parser/lib/index.js:7451:12)\n    at Object.jsxParseNamespacedName (/Users/angcast/Documents/GitHub/self-sustaining-cities/node_modules/@babel/parser/lib/index.js:7461:23)\n    at Object.jsxParseElementName (/Users/angcast/Documents/GitHub/self-sustaining-cities/node_modules/@babel/parser/lib/index.js:7472:21)\n    at Object.jsxParseOpeningElementAt (/Users/angcast/Documents/GitHub/self-sustaining-cities/node_modules/@babel/parser/lib/index.js:7569:22)\n    at Object.jsxParseElementAt (/Users/angcast/Documents/GitHub/self-sustaining-cities/node_modules/@babel/parser/lib/index.js:7602:33)\n    at Object.jsxParseElement (/Users/angcast/Documents/GitHub/self-sustaining-cities/node_modules/@babel/parser/lib/index.js:7685:17)"
+  "error": "ESLintError",
+  "message": "\n/Users/angcast/Documents/GitHub/self-sustaining-cities/frontend/components/TimelinePills.js\n  22:25  error  No duplicate props allowed  react/jsx-no-duplicate-props\n\n✖ 1 problem (1 error, 0 warnings)\n"
 }

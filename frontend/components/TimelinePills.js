@@ -1,27 +1,25 @@
 import React from "react";
 import * as PropTypes from "prop-types";
 import {Badge} from "react-bootstrap";
-// import {Card} from "react-bootstrap";
-// import {TimelineContext} from "../contexts/TimelineContext";
 
 const TimelinePills = ({document}) => {
-    const documentEntities = document.entities;
-    const pillLabels = documentEntities.people
-        .concat(documentEntities.places.concat(documentEntities.events));
+    const getEntities = (entities) => {
+        return entities.places.concat(entities.people).concat(entities.events);
+    };
+    let documentEntities = document.articles
+        .reduce((allEntities, article) => allEntities.concat(getEntities(article.entities)), []);
+    // randomize the entities and get the first 5
+    documentEntities = documentEntities.sort(() => Math.random() - 0.5).slice(0,5);
     return (
-        <div className="pills">
-            { pillLabels && pillLabels.map((label, index) =>
-                <>
-                    <Badge
-                        key={`${label}_${index}`}
-                        bg="success"
-                        className="badge-size"
-                    >
+        <>
+            { documentEntities && documentEntities.map((label, index) =>
+                <div key={`${label}_${index}`}>
+                    <Badge pill className="bg-secondary text-light">
                         {label}
                     </Badge>{" "}
-                </>)
+                </div>)
             }
-        </div>
+        </>
     );
 };
 
