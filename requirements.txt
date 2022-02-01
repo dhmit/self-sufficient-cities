@@ -1,8 +1,9 @@
 asgiref==3.3.1
 Django==3.1.5
 django-cors-headers==3.6.0
+django-extensions==3.1.5
 django-webpack-loader==1.0.0
 djangorestframework==3.12.2
+geopy==2.2.0
 sqlparse==0.4.1
 tqdm==4.61.1
-django-extensions==3.1.5

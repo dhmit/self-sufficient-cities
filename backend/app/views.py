@@ -24,6 +24,7 @@ context = {
 }
 """
 import json
+
 from django.shortcuts import render
 from django.http import JsonResponse
 from rest_framework import status
@@ -31,6 +32,7 @@ from rest_framework.decorators import api_view
 from rest_framework.response import Response
 from .models import Person, Event, Location
 from .serializers import PersonSerializer, EventSerializer, LocationSerializer
+from .helpers import address_to_coordinates
 
 
 def index(request):
@@ -288,6 +290,57 @@ def get_census_data(request):
         census_data = json.load(f)
 
     return JsonResponse(census_data)
+
+
+def get_addresses(request):
+    """
+    API endpoint for getting addresses from articles data
+    """
+    with open("app/data/articles.json", encoding="utf-8") as f:
+        article_data = json.load(f)
+
+    addresses = []
+    for article in article_data:
+        addresses.extend(article_data[article]["entities"]["places"])
+
+    return JsonResponse({"addresses": addresses})
+
+
+def get_latlon(request, address_str):
+    """Getting latitude and longitude from address"""
+    coordinates = address_to_coordinates(address_str)
+    return JsonResponse({"coordinates": coordinates})
+
+
+def get_all_latlon(request):
+    """Get all addresses from articles, write latitude and longitude to file"""
+    with open("app/data/documents.json", encoding="utf-8") as f:
+        documents = json.load(f)
+
+    addresses = []
+    for articles in documents["documents"]:
+        year = int(articles["date"][-4:])
+
+        for article in articles["articles"]:
+            article_addresses = article["entities"]["places"]
+            for address in article_addresses:
+                new_address = {"address": address,
+                               "year": year,
+                               "coordinates": address_to_coordinates(address)}
+                addresses.append(new_address)
+
+    with open("app/data/address_data.json", "w", encoding="utf-8") as outfile:
+        json.dump(addresses, outfile)
+
+    return JsonResponse({"address_lat_lon": addresses})
+
+
+def get_address_data(request):
+    """Returning all addresses from file"""
+    with open("app/data/address_data.json", encoding="utf-8") as f:
+        address_data = json.load(f)
+
+    return JsonResponse({"address_data": address_data})
 
 
 def get_documents_data(request):
