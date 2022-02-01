@@ -24,14 +24,15 @@ context = {
 }
 """
 import json
+
 from django.shortcuts import render
 from django.http import JsonResponse
-from geopy.geocoders import Nominatim
 from rest_framework import status
 from rest_framework.decorators import api_view
 from rest_framework.response import Response
 from .models import Person, Event, Location
 from .serializers import PersonSerializer, EventSerializer, LocationSerializer
+from .helpers import address_to_coordinates
 
 
 def index(request):
@@ -319,35 +320,21 @@ def get_latlon(request, address_str):
 
 
 def get_all_latlon(request):
-    # pylint: disable-msg=W0703
     """Get all addresses from articles, write latitude and longitude to file"""
-    with open("app/data/articles.json", encoding="utf-8") as f:
-        article_data = json.load(f)
+    with open("app/data/documents.json", encoding="utf-8") as f:
+        documents = json.load(f)
 
     addresses = []
-    for article in article_data:
-        article_addresses = article_data[article]["entities"]["places"]
+    for articles in documents["documents"]:
+        year = int(articles["date"][-4:])
 
-        for address in article_addresses:
-            app = Nominatim(user_agent="tutorial")
-            full_addr = address + ", Washington, D.C."
-            new_address = {
-                "address": full_addr,
-                "coordinates": [],
-            }
-            lat = ""
-            lon = ""
-            print(full_addr, "address")
-            try:
-                location = app.geocode(full_addr).raw
-                lat = location["lat"]
-                lon = location["lon"]
-            except (AttributeError, Exception):
-                pass
-
-            new_address["coordinates"] = [lat, lon]
-
-            addresses.append(new_address)
+        for article in articles["articles"]:
+            article_addresses = article["entities"]["places"]
+            for address in article_addresses:
+                new_address = {"address": address,
+                               "year": year,
+                               "coordinates": address_to_coordinates(address)}
+                addresses.append(new_address)
 
     with open("app/data/address_data.json", "w", encoding="utf-8") as outfile:
         json.dump(addresses, outfile)
