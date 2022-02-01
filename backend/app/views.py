@@ -308,15 +308,8 @@ def get_addresses(request):
 
 def get_latlon(request, address_str):
     """Getting latitude and longitude from address"""
-    parsed_address = address_str.replace("+", " ")
-    app = Nominatim(user_agent="tutorial")
-
-    full_addr = parsed_address + ", Washington, D.C."
-    location = app.geocode(full_addr).raw
-    lat = location["lat"]
-    lon = location["lon"]
-
-    return JsonResponse({"coordinates": [float(lat), float(lon)]})
+    coordinates = address_to_coordinates(address_str)
+    return JsonResponse({"coordinates": coordinates})
 
 
 def get_all_latlon(request):
