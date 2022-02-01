@@ -5,3 +5,4 @@ django-webpack-loader==1.0.0
 djangorestframework==3.12.2
 sqlparse==0.4.1
 tqdm==4.61.1
+django-extensions==3.1.5

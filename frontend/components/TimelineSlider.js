@@ -1,37 +1,51 @@
-import React, {useContext} from "react";
+import React, {useEffect, useContext, useState} from "react";
 import Slider from "rc-slider";
-import {TimelineContext} from "../contexts/TimelineContext";
+import {Interval, SORT_TYPES, TimelineContext} from "../contexts/TimelineContext";
 import "rc-slider/assets/index.css";
-
-/**
- * Gets the marks of the slider separated by 5 year intervals.
- * @param minYear the minimum year of the timeline
- * @param maxYear the maximum year of the timeline
- * @returns {{}} the marks starting at minYear and ending in maxYear
- */
-function getMarks(minYear, maxYear) {
-    const marks = {};
-    for (let i = minYear; i < maxYear + 1; i += 5) {
-        if (i === minYear || i === maxYear) {
-            marks[i] = <strong>{i}</strong>;
-        }
-        else {
-            marks[i] = i;
-        }
-    }
-    return marks;
-}
-
-function log(value) {
-    const leftVal = value[0];
-    const rightVal = value[1];
-    console.log([leftVal, rightVal]);
-}
 
 export const TimelineSlider = () => {
     const state = useContext(TimelineContext);
-    const marks = getMarks(state.minYear, state.maxYear);
+    const isReverseSorting = state.sortType === SORT_TYPES.REVERSE_CHRONOLOGICAL;
 
+    /**
+     * Gets the marks of the slider
+     * 
+     * @returns {number: ReactNode} the translated slider marks from timelineIntervals
+     */
+    const getMarks = () => {
+        const marks = {};
+        for (const [i, interval] of state.timelineIntervals.entries()) {
+            const precedingLabel = isReverseSorting ? interval.end : interval.start;
+            const finalLabel = isReverseSorting ? interval.start : interval.end;
+            if (i !== state.timelineIntervals.length - 1) {
+                marks[precedingLabel] = <strong>{precedingLabel}</strong>;
+            } else {
+                marks[precedingLabel] = <strong>{precedingLabel}</strong>;
+                marks[finalLabel] = <strong>{finalLabel}</strong>;
+            }
+        }
+        return marks;
+    };
+
+    const marks = getMarks();
+    const [sliderValue, setSliderValue] = useState([]);
+
+    useEffect(() => {
+        updateSliderValues();
+    }, [state.intervalSelected.start, state.intervalSelected.end]);
+
+    const handleSliderChange = (selectedYears) => {
+        setSliderValue(selectedYears);
+        // Update interval selected context
+        const newStartYear = selectedYears[0];
+        const newEndYear = selectedYears[1];
+        const newIntervalSelected = new Interval(newStartYear, newEndYear);
+        state.setIntervalSelected(newIntervalSelected);
+    };
+
+    const updateSliderValues = () => {
+        setSliderValue([state.intervalSelected.start, state.intervalSelected.end]);
+    };
 
     return (
         <Slider.Range
@@ -41,8 +55,10 @@ export const TimelineSlider = () => {
             dots={true}
             marks={marks}
             step={1}
-            onChange={log}
-            value = {[state.intervalSelected.start, state.intervalSelected.end]}
+            reverse={isReverseSorting}
+            onChange={handleSliderChange}
+            value={sliderValue}
+            pushable={true}
         />
     );
 };

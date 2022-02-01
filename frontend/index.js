@@ -6,11 +6,11 @@ import Base from "./components/global/Base";
 import ErrorNotFoundComponent from "./components/ErrorNotFoundComponent";
 import ExampleId from "./components/ExampleId";
 import Home from "./components/Home";
-import Map from "./components/Map";
 import {Timeline} from "./components/Timeline";
 import MapMicro from "./components/MapMicro";
 import MapMacro from "./components/MapMacro";
 import TimelineTest from "./components/TimelineTest";
+import API from "./components/API";
 
 const COMPONENT_PROPS_RAW = document.getElementById("component_props").text;
 const COMPONENT_NAME_RAW = document.getElementById("component_name").text;
@@ -21,11 +21,11 @@ const COMPONENTS = {
     ErrorNotFoundComponent,
     ExampleId,
     Home,
-    Map,
     Timeline,
     MapMicro,
     MapMacro,
-    TimelineTest
+    TimelineTest,
+    API
 };
 
 const PreselectedComponent = COMPONENTS[COMPONENT_NAME || "ErrorNotFoundComponent"];

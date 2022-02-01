@@ -1,6 +1,4 @@
-import React from "react";
-
-let JsonData = [
+[
     {
         "tract78": "All classes"
     },
@@ -614,41 +612,4 @@ let JsonData = [
         "male": 4,
         "female": 0
     }
-];
-
-function Table2(){
-    const DisplayData=JsonData.map(
-        (info)=>{
-            return(
-                <tr key={info.count}>
-                    <td>{info.tract78}</td>
-                    <td>{info.male}</td>
-                    <td>
-                        {info.female}
-                    </td>
-                    <td> {info.total}</td>
-                </tr>
-            );
-        }
-    );
-    return(
-        <div>
-            <table className="table formatting">
-                <thead>
-                    <tr>
-                        <th>tract 78</th>
-                        <th>Male</th>
-                        <th>Female </th>
-                        <th>Total</th>
-                    </tr>
-                </thead>
-                <tbody>
-                    {DisplayData}
-                </tbody>
-            </table>
-
-        </div>
-    );
-}
-
-export default Table2;
+]

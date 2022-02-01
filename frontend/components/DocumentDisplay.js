@@ -18,17 +18,19 @@ const DocumentDisplay = ({document}) => {
 
 
     // TODO: call magnifying feature with document image from backend
-    return(
+    return (
         <>
-            <Magnifier className="doc-image" src={document.image ? document.image : TEST_IMAGE}
+            <Magnifier className="doc-image"
+                src={document.imageRef ? document.imageRef : TEST_IMAGE}
                 mgShape='square' mgHeight={300} mgWidth={300}
                 mgMouseOffsetX={-50} mgMouseOffsetY={50} zoomFactor={Scale}/>
             <h5>Magnification Scale: {Scale.toFixed(2)}</h5>
             <button className="btn btn-outline-secondary mx-2" type="button"
-                onClick={handleIncrement}>Increase</button>
+                onClick={handleIncrement}>Increase
+            </button>
             <button className="btn btn-outline-secondary" type="button"
-                onClick={handleDecrement}>Decrease </button>
-
+                onClick={handleDecrement}>Decrease
+            </button>
         </>
     );
 };
