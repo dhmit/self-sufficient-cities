@@ -306,6 +306,7 @@ def get_addresses(request):
 
 
 def get_latlon(request, address_str):
+    """Getting latitude and longitude from address"""
     parsed_address = address_str.replace("+", " ")
     app = Nominatim(user_agent="tutorial")
 
@@ -318,6 +319,8 @@ def get_latlon(request, address_str):
 
 
 def get_all_latlon(request):
+    # pylint: disable-msg=W0703
+    """Get all addresses from articles, write latitude and longitude to file"""
     with open("app/data/articles.json", encoding="utf-8") as f:
         article_data = json.load(f)
 
@@ -346,13 +349,14 @@ def get_all_latlon(request):
 
             addresses.append(new_address)
 
-    with open("app/data/address_data.json", "w") as outfile:
+    with open("app/data/address_data.json", "w", encoding="utf-8") as outfile:
         json.dump(addresses, outfile)
 
     return JsonResponse({"address_lat_lon": addresses})
 
 
 def get_address_data(request):
+    """Returning all addresses from file"""
     with open("app/data/address_data.json", encoding="utf-8") as f:
         address_data = json.load(f)
 
