@@ -15,7 +15,10 @@ Including another URL configuration
     2. Add a URL to urlpatterns:  path('blog/', include('blog.urls'))
 """
 from django.contrib import admin
-from django.urls import path
+from django.urls import path, re_path
+from drf_yasg.views import get_schema_view
+from drf_yasg import openapi
+from rest_framework.urlpatterns import format_suffix_patterns
 
 try:
     from ..app import views
@@ -29,26 +32,48 @@ urlpatterns = [
     path('', views.index),
     path('example/', views.example),
     path('example/<example_id>', views.example),
-    path('api/create_person', views.create_person),
-    path('api/create_event', views.create_event),
-    path('api/create_location', views.create_location),
-    path('api/get_people', views.get_people),
-    path('api/get_events', views.get_events),
-    path('api/get_people_from_event/<event_id>', views.get_people_from_event),
-    path('api/get_locations_from_event/<event_id>', views.get_locations_from_event),
-    path('api/update_people_for_event/<event_id>', views.update_people_for_event),
-    path('api/update_locations_for_event/<event_id>', views.update_locations_for_event),
-    path('api/', views.api_page),
     path('map/', views.map_page),
     path('timeline/', views.timeline_page, name='timeline'),
     path('map-macro/', views.map_macro_page),
     path('map-micro/', views.map_micro_page),
     path('timeline-test', views.timeline_test),
+]
+
+api_urls = [
+    path('api/people/<int:person_id>', views.person, name="api_person"),
+    path('api/people', views.people, name="api_people"),
+    path('api/events/<int:event_id>', views.event, name="api_event"),
+    path('api/events/<int:event_id>/people', views.people_in_event, name="api_people_in_event"),
+    path('api/events/<int:event_id>/locations', views.locations_in_event,
+         name="api_locations_in_event"),
+    path('api/events', views.events, name="api_events"),
+    path('api/locations/<int:location_id>', views.location, name="api_location"),
+    path('api/locations', views.locations, name="api_locations"),
     path('api/get_census_data/', views.get_census_data),
     path('api/get_addresses/', views.get_addresses),
     path('api/get_latlon/<address_str>', views.get_latlon),
     path('api/get_latlon/', views.get_all_latlon),
     path('api/get_address_data/', views.get_address_data),
     path('api/documents/', views.get_documents_data),
-    path('api/get_table_data/<str:table_name>', views.get_table_data)
+    path('api/get_table_data/<str:table_name>', views.get_table_data),
 ]
+
+api_urls = format_suffix_patterns(api_urls, allowed=['json', 'html'])
+
+# API/swagger helper
+schema_view = get_schema_view(
+    openapi.Info(
+        title="Self-Sustainable Cities",
+        default_version='v1',
+        description="API",
+        terms_of_service="",
+    ),
+    public=True,
+)
+
+swagger_urls = [
+    re_path(r'^api/$', schema_view.with_ui('redoc', cache_timeout=0), name='schema-redoc')
+]
+
+# Adding it all together
+urlpatterns = urlpatterns + api_urls + swagger_urls
