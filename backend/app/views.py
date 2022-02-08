@@ -88,9 +88,7 @@ def map_page(request):
 @renderer_classes((BrowsableAPIRenderer, JSONRenderer,))
 def people(request):
     """
-    API endpoint for searching for people by specific fields
-    Using the keywords passed, this will attempt to select all people in the
-    Person table matching them
+    GET people or POST / add person
     """
     if request.method == "GET":
         params = request.GET.dict()
@@ -130,10 +128,7 @@ def person(request, person_id):
 @renderer_classes((BrowsableAPIRenderer, JSONRenderer,))
 def events(request):
     """
-    API Endpoint for adding an event to the database
-    Required keys in body of request for successfully adding events:
-        - name
-        - date
+    GET event or POST / add event.
     """
     if request.method == 'GET':
         found_events = Event.objects.order_by('name')
@@ -203,13 +198,10 @@ def location(request, location_id):
 @renderer_classes((BrowsableAPIRenderer, JSONRenderer,))
 def people_in_event(request, event_id=None):
     """
-    API endpoint for pulling up a list of people from an event
-     API endpoint for updating the list of people for an event. This endpoints takes a list
-    of people ids and adds people to the event that are not already there. Returns a response
-    object containing a representation of the updated event object.
-
-    Required keys in body of request for successfully updating people:
-        - id_list: list of unique ids for people that are to be added
+    GET people in event or PUT / add person to event.
+    PUT accepts a list of people ids [1, 2, 3]
+    :param event_id: id int
+    :return: event
     """
     found_event = Event.objects.get(id=event_id)
     if request.method == 'GET':
