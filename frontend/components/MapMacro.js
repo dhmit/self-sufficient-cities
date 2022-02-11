@@ -55,7 +55,7 @@ export default class MapMacro extends React.Component {
                 <Marker position={this.state.position}/>
                 <TileLayer
                     attribution='&copy; <a href="https://www.openstreetmap.org/copyright">OpenStreetMap</a> contributors'
-                    url="https://{s}.tile.openstreetmap.org/{z}/{x}/{y}.png"
+                    url="http://stamen-tiles-a.a.ssl.fastly.net/toner-lite/{z}/{x}/{y}.png"
                 />
                 {Object.keys(this.state.censustract).length > 0 &&
                     <GeoJSON data={this.state.censustract} onEachFeature={this.onEachBlock}/>
