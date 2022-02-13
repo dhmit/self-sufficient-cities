@@ -2,6 +2,7 @@ import axios from "axios";
 import React from "react";
 import {MapContainer, Marker, TileLayer, GeoJSON} from "react-leaflet";
 import Table from "./Table";
+import MapKey from "./MapKey";
 
 // MORNING TEAM
 const URL = "/api/get_census_data/";
@@ -60,8 +61,12 @@ export default class MapMacro extends React.Component {
                 {Object.keys(this.state.censustract).length > 0 &&
                     <GeoJSON data={this.state.censustract} onEachFeature={this.onEachBlock}/>
                 };
+                <div style={{marginTop: "21rem", marginLeft: "0.25rem", 
+                    position: "relative", zIndex:1000}}>
+                    <MapKey id="map-key"/>
+                </div>
             </MapContainer>
-
+            <br />
             <button id={"table1"}
                 onClick={this.handleTableClick.bind(this)}>
                 Table 1

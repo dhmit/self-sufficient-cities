@@ -1,6 +1,6 @@
 import {MapContainer, Marker, Popup, TileLayer} from "react-leaflet";
 import React from "react";
-
+import MapKey from "./MapKey.js"
 export default class Map extends React.Component {
     state = {
         position: [38.9051606, -77.0036513],
@@ -22,6 +22,7 @@ export default class Map extends React.Component {
                         <br/> Self-sustaining city until around the 1950s.
                     </Popup>
                 </Marker>
+                <MapKey />
             </MapContainer>
         </div>;
     }
