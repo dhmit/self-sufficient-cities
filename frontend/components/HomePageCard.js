@@ -2,7 +2,9 @@ import React from "react";
 import * as PropTypes from "prop-types";
 import {Card, Col} from "react-bootstrap";
 
-const HomePageCard = ({img_source, title, text}) => {
+import CityTag from "./CityTag";
+
+const HomePageCard = ({img_source, title, text, resources}) => {
     return (
         <Col>
             <Card>
@@ -11,6 +13,11 @@ const HomePageCard = ({img_source, title, text}) => {
                     <Card.Title>{title}</Card.Title>
                     <Card.Text>{text}</Card.Text>
                 </Card.Body>
+                <Card.Footer>
+                    {resources.map(resource => {
+                        return <CityTag resource={resource} key={resource}/>;
+                    })}
+                </Card.Footer>
             </Card>
         </Col>
     );
@@ -19,7 +26,8 @@ const HomePageCard = ({img_source, title, text}) => {
 HomePageCard.propTypes = {
     img_source: PropTypes.string,
     title: PropTypes.string,
-    text: PropTypes.string
+    text: PropTypes.string,
+    resources: PropTypes.array
 };
 
 export default HomePageCard;

@@ -2,6 +2,7 @@ import React from "react";
 import {Container, Row, Col} from "react-bootstrap";
 
 import HomePageCard from "./HomePageCard";
+import dh_logo from "../images/dh_logo.svg";
 
 export default class Home extends React.Component {
     render() {
@@ -21,14 +22,17 @@ export default class Home extends React.Component {
                     <Col>
                         <Row xs={1} md={2}>
                             <HomePageCard
-                                img_source='https://upload.wikimedia.org/wikipedia/en/9/95/Test_image.jpg?20071023120759'
+                                img_source={dh_logo}
                                 title='Deanwood, D.C.'
-                                text='Filler text!'
+                                text='Explore the rise and fall of a self-sustaining neighborhood
+                                right in the US capital.'
+                                resources={["map", "timeline"]}
                             />
                             <HomePageCard
-                                img_source='https://upload.wikimedia.org/wikipedia/en/9/95/Test_image.jpg?20071023120759'
+                                img_source={dh_logo}
                                 title='Detroit, MI'
                                 text='Filler text!'
+                                resources={["map", "oral_history"]}
                             />
                         </Row>
                     </Col>
