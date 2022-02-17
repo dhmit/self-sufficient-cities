@@ -1,18 +1,18 @@
 import React, {useState} from "react";
-import {Interval, SORT_TYPES, TimelineContext} from "../contexts/TimelineContext";
-import DocumentShowcase from "./DocumentShowcase";
+import {Interval, SORT_TYPES, TimelineContext} from "../../contexts/TimelineContext";
+import DocumentShowcase from "../documents/DocumentShowcase";
 import {TimelineSlider} from "./TimelineSlider";
-import HEAR_CALL_OF_THE_GARDEN from "../images/hear_call_of_the_garden.png";
-import WASHINGTON_BEE_12_8_1917 from "../images/washington_bee_dec_8_1917.png";
-import WASHINGTON_BEE_8_14_1915 from "../images/washington_bee_aug_14_1915.png";
-import WASHINGTON_BEE_4_26_1919 from "../images/washington_bee_april_26_1919.png";
-import WASHINGTON_BEE_3_26_1921 from "../images/washington_bee_march_26_1921.png";
+import HEAR_CALL_OF_THE_GARDEN from "../../images/hear_call_of_the_garden.png";
+import WASHINGTON_BEE_12_8_1917 from "../../images/washington_bee_dec_8_1917.png";
+import WASHINGTON_BEE_8_14_1915 from "../../images/washington_bee_aug_14_1915.png";
+import WASHINGTON_BEE_4_26_1919 from "../../images/washington_bee_april_26_1919.png";
+import WASHINGTON_BEE_3_26_1921 from "../../images/washington_bee_march_26_1921.png";
 import {ShowAll} from "./ShowAll";
-import {DocSearch} from "./DocSearch";
+import {DocSearch} from "../documents/DocSearch";
 import {TimelineDropdown} from "./TimelineDropdown";
 import {ResetDefault} from "./ResetDefault";
 import * as PropTypes from "prop-types";
-import DocumentModal from "./DocumentModal";
+import DocumentModal from "../documents/DocumentModal";
 
 export const Timeline = ({data}) => {
     const documents = data.documents;
@@ -23,7 +23,7 @@ export const Timeline = ({data}) => {
 
     /**
      * Generates the five-year intervals that will be used for the timeline slider
-     * 
+     *
      * @returns {Array} list of the intervals starting at minYear and ending in maxYear
      */
     const getTimelineIntervals = () => {
