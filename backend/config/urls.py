@@ -28,31 +28,9 @@ except (ImportError, ModuleNotFoundError):
 urlpatterns = [
     # Django admin page
     path('admin/', admin.site.urls),
-    # API endpoints
     path('', views.index),
+    # our React component meme page route
     path('meme_page/', views.meme_page),
+    # our meme generator URL
     path('generate/', views.generate_meme),
 ]
-
-api_urls = [
-]
-
-api_urls = format_suffix_patterns(api_urls, allowed=['json', 'html'])
-
-# API/swagger helper
-schema_view = get_schema_view(
-    openapi.Info(
-        title="Self-Sustainable Cities",
-        default_version='v1',
-        description="API",
-        terms_of_service="",
-    ),
-    public=True,
-)
-
-swagger_urls = [
-    re_path('api/', schema_view.with_ui('redoc', cache_timeout=0), name='schema-redoc')
-]
-
-# Adding it all together
-urlpatterns = urlpatterns + api_urls + swagger_urls
