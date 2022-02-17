@@ -1,5 +1,6 @@
 import base64
 import random
+import re
 
 from geopy.geocoders import Nominatim
 from PIL import Image, ImageDraw, ImageFont
@@ -31,12 +32,14 @@ def meme_generator(text):
     images = ["cute-cat.jpg", "disaster-girl.jpg",
               "doge.jpg", "doge-strong.png",
               "imagination-spongebob.jpg", "kermit.jpg"]
+    # allow new lines
+    text = re.sub(r'(\\n+)', '\n', text)
     rand_num = random.randint(0, len(images)) - 1
     random_image = images[rand_num]
     image = Image.open(f"./app/memes/images/{random_image}")
     meme = ImageDraw.Draw(image)
     font = ImageFont.truetype("./app/memes/arialblack.ttf", size=100, index=0, encoding="")
-    meme.text((10, 10), text, fill=(255, 0, 0), font=font)
+    meme.text((10, 10), f"{text}", fill=(255, 0, 0), font=font)
     image_path = f"./app/memes/images/results/{random_image}"
     image.save(image_path)
 
