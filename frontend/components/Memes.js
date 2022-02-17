@@ -8,24 +8,23 @@ export default class Map extends React.Component {
         image: ""
     }
 
-    handleChange = (evt) => {
+    changeInputText = (evt) => {
         let value = evt.target.value;
         this.setState({text: value});
     };
 
-    handleSubmit = (evt) => {
+    submitForm = (evt) => {
         evt.preventDefault();
-        postRequest("/generate/", {text: this.state.text})
-            .then((res) => {
-                this.setState({image: res.data.image});
-            });
+        // Call "generate/" URL here.
+        // What else do we want to send along, and what does postRequest expect?
+        postRequest();
     };
 
     render() {
         return <div>
-            <form onSubmit={this.handleSubmit}>
+            <form onSubmit={this.submitForm}>
                 <label>Enter your text here:&nbsp;
-                    <input type="text" onChange={this.handleChange}/>
+                    <input type="text" onChange={this.changeInputText}/>
                 </label>&nbsp;
                 <input type="submit" value={"Submit"}/>
             </form>

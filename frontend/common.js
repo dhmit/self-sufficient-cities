@@ -5,7 +5,6 @@
 
 import axios from "axios";
 
-const cookie = getCookie("csrftoken");
 
 /**
  * Get the value of a cookie, given its name
@@ -28,7 +27,10 @@ export function getCookie(name) {
     return cookieValue;
 }
 
+const cookie = getCookie("csrftoken");
+
 export function postRequest(URL, data) {
+    // Django requires a cookie with post requests. See above.
     return axios.post(URL, data, {
         headers: {
             "X-Requested-With": "XMLHttpRequest",
