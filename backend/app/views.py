@@ -62,5 +62,6 @@ def meme_page(request):
 
 
 def generate_meme(request):
-    image_data = meme_generator(None)
+    data = json.loads(request.body)
+    image_data = meme_generator(data["text"])
     return JsonResponse({'image': image_data})

@@ -15,9 +15,12 @@ export default class Map extends React.Component {
 
     submitForm = (evt) => {
         evt.preventDefault();
-        // Call "generate/" URL here.
+        // Call "/generate/" URL here.
         // What else do we want to send along, and what does postRequest expect?
-        postRequest();
+        postRequest("/generate/", {text: this.state.text})
+            .then((res) => {
+                this.setState({image: res.data.image});
+            });
     };
 
     render() {
