@@ -1,2 +1,2 @@
-# Self Sustaining Cities
+# Self-Sustaining Meme Generator
 
