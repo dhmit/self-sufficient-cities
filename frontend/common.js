@@ -3,6 +3,9 @@
  */
 
 
+import axios from "axios";
+
+const cookie = getCookie("csrftoken");
 
 /**
  * Get the value of a cookie, given its name
@@ -23,4 +26,13 @@ export function getCookie(name) {
         }
     }
     return cookieValue;
+}
+
+export function postRequest(URL, data) {
+    return axios.post(URL, data, {
+        headers: {
+            "X-Requested-With": "XMLHttpRequest",
+            "X-CSRFToken": cookie
+        }
+    });
 }

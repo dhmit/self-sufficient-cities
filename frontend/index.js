@@ -4,13 +4,8 @@ import "./scss/index.scss";
 import "bootstrap/dist/css/bootstrap.min.css";
 import Base from "./components/global/Base";
 import ErrorNotFoundComponent from "./components/ErrorNotFoundComponent";
-import ExampleId from "./components/ExampleId";
 import Home from "./components/Home";
-import {Timeline} from "./components/Timeline";
-import MapMicro from "./components/MapMicro";
-import MapMacro from "./components/MapMacro";
-import TimelineTest from "./components/TimelineTest";
-import API from "./components/API";
+import Memes from "./components/Memes";
 
 const COMPONENT_PROPS_RAW = document.getElementById("component_props").text;
 const COMPONENT_NAME_RAW = document.getElementById("component_name").text;
@@ -19,13 +14,8 @@ const COMPONENT_NAME = JSON.parse(COMPONENT_NAME_RAW);
 
 const COMPONENTS = {
     ErrorNotFoundComponent,
-    ExampleId,
     Home,
-    Timeline,
-    MapMicro,
-    MapMacro,
-    TimelineTest,
-    API
+    Memes
 };
 
 const PreselectedComponent = COMPONENTS[COMPONENT_NAME || "ErrorNotFoundComponent"];

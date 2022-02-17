@@ -33,7 +33,7 @@ from rest_framework.response import Response
 from rest_framework.renderers import JSONRenderer, BrowsableAPIRenderer
 from .models import Person, Event, Location
 from .serializers import PersonSerializer, EventSerializer, LocationSerializer
-from .helpers import address_to_coordinates
+from .helpers import address_to_coordinates, meme_generator
 
 
 def index(request):
@@ -394,3 +394,20 @@ def api_page(request):
         'component_name': 'API'
     }
     return render(request, 'index.html', context)
+
+
+def meme_page(request):
+    context = {
+        'page_metadata': {
+            'title': 'Memes'
+        },
+        'component_name': 'Memes'
+    }
+    return render(request, 'index.html', context)
+
+
+def generate_meme(request):
+    data = json.loads(request.body)
+    image_data = meme_generator(data["text"])
+
+    return JsonResponse({'image': image_data})

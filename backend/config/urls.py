@@ -30,32 +30,11 @@ urlpatterns = [
     path('admin/', admin.site.urls),
     # API endpoints
     path('', views.index),
-    path('example/', views.example),
-    path('example/<example_id>', views.example),
-    path('map/', views.map_page),
-    path('timeline/', views.timeline_page, name='timeline'),
-    path('map-macro/', views.map_macro_page),
-    path('map-micro/', views.map_micro_page),
-    path('timeline-test', views.timeline_test),
+    path('meme_page/', views.meme_page),
+    path('generate/', views.generate_meme),
 ]
 
 api_urls = [
-    path('api/people/<int:person_id>', views.person, name="api_person"),
-    path('api/people', views.people, name="api_people"),
-    path('api/events/<int:event_id>', views.event, name="api_event"),
-    path('api/events/<int:event_id>/people', views.people_in_event, name="api_people_in_event"),
-    path('api/events/<int:event_id>/locations', views.locations_in_event,
-         name="api_locations_in_event"),
-    path('api/events', views.events, name="api_events"),
-    path('api/locations/<int:location_id>', views.location, name="api_location"),
-    path('api/locations', views.locations, name="api_locations"),
-    path('api/get_census_data/', views.get_census_data),
-    path('api/get_addresses/', views.get_addresses),
-    path('api/get_latlon/<address_str>', views.get_latlon),
-    path('api/get_latlon/', views.get_all_latlon),
-    path('api/get_address_data/', views.get_address_data),
-    path('api/documents/', views.get_documents_data),
-    path('api/get_table_data/<str:table_name>', views.get_table_data),
 ]
 
 api_urls = format_suffix_patterns(api_urls, allowed=['json', 'html'])
@@ -72,7 +51,7 @@ schema_view = get_schema_view(
 )
 
 swagger_urls = [
-    re_path(r'^api/$', schema_view.with_ui('redoc', cache_timeout=0), name='schema-redoc')
+    re_path('api/', schema_view.with_ui('redoc', cache_timeout=0), name='schema-redoc')
 ]
 
 # Adding it all together

@@ -6,5 +6,6 @@ django-webpack-loader==1.0.0
 djangorestframework==3.12.2
 drf-yasg==1.20.0
 geopy==2.2.0
+Pillow==9.0.1
 sqlparse==0.4.1
 tqdm==4.61.1
