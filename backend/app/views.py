@@ -366,6 +366,26 @@ def get_documents_data(request):
 
     return JsonResponse(documents_data)
 
+def get_tags(request):
+    """
+    API endpoint for getting all unique tags (in what format?) in the categories places, people
+    dates, and events in a python dictionary of sets.
+    """
+    tags = {"places": set(), "people": set(), "dates": set(), "events": set()}
+    with open("app/data/documents.json") as f:
+        documents_data = json.load(f)
+    for document in documents_data["documents"]:
+        for article in document["articles"]:
+            for entity in article["entities"]:
+                for place in entity["places"]:
+                    tags["places"].add(place)
+                for peoples in entity["people"]:
+                    tags["people"].add(peoples)
+                for date in entity["dates"]:
+                    tags["dates"].add(date)
+                for event in entity["events"]:
+                    tags["events"].add(event)
+    return tags
 
 def get_table_data(request, table_name):
     """

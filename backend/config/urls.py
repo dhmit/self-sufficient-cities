@@ -55,6 +55,7 @@ api_urls = [
     path('api/get_latlon/', views.get_all_latlon),
     path('api/get_address_data/', views.get_address_data),
     path('api/documents/', views.get_documents_data),
+    path('api/tags/', views.get_tags),
     path('api/get_table_data/<str:table_name>', views.get_table_data),
 ]
 
