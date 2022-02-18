@@ -6,7 +6,7 @@ import Base from "./components/global/Base";
 import ErrorNotFoundComponent from "./components/global/ErrorNotFoundComponent";
 import ExampleId from "./components/ExampleId";
 import Home from "./pages/Home";
-import {Timeline} from "./components/timeline/Timeline";
+import {Timeline} from "./pages/Timeline";
 import MapMicro from "./components/maps/MapMicro";
 import MapMacro from "./components/maps/MapMacro";
 import TimelineTest from "./components/timeline/TimelineTest";

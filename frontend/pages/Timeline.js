@@ -1,18 +1,18 @@
 import React, {useState} from "react";
-import {Interval, SORT_TYPES, TimelineContext} from "../../contexts/TimelineContext";
-import DocumentShowcase from "../documents/DocumentShowcase";
-import {TimelineSlider} from "./TimelineSlider";
-import HEAR_CALL_OF_THE_GARDEN from "../../images/hear_call_of_the_garden.png";
-import WASHINGTON_BEE_12_8_1917 from "../../images/washington_bee_dec_8_1917.png";
-import WASHINGTON_BEE_8_14_1915 from "../../images/washington_bee_aug_14_1915.png";
-import WASHINGTON_BEE_4_26_1919 from "../../images/washington_bee_april_26_1919.png";
-import WASHINGTON_BEE_3_26_1921 from "../../images/washington_bee_march_26_1921.png";
-import {ShowAll} from "./ShowAll";
-import {DocSearch} from "../documents/DocSearch";
-import {TimelineDropdown} from "./TimelineDropdown";
-import {ResetDefault} from "./ResetDefault";
+import {Interval, SORT_TYPES, TimelineContext} from "../contexts/TimelineContext";
+import DocumentShowcase from "../components/documents/DocumentShowcase";
+import {TimelineSlider} from "../components/timeline/TimelineSlider";
+import HEAR_CALL_OF_THE_GARDEN from "../images/hear_call_of_the_garden.png";
+import WASHINGTON_BEE_12_8_1917 from "../images/washington_bee_dec_8_1917.png";
+import WASHINGTON_BEE_8_14_1915 from "../images/washington_bee_aug_14_1915.png";
+import WASHINGTON_BEE_4_26_1919 from "../images/washington_bee_april_26_1919.png";
+import WASHINGTON_BEE_3_26_1921 from "../images/washington_bee_march_26_1921.png";
+import {ShowAll} from "../components/timeline/ShowAll";
+import {DocSearch} from "../components/documents/DocSearch";
+import {TimelineDropdown} from "../components/timeline/TimelineDropdown";
+import {ResetDefault} from "../components/timeline/ResetDefault";
 import * as PropTypes from "prop-types";
-import DocumentModal from "../documents/DocumentModal";
+import DocumentModal from "../components/documents/DocumentModal";
 
 export const Timeline = ({data}) => {
     const documents = data.documents;
