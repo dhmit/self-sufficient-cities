@@ -1,6 +1,6 @@
 import axios from "axios";
 import React from "react";
-import {MapContainer, Marker, TileLayer, GeoJSON} from "react-leaflet";
+import {MapContainer, Marker, TileLayer, GeoJSON, FeatureGroup} from "react-leaflet";
 import Table from "./Table";
 
 // MORNING TEAM
@@ -31,6 +31,7 @@ export default class MapMacro extends React.Component {
     }
 
     showTableData(event) {
+        console.log("in tabel data");
         event.target.setStyle({
             fillColor: "green"
         });
@@ -57,9 +58,24 @@ export default class MapMacro extends React.Component {
                     attribution='&copy; <a href="https://www.openstreetmap.org/copyright">OpenStreetMap</a> contributors'
                     url="http://stamen-tiles-a.a.ssl.fastly.net/toner-lite/{z}/{x}/{y}.png"
                 />
-                {Object.keys(this.state.censustract).length > 0 &&
-                    <GeoJSON data={this.state.censustract} onEachFeature={this.onEachBlock}/>
-                };
+                <FeatureGroup
+                    // onEachFeature = {this.showTableData}
+
+                    eventHandlers={{
+                        click: () => {
+                            console.log("click works");
+                        },
+                        mouseover: (tract, layer) => {
+                            layer.bindPopup("popup works :)");
+                        }
+                        //event.target.bindPopup("hello world").openPopup();}
+
+                    }}
+                >
+                    {Object.keys(this.state.censustract).length > 0 &&
+                    <GeoJSON data={this.state.censustract}/>};
+                </FeatureGroup>
+
             </MapContainer>
 
             <button id={"table1"}
