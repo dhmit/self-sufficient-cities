@@ -37,6 +37,7 @@ urlpatterns = [
     path('map-macro/', views.map_macro_page),
     path('map-micro/', views.map_micro_page),
     path('timeline-test', views.timeline_test),
+    path('map-consolidated/', views.map_consolidated)
 ]
 
 api_urls = [
