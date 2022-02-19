@@ -1,7 +1,7 @@
 import React, {useContext} from "react";
 import * as PropTypes from "prop-types";
 import {Card} from "react-bootstrap";
-import {TimelineContext} from "../contexts/TimelineContext";
+import {TimelineContext} from "../../contexts/TimelineContext";
 import TimelinePills from "./TimelinePills";
 
 const ShowcaseItem = ({document}) => {

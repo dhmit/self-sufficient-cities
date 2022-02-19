@@ -1,9 +1,9 @@
 import React, {useContext, useState} from "react";
 import * as PropTypes from "prop-types";
-import ArticleCarousel from "./ArticleCarousel";
+import ArticleCarousel from "../timeline/ArticleCarousel";
 import DocumentDisplay from "./DocumentDisplay";
 import {Modal} from "react-bootstrap";
-import {TimelineContext} from "../contexts/TimelineContext";
+import {TimelineContext} from "../../contexts/TimelineContext";
 
 /**
  * Main component for displaying document data in a fullscreen modal

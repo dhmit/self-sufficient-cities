@@ -1,5 +1,5 @@
 import React, {useContext} from "react";
-import {TimelineContext} from "../contexts/TimelineContext";
+import {TimelineContext} from "../../contexts/TimelineContext";
 import * as PropTypes from "prop-types";
 
 /**
@@ -11,9 +11,9 @@ export function TimelineArrow({isLeft}) {
 
     /**
      * Returns the 5-year timeline interval that contains the point `selectedYear`
-     * 
+     *
      * @param {number} selectedYear current year in the timeline being considered
-     * @param {boolean} isPrev If true, the containing interval is the first match found. 
+     * @param {boolean} isPrev If true, the containing interval is the first match found.
      *                         Otherwise, last found.
      * @returns {Object} containing interval for the selectedYear with the index of the interval
      */
@@ -62,7 +62,7 @@ export function TimelineArrow({isLeft}) {
     const getPreviousInterval = () => {
         if (state.intervalSelected.start > state.minYear) {
             const {interval, index} = getContainingInterval(state.intervalSelected.start, true);
-            // Special case: If the containing interval overlaps on the 
+            // Special case: If the containing interval overlaps on the
             // the last interval, then the right arrow is given precedence
             if (index === state.timelineIntervals.length - 1) {
                 const nextInterval = getNextInterval();

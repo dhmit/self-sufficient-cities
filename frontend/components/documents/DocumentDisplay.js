@@ -1,7 +1,7 @@
 import React, {useState} from "react";
 import * as PropTypes from "prop-types";
 import "bootstrap/dist/css/bootstrap.min.css";
-import TEST_IMAGE from "../images/testing.jpg";
+import TEST_IMAGE from "../../images/testing.jpg";
 import Magnifier from "react-magnifier";
 
 /**
