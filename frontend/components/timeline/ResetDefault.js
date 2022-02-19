@@ -1,6 +1,6 @@
 import React, {useContext} from "react";
 import {Button} from "react-bootstrap";
-import {Interval, TimelineContext} from "../contexts/TimelineContext";
+import {Interval, TimelineContext} from "../../contexts/TimelineContext";
 
 export const ResetDefault = () => {
     const state = useContext(TimelineContext);
