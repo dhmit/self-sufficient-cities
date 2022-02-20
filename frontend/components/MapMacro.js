@@ -2,6 +2,7 @@ import axios from "axios";
 import React from "react";
 import {MapContainer, Marker, TileLayer, GeoJSON, FeatureGroup} from "react-leaflet";
 import Table from "./Table";
+import "./MapMacro.css";
 
 // MORNING TEAM
 const URL = "/api/get_census_data/";
@@ -14,6 +15,28 @@ export default class MapMacro extends React.Component {
         location: "Deanwood neighborhood, Washington DC",
         tabledata: [],
         censustract: {}
+    }
+
+    clickBehavior() {
+        console.log("click detected");
+        const map = document.getElementById("MapContainer");
+
+        const sb = document.getElementById("sidebar");
+        if (!sb) {
+            const sidebar = document.createElement("div");
+            sidebar.id = "sidebar";
+            sidebar.innerHTML =
+             "<div id = 'sidebar-div'>" +
+                " <h1 id =" +
+                " 'sidebar-h1'>" +
+                " sidebar is working" +
+                " </h1> </div>";
+            map.appendChild(sidebar);
+        }
+
+        else {
+            map.removeChild(sb);
+        }
     }
 
     handleTableClick(event) {
@@ -49,32 +72,38 @@ export default class MapMacro extends React.Component {
         });
     }
 
+
+
     render() {
         return <div id="map">
             <h1>{this.state.location}</h1>
-            <MapContainer center={this.state.position} zoom={13} scrollWheelZoom={true}>
+            <MapContainer center={this.state.position} zoom={13} scrollWheelZoom={true}
+                id = {"MapContainer"}>
                 <Marker position={this.state.position}/>
                 <TileLayer
                     attribution='&copy; <a href="https://www.openstreetmap.org/copyright">OpenStreetMap</a> contributors'
                     url="http://stamen-tiles-a.a.ssl.fastly.net/toner-lite/{z}/{x}/{y}.png"
                 />
+
                 <FeatureGroup
                     // onEachFeature = {this.showTableData}
 
                     eventHandlers={{
                         click: () => {
-                            console.log("click works");
+                            this.clickBehavior();
                         },
-                        mouseover: (tract, layer) => {
-                            layer.bindPopup("popup works :)");
+                        mouseover: () => {
+                            console.log("mouseover works");
                         }
                         //event.target.bindPopup("hello world").openPopup();}
 
                     }}
                 >
                     {Object.keys(this.state.censustract).length > 0 &&
-                    <GeoJSON data={this.state.censustract}/>};
+                    <GeoJSON data={this.state.censustract}/>}
                 </FeatureGroup>
+
+
 
             </MapContainer>
 

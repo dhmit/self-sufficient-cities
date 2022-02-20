@@ -1,0 +1,24 @@
+#sidebar {
+    position: absolute;
+    z-index: 2000;
+    background: dimgrey;
+    opacity: 90%;
+    height: 300px;
+    width: 300px;
+    margin-top: 50px;
+    margin-left: 50px;
+}
+
+#sidebar-div {
+    padding: 8px;
+}
+
+#sidebar-h1 {
+    color: white;
+}
+
+#map {
+    position: absolute;
+    z-index: -1;
+
+}
