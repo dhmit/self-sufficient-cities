@@ -2,8 +2,8 @@ import axios from "axios";
 import React from "react";
 import {MapContainer, Marker, TileLayer, GeoJSON} from "react-leaflet";
 import Table from "./Table";
-import { Chart as ChartJS, ArcElement, Tooltip, Legend } from 'chart.js';
-import { Doughnut } from 'react-chartjs-2';
+import {Chart as ChartJS, ArcElement, Tooltip, Legend} from "chart.js";
+import {Doughnut} from "react-chartjs-2";
 
 ChartJS.register(ArcElement, Tooltip, Legend);
 
@@ -11,27 +11,27 @@ ChartJS.register(ArcElement, Tooltip, Legend);
 const URL = "/api/get_census_data/";
 const TABLE_URL = "/api/get_table_data/";
 const data = {
-        labels: ['Native-Born White', 'African American', 'Foreign Born White', 'Other Races'],
-        datasets: [
-            {
-                label: 'Population by Race and Nativity in Deanwood, 1940',
-                data: [2412, 9777, 186, 4],
-                backgroundColor: [
-                    'rgba(255, 99, 132, 0.2)',
-                    'rgba(54, 162, 235, 0.2)',
-                    'rgba(255, 206, 86, 0.2)',
-                    'rgba(75, 192, 192, 0.2)',
-                ],
-                borderColor: [
-                    'rgba(255, 99, 132, 1)',
-                    'rgba(54, 162, 235, 1)',
-                    'rgba(255, 206, 86, 1)',
-                    'rgba(75, 192, 192, 1)',
-                ],
-                borderWidth: 1,
-            },
-        ],
-    };
+    labels: ["Native-Born White", "African American", "Foreign Born White", "Other Races"],
+    datasets: [
+        {
+            label: "Population by Race and Nativity in Deanwood, 1940",
+            data: [2412, 9777, 186, 4],
+            backgroundColor: [
+                "rgba(255, 99, 132, 0.2)",
+                "rgba(54, 162, 235, 0.2)",
+                "rgba(255, 206, 86, 0.2)",
+                "rgba(75, 192, 192, 0.2)"
+            ],
+            borderColor: [
+                "rgba(255, 99, 132, 1)",
+                "rgba(54, 162, 235, 1)",
+                "rgba(255, 206, 86, 1)",
+                "rgba(75, 192, 192, 1)"
+            ],
+            borderWidth: 1
+        }
+    ]
+};
 
 export default class MapMacro extends React.Component {
     state = {
@@ -87,49 +87,54 @@ export default class MapMacro extends React.Component {
                     <GeoJSON data={this.state.censustract} onEachFeature={this.onEachBlock}/>
                 };
             </MapContainer>
+            <div className="chart-and-table">
+                <div className="charts">
+                    <Doughnut data={data} />
+                </div>
+                <div className="table-container">
+                    <button id={"table1"}
+                        onClick={this.handleTableClick.bind(this)}>
+                        Table 1
+                    </button>
 
-            <button id={"table1"}
-                onClick={this.handleTableClick.bind(this)}>
-                Table 1
-            </button>
+                    <button id={"table2"}
+                        onClick={this.handleTableClick.bind(this)}>
+                        Table 2
+                    </button>
 
-            <button id={"table2"}
-                onClick={this.handleTableClick.bind(this)}>
-                Table 2
-            </button>
+                    <button id={"table3"}
+                        onClick={this.handleTableClick.bind(this)}>
+                        Table 3
+                    </button>
 
-            <button id={"table3"}
-                onClick={this.handleTableClick.bind(this)}>
-                Table 3
-            </button>
+                    <button id={"table4"}
+                        onClick={this.handleTableClick.bind(this)}>
+                        Table 4
+                    </button>
 
-            <button id={"table4"}
-                onClick={this.handleTableClick.bind(this)}>
-                Table 4
-            </button>
+                    <button id={"table5"}
+                        onClick={this.handleTableClick.bind(this)}>
+                        Table 5
+                    </button>
 
-            <button id={"table5"}
-                onClick={this.handleTableClick.bind(this)}>
-                Table 5
-            </button>
+                    <button id={"table6"}
+                        onClick={this.handleTableClick.bind(this)}>
+                        Table 6
+                    </button>
 
-            <button id={"table6"}
-                onClick={this.handleTableClick.bind(this)}>
-                Table 6
-            </button>
+                    <button id={"table7"}
+                        onClick={this.handleTableClick.bind(this)}>
+                        Table 7
+                    </button>
 
-            <button id={"table7"}
-                onClick={this.handleTableClick.bind(this)}>
-                Table 7
-            </button>
+                    <button id={"table8"}
+                        onClick={this.handleTableClick.bind(this)}>
+                        Table 8
+                    </button>
 
-            <button id={"table8"}
-                onClick={this.handleTableClick.bind(this)}>
-                Table 8
-            </button>
-
-            <Table tabledata={this.state.tabledata}/>
-            <Doughnut data={data} />;
+                    <Table tabledata={this.state.tabledata}/>
+                </div>
+            </div>
         </div>;
     }
 }
