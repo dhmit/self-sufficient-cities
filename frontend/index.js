@@ -5,6 +5,7 @@ import "bootstrap/dist/css/bootstrap.min.css";
 import Base from "./components/global/Base";
 import ErrorNotFoundComponent from "./components/global/ErrorNotFoundComponent";
 import ExampleId from "./components/ExampleId";
+import MapConsolidated from "./components/maps/MapConsolidated";
 import Home from "./pages/Home";
 import {Timeline} from "./pages/Timeline";
 import MapMicro from "./components/maps/MapMicro";
@@ -25,7 +26,8 @@ const COMPONENTS = {
     MapMicro,
     MapMacro,
     TimelineTest,
-    API
+    API,
+    MapConsolidated
 };
 
 const PreselectedComponent = COMPONENTS[COMPONENT_NAME || "ErrorNotFoundComponent"];
