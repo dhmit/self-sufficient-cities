@@ -1,5 +1,5 @@
 import React, {useContext} from "react";
-import {Interval, SORT_TYPES, TimelineContext} from "../contexts/TimelineContext";
+import {Interval, SORT_TYPES, TimelineContext} from "../../contexts/TimelineContext";
 import {Dropdown, DropdownButton} from "react-bootstrap";
 
 export function TimelineDropdown() {
@@ -13,7 +13,7 @@ export function TimelineDropdown() {
         );
         state.setTimelineIntervals(state.timelineIntervals.reverse());
         state.setIntervalSelected(newIntervalSelected);
-        
+
     }
 
     function sortReverse() {

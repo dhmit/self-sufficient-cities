@@ -280,6 +280,19 @@ def map_micro_page(request):
     }
     return render(request, 'index.html', context)
 
+def map_consolidated(request):
+    """
+    Consolicated map page
+    """
+
+    context = {
+        'page_metadata': {
+            'title': 'Map Consolidated page'
+        },
+        'component_name': 'MapConsolidated'
+    }
+    return render(request, 'index.html', context)
+
 
 def timeline_test(request):
     """
