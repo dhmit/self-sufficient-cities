@@ -281,6 +281,20 @@ def map_micro_page(request):
     return render(request, 'index.html', context)
 
 
+def filter_page(request):
+    """
+    Filter page
+    """
+
+    context = {
+        'page_metadata': {
+            'title': 'Filter'
+        },
+        'component_name': 'Filter'
+    }
+    return render(request, 'index.html', context)
+
+
 def timeline_test(request):
     """
     Testing Page for loading timeline modal
