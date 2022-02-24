@@ -1,6 +1,14 @@
 import axios from "axios";
 import React from "react";
-import {MapContainer, Marker, TileLayer, GeoJSON, FeatureGroup} from "react-leaflet";
+import {
+    MapContainer,
+    Marker,
+    TileLayer,
+    GeoJSON,
+    FeatureGroup,
+    LayersControl,
+    LayerGroup
+} from "react-leaflet";
 import Table from "./Table";
 import "./MapMacro.css";
 
@@ -73,39 +81,51 @@ export default class MapMacro extends React.Component {
     }
 
 
-
     render() {
         return <div id="map">
             <h1>{this.state.location}</h1>
             <MapContainer center={this.state.position} zoom={13} scrollWheelZoom={true}
                 id = {"MapContainer"}>
-                <Marker position={this.state.position}/>
-                <TileLayer
-                    attribution='&copy; <a href="https://www.openstreetmap.org/copyright">OpenStreetMap</a> contributors'
-                    url="http://stamen-tiles-a.a.ssl.fastly.net/toner-lite/{z}/{x}/{y}.png"
-                />
 
-                <FeatureGroup
-                    // onEachFeature = {this.showTableData}
+                <LayersControl position="topright">
+                    <LayerGroup>
+                        <TileLayer
+                            attribution='&copy; <a href="https://www.openstreetmap.org/copyright">OpenStreetMap</a> contributors'
+                            url="http://stamen-tiles-a.a.ssl.fastly.net/toner-lite/{z}/{x}/{y}.png"
+                        />
 
-                    eventHandlers={{
-                        click: () => {
-                            this.clickBehavior();
-                        },
-                        mouseover: () => {
-                            console.log("mouseover works");
-                        }
-                        //event.target.bindPopup("hello world").openPopup();}
+                        <FeatureGroup
+                            // onEachFeature = {this.showTableData}
 
-                    }}
-                >
-                    {Object.keys(this.state.censustract).length > 0 &&
-                    <GeoJSON data={this.state.censustract}/>}
-                </FeatureGroup>
+                            eventHandlers={{
+                                click: () => {
+                                    this.clickBehavior();},
+                                mouseover: () => {
+                                    console.log("mouseover works");
+                                }
+                            }}
+                        >
+                            {Object.keys(this.state.censustract).length > 0 &&
+                                <GeoJSON data={this.state.censustract}/>}
+                        </FeatureGroup>
+                    </LayerGroup>
 
+                    <LayersControl.Overlay name={"people"}>
+                        <Marker position={this.state.position}/>
+                    </LayersControl.Overlay>
 
+                    <LayersControl.Overlay name={"places"}>
+                        <Marker position={[38.890665, -76.922919]}/>
+                    </LayersControl.Overlay>
 
+                    <LayersControl.Overlay name={"events"}>
+                        <Marker position={[38.893665, -76.929919]}/>
+                    </LayersControl.Overlay>
+
+                </LayersControl>
             </MapContainer>
+
+
 
             <button id={"table1"}
                 onClick={this.handleTableClick.bind(this)}>
