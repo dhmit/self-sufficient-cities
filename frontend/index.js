@@ -9,7 +9,7 @@ import Home from "./components/Home";
 import {Timeline} from "./components/Timeline";
 import MapMicro from "./components/MapMicro";
 import MapMacro from "./components/MapMacro";
-import {Filter} from "./components/Filter";
+import Filter from "./components/Filter";
 import TimelineTest from "./components/TimelineTest";
 import API from "./components/API";
 
