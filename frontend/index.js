@@ -8,6 +8,7 @@ import ExampleId from "./components/ExampleId";
 import Home from "./components/Home";
 import {Timeline} from "./components/Timeline";
 import MapMicro from "./components/MapMicro";
+import MapLegend from "./components/MapLegend";
 import MapMacro from "./components/MapMacro";
 import TimelineTest from "./components/TimelineTest";
 import API from "./components/API";
@@ -23,6 +24,7 @@ const COMPONENTS = {
     Home,
     Timeline,
     MapMicro,
+    MapLegend,
     MapMacro,
     TimelineTest,
     API

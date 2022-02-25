@@ -280,6 +280,19 @@ def map_micro_page(request):
     }
     return render(request, 'index.html', context)
 
+def map_legend_page(request):
+    """
+    Map page
+    """
+
+    context = {
+        'page_metadata': {
+            'title': 'Map Legend page'
+        },
+        'component_name': 'MapLegend'
+    }
+    return render(request, 'index.html', context)
+
 
 def timeline_test(request):
     """
@@ -346,6 +359,9 @@ def get_all_latlon(request):
     with open("app/data/address_data.json", "w", encoding="utf-8") as outfile:
         json.dump(addresses, outfile)
 
+    with open("app/data/legend_testing.json", "w", encoding="utf-8") as outfile:
+        json.dump(addresses, outfile)
+
     return JsonResponse({"address_lat_lon": addresses})
 
 
@@ -355,6 +371,14 @@ def get_address_data(request):
         address_data = json.load(f)
 
     return JsonResponse({"address_data": address_data})
+
+
+def get_legend_testing(request):
+    """Returning all addresses from file"""
+    with open("app/data/legend_testing.json", encoding="utf-8") as f:
+        legend_testing = json.load(f)
+
+    return JsonResponse({"legend_testing": legend_testing})
 
 
 def get_documents_data(request):

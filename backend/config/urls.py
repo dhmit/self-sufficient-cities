@@ -35,6 +35,7 @@ urlpatterns = [
     path('map/', views.map_page),
     path('timeline/', views.timeline_page, name='timeline'),
     path('map-macro/', views.map_macro_page),
+    path('map-legend/', views.map_legend_page),
     path('map-micro/', views.map_micro_page),
     path('timeline-test', views.timeline_test),
 ]
@@ -54,6 +55,7 @@ api_urls = [
     path('api/get_latlon/<address_str>', views.get_latlon),
     path('api/get_latlon/', views.get_all_latlon),
     path('api/get_address_data/', views.get_address_data),
+    path('api/get_legend_testing/', views.get_legend_testing),
     path('api/documents/', views.get_documents_data),
     path('api/get_table_data/<str:table_name>', views.get_table_data),
 ]
