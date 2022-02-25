@@ -364,7 +364,20 @@ def get_documents_data(request):
     with open("app/data/documents.json", encoding="utf-8") as f:
         documents_data = json.load(f)
 
-    return JsonResponse(documents_data)
+    tags = set(list(request.GET.keys()))
+
+    if len(tags) == 0:
+        return JsonResponse(documents_data)
+
+    filtered_documents = {'documents':[]}
+
+    for document in documents_data["documents"]:
+        for article in document['articles']:
+            for key in article['entities']:
+                if key in tags and request.GET.get(key) in article['entities'][key]:
+                    filtered_documents['documents'].append(document)
+
+    return JsonResponse(filtered_documents)
 
 
 def get_table_data(request, table_name):
