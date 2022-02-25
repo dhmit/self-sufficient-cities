@@ -17,13 +17,12 @@ const popover = (
         </Popover.Body>
     </Popover>
 );
-  
+
 const Example = () => (
     <OverlayTrigger trigger="click" placement="right" overlay={popover}>
         <Button variant="success">Key</Button>
     </OverlayTrigger>
 );
-
 
 const MapKey = () => {
     return(

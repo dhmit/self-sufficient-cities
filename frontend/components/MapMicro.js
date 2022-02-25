@@ -6,7 +6,7 @@ import Typography from "@material-ui/core/Typography";
 import Grid from "@material-ui/core/Grid";
 import Slider from "@material-ui/core/Slider";
 import Dropdown from "react-bootstrap/Dropdown";
-import MapKey from "./MapKey";
+import Legend from "./Legend";
 // AFTERNOON TEAM
 
 
@@ -377,9 +377,9 @@ export default class MapMicro extends React.Component {
                             url="http://stamen-tiles-a.a.ssl.fastly.net/toner-lite/{z}/{x}/{y}.png"
                         />
                         {markerObjects}
-                        <div style={{marginTop: "22rem", marginLeft: "0.25rem", 
+                        <div style={{marginTop: "17.5rem", marginLeft: "0.75rem",
                             position: "relative", zIndex:1000}}>
-                            <MapKey id="map-key"/>
+                            <Legend id="legend"/>
                         </div>
                     </MapContainer>
                     {timeSlider(
