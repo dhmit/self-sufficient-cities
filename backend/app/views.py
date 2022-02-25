@@ -386,7 +386,7 @@ def get_tags(request):
     dates, and events in a python dictionary of sets.
     """
     tags = {"places": set(), "people": set(), "dates": set(), "events": set()}
-    with open("app/data/documents.json") as f:
+    with open("app/data/documents.json", encoding="utf-8") as f:
         documents_data = json.load(f)
     for document in documents_data["documents"]:
         for article in document["articles"]:
@@ -399,7 +399,7 @@ def get_tags(request):
                     tags["dates"].add(date)
                 for event in entity["events"]:
                     tags["events"].add(event)
-    return tags
+    return JsonResponse(tags)
 
 def get_table_data(request, table_name):
     """
