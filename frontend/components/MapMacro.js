@@ -2,10 +2,13 @@ import axios from "axios";
 import React from "react";
 import {MapContainer, Marker, TileLayer, GeoJSON} from "react-leaflet";
 import Table from "./Table";
-import {Chart as ChartJS, ArcElement, Tooltip, Legend} from "chart.js";
+import {Chart as ChartJS, ArcElement, Tooltip, Legend, CategoryScale,LinearScale,
+    BarElement, Title} from "chart.js";
 import {Doughnut} from "react-chartjs-2";
+import {Bar} from "react-chartjs-2";
 
-ChartJS.register(ArcElement, Tooltip, Legend);
+ChartJS.register(ArcElement, Tooltip, Legend, CategoryScale, LinearScale, BarElement, Title);
+
 
 // MORNING TEAM
 const URL = "/api/get_census_data/";
@@ -29,6 +32,18 @@ const data = {
                 "rgba(75, 192, 192, 1)"
             ],
             borderWidth: 1
+        }
+    ]
+};
+
+const data_bar = {
+    labels : ["0-1.5","1.5-3","3-4","4-6","6-7.5",
+        "7.5-10",">10", "N/A"],
+    datasets: [
+        {
+            label: "Value of Home",
+            data: [37, 218, 286, 378, 155, 62, 16, 31 ],
+            backgroundColor: "rgba(255, 99, 132, 0.2)"
         }
     ]
 };
@@ -90,6 +105,7 @@ export default class MapMacro extends React.Component {
             <div className="chart-and-table">
                 <div className="charts">
                     <Doughnut data={data} />
+                    <Bar data={data_bar} />
                 </div>
                 <div className="table-container">
                     <button id={"table1"}
