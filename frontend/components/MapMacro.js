@@ -3,13 +3,28 @@ import React from "react";
 import {MapContainer, Marker, TileLayer, GeoJSON} from "react-leaflet";
 import Table from "./Table";
 import {Chart as ChartJS, ArcElement, Tooltip, Legend} from "chart.js";
-import {Doughnut} from "react-chartjs-2";
+import {Doughnut, Pie} from "react-chartjs-2";
 
 ChartJS.register(ArcElement, Tooltip, Legend);
 
 // MORNING TEAM
 const URL = "/api/get_census_data/";
 const TABLE_URL = "/api/get_table_data/";
+const data2 = {
+    labels: ["White Home-Owners", "White Tenants","Non-white Tenants","Non-white Home-Owners"],
+    datasets: [
+        {
+            label: "Home-Owners vs. Tenants",
+            data: [380, 277, 1183, 836],
+            backgroundColor: [
+                "rgb(255, 85, 0)",
+                "rgb(0, 204, 0)",
+                "rgb(153, 255, 153)",
+                "rgb(255, 153, 102)"
+            ]
+        }
+    ]
+};
 const data = {
     labels: ["Native-Born White", "African American", "Foreign Born White", "Other Races"],
     datasets: [
@@ -89,7 +104,10 @@ export default class MapMacro extends React.Component {
             </MapContainer>
             <div className="chart-and-table">
                 <div className="charts">
+                    <h1>Population by Race and Nativity</h1>
                     <Doughnut data={data} />
+                    <h1>Home-Owners vs. Tenants</h1>
+                    <Pie data={data2} />
                 </div>
                 <div className="table-container">
                     <button id={"table1"}
