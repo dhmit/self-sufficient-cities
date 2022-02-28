@@ -2,7 +2,7 @@ import React, {useContext, useState} from "react";
 import {MDBModal, MDBModalHeader, MDBModalBody, MDBInput} from "mdbreact";
 import {Button, ListGroup, ListGroupItem} from "react-bootstrap";
 import * as PropTypes from "prop-types";
-import {TimelineContext} from "../contexts/TimelineContext";
+import {TimelineContext} from "../../contexts/TimelineContext";
 
 export const DocSearch = ({documents}) => {
     const state = useContext(TimelineContext);

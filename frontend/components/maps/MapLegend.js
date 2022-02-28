@@ -65,8 +65,10 @@ export default class MapLegend extends React.Component {
                             url="http://stamen-tiles-a.a.ssl.fastly.net/toner-lite/{z}/{x}/{y}.png"
                         />
                         {legendMarkerObjects}
-                        <div style={{marginTop: "17.5rem", marginLeft: "0.75rem",
-                            position: "relative", zIndex:1000}}>
+                        <div style={{
+                            marginTop: "17.5rem", marginLeft: "0.75rem",
+                            position: "relative", zIndex: 1000
+                        }}>
                             <Legend id="legend"/>
                         </div>
                     </MapContainer>

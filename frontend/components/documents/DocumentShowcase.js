@@ -1,7 +1,7 @@
 import React, {useEffect, useContext, useState} from "react";
-import ShowcaseItem from "./ShowcaseItem";
-import {TimelineArrow} from "./TimelineArrow";
-import {TimelineContext} from "../contexts/TimelineContext";
+import ShowcaseItem from "../timeline/ShowcaseItem";
+import {TimelineArrow} from "../timeline/TimelineArrow";
+import {TimelineContext} from "../../contexts/TimelineContext";
 import * as PropTypes from "prop-types";
 
 const DocumentShowcase = ({documents}) => {

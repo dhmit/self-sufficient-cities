@@ -1,5 +1,5 @@
 import React, {useState} from "react";
-import DocumentModal from "./DocumentModal.js";
+import DocumentModal from "../documents/DocumentModal.js";
 
 /**
  * Sample Timeline Test page to display/show how to use DocumentModal
