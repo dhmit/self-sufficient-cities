@@ -1,8 +1,9 @@
 import React from "react";
 import {Container, Row, Col} from "react-bootstrap";
 
-import HomePageCard from "./HomePageCard";
+import HomePageCard from "../components/home/HomePageCard";
 import dh_logo from "../images/dh_logo.svg";
+
 
 export default class Home extends React.Component {
     render() {
@@ -23,16 +24,28 @@ export default class Home extends React.Component {
                         <Row xs={1} md={2}>
                             <HomePageCard
                                 img_source={dh_logo}
-                                title='Deanwood, D.C.'
+                                title='DEANWOOD, D.C.'
                                 text='Explore the rise and fall of a self-sustaining neighborhood
                                 right in the US capital.'
-                                resources={["map", "timeline"]}
+                                resources={["oral_history", "map", "timeline"]}
                             />
                             <HomePageCard
                                 img_source={dh_logo}
-                                title='Detroit, MI'
+                                title='DETROIT, MI'
                                 text='Filler text!'
                                 resources={["map", "oral_history"]}
+                            />
+                            <HomePageCard
+                                img_source={dh_logo}
+                                title='MEMPHIS, TN'
+                                text='Filler text!'
+                                resources={["map", "timeline", "oral_history"]}
+                            />
+                            <HomePageCard
+                                img_source={dh_logo}
+                                title='Sampleville'
+                                text='More text coming soon?'
+                                resources={["oral_history", "timeline"]}
                             />
                         </Row>
                     </Col>

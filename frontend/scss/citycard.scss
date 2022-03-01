@@ -1,0 +1,51 @@
+$oral-history-tag-color: rgb(222, 127, 103);
+$map-tag-color: rgb(191, 137, 219);
+$timeline-tag-color: rgb(140, 192, 137);
+
+.city-card {
+    border: 1px solid black;
+    box-shadow:  2px 3px 4px lightgrey;
+    padding: 5%;
+    font-family: Optima, Arial, sans-serif;
+    height: calc(100% - 5%);
+    display: flex;
+    flex-direction: column;
+    margin-bottom: 5%;
+    transition: all .2s ease-in-out;
+
+    h3 {
+        font-family: Copperplate, Helvetica, sans-serif;
+    }
+
+    img {
+        padding-bottom: 5%;
+    }
+}
+
+.city-card:hover {
+    transform: scale(1.1);
+}
+
+.city-tags {
+    display: flex;
+    flex-wrap: wrap;
+    margin-top: auto;
+}
+
+@mixin city-tag($theme: $oral-history-tag-color) {
+    padding: 2%;
+    margin: 2%;
+    background: $theme;
+}
+
+.city-tag-map {
+    @include city-tag($map-tag-color);
+}
+
+.city-tag-timeline {
+    @include city-tag($timeline-tag-color);
+}
+
+.city-tag-oral-hist {
+    @include city-tag($oral-history-tag-color);
+}
