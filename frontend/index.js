@@ -5,9 +5,10 @@ import "bootstrap/dist/css/bootstrap.min.css";
 import Base from "./components/global/Base";
 import ErrorNotFoundComponent from "./components/global/ErrorNotFoundComponent";
 import ExampleId from "./components/ExampleId";
-import MapConsolidated from "./components/maps/MapConsolidated";
 import Home from "./pages/Home";
+import MapConsolidated from "./components/maps/MapConsolidated";
 import {Timeline} from "./pages/Timeline";
+import MapLegend from "./components/maps/MapLegend";
 import MapMicro from "./components/maps/MapMicro";
 import MapMacro from "./components/maps/MapMacro";
 import TimelineTest from "./components/timeline/TimelineTest";
@@ -24,6 +25,7 @@ const COMPONENTS = {
     Home,
     Timeline,
     MapMicro,
+    MapLegend,
     MapMacro,
     TimelineTest,
     API,

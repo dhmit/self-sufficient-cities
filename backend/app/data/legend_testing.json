@@ -1,0 +1,32 @@
+[
+    {
+        "address": "Address 1",
+        "year": 1914,
+        "type": "white-owned",
+        "color": "red",
+        "coordinates": [
+            "38.9098381",
+            "-76.9301144"
+        ]
+    },
+    {
+        "address": "Address 2",
+        "year": 1914,
+        "type": "black-owned",
+        "color": "blue",
+        "coordinates": [
+            "38.9098381",
+            "-76.9201144"
+        ]
+    },
+    {
+        "address": "Address 3",
+        "year": 1914,
+        "type": "white-owned",
+        "color": "red",
+        "coordinates": [
+            "38.8998381",
+            "-76.9201144"
+        ]
+    }
+]
