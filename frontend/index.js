@@ -3,15 +3,16 @@ import ReactDOM from "react-dom";
 import "./scss/index.scss";
 import "bootstrap/dist/css/bootstrap.min.css";
 import Base from "./components/global/Base";
-import ErrorNotFoundComponent from "./components/ErrorNotFoundComponent";
+import ErrorNotFoundComponent from "./components/global/ErrorNotFoundComponent";
 import ExampleId from "./components/ExampleId";
-import Home from "./components/Home";
-import {Timeline} from "./components/Timeline";
-import MapMicro from "./components/MapMicro";
-import MapLegend from "./components/MapLegend";
-import MapMacro from "./components/MapMacro";
-import TimelineTest from "./components/TimelineTest";
-import API from "./components/API";
+import Home from "./pages/Home";
+import MapConsolidated from "./components/maps/MapConsolidated";
+import {Timeline} from "./pages/Timeline";
+import MapLegend from "./components/maps/MapLegend";
+import MapMicro from "./components/maps/MapMicro";
+import MapMacro from "./components/maps/MapMacro";
+import TimelineTest from "./components/timeline/TimelineTest";
+import API from "./pages/API";
 
 const COMPONENT_PROPS_RAW = document.getElementById("component_props").text;
 const COMPONENT_NAME_RAW = document.getElementById("component_name").text;
@@ -27,7 +28,8 @@ const COMPONENTS = {
     MapLegend,
     MapMacro,
     TimelineTest,
-    API
+    API,
+    MapConsolidated
 };
 
 const PreselectedComponent = COMPONENTS[COMPONENT_NAME || "ErrorNotFoundComponent"];

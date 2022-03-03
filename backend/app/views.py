@@ -280,6 +280,7 @@ def map_micro_page(request):
     }
     return render(request, 'index.html', context)
 
+
 def map_legend_page(request):
     """
     Map page
@@ -290,6 +291,20 @@ def map_legend_page(request):
             'title': 'Map Legend page'
         },
         'component_name': 'MapLegend'
+    }
+    return render(request, 'index.html', context)
+
+
+def map_consolidated(request):
+    """
+    Consolicated map page
+    """
+
+    context = {
+        'page_metadata': {
+            'title': 'Map Consolidated page'
+        },
+        'component_name': 'MapConsolidated'
     }
     return render(request, 'index.html', context)
 

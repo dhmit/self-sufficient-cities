@@ -1,6 +1,6 @@
 import React, {useEffect, useContext, useState} from "react";
 import Slider from "rc-slider";
-import {Interval, SORT_TYPES, TimelineContext} from "../contexts/TimelineContext";
+import {Interval, SORT_TYPES, TimelineContext} from "../../contexts/TimelineContext";
 import "rc-slider/assets/index.css";
 
 export const TimelineSlider = () => {
@@ -9,7 +9,7 @@ export const TimelineSlider = () => {
 
     /**
      * Gets the marks of the slider
-     * 
+     *
      * @returns {number: ReactNode} the translated slider marks from timelineIntervals
      */
     const getMarks = () => {
