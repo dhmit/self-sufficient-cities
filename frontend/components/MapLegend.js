@@ -19,6 +19,7 @@ export default class MapLegend extends React.Component {
             mainLocation: MAIN_LOCATION,
             markerData: [],
             legendMarkerData: [],
+            legendMarkerSorted: [],
             sliderState: [1900, 2022],
             timeRange: [1900, 2022],
             lastValid: [1900, 2022],
@@ -39,6 +40,17 @@ export default class MapLegend extends React.Component {
                 });
             });
     };
+
+    sortData() {
+        // TODO: walk through list of marker objects
+        // add to new object, which has key value of types
+        // {white_owned: [], black_owned: []}
+        // TODO: add list of color classes ["color-red", "color-green"]
+        // iterate through object, create Marker component, assign class based on index
+        // push new Marker into list called this.state.legendMarkerSorted
+        //  sort through this.state.legendMarkerData
+        // create new state obj like: this.state.legendMarkerSorted
+    }
 
     render() {
         const legendMarkerObjects = this.state.legendMarkerData.map((location, i) => (

@@ -2,7 +2,6 @@ import axios from "axios";
 import React from "react";
 import {MapContainer, Marker, TileLayer, GeoJSON} from "react-leaflet";
 import Table from "./Table";
-import Legend from "./Legend";
 
 // MORNING TEAM
 const URL = "/api/get_census_data/";
@@ -48,20 +47,12 @@ export default class MapMacro extends React.Component {
             }
         });
     }
-    // createMarkers = () => {
-    //    // let markers = <>;
-    //     let markers = this.state.positions.map((position)=> {
-    //
-    //     })
-    //     return markers
-    // }
+
     render() {
         return <div id="map">
             <h1>{this.state.location}</h1>
             <MapContainer center={this.state.position} zoom={13} scrollWheelZoom={true}>
-                {/*{this.createMarkers()}*/}
                 <Marker position={this.state.position}/>
-                <Marker position={[38.887665, -76.925919]}/>
                 <TileLayer
                     attribution='&copy; <a href="https://www.openstreetmap.org/copyright">OpenStreetMap</a> contributors'
                     url="http://stamen-tiles-a.a.ssl.fastly.net/toner-lite/{z}/{x}/{y}.png"
@@ -69,10 +60,6 @@ export default class MapMacro extends React.Component {
                 {Object.keys(this.state.censustract).length > 0 &&
                     <GeoJSON data={this.state.censustract} onEachFeature={this.onEachBlock}/>
                 };
-                <div style={{marginTop: "16.5rem", marginLeft: "0.75rem",
-                    position: "relative", zIndex:1000}}>
-                    <Legend id="legend"/>
-                </div>
             </MapContainer>
             <br />
             <button id={"table1"}
