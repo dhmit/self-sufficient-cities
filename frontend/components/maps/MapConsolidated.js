@@ -8,7 +8,7 @@ import Slider from "@material-ui/core/Slider";
 import Dropdown from "react-bootstrap/Dropdown";
 import axios from "axios";
 import Table from "./Table";
-// AFTERNOON TEAM
+import BarCharts from "./BarCharts";
 
 // MapMicro constants
 const MAIN_LOCATION = {
@@ -490,20 +490,15 @@ export default class MapConsolidated extends React.Component {
                     <Table tabledata={this.state.tabledata}/>
                 </div>
             </div>
+            <br/>
+            <br/>
+            <br/>
+            <br/>
+            <br/>
+            <br/>
+            <br/>
+            <br/>
+            <BarCharts/>
         </>);
     }
 }
-
-
-// import React from "react";
-// import MapMacro from "./MapMacro";
-// import MapMicro from "./MapMicro";
-//
-// export default class MapConsolidated extends React.Component {
-//     render() {
-//         return <>
-//             <MapMacro />
-//             <MapMicro />
-//         </>;
-//     }
-// };
