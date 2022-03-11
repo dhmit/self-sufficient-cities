@@ -297,7 +297,7 @@ def map_legend_page(request):
 
 def map_consolidated(request):
     """
-    Consolicated map page
+    Consolidated map page
     """
 
     context = {
