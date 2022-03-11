@@ -88,5 +88,15 @@ div.map-dropdown-scroll::-webkit-scrollbar-thumb {
 
 
 .bar-chart {
-    width: 50vw;
+    width: 40vw;
+    border: solid 1px #c7c7c7;
+    border-radius: 16px;
+    padding: 8px;
+    margin:8px;
+}
+
+.bar-charts {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-evenly;
 }
