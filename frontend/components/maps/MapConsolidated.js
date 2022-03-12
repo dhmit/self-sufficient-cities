@@ -8,7 +8,7 @@ import Slider from "@material-ui/core/Slider";
 import Dropdown from "react-bootstrap/Dropdown";
 import axios from "axios";
 import Table from "./Table";
-import BarCharts from "./BarCharts";
+import CensusCharts from "./CensusCharts";
 
 // MapMicro constants
 const MAIN_LOCATION = {
@@ -498,7 +498,7 @@ export default class MapConsolidated extends React.Component {
             <br/>
             <br/>
             <br/>
-            <BarCharts/>
+            <CensusCharts/>
         </>);
     }
 }

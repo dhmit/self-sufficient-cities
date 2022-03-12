@@ -1,9 +1,10 @@
 import React from "react";
 import BarChart from "./BarChart";
+import PieChart from "./PieChart";
 
 const getColor = () => `rgba(${(Math.random()/3 +.6)*255}, ${(Math.random()/3 +.6)*255}, 200, 0.7)`;
 
-export default class BarCharts extends React.Component {
+export default class CensusCharts extends React.Component {
     constructor(props) {
         super(props);
 
@@ -132,15 +133,27 @@ export default class BarCharts extends React.Component {
                         }
                     ]
                 }
-            ]
+            ],
+            bars: true
         };
+    }
+
+    toggleCharts() {
+        this.setState({...this.state, bars: !this.state.bars});
     }
 
     render() {
         return (<>
             <h1>Census Data - Tract 78 - 1950</h1>
+            <button onClick={() => this.toggleCharts()}>
+                {
+                    this.state.bars ? "View Pie Charts" : "View Bar Charts"
+                }
+            </button>
             <div className={"bar-charts"}>
-                {this.state.data.map((each,i) => <BarChart data={each} key={i}/>)}
+
+                {this.state.data.map((each,i) => this.state.bars ? <BarChart data={each} key={i}/>
+                    : <PieChart data={each} key={i}/>)}
             </div>
         </>);
     }
