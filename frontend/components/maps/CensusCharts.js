@@ -207,6 +207,78 @@ export default class CensusCharts extends React.Component {
                         backgroundColor: getColor()
                     }
                 ]
+            },
+            {
+                extra: [],
+                labels: [
+                    "Under $500",
+                    "$500 to $699",
+                    "$700 to $999",
+                    "$1,000 to $1,499",
+                    "$1,500 to $1,999",
+                    "$2,000 to $2,499",
+                    "$2,500 to $2,999",
+                    "$3,000 to $3,999",
+                    "$4,000 to $4,999",
+                    "$5,000 to $5,999",
+                    "$6,000 to $7,499",
+                    "$7,500 to $9,999",
+                    "$10,000 and over",
+                    "Not reporting value"
+                ],
+                datasets: [
+                    {
+                        label: "VALUE OF ONE-DWELLING-UNIT STRUCTURES",
+                        data: [
+                            1,
+                            0,
+                            6,
+                            30,
+                            53,
+                            77,
+                            88,
+                            286,
+                            245,
+                            133,
+                            155,
+                            62,
+                            16,
+                            31
+                        ],
+                        backgroundColor: getColor()
+                    }
+                ]
+            },
+            {
+                extra: [],
+                labels: [
+                    "No school years completed",
+                    "Grade School: 1-4 years",
+                    "Grade school: 5-6 years",
+                    "Grade school: 7-8 years",
+                    "High school: 1-3 years",
+                    "High school: 4 years",
+                    "College: 1-3 years",
+                    "College: 4+ years",
+                    "Not Reported"
+                ],
+                datasets: [
+                    {
+                        label: "Years of school completed",
+                        data: [
+                            147,
+                            775,
+                            1024,
+                            1827,
+                            1208,
+                            769,
+                            388,
+                            286,
+                            106
+                        ],
+                        backgroundColor: getColor()
+                    }
+                ]
             }
         ];
 
