@@ -136,64 +136,36 @@ export default class CensusCharts extends React.Component {
 
         let data1940 = [
             {
-                extra: [
-                    "Median number of persons\t3.6"
+                extra: [],
+                labels: [
+                    "1 person",
+                    "2 persons",
+                    "3 persons",
+                    "4 persons",
+                    "5 persons",
+                    "6 persons",
+                    "7 persons",
+                    "8 persons",
+                    "9 persons",
+                    "10 persons",
+                    "11 persons or more"
                 ],
-                labels: ["1 person", "2 persons", "3 persons", "4 persons", "5 and 6 persons",
-                    "7 persons or more"],
                 datasets: [
                     {
                         label: "NUMBER OF PERSONS IN DWELLING UNIT",
-                        data: [29200, 1516, 1348, 1236, 1471, 811],
-                        backgroundColor: getColor()
-                    }
-                ]
-            },
-            {
-                extra: [
-                    "Renter occupied units reporting\t3629",
-                    "Median rent in dollars\t50.16"
-                ],
-                labels: [
-                    "Less than $10",
-                    "$10 to $14",
-                    "$15 to $19",
-                    "$20 to $29",
-                    "$30 to $39",
-                    "$40 to $49",
-                    "$50 to $74",
-                    "$75 or more"],
-                datasets: [
-                    {
-                        label: "CONTRACT MONTHLY RENT",
-                        data: [2, 28, 71, 211, 423, 1041, 1657, 196],
-                        backgroundColor: getColor()
-                    }
-                ]
-            },
-            {
-                extra: [
-                    "Owner-occupied units reporting *	2643",
-                    "Median value in dollars\t10607"
-                ],
-                labels: ["Less than $2000",
-                    "$2000 to $2999",
-                    "$3000 to $3999",
-                    "$4000 to $4999",
-                    "$5000 to $9999",
-                    "$10000 to $14999",
-                    "$15000 or more"],
-                datasets: [
-                    {
-                        label: "VALUE OF ONE-DWELLING-UNIT STRUCTURES",
                         data: [
-                            204,
-                            101,
-                            403,
-                            602,
-                            10034,
-                            10123,
-                            3046],
+                            68,
+                            340,
+                            365,
+                            315,
+                            256,
+                            212,
+                            154,
+                            104,
+                            79,
+                            56,
+                            70
+                        ],
                         backgroundColor: getColor()
                     }
                 ]
@@ -201,59 +173,37 @@ export default class CensusCharts extends React.Component {
             {
                 extra: [],
                 labels: [
-                    "Total",
-                    "Single",
-                    "Married",
-                    "Widowed/Divorced"],
+                    "Under $5",
+                    "$5 to $6",
+                    "$7 to $9",
+                    "$10 to $14",
+                    "$15 to $19",
+                    "$20 to $24",
+                    "$25 to $29",
+                    "$30 to $39",
+                    "$40 to $49",
+                    "$50 to $59",
+                    "$60 to $74",
+                    "$75 to $99",
+                    "$100 and over"
+                ],
                 datasets: [
                     {
-                        label: "Marital Status Male 14y/o & over",
+                        label: "CONTRACT MONTHLY RENT",
                         data: [
-                            8777,
-                            1990,
-                            6343,
-                            444],
-                        backgroundColor: getColor()
-                    },
-                    {
-                        label: "Marital Status Female 14 y/o & over",
-                        data: [
-                            10354,
-                            2054,
-                            6913,
-                            1387],
-                        backgroundColor: getColor()
-                    }
-                ]
-            },
-            {
-                extra: ["Persons 25 y/o and older\t\t14810",
-                    "Median school years completed\t\t10.4"],
-                labels: [
-                    "No school years completed",
-                    "Elementary\t1-4 years",
-                    "Elementary\t5 and 6 years",
-                    "Elementary\t7 years",
-                    "Elementary\t8 years",
-                    "High school\t1 to 3 years",
-                    "High school\t1 to 3 years",
-                    "College\t1 to 3 years",
-                    "College\t4 years",
-                    "School years not reported"],
-                datasets: [
-                    {
-                        label: "Years of school completed",
-                        data: [
-                            200,
-                            1205,
-                            1510,
-                            1310,
-                            1585,
-                            1935,
-                            3020,
-                            1525,
-                            1120,
-                            400],
+                            2,
+                            2,
+                            15,
+                            44,
+                            119,
+                            165,
+                            196,
+                            193,
+                            72,
+                            20,
+                            3,
+                            0,
+                            0],
                         backgroundColor: getColor()
                     }
                 ]
@@ -287,8 +237,6 @@ export default class CensusCharts extends React.Component {
     render() {
 
         let data = this.state.year === 1940 ? this.state.data1940 : this.state.data1950;
-
-        console.log(data);
         return (<>
             <h1>Census Data - Tract 78 - {this.state.year}</h1>
             <button onClick={() => this.toggleCharts()}>
@@ -302,8 +250,12 @@ export default class CensusCharts extends React.Component {
                 }
             </button>
             <div className={"bar-charts"}>
-                {data.map((each,i) => this.state.bars ? <BarChart data={each} key={i}/>
-                    : <PieChart data={each} key={i}/>)}
+                {
+                    data.map((each,i) => this.state.bars
+                        ? <BarChart data={each} key={i + this.state.year}/>
+                        : <PieChart data={each} key={i + this.state.year}/>)
+                }
+
             </div>
         </>);
     }
