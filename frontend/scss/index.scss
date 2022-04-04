@@ -1,8 +1,11 @@
 @import '~normalize.css';
+@import './fonts.scss';
+@import './variables';
 @import './global.scss';
 @import './nav.scss';
 @import './example.scss';
 @import './map.scss';
 @import './timeline.scss';
 @import './document.scss';
+@import './citycard';
 @import './legend.scss';
