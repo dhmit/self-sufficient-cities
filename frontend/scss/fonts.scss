@@ -1,0 +1,80 @@
+@font-face {
+    font-family: 'titillium_webblack';
+    src: url('../fonts/titilliumweb-black-webfont.woff2') format('woff2'),
+    url('../fonts/titilliumweb-black-webfont.woff') format('woff');
+    font-weight: normal;
+    font-style: normal;
+}
+
+
+@font-face {
+    font-family: 'titillium_webbold';
+    src: url('../fonts/titilliumweb-bold-webfont.woff2') format('woff2'),
+    url('../fonts/titilliumweb-bold-webfont.woff') format('woff');
+    font-weight: normal;
+    font-style: normal;
+}
+
+
+@font-face {
+    font-family: 'titillium_webbold_italic';
+    src: url('../fonts/titilliumweb-bolditalic-webfont.woff2') format('woff2'),
+    url('../fonts/titilliumweb-bolditalic-webfont.woff') format('woff');
+    font-weight: normal;
+    font-style: normal;
+}
+
+
+@font-face {
+    font-family: 'titillium_webitalic';
+    src: url('../fonts/titilliumweb-italic-webfont.woff2') format('woff2'),
+    url('../fonts/titilliumweb-italic-webfont.woff') format('woff');
+    font-weight: normal;
+    font-style: normal;
+}
+
+@font-face {
+    font-family: 'titillium_webregular';
+    src: url('../fonts/titilliumweb-regular-webfont.woff2') format('woff2'),
+    url('../fonts/titilliumweb-regular-webfont.woff') format('woff');
+    font-weight: normal;
+    font-style: normal;
+}
+
+
+@font-face {
+    font-family: 'titillium_websemibold';
+    src: url('../fonts/titilliumweb-semibold-webfont.woff2') format('woff2'),
+    url('../fonts/titilliumweb-semibold-webfont.woff') format('woff');
+    font-weight: normal;
+    font-style: normal;
+}
+
+
+@font-face {
+    font-family: 'titillium_websemibold_italic';
+    src: url('../fonts/titilliumweb-semibolditalic-webfont.woff2') format('woff2'),
+    url('../fonts/titilliumweb-semibolditalic-webfont.woff') format('woff');
+    font-weight: normal;
+    font-style: normal;
+}
+
+
+@font-face {
+    font-family: 'syne_monoregular';
+    src: url('../fonts/synemono-regular-webfont.woff2') format('woff2'),
+    url('../fonts/synemono-regular-webfont.woff') format('woff');
+    font-weight: normal;
+    font-style: normal;
+}
+
+$font-family-sans-serif: "titillium_webregular", sans-serif;
+$font-family-base: "titillium_webregular", sans-serif !important;
+
+h1, h2 {
+    font-family: "titillium_websemibold", sans-serif;
+}
+
+blockquote {
+    font-family: "syne_monoregular", monospace;
+}

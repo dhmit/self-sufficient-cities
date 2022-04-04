@@ -4,18 +4,13 @@ $timeline-tag-color: rgb(140, 192, 137);
 
 .city-card {
     border: 1px solid black;
-    box-shadow:  2px 3px 4px lightgrey;
+    box-shadow: 2px 3px 4px lightgrey;
     padding: 5%;
-    font-family: Optima, Arial, sans-serif;
     height: calc(100% - 5%);
     display: flex;
     flex-direction: column;
     margin-bottom: 5%;
     transition: all .2s ease-in-out;
-
-    h3 {
-        font-family: Copperplate, Helvetica, sans-serif;
-    }
 
     img {
         padding-bottom: 5%;
@@ -33,9 +28,13 @@ $timeline-tag-color: rgb(140, 192, 137);
 }
 
 @mixin city-tag($theme: $oral-history-tag-color) {
-    padding: 2%;
+    padding: 1% 2%;
     margin: 2%;
-    background: $theme;
+    border: 1px solid black;
+    cursor: pointer;
+    &.selected, &:hover, &:active {
+        background: $theme;
+    }
 }
 
 .city-tag-map {
