@@ -61,7 +61,7 @@ export default class MapMacro extends React.Component {
                     <GeoJSON data={this.state.censustract} onEachFeature={this.onEachBlock}/>
                 };
             </MapContainer>
-
+            <br />
             <button id={"table1"}
                 onClick={this.handleTableClick.bind(this)}>
                 Table 1
