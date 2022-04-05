@@ -73,34 +73,6 @@ export default class CensusCharts extends React.Component {
                 ]
             },
             {
-                extra: [],
-                labels: [
-                    "Total",
-                    "Single",
-                    "Married",
-                    "Widowed/Divorced"],
-                datasets: [
-                    {
-                        label: "Marital Status Male 14y/o & over",
-                        data: [
-                            8777,
-                            1990,
-                            6343,
-                            444],
-                        backgroundColor: getColor()
-                    },
-                    {
-                        label: "Marital Status Female 14 y/o & over",
-                        data: [
-                            10354,
-                            2054,
-                            6913,
-                            1387],
-                        backgroundColor: getColor()
-                    }
-                ]
-            },
-            {
                 extra: ["Persons 25 y/o and older\t\t14810",
                     "Median school years completed\t\t10.4"],
                 labels: [
@@ -128,6 +100,34 @@ export default class CensusCharts extends React.Component {
                             1525,
                             1120,
                             400],
+                        backgroundColor: getColor()
+                    }
+                ]
+            },
+            {
+                extra: [],
+                labels: [
+                    "Total",
+                    "Single",
+                    "Married",
+                    "Widowed/Divorced"],
+                datasets: [
+                    {
+                        label: "Marital Status Male 14y/o & over",
+                        data: [
+                            8777,
+                            1990,
+                            6343,
+                            444],
+                        backgroundColor: getColor()
+                    },
+                    {
+                        label: "Marital Status Female 14 y/o & over",
+                        data: [
+                            10354,
+                            2054,
+                            6913,
+                            1387],
                         backgroundColor: getColor()
                     }
                 ]
