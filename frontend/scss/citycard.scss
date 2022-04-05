@@ -17,13 +17,19 @@
     transform: scale(1.1);
 }
 
-.city-tags {
+.city-tags, .city-links {
     display: flex;
     flex-wrap: wrap;
     margin-top: auto;
 }
 
-@mixin city-tag($theme: $oral-history-tag-color) {
+.city-links > a {
+    text-decoration: none;
+    color: black;
+    margin-left: 0;
+}
+
+@mixin city-tag($theme: $color-gold) {
     padding: 1% 2%;
     margin: 2%;
     border: 1px solid black;
@@ -33,14 +39,34 @@
     }
 }
 
-.city-tag-map {
-    @include city-tag($color-gold);
+.city-tag-overview {
+    @include city-tag($color-periwinkle);
 }
 
-.city-tag-timeline {
+.city-tag-housing {
     @include city-tag($color-magenta);
 }
 
-.city-tag-oral-hist {
+.city-tag-transport {
     @include city-tag($color-green);
+}
+
+.city-tag-health {
+    @include city-tag($color-gold);
+}
+
+.city-tag-housing {
+    @include city-tag($color-green);
+}
+
+.city-tag-community {
+    @include city-tag($color-magenta);
+}
+
+.city-tag-food {
+    @include city-tag($color-red);
+}
+
+.city-tag-future {
+    @include city-tag($color-gold);
 }

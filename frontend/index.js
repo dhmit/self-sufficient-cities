@@ -14,6 +14,10 @@ import MapMacro from "./components/maps/MapMacro";
 import TimelineTest from "./components/timeline/TimelineTest";
 import API from "./pages/API";
 
+// DEANWOOD COMPONENTS
+import DeanwoodOverview from "./pages/deanwood/DeanwoodOverview";
+
+
 const COMPONENT_PROPS_RAW = document.getElementById("component_props").text;
 const COMPONENT_NAME_RAW = document.getElementById("component_name").text;
 const COMPONENT_PROPS = JSON.parse(COMPONENT_PROPS_RAW);
@@ -29,7 +33,8 @@ const COMPONENTS = {
     MapMacro,
     TimelineTest,
     API,
-    MapConsolidated
+    MapConsolidated,
+    DeanwoodOverview
 };
 
 const PreselectedComponent = COMPONENTS[COMPONENT_NAME || "ErrorNotFoundComponent"];
