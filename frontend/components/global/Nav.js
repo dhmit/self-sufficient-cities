@@ -22,6 +22,9 @@ const Nav = () => {
                 <a className="navbar-brand link-home" href="/">Self-Sustaining Cities</a>
                 <ul className="navbar-nav me-auto">
                     <li className="nav-item mr-2">
+                        <a className="nav-link" href={"/deanwood"}>Deanwood</a>
+                    </li>
+                    <li className="nav-item mr-2">
                         <a className="nav-link" href={"/api"}>API</a>
                     </li>
                     <li className="nav-item mr-2">

@@ -10,26 +10,26 @@ const dummy_city_data = [
         title: "DEANWOOD, D.C.",
         text: "Explore the rise and fall of a self-sustaining neighborhood right in the US" +
             " capital.",
-        resources: ["oral_history", "map", "timeline"]
-    },
-    {
-        img: dh_logo,
-        title: "DETROIT, MI",
-        text: "Filler Text!",
-        resources: ["map", "oral_history"]
-    },
-    {
-        img: dh_logo,
-        title: "MEMPHIS, TN",
-        text: "Filler Text!",
-        resources: ["map", "timeline", "oral_history"]
-    },
-    {
-        img: dh_logo,
-        title: "Sampleville",
-        text: "More coming soon?",
-        resources: ["oral_history", "timeline"]
+        resources: ["overview", "housing", "transport", "food", "community", "health", "future"]
     }
+    // {
+    //     img: dh_logo,
+    //     title: "DETROIT, MI",
+    //     text: "Filler Text!",
+    //     resources: ["map", "oral_history"]
+    // },
+    // {
+    //     img: dh_logo,
+    //     title: "MEMPHIS, TN",
+    //     text: "Filler Text!",
+    //     resources: ["map", "timeline", "oral_history"]
+    // },
+    // {
+    //     img: dh_logo,
+    //     title: "Sampleville",
+    //     text: "More coming soon?",
+    //     resources: ["oral_history", "timeline"]
+    // }
 ];
 
 export default class Home extends React.Component {

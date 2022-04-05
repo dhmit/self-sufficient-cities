@@ -1,11 +1,19 @@
 export const TAG_CLASS = {
-    map: "map",
-    timeline: "timeline",
-    oral_history: "oral-hist"
+    overview: "overview",
+    transport: "transport",
+    housing: "housing",
+    health: "health",
+    food: "food",
+    community: "community",
+    future: "future"
 };
 
 export const TAG_DISPLAY_NAMES = {
-    map: "Map",
-    timeline: "Timeline",
-    oral_history: "Oral\u00a0History"
+    overview: "Overview",
+    transport: "Transport",
+    housing: "Housing",
+    health: "Health",
+    food: "Food",
+    community: "Community",
+    future: "Future\u00a0Research"
 };
