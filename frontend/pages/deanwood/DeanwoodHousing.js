@@ -1,47 +1,27 @@
 import React from "react";
 import {Container, Row, Col} from "react-bootstrap";
 import * as PropTypes from "prop-types";
-import DeanwoodNav from "./DeanwoodNav";
-// import MapDeanwood from "../../components/maps/MapDeanwood";
 import MapHousing from "../../components/maps/MapHousing";
-// import MapConsolidated from "../../components/maps/MapConsolidated";
-
-export const DeanwoodHousing = ({resources}) => {
+import Deanwood_Historical_image from "../../images/Deanwood_historical_image.jpg";
+export const DeanwoodHousing = () => {
 
     return (<>
         <Container className="city" id="deanwood-overview">
             <Row >
                 <Col md={3} className="nav-col mr-2">
                     <h1>Deanwood Housing Changes Over Time</h1>
-                    <p>
-                        The project tells the rise and fall of urban communities that grew their
-                        own food in the 20th century United States. Taking the Deanwood
-                        neighborhood in Washington, D.C. as their starting place, students
-                        consulted newspaper articles and census data to design an interactive
-                        site.
+                    <p className={"intro-text"}>
+                        Deanwood is “a historically stable, self-reliant, self-sufficient and
+                        close-knit primarily African-American community” (Bissinger 2007). The city
+                        has been described as “a place where store owners know their customers by
+                        name, where residents spend their evenings sitting on porches and where
+                        churchgoers fill the streets Sunday mornings on their way to one of the
+                        community's more than 20 churches” (Washington Post, 1988).
                     </p>
-                    <DeanwoodNav selected={"overview"} resources={resources}/>
                 </Col>
                 <Row xs={1} md={2} className="justify-content-around mt-5">
-                    <Col md={4}/>
                     <Col md={4}>
-                        <p className={"intro-text"}>
-                            Eligendi excepturi corporis velit provident dicta neque autem. Enim ab
-                            at
-                            distinctio enim debitis temporibus. Provident enim natus cumque.
-                            Quibusdam
-                            impedit nam et ipsam. Consequatur earum quam dolore doloremque earum.…
-                            Eligendi excepturi corporis velit provident dicta neque autem.
-                            Enim ab at distinctio enim debitis temporibus.
-                            Provident enim natus cumque. Quibusdam impedit nam
-                            et ipsam. Consequatur earum quam dolore doloremque earum.…
-                        </p>
-                    </Col>
-                    <Col md={4}>
-                        <blockquote>
-                            "This is a blockquote. Eligendi excepturi corporis velit. Enim
-                            ab at distinctio enim debitis temporibus"
-                        </blockquote>
+                        <img src={Deanwood_Historical_image}/>
                     </Col>
                 </Row>
                 <Row>
