@@ -2,7 +2,9 @@ import React from "react";
 import {Container, Row, Col} from "react-bootstrap";
 import * as PropTypes from "prop-types";
 import DeanwoodNav from "./DeanwoodNav";
-import MapDeanwood from "../../components/maps/MapDeanwood";
+// import MapDeanwood from "../../components/maps/MapDeanwood";
+import MapHousing from "../../components/maps/MapHousing";
+// import MapConsolidated from "../../components/maps/MapConsolidated";
 
 export const DeanwoodHousing = ({resources}) => {
 
@@ -44,7 +46,7 @@ export const DeanwoodHousing = ({resources}) => {
                 </Row>
                 <Row>
                     <Col md={4}/>
-                    <Col><MapDeanwood/></Col>
+                    <Col><MapHousing/></Col>
                 </Row>
                 <Row className="mt-3">
                     <Col md={4}/>
