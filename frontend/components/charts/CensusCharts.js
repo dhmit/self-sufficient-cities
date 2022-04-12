@@ -331,7 +331,7 @@ export default class CensusCharts extends React.Component {
             </div>
 
             <div>
-                <p>Sources</p>
+                <strong><p>Sources</p></strong>
                 <ul>
                     <li><a href="https://babel.hathitrust.org/cgi/pt?id=coo.31924052151150&view=1up&seq=288&skin=2021">1950s Census Data Tract 78</a></li>
                     <li><a href="https://babel.hathitrust.org/cgi/pt?id=mdp.39015019193161&view=1up&seq=638&skin=2021">1940s Census Data Tract 78</a></li>

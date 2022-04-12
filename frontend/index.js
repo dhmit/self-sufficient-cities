@@ -7,6 +7,7 @@ import ErrorNotFoundComponent from "./components/global/ErrorNotFoundComponent";
 import ExampleId from "./components/ExampleId";
 import Home from "./pages/Home";
 import MapConsolidated from "./components/maps/MapConsolidated";
+import CensusCharts from "./components/charts/CensusCharts";
 import {Timeline} from "./pages/Timeline";
 import MapLegend from "./components/maps/MapLegend";
 import MapMicro from "./components/maps/MapMicro";
@@ -29,7 +30,8 @@ const COMPONENTS = {
     MapMacro,
     TimelineTest,
     API,
-    MapConsolidated
+    MapConsolidated,
+    CensusCharts
 };
 
 const PreselectedComponent = COMPONENTS[COMPONENT_NAME || "ErrorNotFoundComponent"];

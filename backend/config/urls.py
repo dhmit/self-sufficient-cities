@@ -38,7 +38,9 @@ urlpatterns = [
     path('map-legend/', views.map_legend_page),
     path('map-micro/', views.map_micro_page),
     path('timeline-test', views.timeline_test),
-    path('map-consolidated/', views.map_consolidated)
+    path('map-consolidated/', views.map_consolidated),
+    path('census-charts/', views.census_charts)
+
 ]
 
 api_urls = [

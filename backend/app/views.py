@@ -309,6 +309,20 @@ def map_consolidated(request):
     return render(request, 'index.html', context)
 
 
+def census_charts(request):
+    """
+    Census Data visualizations
+    """
+
+    context = {
+        'page_metadata': {
+            'title': 'Census Data visualizations page'
+        },
+        'component_name': 'CensusCharts'
+    }
+    return render(request, 'index.html', context)
+
+
 def timeline_test(request):
     """
     Testing Page for loading timeline modal

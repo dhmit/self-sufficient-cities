@@ -23,6 +23,9 @@ const Nav = () => {
                     <li className="nav-item mr-2">
                         <a className="nav-link" href={"/map-consolidated"}>MapConsolidated</a>
                     </li>
+                    <li className="nav-item mr-2">
+                        <a className="nav-link" href={"/census-charts"}>Census Charts</a>
+                    </li>
                 </ul>
                 <a className="lab-link" href="https://digitalhumanities.mit.edu/" target="_blank"
                     rel="noreferrer">
