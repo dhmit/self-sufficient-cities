@@ -42,8 +42,7 @@ urlpatterns = [
     path('map-micro/', views.map_micro_page),
     path('timeline-test', views.timeline_test),
     path('map-consolidated/', views.map_consolidated),
-    path('census-charts/', views.census_charts)
-
+    path('census-charts/', views.census_charts),
 
     # DEANWOOD
     path('deanwood/', views_deanwood.overview),
