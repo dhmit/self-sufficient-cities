@@ -22,8 +22,11 @@ from rest_framework.urlpatterns import format_suffix_patterns
 
 try:
     from ..app import views
+    from ..app import views_deanwood
 except (ImportError, ModuleNotFoundError):
     from app import views
+    from app import views_deanwood
+
 
 urlpatterns = [
     # Django admin page
@@ -41,6 +44,15 @@ urlpatterns = [
     path('map-consolidated/', views.map_consolidated),
     path('census-charts/', views.census_charts)
 
+
+    # DEANWOOD
+    path('deanwood/', views_deanwood.overview),
+    # path('deanwood/transportation', views_deanwood.transport),
+    # path('deanwood/health', views_deanwood.health),
+    # path('deanwood/community', views_deanwood.community),
+    # path('deanwood/food', views_deanwood.food),
+    # path('deanwood/housing', views_deanwood.housing),
+    # path('deanwood/future', views_deanwood.future)
 ]
 
 api_urls = [

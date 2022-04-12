@@ -23,7 +23,8 @@ module.exports = {
             // eslint-disable-next-line max-len
             {test: /\.(scss|css)$/, use: [MiniCssExtractPlugin.loader, "css-loader", "sass-loader"]},
             {test: /\.js|.jsx$/, exclude: /node_modules/, use: "babel-loader"},
-            {test: /\.(png|jpe?g|gif|svg)$/i, use: [{loader: "file-loader"}]}
+            {test: /\.(png|jpe?g|gif|svg)$/i, use: [{loader: "file-loader"}]},
+            {test: /\.(woff|woff2|eot|ttf)$/, use: "url-loader"}
         ]
     }
 };

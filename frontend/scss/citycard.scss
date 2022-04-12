@@ -1,0 +1,72 @@
+.city-card {
+    border: 1px solid black;
+    box-shadow: 2px 3px 4px lightgrey;
+    padding: 5%;
+    height: calc(100% - 5%);
+    display: flex;
+    flex-direction: column;
+    margin-bottom: 5%;
+    transition: all .2s ease-in-out;
+
+    img {
+        padding-bottom: 5%;
+    }
+}
+
+.city-card:hover {
+    transform: scale(1.1);
+}
+
+.city-tags, .city-links {
+    display: flex;
+    flex-wrap: wrap;
+    margin-top: auto;
+}
+
+.city-links > a {
+    text-decoration: none;
+    color: black;
+    margin-left: 0;
+}
+
+@mixin city-tag($theme: $color-gold) {
+    padding: 1% 2%;
+    margin: 2%;
+    border: 1px solid black;
+    cursor: pointer;
+    &.selected, &:hover, &:active {
+        background: $theme;
+    }
+}
+
+.city-tag-overview {
+    @include city-tag($color-periwinkle);
+}
+
+.city-tag-housing {
+    @include city-tag($color-magenta);
+}
+
+.city-tag-transport {
+    @include city-tag($color-green);
+}
+
+.city-tag-health {
+    @include city-tag($color-gold);
+}
+
+.city-tag-housing {
+    @include city-tag($color-green);
+}
+
+.city-tag-community {
+    @include city-tag($color-magenta);
+}
+
+.city-tag-food {
+    @include city-tag($color-red);
+}
+
+.city-tag-future {
+    @include city-tag($color-gold);
+}
