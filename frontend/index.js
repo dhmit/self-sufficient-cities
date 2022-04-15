@@ -17,7 +17,7 @@ import API from "./pages/API";
 
 // DEANWOOD COMPONENTS
 import DeanwoodOverview from "./pages/deanwood/DeanwoodOverview";
-import FutureWorkOverview from "./pages/future_work/FutureWorkOverview";
+import FutureWorkOverview from "./pages/future/FutureWorkOverview";
 
 
 const COMPONENT_PROPS_RAW = document.getElementById("component_props").text;
