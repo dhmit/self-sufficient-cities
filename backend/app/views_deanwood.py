@@ -53,8 +53,19 @@ def overview(request):
 #     pass
 
 
-# def future(request):
-#     """
-#     Deanwood future page
-#     """
-#     pass
+def future(request):
+    """
+    Deanwood future page
+    """
+    resources = ["overview", "housing", "transport", "food", "community", "health", "future"]
+    context = {
+        'page_metadata': {
+            'title': 'Future Work'
+        },
+        'component_name': 'FutureWorkOverview',
+        'component_props': {
+            'resources': resources
+        },
+    }
+
+    return render(request, 'index.html', context)
