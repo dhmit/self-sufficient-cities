@@ -16,6 +16,7 @@ import API from "./pages/API";
 
 // DEANWOOD COMPONENTS
 import DeanwoodOverview from "./pages/deanwood/DeanwoodOverview";
+import DeanwoodHealth from "./pages/deanwood/Health";
 
 
 const COMPONENT_PROPS_RAW = document.getElementById("component_props").text;
@@ -34,7 +35,8 @@ const COMPONENTS = {
     TimelineTest,
     API,
     MapConsolidated,
-    DeanwoodOverview
+    DeanwoodOverview,
+    DeanwoodHealth
 };
 
 const PreselectedComponent = COMPONENTS[COMPONENT_NAME || "ErrorNotFoundComponent"];

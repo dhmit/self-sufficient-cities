@@ -25,11 +25,22 @@ def overview(request):
 #     pass
 
 
-# def health(request):
-#     """
-#     Deanwood health page
-#     """
-#     pass
+def health(request):
+    """
+    Deanwood health page
+    """
+    resources = ["resident_profile", "covid_data"]
+    context = {
+        'page_metadata': {
+            'title': 'Health'
+        },
+        'component_name': 'DeanwoodHealth',
+        'component_props': {
+            'resources': resources
+        },
+    }
+
+    return render(request, 'index.html', context)
 
 
 # def community(request):
