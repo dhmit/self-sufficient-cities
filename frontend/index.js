@@ -36,7 +36,7 @@ const COMPONENTS = {
     API,
     MapConsolidated,
     DeanwoodOverview,
-    Transport: DeanwoodTransport
+    DeanwoodTransport
 };
 
 const PreselectedComponent = COMPONENTS[COMPONENT_NAME || "ErrorNotFoundComponent"];
