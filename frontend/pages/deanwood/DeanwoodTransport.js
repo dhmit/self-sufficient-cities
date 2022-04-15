@@ -4,6 +4,20 @@ import * as PropTypes from "prop-types";
 import DeanwoodNav from "./DeanwoodNav";
 import MapDeanwood from "../../components/maps/MapDeanwood";
 
+import imgplaceholder from "../../images/deanwood/wy024016.jpeg";
+import DeanwoodCard from "./DeanwoodCard";
+
+
+const dummy_city_data = [
+    {
+        img: imgplaceholder,
+        title: "DEANWOOD, D.C.",
+        text: "Explore the rise and fall of a self-sustaining neighborhood right in the US" +
+            " capital.",
+        resources: ["overview", "housing", "transport", "food", "community", "health", "future"]
+    }
+];
+
 export const DeanwoodTransport = ({resources}) => {
 
     return (<>
@@ -89,6 +103,20 @@ export const DeanwoodTransport = ({resources}) => {
                         </p>
                     </Col>
                     <Col md={1}/>
+                </Row>
+
+                <Row xs={1} md={2}>
+                    {dummy_city_data.map((data, idx) => {
+                        return (
+                            <DeanwoodCard
+                                img_source={data.img}
+                                title={data.title}
+                                text={data.text}
+                                resources={data.resources}
+                                key={idx}
+                            />
+                        );
+                    })}
                 </Row>
             </Row>
         </Container>
