@@ -32,12 +32,22 @@ def overview(request):
 #     pass
 
 
-# def community(request):
-#     """
-#     Deanwood community page
-#     """
-#     pass
+def community(request):
+    """
+    Deanwood community page
+    """
+    resources = ["overview", "housing", "transport", "food", "community", "health", "future"]
+    context = {
+        'page_metadata': {
+            'title': 'Deanwood, D.C.'
+        },
+        'component_name': 'DeanwoodCommunity',
+        'component_props': {
+            'resources': resources
+        },
+    }
 
+    return render(request, 'index.html', context)
 
 # def food(request):
 #     """
