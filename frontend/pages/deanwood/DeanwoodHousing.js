@@ -3,6 +3,8 @@ import {Container, Row, Col} from "react-bootstrap";
 import * as PropTypes from "prop-types";
 import MapHousing from "../../components/maps/MapHousing";
 import Deanwood_Historical_image from "../../images/Deanwood_historical_image.jpg";
+import CensusChartsV2 from "../../components/charts/CensusChartsV2";
+
 export const DeanwoodHousing = () => {
 
     return (<>
@@ -69,10 +71,12 @@ export const DeanwoodHousing = () => {
                             wisi enim ad minim veniam, quis nostrud exerci tation ullamcorper
                             suscipit
                         </p>
+                        <CensusChartsV2></CensusChartsV2>
                     </Col>
                     <Col md={1}/>
                 </Row>
             </Row>
+
         </Container>
     </>);
 
