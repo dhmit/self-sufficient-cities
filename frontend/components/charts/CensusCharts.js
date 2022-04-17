@@ -1,6 +1,8 @@
 import React from "react";
 import BarChart from "./BarChart";
 import PieChart from "./PieChart";
+import CensusChartsV2 from "./CensusChartsV2";
+
 
 const getColor = () => `rgba(${(Math.random()/3 +.6)*255}, ${(Math.random()/3 +.6)*255}, 200, 0.7)`;
 
@@ -337,6 +339,8 @@ export default class CensusCharts extends React.Component {
                     <li><a href="https://babel.hathitrust.org/cgi/pt?id=mdp.39015019193161&view=1up&seq=638&skin=2021">1940s Census Data Tract 78</a></li>
                 </ul>
             </div>
+
+            <CensusChartsV2/>
         </>);
     }
 }
