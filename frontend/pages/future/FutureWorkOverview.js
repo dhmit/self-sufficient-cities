@@ -2,8 +2,7 @@ import React from "react";
 import {Container, Row, Col} from "react-bootstrap";
 import * as PropTypes from "prop-types";
 import DeanwoodNav from "../deanwood/DeanwoodNav";
-import MapDeanwood from "../../components/maps/MapDeanwood";
-
+import CensusTractMap from "./CensusTractMap";
 export const FutureWorkOverview = ({resources}) => {
 
     return (<>
@@ -44,7 +43,7 @@ export const FutureWorkOverview = ({resources}) => {
                 </Row>
                 <Row>
                     <Col md={4}/>
-                    <Col><MapDeanwood/></Col>
+                    <Col><CensusTractMap/></Col>
                 </Row>
                 <Row className="mt-3">
                     <Col md={4}/>

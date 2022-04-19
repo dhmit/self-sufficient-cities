@@ -348,6 +348,17 @@ def get_census_data(request):
     return JsonResponse(census_data)
 
 
+def get_1940_census_geodata(request):
+    """
+    API endopoint for getting the 1940 Census Tracts as a geojson file
+    """
+
+    with open("app/data/TRACT_1940_US_SL140_Coast_Clipped.geojson", encoding='utf-8') as f:
+        census_data = json.load(f)
+
+    return JsonResponse(census_data)
+
+
 def get_addresses(request):
     """
     API endpoint for getting addresses from articles data
