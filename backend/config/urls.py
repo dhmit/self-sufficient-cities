@@ -47,6 +47,8 @@ urlpatterns = [
     path('deanwood/', views_deanwood.overview),
     # path('deanwood/transportation', views_deanwood.transport),
     path('deanwood/health', views_deanwood.health),
+    path('deanwood/resident_profile', views_deanwood.resident),
+    path('deanwood/covid_data', views_deanwood.covid),
     # path('deanwood/community', views_deanwood.community),
     # path('deanwood/food', views_deanwood.food),
     # path('deanwood/housing', views_deanwood.housing),
