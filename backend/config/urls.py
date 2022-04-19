@@ -71,6 +71,7 @@ api_urls = [
     path('api/get_legend_testing/', views.get_legend_testing),
     path('api/documents/', views.get_documents_data),
     path('api/get_table_data/<str:table_name>', views.get_table_data),
+    path('api/ward_demographics', views.ward_demographics),
 ]
 
 api_urls = format_suffix_patterns(api_urls, allowed=['json', 'html'])
