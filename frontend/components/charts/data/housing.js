@@ -256,7 +256,7 @@ export default {
         },
         {
             "name": "1960",
-            "value": 0
+            "value": 12617
         },
         {
             "name": "1970",
