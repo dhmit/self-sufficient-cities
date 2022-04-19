@@ -37,9 +37,28 @@ export default class CensusCharts extends React.Component {
             ]
         };
 
+        let people = [];
+        let k = "people";
+        let name = "Number of people per household";
+        for(let key in housing[k]) {
+            let bars = {
+                extra: [],
+                labels: housing[k][key].map(each => each.name),
+                datasets: [
+                    {
+                        label: name + " " + key,
+                        data: housing[k][key].map(each => each.value),
+                        backgroundColor: getColor()
+                    }
+                ]
+            };
+            people.push(bars);
+        }
+
         this.state = {
             data,
-            average
+            average,
+            people
         };
     }
 
@@ -52,6 +71,10 @@ export default class CensusCharts extends React.Component {
                     <BarChart data={each} key={i + this.state.year}/>)
             }
             <BarChart data={this.state.average} />
+            {
+                this.state.people.map((each,i) =>
+                    <BarChart data={each} key={i + this.state.year}/>)
+            }
         </>);
     }
 }

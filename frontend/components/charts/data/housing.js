@@ -135,6 +135,116 @@ export default {
             }
         ]
     },
+    "people": {
+        "1940": [
+            {
+                "name":"1 Person In Unit",
+                "value":86
+            },
+            {
+                "name":"2 Persons In Unit",
+                "value":488
+            },
+            {
+                "name":"3 Persons In Unit",
+                "value":504
+            },
+            {
+                "name":"4 Persons In Unit",
+                "value":459
+            },
+            {
+                "name":"5 Persons In Unit",
+                "value":370
+            },
+            {
+                "name":"6 Persons In Unit",
+                "value":247
+            },
+            {
+                "name":"7 Persons In Unit",
+                "value":173
+            },
+            {
+                "name":"8 Persons In Unit",
+                "value":124
+            },
+            {
+                "name":"9 Persons In Unit",
+                "value":89
+            },
+            {
+                "name":"10 Persons In Unit",
+                "value":60
+            },
+            {
+                "name":"11 Persons In Unit",
+                "value":76
+            }
+        ],
+        "1950": [
+            {
+                "name":"1 Person in Housing Unit",
+                "value":397
+            },
+            {
+                "name":"2 Persons in Housing Unit",
+                "value":2097
+            },
+            {
+                "name":"3 Persons in Housing Unit",
+                "value":2079
+            },
+            {
+                "name":"4 Persons in Housing Unit",
+                "value":1869
+            },
+            {
+                "name":"5 and 6 Persons in Housing Unit",
+                "value":1918
+            },
+            {
+                "name":"7 or More Persons in Housing Unit",
+                "value":889
+            }
+        ],
+        "1960": [
+            {
+                "name":"1 person in unit",
+                "value":1112
+            },
+            {
+                "name":"2 persons in unit",
+                "value":2512
+            },
+            {
+                "name":"3 persons in unit",
+                "value":1995
+            },
+            {
+                "name":"4 persons in unit",
+                "value":1807
+            },
+            {
+                "name":"5 persons in unit",
+                "value":1216
+            },
+            {
+                "name":"6 persons in unit",
+                "value":1040
+            },
+            {
+                "name":"7 persons in unit",
+                "value":584
+            },
+            {
+                "name":"8 persons or more in unit",
+                "value":802
+            }
+        ]
+    },
+
+
     "medianValue": [
         {
             "name": "1940",
