@@ -42,6 +42,40 @@ def health(request):
 
     return render(request, 'index.html', context)
 
+def resident(request):
+    """
+    Deanwood health page
+    """
+    resources = ["resident_profile", "covid_data"]
+    context = {
+        'page_metadata': {
+            'title': 'Resident'
+        },
+        'component_name': 'DeanwoodResident',
+        'component_props': {
+            'resources': resources
+        },
+    }
+
+    return render(request, 'index.html', context)
+
+def covid(request):
+    """
+    Deanwood health page
+    """
+    resources = ["resident_profile", "covid_data"]
+    context = {
+        'page_metadata': {
+            'title': 'COVID'
+        },
+        'component_name': 'DeanwoodCovid',
+        'component_props': {
+            'resources': resources
+        },
+    }
+
+    return render(request, 'index.html', context)
+
 
 # def community(request):
 #     """

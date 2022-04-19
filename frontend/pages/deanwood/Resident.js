@@ -3,19 +3,24 @@ import {Container, Row, Col} from "react-bootstrap";
 import * as PropTypes from "prop-types";
 import DeanwoodNav from "./DeanwoodNav";
 
-// if putting resource bar back in, add {resources} within parameter parentheses below
-export const DeanwoodHealth = ({resources}) => {
+export const DeanwoodResident = ({resources}) => {
 
     return (<>
         <Container className="city" id="deanwood-overview">
             <Row>
-                <h1>Health</h1>
-                <h3>COVID in Deanwood: Ward 3 vs. Ward 7</h3>
+                <h1>RESIDENT</h1>
+                <h3>Put our big boy & his data here.</h3>
                 <DeanwoodNav selected={"covid_data"} resources={resources}/>
             </Row>
             <Row>
                 <Col>
-                    <p>Home page with any necessary intro information!</p>
+                    <p>Column for Ward 3 data.</p>
+                </Col>
+                <Col>
+                    <p>Column for big boy.</p>
+                </Col>
+                <Col>
+                    <p>Column for Ward 7 data.</p>
                 </Col>
             </Row>
         </Container>
@@ -24,8 +29,8 @@ export const DeanwoodHealth = ({resources}) => {
 
 };
 
-DeanwoodHealth.propTypes = {
+DeanwoodResident.propTypes = {
     resources: PropTypes.array
 };
 
-export default DeanwoodHealth;
+export default DeanwoodResident;
