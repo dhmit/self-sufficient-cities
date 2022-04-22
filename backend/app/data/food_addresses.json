@@ -1,0 +1,74 @@
+[
+    {
+        "address": "Safeway",
+        "year": "2000",
+        "coordinates": [
+            "38.893291",
+            "76.947510"
+        ]
+    },
+    {
+        "address": "Dave Brown's Wine and Liquor",
+        "year": "2000",
+        "coordinates": [
+            "38.902640",
+            "-76.934920"
+        ]
+    },
+    {
+        "address": "Suburban Market",
+        "year": "2000",
+        "coordinates": [
+            "38.902970",
+            "-76.936500"
+        ]
+    },
+    {
+        "address": "A&S Grocery Store",
+        "year": "2000",
+        "coordinates": [
+            "38.903070",
+            "-76.934060"
+        ]
+    },
+    {
+        "address": "A&S Grocery Store",
+        "year": "2000",
+        "coordinates": [
+            "38.903070",
+            "-76.934060"
+        ]
+    },
+    {
+        "address": "7-Eleven",
+        "year": "2000",
+        "coordinates": [
+            "38.899030",
+            "-76.931960"
+        ]
+    },
+    {
+        "address": "Uncle Lee's Liquor",
+        "year": "2000",
+        "coordinates": [
+            "38.904390",
+            "-76.924180"
+        ]
+    },
+    {
+        "address": "Wendy's",
+        "year": "2000",
+        "coordinates": [
+            "38.901860",
+            "-76.941590"
+        ]
+    },
+    {
+        "address": "Subway",
+        "year": "2000",
+        "coordinates": [
+            "38.899110",
+            "-76.933450"
+        ]
+    }
+]
