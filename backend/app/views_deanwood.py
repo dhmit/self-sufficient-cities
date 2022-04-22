@@ -47,9 +47,9 @@ def food(request):
     resources = []
     context = {
         'page_metadata': {
-            'title': 'Deanwood, D.C.'
+            'title': 'Deanwood: Food Landscape'
         },
-        'component_name': 'DeanwoodOverview',
+        'component_name': 'DeanwoodFood',
         'component_props': {
             'resources': resources
         },
