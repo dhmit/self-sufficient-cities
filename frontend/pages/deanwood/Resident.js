@@ -32,8 +32,8 @@ export const DeanwoodResident = ({resources}) => {
                             a world of difference. The disparity between Ward 3 and Ward 7 is not
                             just demographic or economic: as shown here, it extends to people's
                             health. Those who, by accident of birth, lie in the wrong side of the
-                            divide can expect to lead lives that are ten years shorter and [ADD
-                            SOMETHING ABOUT OTHER DATA].
+                            divide can expect to lead lives that are ten years shorter and have
+                            higher rates of chronic diseases such as diabetes.
                         </Card.Text>
                     </Card.Body>
                 </Card>
