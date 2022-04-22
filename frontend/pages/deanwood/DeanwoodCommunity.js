@@ -4,8 +4,40 @@ import * as PropTypes from "prop-types";
 import DeanwoodNav from "./DeanwoodNav";
 import MapDeanwood from "../../components/maps/MapDeanwood";
 
-export const DeanwoodCommunity = ({resources}) => {
+const DeanwoodProfile = (statement, map = true, source = "") => {
+    let right;
+    if (map){
+        right = <Col><MapDeanwood/></Col>;
+    }
+    else{
+        right = <img src = {source} ></img>;
+    }
+    return (<div className={"Profile"}>
+        <Row>
+            <Col md={4}/>
+            <Col>
+                <p className={"intro-text"}>
+                    {statement}
 
+                </p>
+            </Col>
+            {right}
+        </Row>
+    </div>);
+};
+
+export const DeanwoodCommunity = ({resources}) => {
+    const fillerString = "Random stuff corporis velit " +
+        " provident dicta neque autem. Enim ab\n" +
+        "  at\n" +
+        "  distinctio enim debitis temporibus. Provident enim natus cumque.\n" +
+        "  Quibusdam\n" +
+        "  impedit nam et ipsam. Consequatur earum quam dolore doloremque earum.…\n" +
+        "  Eligendi excepturi corporis velit provident dicta neque autem.\n" +
+        "  Enim ab at distinctio enim debitis temporibus.\n" +
+        "  Provident enim natus cumque. Quibusdam impedit nam\n" +
+        "  et ipsam. Consequatur earum quam dolore doloremque earum.…";
+    const lawyerMoss = "Lawyer Moss could always be found carrying a chicken under his arm";
     return (<>
         <Container className="city" id="deanwood-overview">
             <Row >
@@ -43,53 +75,19 @@ export const DeanwoodCommunity = ({resources}) => {
                     </Col>
                 </Row>
                 <Row>
-                    <Col md={4}/>
-                    <Col><MapDeanwood/></Col>
-                </Row>
-                <Row className="mt-3">
-                    <Col md={4}/>
-                    <Col md={1}/>
-                    <Col md={6}>
-                        <p>
-                            Lorem ipsum dolor sit amet, consectetuer adipiscing elit, sed diam
-                            nonummy
-                            nibh euismod tincidunt ut laoreet dolore magna aliquam erat volutpat. Ut
-                            wisi enim ad minim veniam, quis nostrud exerci tation ullamcorper
-                            suscipit
-                            lobortis nisl ut aliquip ex ea commodo consequat. Duis autem vel eum
-                            iriure
-                            dolor in hendrerit in vulputate velit esse molestie consequat, vel illum
-                            dolore eu feugiat nulla facilisis at vero eros et accumsan et iusto odio
-                            dignissim qui blandit praesent luptatum zzril delenit augue duis dolore
-                            te
-                            feugait nulla facilisi.
-                            Lorem ipsum dolor sit amet, cons ectetuer adipiscing elit, sed diam
-                            nonummy
-                            nibh euismod tincidunt ut laoreet dolore magna aliquam erat volutpat. Ut
-                            wisi enim ad minim veniam, quis nostrud exerci tation ullamcorper
-                            suscipit
-                            lobortis nisl ut aliquip ex ea commodo consequat.
-                            Lorem ipsum dolor sit amet, consectetuer adipiscing elit, sed diam
-                            nonummy
-                            nibh euismod tincidunt ut laoreet dolore magna aliquam erat volutpat. Ut
-                            wisi enim ad minim veniam, quis nostrud exerci tation ullamcorper
-                            suscipit
-                            lobortis nisl ut aliquip ex ea commodo consequat. Duis autem vel eum
-                            iriure
-                            dolor in hendrerit in vulputate velit esse molestie consequat, vel illum
-                            dolore eu feugiat nulla facilisis at vero eros et accumsan et iusto odio
-                            dignissim qui blandit praesent luptatum zzril delenit augue duis dolore
-                            te
-                            feugait nulla facilisi.
-                            Lorem ipsum dolor sit amet, cons ectetuer adipiscing elit, sed diam
-                            nonummy
-                            nibh euismod tincidunt ut laoreet dolore magna aliquam erat volutpat. Ut
-                            wisi enim ad minim veniam, quis nostrud exerci tation ullamcorper
-                            suscipit
-                        </p>
+                    <Col md = {4}></Col>
+                    <Col>
+                        <blockquote>
+                           "Deanwood was once a propsperous
+                           neighborhood with a close-knit community Deanwood was once a propsperous
+                           neighborhood with a close-knit communityDeanwood was once a propsperous
+                           neighborhood with a close-knit community"
+                        </blockquote>
                     </Col>
-                    <Col md={1}/>
                 </Row>
+                {DeanwoodProfile(fillerString, true)}
+                {DeanwoodProfile(lawyerMoss, true)}
+
             </Row>
         </Container>
     </>);
