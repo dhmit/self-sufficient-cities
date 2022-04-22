@@ -18,6 +18,7 @@ def overview(request):
 
     return render(request, 'index.html', context)
 
+
 # def transport(request):
 #     """
 #     Deanwood transportation page
@@ -39,12 +40,21 @@ def overview(request):
 #     pass
 
 
-# def food(request):
-#     """
-#     Deanwood food page
-#     """
-#     pass
-
+def food(request):
+    """
+     Deanwood food page
+     """
+    resources = []
+    context = {
+        'page_metadata': {
+            'title': 'Deanwood, D.C.'
+        },
+        'component_name': 'DeanwoodOverview',
+        'component_props': {
+            'resources': resources
+        },
+    }
+    return render(request, 'index.html', context)
 
 # def housing(request):
 #     """
