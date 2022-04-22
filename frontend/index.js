@@ -21,6 +21,7 @@ import DeanwoodResident from "./pages/deanwood/Resident";
 import DeanwoodCovid from "./pages/deanwood/Covid";
 
 
+
 const COMPONENT_PROPS_RAW = document.getElementById("component_props").text;
 const COMPONENT_NAME_RAW = document.getElementById("component_name").text;
 const COMPONENT_PROPS = JSON.parse(COMPONENT_PROPS_RAW);
