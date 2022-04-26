@@ -74,12 +74,11 @@ export const DeanwoodHousing = ({resources, addresses}) => {
                             suscipit
                         </p>
                         <CensusChartsV2></CensusChartsV2>
+                        <pre>{JSON.stringify(resources)}</pre>
                     </Col>
                     <Col md={1}/>
                 </Row>
             </Row>
-
-
         </Container>
     </>);
 
