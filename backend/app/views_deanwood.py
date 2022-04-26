@@ -46,7 +46,7 @@ def resident(request):
     """
     Deanwood health page
     """
-    resources = ["resident_profile", "covid_data"]
+    resources = ["resident_profile", "covid_data","health_trends"]
     context = {
         'page_metadata': {
             'title': 'Resident'
@@ -63,7 +63,7 @@ def covid(request):
     """
     Deanwood health page
     """
-    resources = ["resident_profile", "covid_data"]
+    resources = ["resident_profile", "covid_data","health_trends"]
     context = {
         'page_metadata': {
             'title': 'COVID'
@@ -74,8 +74,24 @@ def covid(request):
         },
     }
 
-    return render(request, 'index.html', context)
+    return render(request, 'index.html', context
+                  )
+def healthtrend(request):
+    """
+    Deanwood health page
+    """
+    resources = ["resident_profile", "covid_data","health_trends"]
+    context = {
+        'page_metadata': {
+            'title': 'Health Trend'
+        },
+        'component_name': 'DeanwoodHealthtrend',
+        'component_props': {
+            'resources': resources
+        },
+    }
 
+    return render(request, 'index.html', context)
 
 # def community(request):
 #     """

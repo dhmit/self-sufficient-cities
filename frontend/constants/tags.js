@@ -7,7 +7,8 @@ export const TAG_CLASS = {
     community: "community",
     future: "future",
     resident_profile: "resident-profile",
-    covid_data: "covid-data"
+    covid_data: "covid-data",
+    health_trends : "health-trends"
 };
 
 export const TAG_DISPLAY_NAMES = {
@@ -19,5 +20,6 @@ export const TAG_DISPLAY_NAMES = {
     community: "Community",
     future: "Future\u00a0Research",
     resident_profile: "Resident Profile",
-    covid_data: "COVID Data"
+    covid_data: "COVID Data",
+    health_trends: "Health Trends"
 };
