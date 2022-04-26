@@ -243,6 +243,162 @@ export default {
             }
         ]
     },
+    "rent": {
+        "1940": [
+            {
+                "name":"Under $5",
+                "value":3
+            },
+            {
+                "name":"$5 to $6",
+                "value":2
+            },
+            {
+                "name":"$7 to $9",
+                "value":16
+            },
+            {
+                "name":"$10 to $14",
+                "value":53
+            },
+            {
+                "name":"$15 to $19",
+                "value":135
+            },
+            {
+                "name":"$20 to $24",
+                "value":177
+            },
+            {
+                "name":"$25 to $29",
+                "value":237
+            },
+            {
+                "name":"$30 to $39",
+                "value":284
+            },
+            {
+                "name":"$40 to $49",
+                "value":145
+            },
+            {
+                "name":"$50 to $59",
+                "value":47
+            },
+            {
+                "name":"$60 to $74",
+                "value":7
+            },
+            {
+                "name":"$75 to $99",
+                "value":1
+            },
+            {
+                "name":"$100 to $149",
+                "value":1
+            },
+            {
+                "name":"$150 to $199",
+                "value":0
+            },
+            {
+                "name":"$200 and Over",
+                "value":0
+            }
+        ],
+        "1950": [
+            {
+                "name":"Less Than $10",
+                "value":3
+            },
+            {
+                "name":"$10 to $19",
+                "value":106
+            },
+            {
+                "name":"$20 to $29",
+                "value":319
+            },
+            {
+                "name":"$30 to $39",
+                "value":863
+            },
+            {
+                "name":"$40 to $49",
+                "value": 1484
+            },
+            {
+                "name":"$50 to $59",
+                "value":744
+            },
+            {
+                "name":"$60 to $74",
+                "value": 1332
+            },
+            {
+                "name":"$75 to $99",
+                "value":229
+            },
+            {
+                "name":"$100 and Over",
+                "value":51
+            }
+        ],
+        "1960": [
+            {
+                "name":"Less than $20",
+                "value":18
+            },
+            {
+                "name":"$20 to $29",
+                "value":230
+            },
+            {
+                "name":"$30 to $39",
+                "value":302
+            },
+            {
+                "name":"$40 to $49",
+                "value":331
+            },
+            {
+                "name":"$50 to $59",
+                "value":1384
+            },
+            {
+                "name":"$60 to $69",
+                "value":1644
+            },
+            {
+                "name":"$70 to $79",
+                "value":1703
+            },
+            {
+                "name":"$80 to $89",
+                "value":917
+            },
+            {
+                "name":"$90 to $99",
+                "value":248
+            },
+            {
+                "name":"$100 to $119",
+                "value":64
+            },
+            {
+                "name":"$120 to $149",
+                "value":8
+            },
+            {
+                "name":"$150 or more",
+                "value":5
+            },
+            {
+                "name":"No cash rent",
+                "value":41
+            }
+        ]
+    },
 
 
     "medianValue": [
@@ -261,10 +417,6 @@ export default {
         {
             "name": "1970",
             "value": 18082
-        },
-        {
-            "name": "1980",
-            "value": 0
         }
     ]
 };
