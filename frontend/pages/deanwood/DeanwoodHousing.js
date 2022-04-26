@@ -5,7 +5,7 @@ import MapHousing from "../../components/maps/MapHousing";
 import Deanwood_Historical_image from "../../images/Deanwood_historical_image.jpg";
 import CensusChartsV2 from "../../components/charts/CensusChartsV2";
 
-export const DeanwoodHousing = () => {
+export const DeanwoodHousing = ({resources, addresses}) => {
 
     return (<>
         <Container className="city" id="deanwood-overview">
@@ -28,7 +28,7 @@ export const DeanwoodHousing = () => {
                 </Row>
                 <Row>
                     <Col md={4}/>
-                    <Col><MapHousing/></Col>
+                    <Col><MapHousing addresses={addresses}/></Col>
                 </Row>
                 <Row className="mt-3">
                     <Col md={4}/>
@@ -83,7 +83,8 @@ export const DeanwoodHousing = () => {
 };
 
 DeanwoodHousing.propTypes = {
-    resources: PropTypes.array
+    resources: PropTypes.array,
+    addresses: PropTypes.array
 };
 
 

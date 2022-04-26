@@ -57,8 +57,11 @@ def housing(request):
         },
         'component_name': 'DeanwoodHousing',
         'component_props': {
-            'resources': resources
+            'resources': resources,
+            'addresses': [{"address": "District Normal School", "year": 1914,
+                                            "coordinates": ["46.3133991", "-79.4611483"]}]
         },
+
     }
 
     return render(request, 'index.html', context)
