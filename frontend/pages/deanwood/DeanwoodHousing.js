@@ -34,6 +34,8 @@ export const DeanwoodHousing = ({resources, addresses}) => {
                     <Col md={4}/>
                     <Col md={1}/>
                     <Col md={6}>
+                        <br/>
+                        <br/>
                         <p>
                             Lorem ipsum dolor sit amet, consectetuer adipiscing elit, sed diam
                             nonummy
@@ -76,6 +78,7 @@ export const DeanwoodHousing = ({resources, addresses}) => {
                     <Col md={1}/>
                 </Row>
             </Row>
+
 
         </Container>
     </>);
