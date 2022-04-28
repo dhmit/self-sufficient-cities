@@ -282,14 +282,10 @@ export default class MapHousing extends React.Component {
         return (<>
             <h1>{this.state.mainLocation.name}</h1>
             <div className="main-element">
-                <div className="event-selector">
-                    <h3 className="event-selector-title">Event Selector</h3>
-                </div>
-                <div id="map">
+                <div id="map" className="pb-4">
                     <MapContainer
                         center={this.state.mainLocation.coordinates} zoom={13}
-                        scrollWheelZoom={true}
-                    >
+                        scrollWheelZoom={true}>
                         <TileLayer
                             attribution="&copy; <a href='https://www.openstreetmap.org/copyright'>OpenStreetMap</a> contributors"
                             url="http://stamen-tiles-a.a.ssl.fastly.net/toner-lite/{z}/{x}/{y}.png"

@@ -30,7 +30,7 @@ export const DeanwoodHousing = ({resources, addresses}) => {
                     <Col md={4}/>
                     <Col><MapHousing addresses={addresses}/></Col>
                 </Row>
-                <Row className="mt-3">
+                <Row className="mt-5">
                     <Col md={4}/>
                     <Col md={1}/>
                     <Col md={6}>
