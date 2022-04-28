@@ -50,7 +50,7 @@ urlpatterns = [
     # path('deanwood/health', views_deanwood.health),
     # path('deanwood/community', views_deanwood.community),
     # path('deanwood/food', views_deanwood.food),
-    # path('deanwood/housing', views_deanwood.housing),
+    path('deanwood/housing', views_deanwood.housing),
     # path('deanwood/future', views_deanwood.future)
 ]
 

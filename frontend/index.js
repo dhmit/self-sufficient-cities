@@ -17,6 +17,7 @@ import API from "./pages/API";
 
 // DEANWOOD COMPONENTS
 import DeanwoodOverview from "./pages/deanwood/DeanwoodOverview";
+import DeanwoodHousing from "./pages/deanwood/DeanwoodHousing";
 
 
 const COMPONENT_PROPS_RAW = document.getElementById("component_props").text;
@@ -35,8 +36,9 @@ const COMPONENTS = {
     TimelineTest,
     API,
     MapConsolidated,
-    CensusCharts,
-    DeanwoodOverview
+    DeanwoodOverview,
+    DeanwoodHousing,
+    CensusCharts
 };
 
 const PreselectedComponent = COMPONENTS[COMPONENT_NAME || "ErrorNotFoundComponent"];
