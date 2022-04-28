@@ -2,6 +2,7 @@ import React from "react";
 import {Container, Row, Col} from "react-bootstrap";
 import * as PropTypes from "prop-types";
 import DeanwoodNav from "./DeanwoodNav";
+import * as Text from "./DeanwoodCommunityText";
 import MapDeanwood from "../../components/maps/MapDeanwood";
 
 const DeanwoodProfile = (statement, map = true, source = "") => {
@@ -12,14 +13,14 @@ const DeanwoodProfile = (statement, map = true, source = "") => {
     else{
         right = <img src = {source} ></img>;
     }
+    let statement_array = statement.split("\n");
     return (<div className={"Profile"}>
         <Row>
             <Col md={4}/>
             <Col>
-                <p className={"intro-text"}>
-                    {statement}
-
-                </p>
+                {statement_array.map(s => (
+                    <p key={s} className={"intro-text"}>{s}</p>
+                ))}
             </Col>
             {right}
         </Row>
@@ -27,17 +28,6 @@ const DeanwoodProfile = (statement, map = true, source = "") => {
 };
 
 export const DeanwoodCommunity = ({resources}) => {
-    const fillerString = "Random stuff corporis velit " +
-        " provident dicta neque autem. Enim ab\n" +
-        "  at\n" +
-        "  distinctio enim debitis temporibus. Provident enim natus cumque.\n" +
-        "  Quibusdam\n" +
-        "  impedit nam et ipsam. Consequatur earum quam dolore doloremque earum.…\n" +
-        "  Eligendi excepturi corporis velit provident dicta neque autem.\n" +
-        "  Enim ab at distinctio enim debitis temporibus.\n" +
-        "  Provident enim natus cumque. Quibusdam impedit nam\n" +
-        "  et ipsam. Consequatur earum quam dolore doloremque earum.…";
-    const lawyerMoss = "Lawyer Moss could always be found carrying a chicken under his arm";
     return (<>
         <Container className="city" id="deanwood-overview">
             <Row >
@@ -85,8 +75,8 @@ export const DeanwoodCommunity = ({resources}) => {
                         </blockquote>
                     </Col>
                 </Row>
-                {DeanwoodProfile(fillerString, true)}
-                {DeanwoodProfile(lawyerMoss, true)}
+                {DeanwoodProfile(Text.quoteContext, false)}
+                {DeanwoodProfile(Text.fillerString, true)}
 
             </Row>
         </Container>
