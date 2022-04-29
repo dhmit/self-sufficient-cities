@@ -18,6 +18,7 @@ def overview(request):
 
     return render(request, 'index.html', context)
 
+
 # def transport(request):
 #     """
 #     Deanwood transportation page
@@ -59,13 +60,12 @@ def housing(request):
         'component_props': {
             'resources': resources,
             'addresses': [{"address": "District Normal School", "year": 1914,
-                                            "coordinates": ["46.3133991", "-79.4611483"]}]
+                           "coordinates": ["38.9051606", "-77.0036513"]}]
         },
 
     }
 
     return render(request, 'index.html', context)
-
 
 # def future(request):
 #     """

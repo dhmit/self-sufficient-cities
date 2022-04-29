@@ -1,5 +1,5 @@
 import React from "react";
-import {Container, Row, Col} from "react-bootstrap";
+import {Container, Row, Col, Image} from "react-bootstrap";
 import * as PropTypes from "prop-types";
 import MapHousing from "../../components/maps/MapHousing";
 import Deanwood_Historical_image from "../../images/Deanwood_historical_image.jpg";
@@ -9,7 +9,7 @@ export const DeanwoodHousing = ({resources, addresses}) => {
 
     return (<>
         <Container className="city" id="deanwood-overview">
-            <Row >
+            <Row>
                 <Col md={3} className="nav-col mr-2">
                     <h1>Deanwood Housing Changes Over Time</h1>
                     <p className={"intro-text"}>
@@ -21,16 +21,17 @@ export const DeanwoodHousing = ({resources, addresses}) => {
                         community's more than 20 churches” (Washington Post, 1988).
                     </p>
                 </Col>
-                <Row xs={1} md={2} className="justify-content-around mt-5">
-                    <Col md={4}>
-                        <img src={Deanwood_Historical_image}/>
+                <Row className="mt-5 mb-4">
+                    <Col md={4}/>
+                    <Col md={8} lg={8}>
+                        <Image src={Deanwood_Historical_image} fluid={true}/>
                     </Col>
                 </Row>
                 <Row>
                     <Col md={4}/>
                     <Col><MapHousing addresses={addresses}/></Col>
                 </Row>
-                <Row className="mt-3">
+                <Row className="mt-5">
                     <Col md={4}/>
                     <Col md={1}/>
                     <Col md={6}>
