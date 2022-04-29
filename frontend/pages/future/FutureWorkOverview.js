@@ -15,7 +15,6 @@ import {
     Legend
 } from "chart.js";
 import {Scatter} from "react-chartjs-2";
-import {ButtonGroup} from "@material-ui/core";
 ChartJS.register(LinearScale, PointElement, LineElement, Tooltip, Legend);
 
 export const options = {
@@ -300,7 +299,7 @@ FutureWorkOverview.propTypes = {
 
 RadioButtons.propTypes = {
     radios: PropTypes.array,
-    vertical: PropTypes.bool,
+    vertical: PropTypes.bool
 };
 
 
