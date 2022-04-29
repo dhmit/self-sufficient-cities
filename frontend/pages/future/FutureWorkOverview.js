@@ -82,9 +82,6 @@ class RadioButtons extends React.Component {
     }
 }
 
-const DEANWOOD_COORDS = [38.897665, -76.925919];
-// const DETROIT_COORDS = [42.331429, -83.045753];
-
 class FutureWorkOverview extends React.Component{
 
     constructor(props) {
@@ -233,22 +230,21 @@ class FutureWorkOverview extends React.Component{
                             <p>
                                 The maps below show what census tracts are closest to
                                 Deanwood, after the data has been normalized to ensure all
-                                variables are on the same scale.
+                                variables are on the same scale. You can either select from areas
+                                of note, or scroll around on your own!
                             </p>
                         </Col>
                     </Row>
                     <Row>
                         <Col md={4}/>
                         <Col md={8}>
-                            <h5>Deanwood</h5>
                             <CensusTractMap
                                 census_tracts={this.state.census_tracts}
                                 deanwood_similarities={this.state.deanwood_similarities}
-                                position={DEANWOOD_COORDS}
                             />
                         </Col>
                     </Row>
-                    <Row className="mt-3">
+                    <Row className="mt-5">
                         <Col md={4}/>
                         <Col md={8}>
                             <h3>Adversarial Machine Learning Model</h3>
@@ -290,6 +286,13 @@ class FutureWorkOverview extends React.Component{
                             <p>
                                 The following graphic represents the ranking of each cities.
                             </p>
+                        </Col>
+                    </Row>
+                    <Row>
+                        <Col md={4}/>
+                        <Col md={8}>
+                            <h3>Results</h3>
+                            <p>Some cool results belong here!</p>
                         </Col>
                     </Row>
                 </Row>
