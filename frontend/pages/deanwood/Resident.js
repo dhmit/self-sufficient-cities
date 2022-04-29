@@ -9,7 +9,7 @@ export const DeanwoodResident = (_) => {
 
     return (<>
         <Container className="city" id="deanwood-overview">
-            <Container>
+            <Container className="m-4">
                 <Card>
                     <Card.Img src={deanwood_image}></Card.Img>
                     <Card.ImgOverlay>
@@ -32,7 +32,7 @@ export const DeanwoodResident = (_) => {
                 </Card>
             </Container>
 
-            <Container>
+            <Container className="m-4">
                 <Row>
                     <Col>
                         <p>Column for Ward 3 data.</p>
