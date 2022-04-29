@@ -1,10 +1,81 @@
 import React from "react";
-import {Container, Row, Col} from "react-bootstrap";
+import {Container, Row, Col, ToggleButton} from "react-bootstrap";
 import * as PropTypes from "prop-types";
 import axios from "axios";
-
 import DeanwoodNav from "../deanwood/DeanwoodNav";
-import CensusTractMap from "../../components/maps/CensusTractMap";
+import CensusTractMap from "./CensusTractMap";
+import ToggleButtonGroup from 'react-bootstrap/ToggleButtonGroup';
+import MapDeanwood from "../../components/maps/MapDeanwood";
+
+import {
+    Chart as ChartJS,
+    LinearScale,
+    PointElement,
+    LineElement,
+    Tooltip,
+    Legend,
+} from 'chart.js';
+import { Scatter } from 'react-chartjs-2';
+import {ButtonGroup} from "@material-ui/core";
+ChartJS.register(LinearScale, PointElement, LineElement, Tooltip, Legend);
+
+export const options = {
+    scales: {
+        y: {
+            beginAtZero: true,
+        },
+    },
+};
+
+export const data = {
+    datasets: [
+        {
+            label: 'A dataset',
+            data: [{x: 0, y: 1}],
+            backgroundColor: 'rgba(255, 99, 132, 1)',
+        },
+    ],
+};
+
+const RADIOS = [
+    { name: 'Active', value: 0 },
+    { name: 'Radio', value: 1 },
+    { name: 'Radio', value: 2 },
+  ];
+
+class RadioButtons extends React.Component {
+    constructor(props) {
+        super(props);
+        this.state = {
+            value: 0
+        };
+    }
+
+    setRadioValue(newValue) {
+        this.setState({value: newValue});
+    }
+
+    render() {
+        return (
+            <ButtonGroup className="mb-2">
+            {this.props.radios.map((radio, idx) => (
+            <ToggleButton
+                key={idx}
+                id={`radio-${idx}`}
+                type="radio"
+                variant="secondary"
+                name="radio"
+                value={radio.value}
+                checked={this.state.value === radio.value}
+                onChange={(e) => this.setRadioValue(e.currentTarget.value)}
+            >
+                {radio.name}
+            </ToggleButton>
+            ))}
+          </ButtonGroup>
+        );
+    }
+}
 
 const DEANWOOD_COORDS = [38.897665, -76.925919];
 
@@ -113,11 +184,27 @@ class FutureWorkOverview extends React.Component{
                             />
                         </Col>
                     </Row>
+                    <RadioButtons radios={RADIOS}/>
+                    <Row><Col><Scatter md={4} options={options} data={data} /></Col></Row>
                     <Row className="mt-3">
                         <Col md={4}/>
                         <Col md={1}/>
                         <Col md={6}>
                             <p>
+                        </blockquote>
+                    </Col>
+                </Row>
+                <Row>
+                    <Col md={4}/>
+                    <Col><CensusTractMap/></Col>
+                </Row>
+                <RadioButtons radios={RADIOS}/>
+                <Row><Col><Scatter md={4} options={options} data={data} /></Col></Row>
+                <Row className="mt-3">
+                    <Col md={4}/>
+                    <Col md={1}/>
+                    <Col md={6}>
+                        <p>
                             Lorem ipsum dolor sit amet, consectetuer adipiscing elit, sed diam
                             nonummy
                             nibh euismod tincidunt ut laoreet dolore magna aliquam erat volutpat. Ut
@@ -166,5 +253,10 @@ class FutureWorkOverview extends React.Component{
 FutureWorkOverview.propTypes = {
     resources: PropTypes.array
 };
+
+RadioButtons.propTypes = {
+    radios: PropTypes.array
+};
+
 
 export default FutureWorkOverview;
