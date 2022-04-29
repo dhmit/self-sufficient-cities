@@ -1,7 +1,8 @@
 import React from "react";
-import {Container, Row, Col, Card} from "react-bootstrap";
+import {Container, Row, Col, Card, Image} from "react-bootstrap";
 import * as PropTypes from "prop-types";
 import deanwood_image from "../../images/deanwood.jpg";
+import big_bois from "../../images/big_bois.png";
 const image_source = "https://commons.wikimedia.org/wiki/File:Deanwood_Washington_DC.jpg";
 
 export const DeanwoodResident = (_) => {
@@ -37,7 +38,7 @@ export const DeanwoodResident = (_) => {
                         <p>Column for Ward 3 data.</p>
                     </Col>
                     <Col>
-                        <p>Column for big boy.</p>
+                        <Image src={big_bois} width={400}></Image>
                     </Col>
                     <Col>
                         <p>Column for Ward 7 data.</p>
