@@ -96,8 +96,8 @@ export const DeanwoodFood = ({resources}) => {
                             suscipit
                         </p>
                     </Col>
-                    <Col md={1}/>
                 </Row>
+
             </Row>
         </Container>
         </>
@@ -109,5 +109,3 @@ DeanwoodFood.propTypes = {
 };
 
 export default DeanwoodFood;
-
-
