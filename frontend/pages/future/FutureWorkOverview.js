@@ -47,37 +47,30 @@ class RadioButtons extends React.Component {
         this.state = {
             value: 0
         };
-        // this.setRadioValue = this.setRadioValue.bind(this);
     }
 
     setRadioValue(newValue) {
-        console.log(newValue);
         this.setState({value: newValue});
-    }
-
-    radioIsChecked(e, radio) {
-        e.preventDefault();
-        return this.state.value === radio.value;
     }
 
     render() {
         return (
-            <ButtonGroup className="mb-2">
+            <div className={this.props.vertical ? "axis-toggle" : ""}>
                 {this.props.radios.map((radio, idx) => (
                     <ToggleButton
-                        key={idx}
-                        id={`radio-${idx}`}
+                        key={idx + Math.random()}
+                        id={`radio-${idx + Math.random()}`}
                         type="radio"
                         variant="secondary"
                         name="radio"
                         value={radio.value}
-                        checked={(e) => this.radioIsChecked(e, radio)}
+                        checked={() => this.state.value === radio.value}
                         onChange={(e) => this.setRadioValue(e.currentTarget.value)}
                     >
                         {radio.name}
                     </ToggleButton>
                 ))}
-            </ButtonGroup>
+            </div>
         );
     }
 }
@@ -209,8 +202,8 @@ class FutureWorkOverview extends React.Component{
                     <Row>
                         <Col md={4} />
                         <Col>
-                            <RadioButtons radios={RADIOS}/>
-                            <RadioButtons radios={RADIOS}/>
+                            <RadioButtons radios={RADIOS} vertical={true}/>
+                            <RadioButtons radios={RADIOS} vertical={false}/>
                             <Scatter md={4} options={options} data={data} />
                         </Col>
                     </Row>
@@ -311,7 +304,8 @@ FutureWorkOverview.propTypes = {
 };
 
 RadioButtons.propTypes = {
-    radios: PropTypes.array
+    radios: PropTypes.array,
+    vertical: PropTypes.bool,
 };
 
 

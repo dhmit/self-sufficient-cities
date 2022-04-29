@@ -114,3 +114,8 @@ div.map-dropdown-scroll::-webkit-scrollbar-thumb {
     flex-wrap: wrap;
     justify-content: space-evenly;
 }
+
+.axis-toggle {
+    display: flex;
+    flex-direction: column;
+}
