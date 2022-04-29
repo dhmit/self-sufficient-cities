@@ -359,6 +359,17 @@ def get_1940_census_geodata(request):
     return JsonResponse(census_data)
 
 
+def get_1940_deanwood_similarities(request):
+    """
+    API endpoint for getting the similarity scores for 1940 census tracts
+    """
+
+    with open("app/data/1940_nearest_neighbor.json", encoding='utf-8') as f:
+        census_data = json.load(f)
+
+    return JsonResponse(census_data)
+
+
 def get_addresses(request):
     """
     API endpoint for getting addresses from articles data
