@@ -77,6 +77,7 @@ class RadioButtons extends React.Component {
 }
 
 const DEANWOOD_COORDS = [38.897665, -76.925919];
+const DETROIT_COORDS = [42.331429, -83.045753];
 
 class FutureWorkOverview extends React.Component{
 
@@ -175,12 +176,28 @@ class FutureWorkOverview extends React.Component{
                     </Row>
                     <Row>
                         <Col md={4}/>
-                        <Col>
-                            <CensusTractMap
-                                census_tracts={this.state.census_tracts}
-                                deanwood_similarities={this.state.deanwood_similarities}
-                                position={DEANWOOD_COORDS}
-                            />
+                        <Col md={8}>
+                            <h3>K-Means Clustering</h3>
+                            <p>
+                                K-Means clustering is a method where each entity has all of its
+                                data summarized as a point in N-dimensional space, where N is the
+                                number of variables associated with the entity. From there,
+                                “clusters” are randomly generated, with the goal of making it such
+                                that each cluster is as dense as possible (i.e. that all of the
+                                data points in a cluster are closer to each other than other
+                                clusters). This type of analysis is good for finding large-scale
+                                trends and groupings, along with identifying key axes that can be
+                                used to distinguish between certain types of data points. In this
+                                case, we can find the clusters that are home to sustainable
+                                neighborhoods, and look at what neighborhoods are grouped the same
+                                to try to find trends.
+                            </p>
+                            <p>
+                                The graphic below allows you to explore how the different census
+                                tracts were classified. The axes can be changed to any of the 248
+                                variables in the 1950s census, so that you can see how the
+                                groupings are compared across different dimensions.
+                            </p>
                         </Col>
                     </Row>
                     <Row>
@@ -188,6 +205,48 @@ class FutureWorkOverview extends React.Component{
                         <Col>
                             <RadioButtons radios={RADIOS}/>
                             <Scatter md={4} options={options} data={data} />
+                        </Col>
+                    </Row>
+                    <Row>
+                        <Col md={4}/>
+                        <Col md={8}>
+                            <h3>Nearest Neighbor Analysis</h3>
+                            <p>
+                                Nearest Neighbor follows a very similar pattern to K-Means
+                                clustering, as it still maps the census tracts in N-dimensional
+                                space, but instead of categorizing all of the census tracts into
+                                certain groups, it instead looks at one particular census tract and
+                                measures how “far” other districts are from it. This is very useful
+                                for identifying specific census tracts that are worth further
+                                investigation, and results can be chained together (for instance,
+                                if we use Tract A as a starting point, and find that Tract B is
+                                close to A and also practices sustainability, then we can start
+                                the search again from Tract B as well).
+                            </p>
+                            <p>
+                                The maps below show what census tracts are closest to
+                                Deanwood, after the data has been normalized to ensure all
+                                variables are on the same scale.
+                            </p>
+                        </Col>
+                    </Row>
+                    <Row>
+                        <Col md={4}/>
+                        <Col md={4}>
+                            <h5>Deanwood</h5>
+                            <CensusTractMap
+                                census_tracts={this.state.census_tracts}
+                                deanwood_similarities={this.state.deanwood_similarities}
+                                position={DEANWOOD_COORDS}
+                            />
+                        </Col>
+                        <Col md={4}>
+                            <h5>Detroit</h5>
+                            <CensusTractMap
+                                position={DETROIT_COORDS}
+                                census_tracts={this.state.census_tracts}
+                                deanwood_similarities={this.state.deanwood_similarities}
+                            />
                         </Col>
                     </Row>
                     <Row className="mt-3">

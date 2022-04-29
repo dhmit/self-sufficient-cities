@@ -113,7 +113,7 @@ class CensusTractMap extends React.Component {
     render() {
         return (
             <div id="map">
-                <MapContainer center={this.props.position} zoom={13} scrollWheelZoom={true}>
+                <MapContainer center={this.props.position} zoom={11} scrollWheelZoom={true}>
                     <TileLayer
                         attribution='&copy; <a href="https://www.openstreetmap.org/copyright">OpenStreetMap</a> contributors'
                         url="https://stamen-tiles-a.a.ssl.fastly.net/toner-lite/{z}/{x}/{y}.png"
