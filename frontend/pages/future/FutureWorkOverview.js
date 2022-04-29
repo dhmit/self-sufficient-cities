@@ -183,8 +183,13 @@ class FutureWorkOverview extends React.Component{
                             />
                         </Col>
                     </Row>
-                    <RadioButtons radios={RADIOS}/>
-                    <Row><Col><Scatter md={4} options={options} data={data} /></Col></Row>
+                    <Row>
+                        <Col md={4} />
+                        <Col>
+                            <RadioButtons radios={RADIOS}/>
+                            <Scatter md={4} options={options} data={data} />
+                        </Col>
+                    </Row>
                     <Row className="mt-3">
                         <Col md={4}/>
                         <Col md={1}/>
