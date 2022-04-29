@@ -38,41 +38,23 @@ export const DeanwoodHousing = ({resources, addresses}) => {
                         <br/>
                         <br/>
                         <p>
-                            Lorem ipsum dolor sit amet, consectetuer adipiscing elit, sed diam
-                            nonummy
-                            nibh euismod tincidunt ut laoreet dolore magna aliquam erat volutpat. Ut
-                            wisi enim ad minim veniam, quis nostrud exerci tation ullamcorper
-                            suscipit
-                            lobortis nisl ut aliquip ex ea commodo consequat. Duis autem vel eum
-                            iriure
-                            dolor in hendrerit in vulputate velit esse molestie consequat, vel illum
-                            dolore eu feugiat nulla facilisis at vero eros et accumsan et iusto odio
-                            dignissim qui blandit praesent luptatum zzril delenit augue duis dolore
-                            te
-                            feugait nulla facilisi.
-                            Lorem ipsum dolor sit amet, cons ectetuer adipiscing elit, sed diam
-                            nonummy
-                            nibh euismod tincidunt ut laoreet dolore magna aliquam erat volutpat. Ut
-                            wisi enim ad minim veniam, quis nostrud exerci tation ullamcorper
-                            suscipit
-                            lobortis nisl ut aliquip ex ea commodo consequat.
-                            Lorem ipsum dolor sit amet, consectetuer adipiscing elit, sed diam
-                            nonummy
-                            nibh euismod tincidunt ut laoreet dolore magna aliquam erat volutpat. Ut
-                            wisi enim ad minim veniam, quis nostrud exerci tation ullamcorper
-                            suscipit
-                            lobortis nisl ut aliquip ex ea commodo consequat. Duis autem vel eum
-                            iriure
-                            dolor in hendrerit in vulputate velit esse molestie consequat, vel illum
-                            dolore eu feugiat nulla facilisis at vero eros et accumsan et iusto odio
-                            dignissim qui blandit praesent luptatum zzril delenit augue duis dolore
-                            te
-                            feugait nulla facilisi.
-                            Lorem ipsum dolor sit amet, cons ectetuer adipiscing elit, sed diam
-                            nonummy
-                            nibh euismod tincidunt ut laoreet dolore magna aliquam erat volutpat. Ut
-                            wisi enim ad minim veniam, quis nostrud exerci tation ullamcorper
-                            suscipit
+                            Typically, it was very difficult for African Americans to obtain home
+                            loans since predominantly black districts were generally redlined.
+                            Families living in the “red zone” did not qualify for government-backed
+                            loans, and, thus, were unable to receive aid to purchase a home.
+                            However, Deanwood provided homeownership opportunities for
+                            African-Americans in Washington, where homes were sold and paid in
+                            monthly installments. Many of the homes stayed in the family of the
+                            original owners’ for several generations. This can be inferred through
+                            the repeated $10 dollar transfers found in the Washington Record of
+                            Deeds, signifying that homes’ ownership was passed down from parents to
+                            their children. By keeping the home in the family, people saved on fees
+                            normally associated with purchasing and selling homes such as realtor
+                            fees. Although some still remain in the original families, with a recent
+                            wave of gentrification in the neighborhood, more families have been
+                            forced to sell their homes at lower prices than comparable communities.
+                            Consequently, these families lose one of their biggest assets—their
+                            home.
                         </p>
                         <CensusChartsV2></CensusChartsV2>
                         <pre>{JSON.stringify(resources)}</pre>
