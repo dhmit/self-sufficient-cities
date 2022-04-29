@@ -13,6 +13,7 @@ import MapMicro from "./components/maps/MapMicro";
 import MapMacro from "./components/maps/MapMacro";
 import TimelineTest from "./components/timeline/TimelineTest";
 import API from "./pages/API";
+import CensusCharts from "./components/charts/CensusCharts";
 
 // DEANWOOD COMPONENTS
 import DeanwoodOverview from "./pages/deanwood/DeanwoodOverview";

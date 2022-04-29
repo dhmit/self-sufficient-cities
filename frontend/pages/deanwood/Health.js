@@ -11,7 +11,11 @@ export const DeanwoodHealth = ({resources}) => {
     const tabs = [
         {label: "covidData", name: "COVID-19 Data", el: <DeanwoodCovid resources={resources}/>},
         {label: "healthTrends", name: "Health Trends", el: <HealthTrends resources={resources}/>},
-        {label: "residentProfile", name: "Resident Profile", el: <DeanwoodResident resources={resources}/>}
+        {
+            label: "residentProfile",
+            name: "Resident Profile",
+            el: <DeanwoodResident resources={resources}/>
+        }
     ];
     const [displayState, setDisplayState] = useState("healthTrends");
     return (<>

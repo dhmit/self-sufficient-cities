@@ -9,7 +9,7 @@ export const DeanwoodOverview = ({resources}) => {
     return (<>
         <Container className="city" id="deanwood-overview">
             <Row >
-                <Col md={3} className="nav-col mr-2">
+                <Col md={3} sm={12} className="nav-col mr-2">
                     <h1>Deanwood, D.C.</h1>
                     <p>
                         The project tells the rise and fall of urban communities that grew their
@@ -20,7 +20,7 @@ export const DeanwoodOverview = ({resources}) => {
                     </p>
                     <DeanwoodNav selected={"overview"} resources={resources}/>
                 </Col>
-                <Row xs={1} md={2} className="justify-content-around mt-5">
+                <Row className="justify-content-around mt-5">
                     <Col md={4}/>
                     <Col md={4}>
                         <p className={"intro-text"}>
