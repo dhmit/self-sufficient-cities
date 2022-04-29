@@ -37,9 +37,8 @@ export const data = {
 };
 
 const RADIOS = [
-    {name: "Active", value: 0},
-    {name: "Radio", value: 1},
-    {name: "Radio", value: 2}
+    {name: "x", value: 0},
+    {name: "y", value: 1}
 ];
 
 class RadioButtons extends React.Component {
@@ -48,10 +47,17 @@ class RadioButtons extends React.Component {
         this.state = {
             value: 0
         };
+        // this.setRadioValue = this.setRadioValue.bind(this);
     }
 
     setRadioValue(newValue) {
+        console.log(newValue);
         this.setState({value: newValue});
+    }
+
+    radioIsChecked(e, radio) {
+        e.preventDefault();
+        return this.state.value === radio.value;
     }
 
     render() {
@@ -65,7 +71,7 @@ class RadioButtons extends React.Component {
                         variant="secondary"
                         name="radio"
                         value={radio.value}
-                        checked={this.state.value === radio.value}
+                        checked={(e) => this.radioIsChecked(e, radio)}
                         onChange={(e) => this.setRadioValue(e.currentTarget.value)}
                     >
                         {radio.name}
@@ -186,6 +192,7 @@ class FutureWorkOverview extends React.Component{
                     <Row>
                         <Col md={4} />
                         <Col>
+                            <RadioButtons radios={RADIOS}/>
                             <RadioButtons radios={RADIOS}/>
                             <Scatter md={4} options={options} data={data} />
                         </Col>
