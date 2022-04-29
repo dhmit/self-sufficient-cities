@@ -297,7 +297,7 @@ def map_legend_page(request):
 
 def map_consolidated(request):
     """
-    Consolicated map page
+    Consolidated map page
     """
 
     context = {
@@ -305,6 +305,20 @@ def map_consolidated(request):
             'title': 'Map Consolidated page'
         },
         'component_name': 'MapConsolidated'
+    }
+    return render(request, 'index.html', context)
+
+
+def census_charts(request):
+    """
+    Census Data visualizations
+    """
+
+    context = {
+        'page_metadata': {
+            'title': 'Census Data visualizations page'
+        },
+        'component_name': 'CensusCharts'
     }
     return render(request, 'index.html', context)
 

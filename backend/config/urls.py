@@ -42,6 +42,7 @@ urlpatterns = [
     path('map-micro/', views.map_micro_page),
     path('timeline-test', views.timeline_test),
     path('map-consolidated/', views.map_consolidated),
+    path('census-charts/', views.census_charts),
 
     # DEANWOOD
     path('deanwood/', views_deanwood.overview),
@@ -51,7 +52,7 @@ urlpatterns = [
     path('deanwood/covid_data', views_deanwood.covid),
     # path('deanwood/community', views_deanwood.community),
     # path('deanwood/food', views_deanwood.food),
-    # path('deanwood/housing', views_deanwood.housing),
+    path('deanwood/housing', views_deanwood.housing),
     # path('deanwood/future', views_deanwood.future)
 ]
 

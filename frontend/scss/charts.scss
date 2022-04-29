@@ -1,0 +1,27 @@
+.bar-chart {
+    width: 40vw;
+    border: solid 1px #c7c7c7;
+    border-radius: 16px;
+    padding: 8px;
+    margin:8px;
+}
+
+.pie-chart {
+    width: 40vw;
+    border: solid 1px #c7c7c7;
+    border-radius: 16px;
+    padding: 8px;
+    margin:8px;
+
+}
+
+.pie {
+    margin: 0 auto;
+    width: 20vw;
+}
+
+.bar-charts {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-evenly;
+}

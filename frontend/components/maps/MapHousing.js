@@ -1,25 +1,20 @@
 import React from "react";
 import PropTypes from "prop-types";
-import {GeoJSON, MapContainer, Marker, Popup, TileLayer} from "react-leaflet";
+import {MapContainer, Marker, Popup, TileLayer} from "react-leaflet";
 import Input from "@material-ui/core/Input";
 import Typography from "@material-ui/core/Typography";
 import Grid from "@material-ui/core/Grid";
 import Slider from "@material-ui/core/Slider";
-import Dropdown from "react-bootstrap/Dropdown";
-import axios from "axios";
-import Table from "./Table";
 
-// MapMicro constants
+// AFTERNOON TEAM
+
+
 const MAIN_LOCATION = {
     coordinates: [38.9051606, -77.0036513],
     name: "Deanwood neighborhood, Washington DC",
     date: "Test date",
     info: "Test info"
 };
-
-// MapMacro constants
-const URL = "/api/get_census_data/";
-const TABLE_URL = "/api/get_table_data/";
 
 function sliderInput(value, bound, defaultRange, inputChangeFunc, sliderBlurFunc) {
     const [minValue, maxValue] = defaultRange;
@@ -107,11 +102,6 @@ export class TimeControl extends React.Component {
     componentDidMount() {
         // Modify timeout to change how often increment is called
         this.time = setInterval(this.increment, 1000);
-        // from MapMacro.js
-        axios.get(URL)
-            .then((res) => {
-                this.setState({censustract: res.data});
-            });
     };
 
     componentWillUnmount() {
@@ -181,124 +171,33 @@ TimeControl.propTypes = {
     defaultTime: PropTypes.array
 };
 
-export class MapDropdown extends React.Component {
+
+
+export default class MapHousing extends React.Component {
     constructor(props) {
         super(props);
 
         this.state = {
-            open: false,
-            selected: []
-        };
-    }
-
-    toggleItemSelect = (event) => {
-        // Implementation does not allow selecting items with the same name individually
-
-        const value = event.target.innerText;
-        const newSelected = this.state.selected;
-        if (this.state.selected.includes(value)) {
-            const valueIdx = newSelected.indexOf(value);
-            newSelected.splice(valueIdx, 1);
-            event.target.classList.remove("map-dropdown-item-selected");
-            event.target.classList.add("map-dropdown-item");
-        } else {
-            newSelected.push(value);
-            event.target.classList.remove("map-dropdown-item");
-            event.target.classList.add("map-dropdown-item-selected");
-        }
-        this.setState({selected: newSelected});
-        console.log(this.state.selected);
-    }
-
-    toggleDropdownItems = () => {
-        this.setState({open: !this.state.open});
-    }
-
-    getDropdownItems() {
-        if (!this.state.open) {
-            return <></>;
-        }
-        const selected = "map-dropdown-item-selected";
-        const normal = "map-dropdown-item";
-        const dropdownItems = (
-            this.props.items.map((location, i) => (
-                <div
-                    key={i}
-                    className={
-                        this.state.selected.includes(location.address) ? selected : normal
-                    }
-                    onClick={this.toggleItemSelect}
-                >
-                    {location.address}
-                </div>
-            ))
-        );
-        return (
-            <div className="map-dropdown-scroll-bg">
-                <div className="map-dropdown-scroll">
-                    {dropdownItems}
-                </div>
-            </div>
-        );
-    }
-
-    render() {
-        const dropdownItems = this.getDropdownItems();
-        return (
-            <div className="map-dropdown">
-                <Dropdown.Toggle
-                    id="dropdown-autoclose-outside"
-                    className="map-dropdown-toggle"
-                    onClick={this.toggleDropdownItems}
-                >
-                    {this.props.name}
-                </Dropdown.Toggle>
-                {dropdownItems}
-            </div>
-        );
-    }
-}
-
-MapDropdown.propTypes = {
-    name: PropTypes.string,
-    items: PropTypes.array
-};
-
-export default class MapConsolidated extends React.Component {
-    constructor(props) {
-        super(props);
-
-        this.state = {
-            // states from MapMicro
             mainLocation: MAIN_LOCATION,
             markerData: [],
             sliderState: [1900, 2022],
             timeRange: [1900, 2022],
             lastValid: [1900, 2022],
-            names: ["Australia", "Canada", "USA", "Poland", "Spain", "France"],
-            // states from MapMacro
-            position: [38.897665, -76.925919],
-            location: "Deanwood neighborhood, Washington DC",
-            tabledata: [],
-            censustract: {}
+            names: ["Australia", "Canada", "USA", "Poland", "Spain", "France"]
         };
     }
 
     componentDidMount() {
-        fetch("/api/get_address_data/")
-            .then(response => {
-                return response.json();
-            })
-            .then(data => {
-                this.setState({
-                    markerData: [...this.state.markerData, ...data["address_data"]]
-                });
-            });
-        // from MapMacro
-        axios.get(URL)
-            .then((res) => {
-                this.setState({censustract: res.data});
-            });
+        // fetch("/api/get_address_data/")
+        //     .then(response => {
+        //         return response.json();
+        //     })
+        //     .then(data => {
+        //         this.setState({
+        //             markerData: [...this.state.markerData, ...data["address_data"]]
+        //         });
+        //     });
+        this.setState({markerData: this.props.addresses});
     };
 
 
@@ -364,32 +263,6 @@ export default class MapConsolidated extends React.Component {
         }
     };
 
-    // MapMacro.js
-    handleTableClick(event) {
-        axios.get(TABLE_URL + event.target.id)
-            .then((res) => {
-                this.setState({tabledata: res.data});
-            });
-    }
-
-    showTableData(event) {
-        event.target.setStyle({
-            fillColor: "green"
-        });
-    }
-
-    onEachBlock = (block, layer) => {
-        console.log("onEachBlock");
-        const blockName = block.properties.NAMELSAD;
-
-        layer.on({
-            click: this.showTableData,
-            mouseover: (event) => {
-                event.target.bindPopup(blockName).openPopup();
-            }
-        });
-    }
-
     render() {
         const validAddresses = this.state.markerData.filter((location) => (
             (location.coordinates.length === 2 && location.year &&
@@ -409,70 +282,16 @@ export default class MapConsolidated extends React.Component {
         return (<>
             <h1>{this.state.mainLocation.name}</h1>
             <div className="main-element">
-                <div className="event-selector">
-                    <h3 className="event-selector-title">Event Selector</h3>
-                    <MapDropdown name="Addresses" items={this.state.markerData}/>
-                </div>
-                <div id="map">
+                <div id="map" className="pb-4">
                     <MapContainer
                         center={this.state.mainLocation.coordinates} zoom={13}
-                        scrollWheelZoom={true}
-                    >
+                        scrollWheelZoom={true}>
                         <TileLayer
                             attribution="&copy; <a href='https://www.openstreetmap.org/copyright'>OpenStreetMap</a> contributors"
                             url="http://stamen-tiles-a.a.ssl.fastly.net/toner-lite/{z}/{x}/{y}.png"
                         />
                         {markerObjects}
-                        <Marker position={this.state.position}/>
-                        <TileLayer
-                            attribution='&copy; <a href="https://www.openstreetmap.org/copyright">OpenStreetMap</a> contributors'
-                            url="http://stamen-tiles-a.a.ssl.fastly.net/toner-lite/{z}/{x}/{y}.png"
-                        />
-                        {Object.keys(this.state.censustract).length > 0 &&
-                        <GeoJSON data={this.state.censustract} onEachFeature={this.onEachBlock}/>
-                        };
                     </MapContainer>
-                    <button id={"table1"}
-                        onClick={this.handleTableClick.bind(this)}>
-                        Table 1
-                    </button>
-
-                    <button id={"table2"}
-                        onClick={this.handleTableClick.bind(this)}>
-                        Table 2
-                    </button>
-
-                    <button id={"table3"}
-                        onClick={this.handleTableClick.bind(this)}>
-                        Table 3
-                    </button>
-
-                    <button id={"table4"}
-                        onClick={this.handleTableClick.bind(this)}>
-                        Table 4
-                    </button>
-
-                    <button id={"table5"}
-                        onClick={this.handleTableClick.bind(this)}>
-                        Table 5
-                    </button>
-
-                    <button id={"table6"}
-                        onClick={this.handleTableClick.bind(this)}>
-                        Table 6
-                    </button>
-
-                    <button id={"table7"}
-                        onClick={this.handleTableClick.bind(this)}>
-                        Table 7
-                    </button>
-
-                    <button id={"table8"}
-                        onClick={this.handleTableClick.bind(this)}>
-                        Table 8
-                    </button>
-
-
                     {timeSlider(
                         "Time Slider",
                         this.state.sliderState,
@@ -486,9 +305,12 @@ export default class MapConsolidated extends React.Component {
                         sliderState={this.state.sliderState} change={this.setSliderValue}
                         defaultTime={this.state.timeRange}>
                     </TimeControl>
-                    <Table tabledata={this.state.tabledata}/>
                 </div>
             </div>
         </>);
     }
 }
+
+MapHousing.propTypes = {
+    addresses: PropTypes.array
+};
