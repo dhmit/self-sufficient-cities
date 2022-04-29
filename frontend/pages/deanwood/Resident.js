@@ -1,21 +1,13 @@
 import React from "react";
 import {Container, Row, Col, Card} from "react-bootstrap";
 import * as PropTypes from "prop-types";
-import DeanwoodNav from "./DeanwoodNav";
 import deanwood_image from "../../images/deanwood.jpg";
 const image_source = "https://commons.wikimedia.org/wiki/File:Deanwood_Washington_DC.jpg";
 
-export const DeanwoodResident = ({resources}) => {
+export const DeanwoodResident = (_) => {
 
     return (<>
         <Container className="city" id="deanwood-overview">
-
-            <Row>
-                <h1>RESIDENT</h1>
-                <h3>Put our big boy & his data here.</h3>
-                <DeanwoodNav selected={"covid_data"} resources={resources}/>
-            </Row>
-
             <Container>
                 <Card>
                     <Card.Img src={deanwood_image}></Card.Img>
