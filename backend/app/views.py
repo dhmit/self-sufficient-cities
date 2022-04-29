@@ -402,6 +402,14 @@ def get_address_data(request):
     return JsonResponse({"address_data": address_data})
 
 
+def get_food_addresses(request):
+    """Returning all addresses from file"""
+    with open("app/data/food_addresses.json", encoding="utf-8") as f:
+        address_data = json.load(f)
+
+    return JsonResponse({"address_data": address_data})
+
+
 def get_legend_testing(request):
     """Returning all addresses from file"""
     with open("app/data/legend_testing.json", encoding="utf-8") as f:

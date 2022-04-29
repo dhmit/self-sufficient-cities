@@ -3,14 +3,16 @@ import {Container, Row, Col} from "react-bootstrap";
 import * as PropTypes from "prop-types";
 import DeanwoodNav from "./DeanwoodNav";
 import MapDeanwood from "../../components/maps/MapDeanwood";
+import FoodMap from "../../components/maps/GroceryMapSlider";
+import DeanwoodOverview from "./DeanwoodOverview";
 
 export const DeanwoodFood = ({resources}) => {
-
-    return (<>
+    return (
+        <>
         <Container className="city" id="deanwood-overview">
             <Row >
                 <Col md={3} className="nav-col mr-2">
-                    <h1>Deanwood, D.C.</h1>
+                    <h1>Food in Deanwood, D.C.</h1>
                     <p>
                         The project tells the rise and fall of urban communities that grew their
                         own food in the 20th century United States. Taking the Deanwood
@@ -37,19 +39,25 @@ export const DeanwoodFood = ({resources}) => {
                     </Col>
                     <Col md={4}>
                         <blockquote>
-                            "This is a blockquote. Eligendi excepturi corporis velit. Enim
-                            ab at distinctio enim debitis temporibus"
+                            "Because I am a family of five, I have to go frequent to the grocery
+                            store quite often. And a lot of times I have to go over to the Maryland
+                            side, because of the quality of food at the Safeway on Minnesota Avenue.
+                            Or there is not a grocery store in a good maybe five-mile, maybe more,
+                            vicinity." -- Research Participant from Ashanté Reese's There Ain't
+                            Nothing in Deanwood
+
                         </blockquote>
                     </Col>
                 </Row>
                 <Row>
                     <Col md={4}/>
-                    <Col><MapDeanwood/></Col>
+                    <Col><FoodMap/></Col>
+
                 </Row>
-                <Row className="mt-3">
-                    <Col md={4}/>
+                <Row className="mt-5">
                     <Col md={1}/>
-                    <Col md={6}>
+                    <Col md={4}/>
+                    <Col md={4}>
                         <p>
                             Lorem ipsum dolor sit amet, consectetuer adipiscing elit, sed diam
                             nonummy
@@ -92,13 +100,14 @@ export const DeanwoodFood = ({resources}) => {
                 </Row>
             </Row>
         </Container>
-    </>);
-
-};
+        </>
+     );
+ };
 
 DeanwoodFood.propTypes = {
     resources: PropTypes.array
 };
 
-
 export default DeanwoodFood;
+
+
