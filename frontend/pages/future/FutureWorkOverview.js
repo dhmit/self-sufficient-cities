@@ -75,9 +75,6 @@ class RadioButtons extends React.Component {
     }
 }
 
-const DEANWOOD_COORDS = [38.897665, -76.925919];
-const DETROIT_COORDS = [42.331429, -83.045753];
-
 class FutureWorkOverview extends React.Component{
 
     constructor(props) {
@@ -226,72 +223,70 @@ class FutureWorkOverview extends React.Component{
                             <p>
                                 The maps below show what census tracts are closest to
                                 Deanwood, after the data has been normalized to ensure all
-                                variables are on the same scale.
+                                variables are on the same scale. You can either select from areas
+                                of note, or scroll around on your own!
                             </p>
                         </Col>
                     </Row>
                     <Row>
                         <Col md={4}/>
-                        <Col md={4}>
-                            <h5>Deanwood</h5>
+                        <Col md={8}>
                             <CensusTractMap
-                                census_tracts={this.state.census_tracts}
-                                deanwood_similarities={this.state.deanwood_similarities}
-                                position={DEANWOOD_COORDS}
-                            />
-                        </Col>
-                        <Col md={4}>
-                            <h5>Detroit</h5>
-                            <CensusTractMap
-                                position={DETROIT_COORDS}
                                 census_tracts={this.state.census_tracts}
                                 deanwood_similarities={this.state.deanwood_similarities}
                             />
                         </Col>
                     </Row>
-                    <Row className="mt-3">
+                    <Row className="mt-5">
                         <Col md={4}/>
-                        <Col md={1}/>
-                        <Col md={6}>
+                        <Col md={8}>
+                            <h3>Adversarial Machine Learning Model</h3>
                             <p>
-                            Lorem ipsum dolor sit amet, consectetuer adipiscing elit, sed diam
-                            nonummy
-                            nibh euismod tincidunt ut laoreet dolore magna aliquam erat volutpat. Ut
-                            wisi enim ad minim veniam, quis nostrud exerci tation ullamcorper
-                            suscipit
-                            lobortis nisl ut aliquip ex ea commodo consequat. Duis autem vel eum
-                            iriure
-                            dolor in hendrerit in vulputate velit esse molestie consequat, vel illum
-                            dolore eu feugiat nulla facilisis at vero eros et accumsan et iusto odio
-                            dignissim qui blandit praesent luptatum zzril delenit augue duis dolore
-                            te
-                            feugait nulla facilisi.
-                            Lorem ipsum dolor sit amet, cons ectetuer adipiscing elit, sed diam
-                            nonummy
-                            nibh euismod tincidunt ut laoreet dolore magna aliquam erat volutpat. Ut
-                            wisi enim ad minim veniam, quis nostrud exerci tation ullamcorper
-                            suscipit
-                            lobortis nisl ut aliquip ex ea commodo consequat.
-                            Lorem ipsum dolor sit amet, consectetuer adipiscing elit, sed diam
-                            nonummy
-                            nibh euismod tincidunt ut laoreet dolore magna aliquam erat volutpat. Ut
-                            wisi enim ad minim veniam, quis nostrud exerci tation ullamcorper
-                            suscipit
-                            lobortis nisl ut aliquip ex ea commodo consequat. Duis autem vel eum
-                            iriure
-                            dolor in hendrerit in vulputate velit esse molestie consequat, vel illum
-                            dolore eu feugiat nulla facilisis at vero eros et accumsan et iusto odio
-                            dignissim qui blandit praesent luptatum zzril delenit augue duis dolore
-                            te
-                            feugait nulla facilisi.
-                            Lorem ipsum dolor sit amet, cons ectetuer adipiscing elit, sed diam
-                            nonummy
-                            nibh euismod tincidunt ut laoreet dolore magna aliquam erat volutpat. Ut
-                            wisi enim ad minim veniam, quis nostrud exerci tation ullamcorper
-                            suscipit
+                                A custom machine learning model was created to identify other
+                                self-sustaining neighborhoods from the 1917-1919 Cost of Living
+                                in the United States census. Since this dataset is not divided
+                                per-tract, but per-city, the results will tell us with less
+                                accuracy of where self-sustaining neighborhoods are located, but
+                                will give us an adequate idea of which cities we are likely to
+                                find them.
+                            </p>
+                            <p>
+                                The machine learning model was relatively shallow, using 10
+                                linear layers and 12 convolutional layers. Categorical data from
+                                this dataset was stored using one-hot encoding.in which data
+                                such as gender would be converted from “male” to [0, 1] and
+                                “female” to [1, 0].
+                            </p>
+                            <p>
+                                The numerical data and categorical data were combined and assessed
+                                in two different stages by the model. Categorical data was
+                                converted to a matrix of (63, 124) and then processed using
+                                convolutions in an attempt to capture how the relationships between
+                                values of different categories impacted whether the city might
+                                possibly contain a self-sustaining neighborhood.
+                            </p>
+                            <p>
+                                The matrix was then converted into an array of numbers using the
+                                model’s convolutional layers, These values were added to the
+                                2136 numerical values and processed together to a single value
+                                ranging from 0 - 1 using the model’s linear layers. The output
+                                value represents the likelihood of a city containing a
+                                self-sustaining neighborhood. The method is unstable so frequency
+                                analysis was performed - (500 trials). The cities that ranked
+                                the highest on each trial were assigned a score based on their
+                                rank and the score was averaged for each rank to determine
+                            </p>
+                            <p>
+                                The following graphic represents the ranking of each cities.
                             </p>
                         </Col>
-                        <Col md={1}/>
+                    </Row>
+                    <Row>
+                        <Col md={4}/>
+                        <Col md={8}>
+                            <h3>Results</h3>
+                            <p>Some cool results belong here!</p>
+                        </Col>
                     </Row>
                 </Row>
             </Container>

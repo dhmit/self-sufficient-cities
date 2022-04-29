@@ -1,10 +1,19 @@
 import React from "react";
 import * as ReactDomServer from "react-dom/server";
 import * as PropTypes from "prop-types";
+import {FormSelect} from "react-bootstrap";
 
 import {MapContainer, TileLayer, GeoJSON} from "react-leaflet";
 
 const DEANWOOD_JOIN_CODE = "G11000100078";
+
+const START_COORDS = {
+    deanwood: [38.897665, -76.925919],
+    detroit: [42.331429, -83.045753],
+    los_angeles: [34.052235, -118.243683],
+    houston: [29.749907, -95.358421]
+};
+
 
 class CensusTractMap extends React.Component {
 
@@ -12,16 +21,28 @@ class CensusTractMap extends React.Component {
         super(props);
         this.state = {
             closest_distance: 0,
-            farthest_distance: 0
+            farthest_distance: 0,
+            start_pos: START_COORDS.deanwood,
+            map: undefined
         };
         this.styleTracts = this.styleTracts.bind(this);
         this.prep_distance_data = this.prep_distance_data.bind(this);
         this.onEachFeature = this.onEachFeature.bind(this);
         this.generatePopupContent = this.generatePopupContent.bind(this);
+        this.onPosSelected = this.onPosSelected.bind(this);
     }
 
     componentDidUpdate(prevProps, _prevState, _ss) {
         if (prevProps !== this.props) this.prep_distance_data();
+    }
+
+    onPosSelected(e) {
+        e.preventDefault();
+        const new_focus = e.currentTarget.value;
+        const new_coords = START_COORDS[new_focus];
+        this.setState({start_pos: new_coords});
+        const map = this.state.map;
+        if (map) map.flyTo(new_coords);
     }
 
     /**
@@ -100,7 +121,7 @@ class CensusTractMap extends React.Component {
     }
 
     prep_distance_data() {
-        Object.entries((this.props.deanwood_similarities)).forEach(([_, data]) => {
+        Object.entries(this.props.deanwood_similarities).forEach(([_, data]) => {
             const distance = data["distance"];
             this.setState({
                 closest_distance: Math.min(this.state.closest_distance, distance),
@@ -113,7 +134,20 @@ class CensusTractMap extends React.Component {
     render() {
         return (
             <div id="map">
-                <MapContainer center={this.props.position} zoom={11} scrollWheelZoom={true}>
+                <FormSelect
+                    aria-label="Census Map Focus Selector"
+                    onChange={(e) => this.onPosSelected(e)}
+                >
+                    <option value="deanwood">Deanwood</option>
+                    <option value="detroit">Detroit</option>
+                    <option value="los_angeles">Los Angeles</option>
+                    <option value="houston">Houston</option>
+                </FormSelect>
+                <MapContainer
+                    center={this.state.start_pos}
+                    zoom={11} scrollWheelZoom={true}
+                    whenCreated={map => this.setState({map})}
+                >
                     <TileLayer
                         attribution='&copy; <a href="https://www.openstreetmap.org/copyright">OpenStreetMap</a> contributors'
                         url="https://stamen-tiles-a.a.ssl.fastly.net/toner-lite/{z}/{x}/{y}.png"
@@ -138,7 +172,6 @@ class CensusTractMap extends React.Component {
 }
 
 CensusTractMap.propTypes = {
-    position: PropTypes.array.isRequired,
     census_tracts: PropTypes.array.isRequired,
     deanwood_similarities: PropTypes.object.isRequired
 };
