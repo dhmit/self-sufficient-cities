@@ -189,23 +189,6 @@ class FutureWorkOverview extends React.Component{
                         <Col md={4}/>
                         <Col md={1}/>
                         <Col md={6}>
-                        </Col>
-                    </Row>
-                    <Row>
-                        <Col md={4}/>
-                        <Col>
-                            <CensusTractMap
-                                census_tracts={this.state.census_tracts}
-                                deanwood_similarities={this.state.deanwood_similarities}
-                            />
-                        </Col>
-                    </Row>
-                    <RadioButtons radios={RADIOS}/>
-                    <Row><Col><Scatter md={4} options={options} data={data} /></Col></Row>
-                    <Row className="mt-3">
-                        <Col md={4}/>
-                        <Col md={1}/>
-                        <Col md={6}>
                             <p>
                             Lorem ipsum dolor sit amet, consectetuer adipiscing elit, sed diam
                             nonummy
