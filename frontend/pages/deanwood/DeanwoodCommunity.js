@@ -1,4 +1,4 @@
-import React from "react";
+import React, {useState} from "react";
 import {Container, Row, Col, Image} from "react-bootstrap";
 import * as PropTypes from "prop-types";
 import DeanwoodNav from "./DeanwoodNav";
@@ -6,6 +6,17 @@ import * as Text from "./DeanwoodCommunityText";
 import Suburban_gardens from "../../images/suburban_gardens.png";
 import Deanwood_kiosk from "../../images/deanwood_kiosk.png";
 import MapDeanwood from "../../components/maps/MapDeanwood";
+
+const quotes = ["Eligendi excepturi corporis velit " +
+"provident dicta neque autem. Enim ab at distinctio " +
+"enim debitis temporibus. Provident enim natus cumque. " +
+"Quibusdam impedit nam et ipsam. Consequatur earum quam " +
+"dolore doloremque earum.… Eligendi excepturi corporis velit " +
+"provident dicta neque autem. Enim ab at distinctio enim debitis " +
+"temporibus. Provident enim natus cumque. Quibusdam impedit nam et ipsam. " +
+"Consequatur earum quam dolore doloremque earum.", "Hello this is a test", "This is another test" +
+" to see if the quotes are properly cycling through the carousel"];
+
 
 const DeanwoodProfile = (statement, hasMap = true, hasTitle = true,
     title = "", source = "", alt_text = "") => {
@@ -34,6 +45,22 @@ const DeanwoodProfile = (statement, hasMap = true, hasTitle = true,
 };
 
 export const DeanwoodCommunity = ({resources}) => {
+    const [imageNum, setImage] = useState(0);
+    const numQuotes = quotes.length;
+
+    const forward = () => {
+        setImage((imageNum + 1) % numQuotes);
+    };
+
+    const backward = () => {
+        if (imageNum === 0){
+            setImage(numQuotes - 1);
+        }
+        else{
+            setImage((imageNum - 1) % numQuotes);
+        }
+    };
+
     return (<>
         <Container className="city" id="deanwood-overview">
             <Row >
@@ -48,26 +75,28 @@ export const DeanwoodCommunity = ({resources}) => {
                     </p>
                     <DeanwoodNav selected={"overview"} resources={resources}/>
                 </Col>
-                <Row xs={1} md={2} className="justify-content-around mt-5">
+                <Row xs={1} md={2} className="Prime mt-5">
                     <Col md={4}/>
-                    <Col md={4}>
-                        <p className={"intro-text"}>
-                            Eligendi excepturi corporis velit provident dicta neque autem. Enim ab
-                            at
-                            distinctio enim debitis temporibus. Provident enim natus cumque.
-                            Quibusdam
-                            impedit nam et ipsam. Consequatur earum quam dolore doloremque earum.…
-                            Eligendi excepturi corporis velit provident dicta neque autem.
-                            Enim ab at distinctio enim debitis temporibus.
-                            Provident enim natus cumque. Quibusdam impedit nam
-                            et ipsam. Consequatur earum quam dolore doloremque earum.…
-                        </p>
-                    </Col>
-                    <Col md={4}>
-                        <blockquote>
-                            "This is a blockquote. Eligendi excepturi corporis velit. Enim
-                            ab at distinctio enim debitis temporibus"
-                        </blockquote>
+                    <Col className = "Holder" >
+                        <Row className = "Carousel justify-content-between align-items-center">
+                            <Col className = "justify-content-center">
+                                <button onClick = {backward}>
+                                    Left
+                                </button>
+                            </Col>
+                            <Col className = "col-9">
+                                <p className={"intro-text"}>
+                                    {quotes[imageNum]}
+                                </p>
+                            </Col>
+
+                            <Col className = "justify-content-center">
+                                <button onClick = {forward}>
+                                    Right
+                                </button>
+                            </Col>
+
+                        </Row>
                     </Col>
                 </Row>
                 {DeanwoodProfile(Text.quoteContext, false, false)}
@@ -139,6 +168,5 @@ export const DeanwoodCommunity = ({resources}) => {
 DeanwoodCommunity.propTypes = {
     resources: PropTypes.array
 };
-
 
 export default DeanwoodCommunity;

@@ -3,7 +3,9 @@
 @import "../../node_modules/bootstrap/scss/mixins";
 
 .city {
+    display: flex;
     .intro-text {
+        justify-content: center;
         font-family: "titillium_websemibold", sans-serif;
         font-size: 0.9em;
     }
@@ -17,4 +19,21 @@
 
 .Profile{
     padding-bottom: 5px;
+}
+
+
+
+.Prime{
+    height: 10%;
+}
+
+.Holder{
+    width: 100%;
+    height: 100%;
+}
+
+.Carousel{
+    width: 100%;
+    height: 100%;
+    display: flex;
 }
