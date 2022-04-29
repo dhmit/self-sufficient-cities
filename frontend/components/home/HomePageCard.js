@@ -6,16 +6,14 @@ import CityTag from "./CityTag";
 
 const HomePageCard = ({img_source, title, text, resources}) => {
 
-    const sorted_tags = [...resources];
-    sorted_tags.sort();
     return (
         <Col>
             <div className='city-card'>
                 <h3>{title}</h3>
                 <Image src={img_source} fluid/>
                 <p>{text}</p>
-                <div className='city-tags'>
-                    {sorted_tags.map(resource => {
+                <div className='city-tags city-links'>
+                    {resources.map(resource => {
                         return <CityTag resource={resource} key={resource}/>;
                     })}
                 </div>
