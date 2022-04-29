@@ -36,10 +36,10 @@ class FutureWorkOverview extends React.Component{
 
     render() {
         return (<>
-            <Container className="city" id="future-work-overview">
+            <Container className="city" id="future-research-overview">
                 <Row >
                     <Col md={3} className="nav-col mr-2">
-                        <h1>Future Work</h1>
+                        <h1>Future Research</h1>
                         <p>
                         The project tells the rise and fall of urban communities that grew their
                         own food in the 20th century United States. Taking the Deanwood
@@ -51,24 +51,56 @@ class FutureWorkOverview extends React.Component{
                     </Col>
                     <Row xs={1} md={2} className="justify-content-around mt-5">
                         <Col md={4}/>
-                        <Col md={4}>
-                            <p className={"intro-text"}>
-                            Eligendi excepturi corporis velit provident dicta neque autem. Enim ab
-                            at
-                            distinctio enim debitis temporibus. Provident enim natus cumque.
-                            Quibusdam
-                            impedit nam et ipsam. Consequatur earum quam dolore doloremque earum.…
-                            Eligendi excepturi corporis velit provident dicta neque autem.
-                            Enim ab at distinctio enim debitis temporibus.
-                            Provident enim natus cumque. Quibusdam impedit nam
-                            et ipsam. Consequatur earum quam dolore doloremque earum.…
+                        <Col md={8}>
+                            <h3>Introduction</h3>
+                            <p>
+                                All of the results that we’ve found profoundly show the rise and
+                                fall of sustainability in Deanwood - from the push of the great
+                                depression and stories of community, to today when family homes
+                                held for generations are being sold off and Deanwood suffers from
+                                higher rates of Covid-19 cases and deaths. However, Deanwood is
+                                just one of a multitude of neighborhoods that practiced
+                                self-reliance in the early 20th century. By using machine learning
+                                techniques and data analysis, we identified strong candidates
+                                (and confirmed suspicions) for self-sustaining communities by
+                                comparing them to trends that we found in Deanwood and Eight Mile
+                                Wyoming, a neighborhood in Detroit also known for its self-reliance.
+                            </p>
+                            <p>
+                                Our approach leverages two data sets: the 1940s Federal Decennial
+                                Census, and the 1917-1919 Cost of Living in the United States.
+                                For the 1940s census, we find that we are able to identify several
+                                strong potential candidates using even primitive machine learning
+                                techniques such as Nearest Neighbor and K-Means Clustering, while
+                                identifying communities with 1917-1919 Cost of Living in the
+                                United States is best suited for a more advanced adversarial
+                                learning approach.
                             </p>
                         </Col>
-                        <Col md={4}>
-                            <blockquote>
-                            "This is a blockquote. Eligendi excepturi corporis velit. Enim
-                            ab at distinctio enim debitis temporibus"
-                            </blockquote>
+                    </Row>
+                    <Row>
+                        <Col md={4}/>
+                        <Col>
+                            <h3>Datasets Used</h3>
+                            <p>
+                                The bulk of our research utilizes the results of the 1940s census
+                                and the cost of living dataset, each have their own quirks and
+                                nuances when sifting through the data and results.
+                            </p>
+                            <p>
+                                The 1940s census data covers 59 major U.S. cities
+                                (and the District of Columbia) at the census tract level. There are
+                                7,465 census tracts in total, each of them with 194 features. They
+                                features span a wide range of topics, from statistics about the
+                                working population to the value of homes.
+                            </p>
+                            <p>
+                                The 1917-1919 Cost of Living survey includes per-household
+                                information from 163 cities about the yearly cost of living and the
+                                occupations of house residents. Overall, there are 2,199 features
+                                per household, with 2,136 features corresponding to various costs
+                                and 63 categories about the occupations of the households.
+                            </p>
                         </Col>
                     </Row>
                     <Row>
