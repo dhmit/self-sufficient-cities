@@ -5,21 +5,23 @@ import DeanwoodNav from "./DeanwoodNav";
 import * as Text from "./DeanwoodCommunityText";
 import MapDeanwood from "../../components/maps/MapDeanwood";
 
-const DeanwoodProfile = (statement, map = true, source = "") => {
+const DeanwoodProfile = (statement, hasMap = true, hasTitle = true, title = "", source = "") => {
     let right;
-    if (map){
+    if (hasMap){
         right = <Col><MapDeanwood/></Col>;
     }
     else{
         right = <img src = {source} ></img>;
     }
+
     let statement_array = statement.split("\n");
     return (<div className={"Profile"}>
         <Row>
             <Col md={4}/>
             <Col>
-                {statement_array.map(s => (
-                    <p key={s} className={"intro-text"}>{s}</p>
+                {hasTitle && <h2>{title}</h2>}
+                {statement_array.map((s, idx) => (
+                    <p key={idx} className={"intro-text"}>{s}</p>
                 ))}
             </Col>
             {right}
@@ -64,19 +66,69 @@ export const DeanwoodCommunity = ({resources}) => {
                         </blockquote>
                     </Col>
                 </Row>
+                {DeanwoodProfile(Text.quoteContext, false, false)}
+                <Row>
+                    <Col md = {4}></Col>
+                    <Col>
+                        <h3>
+                            {Text.uniqueDeanwood}
+                        </h3>
+                    </Col>
+                </Row>
+                {DeanwoodProfile(Text.infrastructure1, false, true, "Lack of Public" +
+                    " Infrastructure", "../../images/suburban_gardens.png")}
                 <Row>
                     <Col md = {4}></Col>
                     <Col>
                         <blockquote>
-                           "Deanwood was once a propsperous
-                           neighborhood with a close-knit community Deanwood was once a propsperous
-                           neighborhood with a close-knit communityDeanwood was once a propsperous
-                           neighborhood with a close-knit community"
+                            {Text.senatorTaxesQuote}
                         </blockquote>
                     </Col>
                 </Row>
-                {DeanwoodProfile(Text.quoteContext, false)}
-                {DeanwoodProfile(Text.fillerString, true)}
+                {DeanwoodProfile(Text.infrastructure2, false, false )}
+                {DeanwoodProfile(Text.selfReliance1, false, true, "Self-Reliance and Farming")}
+                <Row>
+                    <Col md = {4}></Col>
+                    <Col>
+                        <blockquote>
+                            {Text.surplusQuote}
+                        </blockquote>
+                    </Col>
+                </Row>
+                <Row>
+                    <Col md = {4}></Col>
+                    <Col>
+                        <blockquote>
+                            {Text.raiseChickensQuote}
+                        </blockquote>
+                    </Col>
+                </Row>
+                {DeanwoodProfile(Text.selfReliance2, true, false)}
+                <Row>
+                    <Col md = {4}></Col>
+                    <Col>
+                        <blockquote>
+                            {Text.lifesaverQuote}
+                        </blockquote>
+                    </Col>
+                </Row>
+                {DeanwoodProfile(Text.selfReliance3, false, false)}
+                <Row>
+                    <Col md = {4}></Col>
+                    <Col>
+                        <blockquote>
+                            {Text.noStoresQuote}
+                        </blockquote>
+                    </Col>
+                </Row>
+                {DeanwoodProfile("", true, true, "Churches as Centers of Community")}
+                {DeanwoodProfile(Text.conclusion, false, true, "Conclusion")}
+
+
+
+
+
+
 
             </Row>
         </Container>
