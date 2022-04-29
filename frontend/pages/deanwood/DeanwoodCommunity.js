@@ -1,17 +1,20 @@
 import React from "react";
-import {Container, Row, Col} from "react-bootstrap";
+import {Container, Row, Col, Image} from "react-bootstrap";
 import * as PropTypes from "prop-types";
 import DeanwoodNav from "./DeanwoodNav";
 import * as Text from "./DeanwoodCommunityText";
+import Suburban_gardens from "../../images/suburban_gardens.png";
+import Deanwood_kiosk from "../../images/deanwood_kiosk.png";
 import MapDeanwood from "../../components/maps/MapDeanwood";
 
-const DeanwoodProfile = (statement, hasMap = true, hasTitle = true, title = "", source = "") => {
+const DeanwoodProfile = (statement, hasMap = true, hasTitle = true,
+    title = "", source = "", alt_text = "") => {
     let right;
-    if (hasMap){
+    if (hasMap) {
         right = <Col><MapDeanwood/></Col>;
     }
-    else{
-        right = <img src = {source} ></img>;
+    else if (source) {
+        right = <Col><Image src={source} alt={alt_text} fluid={true}/></Col>;
     }
 
     let statement_array = statement.split("\n");
@@ -25,6 +28,7 @@ const DeanwoodProfile = (statement, hasMap = true, hasTitle = true, title = "", 
                 ))}
             </Col>
             {right}
+
         </Row>
     </div>);
 };
@@ -68,27 +72,30 @@ export const DeanwoodCommunity = ({resources}) => {
                 </Row>
                 {DeanwoodProfile(Text.quoteContext, false, false)}
                 <Row>
-                    <Col md = {4}></Col>
+                    <Col md = {4}/>
                     <Col>
                         <h3>
                             {Text.uniqueDeanwood}
                         </h3>
                     </Col>
                 </Row>
-                {DeanwoodProfile(Text.infrastructure1, false, true, "Lack of Public" +
-                    " Infrastructure", "../../images/suburban_gardens.png")}
+                {DeanwoodProfile(Text.infrastructure1, false, true,
+                    "Lack of Public Infrastructure", Suburban_gardens,
+                    "The Suburban Gardens amusement park")}
                 <Row>
-                    <Col md = {4}></Col>
+                    <Col md = {4}/>
                     <Col>
                         <blockquote>
                             {Text.senatorTaxesQuote}
                         </blockquote>
                     </Col>
                 </Row>
-                {DeanwoodProfile(Text.infrastructure2, false, false )}
-                {DeanwoodProfile(Text.selfReliance1, false, true, "Self-Reliance and Farming")}
+                {DeanwoodProfile(Text.infrastructure2, false, false,
+                    "", Deanwood_kiosk, "A small kiosk where Deanwood's books are kept")}
+                {DeanwoodProfile(Text.selfReliance1, false, true,
+                    "Self-Reliance and Farming")}
                 <Row>
-                    <Col md = {4}></Col>
+                    <Col md = {4}/>
                     <Col>
                         <blockquote>
                             {Text.surplusQuote}
@@ -96,7 +103,7 @@ export const DeanwoodCommunity = ({resources}) => {
                     </Col>
                 </Row>
                 <Row>
-                    <Col md = {4}></Col>
+                    <Col md = {4}/>
                     <Col>
                         <blockquote>
                             {Text.raiseChickensQuote}
@@ -105,7 +112,7 @@ export const DeanwoodCommunity = ({resources}) => {
                 </Row>
                 {DeanwoodProfile(Text.selfReliance2, true, false)}
                 <Row>
-                    <Col md = {4}></Col>
+                    <Col md = {4}/>
                     <Col>
                         <blockquote>
                             {Text.lifesaverQuote}
@@ -114,7 +121,7 @@ export const DeanwoodCommunity = ({resources}) => {
                 </Row>
                 {DeanwoodProfile(Text.selfReliance3, false, false)}
                 <Row>
-                    <Col md = {4}></Col>
+                    <Col md = {4}/>
                     <Col>
                         <blockquote>
                             {Text.noStoresQuote}
@@ -123,13 +130,6 @@ export const DeanwoodCommunity = ({resources}) => {
                 </Row>
                 {DeanwoodProfile("", true, true, "Churches as Centers of Community")}
                 {DeanwoodProfile(Text.conclusion, false, true, "Conclusion")}
-
-
-
-
-
-
-
             </Row>
         </Container>
     </>);
