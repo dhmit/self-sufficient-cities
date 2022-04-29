@@ -2,11 +2,11 @@ import React from "react";
 import {Container, Row, Col} from "react-bootstrap";
 
 import HomePageCard from "../components/home/HomePageCard";
-import dh_logo from "../images/dh_logo.svg";
+import deanwood_img from "../images/wymar.jpg";
 
-const dummy_city_data = [
+const city_data = [
     {
-        img: dh_logo,
+        img: deanwood_img,
         title: "DEANWOOD, D.C.",
         text: "Explore the rise and fall of a self-sustaining neighborhood right in the US" +
             " capital.",
@@ -49,7 +49,7 @@ export default class Home extends React.Component {
                     </Col>
                     <Col>
                         <Row xs={1} md={2}>
-                            {dummy_city_data.map((data, idx) => {
+                            {city_data.map((data, idx) => {
                                 return (
                                     <HomePageCard
                                         img_source={data.img}

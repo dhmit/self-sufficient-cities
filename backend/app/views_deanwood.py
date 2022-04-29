@@ -18,6 +18,7 @@ def overview(request):
 
     return render(request, 'index.html', context)
 
+
 # def transport(request):
 #     """
 #     Deanwood transportation page
@@ -46,12 +47,25 @@ def overview(request):
 #     pass
 
 
-# def housing(request):
-#     """
-#     Deanwood housing page
-#     """
-#     pass
+def housing(request):
+    """
+    Deanwood housing page
+    """
+    resources = ["overview", "housing", "transport", "food", "community", "health", "future"]
+    context = {
+        'page_metadata': {
+            'title': 'Deanwood Housing'
+        },
+        'component_name': 'DeanwoodHousing',
+        'component_props': {
+            'resources': resources,
+            'addresses': [{"address": "District Normal School", "year": 1914,
+                           "coordinates": ["38.9051606", "-77.0036513"]}]
+        },
 
+    }
+
+    return render(request, 'index.html', context)
 
 def future(request):
     """
