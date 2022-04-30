@@ -18,7 +18,7 @@ export default class MapMacro extends React.Component {
     componentDidMount() {
         axios.get(URL)
             .then((res) => {
-                console.log(res.data);
+                //console.log(res.data);
                 this.setState({censustract: res.data});
             });
 
@@ -44,7 +44,7 @@ export default class MapMacro extends React.Component {
         let liquorMarkers = [];
         let religionMarkers = [];
 
-        console.log(this.props.mapType);
+
 
 
         const geos = this.props.data;
@@ -56,7 +56,6 @@ export default class MapMacro extends React.Component {
 
             if (geos[i]["kind"] === "Food" && geos[i]["year"] === this.props.decade) {
                 // eslint-disable-next-line max-len
-                console.log(geos[i]);
                 foodMarkers.push(
                     <Marker key={i.toString()} position = {coords}>
                         <Popup>
@@ -118,6 +117,64 @@ export default class MapMacro extends React.Component {
 
         }
 
+        let L = [];
+        console.log(this.props.mapType);
+        if (this.props.mapType === "Food") {
+            L = [
+                <LayersControl.Overlay checked key={0} name="Food">
+                    <LayerGroup>{foodMarkers}</LayerGroup>
+                </LayersControl.Overlay>,
+
+                <LayersControl.Overlay key={1} name="Health">
+                    <LayerGroup>{healthMarkers}</LayerGroup>
+                </LayersControl.Overlay>,
+
+                <LayersControl.Overlay key={2} name="Auto">
+                    <LayerGroup>{foodMarkers}</LayerGroup>
+                </LayersControl.Overlay>,
+
+                <LayersControl.Overlay key={3} name="Liquor">
+                    <LayerGroup>{healthMarkers}</LayerGroup>
+                </LayersControl.Overlay>,
+
+                <LayersControl.Overlay key={4} name="Religion">
+                    <LayerGroup>{religionMarkers}</LayerGroup>
+                </LayersControl.Overlay>,
+
+                <LayersControl.Overlay key={5} name="Other">
+                    <LayerGroup>{otherMarkers}</LayerGroup>
+                </LayersControl.Overlay>
+            ];
+        } else if (this.props.mapType === "Religion") {
+            L = [
+                <LayersControl.Overlay key={0} name="Food">
+                    <LayerGroup>{foodMarkers}</LayerGroup>
+                </LayersControl.Overlay>,
+
+                <LayersControl.Overlay key={1} name="Health">
+                    <LayerGroup>{healthMarkers}</LayerGroup>
+                </LayersControl.Overlay>,
+
+                <LayersControl.Overlay key={2} name="Auto">
+                    <LayerGroup>{foodMarkers}</LayerGroup>
+                </LayersControl.Overlay>,
+
+                <LayersControl.Overlay key={3} name="Liquor">
+                    <LayerGroup>{healthMarkers}</LayerGroup>
+                </LayersControl.Overlay>,
+
+                <LayersControl.Overlay checked key={4} name="Religion">
+                    <LayerGroup>{religionMarkers}</LayerGroup>
+                </LayersControl.Overlay>,
+
+                <LayersControl.Overlay key={5} name="Other">
+                    <LayerGroup>{otherMarkers}</LayerGroup>
+                </LayersControl.Overlay>
+            ];
+
+        }
+
+
 
 
 
@@ -133,28 +190,7 @@ export default class MapMacro extends React.Component {
 
 
                 <LayersControl position="topright">
-                    <LayersControl.Overlay checked name="Food">
-                        <LayerGroup>{foodMarkers}</LayerGroup>
-                    </LayersControl.Overlay>
-
-                    <LayersControl.Overlay checked name="Health">
-                        <LayerGroup>{healthMarkers}</LayerGroup>
-                    </LayersControl.Overlay>
-
-                    <LayersControl.Overlay checked name="Auto">
-                        <LayerGroup>{foodMarkers}</LayerGroup>
-                    </LayersControl.Overlay>
-
-                    <LayersControl.Overlay checked name="Liquor">
-                        <LayerGroup>{healthMarkers}</LayerGroup>
-                    </LayersControl.Overlay>
-                    <LayersControl.Overlay checked name="Religion">
-                        <LayerGroup>{religionMarkers}</LayerGroup>
-                    </LayersControl.Overlay>
-
-                    <LayersControl.Overlay checked name="Other">
-                        <LayerGroup>{otherMarkers}</LayerGroup>
-                    </LayersControl.Overlay>
+                    {L}
                 </LayersControl>
 
             </MapContainer>

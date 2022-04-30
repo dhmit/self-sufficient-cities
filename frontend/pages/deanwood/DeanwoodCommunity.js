@@ -66,7 +66,6 @@ class CommunityMap extends React.Component {
 }
 
 export const DeanwoodCommunity = ({resources, community_data}) => {
-    console.log("hi ", community_data);
     const [imageNum, setImage] = useState(0);
     const numQuotes = quotes.length;
 
