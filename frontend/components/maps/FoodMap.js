@@ -6,9 +6,46 @@ import Typography from "@material-ui/core/Typography";
 import Grid from "@material-ui/core/Grid";
 import Slider from "@material-ui/core/Slider";
 import Dropdown from "react-bootstrap/Dropdown";
+import * as L from "leaflet";
 import {MapDropdown} from "./MapMicro";
 import {TimeControl} from "./MapMicro";
 
+
+const LeafIcon = L.Icon.extend({
+    options: {}
+  });
+
+const blueIcon = new LeafIcon({
+      iconUrl:
+        "https://chart.apis.google.com/chart?chst=d_map_pin_letter&chld=%E2%80%A2|abcdef&chf=a,s,ee00FFFF"
+    }),
+    greenIcon = new LeafIcon({
+      iconUrl:
+        "https://chart.apis.google.com/chart?chst=d_map_pin_letter&chld=%E2%80%A2|2ecc71&chf=a,s,ee00FFFF"
+    }),
+    yellowIcon = new LeafIcon({
+        iconUrl:
+          "https://chart.apis.google.com/chart?chst=d_map_pin_letter&chld=•|ffc800&chf=a,s,ee00FFFF"
+    }),
+    redIcon = new LeafIcon({
+        iconUrl:
+            "http://chart.apis.google.com/chart?chst=d_map_pin_letter&chld=%E2%80%A2|e85141&chf=a,s,ee00FFFF"
+    });
+
+function setMarkerColor(type) {
+    if (type === "grocery") {
+        return blueIcon;
+    }
+    else if (type === "convenience") {
+        return greenIcon;
+    }
+    else if (type === "restaurant") {
+        return yellowIcon;
+    }
+    else if (type === "liquor") {
+        return redIcon;
+    }
+}
 
 const MAIN_LOCATION = {
     coordinates: [38.9047963808, -76.934579595],
@@ -172,14 +209,16 @@ export default class FoodMap extends React.Component {
 
     render() {
         const validAddresses = this.state.markerData.filter((location) => (
-            (location.coordinates.length === 2 && location.year &&
-                location.year >= this.state.lastValid[0] &&
-                location.year <= this.state.lastValid[1]) ||
-            (!location.year)
+            (location.coordinates.length === 2 && location.openyear && location.closeyear &&
+                (location.openyear <= this.state.lastValid[1] &&
+                location.openyear >= this.state.lastValid[0]) ||
+                (location.closeyear <= this.state.lastValid[1] &&
+                location.closeyear >= this.state.lastValid[0])
+                )
         ));
 
         const markerObjects = validAddresses.map((location, i) => (
-            <Marker key={i} position={location.coordinates}>
+            <Marker key={i} position={location.coordinates} icon={setMarkerColor(location.type)}>
                 <Popup>
                     {location.address}
                 </Popup>
@@ -190,9 +229,12 @@ export default class FoodMap extends React.Component {
             <h1>{this.state.mainLocation.name}</h1>
             <div className="main-element">
                 {/*if i want to get rid of event selector delete this*/}
-                <div className="event-selector">
-                    <h3 className="event-selector-title">Location List</h3>
-                    <MapDropdown name="Addresses" items={this.state.markerData}/>
+                <div>
+                  <p> <u><b> Map Key: </b></u></p>
+                  <p style={{color: '#abcdef'}}>Blue: Grocery</p>
+                    <p style={{color: '#2ecc71'}}>Green: Convenience</p>
+                    <p style={{color: '#ffc800'}}>Yellow: Restaurant</p>
+                    <p style={{color: '#e85141'}}>Red: Liquor</p>
                 </div>
                 <div id="map" className={"pb-5"}>
                     <MapContainer

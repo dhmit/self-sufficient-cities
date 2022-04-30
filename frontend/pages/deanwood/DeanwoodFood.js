@@ -3,7 +3,7 @@ import {Container, Row, Col} from "react-bootstrap";
 import * as PropTypes from "prop-types";
 import DeanwoodNav from "./DeanwoodNav";
 import MapDeanwood from "../../components/maps/MapDeanwood";
-import FoodMap from "../../components/maps/GroceryMapSlider";
+import FoodMap from "../../components/maps/FoodMap";
 import DeanwoodOverview from "./DeanwoodOverview";
 
 export const DeanwoodFood = ({resources}) => {
