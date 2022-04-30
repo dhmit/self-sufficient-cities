@@ -44,6 +44,8 @@ export default class MapMacro extends React.Component {
         let liquorMarkers = [];
         let religionMarkers = [];
 
+        console.log(this.props.mapType);
+
 
         const geos = this.props.data;
 
@@ -116,7 +118,8 @@ export default class MapMacro extends React.Component {
 
         }
 
-        console.log(foodMarkers[0]);
+
+
 
         return <div id="map">
             <MapContainer center={this.state.position} zoom={13} scrollWheelZoom={true}>
@@ -127,6 +130,7 @@ export default class MapMacro extends React.Component {
                 {Object.keys(this.state.censustract).length > 0 &&
                 <GeoJSON data={this.state.censustract}/>
                 };
+
 
                 <LayersControl position="topright">
                     <LayersControl.Overlay checked name="Food">
@@ -160,7 +164,8 @@ export default class MapMacro extends React.Component {
 
 MapMacro.propTypes = {
     decade: PropTypes.number,
-    data: PropTypes.array
+    data: PropTypes.array,
+    mapType: PropTypes.string
 };
 
 Marker.propTypes = {
