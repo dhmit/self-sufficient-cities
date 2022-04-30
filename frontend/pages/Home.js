@@ -3,6 +3,7 @@ import {Container, Row, Col} from "react-bootstrap";
 
 import HomePageCard from "../components/home/HomePageCard";
 import deanwood_img from "../images/wymar.jpg";
+import detroit_img from "../images/detroit.png";
 
 const city_data = [
     {
@@ -10,20 +11,23 @@ const city_data = [
         title: "DEANWOOD, D.C.",
         text: "Explore the rise and fall of a self-sustaining neighborhood right in the US" +
             " capital.",
-        resources: ["overview", "housing", "transport", "food", "community", "health", "future"]
+        resources: ["overview", "housing", "transport", "food", "community", "health", "future"],
+        class: ""
+    },
+    {
+        img: detroit_img,
+        title: "DETROIT, MI",
+        text: "Research to come",
+        resources: ["overview", "housing", "community", "health"],
+        class: "disabled"
+    },
+    {
+        img: deanwood_img,
+        title: "MEMPHIS, TN",
+        text: "Research to come",
+        resources: ["overview", "housing", "community", "health"],
+        class: "disabled"
     }
-    // {
-    //     img: dh_logo,
-    //     title: "DETROIT, MI",
-    //     text: "Filler Text!",
-    //     resources: ["map", "oral_history"]
-    // },
-    // {
-    //     img: dh_logo,
-    //     title: "MEMPHIS, TN",
-    //     text: "Filler Text!",
-    //     resources: ["map", "timeline", "oral_history"]
-    // },
     // {
     //     img: dh_logo,
     //     title: "Sampleville",
@@ -37,7 +41,7 @@ export default class Home extends React.Component {
         return <>
             <Container>
                 <Row xs={1} md={2} className='justify-content-around'>
-                    <Col md={4}>
+                    <Col md={4} className={"city-heading"}>
                         <h1>Self-Sufficient Cities</h1>
                         <p>
                             The project tells the rise and fall of urban communities that grew their
@@ -52,6 +56,7 @@ export default class Home extends React.Component {
                             {city_data.map((data, idx) => {
                                 return (
                                     <HomePageCard
+                                        extra_class={data.class}
                                         img_source={data.img}
                                         title={data.title}
                                         text={data.text}
