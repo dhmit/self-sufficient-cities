@@ -947,6 +947,21 @@
 	"kind": "Food",
 	"coordinates": ["38.898335", "-76.9312621"]
 }, {
+	"year": 1970,
+	"name": "Safeway Store",
+	"address": "5110 Grant Street Northeast, Washington, DC",
+	"kind": "Food",
+	"coordinates": ["38.898335", "-76.9312621"]
+} , {
+    "year": 1980,
+	"name": "Omie Cheek's House",
+	"address": "",
+	"kind": "Food",
+	"coordinates": ["38.89874393155099", "-76.92357341077269"]
+
+},
+
+    {
 	"year": 1960,
 	"name": "High\u2019s Dairy Products Co. Northeast\n",
 	"address": "5119 Grant Street Northeast, Washington, DC",
@@ -978,6 +993,12 @@
 	"coordinates": ["38.9073962", "-76.9395269"]
 }, {
 	"year": 1960,
+	"name": "Safeway Stores ",
+	"address": "3941 Minnesota Avenue Northeast, Washington, DC",
+	"kind": "Food",
+	"coordinates": ["38.8948117", "-76.9492017"]
+},{
+	"year": 1970,
 	"name": "Safeway Stores ",
 	"address": "3941 Minnesota Avenue Northeast, Washington, DC",
 	"kind": "Food",
