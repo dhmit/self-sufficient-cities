@@ -3,7 +3,10 @@ import {Container, Row, Col} from "react-bootstrap";
 import * as PropTypes from "prop-types";
 import DeanwoodNav from "./DeanwoodNav";
 import * as Text from "./DeanwoodCommunityText";
+import MapTest from "../../components/maps/MapTest";
 import MapDeanwood from "../../components/maps/MapDeanwood";
+
+
 
 const DeanwoodProfile = (statement, map = true, source = "") => {
     let right;
@@ -11,7 +14,7 @@ const DeanwoodProfile = (statement, map = true, source = "") => {
         right = <Col><MapDeanwood/></Col>;
     }
     else{
-        right = <img src = {source} ></img>;
+        right = <img src = {source} />;
     }
     let statement_array = statement.split("\n");
     return (<div className={"Profile"}>
@@ -27,7 +30,32 @@ const DeanwoodProfile = (statement, map = true, source = "") => {
     </div>);
 };
 
-export const DeanwoodCommunity = ({resources}) => {
+
+
+
+class CommunityMap extends React.Component {
+    state = {
+        decade: 1980
+    };
+
+    render() {
+        return (<div>
+            <button onClick={() => this.setState({decade:1940})}>1940s</button>
+            <button onClick={() => this.setState({decade:1950})}>1950s</button>
+            <button onClick={() => this.setState({decade:1960})}>1960s</button>
+            <button onClick={() => this.setState({decade:1970})}>1970s</button>
+            <button onClick={() => this.setState({decade:1980})}>1980s</button>
+            <button onClick={() => this.setState({decade:1990})}>1990s</button>
+            <MapTest decade = {this.state.decade} data = {this.props.data}/>
+        </div>);
+    }
+};
+
+
+
+
+export const DeanwoodCommunity = ({resources, community_data}) => {
+    console.log("hi ", community_data);
     return (<>
         <Container className="city" id="deanwood-overview">
             <Row >
@@ -65,7 +93,7 @@ export const DeanwoodCommunity = ({resources}) => {
                     </Col>
                 </Row>
                 <Row>
-                    <Col md = {4}></Col>
+                    <Col md = {4}/>
                     <Col>
                         <blockquote>
                            "Deanwood was once a propsperous
@@ -74,18 +102,30 @@ export const DeanwoodCommunity = ({resources}) => {
                            neighborhood with a close-knit community"
                         </blockquote>
                     </Col>
+
                 </Row>
+
                 {DeanwoodProfile(Text.quoteContext, false)}
                 {DeanwoodProfile(Text.fillerString, true)}
 
             </Row>
+            <Row>
+                <CommunityMap data={community_data}/>
+            </Row>
+
         </Container>
+
     </>);
 
 };
 
 DeanwoodCommunity.propTypes = {
-    resources: PropTypes.array
+    resources: PropTypes.array,
+    community_data: PropTypes.array
+};
+
+CommunityMap.propTypes = {
+    data: PropTypes.array
 };
 
 

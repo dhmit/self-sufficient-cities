@@ -1,4 +1,5 @@
 from django.shortcuts import render
+import json
 
 
 def overview(request):
@@ -37,17 +38,24 @@ def community(request):
     Deanwood community page
     """
     resources = ["overview", "housing", "transport", "food", "community", "health", "future"]
+    community_data = {}
+    with open("app/data/community.json", "r") as f:
+        community_data = json.load(f)
+
     context = {
         'page_metadata': {
             'title': 'Deanwood, D.C.'
         },
         'component_name': 'DeanwoodCommunity',
         'component_props': {
-            'resources': resources
+            'resources': resources,
+            'community_data': community_data
         },
     }
 
     return render(request, 'index.html', context)
+
+
 
 # def food(request):
 #     """
