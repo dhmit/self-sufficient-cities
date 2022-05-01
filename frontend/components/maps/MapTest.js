@@ -2,7 +2,19 @@ import axios from "axios";
 import React from "react";
 import PropTypes from "prop-types";
 // eslint-disable-next-line max-len
-import {MapContainer, Popup, LayerGroup, LayersControl, TileLayer, GeoJSON, Marker} from "react-leaflet";
+import {
+    MapContainer,
+    Popup,
+    LayerGroup,
+    LayersControl,
+    TileLayer,
+    GeoJSON,
+    Marker,
+    Polygon,
+    Circle,
+    Polyline,
+    Tooltip
+} from "react-leaflet";
 const URL = "/api/get_census_data/";
 
 //import data from "./community.json";
@@ -117,65 +129,92 @@ export default class MapMacro extends React.Component {
 
         }
 
-        let L = [];
-        console.log(this.props.mapType);
-        if (this.props.mapType === "Food") {
-            L = [
-                <LayersControl.Overlay checked key={0} name="Food">
-                    <LayerGroup>{foodMarkers}</LayerGroup>
-                </LayersControl.Overlay>,
+        const purpleOptions = {color: "purple"};
+        const redOptions = {color: "red"};
 
-                <LayersControl.Overlay key={1} name="Health">
-                    <LayerGroup>{healthMarkers}</LayerGroup>
-                </LayersControl.Overlay>,
+        //console.log("here ", this.props.voronoi);
+        let shapes = [];
+        let v = this.props.voronoi;
+        for (let i = 0; i < v.length; i++) {
+            if (v[i]["year"] === this.props.decade) {
+                for (let j=0; j< v[i]["shapes"].length; j++) {
+                    shapes.push(
+                        // eslint-disable-next-line max-len
+                        <Polygon id={j.toString()} pathOptions={purpleOptions} positions={v[i]["shapes"][j]}/>
+                    );
+                }
+            }
+        }
+        let omie = [];
+        omie.push(
+            // eslint-disable-next-line max-len
+            <Circle id={100} center={[38.89874393140099, -76.92357341077269]} pathOptions={redOptions} radius={75}/>
+        );
 
-                <LayersControl.Overlay key={2} name="Auto">
-                    <LayerGroup>{foodMarkers}</LayerGroup>
-                </LayersControl.Overlay>,
+        let paths = this.props.paths;
+        console.log(paths);
 
-                <LayersControl.Overlay key={3} name="Liquor">
-                    <LayerGroup>{healthMarkers}</LayerGroup>
-                </LayersControl.Overlay>,
-
-                <LayersControl.Overlay key={4} name="Religion">
-                    <LayerGroup>{religionMarkers}</LayerGroup>
-                </LayersControl.Overlay>,
-
-                <LayersControl.Overlay key={5} name="Other">
-                    <LayerGroup>{otherMarkers}</LayerGroup>
-                </LayersControl.Overlay>
-            ];
-        } else if (this.props.mapType === "Religion") {
-            L = [
-                <LayersControl.Overlay key={0} name="Food">
-                    <LayerGroup>{foodMarkers}</LayerGroup>
-                </LayersControl.Overlay>,
-
-                <LayersControl.Overlay key={1} name="Health">
-                    <LayerGroup>{healthMarkers}</LayerGroup>
-                </LayersControl.Overlay>,
-
-                <LayersControl.Overlay key={2} name="Auto">
-                    <LayerGroup>{foodMarkers}</LayerGroup>
-                </LayersControl.Overlay>,
-
-                <LayersControl.Overlay key={3} name="Liquor">
-                    <LayerGroup>{healthMarkers}</LayerGroup>
-                </LayersControl.Overlay>,
-
-                <LayersControl.Overlay checked key={4} name="Religion">
-                    <LayerGroup>{religionMarkers}</LayerGroup>
-                </LayersControl.Overlay>,
-
-                <LayersControl.Overlay key={5} name="Other">
-                    <LayerGroup>{otherMarkers}</LayerGroup>
-                </LayersControl.Overlay>
-            ];
-
+        for (let i = 0; i < paths.length; i++) {
+            if (paths[i]["decade"] === this.props.decade) {
+                for (let j=0; j< paths[i]["paths"].length; j++) {
+                    console.log("path ", paths[i]["paths"][j]["path"]);
+                    omie.push(
+                        // eslint-disable-next-line max-len
+                        <Polyline id={j.toString()} pathOptions={redOptions} positions={paths[i]["paths"][j]["path"]} pane={"markerPane"}>
+                            {/* eslint-disable-next-line max-len */}
+                            <Tooltip>{paths[i]["paths"][j]["distance"]} miles in {paths[i]["paths"][j]["time"]} minutes</Tooltip>
+                        </Polyline>
+                    );
+                }
+            }
         }
 
 
 
+
+
+        let L = [];
+        //console.log(this.props.mapType);
+        if (this.props.mapType === "Food") {
+            L = [
+
+
+
+                <LayersControl.Overlay checked key={0} name="Grocery Stores and Restaurants">
+                    <LayerGroup>{foodMarkers}</LayerGroup>
+                </LayersControl.Overlay>,
+
+                <LayersControl.Overlay checked key={1} name="Voronoi Representation">
+                    <LayerGroup>{shapes}</LayerGroup>
+                </LayersControl.Overlay>,
+
+                <LayersControl.Overlay checked key={2} name="Community Boundaries">
+                    <LayerGroup>{Object.keys(this.state.censustract).length > 0 &&
+                    <GeoJSON data={this.state.censustract}/>}</LayerGroup>
+                </LayersControl.Overlay>,
+
+                <LayersControl.Overlay checked key={3} name="From Omie Cheek's House">
+                    <LayerGroup>{omie}</LayerGroup>
+                </LayersControl.Overlay>
+
+
+
+
+            ];
+        } else if (this.props.mapType === "Religion") {
+            L = [
+
+
+                <LayersControl.Overlay checked key={4} name="Churches">
+                    <LayerGroup>{religionMarkers}</LayerGroup>
+                </LayersControl.Overlay>,
+
+                <LayersControl.Overlay checked key={2} name="Community Boundaries">
+                    <LayerGroup>{Object.keys(this.state.censustract).length > 0 &&
+                    <GeoJSON data={this.state.censustract}/>}</LayerGroup>
+                </LayersControl.Overlay>
+            ];
+        }
 
 
         return <div id="map">
@@ -183,15 +222,17 @@ export default class MapMacro extends React.Component {
                 <TileLayer
                     attribution='&copy; <a href="https://www.openstreetmap.org/copyright">OpenStreetMap</a> contributors'
                     url="http://stamen-tiles-a.a.ssl.fastly.net/toner-lite/{z}/{x}/{y}.png"
+
                 />
-                {Object.keys(this.state.censustract).length > 0 &&
-                <GeoJSON data={this.state.censustract}/>
-                };
+
+
+
 
 
                 <LayersControl position="topright">
                     {L}
                 </LayersControl>
+
 
             </MapContainer>
         </div>;
@@ -201,7 +242,9 @@ export default class MapMacro extends React.Component {
 MapMacro.propTypes = {
     decade: PropTypes.number,
     data: PropTypes.array,
-    mapType: PropTypes.string
+    mapType: PropTypes.string,
+    voronoi: PropTypes.array,
+    paths: PropTypes.array
 };
 
 Marker.propTypes = {

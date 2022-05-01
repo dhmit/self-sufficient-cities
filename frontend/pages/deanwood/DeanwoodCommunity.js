@@ -19,12 +19,14 @@ const quotes = ["Eligendi excepturi corporis velit " +
 " to see if the quotes are properly cycling through the carousel"];
 
 
-const DeanwoodProfile = (statement, hasMap = true, hasTitle = true, data = [],
+// eslint-disable-next-line max-len
+const DeanwoodProfile = (statement, hasMap = true, hasTitle = true, data = [], voronoi = [], paths=[],
     title = "", source = "", alt_text = "", mapType="") => {
     let right;
 
     if (hasMap) {
-        right = <Col><CommunityMap data={data} mapType={mapType}/></Col>;
+        // eslint-disable-next-line max-len
+        right = <Col><CommunityMap data={data} mapType={mapType} voronoi_data={voronoi} paths_data={paths}/></Col>;
     }
     else if (source) {
         right = <Col><Image src={source} alt={alt_text} fluid={true}/></Col>;
@@ -60,12 +62,12 @@ class CommunityMap extends React.Component {
             <button onClick={() => this.setState({decade:1980})}>1980s</button>
             <button onClick={() => this.setState({decade:1990})}>1990s</button>
             {/* eslint-disable-next-line max-len */}
-            <MapTest decade = {this.state.decade} data = {this.props.data} mapType={this.props.mapType}/>
+            <MapTest decade = {this.state.decade} data = {this.props.data} mapType={this.props.mapType} voronoi = {this.props.voronoi_data} paths = {this.props.paths_data}/>
         </div>);
     }
 }
 
-export const DeanwoodCommunity = ({resources, community_data}) => {
+export const DeanwoodCommunity = ({resources, community_data, voronoi_data, paths_data}) => {
     const [imageNum, setImage] = useState(0);
     const numQuotes = quotes.length;
 
@@ -129,7 +131,7 @@ export const DeanwoodCommunity = ({resources, community_data}) => {
                         </h3>
                     </Col>
                 </Row>
-                {DeanwoodProfile(Text.infrastructure1, false, true, [],
+                {DeanwoodProfile(Text.infrastructure1, false, true, [], [], [],
                     "Lack of Public Infrastructure", Suburban_gardens,
                     "The Suburban Gardens amusement park")}
                 <Row>
@@ -140,9 +142,9 @@ export const DeanwoodCommunity = ({resources, community_data}) => {
                         </blockquote>
                     </Col>
                 </Row>
-                {DeanwoodProfile(Text.infrastructure2, false, false, [],
+                {DeanwoodProfile(Text.infrastructure2, false, false, [], [], [],
                     "", Deanwood_kiosk, "A small kiosk where Deanwood's books are kept")}
-                {DeanwoodProfile(Text.selfReliance1, false, true, [],
+                {DeanwoodProfile(Text.selfReliance1, false, true, [], [],
                     "Self-Reliance and Farming")}
                 <Row>
                     <Col md = {4}/>
@@ -162,7 +164,7 @@ export const DeanwoodCommunity = ({resources, community_data}) => {
                     </Col>
                 </Row>
                 {/* eslint-disable-next-line max-len */}
-                {DeanwoodProfile(Text.selfReliance2, true, false, community_data, "", "", "", "Food")}
+                {DeanwoodProfile(Text.selfReliance2, true, false, community_data, voronoi_data, paths_data,"", "", "", "Food")}
                 <Row>
                     <Col md = {4}/>
                     <Col>
@@ -181,9 +183,10 @@ export const DeanwoodCommunity = ({resources, community_data}) => {
                     </Col>
                 </Row>
                 {/* eslint-disable-next-line max-len */}
-                {DeanwoodProfile("", true, true, community_data,"Churches as Centers of" +
+                {DeanwoodProfile("", true, true, community_data, [], [],"Churches as" +
+                    " Centers of" +
                     " Community", "","","Religion")}
-                {DeanwoodProfile(Text.conclusion, false, true, [], "Conclusion")}
+                {DeanwoodProfile(Text.conclusion, false, true, [], [], [],"Conclusion")}
             </Row>
 
 
@@ -195,12 +198,16 @@ export const DeanwoodCommunity = ({resources, community_data}) => {
 
 DeanwoodCommunity.propTypes = {
     resources: PropTypes.array,
-    community_data: PropTypes.array
+    community_data: PropTypes.array,
+    voronoi_data: PropTypes.array,
+    paths_data: PropTypes.array
 };
 
 CommunityMap.propTypes = {
     data: PropTypes.array,
-    mapType: PropTypes.string
+    mapType: PropTypes.string,
+    voronoi_data: PropTypes.array,
+    paths_data: PropTypes.array
 };
 
 

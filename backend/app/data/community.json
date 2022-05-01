@@ -952,14 +952,7 @@
 	"address": "5110 Grant Street Northeast, Washington, DC",
 	"kind": "Food",
 	"coordinates": ["38.898335", "-76.9312621"]
-} , {
-    "year": 1980,
-	"name": "Omie Cheek's House",
-	"address": "",
-	"kind": "Food",
-	"coordinates": ["38.89874393155099", "-76.92357341077269"]
-
-},
+} ,
 
     {
 	"year": 1960,

@@ -42,6 +42,12 @@ def community(request):
     with open("app/data/community.json", "r") as f:
         community_data = json.load(f)
 
+    with open("app/data/voronoi_shapes.json", "r") as f:
+        voronoi_data = json.load(f)
+
+    with open("app/data/paths.json", "r") as f:
+        paths_data = json.load(f)
+
     context = {
         'page_metadata': {
             'title': 'Deanwood, D.C.'
@@ -49,7 +55,9 @@ def community(request):
         'component_name': 'DeanwoodCommunity',
         'component_props': {
             'resources': resources,
-            'community_data': community_data
+            'community_data': community_data,
+            'voronoi_data': voronoi_data,
+            'paths_data': paths_data
         },
     }
 
