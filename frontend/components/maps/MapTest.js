@@ -162,7 +162,7 @@ export default class MapMacro extends React.Component {
                         // eslint-disable-next-line max-len
                         <Polyline id={j.toString()} pathOptions={redOptions} positions={paths[i]["paths"][j]["path"]} pane={"markerPane"}>
                             {/* eslint-disable-next-line max-len */}
-                            <Tooltip>{paths[i]["paths"][j]["distance"]} miles in {paths[i]["paths"][j]["time"]} minutes</Tooltip>
+                            <Tooltip sticky>{paths[i]["paths"][j]["distance"]} miles in {paths[i]["paths"][j]["time"]} minutes</Tooltip>
                         </Polyline>
                     );
                 }
@@ -179,12 +179,7 @@ export default class MapMacro extends React.Component {
             L = [
 
 
-
-                <LayersControl.Overlay checked key={0} name="Grocery Stores and Restaurants">
-                    <LayerGroup>{foodMarkers}</LayerGroup>
-                </LayersControl.Overlay>,
-
-                <LayersControl.Overlay checked key={1} name="Voronoi Representation">
+                <LayersControl.Overlay key={1} name="Voronoi Representation">
                     <LayerGroup>{shapes}</LayerGroup>
                 </LayersControl.Overlay>,
 
@@ -193,7 +188,7 @@ export default class MapMacro extends React.Component {
                     <GeoJSON data={this.state.censustract}/>}</LayerGroup>
                 </LayersControl.Overlay>,
 
-                <LayersControl.Overlay checked key={3} name="From Omie Cheek's House">
+                <LayersControl.Overlay key={3} name="From Omie Cheek's House">
                     <LayerGroup>{omie}</LayerGroup>
                 </LayersControl.Overlay>
 
@@ -205,15 +200,18 @@ export default class MapMacro extends React.Component {
             L = [
 
 
-                <LayersControl.Overlay checked key={4} name="Churches">
-                    <LayerGroup>{religionMarkers}</LayerGroup>
-                </LayersControl.Overlay>,
-
                 <LayersControl.Overlay checked key={2} name="Community Boundaries">
                     <LayerGroup>{Object.keys(this.state.censustract).length > 0 &&
                     <GeoJSON data={this.state.censustract}/>}</LayerGroup>
                 </LayersControl.Overlay>
             ];
+        }
+
+        let m =[];
+        if (this.props.mapType === "Food") {
+            m = foodMarkers;
+        } else if (this.props.mapType === "Religion") {
+            m = religionMarkers;
         }
 
 
@@ -226,7 +224,7 @@ export default class MapMacro extends React.Component {
                 />
 
 
-
+                {m}
 
 
                 <LayersControl position="topright">

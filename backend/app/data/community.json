@@ -528,7 +528,7 @@
 	"coordinates": ["38.9025479", "-76.936779"]
 }, {
 	"year": 1950,
-	"name": "Deanwoof Self-Service Laundry ",
+	"name": "Deanwood Self-Service Laundry ",
 	"address": "4709 Sheriff Road Northeast, Washington, DC",
 	"kind": "Other",
 	"coordinates": ["38.9026083", "-76.9351602"]
@@ -952,7 +952,19 @@
 	"address": "5110 Grant Street Northeast, Washington, DC",
 	"kind": "Food",
 	"coordinates": ["38.898335", "-76.9312621"]
-} ,
+} , {
+	"year": 1970,
+	"name": "Safeway Store",
+	"address": "",
+	"kind": "Food",
+	"coordinates": ["38.8948117", "-76.9492017"]
+}, {
+	"year": 1980,
+	"name": "Safeway Store",
+	"address": "",
+	"kind": "Food",
+	"coordinates": ["38.8948117", "-76.9492017"]
+},
 
     {
 	"year": 1960,
@@ -1058,7 +1070,7 @@
 	"coordinates": ["38.9025485", "-76.9374517"]
 }, {
 	"year": 1960,
-	"name": "Deanwoof Market",
+	"name": "Deanwood Market",
 	"address": "4515 Sheriff Road Northeast, Washington, DC",
 	"kind": "Food",
 	"coordinates": ["38.9025479", "-76.936779"]
@@ -1088,7 +1100,7 @@
 	"coordinates": ["38.9026083", "-76.9351602"]
 }, {
 	"year": 1960,
-	"name": "Greater Deanwoof Lodge ",
+	"name": "Greater Deanwood Lodge ",
 	"address": "4712 Sheriff Road Northeast, Washington, DC",
 	"kind": "Other",
 	"coordinates": ["38.9030492", "-76.9352761"]

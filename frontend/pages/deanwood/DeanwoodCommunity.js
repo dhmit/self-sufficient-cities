@@ -144,7 +144,7 @@ export const DeanwoodCommunity = ({resources, community_data, voronoi_data, path
                 </Row>
                 {DeanwoodProfile(Text.infrastructure2, false, false, [], [], [],
                     "", Deanwood_kiosk, "A small kiosk where Deanwood's books are kept")}
-                {DeanwoodProfile(Text.selfReliance1, false, true, [], [],
+                {DeanwoodProfile(Text.selfReliance1, false, true, [], [], [],
                     "Self-Reliance and Farming")}
                 <Row>
                     <Col md = {4}/>
