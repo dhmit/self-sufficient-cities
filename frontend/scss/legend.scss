@@ -1,12 +1,32 @@
 .legend-container {
     font-size: 15px;
-    color: white;
-
+    color: black;
     padding: 10px;
-    background-color: cornflowerblue;
-    width: 250px;
-    height: 105px;
+    background-color: white;
+    width: 180px;
+    height: 80px;
+    overflow-y: scroll;
+    z-index: 9999;
+    position: absolute;
+    bottom: 0.2em;
+    right: 0.2em;
+    border: 1px solid black;
 
-    border: 3px solid white;
-    border-radius: 10px;
+    h1 {
+        font-size: 1em;
+    }
+    .legend-marker {
+        width: 15px;
+        height: 15px;
+        float: left;
+        margin-top: 0.1em;
+    }
+    .marker-label {
+        float: left;
+        font-size: 0.8em;
+        margin-left: 0.5em;
+    }
+    .marker-set {
+        clear: both;
+    }
 }
