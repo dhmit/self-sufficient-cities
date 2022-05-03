@@ -183,7 +183,7 @@ export default class MapMacro extends React.Component {
             L = [
 
 
-                <LayersControl.Overlay key={1} name="Voronoi Representation">
+                <LayersControl.Overlay checked key={1} name="Voronoi Representation">
                     <LayerGroup>{shapes}</LayerGroup>
                 </LayersControl.Overlay>,
 
@@ -192,7 +192,7 @@ export default class MapMacro extends React.Component {
                     <GeoJSON data={this.state.censustract}/>}</LayerGroup>
                 </LayersControl.Overlay>,
 
-                <LayersControl.Overlay checked key={2} name="Deanwood Boundaries">
+                <LayersControl.Overlay key={2} name="Deanwood Boundaries">
                     <LayerGroup>{Object.keys(this.state.boundary).length > 0 &&
                     // eslint-disable-next-line max-len
                     <GeoJSON pathOptions={{fillColor: "rgb(174,255,71)", color: "rgb(113,189,13)"}} data={this.state.boundary}/>}</LayerGroup>
