@@ -254,7 +254,7 @@ export default function HealthTrends() {
                     ...options.plugins,
                     title: {
                         ...options.plugins.title,
-                        text: "Diabetes"
+                        text: "Lead Poisoning"
                     }
                 }
             });

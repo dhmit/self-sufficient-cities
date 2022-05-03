@@ -4,11 +4,12 @@ import * as PropTypes from "prop-types";
 import DeanwoodCovid from "./Covid";
 import DeanwoodResident from "./Resident";
 import HealthTrends from "./Health_Trends";
-
+import HealthHome from "./HealthHome";
 
 // if putting resource bar back in, add {resources} within parameter parentheses below
 export const DeanwoodHealth = ({resources}) => {
     const tabs = [
+        {label:"healthHome", name: "Home", el: <HealthHome resources={resources}/>},
         {label: "covidData", name: "COVID-19 Data", el: <DeanwoodCovid resources={resources}/>},
         {label: "healthTrends", name: "Health Trends", el: <HealthTrends resources={resources}/>},
         {
@@ -16,14 +17,11 @@ export const DeanwoodHealth = ({resources}) => {
             name: "Resident Profile",
             el: <DeanwoodResident resources={resources}/>
         }
+
     ];
-    const [displayState, setDisplayState] = useState("healthTrends");
+    const [displayState, setDisplayState] = useState("healthHome");
     return (<>
         <Container className="city" id="deanwood-overview">
-            <Row>
-                <h1>Health</h1>
-                <h3>COVID in Deanwood: Ward 3 vs. Ward 7</h3>
-            </Row>
 
             <Row>
                 {tabs.map((tab, idx) =>
@@ -34,6 +32,11 @@ export const DeanwoodHealth = ({resources}) => {
                     </Col>
                 )}
             </Row>
+             <br/>
+             <Row>
+                 <h1>A short History of Deanwood</h1>
+
+             </Row>
 
             <Row>
                 {tabs.map((tab, idx) =>
