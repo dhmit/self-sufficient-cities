@@ -14,27 +14,35 @@ export const DeanwoodFood = ({resources}) => {
                 <Col md={3} className="nav-col mr-2">
                     <h1>Food in Deanwood, D.C.</h1>
                     <p>
-                        The project tells the rise and fall of urban communities that grew their
-                        own food in the 20th century United States. Taking the Deanwood
-                        neighborhood in Washington, D.C. as their starting place, students
-                        consulted newspaper articles and census data to design an interactive
-                        site.
+                        In the modern day, Deanwood might be called a “food desert,” a
+                        low-income census tract where a substantial number of residents have
+                        low access to a supermarket or large grocery store, as defined by the
+                        Economic Research Service (ERS) in 2011. As of 2017, there are only two
+                        full-service grocery stores in Ward 7, the ward of DC that contains
+                        Deanwood, for a population of 80,000 people. But such a bleak statistic
+                        is not without history. Ashante Reese, in her book Black Food
+                        Geographies, points out that literature on the topic of food scarcity
+                        (involving racial biases or not) tends to frame “lack” as a terminal
+                        issue without struggle. These texts often paint a desolate picture of
+                        access and inaction for communities like Deanwood but fail to document
+                        how residents adapt and create their own opportunities in response.
+                        Deanwood has a rich history, particularly in the area of food, and with
+                        this project, we hope to illuminate how Deanwood residents sustained
+                        themselves even with a lack of outside support.
                     </p>
                     <DeanwoodNav selected={"overview"} resources={resources}/>
                 </Col>
                 <Row xs={1} md={2} className="justify-content-around mt-5">
                     <Col md={4}/>
                     <Col md={4}>
-                        <p className={"intro-text"}>
-                            Eligendi excepturi corporis velit provident dicta neque autem. Enim ab
-                            at
-                            distinctio enim debitis temporibus. Provident enim natus cumque.
-                            Quibusdam
-                            impedit nam et ipsam. Consequatur earum quam dolore doloremque earum.…
-                            Eligendi excepturi corporis velit provident dicta neque autem.
-                            Enim ab at distinctio enim debitis temporibus.
-                            Provident enim natus cumque. Quibusdam impedit nam
-                            et ipsam. Consequatur earum quam dolore doloremque earum.…
+                        <p>
+                            The project tells the rise and fall of urban communities that grew their
+                            own food in the 20th century United States. Taking the Deanwood
+                            neighborhood in Washington, D.C. as their starting place, students
+                            consulted newspaper articles and census data to design an interactive
+                            site. This specific page shows through an interactive food map
+                            how access to food for residents in Deanwood has changed over time from
+                            the early 1900s to the present day.
                         </p>
                     </Col>
                     <Col md={4}>
@@ -55,47 +63,17 @@ export const DeanwoodFood = ({resources}) => {
 
                 </Row>
                 <Row className="mt-5">
-                    <Col md={1}/>
+                    <Row>
                     <Col md={4}/>
-                    <Col md={4}>
+                    <Col>
                         <p>
-                            Lorem ipsum dolor sit amet, consectetuer adipiscing elit, sed diam
-                            nonummy
-                            nibh euismod tincidunt ut laoreet dolore magna aliquam erat volutpat. Ut
-                            wisi enim ad minim veniam, quis nostrud exerci tation ullamcorper
-                            suscipit
-                            lobortis nisl ut aliquip ex ea commodo consequat. Duis autem vel eum
-                            iriure
-                            dolor in hendrerit in vulputate velit esse molestie consequat, vel illum
-                            dolore eu feugiat nulla facilisis at vero eros et accumsan et iusto odio
-                            dignissim qui blandit praesent luptatum zzril delenit augue duis dolore
-                            te
-                            feugait nulla facilisi.
-                            Lorem ipsum dolor sit amet, cons ectetuer adipiscing elit, sed diam
-                            nonummy
-                            nibh euismod tincidunt ut laoreet dolore magna aliquam erat volutpat. Ut
-                            wisi enim ad minim veniam, quis nostrud exerci tation ullamcorper
-                            suscipit
-                            lobortis nisl ut aliquip ex ea commodo consequat.
-                            Lorem ipsum dolor sit amet, consectetuer adipiscing elit, sed diam
-                            nonummy
-                            nibh euismod tincidunt ut laoreet dolore magna aliquam erat volutpat. Ut
-                            wisi enim ad minim veniam, quis nostrud exerci tation ullamcorper
-                            suscipit
-                            lobortis nisl ut aliquip ex ea commodo consequat. Duis autem vel eum
-                            iriure
-                            dolor in hendrerit in vulputate velit esse molestie consequat, vel illum
-                            dolore eu feugiat nulla facilisis at vero eros et accumsan et iusto odio
-                            dignissim qui blandit praesent luptatum zzril delenit augue duis dolore
-                            te
-                            feugait nulla facilisi.
-                            Lorem ipsum dolor sit amet, cons ectetuer adipiscing elit, sed diam
-                            nonummy
-                            nibh euismod tincidunt ut laoreet dolore magna aliquam erat volutpat. Ut
-                            wisi enim ad minim veniam, quis nostrud exerci tation ullamcorper
-                            suscipit
+                            Throughout the 1900s, Deanwood received less government investment and
+                            benefits compared to similar-sized White neighborhoods in DC, such as
+                            Kenilworth. However, the ways in which the residents of Deanwood adapted
+                            helped the neighborhood develop a healthy, self-sustaining economy.
                         </p>
                     </Col>
+                </Row>
                 </Row>
 
             </Row>

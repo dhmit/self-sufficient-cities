@@ -228,7 +228,6 @@ export default class FoodMap extends React.Component {
         return (<>
             <h1>{this.state.mainLocation.name}</h1>
             <div className="main-element">
-                {/*if i want to get rid of event selector delete this*/}
                 <div>
                   <p> <u><b> Map Key: </b></u></p>
                   <p style={{color: '#abcdef'}}>Blue: Grocery</p>
