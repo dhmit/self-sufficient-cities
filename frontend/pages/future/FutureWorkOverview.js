@@ -276,7 +276,7 @@ class FutureWorkOverview extends React.Component{
                                 rank and the score was averaged for each rank to determine
                             </p>
                             <p>
-                                The following graphic represents the ranking of each cities.
+                                The following graphic represents the ranking of each city.
                             </p>
                         </Col>
                     </Row>
@@ -284,7 +284,41 @@ class FutureWorkOverview extends React.Component{
                         <Col md={4}/>
                         <Col md={8}>
                             <h3>Results</h3>
-                            <p>Some cool results belong here!</p>
+                            <p>
+                                The above analyses indicate that there are quite a few possible
+                                census tracts that are worth looking into:
+                            </p>
+                            <h5>Angelina County, TX</h5>
+                            <p>
+                                Parts of Angelina County, Texas show a large quantity of
+                                agricultural workers, coupled with a majority Black population.
+                                Furthermore, the Texas Historical Society has recorded a history of
+                                farming taking place at the household level.
+                            </p>
+                            <h5>Harris County, TX</h5>
+                            <p>
+                                Census Tract 8 and 9 of Harris County (shown in the “Houston”
+                                dropdown of the Nearest Neighbor Analysis) are also prime
+                                candidates. They show similarities to Deanwood much similar to
+                                Angelina County. However, in addition, there are markers of
+                                densely packed homes (which is one of the key indicators that
+                                we have found).
+                            </p>
+                            <h5>Cook County, Illinois</h5>
+                            <p>
+                                Census Tract 625 in Cook County is another prime candidate.
+                                With a large portion of the population living in a household with
+                                5-9 members, over half of the working population having an
+                                occupation in “housework,” and a majority of residents not having
+                                completed high school, this tract is the one flagged as “closest”
+                                to Deanwood by our methods.
+                            </p>
+                            <p>
+                                In the future, we hope to examine these areas much more, along
+                                with fine-tuning our methods for identifying self-sustaining
+                                neighborhoods, in order to gain new insights into how these
+                                communities grew and developed.
+                            </p>
                         </Col>
                     </Row>
                 </Row>
