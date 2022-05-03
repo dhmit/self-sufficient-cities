@@ -369,6 +369,29 @@ def get_1940_deanwood_similarities(request):
 
     return JsonResponse(census_data)
 
+
+def get_1940_tract_classifications(request):
+    """
+    API endpoint for getting the cluster classifications of census tracts in 1940
+    """
+    with open("app/data/tract_labels.json", encoding='utf-8') as f:
+        classifications = json.load(f)
+
+    return JsonResponse(classifications)
+
+
+def get_1940_tract_data(request):
+    """
+    API endpoint to get the entries for each tract on the 1940s census
+    :param request:
+    :return:
+    """
+    with open("app/data/1940_tract_data.json") as f:
+        data = json.load(f)
+
+    return JsonResponse(data)
+
+
 def get_deanwood_boundary_data(request):
     """
     Get the Deanwood geoJSON

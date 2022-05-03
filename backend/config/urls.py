@@ -66,6 +66,8 @@ api_urls = [
     path('api/get_census_data/', views.get_census_data),
     path('api/get_1940_census_geodata', views.get_1940_census_geodata),
     path('api/get_1940_deanwood_similarities', views.get_1940_deanwood_similarities),
+    path('api/get_1940_tract_data', views.get_1940_tract_data),
+    path('api/get_1940_tract_classifications', views.get_1940_tract_classifications),
     path('api/get_deanwood_boundary_data/', views.get_deanwood_boundary_data),
     path('api/get_addresses/', views.get_addresses),
     path('api/get_latlon/<address_str>', views.get_latlon),
