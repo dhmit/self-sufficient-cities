@@ -22,7 +22,7 @@
         "eqeqeq": ["error", "always"],
         "import/extensions": ["off"],
         "import/prefer-default-export": ["off"],
-        "indent": ["warn", 4],
+        "indent": ["off"],
         "linebreak-style": ["off"],
         "max-classes-per-file": ["off"],
         "max-len": ["warn", { "code": 100, "ignoreUrls": true }],
