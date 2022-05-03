@@ -15,7 +15,9 @@ import {
     Polyline,
     Tooltip
 } from "react-leaflet";
-const URL = "/api/get_census_data/";
+// const URL = "/api/get_census_data/";
+const censusURL = "/api/get_census_data/";
+const DeanwoodURL = "/api/get_deanwood_boundary_data/";
 
 //import data from "./community.json";
 
@@ -24,18 +26,19 @@ const URL = "/api/get_census_data/";
 export default class MapMacro extends React.Component {
     state = {
         position: [38.897665, -76.925919],
-        censustract: {}
+        censustract: {},
+        boundary: {}
     }
 
     componentDidMount() {
-        axios.get(URL)
+        axios.get(censusURL)
             .then((res) => {
-                //console.log(res.data);
                 this.setState({censustract: res.data});
             });
-
-
-
+        axios.get(DeanwoodURL)
+            .then((res) => {
+                this.setState({boundary: res.data});
+            });
     }
 
 
@@ -129,7 +132,8 @@ export default class MapMacro extends React.Component {
 
         }
 
-        const purpleOptions = {color: "purple"};
+        // eslint-disable-next-line max-len
+        const c = ["#56ebd3", "#115e41", "#88beef", "#4346ab", "#b88ae6", "#8711ac", "#e84fe1", "#1d70a5", "#37c454", "#c2df7d", "#719d47", "#1fa198", "#f8cca6", "#76480d", "#e37010", "#871d32", "#f48e9b", "#e21c7a", "#f73931", "#f9bd3a"];
         const redOptions = {color: "red"};
 
         //console.log("here ", this.props.voronoi);
@@ -140,7 +144,7 @@ export default class MapMacro extends React.Component {
                 for (let j=0; j< v[i]["shapes"].length; j++) {
                     shapes.push(
                         // eslint-disable-next-line max-len
-                        <Polygon id={j.toString()} pathOptions={purpleOptions} positions={v[i]["shapes"][j]}/>
+                        <Polygon id={j.toString()} pathOptions={{color:c[j]}} positions={v[i]["shapes"][j]}/>
                     );
                 }
             }
@@ -183,9 +187,15 @@ export default class MapMacro extends React.Component {
                     <LayerGroup>{shapes}</LayerGroup>
                 </LayersControl.Overlay>,
 
-                <LayersControl.Overlay checked key={2} name="Community Boundaries">
+                <LayersControl.Overlay key={2} name="Census Tract Boundaries">
                     <LayerGroup>{Object.keys(this.state.censustract).length > 0 &&
                     <GeoJSON data={this.state.censustract}/>}</LayerGroup>
+                </LayersControl.Overlay>,
+
+                <LayersControl.Overlay checked key={2} name="Deanwood Boundaries">
+                    <LayerGroup>{Object.keys(this.state.boundary).length > 0 &&
+                    // eslint-disable-next-line max-len
+                    <GeoJSON pathOptions={{fillColor: "rgb(174,255,71)", color: "rgb(113,189,13)"}} data={this.state.boundary}/>}</LayerGroup>
                 </LayersControl.Overlay>,
 
                 <LayersControl.Overlay key={3} name="From Omie Cheek's House">
@@ -200,9 +210,15 @@ export default class MapMacro extends React.Component {
             L = [
 
 
-                <LayersControl.Overlay checked key={2} name="Community Boundaries">
+                <LayersControl.Overlay key={2} name="Census Tract Boundaries">
                     <LayerGroup>{Object.keys(this.state.censustract).length > 0 &&
                     <GeoJSON data={this.state.censustract}/>}</LayerGroup>
+                </LayersControl.Overlay>,
+
+                <LayersControl.Overlay checked key={2} name="Deanwood Boundaries">
+                    <LayerGroup>{Object.keys(this.state.boundary).length > 0 &&
+                    // eslint-disable-next-line max-len
+                    <GeoJSON pathOptions={{fillColor: "rgb(174,255,71)", color: "rgb(113,189,13)"}} data={this.state.boundary}/>}</LayerGroup>
                 </LayersControl.Overlay>
             ];
         }
@@ -220,8 +236,8 @@ export default class MapMacro extends React.Component {
                 <TileLayer
                     attribution='&copy; <a href="https://www.openstreetmap.org/copyright">OpenStreetMap</a> contributors'
                     url="http://stamen-tiles-a.a.ssl.fastly.net/toner-lite/{z}/{x}/{y}.png"
-
                 />
+
 
 
                 {m}
