@@ -386,7 +386,7 @@ def get_1940_tract_data(request):
     :param request:
     :return:
     """
-    with open("app/data/1940_tract_data.json") as f:
+    with open("app/data/1940_tract_data.json", encoding='utf-8') as f:
         data = json.load(f)
 
     return JsonResponse(data)
