@@ -9,3 +9,34 @@ body {
 .communityButton {
     background-color: white;
 }
+
+.citation-pointer {
+    font-size: 0.6em;
+    position: relative;
+    bottom: 0.4em;
+    padding-right: 0.6em;
+}
+
+.citation {
+    font-size: 0.8em;
+    margin-bottom: 0.5em;
+
+    p {
+        margin: 0;
+        padding: 0;
+    }
+
+    .citation-num {
+        font-weight: 300;
+    }
+
+    .citation-accessed {
+        font-style: italic;
+        color: #565656;
+    }
+
+    .citation-link {
+        font-style: normal;
+        font-size: 1em;
+    }
+}

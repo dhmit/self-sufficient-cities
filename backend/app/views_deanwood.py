@@ -85,8 +85,23 @@ def housing(request):
         'component_name': 'DeanwoodHousing',
         'component_props': {
             'resources': resources,
-            'addresses': [{"address": "District Normal School", "year": 1914,
-                           "coordinates": ["38.9051606", "-77.0036513"]}]
+            'addresses': [{"address": "Smith Family", "year": 2004,
+                           "coordinates": ["38.903760", "-76.929470"]},
+                          {"address": "Johnson Family", "year": 1987,
+                           "coordinates": ["38.904480", "-76.930540"]},
+                          {"address": "Dorrah Family", "year": 1990,
+                           "coordinates": ["38.904440", "-76.929480"]},
+                          {"address": "Correa Family", "year": 2020,
+                           "coordinates": ["38.903740", "-76.929050"]},
+                          {"address": "Correa Family", "year": 1983,
+                           "coordinates": ["38.904490", "-76.930450"]},
+                          {"address": "Correa Family", "year": 2022,
+                           "coordinates": ["38.9044312", "-76.9291952"]},
+                          {"address": "Correa Family", "year": 2022,
+                           "coordinates": ["38.9044316", "-76.929797"]},
+                          {"address": "Correa Family", "year": 2022,
+                           "coordinates": ["38.900959520489025", "-76.92833968132939"]}
+                          ]
         },
 
     }
