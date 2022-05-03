@@ -60,12 +60,12 @@ export const DeanwoodFood = ({resources}) => {
                 <Row>
                     <Col md={4}/>
                     <Col><FoodMap/></Col>
-
                 </Row>
                 <Row className="mt-5">
                     <Row>
                     <Col md={4}/>
                     <Col>
+                        <h1>General Summary</h1>
                         <p>
                             Throughout the 1900s, Deanwood received less government investment and
                             benefits compared to similar-sized White neighborhoods in DC, such as
@@ -92,7 +92,6 @@ export const DeanwoodFood = ({resources}) => {
                             mother was interested in merchandising, so they “had stands in the Old
                             Market where we sold honey and flowers, fruits and vegetables.”
                         </p>
-
                         <p>
                             In this period, Deanwood was ripe with local entrepreneurs whose
                             businesses were integral parts of the community, just as they were
