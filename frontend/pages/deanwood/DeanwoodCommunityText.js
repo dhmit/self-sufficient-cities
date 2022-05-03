@@ -1,3 +1,4 @@
+import React from "react";
 
 export const quotes = ["“You see you go back in those days- I don’t know, people came out of" +
 " schools, I think, a little better prepared. I am not one of those to say, ‘The good ole days,’" +
@@ -32,11 +33,23 @@ export const quoteContext = ["Most of these quotes come from former Deanwood res
         " to as Anacostia, between the 1890s and 1930s. The late 1960s and early 1970s were a" +
         " tumultuous time in American history, characterized by skyrocketing inflation, the" +
         " emergence and persecution of the Black Panther movement, and the largest public" +
-        " protests in American history against the Vietnam war. It is in this context that" +
+        " protests in American history against the Vietnam war.",
+<a key="1"
+   className={"citation-pointer"}
+   title="Vietnam War Timeline"
+   href={"#source-1"}>[1]
+</a>,
+        "It is in this context that" +
         " these former residents looked back on their childhood", "The quotes were collected by" +
         " the Anacostia Oral Histories project in 1975, just two years after Congress passed" +
         " the Home Rule Act of 1973.  The Act allowed the residents of the District of Columbia" +
-        " to self-govern and elect a mayor and city council. Before, DC, and by extension" +
+        " to self-govern and elect a mayor and city council.",
+<a key="2"
+   className={"citation-pointer"}
+   title="D.C. Home Rule"
+   href={"#source-2"}>[2]
+</a>,
+        "Before, DC, and by extension" +
         " Deanwood, was governed by Congress. Appointed officials, separated from the realities" +
         " of living in Deanwood, made the decisions about day-to-day life there. The Oral" +
         " Histories project asked many questions in their interviews, but they all served to" +
@@ -55,16 +68,28 @@ export const uniqueDeanwood = "But what made Deanwood so unique from other neigh
         " thrived in these conditions?";
 
 export const infrastructure1 = ["Greenspace was hard to come by. White people in DC had access to" +
-    " on average 2.45 times as many playgrounds as DC’s black residents in 1929. Residents often" +
-    " fondly remembered two private parks, Eureka and Greenwillow, that local entrepreneurs" +
-    " built for black residents to relax and come together as an alternative to the paid parks" +
-    " they were offered by the city. Their white counterparts had free public parks.", "The" +
-    " Glen Echo amusement park along the Potomac River was only accessible to White people, so" +
-    " Lewis Giles Sr, a black architect, helped to design  Suburban Gardens, a welcome addition" +
-    " to Deanwood’s entertainment scene since there were no theaters in Deanwood.", "The most" +
-    " striking example of this denial of infrastructure comes from Mrs. Ethel G Greene’s" +
-    " interview. She discussed her father’s efforts to convince the Senator governing Deanwood" +
-    " for money to build new schools, sidewalks, water systems, lights, and more:"];
+    " on average 2.45 times as many playgrounds as DC’s black residents in 1929.",
+<a key="3"
+   className={"citation-pointer"}
+   title="18th annual report"
+   href={"#source-3"}>[3]
+</a>,
+    "Residents often fondly remembered two private parks, Eureka and Greenwillow, that local" +
+    " entrepreneurs built for black residents to relax and come together as an alternative to" +
+    " the paid parks they were offered by the city. Their white counterparts had free public" +
+    " parks.", "The Glen Echo amusement park along the Potomac River was only accessible to" +
+    " White people, so Lewis Giles Sr, a black architect, helped to design  Suburban Gardens, a" +
+    " welcome addition to Deanwood’s entertainment scene since there were no theaters in" +
+    " Deanwood.",
+<a key="4"
+   className={"citation-pointer"}
+   title="Remembering Suburban Gardens"
+   href={"#source-4"}>[4]
+</a>,
+    "The most striking example of this denial of infrastructure comes from Mrs." +
+    " Ethel G Greene’s interview. She discussed her father’s efforts to convince the Senator" +
+    " governing Deanwood for money to build new schools, sidewalks, water systems, lights, and" +
+    " more:"];
 
 export const senatorTaxesQuote = "The Senator had told him, 'You don’t need water, you don’t" +
     " need sidewalks, you don’t need these things, because if you get them it will increase" +
@@ -76,7 +101,12 @@ export const infrastructure2 = ["As a result, throughout most of the early 1900s
     " Mrs. Cora Wilkerson started a kindergarten in her own home, welcoming kids from around" +
     " the neighborhood to learn together. Eventually, she succeeded in getting public" +
     " kindergarten started in the public schools in Deanwood.", "Deanwood also didn’t have a" +
-    " public library until 2010, only having a small kiosk holding about 1000 books."];
+    " public library until 2010, only having a small kiosk holding about 1000 books.",
+<a key="5"
+   className={"citation-pointer"}
+   title="Anybody want a Kiosk?"
+   href={"#source-5"}>[5]
+</a>];
 
 export const selfReliance1 = ["Due to a lack of municipal support, self-reliance came to" +
     " characterize the early decades of Deanwood’s. Residents cultivated and sold the produce" +
@@ -109,10 +139,15 @@ export const lifesaverQuote = "‘It means a lifesaver to me,’ declared Omie C
     " Nannie Helen Burroughs Ave., less than a block away. ‘Only time I’ve ever felt neglected" +
     " was when they took the grocery store away.’";
 
-export const selfReliance3 = ["In 2000, Super Pride and its sister stores closed down. Where" +
-    " Deanwood residents of the mid to late 1900s prided themselves on the convenient access to" +
-    " quality foods and goods, residents today can only reminisce of the bustling business" +
-    " district that once was."];
+export const selfReliance3 = ["In 2000, Super Pride and its sister stores closed down.",
+<a key="7"
+   className={"citation-pointer"}
+   title="Deanwood's local foodscape"
+   href={"#source-7"}>[7]
+</a>,
+    "Where Deanwood residents of the mid to late 1900s prided themselves on the convenient" +
+    " access to quality foods and goods, residents today can only reminisce of the bustling" +
+    " business district that once was."];
 
 export const noStoresQuote = "'When you look around here, there are no stores,' Woods said. 'If" +
     " you want to go to the grocery store you have to jump on the bus or drive 20 minutes away.'";

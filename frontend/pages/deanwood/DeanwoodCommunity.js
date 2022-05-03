@@ -6,6 +6,7 @@ import * as Text from "./DeanwoodCommunityText";
 import MapTest from "../../components/maps/MapTest";
 import Suburban_gardens from "../../images/suburban_gardens.png";
 import Deanwood_kiosk from "../../images/deanwood_kiosk.png";
+import Citation from "../../components/global/Citation";
 
 // eslint-disable-next-line max-len
 const DeanwoodProfile = (statement, hasMap = true, hasTitle = true, data = [], voronoi = [], paths=[],
@@ -167,6 +168,11 @@ export const DeanwoodCommunity = ({resources, community_data, voronoi_data, path
                     <Col>
                         <blockquote>
                             {Text.lifesaverQuote}
+                            {<a key="6"
+                                className={"citation-pointer"}
+                                title="Black-owned Grocery Chain"
+                                href={"#source-6"}>[6]
+                            </a>}
                         </blockquote>
                     </Col>
                 </Row>
@@ -176,6 +182,12 @@ export const DeanwoodCommunity = ({resources, community_data, voronoi_data, path
                     <Col>
                         <blockquote>
                             {Text.noStoresQuote}
+                            {<a
+                                key="8"
+                                className={"citation-pointer"}
+                                title="Deanwood: Affordability"
+                                href={"#source-8"}>[8]
+                            </a>}
                         </blockquote>
                     </Col>
                 </Row>
@@ -184,6 +196,60 @@ export const DeanwoodCommunity = ({resources, community_data, voronoi_data, path
                     " Centers of" +
                     " Community", "","","Religion")}
                 {DeanwoodProfile(Text.conclusion, false, true, [], [], [],"Conclusion")}
+                <Col md={4}/>
+                <Col md={8} className="justify-content-around mt-5">
+                    <h2>Sources</h2>
+                    <Citation
+                        identifier={"source-1"}
+                        title={"Vietnam War Timeline"}
+                        accessed={"Accessed April 20, 2022."}
+                        link={"https://www.britannica.com/list/vietnam-war-timeline"}
+                    />
+                    <Citation identifier={"source-2"}
+                              title={"D.C. Home Rule"}
+                              accessed={"Accessed April 20, 2022."}
+                              link={"https://dccouncil.us/dc-home-rule/"}/>
+                    <Citation identifier={"source-3"}
+                              title={"18th annual report of the Department of Playgrounds," +
+                              " District of Columbia, 1929"}
+                              accessed={"Accessed April 22, 2022."}
+                              link={"https://digdc.dclibrary.org/islandora/object/dcplislandora%3A30754?solr_nav%5Bid%5D=085689ab129a36502735&solr_nav%5Bpage%5D=0&solr_nav%5Boffset%5D=3#page/8/mode/2up"}
+                    />
+                    <Citation identifier={"source-4"}
+                              title={"Remembering Suburban Gardens, D.C.’s only amusement park"}
+                              accessed={"Accessed April 26, 2022."}
+                              link={"https://www.washingtonpost.com/local/remembering-suburban-gardens-dcs-only-amusement-park/2013/10/26/62bb1c9a-3d72-11e3-a94f-b58017bfee6c_story.html"}
+                    />
+                    <Citation identifier={"source-5"}
+                              title={"Anybody Want a Kiosk?"}
+                              accessed={"Accessed April 26, 2022."}
+                              link={"https://washingtoncitypaper.com/article/384807/anybody-want-a-kiosk/"}
+                    />
+                    <Citation identifier={"source-6"}
+                              title={"Black-owned Grocery Chain Brings Service Back to NE" +
+                              " Neighborhood: Black-owned Grocery Chain Brings Service Back to" +
+                              " NE Neighborhood"}
+                              accessed={"Accessed April 22, 2022."}
+                              link={"https://www.proquest.com/docview/147336449/32F1A9D3902840A7PQ/2"}
+                    />
+                    <Citation identifier={"source-7"}
+                              title={"The history of Deanwood’s local foodscape"}
+                              accessed={"Accessed April 22, 2022."}
+                              link={"https://www.dcpolicycenter.org/publications/black-food-geographies/"}
+                    />
+                    <Citation identifier={"source-8"}
+                              title={"Deanwood: Affordability, if not amenities, in a part of" +
+                              " D.C. rich in history: Community center is a refuge for young and" +
+                              " old as development reshapes a hot neighborhood."}
+                              accessed={"Accessed April 22, 2022."}
+                              link={"https://www.proquest.com/docview/2319094697/fulltext/B2DCBD808374483DPQ/1?accountid=12492"}
+                    />
+                    <Citation identifier={"source-9"}
+                              title={"Finding God on Every Corner: Deanwood"}
+                              accessed={"Accessed April 22, 2022."}
+                              link={"https://awolau.org/1151/place-holder-do-not-delete/finding-god-on-every-corner-deanwood/"}
+                    />
+                </Col>
             </Row>
 
 
