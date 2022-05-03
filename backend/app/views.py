@@ -353,7 +353,7 @@ def get_1940_census_geodata(request):
     API endopoint for getting the 1940 Census Tracts as a geojson file
     """
 
-    with open("app/data/TRACT_1940_US_SL140_Coast_Clipped.geojson", encoding='utf-8') as f:
+    with open("app/data/filtered_1940_tracts.geojson", encoding='utf-8') as f:
         census_data = json.load(f)
 
     return JsonResponse(census_data)
@@ -364,7 +364,7 @@ def get_1940_deanwood_similarities(request):
     API endpoint for getting the similarity scores for 1940 census tracts
     """
 
-    with open("app/data/1940_nearest_neighbor.json", encoding='utf-8') as f:
+    with open("app/data/filtered_tract_distances.json", encoding='utf-8') as f:
         census_data = json.load(f)
 
     return JsonResponse(census_data)

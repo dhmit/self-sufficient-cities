@@ -26,14 +26,13 @@ class CensusTractMap extends React.Component {
             map: undefined
         };
         this.styleTracts = this.styleTracts.bind(this);
-        this.prep_distance_data = this.prep_distance_data.bind(this);
         this.onEachFeature = this.onEachFeature.bind(this);
         this.generatePopupContent = this.generatePopupContent.bind(this);
         this.onPosSelected = this.onPosSelected.bind(this);
     }
 
-    componentDidUpdate(prevProps, _prevState, _ss) {
-        if (prevProps !== this.props) this.prep_distance_data();
+    shouldComponentUpdate(nextProps, _nextState, _nextContext) {
+        return (nextProps !== this.props);
     }
 
     onPosSelected(e) {
@@ -72,18 +71,10 @@ class CensusTractMap extends React.Component {
     onEachFeature(feature, layer) {
 
         const tract_code = feature.properties["GISJOIN"];
+        const tract_data = this.props.deanwood_similarities[tract_code];
 
-        let tract_name;
-        let tract_distance;
-        if (tract_code === DEANWOOD_JOIN_CODE) {
-            tract_name = "Census Tract 78 (Deanwood), District of Columbia";
-            tract_distance = 0;
-        } else if (!(tract_code in this.props.deanwood_similarities)) {
-            return;
-        } else {
-            tract_name = this.props.deanwood_similarities[tract_code]["full_name"];
-            tract_distance = this.props.deanwood_similarities[tract_code]["distance"].toFixed(2);
-        }
+        const tract_name = tract_data["full_name"];
+        const tract_distance = Number(tract_data["distance"]).toFixed(2);
 
         const popupContent = ReactDomServer.renderToString(
             this.generatePopupContent(tract_name, tract_distance)
@@ -102,33 +93,21 @@ class CensusTractMap extends React.Component {
         let tract_name = tract_data.properties["GISJOIN"];
 
         // Deanwood is itself, so color that specially
-        if (tract_name === DEANWOOD_JOIN_CODE) return {color: "black", fillColor: "#00FF00"};
-
-        // Color tract different if there is no data for it
-        if (!(tract_name in this.props.deanwood_similarities)) return {color: "grey"};
-
-        const tract_distance = this.props.deanwood_similarities[tract_name]["distance"];
+        if (tract_name === DEANWOOD_JOIN_CODE)
+            return {
+                color: "black",
+                fillColor: "#00FF00",
+                fillOpacity: 0.8,
+                opacity: 0.8
+            };
 
         return {
             // color: this.calculateTractColor(tract_distance)
             color: "black",
             fillColor: "#00FF00",
-            fillOpacity: 0.8 * (this.state.farthest_distance/5 - tract_distance) /
-                (this.state.farthest_distance/5 - this.state.closest_distance),
-            opacity: 0.8 * (this.state.farthest_distance/5 - tract_distance) /
-                (this.state.farthest_distance/5 - this.state.closest_distance)
+            fillOpacity: this.props.deanwood_similarities[tract_name]["opacity"],
+            opacity: this.props.deanwood_similarities[tract_name]["opacity"]
         };
-    }
-
-    prep_distance_data() {
-        Object.entries(this.props.deanwood_similarities).forEach(([_, data]) => {
-            const distance = data["distance"];
-            this.setState({
-                closest_distance: Math.min(this.state.closest_distance, distance),
-                farthest_distance: Math.max(this.state.farthest_distance, distance)
-            });
-        });
-        return true;
     }
 
     render() {
