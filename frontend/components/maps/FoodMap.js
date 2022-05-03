@@ -1,31 +1,29 @@
- import React from "react";
-import PropTypes from "prop-types";
+import React from "react";
+// import PropTypes from "prop-types";
 import {MapContainer, Marker, Popup, TileLayer} from "react-leaflet";
 import Input from "@material-ui/core/Input";
 import Typography from "@material-ui/core/Typography";
 import Grid from "@material-ui/core/Grid";
 import Slider from "@material-ui/core/Slider";
-import Dropdown from "react-bootstrap/Dropdown";
 import * as L from "leaflet";
-import {MapDropdown} from "./MapMicro";
 import {TimeControl} from "./MapMicro";
 
 
 const LeafIcon = L.Icon.extend({
     options: {}
-  });
+});
 
 const blueIcon = new LeafIcon({
-      iconUrl:
-        "https://chart.apis.google.com/chart?chst=d_map_pin_letter&chld=%E2%80%A2|abcdef&chf=a,s,ee00FFFF"
+        iconUrl:
+            "https://chart.apis.google.com/chart?chst=d_map_pin_letter&chld=%E2%80%A2|abcdef&chf=a,s,ee00FFFF"
     }),
     greenIcon = new LeafIcon({
-      iconUrl:
-        "https://chart.apis.google.com/chart?chst=d_map_pin_letter&chld=%E2%80%A2|2ecc71&chf=a,s,ee00FFFF"
+        iconUrl:
+            "https://chart.apis.google.com/chart?chst=d_map_pin_letter&chld=%E2%80%A2|2ecc71&chf=a,s,ee00FFFF"
     }),
     yellowIcon = new LeafIcon({
         iconUrl:
-          "https://chart.apis.google.com/chart?chst=d_map_pin_letter&chld=•|ffc800&chf=a,s,ee00FFFF"
+            "https://chart.apis.google.com/chart?chst=d_map_pin_letter&chld=•|ffc800&chf=a,s,ee00FFFF"
     }),
     redIcon = new LeafIcon({
         iconUrl:
@@ -33,16 +31,15 @@ const blueIcon = new LeafIcon({
     });
 
 function setMarkerColor(type) {
-    if (type === "grocery") {
+    if (!type) {
         return blueIcon;
-    }
-    else if (type === "convenience") {
+    } else if (type === "grocery") {
+        return blueIcon;
+    } else if (type === "convenience") {
         return greenIcon;
-    }
-    else if (type === "restaurant") {
+    } else if (type === "restaurant") {
         return yellowIcon;
-    }
-    else if (type === "liquor") {
+    } else if (type === "liquor") {
         return redIcon;
     }
 }
@@ -209,12 +206,13 @@ export default class FoodMap extends React.Component {
 
     render() {
         const validAddresses = this.state.markerData.filter((location) => (
-            (location.coordinates.length === 2 && location.openyear && location.closeyear &&
+            (location.coordinates && location.coordinates.length === 2 &&
+                location.openyear && location.closeyear &&
                 (location.openyear <= this.state.lastValid[1] &&
-                location.openyear >= this.state.lastValid[0]) ||
+                    location.openyear >= this.state.lastValid[0]) ||
                 (location.closeyear <= this.state.lastValid[1] &&
-                location.closeyear >= this.state.lastValid[0])
-                )
+                    location.closeyear >= this.state.lastValid[0])
+            )
         ));
 
         const markerObjects = validAddresses.map((location, i) => (
@@ -229,11 +227,11 @@ export default class FoodMap extends React.Component {
             <h1>{this.state.mainLocation.name}</h1>
             <div className="main-element">
                 <div>
-                  <p> <u><b> Map Key: </b></u></p>
-                  <p style={{color: '#abcdef'}}>Blue: Grocery</p>
-                    <p style={{color: '#2ecc71'}}>Green: Convenience</p>
-                    <p style={{color: '#ffc800'}}>Yellow: Restaurant</p>
-                    <p style={{color: '#e85141'}}>Red: Liquor</p>
+                    <p><u><b> Map Key: </b></u></p>
+                    <p style={{color: "#abcdef"}}>Blue: Grocery</p>
+                    <p style={{color: "#2ecc71"}}>Green: Convenience</p>
+                    <p style={{color: "#ffc800"}}>Yellow: Restaurant</p>
+                    <p style={{color: "#e85141"}}>Red: Liquor</p>
                 </div>
                 <div id="map" className={"pb-5"}>
                     <MapContainer
