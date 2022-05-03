@@ -248,7 +248,9 @@ export default class MapMacro extends React.Component {
                 </LayersControl>
 
 
+
             </MapContainer>
+
         </div>;
     }
 }
