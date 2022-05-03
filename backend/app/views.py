@@ -413,7 +413,7 @@ def get_address_data(request):
 
 def get_food_addresses(request):
     """Returning all addresses from file"""
-    with open("app/data/food_addresses.json", encoding="utf-8") as f:
+    with open("app/data/food_addresses_new.json", encoding="utf-8") as f:
         address_data = json.load(f)
 
     return JsonResponse({"address_data": address_data})
