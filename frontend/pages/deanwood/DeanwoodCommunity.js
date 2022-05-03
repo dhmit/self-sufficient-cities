@@ -7,18 +7,6 @@ import MapTest from "../../components/maps/MapTest";
 import Suburban_gardens from "../../images/suburban_gardens.png";
 import Deanwood_kiosk from "../../images/deanwood_kiosk.png";
 
-
-const quotes = ["Eligendi excepturi corporis velit " +
-"provident dicta neque autem. Enim ab at distinctio " +
-"enim debitis temporibus. Provident enim natus cumque. " +
-"Quibusdam impedit nam et ipsam. Consequatur earum quam " +
-"dolore doloremque earum.… Eligendi excepturi corporis velit " +
-"provident dicta neque autem. Enim ab at distinctio enim debitis " +
-"temporibus. Provident enim natus cumque. Quibusdam impedit nam et ipsam. " +
-"Consequatur earum quam dolore doloremque earum.", "Hello this is a test", "This is another test" +
-" to see if the quotes are properly cycling through the carousel"];
-
-
 // eslint-disable-next-line max-len
 const DeanwoodProfile = (statement, hasMap = true, hasTitle = true, data = [], voronoi = [], paths=[],
     title = "", source = "", alt_text = "", mapType="") => {
@@ -75,7 +63,7 @@ class CommunityMap extends React.Component {
 
 export const DeanwoodCommunity = ({resources, community_data, voronoi_data, paths_data}) => {
     const [imageNum, setImage] = useState(0);
-    const numQuotes = quotes.length;
+    const numQuotes = Text.quotes.length;
 
     const forward = () => {
         setImage((imageNum + 1) % numQuotes);
@@ -115,7 +103,7 @@ export const DeanwoodCommunity = ({resources, community_data, voronoi_data, path
                             </Col>
                             <Col className = "col-9">
                                 <p className={"intro-text"}>
-                                    {quotes[imageNum]}
+                                    {Text.quotes[imageNum]}
                                 </p>
                             </Col>
 
@@ -150,6 +138,7 @@ export const DeanwoodCommunity = ({resources, community_data, voronoi_data, path
                 </Row>
                 {DeanwoodProfile(Text.infrastructure2, false, false, [], [], [],
                     "", Deanwood_kiosk, "A small kiosk where Deanwood's books are kept")}
+
                 {DeanwoodProfile(Text.selfReliance1, false, true, [], [], [],
                     "Self-Reliance and Farming")}
                 <Row>

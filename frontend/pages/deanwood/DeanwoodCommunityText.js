@@ -11,6 +11,33 @@ export const fillerString = "Random stuff corporis velit " +
 
 export const lawyerMoss = "Lawyer Moss could always be found carrying a chicken under his arm";
 
+export const quotes = ["“You see you go back in those days- I don’t know, people came out of" +
+" schools, I think, a little better prepared. I am not one of those to say, ‘The good ole days,’" +
+" because they were hard days, but I think they had a better background.” - Mr. McKinley Taylor" +
+" 1975", "“But I grew up in a community where there were doctors on my street, there were" +
+" lawyers on my street, there were schoolteachers on my street, there were people of varying" +
+" economic status, where we could make up our minds, “I want to be a teacher, I want to be a" +
+" doctor.” or “I want to be a lawyer.” But what do these kids have to aspire to in a great big" +
+" low rent ghetto with the same thing every day? They see they are not making any progress.” -" +
+" Mrs. Ethel G Greene 1975", "“The races just stayed together; to themselves, and didn’t bother" +
+" each other at all. There were no conflicts. Everybody just lived their own life. Nobody" +
+" bothered anyone else.” - Anita B Blake 1975", "“Well everything centered around the home," +
+" individual home life and yet a fine community spirit. Everybody was interested in the needs of" +
+" the other whether they were able to help other than physically or not.” - Anita B Blake 1975",
+"“I think that the average black person back there in those days when I was a child was just so" +
+" frustrated that it was so ground into him that you’re just nobody and you don’t expect to get" +
+" but so much. That’s really the situation.” - Norman Dale 1975", "“Most of [the blacks were" +
+    " close to each other]. You didn’t have the turmoil that we have now.” - Mr. McKinley" +
+    " Taylor 1975", "“It always disturbs me though that people think that Anacostia is nothing" +
+    " but cut-throats, thieves, robbers and murderers. When you look back historically, you see" +
+    " that our leading citizens came out of Anacostia and though some of us haven’t contributed" +
+    " as much to the growth and development of the community as we should, but we certainly" +
+    " have been good citizens, and we tried to live representative lives … There is no more" +
+    " beautiful sight than Anacostia, it’s lovely with the rolling hills, it’s most distressing" +
+    " to see it treated the way that it is and has so many possibilities for everything that’s" +
+    " beautiful.” - Mrs. Ethel G Greene 1975", "“The ideals of Nannie Helen Boroughs is about" +
+    " self-reliance and economic development.”- Bailey Smith 2020"];
+
 export const quoteContext = "Most of these quotes come from former Deanwood residents in 1975" +
         " reflecting on their time living in Deanwood, a historically Black neighborhood of" +
         " Washington, DC, across the Anacostia River, in a section of the city often referred" +
