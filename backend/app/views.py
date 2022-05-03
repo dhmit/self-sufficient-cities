@@ -354,7 +354,6 @@ def get_deanwood_boundary_data(request):
     """
     with open("app/data/deanwood_boundary.geojson", encoding="utf-8") as f:
         boundary = json.load(f)
-    
     return JsonResponse(boundary)
 
 
