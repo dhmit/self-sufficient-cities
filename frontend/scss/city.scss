@@ -2,15 +2,21 @@
 @import "../../node_modules/bootstrap/scss/variables";
 @import "../../node_modules/bootstrap/scss/mixins";
 
+h1 {
+    @include media-breakpoint-down("md") {
+        margin-top: 1.5em !important;
+    }
+}
+
 .city {
     .intro-text {
         font-family: "titillium_websemibold", sans-serif;
         font-size: 0.9em;
     }
+
     .nav-col {
         @include media-breakpoint-up("lg") {
             position: fixed;
         }
     }
-
 }
