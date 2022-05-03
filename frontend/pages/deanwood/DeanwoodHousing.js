@@ -56,6 +56,36 @@ export const DeanwoodHousing = ({resources, addresses}) => {
                             Consequently, these families lose one of their biggest assets—their
                             home.
                         </p>
+                        <h2>
+                            The Issue of Gentrification
+                        </h2>
+                        <p>
+                            With the recent rise in property values, and consequently property
+                            taxes, it may not be feasible for many low-income residents to afford
+                            to pay their property taxes and for low-income, minority buyers to
+                            purchase a home. Responding to these gentrification pressures, a
+                            Georgetown report proposes classifying Deanwood as a historical
+                            district, stressing the importance of both preserving the homes in the
+                            owners’ family line and maintaining affordable prices.
+                        </p>
+                        <h2>
+                            Comparison between Deanwood and Brightwood
+                        </h2>
+                        <p>
+                            Despite the rise in housing prices, Deanwood homes perform noticeably
+                            worse than nearby communities in the housing market. We compared
+                            Deanwood to Brightwood, a predominantly white neighborhood with houses
+                            of comparable size and style, on the other side of the city.
+                            Historically, houses in both neighborhoods remained in the family across
+                            generations. However, when houses were sold, Brightwood’s selling price
+                            was significantly higher than that Deanwood’s, with a median home value
+                            of $665,000 compared to Deanwood’s $391,740. This signifies a 70%
+                            difference in the price of houses of comparable sizes. Despite the high
+                            selling value of Brightwood properties, the homes remain in the family,
+                            meaning that owners are able to afford their taxes and the neighborhood
+                            is not being gentrified.
+
+                        </p>
                         <CensusChartsV2></CensusChartsV2>
                         <pre>{JSON.stringify(resources)}</pre>
                     </Col>
