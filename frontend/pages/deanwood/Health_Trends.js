@@ -295,7 +295,7 @@ export default function HealthTrends() {
 
     return (
         <div>
-            <select onChange={handleChange}>
+           <select onChange={handleChange} className={"box"}>
                 <option disabled>Choices</option>
                 <option value="obesity">Obesity</option>
                 <option value="healthcare">Access to Healthcare</option>
@@ -304,7 +304,7 @@ export default function HealthTrends() {
                 <option value="lead_poisoning">Lead Poisoning</option>
             </select>
             <Line options={options} data={data}/>
-            <p>{description}</p>
+            <p className={"description"}>{description}</p>
         </div>
     );
 }
