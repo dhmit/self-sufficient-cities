@@ -27,7 +27,6 @@ except (ImportError, ModuleNotFoundError):
     from app import views
     from app import views_deanwood
 
-
 urlpatterns = [
     # Django admin page
     path('admin/', admin.site.urls),
@@ -67,6 +66,7 @@ api_urls = [
     path('api/get_census_data/', views.get_census_data),
     path('api/get_1940_census_geodata', views.get_1940_census_geodata),
     path('api/get_1940_deanwood_similarities', views.get_1940_deanwood_similarities),
+    path('api/get_deanwood_boundary_data/', views.get_deanwood_boundary_data),
     path('api/get_addresses/', views.get_addresses),
     path('api/get_latlon/<address_str>', views.get_latlon),
     path('api/get_latlon/', views.get_all_latlon),
