@@ -20,13 +20,15 @@ const DeanwoodProfile = (statement, hasMap = true, hasTitle = true, data = [], v
         right = <Col><Image src={source} alt={alt_text} fluid={true}/></Col>;
     }
 
-    let statement_array = statement.split("\n");
+    // let statement_array = statement.split("\n");
     return (<div className={"Profile"}>
         <Row>
             <Col md={4}/>
             <Col>
                 {hasTitle && <h2>{title}</h2>}
-                {statement_array.map((s, idx) => (
+                {console.log(typeof(statement))}
+                {console.log(statement)}
+                {statement.map((s, idx) => (
                     <p key={idx} className={"intro-text"}>{s}</p>
                 ))}
             </Col>
@@ -178,7 +180,7 @@ export const DeanwoodCommunity = ({resources, community_data, voronoi_data, path
                     </Col>
                 </Row>
                 {/* eslint-disable-next-line max-len */}
-                {DeanwoodProfile("", true, true, community_data, [], [],"Churches as" +
+                {DeanwoodProfile([], true, true, community_data, [], [],"Churches as" +
                     " Centers of" +
                     " Community", "","","Religion")}
                 {DeanwoodProfile(Text.conclusion, false, true, [], [], [],"Conclusion")}
