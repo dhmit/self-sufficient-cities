@@ -17,6 +17,7 @@ import API from "./pages/API";
 
 // DEANWOOD COMPONENTS
 import DeanwoodOverview from "./pages/deanwood/DeanwoodOverview";
+import DeanwoodTransport from "./pages/deanwood/DeanwoodTransport";
 import DeanwoodFood from "./pages/deanwood/DeanwoodFood";
 import DeanwoodCommunity from "./pages/deanwood/DeanwoodCommunity";
 import DeanwoodHousing from "./pages/deanwood/DeanwoodHousing";
@@ -39,8 +40,9 @@ const COMPONENTS = {
     TimelineTest,
     API,
     MapConsolidated,
-    DeanwoodFood,
     CensusCharts,
+    DeanwoodTransport,
+    DeanwoodFood,
     DeanwoodOverview,
     FutureWorkOverview,
     DeanwoodCommunity,

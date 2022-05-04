@@ -18,13 +18,22 @@ def overview(request):
 
     return render(request, 'index.html', context)
 
+def transport(request):
+    """
+    Deanwood transportation page
+    """
+    resources = ["overview", "housing", "transport", "food", "community", "health", "future"]
+    context = {
+        'page_metadata': {
+            'title': 'Transportation in Deanwood, D.C.'
+        },
+        'component_name': 'DeanwoodTransport',
+        'component_props': {
+            'resources': resources
+        },
+    }
 
-# def transport(request):
-#     """
-#     Deanwood transportation page
-#     """
-#     pass
-
+    return render(request, 'index.html', context)
 
 # def health(request):
 #     """
