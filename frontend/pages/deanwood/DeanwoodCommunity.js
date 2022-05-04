@@ -16,14 +16,18 @@ import Citation from "../../components/global/Citation";
 const DeanwoodProfile = (statement, hasMap = true, hasTitle = true, data = [], voronoi = [], paths=[],
     title = "", source = "", alt_text = "", mapType="") => {
     let right;
+    let map;
 
     if (hasMap) {
         // eslint-disable-next-line max-len
-        right = <Col><CommunityMap data={data} mapType={mapType} voronoi_data={voronoi} paths_data={paths}/></Col>;
+        right = [];// <Col><CommunityMap data={data} mapType={mapType} voronoi_data={voronoi}
+        map = <CommunityMap data={data} mapType={mapType} voronoi_data={voronoi} paths_data={paths}/>;
+        // paths_data={paths}/></Col>;
     }
     else if (source) {
         right = <Col><Image src={source} alt={alt_text} fluid={true}/></Col>;
     }
+
 
     // let statement_array = statement.split("\n");
     return (<div className={"Profile"}>
@@ -36,10 +40,13 @@ const DeanwoodProfile = (statement, hasMap = true, hasTitle = true, data = [], v
                 {statement.map((s, idx) => (
                     <p key={idx} className={"intro-text"}>{s}</p>
                 ))}
+                           {map}
             </Col>
             {right}
 
+
         </Row>
+
     </div>);
 };
 
