@@ -10,8 +10,9 @@ import Slider from "@material-ui/core/Slider";
 
 
 const MAIN_LOCATION = {
-    coordinates: [38.9051606, -77.0036513],
-    name: "Deanwood neighborhood, Washington DC",
+    // coordinates: [38.9051606, -77.0036513],
+    coordinates: [38.903760, -76.929470],
+    name: "",
     date: "Test date",
     info: "Test info"
 };
@@ -180,9 +181,9 @@ export default class MapHousing extends React.Component {
         this.state = {
             mainLocation: MAIN_LOCATION,
             markerData: [],
-            sliderState: [1900, 2022],
-            timeRange: [1900, 2022],
-            lastValid: [1900, 2022],
+            sliderState: [1920, 2022],
+            timeRange: [1920, 2022],
+            lastValid: [1920, 2022],
             names: ["Australia", "Canada", "USA", "Poland", "Spain", "France"]
         };
     }
@@ -284,7 +285,7 @@ export default class MapHousing extends React.Component {
             <div className="main-element">
                 <div id="map" className="pb-4">
                     <MapContainer
-                        center={this.state.mainLocation.coordinates} zoom={13}
+                        center={this.state.mainLocation.coordinates} zoom={16}
                         scrollWheelZoom={true}>
                         <TileLayer
                             attribution="&copy; <a href='https://www.openstreetmap.org/copyright'>OpenStreetMap</a> contributors"

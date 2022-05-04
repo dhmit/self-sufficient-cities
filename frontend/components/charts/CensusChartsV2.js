@@ -86,7 +86,7 @@ export default class CensusCharts extends React.Component {
     render() {
 
         return (<>
-            <h1>Census Data - Tract 78</h1>
+            <h1>Census Data - Tract 78 - Deanwood</h1>
 
             <div>
                 <div>
@@ -96,30 +96,26 @@ export default class CensusCharts extends React.Component {
                             <BarChart data={each} key={i +"people"}/>)
                     }
                     <p>
-                        This change from 1940 to 1960 shows that ...
-
-
-                        Population increases in DC.
-
-                        Number of acres for African American populations stays the same.
-
-                        People crowd into Deanwood and go to the suburbs.
-
-                        Alley houses were cleaned for urban sanitation and they were forced to move
-                        to Deanwood.
-
-                        African American populations could afford it but they arent allowed to buy
-                        in the suburbs.
-
-                        About 57,000 represented the net inmigration of nonwhites to the
-                        District of Columbia during the decade 1950-60.
-
-                        " still sufficient to give many nonwhite families the economic capacity to
-                        afford housing in many areas of the District of Columbia."
-
-                        Economic disadvantage is one factor contributing to
-                        Washington's housing patterns. But it is not the major
-                        factor responsible for these patterns.
+                        Starting in the early 20th century the Great Migration saw six million
+                        African Americans move into northern and western cities. One such popular
+                        destination was Washington DC. During this time the population of DC
+                        increased and especially the African American population. About 57,000
+                        Black people moved into the District of Columbia between 1950-1960. Many
+                        African Americans lived in alley houses which were small dwellings that
+                        were made in the back alleys of DC. In the 1930s, alley houses in
+                        neighborhoods that became predominantly white were cleaned for “urban
+                        sanitation.” One suspicion is that the goal of this process was to remove
+                        African Americans from previously integrated neighborhoods. As African
+                        American residents were forced to move, one of their only options was to
+                        relocate to Deanwood.
+                        <br/>
+                        <br/>
+                        The number of acres of land that African Americans lived on in DC stayed
+                        the same while the population of African Americans increased. We see above
+                        that Tract 78 saw the median number of people in a household rise from 3
+                        to between 5 and 7 in 1950, but then shifted back to 2 people in 1960.
+                        However, in 1960 density rose again, and there are significantly more
+                        than 5+ people per household, more than ever before.
                     </p>
                 </div>
 
@@ -130,7 +126,18 @@ export default class CensusCharts extends React.Component {
                             <BarChart data={each} key={i +"rent"}/>)
                     }
                     <p>
-                        This change from 1940 to 1960 shows that ...
+                        As the population of African Americans increased while the available acres
+                        and housing stayed the same, prices went up. Tract 78 faced a higher
+                        demand for housing with the same amount of supply increasing rent costs.
+                        In 1940 the median rent was $30-$39. 1950 saw a bimodal distribution
+                        where the rents of $40-49 and $60-74 were the most popular rents. This
+                        could suggest two different lifestyles in Deanwood during this time period
+                        where one side of Deanwood responded quickly to population growth by
+                        increasing rent while the other side of Deanwood remained relatively
+                        similar to the previous decade in terms of rent. In the 1960s the median
+                        rent was $70-79 dollars. This was much higher than in previous decades,
+                        possibly from the greater density of people in households which at the
+                        time the majority of households had 4+ people.
 
                     </p>
                 </div>
@@ -144,13 +151,33 @@ export default class CensusCharts extends React.Component {
                     <h2>Average Housing Values</h2>
                     <BarChart data={this.state.average} />
                     <p>
-                        This change from 1940 to 1960 shows that ...
-                        A good number of African American people had the money to buy a nice
-                        house in the suburbs but they could only live in Deanwood.
+                        Median Housing Value in 1940 was $4k-5k. Median Housing Value in 1950 was
+                        $10k-15k. Median Housing Value in 1960 was $10k-12.5k. The median household
+                        value stayed about the same but there were a lot more houses above the
+                        median.
+                        <br/>
+                        <br/>
+                        In 1960, a study of “Negro Housing in DC” found that African American
+                        populations could afford to buy houses with their incomes,  but they
+                        weren’t allowed to buy in the suburbs, which had most of the new housing
+                        but were only White buyers could get loans. Meanwhile, the crowding
+                        problem only got worse. This reinforces the fact that economic
+                        disadvantage is one factor contributing to Washington's housing patterns,
+                        but it is not the major factor responsible for these patterns.
+                        <br/>
+                        <br/>
+                        Through careful analysis of the context of DC during these time periods,
+                        we see that the movement of African American populations to DC most likely
+                        caused the government of DC to relocate African Americans from the city of
+                        DC into Deanwood which was racially motivated. This overpopulated Deanwood
+                        with both rich and poor African Americans in low-quality housing. This
+                        overpopulation led to a decreased supply of housing which led to a
+                        decreased quality of life, increased rent prices, and increased housing
+                        prices that negatively impacted the entire Deanwood population and African
+                        American population of DC for decades to come.
                     </p>
                 </div>
             </div>
         </>);
     }
 }
-

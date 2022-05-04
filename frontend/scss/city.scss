@@ -2,16 +2,46 @@
 @import "../../node_modules/bootstrap/scss/variables";
 @import "../../node_modules/bootstrap/scss/mixins";
 
+h1 {
+    @include media-breakpoint-down("md") {
+        margin-top: 1.5em !important;
+    }
+}
+
 .city {
-    padding: 0 auto !important;
+    padding-top: 0 !important;
+    padding-bottom: 0 !important;
+    display: flex;
     .intro-text {
+        justify-content: center;
         font-family: "titillium_websemibold", sans-serif;
         font-size: 0.9em;
     }
+
     .nav-col {
         @include media-breakpoint-up("lg") {
             position: fixed;
         }
     }
+}
 
+.Profile{
+    padding-bottom: 5px;
+}
+
+
+
+.Prime{
+    height: 10%;
+}
+
+.Holder{
+    width: 100%;
+    height: 100%;
+}
+
+.Carousel{
+    width: 100%;
+    height: 100%;
+    display: flex;
 }

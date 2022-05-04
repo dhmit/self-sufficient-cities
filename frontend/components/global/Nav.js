@@ -43,7 +43,7 @@ const Nav = () => {
                         <a className="nav-link" href={"/census-charts"}>Census Charts</a>
                     </li>
                 </ul>
-                <a className="lab-link"
+                <a className="lab-link mb-3"
                     href="https://digitalhumanities.mit.edu/" target="_blank" rel="noreferrer">
                     <img className="lab-image" src={DH_LOGO}/>
                 </a>
