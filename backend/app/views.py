@@ -347,6 +347,16 @@ def get_census_data(request):
 
     return JsonResponse(census_data)
 
+def get_community_data(request):
+    """
+    API endpoint for getting the census data in json format
+    """
+    with open("app/data/community.json", encoding="utf-8") as f:
+        community_data = json.load(f)
+
+    return JsonResponse(community_data)
+
+
 
 def get_1940_census_geodata(request):
     """

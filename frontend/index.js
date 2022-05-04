@@ -17,6 +17,7 @@ import API from "./pages/API";
 
 // DEANWOOD COMPONENTS
 import DeanwoodOverview from "./pages/deanwood/DeanwoodOverview";
+import DeanwoodCommunity from "./pages/deanwood/DeanwoodCommunity";
 import FutureWorkOverview from "./pages/future/FutureWorkOverview";
 import DeanwoodHousing from "./pages/deanwood/DeanwoodHousing";
 
@@ -40,9 +41,8 @@ const COMPONENTS = {
     CensusCharts,
     DeanwoodOverview,
     FutureWorkOverview,
-    DeanwoodOverview,
-    DeanwoodHousing,
-    CensusCharts
+    DeanwoodCommunity,
+    DeanwoodHousing
 };
 
 const PreselectedComponent = COMPONENTS[COMPONENT_NAME || "ErrorNotFoundComponent"];
