@@ -11,7 +11,7 @@ export const DeanwoodTransport = ({resources}) => {
 
     return (<>
         <Container className="city" id="deanwood-transport">
-            <Row >
+            <Row>
                 <Col md={3} className="nav-col mr-2">
                     <h1>Deanwood, D.C.</h1>
                     <p>
