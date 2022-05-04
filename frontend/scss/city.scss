@@ -3,6 +3,7 @@
 @import "../../node_modules/bootstrap/scss/mixins";
 
 .city {
+    padding: 0 auto !important;
     .intro-text {
         font-family: "titillium_websemibold", sans-serif;
         font-size: 0.9em;
