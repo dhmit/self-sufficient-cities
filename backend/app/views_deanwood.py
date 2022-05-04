@@ -1,5 +1,5 @@
+import json
 from django.shortcuts import render
-
 
 def overview(request):
     """
@@ -42,19 +42,53 @@ def transport(request):
 #     pass
 
 
-# def community(request):
-#     """
-#     Deanwood community page
-#     """
-#     pass
+def community(request):
+    """
+    Deanwood community page
+    """
+    resources = ["overview", "housing", "transport", "food", "community", "health", "future"]
+    community_data = {}
+    with open("app/data/community.json", "r", encoding="utf-8") as f:
+        community_data = json.load(f)
+
+    with open("app/data/voronoi_shapes.json", "r", encoding="utf-8") as f:
+        voronoi_data = json.load(f)
+
+    with open("app/data/paths.json", "r", encoding="utf-8") as f:
+        paths_data = json.load(f)
+
+    context = {
+        'page_metadata': {
+            'title': 'Deanwood, D.C.'
+        },
+        'component_name': 'DeanwoodCommunity',
+        'component_props': {
+            'resources': resources,
+            'community_data': community_data,
+            'voronoi_data': voronoi_data,
+            'paths_data': paths_data
+        },
+    }
+
+    return render(request, 'index.html', context)
 
 
-# def food(request):
-#     """
-#     Deanwood food page
-#     """
-#     pass
 
+def food(request):
+    """
+     Deanwood food page
+     """
+    resources = []
+    context = {
+        'page_metadata': {
+            'title': 'Deanwood: Food Landscape'
+        },
+        'component_name': 'DeanwoodFood',
+        'component_props': {
+            'resources': resources
+        },
+    }
+    return render(request, 'index.html', context)
 
 def housing(request):
     """

@@ -18,8 +18,10 @@ import API from "./pages/API";
 // DEANWOOD COMPONENTS
 import DeanwoodOverview from "./pages/deanwood/DeanwoodOverview";
 import DeanwoodTransport from "./pages/deanwood/DeanwoodTransport";
-import FutureWorkOverview from "./pages/future/FutureWorkOverview";
+import DeanwoodFood from "./pages/deanwood/DeanwoodFood";
+import DeanwoodCommunity from "./pages/deanwood/DeanwoodCommunity";
 import DeanwoodHousing from "./pages/deanwood/DeanwoodHousing";
+import FutureWorkOverview from "./pages/future/FutureWorkOverview";
 
 
 const COMPONENT_PROPS_RAW = document.getElementById("component_props").text;
@@ -38,13 +40,13 @@ const COMPONENTS = {
     TimelineTest,
     API,
     MapConsolidated,
-    DeanwoodTransport,
     CensusCharts,
+    DeanwoodTransport,
+    DeanwoodFood,
     DeanwoodOverview,
     FutureWorkOverview,
-    DeanwoodOverview,
-    DeanwoodHousing,
-    CensusCharts
+    DeanwoodCommunity,
+    DeanwoodHousing
 };
 
 const PreselectedComponent = COMPONENTS[COMPONENT_NAME || "ErrorNotFoundComponent"];

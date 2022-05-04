@@ -1,0 +1,2433 @@
+[{
+	"year": 1940,
+	"name": "Reverend Young Lloyd N.'s House",
+	"address": "4638 Hayes St NE, Washington, DC",
+	"kind": "Religion",
+	"coordinates": ["38.8999022", "-76.9348055"]
+}, {
+	"year": 1940,
+	"name": "Reverend Barnes Howard's House",
+	"address": "4652 Hayes St NE, Washington, DC",
+	"kind": "Religion",
+	"coordinates": ["38.8999259", "-76.9341456"]
+}, {
+	"year": 1940,
+	"name": "Irving's Service Station",
+	"address": "4134 Hunt Place Northeast, Washington, DC",
+	"kind": "Auto",
+	"coordinates": ["38.9007237", "-76.9430377"]
+}, {
+	"year": 1940,
+	"name": "Suburban Liquors",
+	"address": "4347 Hunt Place Northeast, Washington, DC",
+	"kind": "Liquor",
+	"coordinates": ["38.9003204", "-76.9393877"]
+}, {
+	"year": 1940,
+	"name": "Berman Julius Grocery Store",
+	"address": "4601 Hunt Place Northeast, Washington, DC",
+	"kind": "Food",
+	"coordinates": ["38.9005613", "-76.936359"]
+}, {
+	"year": 1940,
+	"name": "Reverend Jones C. S. ",
+	"address": "4806 Jay St, Washington, DC",
+	"kind": "Religion",
+	"coordinates": ["38.9016895", "-76.933266"]
+}, {
+	"year": 1940,
+	"name": "Physician Brown R. Kelley ",
+	"address": "5000 Jay St, Washington, DC",
+	"kind": "Health",
+	"coordinates": ["38.9019549", "-76.9269056"]
+}, {
+	"year": 1940,
+	"name": "Registered Nurse Mrs. Johnson Eva S.",
+	"address": "5511 Jay St, Washington, DC",
+	"kind": "Health",
+	"coordinates": ["38.8995992", "-76.9206635"]
+}, {
+	"year": 1940,
+	"name": "Matthew's Johnny Ice & Fuel Co.",
+	"address": "4519 Meade Street Northeast, Washington D.C., DC",
+	"kind": "Auto",
+	"coordinates": ["38.9058499", "-76.9361506"]
+}, {
+	"year": 1940,
+	"name": "Economy Grocery Store",
+	"address": "4820 Meade Street Northeast, Washington D.C., DC",
+	"kind": "Food",
+	"coordinates": ["38.9067942", "-76.9324756"]
+}, {
+	"year": 1940,
+	"name": "Love Silas Grocery ",
+	"address": "4820 Meade Street Northeast, Washington D.C., DC",
+	"kind": "Food",
+	"coordinates": ["38.9077942", "-76.9314756"]
+}, {
+	"year": 1940,
+	"name": "Reverend Des Jas. E.",
+	"address": "4821 Meade Street Northeast, Washington D.C., DC",
+	"kind": "Religion",
+	"coordinates": ["38.9058425", "-76.9325495"]
+}, {
+	"year": 1940,
+	"name": "Malvan & Schey Deanwood Funeral Home ",
+	"address": "4445 Nannie Helen Burroughs Avenue Northeast, Washington, DC",
+	"kind": "Other",
+	"coordinates": ["38.899504", "-76.937095"]
+}, {
+	"year": 1940,
+	"name": "Physician Wiliams E. L. ",
+	"address": "4629 Deane Avenue Northeast, Washington, DC",
+	"kind": "Health",
+	"coordinates": ["38.9027287", "-76.944401"]
+}, {
+	"year": 1940,
+	"name": "Mindel. A Grocery ",
+	"address": "4651 Deane Avenue Northeast, Washington, DC",
+	"kind": "Food",
+	"coordinates": ["38.903728699999995", "-76.943401"]
+}, {
+	"year": 1940,
+	"name": "Collins Dentist Office",
+	"address": "4800 Deane Avenue Northeast, Washington, DC",
+	"kind": "Health",
+	"coordinates": ["38.903728699999995", "-76.943401"]
+}, {
+	"year": 1940,
+	"name": "Jones Drug Store",
+	"address": "4800 Deane Avenue Northeast, Washington, DC",
+	"kind": "Pharmacy",
+	"coordinates": ["38.903728699999995", "-76.943401"]
+}, {
+	"year": 1940,
+	"name": "Deanwood Music & Novelty Shop",
+	"address": "4802 Deane Avenue Northeast, Washington, DC",
+	"kind": "Other",
+	"coordinates": ["38.903728699999995", "-76.943401"]
+}, {
+	"year": 1940,
+	"name": "Modern Beauty Box",
+	"address": "4818 Deane Avenue Northeast, Washington, DC",
+	"kind": "Other",
+	"coordinates": ["38.903728699999995", "-76.943401"]
+}, {
+	"year": 1940,
+	"name": "Herman's Liquor Store",
+	"address": "4824 Deane Avenue Northeast, Washington, DC",
+	"kind": "Liquor",
+	"coordinates": ["38.903728699999995", "-76.943401"]
+}, {
+	"year": 1940,
+	"name": "Mavritte E. E. T. Dental Office",
+	"address": "4832 Deane Avenue Northeast, Washington, DC",
+	"kind": "Health",
+	"coordinates": ["38.903728699999995", "-76.943401"]
+}, {
+	"year": 1940,
+	"name": "Physician Pinckney Theodore's Office",
+	"address": "4832 Deane Avenue Northeast, Washington, DC",
+	"kind": "Health",
+	"coordinates": ["38.903728699999995", "-76.943401"]
+}, {
+	"year": 1940,
+	"name": "Physician Thornton Alvin's Office",
+	"address": "4832 Deane Avenue Northeast, Washington, DC",
+	"kind": "Health",
+	"coordinates": ["38.903728699999995", "-76.943401"]
+}, {
+	"year": 1940,
+	"name": "Apex Beauty Salon",
+	"address": "4834 Deane Avenue Northeast, Washington, DC",
+	"kind": "Health",
+	"coordinates": ["38.903728699999995", "-76.943401"]
+}, {
+	"year": 1940,
+	"name": "Washington Henry & Son's Funeral Director",
+	"address": "4925 Deane Avenue Northeast, Washington, DC",
+	"kind": "Other",
+	"coordinates": ["38.903728699999995", "-76.943401"]
+}, {
+	"year": 1940,
+	"name": "Keene & Baker Barber Shop",
+	"address": "4930 Deane Avenue Northeast, Washington, DC",
+	"kind": "Other",
+	"coordinates": ["38.903728699999995", "-76.943401"]
+}, {
+	"year": 1940,
+	"name": "High\u2019s Dairy Products Co. Northeast\n",
+	"address": "4338 Sheriff Road Northeast, Washington, DC",
+	"kind": "Food",
+	"coordinates": ["38.9030225", "-76.9394687"]
+}, {
+	"year": 1940,
+	"name": "Certified Food Market",
+	"address": "4401 Sheriff Road Northeast, Washington, DC",
+	"kind": "Food",
+	"coordinates": ["38.9025797", "-76.9389665"]
+}, {
+	"year": 1940,
+	"name": "Lutsky Jo's Grocery Store",
+	"address": "4401 Sheriff Road Northeast, Washington, DC",
+	"kind": "Food",
+	"coordinates": ["38.903579699999995", "-76.9379665"]
+}, {
+	"year": 1940,
+	"name": "Tip Top Market",
+	"address": "4417 Sheriff Road Northeast, Washington, DC",
+	"kind": "Food",
+	"coordinates": ["38.9024356", "-76.9382253"]
+}, {
+	"year": 1940,
+	"name": "Deanwood Pharmacy",
+	"address": "4421 Sheriff Road Northeast, Washington, DC",
+	"kind": "Pharmacy",
+	"coordinates": ["38.9025988", "-76.9379063"]
+}, {
+	"year": 1940,
+	"name": "Deanwood Cleaners & Dryers",
+	"address": "4423 Sheriff Road Northeast, Washington, DC",
+	"kind": "Other",
+	"coordinates": ["38.9025604", "-76.9379136"]
+}, {
+	"year": 1940,
+	"name": "Deanwood Market",
+	"address": "4515 Sheriff Road Northeast, Washington, DC",
+	"kind": "Food",
+	"coordinates": ["38.9025479", "-76.936779"]
+}, {
+	"year": 1940,
+	"name": "Home Supply Food Store",
+	"address": "4518 Sheriff Road Northeast, Washington, DC",
+	"kind": "Food",
+	"coordinates": ["38.9032106", "-76.9372135"]
+}, {
+	"year": 1940,
+	"name": "Nation-Wide Service Grocers Inc.",
+	"address": "4721 Sheriff Road Northeast, Washington, DC",
+	"kind": "Food",
+	"coordinates": ["38.9026076", "-76.934835"]
+}, {
+	"year": 1940,
+	"name": "Deanwood Civilian Defense Committee",
+	"address": "5000 Sheriff Road Northeast, Washington, DC",
+	"kind": "Other",
+	"coordinates": ["38.9037679", "-76.9294853"]
+}, {
+	"year": 1940,
+	"name": "Contee African Methodist Episcopal Zion Church",
+	"address": "903 Division Ave NE, Washington, DC 20019",
+	"kind": "Religion",
+	"coordinates": ["38.9019968", "-76.9239309"]
+}, {
+	"year": 1940,
+	"name": "First Baptist Deanwood",
+	"address": "1008 45th St NE, Washington, DC 20019",
+	"kind": "Religion",
+	"coordinates": ["38.9031088", "-76.9379833"]
+}, {
+	"year": 1940,
+	"name": "Zion Baptist Church-Eastland",
+	"address": "4316 Sheriff Road Northeast, Washington DC",
+	"kind": "Religion",
+	"coordinates": ["38.9028742", "-76.9403286"]
+}, {
+	"year": 1940,
+	"name": "Tabernacle Baptist Church",
+	"address": "721 Division Ave NE, Washington, DC 20019",
+	"kind": "Religion",
+	"coordinates": ["38.8996251", "-76.9249397"]
+}, {
+	"year": 1940,
+	"name": "Randall Memorial United Methodist Church",
+	"address": "1002 46th St NE, Washington, DC 20019",
+	"kind": "Religion",
+	"coordinates": ["38.9029886", "-76.9368948"]
+}, {
+	"year": 1940,
+	"name": "Church of the Incarnation",
+	"address": "1016 46th Street Northeast, Washington, DC",
+	"kind": "Religion",
+	"coordinates": ["38.9033625", "-76.9367856"]
+}, {
+	"year": 1940,
+	"name": "Antioch Baptist Church",
+	"address": "1105 50th St NE, Washington, DC 20019",
+	"kind": "Religion",
+	"coordinates": ["38.9049824", "-76.9282583"]
+}, {
+	"year": 1940,
+	"name": "Bethlehem Baptist Church",
+	"address": "1011 50th Place North East Washington D.C.",
+	"kind": "Religion",
+	"coordinates": ["38.9040301", "-76.9293451"]
+}, {
+	"year": 1940,
+	"name": "Capitol View Baptist Church",
+	"address": "Division Avenue Northeast & Ames Street Northeast, Washington, DC",
+	"kind": "Religion",
+	"coordinates": ["38.89078", "-76.927964"]
+}, {
+	"year": 1940,
+	"name": "Mt. Zion Baptist Church",
+	"address": "418 55th Place Northeast, Washington, DC",
+	"kind": "Religion",
+	"coordinates": ["38.8954545", "-76.9221037"]
+}, {
+	"year": 1940,
+	"name": "New Mt. Olive Baptist Church",
+	"address": "5700 Grant Street Northeast, Washington, DC",
+	"kind": "Religion",
+	"coordinates": ["38.898335", "-76.9312621"]
+}, {
+	"year": 1940,
+	"name": "Fire Baptised Church",
+	"address": "1044 45th St NE, Washington, DC 20019",
+	"kind": "Religion",
+	"coordinates": ["38.9046112", "-76.9376281"]
+}, {
+	"year": 1950,
+	"name": "Interior Decorator Robertson Mary Jane \n",
+	"address": "5010 Jay Street Northeast, Washington, DC",
+	"kind": "Other",
+	"coordinates": ["38.9020904", "-76.929231"]
+}, {
+	"year": 1950,
+	"name": "Electrician Jackson R. Melvin ",
+	"address": "4921 Just St NE, Washington, DC",
+	"kind": "Other",
+	"coordinates": ["38.9023113", "-76.9304897"]
+}, {
+	"year": 1950,
+	"name": "Kiddies Kollege Nursery School",
+	"address": "4928 Just St NE, Washington, DC",
+	"kind": "Other",
+	"coordinates": ["38.902382", "-76.9313604"]
+}, {
+	"year": 1950,
+	"name": "Physician Chappelle Hayward",
+	"address": "3742 Hayes Street Northeast, Washington, DC",
+	"kind": "Health",
+	"coordinates": ["38.903555", "-76.9493854"]
+}, {
+	"year": 1950,
+	"name": "Registered Nurse Harris Mildred",
+	"address": "4976 Just Street Northeast, Washington, DC",
+	"kind": "Health",
+	"coordinates": ["38.9026868", "-76.930393"]
+}, {
+	"year": 1950,
+	"name": "Mary Jane's Ice Cream",
+	"address": "5200 Hayes Street Northeast, Washington, DC",
+	"kind": "Other",
+	"coordinates": ["38.8999361", "-76.9263916"]
+}, {
+	"year": 1950,
+	"name": "Driscoll Service Station",
+	"address": "4100 Hunt Place Northeast, Washington, DC",
+	"kind": "Auto",
+	"coordinates": ["38.9007614", "-76.9436774"]
+}, {
+	"year": 1950,
+	"name": "Elbee Service Station",
+	"address": "4134 Hunt Place Northeast, Washington, DC",
+	"kind": "Auto",
+	"coordinates": ["38.9007237", "-76.9430377"]
+}, {
+	"year": 1950,
+	"name": "Rollins Funeral Home ",
+	"address": "4339 Hunt Place Northeast, Washington, DC",
+	"kind": "Other",
+	"coordinates": ["38.9003586", "-76.9399586"]
+}, {
+	"year": 1950,
+	"name": "Physician Beldon Harrison C.'s Office",
+	"address": "4423 Hunt Place Northeast, Washington, DC",
+	"kind": "Health",
+	"coordinates": ["38.9005682", "-76.9376609"]
+}, {
+	"year": 1950,
+	"name": "Gallum Jerome's Grocery ",
+	"address": "4601 Hunt Place Northeast, Washington, DC",
+	"kind": "Food",
+	"coordinates": ["38.9005613", "-76.936359"]
+}, {
+	"year": 1950,
+	"name": "Reverend Craig Ernest ",
+	"address": "4800 Meade Street Northeast, Washington, DC",
+	"kind": "Religion",
+	"coordinates": ["38.9066034", "-76.9330669"]
+}, {
+	"year": 1950,
+	"name": "Menick's Grocery Store",
+	"address": "4401 Deane Avenue Northeast, Washington, DC",
+	"kind": "Food",
+	"coordinates": ["38.9002524", "-76.9389723"]
+}, {
+	"year": 1950,
+	"name": "William's Funeral Home ",
+	"address": "4445 Deane Avenue Northeast, Washington, DC",
+	"kind": "Other",
+	"coordinates": ["38.9027287", "-76.944401"]
+}, {
+	"year": 1950,
+	"name": "Tiny Town Nursery\n",
+	"address": "4004 Meade Street Northeast, Washington, DC",
+	"kind": "Other",
+	"coordinates": ["38.9058059", "-76.946053"]
+}, {
+	"year": 1950,
+	"name": "King's Gasoline Service Center",
+	"address": "4451 Deane Avenue Northeast, Northeast Washington, Washington, DC",
+	"kind": "Auto",
+	"coordinates": ["38.903728699999995", "-76.943401"]
+}, {
+	"year": 1950,
+	"name": "Terry's Auto Body & Fender Works",
+	"address": "4611 Deane Avenue Northeast, Northeast Washington, Washington, DC",
+	"kind": "Auto",
+	"coordinates": ["38.903728699999995", "-76.943401"]
+}, {
+	"year": 1950,
+	"name": "Eilan Realty Co.",
+	"address": "4649 Deane Avenue Northeast, Northeast Washington, Washington, DC",
+	"kind": "Other",
+	"coordinates": ["38.903728699999995", "-76.943401"]
+}, {
+	"year": 1950,
+	"name": "Federal Life Insurance Co. Inc",
+	"address": "4649 Deane Avenue Northeast, Northeast Washington, Washington, DC",
+	"kind": "Other",
+	"coordinates": ["38.903728699999995", "-76.943401"]
+}, {
+	"year": 1950,
+	"name": "Suburban Liquors ",
+	"address": "4347 Hunt Place Northeast, Washington, DC",
+	"kind": "Liquor",
+	"coordinates": ["38.9003204", "-76.9393877"]
+}, {
+	"year": 1950,
+	"name": "Mindel. A Grocery ",
+	"address": "4651 Deane Avenue Northeast, Washington, DC",
+	"kind": "Food",
+	"coordinates": ["38.903728699999995", "-76.943401"]
+}, {
+	"year": 1950,
+	"name": "Collins Dentist Office",
+	"address": "4800 Deane Avenue Northeast, Washington, DC",
+	"kind": "Health",
+	"coordinates": ["38.903728699999995", "-76.943401"]
+}, {
+	"year": 1950,
+	"name": "Deanwood Music & Novelty Shop",
+	"address": "4802 Deane Avenue Northeast, Washington, DC",
+	"kind": "Other",
+	"coordinates": ["38.903728699999995", "-76.943401"]
+}, {
+	"year": 1950,
+	"name": "Jackson Bro's Radio and Television Co. ",
+	"address": "4816 Deane Avenue Northeast, Washington, DC",
+	"kind": "Other",
+	"coordinates": ["38.903728699999995", "-76.943401"]
+}, {
+	"year": 1950,
+	"name": "Modern Beauty box ",
+	"address": "4818 Deane Avenue Northeast, Washington, DC",
+	"kind": "Other",
+	"coordinates": ["38.903728699999995", "-76.943401"]
+}, {
+	"year": 1950,
+	"name": "Tinsley's Dress Shop",
+	"address": "4818 Deane Avenue Northeast, Washington, DC",
+	"kind": "Other",
+	"coordinates": ["38.903728699999995", "-76.943401"]
+}, {
+	"year": 1950,
+	"name": "Sirkis Herman H. Liquors ",
+	"address": "4824 Deane Avenue Northeast, Washington, DC",
+	"kind": "Liquor",
+	"coordinates": ["38.903728699999995", "-76.943401"]
+}, {
+	"year": 1950,
+	"name": "Physician Pinckney Theodore's Office      ",
+	"address": "4832 Deane Avenue Northeast, Washington, DC",
+	"kind": "Health",
+	"coordinates": ["38.903728699999995", "-76.943401"]
+}, {
+	"year": 1950,
+	"name": "Physician Thornton Alvin's Office",
+	"address": "4832 Deane Avenue Northeast, Washington, DC",
+	"kind": "Health",
+	"coordinates": ["38.903728699999995", "-76.943401"]
+}, {
+	"year": 1950,
+	"name": "Washington Henry S. & Son's Undertakers ",
+	"address": "4925 Deane Avenue Northeast, Washington, DC",
+	"kind": "Other",
+	"coordinates": ["38.903728699999995", "-76.943401"]
+}, {
+	"year": 1950,
+	"name": "High\u2019s Dairy Products Co. Northeast\n",
+	"address": "4338 Sheriff Road Northeast, Washington, DC",
+	"kind": "Food",
+	"coordinates": ["38.9030225", "-76.9394687"]
+}, {
+	"year": 1950,
+	"name": "Humpty Dumpty Market ",
+	"address": "4401 Sheriff Road Northeast, Washington, DC",
+	"kind": "Food",
+	"coordinates": ["38.9025797", "-76.9389665"]
+}, {
+	"year": 1950,
+	"name": "Official Cleaners",
+	"address": "4408 Sheriff Road Northeast, Washington, DC",
+	"kind": "Other",
+	"coordinates": ["38.9029234", "-76.9386693"]
+}, {
+	"year": 1950,
+	"name": "Mayfair Beauty Salon ",
+	"address": "4415 Sheriff Road Northeast, Washington, DC",
+	"kind": "Other",
+	"coordinates": ["38.9025713", "-76.9383604"]
+}, {
+	"year": 1950,
+	"name": "Tip Top Market",
+	"address": "4417 Sheriff Road Northeast, Washington, DC",
+	"kind": "Food",
+	"coordinates": ["38.9024356", "-76.9382253"]
+}, {
+	"year": 1950,
+	"name": "Wheeler Edmund J. Printing ",
+	"address": "4419 Sheriff Road Northeast, Washington, DC",
+	"kind": "Other",
+	"coordinates": ["38.9023653", "-76.9381878"]
+}, {
+	"year": 1950,
+	"name": "Deanwood Pharmacy",
+	"address": "4421 Sheriff Road Northeast, Washington, DC",
+	"kind": "Pharmacy",
+	"coordinates": ["38.9025988", "-76.9379063"]
+}, {
+	"year": 1950,
+	"name": "Deanwood Cleaners & Dryers",
+	"address": "4423 Sheriff Road Northeast, Washington, DC",
+	"kind": "Other",
+	"coordinates": ["38.9025604", "-76.9379136"]
+}, {
+	"year": 1950,
+	"name": "Deanwood Bake Shop",
+	"address": "4509 Sheriff Road Northeast, Washington, DC",
+	"kind": "Other",
+	"coordinates": ["38.9025884", "-76.937087"]
+}, {
+	"year": 1950,
+	"name": "Deanwood Market",
+	"address": "4515 Sheriff Road Northeast, Washington, DC",
+	"kind": "Food",
+	"coordinates": ["38.9025479", "-76.936779"]
+}, {
+	"year": 1950,
+	"name": "Deanwood Self-Service Laundry ",
+	"address": "4709 Sheriff Road Northeast, Washington, DC",
+	"kind": "Other",
+	"coordinates": ["38.9026083", "-76.9351602"]
+}, {
+	"year": 1950,
+	"name": "Greater Deanwood Lodge",
+	"address": "4712 Sheriff Road Northeast, Washington, DC",
+	"kind": "Other",
+	"coordinates": ["38.9030492", "-76.9352761"]
+}, {
+	"year": 1950,
+	"name": "Hancock Robert A. Frozen Custard",
+	"address": "4727 Sheriff Road Northeast, Washington, DC",
+	"kind": "Food",
+	"coordinates": ["38.9026856", "-76.9344382"]
+}, {
+	"year": 1950,
+	"name": "Contee African Methodist Episcopal Zion Church",
+	"address": "903 Division Ave NE, Washington, DC 20019",
+	"kind": "Religion",
+	"coordinates": ["38.9019968", "-76.9239309"]
+}, {
+	"year": 1950,
+	"name": "First Baptist Deanwood",
+	"address": "1008 45th St NE, Washington, DC 20019",
+	"kind": "Religion",
+	"coordinates": ["38.9031088", "-76.9379833"]
+}, {
+	"year": 1950,
+	"name": "Zion Baptist Church-Eastland",
+	"address": "Sheriff Rd NE & 44th St NE",
+	"kind": "Religion",
+	"coordinates": ["38.9027857", "-76.9391636"]
+}, {
+	"year": 1950,
+	"name": "Tabernacle Baptist Church",
+	"address": "721 Division Ave NE, Washington, DC 20019",
+	"kind": "Religion",
+	"coordinates": ["38.8996251", "-76.9249397"]
+}, {
+	"year": 1950,
+	"name": "Randall Memorial United Methodist Church",
+	"address": "1032 46th St NE, Washington, DC 20019",
+	"kind": "Religion",
+	"coordinates": ["38.904571", "-76.936514"]
+}, {
+	"year": 1950,
+	"name": "Church of the Incarnation",
+	"address": "1016 46th Street Northeast, Washington, DC",
+	"kind": "Religion",
+	"coordinates": ["38.9033625", "-76.9367856"]
+}, {
+	"year": 1950,
+	"name": "Antioch Baptist Church",
+	"address": "1105 50th St NE, Washington, DC 20019",
+	"kind": "Religion",
+	"coordinates": ["38.9049824", "-76.9282583"]
+}, {
+	"year": 1950,
+	"name": "Certified Market",
+	"address": "4401 Sheriff Road Northeast Washington DC",
+	"kind": "Food",
+	"coordinates": ["38.903579699999995", "-76.9379665"]
+}, {
+	"year": 1950,
+	"name": "Andy-Dandy Market",
+	"address": "5338 Grant Street Northeast, Washington, DC",
+	"kind": "Food",
+	"coordinates": ["38.898335", "-76.9312621"]
+}, {
+	"year": 1950,
+	"name": "Love's Economy Market",
+	"address": "4820 Meade Street Northeast, Washington, DC",
+	"kind": "Food",
+	"coordinates": ["38.9067942", "-76.9324756"]
+}, {
+	"year": 1950,
+	"name": "Rite Way Super Market",
+	"address": "5726 Sheriff Road Northeast, Washingotn, DC",
+	"kind": "Food",
+	"coordinates": ["38.9072287", "-76.9047394"]
+}, {
+	"year": 1950,
+	"name": "Giant Food Shopping Centers. Inc",
+	"address": "3924 Minnesota Avenue Northeast Washington, DC",
+	"kind": "Food",
+	"coordinates": ["38.8939203", "-76.9514332"]
+}, {
+	"year": 1950,
+	"name": "Alben Market",
+	"address": "4603 Gault Pl NE, Washington, DC 20019",
+	"kind": "Food",
+	"coordinates": ["38.8988762", "-76.9363297"]
+}, {
+	"year": 1950,
+	"name": "Chapel Oak's Super Market",
+	"address": "3710 Sheriff Road Northeast, Northeast Washington, Washington, DC",
+	"kind": "Food",
+	"coordinates": ["38.9023274", "-76.9421305"]
+}, {
+	"year": 1950,
+	"name": "Jerry's Market",
+	"address": "4601 Hunt Place Northeast Washington, DC",
+	"kind": "Food",
+	"coordinates": ["38.9015613", "-76.93535899999999"]
+}, {
+	"year": 1950,
+	"name": "Bethlehem Baptist Church",
+	"address": "1011 50th Place North East Washington D.C.",
+	"kind": "Religion",
+	"coordinates": ["38.9040301", "-76.9293451"]
+}, {
+	"year": 1950,
+	"name": "Central Union Baptist Church",
+	"address": "44th Street Northeast & Foote Street Northeast, Lower Central NE, Washington, DC",
+	"kind": "Religion",
+	"coordinates": ["38.897515", "-76.9391843"]
+}, {
+	"year": 1950,
+	"name": "Christ Baptist Church ",
+	"address": "3760 Minnesota Avenue Northeast, Washington, DC",
+	"kind": "Religion",
+	"coordinates": ["38.8917796", "-76.9520184"]
+}, {
+	"year": 1950,
+	"name": "New Mt. Olive Baptist Church",
+	"address": "5700 Grant Street Northeast, Washington, DC",
+	"kind": "Religion",
+	"coordinates": ["38.899335", "-76.9302621"]
+}, {
+	"year": 1950,
+	"name": "Beth Israel Congregation",
+	"address": "4008 Minnesota Avenue Northeast, Washington D.C.",
+	"kind": "Religion",
+	"coordinates": ["38.895533", "-76.9491284"]
+}, {
+	"year": 1950,
+	"name": "Capitol View Baptist Church",
+	"address": "Division Avenue Northeast & Ames Street Northeast, Washington, DC",
+	"kind": "Religion",
+	"coordinates": ["38.89078", "-76.927964"]
+}, {
+	"year": 1950,
+	"name": "Mt. Zion Baptist Church",
+	"address": "418 55th Place Northeast, Washington, DC",
+	"kind": "Religion",
+	"coordinates": ["38.8954545", "-76.9221037"]
+}, {
+	"year": 1950,
+	"name": "Strauss Memorial",
+	"address": "526 Minnesota Avenue northeast, Washington, DC",
+	"kind": "Religion",
+	"coordinates": ["38.900908", "-76.9438901"]
+}, {
+	"year": 1950,
+	"name": "Fire Baptised Church",
+	"address": "1044 45th St NE, Washington, DC 20019",
+	"kind": "Religion",
+	"coordinates": ["38.9046112", "-76.9376281"]
+}, {
+	"year": 1960,
+	"name": "Menick's Grocery Store",
+	"address": "4401 Deane Avenue Northeast, Washington, DC",
+	"kind": "Food",
+	"coordinates": ["38.9002524", "-76.9389723"]
+}, {
+	"year": 1960,
+	"name": "William's Funeral Home ",
+	"address": "4445 Deane Avenue Northeast, Washington, DC",
+	"kind": "Other",
+	"coordinates": ["38.9027287", "-76.944401"]
+}, {
+	"year": 1960,
+	"name": "Advanced Auto Repairs",
+	"address": "4605 Deane Avenue Northeast, Washington, DC",
+	"kind": "Auto",
+	"coordinates": ["38.903728699999995", "-76.943401"]
+}, {
+	"year": 1960,
+	"name": "Terry's Auto Body & Fender Works",
+	"address": "4611 Deane Avenue Northeast, Northeast Washington, Washington, DC",
+	"kind": "Auto",
+	"coordinates": ["38.903728699999995", "-76.943401"]
+}, {
+	"year": 1960,
+	"name": "Physician Williams E. L. ",
+	"address": "4629 Deane Avenue Northeast, Northeast Washington, Washington, DC",
+	"kind": "Health",
+	"coordinates": ["38.903728699999995", "-76.943401"]
+}, {
+	"year": 1960,
+	"name": "Collins Dentist Office",
+	"address": "4645 Deane Avenue Northeast, Washington, DC",
+	"kind": "Health",
+	"coordinates": ["38.903728699999995", "-76.943401"]
+}, {
+	"year": 1960,
+	"name": "Fran-Ru Beauty Salon ",
+	"address": "4645 Deane Avenue Northeast, Washington, DC",
+	"kind": "Other",
+	"coordinates": ["38.903728699999995", "-76.943401"]
+}, {
+	"year": 1960,
+	"name": "Architect GIles Lewis W. Jr.",
+	"address": "4645 Deane Avenue Northeast, Washington, DC",
+	"kind": "Other",
+	"coordinates": ["38.903728699999995", "-76.943401"]
+}, {
+	"year": 1960,
+	"name": "Nelson R. MD Office",
+	"address": "4645 Deane Avenue Northeast, Washington, DC",
+	"kind": "Health",
+	"coordinates": ["38.903728699999995", "-76.943401"]
+}, {
+	"year": 1960,
+	"name": "Federal Life Division of Supreme Liberty Insurance",
+	"address": "4649 Deane Avenue Northeast, Washington, DC",
+	"kind": "Other",
+	"coordinates": ["38.903728699999995", "-76.943401"]
+}, {
+	"year": 1960,
+	"name": "Mindel. A Grocery ",
+	"address": "4651 Deane Avenue Northeast, Washington, DC",
+	"kind": "Food",
+	"coordinates": ["38.903728699999995", "-76.943401"]
+}, {
+	"year": 1960,
+	"name": "Van Park Drugs",
+	"address": "4800 Deane Avenue Northeast, Washington, DC",
+	"kind": "Pharmacy",
+	"coordinates": ["38.903728699999995", "-76.943401"]
+}, {
+	"year": 1960,
+	"name": "Northeast Lunch Rooms",
+	"address": "4810 Deane Avenue Northeast, Washington, DC",
+	"kind": "Food",
+	"coordinates": ["38.903728699999995", "-76.943401"]
+}, {
+	"year": 1960,
+	"name": "Tom's Barber Shop",
+	"address": "4814 Deane Avenue Northeast, Washington, DC",
+	"kind": "Other",
+	"coordinates": ["38.903728699999995", "-76.943401"]
+}, {
+	"year": 1960,
+	"name": "Duplex Beauty Shop",
+	"address": "4816 Deane Avenue Northeast, Washington, DC",
+	"kind": "Other",
+	"coordinates": ["38.903728699999995", "-76.943401"]
+}, {
+	"year": 1960,
+	"name": "Tinsle's Shoe Repair",
+	"address": "4818 Deane Avenue Northeast, Washington, DC",
+	"kind": "Other",
+	"coordinates": ["38.903728699999995", "-76.943401"]
+}, {
+	"year": 1960,
+	"name": "Deanwood Liquors Inc",
+	"address": "4824 Deane Avenue Northeast, Washington, DC",
+	"kind": "Liquor",
+	"coordinates": ["38.903728699999995", "-76.943401"]
+}, {
+	"year": 1960,
+	"name": "Physician Thornton Alvin's Office",
+	"address": "4832 Deane Avenue Northeast, Washington, DC",
+	"kind": "Health",
+	"coordinates": ["38.903728699999995", "-76.943401"]
+}, {
+	"year": 1960,
+	"name": "Townsend Beauty Mart",
+	"address": "4834 Deane Avenue Northeast, Washington, DC",
+	"kind": "Other",
+	"coordinates": ["38.903728699999995", "-76.943401"]
+}, {
+	"year": 1960,
+	"name": "Washington Funeral Home",
+	"address": "4925 Deane Avenue Northeast, Washington, DC",
+	"kind": "Other",
+	"coordinates": ["38.903728699999995", "-76.943401"]
+}, {
+	"year": 1960,
+	"name": "Mayfair Beauty Salon ",
+	"address": "3914 Hayes Street Northeast, Washington, DC",
+	"kind": "Other",
+	"coordinates": ["38.90022", "-76.9468138"]
+}, {
+	"year": 1960,
+	"name": "Mayfair Barber Shop ",
+	"address": "3916 Hayes Street Northeast, Washington, DC",
+	"kind": "Other",
+	"coordinates": ["38.901219999999995", "-76.9458138"]
+}, {
+	"year": 1960,
+	"name": "Meyers John Paper Products",
+	"address": "3918 Hayes Street Northeast, Washington, DC",
+	"kind": "Other",
+	"coordinates": ["38.901219999999995", "-76.9458138"]
+}, {
+	"year": 1960,
+	"name": "Handcraft Deluxe Drycleaners",
+	"address": "3920 Hayes Street Northeast, Washington, DC",
+	"kind": "Other",
+	"coordinates": ["38.901219999999995", "-76.9458138"]
+}, {
+	"year": 1960,
+	"name": "Cassel-Gray-Sulton Architects",
+	"address": "3922 Hayes Street Northeast, Washington, DC",
+	"kind": "Other",
+	"coordinates": ["38.901219999999995", "-76.9458138"]
+}, {
+	"year": 1960,
+	"name": "Mayfair Supermarket",
+	"address": "3926 Hayes Street Northeast, Washington, DC",
+	"kind": "Food",
+	"coordinates": ["38.901219999999995", "-76.9458138"]
+}, {
+	"year": 1960,
+	"name": "Olympia Bakery ",
+	"address": "5201 Hayes Street Northeast, Washington, DC",
+	"kind": "Food",
+	"coordinates": ["38.8995663", "-76.9263814"]
+}, {
+	"year": 1960,
+	"name": "Nurse DeJarnette Ann Brown ",
+	"address": "5329 Hayes Street Northeast, Washington, DC",
+	"kind": "Health",
+	"coordinates": ["38.8995284", "-76.9239411"]
+}, {
+	"year": 1960,
+	"name": "Discoll Esso Service ",
+	"address": "4100 Hayes Street Northeast, Washington, DC",
+	"kind": "Auto",
+	"coordinates": ["38.8998993", "-76.9443309"]
+}, {
+	"year": 1960,
+	"name": "Rollins Funeral ",
+	"address": "4339 Hayes Street Northeast, Washington, DC",
+	"kind": "Other",
+	"coordinates": ["38.8995383", "-76.9396265"]
+}, {
+	"year": 1960,
+	"name": "Malcolm Properties Real Estate",
+	"address": "4347 Hayes Street Northeast, Washington, DC",
+	"kind": "Other",
+	"coordinates": ["38.8995381", "-76.9395702"]
+}, {
+	"year": 1960,
+	"name": "Suburban Liquors ",
+	"address": "4347 Hayes Street Northeast, Washington, DC",
+	"kind": "Liquor",
+	"coordinates": ["38.9005381", "-76.9385702"]
+}, {
+	"year": 1960,
+	"name": "Nurse McLaughlin Delores W. ",
+	"address": "4701 Hayes Street Northeast, Washington, DC",
+	"kind": "Health",
+	"coordinates": ["38.8995655", "-76.9339478"]
+}, {
+	"year": 1960,
+	"name": "Thornton Benjamin Franklin Jr. Rev",
+	"address": "5030 Hayes Street Northeast, Washington, DC",
+	"kind": "Religion",
+	"coordinates": ["38.8999069", "-76.9284956"]
+}, {
+	"year": 1960,
+	"name": "Playland Nursery & Kindergarten ",
+	"address": "4928 Hayes Street Northeast, Washington, DC",
+	"kind": "Other",
+	"coordinates": ["38.9001017", "-76.9308269"]
+}, {
+	"year": 1960,
+	"name": "DC Government Clinics Mental Health Clinics, Northeast Mental Health, Nurse Office",
+	"address": "3785 Grant Street Northeast, Washington, DC",
+	"kind": "Health",
+	"coordinates": ["38.898381", "-76.946583"]
+}, {
+	"year": 1960,
+	"name": "Fun and Frolic Nursery School",
+	"address": "4035 Grant Street Northeast, Washington, DC",
+	"kind": "Other",
+	"coordinates": ["38.8981903", "-76.9451409"]
+}, {
+	"year": 1960,
+	"name": "Madden Realty Co. ",
+	"address": "4915 Grant Street Northeast, Washington, DC",
+	"kind": "Other",
+	"coordinates": ["38.8982034", "-76.9308726"]
+}, {
+	"year": 1960,
+	"name": "Young Women's Christian Association ",
+	"address": "4915 Grant Street Northeast, Washington, DC",
+	"kind": "Religion",
+	"coordinates": ["38.8992034", "-76.9298726"]
+}, {
+	"year": 1960,
+	"name": "Andrea's Beauty Salon ",
+	"address": "4930 Grant Street Northeast, Washington, DC",
+	"kind": "Other",
+	"coordinates": ["38.8983441", "-76.9315327"]
+}, {
+	"year": 1960,
+	"name": "Suburban Market",
+	"address": "4931 Grant Street Northeast, Washington, DC",
+	"kind": "Food",
+	"coordinates": ["38.8981004", "-76.9313148"]
+}, {
+	"year": 1960,
+	"name": "Pimp's Beauty Shop ",
+	"address": "4935 Grant Street Northeast, Washington, DC",
+	"kind": "Other",
+	"coordinates": ["38.8981003", "-76.9313126"]
+}, {
+	"year": 1960,
+	"name": "Safeway Store",
+	"address": "5110 Grant Street Northeast, Washington, DC",
+	"kind": "Food",
+	"coordinates": ["38.898335", "-76.9312621"]
+}, {
+	"year": 1970,
+	"name": "Safeway Store",
+	"address": "5110 Grant Street Northeast, Washington, DC",
+	"kind": "Food",
+	"coordinates": ["38.898335", "-76.9312621"]
+} , {
+	"year": 1970,
+	"name": "Safeway Store",
+	"address": "",
+	"kind": "Food",
+	"coordinates": ["38.8948117", "-76.9492017"]
+}, {
+	"year": 1980,
+	"name": "Safeway Store",
+	"address": "",
+	"kind": "Food",
+	"coordinates": ["38.8948117", "-76.9492017"]
+},
+
+    {
+	"year": 1960,
+	"name": "High\u2019s Dairy Products Co. Northeast\n",
+	"address": "5119 Grant Street Northeast, Washington, DC",
+	"kind": "Food",
+	"coordinates": ["38.898099", "-76.9312762"]
+}, {
+	"year": 1960,
+	"name": "Physician Freeman Cary H.'s Office",
+	"address": "5127 Grant Street Northeast, Washington, DC",
+	"kind": "Health",
+	"coordinates": ["38.899099", "-76.9302762"]
+}, {
+	"year": 1960,
+	"name": "Bullock's Barber Shop ",
+	"address": "5131 Grant Street Northeast, Washington, DC",
+	"kind": "Other",
+	"coordinates": ["38.899099", "-76.9302762"]
+}, {
+	"year": 1960,
+	"name": "Spice & Span Market ",
+	"address": "5138 Grant Street Northeast, Washington, DC",
+	"kind": "Health",
+	"coordinates": ["38.899335", "-76.9302621"]
+}, {
+	"year": 1960,
+	"name": "Landscaping Contractor Grayson Floyd D. ",
+	"address": "4416 Nash Street Northeast, Washington, DC",
+	"kind": "Other",
+	"coordinates": ["38.9073962", "-76.9395269"]
+}, {
+	"year": 1960,
+	"name": "Safeway Stores ",
+	"address": "3941 Minnesota Avenue Northeast, Washington, DC",
+	"kind": "Food",
+	"coordinates": ["38.8948117", "-76.9492017"]
+},{
+	"year": 1970,
+	"name": "Safeway Stores ",
+	"address": "3941 Minnesota Avenue Northeast, Washington, DC",
+	"kind": "Food",
+	"coordinates": ["38.8948117", "-76.9492017"]
+}, {
+	"year": 1960,
+	"name": "Goucher's Amoco Serving Station ",
+	"address": "4251 Minnesota Avenue Northeast, Washington, DC",
+	"kind": "Auto",
+	"coordinates": ["38.902309", "-76.9415724"]
+}, {
+	"year": 1960,
+	"name": "Empire Diaper Service",
+	"address": "4628 Minnesota Avenue Northeast, Washington, DC",
+	"kind": "Other",
+	"coordinates": ["38.9068354", "-76.9361731"]
+}, {
+	"year": 1960,
+	"name": "Henry Fuel Co.",
+	"address": "4640 Minnesota Avenue Northeast, Washington, DC",
+	"kind": "Auto",
+	"coordinates": ["38.9070075", "-76.9357455"]
+}, {
+	"year": 1960,
+	"name": "Dy-Dee Wash of Washington ",
+	"address": "4812 Minnesota Avenue Northeast, Washington, DC",
+	"kind": "Other",
+	"coordinates": ["38.908616", "-76.933926"]
+}, {
+	"year": 1960,
+	"name": "Battle's Religious Book Stores ",
+	"address": "4301 Sheriff Road Northeast, Washington, DC",
+	"kind": "Other",
+	"coordinates": ["38.9028743", "-76.9403309"]
+}, {
+	"year": 1960,
+	"name": "Humpty Dumpty Market ",
+	"address": "4401 Sheriff Road Northeast, Washington, DC",
+	"kind": "Food",
+	"coordinates": ["38.9025797", "-76.9389665"]
+}, {
+	"year": 1960,
+	"name": "Washington-Solomon Freight Lines ",
+	"address": "4408 Sheriff Road Northeast, Washington, DC",
+	"kind": "Other",
+	"coordinates": ["38.9029234", "-76.9386693"]
+}, {
+	"year": 1960,
+	"name": "Mayfair Beauty Salon ",
+	"address": "4415 Sheriff Road Northeast, Washington, DC",
+	"kind": "Other",
+	"coordinates": ["38.9025713", "-76.9383604"]
+}, {
+	"year": 1960,
+	"name": "Deanwoof Cleaners & Dryers ",
+	"address": "4423 Sheriff Road Northeast, Washington, DC",
+	"kind": "Other",
+	"coordinates": ["38.9025604", "-76.9379136"]
+}, {
+	"year": 1960,
+	"name": "Joe's Valet",
+	"address": "4501 Sheriff Road Northeast, Washington, DC",
+	"kind": "Auto",
+	"coordinates": ["38.9025485", "-76.9374517"]
+}, {
+	"year": 1960,
+	"name": "Deanwood Market",
+	"address": "4515 Sheriff Road Northeast, Washington, DC",
+	"kind": "Food",
+	"coordinates": ["38.9025479", "-76.936779"]
+}, {
+	"year": 1960,
+	"name": "District Grocery Stores",
+	"address": "4515 Sheriff Road Northeast, Washington, DC",
+	"kind": "Food",
+	"coordinates": ["38.9035479", "-76.935779"]
+}, {
+	"year": 1960,
+	"name": "Derritt Funeral Home ",
+	"address": "4516 Sheriff Road Northeast, Washington, DC",
+	"kind": "Other",
+	"coordinates": ["38.9032104", "-76.9372277"]
+}, {
+	"year": 1960,
+	"name": "High\u2019s Dairy Products Co. Northeast\n",
+	"address": "4601 Sheriff Road Northeast, Washington, DC",
+	"kind": "Food",
+	"coordinates": ["38.9025792", "-76.9363694"]
+}, {
+	"year": 1960,
+	"name": "Deanwood Laundromat ",
+	"address": "4709 Sheriff Road Northeast, Washington, DC",
+	"kind": "Other",
+	"coordinates": ["38.9026083", "-76.9351602"]
+}, {
+	"year": 1960,
+	"name": "Greater Deanwood Lodge ",
+	"address": "4712 Sheriff Road Northeast, Washington, DC",
+	"kind": "Other",
+	"coordinates": ["38.9030492", "-76.9352761"]
+}, {
+	"year": 1960,
+	"name": "Bible Way Church ",
+	"address": "4721 Sheriff Road Northeast, Washington, DC",
+	"kind": "Religion",
+	"coordinates": ["38.9026076", "-76.934835"]
+}, {
+	"year": 1960,
+	"name": "Fairdeal Market ",
+	"address": "4748 Sheriff Road Northeast, Washington, DC",
+	"kind": "Food",
+	"coordinates": ["38.9030455", "-76.9340811"]
+}, {
+	"year": 1960,
+	"name": "Sheriff Cleaners ",
+	"address": "4650 Sheriff Road Northeast, Washington, DC",
+	"kind": "Other",
+	"coordinates": ["38.9029933", "-76.9359998"]
+}, {
+	"year": 1960,
+	"name": "Al Franc's Hair Stylist ",
+	"address": "5210 Sheriff Road Northeast, Washington, DC",
+	"kind": "Other",
+	"coordinates": ["38.9040959", "-76.9245805"]
+}, {
+	"year": 1960,
+	"name": "Cobb Bakery & Delicatessen ",
+	"address": "5212 Sheriff Road Northeast, Washington, DC",
+	"kind": "Food",
+	"coordinates": ["38.9040055", "-76.9244905"]
+}, {
+	"year": 1960,
+	"name": "Mack's Dry Cleaners",
+	"address": "5214 Sheriff Road Northeast, Washington, DC",
+	"kind": "Other",
+	"coordinates": ["38.9041207", "-76.9244454"]
+}, {
+	"year": 1960,
+	"name": "Contee African Methodist Episcopal Zion Church",
+	"address": "903 Division Ave NE, Washington, DC 20019",
+	"kind": "Religion",
+	"coordinates": ["38.9019968", "-76.9239309"]
+}, {
+	"year": 1960,
+	"name": "First Baptist Deanwood",
+	"address": "1008 45th St NE, Washington, DC 20019",
+	"kind": "Religion",
+	"coordinates": ["38.9031088", "-76.9379833"]
+}, {
+	"year": 1960,
+	"name": "Zion Baptist Church-Eastland",
+	"address": "4318 Sheriff Road NE, WAshington DC 20019",
+	"kind": "Religion",
+	"coordinates": ["38.9030546", "-76.9401572"]
+}, {
+	"year": 1960,
+	"name": "Tabernacle Baptist Church",
+	"address": "721 Division Ave NE, Washington, DC 20019",
+	"kind": "Religion",
+	"coordinates": ["38.8996251", "-76.9249397"]
+}, {
+	"year": 1960,
+	"name": "Randall Memorial United Methodist Church",
+	"address": "1002 46th St NE, Washington, DC 20019",
+	"kind": "Religion",
+	"coordinates": ["38.9029886", "-76.9368948"]
+}, {
+	"year": 1960,
+	"name": "Church of the Incarnation",
+	"address": "880 Eastern Ave NE, Washington, DC 20019",
+	"kind": "Religion",
+	"coordinates": ["38.9015704", "-76.9208758"]
+}, {
+	"year": 1960,
+	"name": "Antioch Baptist Church",
+	"address": "1105 50th St NE, Washington, DC 20019",
+	"kind": "Religion",
+	"coordinates": ["38.9049824", "-76.9282583"]
+}, {
+	"year": 1960,
+	"name": "Capitol View Baptist Church",
+	"address": "Division Avenue Northeast & Ames Street Northeast, Washington, DC",
+	"kind": "Religion",
+	"coordinates": ["38.89078", "-76.927964"]
+}, {
+	"year": 1960,
+	"name": "Glendale Baptist Church",
+	"address": "4505 Gault Place Northeast, Washington, DC",
+	"kind": "Religion",
+	"coordinates": ["38.8989069", "-76.9375462"]
+}, {
+	"year": 1960,
+	"name": "New Mount Olive Baptist Church",
+	"address": "710 58th St NE, Washington, DC 20019",
+	"kind": "Religion",
+	"coordinates": ["38.8987739", "-76.9181647"]
+}, {
+	"year": 1960,
+	"name": "Chapel Oaks Community Church",
+	"address": "4800 Meade St NE, Washington, DC 20019",
+	"kind": "Religion",
+	"coordinates": ["38.9066034", "-76.9330669"]
+}, {
+	"year": 1960,
+	"name": "KIngdom Hall (Jehova's Witnesses)",
+	"address": "801 44th St NE, Washington, DC 20019",
+	"kind": "Religion",
+	"coordinates": ["38.9009104", "-76.9389382"]
+}, {
+	"year": 1970,
+	"name": "Forman Bro's Inc Liquors ",
+	"address": "4235 Sheriff Road Northeast, Washington, DC",
+	"kind": "Liquor",
+	"coordinates": ["38.9020953", "-76.9407199"]
+}, {
+	"year": 1970,
+	"name": "Battle's Religious Book store",
+	"address": "4301 Sheriff Road Northeast, Washington, DC",
+	"kind": "Other",
+	"coordinates": ["38.9028743", "-76.9403309"]
+}, {
+	"year": 1970,
+	"name": "One Stop Wedding Service ",
+	"address": "4301  Sheriff Road Northeast, Washington, DC",
+	"kind": "Other",
+	"coordinates": ["38.9038743", "-76.9393309"]
+}, {
+	"year": 1970,
+	"name": "Travit Barber Shop",
+	"address": "4323  Sheriff Road Northeast, Washington, DC",
+	"kind": "Other",
+	"coordinates": ["38.9025646", "-76.9393909"]
+}, {
+	"year": 1970,
+	"name": "Youth Development Division-Outreach Center",
+	"address": "4401  Sheriff Road Northeast, Washington, DC",
+	"kind": "Other",
+	"coordinates": ["38.9025797", "-76.9389665"]
+}, {
+	"year": 1970,
+	"name": "Lori-Ann's House of Beauty ",
+	"address": "4403  Sheriff Road Northeast, Washington, DC",
+	"kind": "Other",
+	"coordinates": ["38.9025093", "-76.9389003"]
+}, {
+	"year": 1970,
+	"name": "Robinson's Radio & Television Service",
+	"address": "4408  Sheriff Road Northeast, Washington, DC",
+	"kind": "Other",
+	"coordinates": ["38.9029234", "-76.9386693"]
+}, {
+	"year": 1970,
+	"name": "Mayfair Beauty Salon ",
+	"address": "4415  Sheriff Road Northeast, Washington, DC",
+	"kind": "Other",
+	"coordinates": ["38.9025713", "-76.9383604"]
+}, {
+	"year": 1970,
+	"name": "Deanwood Printing",
+	"address": "4419  Sheriff Road Northeast, Washington, DC",
+	"kind": "Other",
+	"coordinates": ["38.9023653", "-76.9381878"]
+}, {
+	"year": 1970,
+	"name": "Joe's Valet",
+	"address": "4501  Sheriff Road Northeast, Washington, DC",
+	"kind": "Other",
+	"coordinates": ["38.9025485", "-76.9374517"]
+}, {
+	"year": 1970,
+	"name": "Parker's Drive-In",
+	"address": "4505  Sheriff Road Northeast, Washington, DC",
+	"kind": "Other",
+	"coordinates": ["38.9025673", "-76.9372625"]
+}, {
+	"year": 1970,
+	"name": "Parker's Barber Shop ",
+	"address": "4509  Sheriff Road Northeast, Washington, DC",
+	"kind": "Other",
+	"coordinates": ["38.9025884", "-76.937087"]
+}, {
+	"year": 1970,
+	"name": "Able Interiors ",
+	"address": "4515  Sheriff Road Northeast, Washington, DC",
+	"kind": "Other",
+	"coordinates": ["38.9025479", "-76.936779"]
+}, {
+	"year": 1970,
+	"name": "Suburban Beauty Shop ",
+	"address": "4600  Sheriff Road Northeast, Washington, DC",
+	"kind": "Other",
+	"coordinates": ["38.9030006", "-76.9364603"]
+}, {
+	"year": 1970,
+	"name": "Suburban Market",
+	"address": "4600  Sheriff Road Northeast, Washington, DC",
+	"kind": "Food",
+	"coordinates": ["38.904000599999996", "-76.93546029999999"]
+}, {
+	"year": 1970,
+	"name": "High's Dairy Products Co. Northeast ",
+	"address": "4601  Sheriff Road Northeast, Washington, DC",
+	"kind": "Food",
+	"coordinates": ["38.9025792", "-76.9363694"]
+}, {
+	"year": 1970,
+	"name": "Brown's Dave Wine & Liquors ",
+	"address": "4721  Sheriff Road Northeast, Washington, DC",
+	"kind": "Liquor",
+	"coordinates": ["38.9026076", "-76.934835"]
+}, {
+	"year": 1970,
+	"name": "Davis Barber Shop ",
+	"address": "4727  Sheriff Road Northeast, Washington, DC",
+	"kind": "Other",
+	"coordinates": ["38.9026856", "-76.9344382"]
+}, {
+	"year": 1970,
+	"name": "Fairdeal Market",
+	"address": "4740  Sheriff Road Northeast, Washington, DC",
+	"kind": "Food",
+	"coordinates": ["38.9031137", "-76.9342214"]
+}, {
+	"year": 1970,
+	"name": "Billy's Valet",
+	"address": "4750  Sheriff Road Northeast, Washington, DC",
+	"kind": "Auto",
+	"coordinates": ["38.9030668", "-76.9340965"]
+}, {
+	"year": 1970,
+	"name": "Sheriff Road Rooming House ",
+	"address": "4818  Sheriff Road Northeast, Washington, DC",
+	"kind": "Other",
+	"coordinates": ["38.9031795", "-76.9324141"]
+}, {
+	"year": 1970,
+	"name": "Al Franc's Hair Stylist ",
+	"address": "5210  Sheriff Road Northeast, Washington, DC",
+	"kind": "Other",
+	"coordinates": ["38.9040959", "-76.9245805"]
+}, {
+	"year": 1970,
+	"name": "Cobb Bakery & Delicatessen ",
+	"address": "5212  Sheriff Road Northeast, Washington, DC",
+	"kind": "Food",
+	"coordinates": ["38.9040055", "-76.9244905"]
+}, {
+	"year": 1970,
+	"name": "Shahazz's Dry Cleaners ",
+	"address": "5214 Sheriff Road Northeast, Washington, DC",
+	"kind": "Other",
+	"coordinates": ["38.9041207", "-76.9244454"]
+}, {
+	"year": 1970,
+	"name": "Frankle's Phillips 66 Service Center ",
+	"address": "4200  Deane Avenue Northeast, Washington, DC",
+	"kind": "Auto",
+	"coordinates": ["38.9014869", "-76.9427392"]
+}, {
+	"year": 1970,
+	"name": "McDonald's Restaurant ",
+	"address": "4301  Deane Avenue Northeast, Washington, DC",
+	"kind": "Food",
+	"coordinates": ["38.9011615", "-76.9416932"]
+}, {
+	"year": 1970,
+	"name": "Bonanza Cleaners",
+	"address": "4309 Deane Avenue Northeast, Washington, DC",
+	"kind": "Other",
+	"coordinates": ["38.9027287", "-76.944401"]
+}, {
+	"year": 1970,
+	"name": "Deane Avenue Shell Station ",
+	"address": "4321 Deane Avenue Northeast, Washington, DC",
+	"kind": "Auto",
+	"coordinates": ["38.9006525", "-76.9402022"]
+}, {
+	"year": 1970,
+	"name": "Menick's Grocery Store ",
+	"address": "4401 Deane Avenue Northeast, Washington, DC",
+	"kind": "Food",
+	"coordinates": ["38.9002524", "-76.9389723"]
+}, {
+	"year": 1970,
+	"name": "William's Funeral Home ",
+	"address": "4445 Deane Avenue Northeast, Washington, DC",
+	"kind": "Other",
+	"coordinates": ["38.903728699999995", "-76.943401"]
+}, {
+	"year": 1970,
+	"name": "King Brother's Service Center ",
+	"address": "4451 Deane Avenue Northeast, Washington, DC",
+	"kind": "Auto",
+	"coordinates": ["38.903728699999995", "-76.943401"]
+}, {
+	"year": 1970,
+	"name": "Woody's Auto Body ",
+	"address": "4451 Deane Avenue Northeast, Washington, DC",
+	"kind": "Auto",
+	"coordinates": ["38.903728699999995", "-76.943401"]
+}, {
+	"year": 1970,
+	"name": "Terry's Auto Body & Fender Works ",
+	"address": "4611 Deane Avenue Northeast, Washington, DC",
+	"kind": "Auto",
+	"coordinates": ["38.903728699999995", "-76.943401"]
+}, {
+	"year": 1970,
+	"name": "Collins Dentist Office ",
+	"address": "4645 Deane Avenue Northeast, Washington, DC",
+	"kind": "Health",
+	"coordinates": ["38.903728699999995", "-76.943401"]
+}, {
+	"year": 1970,
+	"name": "Fran-Ru Beauty Salon",
+	"address": "4645 Deane Avenue Northeast, Washington, DC",
+	"kind": "Other",
+	"coordinates": ["38.903728699999995", "-76.943401"]
+}, {
+	"year": 1970,
+	"name": "Nelson Robert R. MD Office ",
+	"address": "4645 Deane Avenue Northeast, Washington, DC",
+	"kind": "Health",
+	"coordinates": ["38.903728699999995", "-76.943401"]
+}, {
+	"year": 1970,
+	"name": "Physician Dr. Smith Francis L.'s Office",
+	"address": "4645 Deane Avenue Northeast, Washington, DC",
+	"kind": "Health",
+	"coordinates": ["38.903728699999995", "-76.943401"]
+}, {
+	"year": 1970,
+	"name": "Jackson Wilbur F. MD",
+	"address": "4649 Deane Avenue Northeast, Washington, DC",
+	"kind": "Health",
+	"coordinates": ["38.903728699999995", "-76.943401"]
+}, {
+	"year": 1970,
+	"name": "Supreme Life Insurance Company of America",
+	"address": "4649 Deane Avenue Northeast, Washington, DC",
+	"kind": "Other",
+	"coordinates": ["38.903728699999995", "-76.943401"]
+}, {
+	"year": 1970,
+	"name": "Waters Clarence S. Tax Service",
+	"address": "4649 Deane Avenue Northeast, Washington, DC",
+	"kind": "Other",
+	"coordinates": ["38.903728699999995", "-76.943401"]
+}, {
+	"year": 1970,
+	"name": "East-Atlantic Construction Co. ",
+	"address": "4651 Deane Avenue Northeast, Washington, DC",
+	"kind": "Other",
+	"coordinates": ["38.903728699999995", "-76.943401"]
+}, {
+	"year": 1970,
+	"name": "Physician James Reginald G.'s Office ",
+	"address": "4651 Deane Avenue Northeast, Washington, DC",
+	"kind": "Health",
+	"coordinates": ["38.903728699999995", "-76.943401"]
+}, {
+	"year": 1970,
+	"name": "Neighborhood Legal Services Program ",
+	"address": "4800 Deane Avenue Northeast, Washington, DC",
+	"kind": "Other",
+	"coordinates": ["38.903728699999995", "-76.943401"]
+}, {
+	"year": 1970,
+	"name": "Nat's Barber Shop ",
+	"address": "4808 Deane Avenue Northeast, Washington, DC",
+	"kind": "Other",
+	"coordinates": ["38.903728699999995", "-76.943401"]
+}, {
+	"year": 1970,
+	"name": "Electric Appliances Repairing ",
+	"address": "4816 Deane Avenue Northeast, Washington, DC",
+	"kind": "Other",
+	"coordinates": ["38.903728699999995", "-76.943401"]
+}, {
+	"year": 1970,
+	"name": "Deanwood Liquors ",
+	"address": "4824 Deane Avenue Northeast, Washington, DC",
+	"kind": "Liquor",
+	"coordinates": ["38.903728699999995", "-76.943401"]
+}, {
+	"year": 1970,
+	"name": "Pinckney Theodore MD",
+	"address": "4832 Deane Avenue Northeast, Washington, DC",
+	"kind": "Health",
+	"coordinates": ["38.903728699999995", "-76.943401"]
+}, {
+	"year": 1970,
+	"name": "Townsend Beauty Market ",
+	"address": "4834 Deane Avenue Northeast, Washington, DC",
+	"kind": "Other",
+	"coordinates": ["38.903728699999995", "-76.943401"]
+}, {
+	"year": 1970,
+	"name": "Mason Bro's Esso Service Station ",
+	"address": "4854 Deane Avenue Northeast, Washington, DC",
+	"kind": "Auto",
+	"coordinates": ["38.903728699999995", "-76.943401"]
+}, {
+	"year": 1970,
+	"name": "Pal's Beauty Nook",
+	"address": "4922 Deane Avenue Northeast, Washington, DC",
+	"kind": "Other",
+	"coordinates": ["38.903728699999995", "-76.943401"]
+}, {
+	"year": 1970,
+	"name": "Washington Henry S. & Son's Undertakers ",
+	"address": "4925 Deane Avenue Northeast, Washington, DC",
+	"kind": "Other",
+	"coordinates": ["38.903728699999995", "-76.943401"]
+}, {
+	"year": 1970,
+	"name": "Olympia Bakery",
+	"address": "5201 Hayes Street Northeast, Washington, DC",
+	"kind": "Food",
+	"coordinates": ["38.8995663", "-76.9263814"]
+}, {
+	"year": 1970,
+	"name": "Webb's Esso Station ",
+	"address": "4100 Hunt Place Northeast, Washington, DC",
+	"kind": "Auto",
+	"coordinates": ["38.9007614", "-76.9436774"]
+}, {
+	"year": 1970,
+	"name": "DC Government Health Department of Public Clinics, Child and Youth, Maternity and Birth Control ",
+	"address": "4130 Hunt Place Northeast, Washington, DC",
+	"kind": "Health",
+	"coordinates": ["38.9006978", "-76.9429251"]
+}, {
+	"year": 1970,
+	"name": "Glen John W. Trucking ",
+	"address": "4214 Hunt Place Northeast, Washington, DC",
+	"kind": "Auto",
+	"coordinates": ["38.9008918", "-76.9417512"]
+}, {
+	"year": 1970,
+	"name": "Rollins Funeral Home ",
+	"address": "4339 Hunt Place Northeast, Washington, DC",
+	"kind": "Other",
+	"coordinates": ["38.9003586", "-76.9399586"]
+}, {
+	"year": 1970,
+	"name": "Malcolm Properties Real Estate",
+	"address": "4347 Hunt Place Northeast, Washington, DC",
+	"kind": "Other",
+	"coordinates": ["38.9003204", "-76.9393877"]
+}, {
+	"year": 1970,
+	"name": "Suburban Liquors ",
+	"address": "4347 Hunt Place Northeast, Washington, DC",
+	"kind": "Liquor",
+	"coordinates": ["38.901320399999996", "-76.93838769999999"]
+}, {
+	"year": 1970,
+	"name": "Architect Giles Lewis W. ",
+	"address": "4428 Hunt Place Northeast, Washington, DC",
+	"kind": "Other",
+	"coordinates": ["38.9008179", "-76.9374628"]
+}, {
+	"year": 1970,
+	"name": "Playground Nursery & Kindergarten ",
+	"address": "4928b Just Street Northeast, Washington, DC",
+	"kind": "Other",
+	"coordinates": ["38.902382", "-76.9313604"]
+}, {
+	"year": 1970,
+	"name": "Floyd's Landscaping Services ",
+	"address": "4416 Nash Street Northeast, Washington, DC",
+	"kind": "Other",
+	"coordinates": ["38.9073962", "-76.9395269"]
+}, {
+	"year": 1970,
+	"name": "Shirley's House of Beauty ",
+	"address": "4189 Minnesota Avenue Northeast, Washington, DC",
+	"kind": "Other",
+	"coordinates": ["38.9002744", "-76.9443408"]
+}, {
+	"year": 1970,
+	"name": "Community Temple",
+	"address": "4193 Minnesota Avenue Northeast, Washington, DC",
+	"kind": "Religion",
+	"coordinates": ["38.9004094", "-76.9441157"]
+}, {
+	"year": 1970,
+	"name": "Abney's American Service Station ",
+	"address": "4251 Minnesota Avenue Northeast, Washington, DC",
+	"kind": "Auto",
+	"coordinates": ["38.902309", "-76.9415724"]
+}, {
+	"year": 1970,
+	"name": "Community Linen Service ",
+	"address": "4628 Minnesota Avenue Northeast, Washington, DC",
+	"kind": "Other",
+	"coordinates": ["38.9068354", "-76.9361731"]
+}, {
+	"year": 1970,
+	"name": "Dy-Dee Wash ",
+	"address": "4812 Minnesota Avenue Northeast, Washington, DC",
+	"kind": "Other",
+	"coordinates": ["38.908616", "-76.933926"]
+}, {
+	"year": 1970,
+	"name": "Contee African Methodist Episcopal Zion Church",
+	"address": "903 Division Ave NE, Washington, DC 20019",
+	"kind": "Religion",
+	"coordinates": ["38.9019968", "-76.9239309"]
+}, {
+	"year": 1970,
+	"name": "First Baptist Deanwood",
+	"address": "1008 45th St NE, Washington, DC 20019",
+	"kind": "Religion",
+	"coordinates": ["38.9031088", "-76.9379833"]
+}, {
+	"year": 1970,
+	"name": "Zion Baptist Church-Eastland",
+	"address": "1234 Kenilworth Avenue Northeast, Washington, DC 20019",
+	"kind": "Religion",
+	"coordinates": ["38.9067041", "-76.9398853"]
+}, {
+	"year": 1970,
+	"name": "Tabernacle Baptist Church",
+	"address": "721 Division Ave NE, Washington, DC 20019",
+	"kind": "Religion",
+	"coordinates": ["38.8996251", "-76.9249397"]
+}, {
+	"year": 1970,
+	"name": "Randall Memorial United Methodist Church",
+	"address": "1002 46th St NE, Washington, DC 20019",
+	"kind": "Religion",
+	"coordinates": ["38.9029886", "-76.9368948"]
+}, {
+	"year": 1970,
+	"name": "Church of the Incarnation",
+	"address": "880 Eastern Ave NE, Washington, DC 20019",
+	"kind": "Religion",
+	"coordinates": ["38.9015704", "-76.9208758"]
+}, {
+	"year": 1970,
+	"name": "Antioch Baptist Church",
+	"address": "1105 50th St NE, Washington, DC 20019",
+	"kind": "Religion",
+	"coordinates": ["38.9049824", "-76.9282583"]
+}, {
+	"year": 1970,
+	"name": "Deanwood Liquors ",
+	"address": "4824 Deane Avenue, North East, Washington D.C.",
+	"kind": "Liquor",
+	"coordinates": ["38.903728699999995", "-76.943401"]
+}, {
+	"year": 1970,
+	"name": "Jack's Liquors Inc",
+	"address": "1005 Eastern Ave NE",
+	"kind": "Liquor",
+	"coordinates": ["38.9044321", "-76.9234775"]
+}, {
+	"year": 1970,
+	"name": "Sheriff Liquors ",
+	"address": "626 Division Avenue Northeast, Washington, DC",
+	"kind": "Liquor",
+	"coordinates": ["38.8978036", "-76.9261413"]
+}, {
+	"year": 1980,
+	"name": "Super Pride Markets",
+	"address": "5110 Grant Street Northeast, Washington, DC",
+	"kind": "Food",
+	"coordinates": ["38.898335", "-76.9312621"]
+}, {
+	"year": 1980,
+	"name": "Holly Farm Fried Chicken",
+	"address": "5120 Grant Street Northeast, Washington, DC",
+	"kind": "Food",
+	"coordinates": ["38.899335", "-76.9302621"]
+}, {
+	"year": 1980,
+	"name": "Jimmies Hardware Store",
+	"address": "5121 Grant Street Northeast, Washington, DC",
+	"kind": "Other",
+	"coordinates": ["38.898099", "-76.9312762"]
+}, {
+	"year": 1980,
+	"name": "Betty Brite Cleaners",
+	"address": "5123 Grant Street Northeast, Washington, DC",
+	"kind": "Other",
+	"coordinates": ["38.899099", "-76.9302762"]
+}, {
+	"year": 1980,
+	"name": "Exxon Co. USA",
+	"address": "4100 Hunt Place Northeast, Washington, DC",
+	"kind": "Auto",
+	"coordinates": ["38.9007614", "-76.9436774"]
+}, {
+	"year": 1980,
+	"name": "DC Clinic Dental",
+	"address": "4130 Hunt Place Northeast, Washington, DC",
+	"kind": "Health",
+	"coordinates": ["38.9006978", "-76.9429251"]
+}, {
+	"year": 1980,
+	"name": "Kenilworth Trash Co. Moon Construction Time Oil Company",
+	"address": "4214 Hunt Place Northeast, Washington, DC",
+	"kind": "Other",
+	"coordinates": ["38.9008918", "-76.9417512"]
+}, {
+	"year": 1980,
+	"name": "Rollins Funeral Home",
+	"address": "4339 Hunt Place Northeast, Washington, DC",
+	"kind": "Other",
+	"coordinates": ["38.9003586", "-76.9399586"]
+}, {
+	"year": 1980,
+	"name": "Malcolm Properties",
+	"address": "4347 Hunt Place Northeast, Washington, DC",
+	"kind": "Other",
+	"coordinates": ["38.9003204", "-76.9393877"]
+}, {
+	"year": 1980,
+	"name": "New Covenant Baptist Church",
+	"address": "4410 Hunt Place Northeast, Washington, DC",
+	"kind": "Religion",
+	"coordinates": ["38.9008372", "-76.938263"]
+}, {
+	"year": 1980,
+	"name": "Hospitality House Michaux Senior Citizens",
+	"address": "3700 Hayes Street Northeast, Washington, DC",
+	"kind": "Other",
+	"coordinates": ["38.9021481", "-76.9491868"]
+}, {
+	"year": 1980,
+	"name": "Olympia Bakery",
+	"address": "5201 Hayes Street Northeast, Washington, DC",
+	"kind": "Food",
+	"coordinates": ["38.8995663", "-76.9263814"]
+}, {
+	"year": 1980,
+	"name": "As You Like It Inc",
+	"address": "4316 Jay Street Northeast, Washington, DC",
+	"kind": "Other",
+	"coordinates": ["38.9016563", "-76.9395273"]
+}, {
+	"year": 1980,
+	"name": "Suburban Garden\n",
+	"address": "4904 Jay Street Northeast, Washington, DC",
+	"kind": "Other",
+	"coordinates": ["38.90165", "-76.931338"]
+}, {
+	"year": 1980,
+	"name": "Philippian Baptist Church",
+	"address": "5341 Jay Street Northeast, Washington, DC",
+	"kind": "Religion",
+	"coordinates": ["38.9011809", "-76.9229193"]
+}, {
+	"year": 1980,
+	"name": "Playland Nursery",
+	"address": "4928 Just Street Northeast, Washington, DC",
+	"kind": "Other",
+	"coordinates": ["38.902382", "-76.9313604"]
+}, {
+	"year": 1980,
+	"name": "Suburban Gardens",
+	"address": "5028 Just Street Northeast, Washington, DC",
+	"kind": "Other",
+	"coordinates": ["38.9029724", "-76.9292217"]
+}, {
+	"year": 1980,
+	"name": "Deane Avenue Cleaners",
+	"address": "4306 Deane Avenue Northeast, Washington, DC",
+	"kind": "Other",
+	"coordinates": ["38.9027287", "-76.944401"]
+}, {
+	"year": 1980,
+	"name": "Terry's Auto Body Work",
+	"address": "4611 Deane Avenue Northeast, Washington, DC",
+	"kind": "Auto",
+	"coordinates": ["38.903728699999995", "-76.943401"]
+}, {
+	"year": 1980,
+	"name": "Barnes Investment Service",
+	"address": "4645 Deane Avenue Northeast, Washington, DC",
+	"kind": "Other",
+	"coordinates": ["38.903728699999995", "-76.943401"]
+}, {
+	"year": 1980,
+	"name": "Buskeys Beauty Lounge",
+	"address": "4645 Deane Avenue Northeast, Washington, DC",
+	"kind": "Other",
+	"coordinates": ["38.903728699999995", "-76.943401"]
+}, {
+	"year": 1980,
+	"name": "Linzau Jean A. MD",
+	"address": "4645 Deane Avenue Northeast, Washington, DC",
+	"kind": "Health",
+	"coordinates": ["38.903728699999995", "-76.943401"]
+}, {
+	"year": 1980,
+	"name": "N E R B Dental Examiners",
+	"address": "4645 Deane Avenue Northeast, Washington, DC",
+	"kind": "Health",
+	"coordinates": ["38.903728699999995", "-76.943401"]
+}, {
+	"year": 1980,
+	"name": "National Mercantile AGC",
+	"address": "4645 Deane Avenue Northeast, Washington, DC",
+	"kind": "Other",
+	"coordinates": ["38.903728699999995", "-76.943401"]
+}, {
+	"year": 1980,
+	"name": "Northeast Regional Dental",
+	"address": "4645 Deane Avenue Northeast, Washington, DC",
+	"kind": "Health",
+	"coordinates": ["38.903728699999995", "-76.943401"]
+}, {
+	"year": 1980,
+	"name": "Walton Tracy Jr. MD\n",
+	"address": "4645 Deane Avenue Northeast, Washington, DC",
+	"kind": "Health",
+	"coordinates": ["38.903728699999995", "-76.943401"]
+}, {
+	"year": 1980,
+	"name": "Asomahi Nixon MD",
+	"address": "4649 Deane Avenue Northeast, Washington, DC",
+	"kind": "Health",
+	"coordinates": ["38.903728699999995", "-76.943401"]
+}, {
+	"year": 1980,
+	"name": "Washington Funeral Home\n",
+	"address": "4925 Deane Avenue Northeast, Washington, DC",
+	"kind": "Other",
+	"coordinates": ["38.903728699999995", "-76.943401"]
+}, {
+	"year": 1980,
+	"name": "Suburban Liquors ",
+	"address": "4347 Hunt Place Northeast, Washington, DC",
+	"kind": "Liquor",
+	"coordinates": ["38.901320399999996", "-76.93838769999999"]
+}, {
+	"year": 1980,
+	"name": "Gold Beacon Transit",
+	"address": "4244 Meade Street Northeast, Washington, DC",
+	"kind": "Other",
+	"coordinates": ["38.9058147", "-76.9411475"]
+}, {
+	"year": 1980,
+	"name": "Washington Christian Center",
+	"address": "4821 Meade Street Northeast, Washington, DC",
+	"kind": "Religion",
+	"coordinates": ["38.9058425", "-76.9325495"]
+}, {
+	"year": 1980,
+	"name": "Mcdonalds No 34",
+	"address": "4301 Nannie Helen Burroughs Avenue Northeast, Washington, DC",
+	"kind": "Food",
+	"coordinates": ["38.9012129", "-76.941584"]
+}, {
+	"year": 1980,
+	"name": "Bonanza Cleaners",
+	"address": "4309 Nannie Helen Burroughs Avenue Northeast, Washington, DC",
+	"kind": "Other",
+	"coordinates": ["38.9009675", "-76.941035"]
+}, {
+	"year": 1980,
+	"name": "Deane Ave Shell",
+	"address": "4321 Nannie Helen Burroughs Avenue Northeast, Washington, DC",
+	"kind": "Auto",
+	"coordinates": ["38.900681", "-76.94011"]
+}, {
+	"year": 1980,
+	"name": "Menicks Market",
+	"address": "4401 Nannie Helen Burroughs Avenue Northeast, Washington, DC",
+	"kind": "Food",
+	"coordinates": ["38.9002524", "-76.9389723"]
+}, {
+	"year": 1980,
+	"name": "Woody\u2019s Auto Body",
+	"address": "4451 Nannie Helen Burroughs Avenue Northeast, Washington, DC",
+	"kind": "Auto",
+	"coordinates": ["38.8994761", "-76.9369022"]
+}, {
+	"year": 1980,
+	"name": "Cut Right Upholstery",
+	"address": "4606 Nannie Helen Burroughs Avenue Northeast, Washington, DC",
+	"kind": "Other",
+	"coordinates": ["38.8994592", "-76.9353403"]
+}, {
+	"year": 1980,
+	"name": "Buskeys Beauty lounge",
+	"address": "4645 Nannie Helen Burroughs Avenue Northeast, Washington, DC",
+	"kind": "Other",
+	"coordinates": ["38.8988579", "-76.9343462"]
+}, {
+	"year": 1980,
+	"name": "Deanwood Pharmacy",
+	"address": "4645 Nannie Helen Burroughs Avenue Northeast, Washington, DC",
+	"kind": "Pharmacy",
+	"coordinates": ["38.8998579", "-76.93334619999999"]
+}, {
+	"year": 1980,
+	"name": "Collin WM K Jr Dos",
+	"address": "4645 Nannie Helen Burroughs Avenue Northeast, Washington, DC",
+	"kind": "Health",
+	"coordinates": ["38.8998579", "-76.93334619999999"]
+}, {
+	"year": 1980,
+	"name": "Tony Os Beauty Salon",
+	"address": "4834 Nannie Helen Burroughs Avenue Northeast, Washington, DC",
+	"kind": "Other",
+	"coordinates": ["38.8990609", "-76.9325392"]
+}, {
+	"year": 1980,
+	"name": "New Birth Missionary Church",
+	"address": "4918 Nannie Helen Burroughs Avenue Northeast, Washington, DC",
+	"kind": "Religion",
+	"coordinates": ["38.8986699", "-76.9307839"]
+}, {
+	"year": 1980,
+	"name": "Deane Shoe Repair",
+	"address": "4930 Nannie Helen Burroughs Avenue Northeast, Washington, DC",
+	"kind": "Other",
+	"coordinates": ["38.8985397", "-76.9301519"]
+}, {
+	"year": 1980,
+	"name": "Sonny's Amoco",
+	"address": "52-7 Nannie Helen Burroughs Avenue Northeast, Washington, DC",
+	"kind": "Auto",
+	"coordinates": ["38.8984996", "-76.9306223"]
+}, {
+	"year": 1980,
+	"name": "Forman Bros Inc",
+	"address": "4235 Sheriff Road Northeast, Washington, DC",
+	"kind": "Auto",
+	"coordinates": ["38.9020953", "-76.9407199"]
+}, {
+	"year": 1980,
+	"name": "Divine Love Church",
+	"address": "4304 Sheriff Road Northeast, Washington, DC",
+	"kind": "Religion",
+	"coordinates": ["38.9026998", "-76.9416763"]
+}, {
+	"year": 1980,
+	"name": "Battles Religious Book Store",
+	"address": "4311 Sheriff Road Northeast, Washington, DC",
+	"kind": "Other",
+	"coordinates": ["38.9025973", "-76.939861"]
+}, {
+	"year": 1980,
+	"name": "A&W Moving Co",
+	"address": "4314 Sheriff Road Northeast, Washington, DC",
+	"kind": "Other",
+	"coordinates": ["38.9030801", "-76.9403822"]
+}, {
+	"year": 1980,
+	"name": "New Mount Calvary Church",
+	"address": "4316 Sheriff Road Northeast, Washington, DC",
+	"kind": "Religion",
+	"coordinates": ["38.9028742", "-76.9403286"]
+}, {
+	"year": 1980,
+	"name": "Travit Barber Shop",
+	"address": "4323 Sheriff Road Northeast, Washington, DC",
+	"kind": "Other",
+	"coordinates": ["38.9025646", "-76.9393909"]
+}, {
+	"year": 1980,
+	"name": "Lori Ann's House of Beauty",
+	"address": "4407 Sheriff Road Northeast, Washington, DC",
+	"kind": "Other",
+	"coordinates": ["38.9025703", "-76.9387166"]
+}, {
+	"year": 1980,
+	"name": "Robinson's Radio & TV Service",
+	"address": "440 Sheriff Road Northeast, Washington, DC",
+	"kind": "Other",
+	"coordinates": ["38.9029469", "-76.9327926"]
+}, {
+	"year": 1980,
+	"name": "Mayfair Beauty Salon",
+	"address": "4415 Sheriff Road Northeast, Washington, DC",
+	"kind": "Other",
+	"coordinates": ["38.9025713", "-76.9383604"]
+}, {
+	"year": 1980,
+	"name": "Joe's Valet",
+	"address": "4501 Sheriff Road Northeast, Washington, DC",
+	"kind": "Other",
+	"coordinates": ["38.9025485", "-76.9374517"]
+}, {
+	"year": 1980,
+	"name": "Parker's Drive Through ",
+	"address": "4505 Sheriff Road Northeast, Washington, DC",
+	"kind": "Other",
+	"coordinates": ["38.9025673", "-76.9372625"]
+}, {
+	"year": 1980,
+	"name": "Johnson Jas E Parker's Barber Salon",
+	"address": "4509 Sheriff Road Northeast, Washington, DC",
+	"kind": "Other",
+	"coordinates": ["38.9025884", "-76.937087"]
+}, {
+	"year": 1980,
+	"name": "Suburban Beauty Shop",
+	"address": "4600 Sheriff Road Northeast, Washington, DC",
+	"kind": "Other",
+	"coordinates": ["38.9030006", "-76.9364603"]
+}, {
+	"year": 1980,
+	"name": "Suburban Market",
+	"address": "4600 Sheriff Road Northeast, Washington, DC",
+	"kind": "Food",
+	"coordinates": ["38.904000599999996", "-76.93546029999999"]
+}, {
+	"year": 1980,
+	"name": "Pilgrim Rest Baptist Church\n",
+	"address": "4601 Sheriff Road Northeast, Washington, DC",
+	"kind": "Religion",
+	"coordinates": ["38.9025792", "-76.9363694"]
+}, {
+	"year": 1980,
+	"name": "Browns Dave Wine & Liquors",
+	"address": "4721 Sheriff Road Northeast, Washington, DC",
+	"kind": "Liquor",
+	"coordinates": ["38.9026076", "-76.934835"]
+}, {
+	"year": 1980,
+	"name": "A&S Grocery",
+	"address": "4748 Sheriff Road Northeast, Washington, DC",
+	"kind": "Food",
+	"coordinates": ["38.9030455", "-76.9340811"]
+}, {
+	"year": 1980,
+	"name": "Billy's Valet",
+	"address": "4750 Sheriff Road Northeast, Washington, DC",
+	"kind": "Other",
+	"coordinates": ["38.9030668", "-76.9340965"]
+}, {
+	"year": 1980,
+	"name": "Greater Beulah Baptist Church",
+	"address": "5016 Sheriff Road Northeast, Washington, DC",
+	"kind": "Religion",
+	"coordinates": ["38.9037753", "-76.9287803"]
+}, {
+	"year": 1980,
+	"name": "Shabazz Cleaners",
+	"address": "5214 Sheriff Road Northeast, Washington, DC",
+	"kind": "Other",
+	"coordinates": ["38.9041207", "-76.9244454"]
+}, {
+	"year": 1980,
+	"name": "Contee African Methodist Episcopal Zion Church",
+	"address": "903 Division Ave NE, Washington, DC 20019",
+	"kind": "Religion",
+	"coordinates": ["38.9019968", "-76.9239309"]
+}, {
+	"year": 1980,
+	"name": "First Baptist Deanwood",
+	"address": "1008 45th St NE, Washington, DC 20019",
+	"kind": "Religion",
+	"coordinates": ["38.9031088", "-76.9379833"]
+}, {
+	"year": 1980,
+	"name": "Zion Baptist Church-Eastland",
+	"address": "1234 Kenilworth Avenue Northeast, Washington, DC 20019",
+	"kind": "Religion",
+	"coordinates": ["38.9067041", "-76.9398853"]
+}, {
+	"year": 1980,
+	"name": "Tabernacle Baptist Church",
+	"address": "721 Division Ave NE, Washington, DC 20019",
+	"kind": "Religion",
+	"coordinates": ["38.8996251", "-76.9249397"]
+}, {
+	"year": 1980,
+	"name": "Randall Memorial United Methodist Church",
+	"address": "1002 46th St NE, Washington, DC 20019",
+	"kind": "Religion",
+	"coordinates": ["38.9029886", "-76.9368948"]
+}, {
+	"year": 1980,
+	"name": "Church of the Incarnation",
+	"address": "880 Eastern Ave NE, Washington, DC 20019",
+	"kind": "Religion",
+	"coordinates": ["38.9015704", "-76.9208758"]
+}, {
+	"year": 1980,
+	"name": "Antioch Baptist Church",
+	"address": "1105 50th St NE, Washington, DC 20019",
+	"kind": "Religion",
+	"coordinates": ["38.9049824", "-76.9282583"]
+}, {
+	"year": 1990,
+	"name": "Deane Avenue Cleaners",
+	"address": "4309 Deane Avenue Northeast, Washington, DC",
+	"kind": "Other",
+	"coordinates": ["38.9027287", "-76.944401"]
+}, {
+	"year": 1990,
+	"name": "Buskeys Beauty Lounge",
+	"address": "4645 Deane Avenue Northeast, Washington, DC",
+	"kind": "Other",
+	"coordinates": ["38.903728699999995", "-76.943401"]
+}, {
+	"year": 1990,
+	"name": "Jackson Wilbur F MD",
+	"address": "4649 Deane Avenue Northeast, Washington, DC",
+	"kind": "Health",
+	"coordinates": ["38.903728699999995", "-76.943401"]
+}, {
+	"year": 1990,
+	"name": "Washington Funeral Home",
+	"address": "4925 Deane Avenue Northeast, Washington, DC",
+	"kind": "Other",
+	"coordinates": ["38.903728699999995", "-76.943401"]
+}, {
+	"year": 1990,
+	"name": "Technicare Pharmacy",
+	"address": "5051 50th Place Northeast, Washington, DC",
+	"kind": "Pharmacy",
+	"coordinates": ["38.945454", "-77.0986139"]
+}, {
+	"year": 1990,
+	"name": "Chandler Writers ",
+	"address": "5106 51st Street Northeast, Washington, DC",
+	"kind": "Other",
+	"coordinates": ["38.8992474", "-76.9274658"]
+}, {
+	"year": 1990,
+	"name": "Exxon ",
+	"address": "4100 Hunt Place Northeast, Washington, DC",
+	"kind": "Auto",
+	"coordinates": ["38.9007614", "-76.9436774"]
+}, {
+	"year": 1990,
+	"name": "DC Clinics Dental / Maternity/ Supplemental Foods ",
+	"address": "4130 Hunt Place Northeast, Washington, DC",
+	"kind": "Health",
+	"coordinates": ["38.9006978", "-76.9429251"]
+}, {
+	"year": 1990,
+	"name": "Rollins Funeral Home ",
+	"address": "4339 Hunt Place Northeast, Washington, DC",
+	"kind": "Other",
+	"coordinates": ["38.9003586", "-76.9399586"]
+}, {
+	"year": 1990,
+	"name": "DC Clinics Dental / Maternity / WIC / Supplemental Foods",
+	"address": "4130 Hunt Place Northeast, Washington, DC",
+	"kind": "Health",
+	"coordinates": ["38.9016978", "-76.94192509999999"]
+}, {
+	"year": 1990,
+	"name": "W & F Eviction Co.",
+	"address": "4601 Hunt Pl NE, Washington, DC 20019",
+	"kind": "Other",
+	"coordinates": ["38.9005613", "-76.936359"]
+}, {
+	"year": 1990,
+	"name": "Alliance Oil Co / U Haul Co/ Autorama Taxicab Co",
+	"address": "4200 Nannie Helen Burroughs Avenue Northeast, Washington, DC",
+	"kind": "Other",
+	"coordinates": ["38.902064", "-76.942046"]
+}, {
+	"year": 1990,
+	"name": "Wendy's Hamburgers",
+	"address": "4250 Nannie Helen Burroughs Avenue Northeast, Washington, DC",
+	"kind": "Food",
+	"coordinates": ["38.9018935", "-76.9416012"]
+}, {
+	"year": 1990,
+	"name": "Mcdonalds Restaurant",
+	"address": "4301 Nannie Helen Burroughs Avenue Northeast, Washington, DC",
+	"kind": "Food",
+	"coordinates": ["38.9012129", "-76.941584"]
+}, {
+	"year": 1990,
+	"name": "Tony\u2019s Shell",
+	"address": "4321 Nannie Helen Burroughs Avenue Northeast, Washington, DC",
+	"kind": "Auto",
+	"coordinates": ["38.900681", "-76.94011"]
+}, {
+	"year": 1990,
+	"name": "Menick\u2019s Market",
+	"address": "4401 Nannie Helen Burroughs Avenue Northeast, Washington, DC",
+	"kind": "Food",
+	"coordinates": ["38.9002524", "-76.9389723"]
+}, {
+	"year": 1990,
+	"name": "Coleman Clarence MD",
+	"address": "4402 Nannie Helen Burroughs Avenue Northeast, Washington, DC",
+	"kind": "Health",
+	"coordinates": ["38.9005161", "-76.9386712"]
+}, {
+	"year": 1990,
+	"name": "Washington Automatic Transmission",
+	"address": "4451 Nannie Helen Burroughs Avenue Northeast, Washington, DC",
+	"kind": "Auto",
+	"coordinates": ["38.8994761", "-76.9369022"]
+}, {
+	"year": 1990,
+	"name": "Universal Home Inc",
+	"address": "4500 Nannie Helen Burroughs Avenue Northeast, Washington, DC",
+	"kind": "Other",
+	"coordinates": ["38.9000687", "-76.9375524"]
+}, {
+	"year": 1990,
+	"name": "Buskey\u2019s beauty Lounge",
+	"address": "4645 Nannie Helen Burroughs Avenue Northeast, Washington, DC",
+	"kind": "Other",
+	"coordinates": ["38.8988579", "-76.9343462"]
+}, {
+	"year": 1990,
+	"name": "Collins WM K Jr DDs",
+	"address": "4645 Nannie Helen Burroughs Avenue Northeast, Washington, DC",
+	"kind": "Health",
+	"coordinates": ["38.8998579", "-76.93334619999999"]
+}, {
+	"year": 1990,
+	"name": "Deanwood Pharmacy",
+	"address": "4645 Nannie Helen Burroughs Avenue Northeast, Washington, DC",
+	"kind": "Pharmacy",
+	"coordinates": ["38.8998579", "-76.93334619999999"]
+}, {
+	"year": 1990,
+	"name": "Rampersaud V MD",
+	"address": "4645 Nannie Helen Burroughs Avenue Northeast, Washington, DC",
+	"kind": "Health",
+	"coordinates": ["38.8998579", "-76.93334619999999"]
+}, {
+	"year": 1990,
+	"name": "Walton Tracy Jr MD",
+	"address": "4645 Nannie Helen Burroughs Avenue Northeast, Washington, DC",
+	"kind": "Health",
+	"coordinates": ["38.8998579", "-76.93334619999999"]
+}, {
+	"year": 1990,
+	"name": "Deanwood Dental Associates",
+	"address": "4649 Nannie Helen Burroughs Avenue Northeast, Washington, DC",
+	"kind": "Health",
+	"coordinates": ["38.8987922", "-76.9341211"]
+}, {
+	"year": 1990,
+	"name": "Dr. Smith Francis L ",
+	"address": "4651 Nannie Helen Burroughs Avenue Northeast, Washington, DC",
+	"kind": "Health",
+	"coordinates": ["38.8985685", "-76.9341039"]
+}, {
+	"year": 1990,
+	"name": "East of River Arts",
+	"address": "4800 Nannie Helen Burroughs Avenue Northeast, Washington, DC",
+	"kind": "Other",
+	"coordinates": ["38.899093", "-76.9331175"]
+}, {
+	"year": 1990,
+	"name": "Diane's Hair Studios",
+	"address": "4804 Nannie Helen Burroughs Avenue Northeast, Washington, DC",
+	"kind": "Other",
+	"coordinates": ["38.8992046", "-76.9333656"]
+}, {
+	"year": 1990,
+	"name": "Al's Auto",
+	"address": "4836 Nannie Helen Burroughs Avenue Northeast, Washington, DC",
+	"kind": "Auto",
+	"coordinates": ["38.8992929", "-76.9324591"]
+}, {
+	"year": 1990,
+	"name": "Community Exxon",
+	"address": "4854 Nannie Helen Burroughs Avenue Northeast, Washington, DC",
+	"kind": "Auto",
+	"coordinates": ["38.8991167", "-76.9320063"]
+}, {
+	"year": 1990,
+	"name": "Cousins Grocery Store",
+	"address": "4903 Nannie Helen Burroughs Avenue Northeast, Washington, DC",
+	"kind": "Food",
+	"coordinates": ["38.8986495", "-76.9314817"]
+}, {
+	"year": 1990,
+	"name": "Quick Stop Deli",
+	"address": "4903 Nannie Helen Burroughs Avenue Northeast, Washington, DC",
+	"kind": "Food",
+	"coordinates": ["38.899649499999995", "-76.9304817"]
+}, {
+	"year": 1990,
+	"name": "Washington Funeral Home",
+	"address": "4925 Nannie Helen Burroughs Avenue Northeast, Washington, DC",
+	"kind": "Other",
+	"coordinates": ["38.8981547", "-76.9302088"]
+}, {
+	"year": 1990,
+	"name": "Gerald Family Care",
+	"address": "5000 Nannie Helen Burroughs Avenue Northeast, Washington, DC",
+	"kind": "Other",
+	"coordinates": ["38.899319", "-76.9282077"]
+}, {
+	"year": 1990,
+	"name": "Grant Park Gifts Inc",
+	"address": "5000 Nannie Helen Burroughs Avenue Northeast, Washington, DC",
+	"kind": "Other",
+	"coordinates": ["38.900318999999996", "-76.9272077"]
+}, {
+	"year": 1990,
+	"name": "Grant Park Care Center",
+	"address": "5000 Nannie Helen Burroughs Avenue Northeast, Washington, DC",
+	"kind": "Other",
+	"coordinates": ["38.900318999999996", "-76.9272077"]
+}, {
+	"year": 1990,
+	"name": "Health America Group",
+	"address": "5000 Nannie Helen Burroughs Avenue Northeast, Washington, DC",
+	"kind": "Health",
+	"coordinates": ["38.900318999999996", "-76.9272077"]
+}, {
+	"year": 1990,
+	"name": "Holy Trinity Baptist Church",
+	"address": "5001 Nannie Helen Burroughs Avenue Northeast, Washington, DC",
+	"kind": "Religion",
+	"coordinates": ["38.898332", "-76.9274658"]
+}, {
+	"year": 1990,
+	"name": "National Day Care",
+	"address": "5109 Nannie Helen Burroughs Avenue Northeast, Washington, DC",
+	"kind": "Other",
+	"coordinates": ["38.8980771", "-76.9269167"]
+}, {
+	"year": 1990,
+	"name": "Sargent Federal Credit Union",
+	"address": "5019 Nannie Helen Burroughs Avenue Northeast, Washington, DC",
+	"kind": "Other",
+	"coordinates": ["38.8983309", "-76.9273743"]
+}, {
+	"year": 1990,
+	"name": "Sargent Memorial Church",
+	"address": "5109 Nannie Helen Burroughs Avenue Northeast, Washington, DC",
+	"kind": "Religion",
+	"coordinates": ["38.8990771", "-76.9259167"]
+}, {
+	"year": 1990,
+	"name": "Sargent Memorial Day Care",
+	"address": "5109 Nannie Helen Burroughs Avenue Northeast, Washington, DC",
+	"kind": "Other",
+	"coordinates": ["38.8990771", "-76.9259167"]
+}, {
+	"year": 1990,
+	"name": "Pilgrim Land Baptist Church",
+	"address": "5119 Nannie Helen Burroughs Avenue Northeast, Washington, DC",
+	"kind": "Religion",
+	"coordinates": ["38.8981561", "-76.9263483"]
+}, {
+	"year": 1990,
+	"name": "Affordable Supply",
+	"address": "5121 Nannie Helen Burroughs Avenue Northeast, Washington, DC",
+	"kind": "Other",
+	"coordinates": ["38.8982039", "-76.9263503"]
+}, {
+	"year": 1990,
+	"name": "Betty Brite Cleaners",
+	"address": "5123 Nannie Helen Burroughs Avenue Northeast, Washington, DC",
+	"kind": "Other",
+	"coordinates": ["38.8982053", "-76.9263148"]
+}, {
+	"year": 1990,
+	"name": "Sonny\u2019s Amoco",
+	"address": "5207 Nannie Helen Burroughs Avenue Northeast, Washington, DC",
+	"kind": "Auto",
+	"coordinates": ["38.8979993", "-76.9253009"]
+}, {
+	"year": 1990,
+	"name": "George\u2019s Carryout",
+	"address": "5210 Nannie Helen Burroughs Avenue Northeast, Washington, DC",
+	"kind": "Other",
+	"coordinates": ["38.8983985", "-76.9250732"]
+}, {
+	"year": 1990,
+	"name": "Contee African Methodist Episcopal Zion Church",
+	"address": "903 Division Ave NE, Washington, DC 20019",
+	"kind": "Religion",
+	"coordinates": ["38.9019968", "-76.9239309"]
+}, {
+	"year": 1990,
+	"name": "First Baptist Deanwood",
+	"address": "1008 45th St NE, Washington, DC 20019",
+	"kind": "Religion",
+	"coordinates": ["38.9031088", "-76.9379833"]
+}, {
+	"year": 1990,
+	"name": "Zion Baptist Church-Eastland",
+	"address": "1234 Kenilworth Avenue Northeast, Washington, DC 20019",
+	"kind": "Religion",
+	"coordinates": ["38.9067041", "-76.9398853"]
+}, {
+	"year": 1990,
+	"name": "Video Channel",
+	"address": "4510 East Capitol Street Northeast, Washington, DC",
+	"kind": "Other",
+	"coordinates": ["38.8900383", "-76.9371862"]
+}, {
+	"year": 1990,
+	"name": "Progressive Life Center: A Human Services Firm",
+	"address": "4115 Minnesota Avenue Northeast, Washington, DC",
+	"kind": "Other",
+	"coordinates": ["38.8980314", "-76.9464593"]
+}, {
+	"year": 1990,
+	"name": "Tabernacle Baptist Church",
+	"address": "721 Division Ave NE, Washington, DC 20019",
+	"kind": "Religion",
+	"coordinates": ["38.8996251", "-76.9249397"]
+}, {
+	"year": 1990,
+	"name": "Randall Memorial United Methodist Church",
+	"address": "1002 46th St NE, Washington, DC 20019",
+	"kind": "Religion",
+	"coordinates": ["38.9029886", "-76.9368948"]
+}, {
+	"year": 1990,
+	"name": "Church of the Incarnation",
+	"address": "880 Eastern Ave NE, Washington, DC 20019",
+	"kind": "Religion",
+	"coordinates": ["38.9015704", "-76.9208758"]
+}, {
+	"year": 1990,
+	"name": "Antioch Baptist Church",
+	"address": "1105 50th St NE, Washington, DC 20019",
+	"kind": "Religion",
+	"coordinates": ["38.9049824", "-76.9282583"]
+}]

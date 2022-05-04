@@ -1,0 +1,3850 @@
+[
+    {
+        "address": "Safeway",
+        "openyear": "2000",
+        "closeyear": "2005",
+        "type": "grocery",
+        "coordinates": [
+            "38.893291",
+            "-76.947510"
+        ]
+    },
+    {
+        "address": "Dave Brown's Wine and Liquor",
+        "openyear": "2010",
+        "closeyear": "2022",
+        "type": "liquor",
+        "coordinates": [
+            "38.902640",
+            "-76.934920"
+        ]
+    },
+    {
+        "address": "Suburban Market",
+        "openyear": "2010",
+        "closeyear": "2022",
+        "type": "convenience",
+        "coordinates": [
+            "38.902970",
+            "-76.936500"
+        ]
+    },
+    {
+        "address": "A&S Grocery Store",
+        "openyear": "2010",
+        "closeyear": "2022",
+        "type": "grocery",
+        "coordinates": [
+            "38.903070",
+            "-76.934060"
+        ]
+    },
+    {
+        "address": "7-Eleven",
+        "openyear": "2010",
+        "closeyear": "2022",
+        "type": "convenience",
+        "coordinates": [
+            "38.899030",
+            "-76.931960"
+        ]
+    },
+    {
+        "address": "Uncle Lee's Liquor",
+        "openyear": "2010",
+        "closeyear": "2022",
+        "type": "liquor",
+        "coordinates": [
+            "38.904390",
+            "-76.924180"
+        ]
+    },
+    {
+        "address": "Wendy's",
+        "openyear": "2010",
+        "closeyear": "2022",
+        "type": "restaurant",
+        "coordinates": [
+            "38.901860",
+            "-76.941590"
+        ]
+    },
+    {
+        "address": "Subway",
+        "openyear": "2010",
+        "closeyear": "2022",
+        "type": "restaurant",
+        "coordinates": [
+            "38.899110",
+            "-76.933450"
+        ]
+    },
+
+    {
+        "address": "Shoemaker D N r",
+        "openyear": "1943",
+        "closeyear": "1953",
+        "location": [
+            "38.97319342857143",
+            "-77.01206528571429"
+        ]
+    },
+    {
+        "address": "Geni Conference of Seventh-day Adventists",
+        "openyear": "1943",
+        "closeyear": "1953",
+        "location": [
+            "38.973595333333336",
+            "-77.01259988888889"
+        ]
+    },
+    {
+        "address": "Perma-Stone Sales Agency",
+        "openyear": "1943",
+        "closeyear": "1953",
+        "location": [
+            "38.976763285714284",
+            "-77.01664628571429"
+        ]
+    },
+    {
+        "address": "Independent Laundries Inc",
+        "openyear": "1943",
+        "closeyear": "1953",
+        "location": [
+            "38.93600798863636",
+            "-76.96462551136364"
+        ]
+    },
+    {
+        "address": "ABC Laundry",
+        "openyear": "1943",
+        "closeyear": "1953",
+        "location": [
+            "38.93469175",
+            "-76.96240390197724"
+        ]
+    },
+    {
+        "address": "Jock's Liquors Inc",
+        "openyear": "1953",
+        "closeyear": "1963",
+        "location": [
+            "38.90438315",
+            "-76.92364054055616"
+        ],
+        "type": "liquor"
+    },
+    {
+        "address": "Diamond Recording Co",
+        "openyear": "1953",
+        "closeyear": "1963",
+        "location": [
+            "38.906226",
+            "-76.926291"
+        ]
+    },
+    {
+        "address": "Micolucci Tony & Son (stone contractor)",
+        "openyear": "1953",
+        "closeyear": "1963",
+        "location": [
+            "38.9310147",
+            "-76.9581107"
+        ]
+    },
+    {
+        "address": "Life Studios",
+        "openyear": "1953",
+        "closeyear": "1963",
+        "location": [
+            "38.93469175",
+            "-76.96240390197724"
+        ]
+    },
+    {
+        "address": "House of Kleen (cleaners)",
+        "openyear": "1963",
+        "closeyear": "1972",
+        "location": [
+            "38.961922",
+            "-76.99705131683157"
+        ]
+    },
+    {
+        "address": "Bayer Drugs",
+        "openyear": "1972",
+        "closeyear": "1993",
+        "location": [
+            "38.894113",
+            "-76.911096"
+        ]
+    },
+    {
+        "address": "Seat Pleasant Drugs",
+        "openyear": "1972",
+        "closeyear": "1993",
+        "location": [
+            "38.894113",
+            "-76.911096"
+        ]
+    },
+    {
+        "address": "Wight Pharmacy",
+        "openyear": "1972",
+        "closeyear": "1983",
+        "location": [
+            "38.894113",
+            "-76.911096"
+        ]
+    },
+    {
+        "address": "Retail Variety Store",
+        "openyear": "1972",
+        "closeyear": "1983",
+        "location": [
+            "38.89411917018206",
+            "-76.91110391392917"
+        ],
+        "type": "convenience"
+    },
+    {
+        "address": "Eastern Ave Upholstery Academy",
+        "openyear": "1972",
+        "closeyear": "1983",
+        "location": [
+            "38.89412225527309",
+            "-76.91110787089374"
+        ]
+    },
+    {
+        "address": "Printers II",
+        "openyear": "1972",
+        "closeyear": "1983",
+        "location": [
+            "38.89412225527309",
+            "-76.91110787089374"
+        ]
+    },
+    {
+        "address": "Richardson Typographers",
+        "openyear": "1972",
+        "closeyear": "1983",
+        "location": [
+            "38.89412225527309",
+            "-76.91110787089374"
+        ]
+    },
+    {
+        "address": "Eastern Carry-out",
+        "openyear": "1972",
+        "closeyear": "1983",
+        "location": [
+            "38.894159275949704",
+            "-76.91115535479247"
+        ],
+        "type": "restaurant"
+    },
+    {
+        "address": "Burno Brothers Inc, Ebone Inc",
+        "openyear": "1983",
+        "closeyear": "1993",
+        "location": [
+            "38.89355675",
+            "-76.91040650000001"
+        ]
+    },
+    {
+        "address": "PeachesNCream Child",
+        "openyear": "1983",
+        "closeyear": "2003",
+        "location": [
+            "38.89412225527309",
+            "-76.91110787089374"
+        ],
+        "type": "restaurant"
+    },
+    {
+        "address": "Blue's Seafood & Deli",
+        "openyear": "1983",
+        "closeyear": "1993",
+        "location": [
+            "38.894159275949704",
+            "-76.91115535479247"
+        ],
+        "type": "restaurant"
+    },
+    {
+        "address": "Seat Pleasant Drugs SPL",
+        "openyear": "1993",
+        "closeyear": "2003",
+        "location": [
+            "38.894113",
+            "-76.911096"
+        ]
+    },
+    {
+        "address": "Healthcall",
+        "openyear": "1993",
+        "closeyear": "2003",
+        "location": [
+            "38.9310147",
+            "-76.9581107"
+        ]
+    },
+    {
+        "address": "Vanpark Drugs",
+        "openyear": "1993",
+        "closeyear": "2003",
+        "location": [
+            "38.9310147",
+            "-76.9581107"
+        ]
+    },
+    {
+        "address": "Wight Pharmacy",
+        "openyear": "1993",
+        "closeyear": "2003",
+        "location": [
+            "38.9310147",
+            "-76.9581107"
+        ]
+    },
+    {
+        "address": "Seven 11 Food",
+        "openyear": "1993",
+        "closeyear": "2003",
+        "location": [
+            "38.9310147",
+            "-76.9581107"
+        ],
+        "type": "convenience"
+    },
+    {
+        "address": "Floyd's Landscaping Service",
+        "openyear": "1963",
+        "closeyear": "2003",
+        "location": [
+            "38.907297",
+            "-76.93994010192253"
+        ]
+    },
+    {
+        "address": "Matthew's Johnny Ice & Fuel Co",
+        "openyear": "1943",
+        "closeyear": "1953",
+        "location": [
+            "38.905987",
+            "-76.93630382608696"
+        ]
+    },
+    {
+        "address": "Economy Grocery",
+        "openyear": "1943",
+        "closeyear": "1963",
+        "location": [
+            "38.90615306763238",
+            "-76.93240161368264"
+        ],
+        "type": "grocery"
+    },
+    {
+        "address": "A & M Market",
+        "openyear": "1963",
+        "closeyear": "1972",
+        "location": [
+            "38.90615306763238",
+            "-76.93240161368264"
+        ],
+        "type": "grocery"
+    },
+    {
+        "address": "DC SC Jr Hi Roper",
+        "openyear": "1983",
+        "closeyear": "1993",
+        "location": [
+            "38.906152",
+            "-76.932551"
+        ]
+    },
+    {
+        "address": "DC SC Jr Hi Roper, DC SC Athletics",
+        "openyear": "1993",
+        "closeyear": "2003",
+        "location": [
+            "38.906152",
+            "-76.932551"
+        ]
+    },
+    {
+        "address": "Brothers Club of DC Inc The",
+        "openyear": "1972",
+        "closeyear": "1983",
+        "location": [
+            "38.90357048551712",
+            "-76.94687054856628"
+        ]
+    },
+    {
+        "address": "Mayfair Mansions Inc Main Inc",
+        "openyear": "1972",
+        "closeyear": "1983",
+        "location": [
+            "38.90357048551712",
+            "-76.94687054856628"
+        ]
+    },
+    {
+        "address": "Paradise Manor Inc Mantnc",
+        "openyear": "1972",
+        "closeyear": "1983",
+        "location": [
+            "38.90357048551712",
+            "-76.94687054856628"
+        ]
+    },
+    {
+        "address": "Abundant Life Clinic",
+        "openyear": "1983",
+        "closeyear": "1993",
+        "location": [
+            "38.9061229",
+            "-76.9504941"
+        ]
+    },
+    {
+        "address": "Mayfair Mansions",
+        "openyear": "1983",
+        "closeyear": "1993",
+        "location": [
+            "38.90357048551712",
+            "-76.94687054856628"
+        ]
+    },
+    {
+        "address": "English & Condrary",
+        "openyear": "1983",
+        "closeyear": "2003",
+        "location": [
+            "38.90157187446321",
+            "-76.93884028786098"
+        ]
+    },
+    {
+        "address": "Pro Vent Termite Control",
+        "openyear": "1983",
+        "closeyear": "1993",
+        "location": [
+            "38.90173983192758",
+            "-76.92537121842201"
+        ]
+    },
+    {
+        "address": "Abundant Life Clnc",
+        "openyear": "1993",
+        "closeyear": "2003",
+        "location": [
+            "38.9061229",
+            "-76.9504941"
+        ]
+    },
+    {
+        "address": "Driscoll E A (gasoline)",
+        "openyear": "1943",
+        "closeyear": "1953",
+        "location": [
+            "38.900608",
+            "-76.944103"
+        ]
+    },
+    {
+        "address": "Irving's Service Station",
+        "openyear": "1943",
+        "closeyear": "1953",
+        "location": [
+            "38.900605",
+            "-76.94387573972"
+        ]
+    },
+    {
+        "address": "Driscoll's Ed Service Station",
+        "openyear": "1953",
+        "closeyear": "1963",
+        "location": [
+            "38.900608",
+            "-76.944103"
+        ]
+    },
+    {
+        "address": "Elbee Service Station",
+        "openyear": "1953",
+        "closeyear": "1963",
+        "location": [
+            "38.900605",
+            "-76.94387573972"
+        ]
+    },
+    {
+        "address": "Rollin's Funeral Home",
+        "openyear": "1953",
+        "closeyear": "2003",
+        "location": [
+            "38.90043615175231",
+            "-76.94015983633604"
+        ]
+    },
+    {
+        "address": "Suburban Liquors",
+        "openyear": "1953",
+        "closeyear": "1983",
+        "location": [
+            "38.9003142",
+            "-76.939389"
+        ],
+        "type": "liquor"
+    },
+    {
+        "address": "Driscoll's Esso Service",
+        "openyear": "1963",
+        "closeyear": "1972",
+        "location": [
+            "38.900608",
+            "-76.944103"
+        ]
+    },
+    {
+        "address": "Malcolm Properties ri est",
+        "openyear": "1963",
+        "closeyear": "1993",
+        "location": [
+            "38.9003142",
+            "-76.939389"
+        ]
+    },
+    {
+        "address": "Webb's Esso Station",
+        "openyear": "1972",
+        "closeyear": "1983",
+        "location": [
+            "38.900608",
+            "-76.944103"
+        ]
+    },
+    {
+        "address": "D of C Government Health Dept of Public",
+        "openyear": "1972",
+        "closeyear": "1983",
+        "location": [
+            "38.900605",
+            "-76.9439031724506"
+        ]
+    },
+    {
+        "address": "Cumming's Trucking",
+        "openyear": "1972",
+        "closeyear": "1983",
+        "location": [
+            "38.900440350000004",
+            "-76.9422673"
+        ]
+    },
+    {
+        "address": "Exxon Co USA, Webb's Exxon Service",
+        "openyear": "1983",
+        "closeyear": "1993",
+        "location": [
+            "38.900608",
+            "-76.944103"
+        ]
+    },
+    {
+        "address": "DC Clinics",
+        "openyear": "1983",
+        "closeyear": "1993",
+        "location": [
+            "38.900605",
+            "-76.9439031724506"
+        ]
+    },
+    {
+        "address": "Kenilworth Trash Co, Moon Construction, Time Oil Company",
+        "openyear": "1983",
+        "closeyear": "1993",
+        "location": [
+            "38.900440350000004",
+            "-76.9422673"
+        ]
+    },
+    {
+        "address": "MN Exxon Yes Exxon",
+        "openyear": "1993",
+        "closeyear": "2003",
+        "location": [
+            "38.900608",
+            "-76.944103"
+        ]
+    },
+    {
+        "address": "DC Clinics and Supplementals",
+        "openyear": "1993",
+        "closeyear": "2003",
+        "location": [
+            "38.900605",
+            "-76.9439031724506"
+        ]
+    },
+    {
+        "address": "W & F Eviction Co",
+        "openyear": "1993",
+        "closeyear": "2003",
+        "location": [
+            "38.9005455",
+            "-76.9363668"
+        ]
+    },
+    {
+        "address": "Hill's Transfer Co",
+        "openyear": "1953",
+        "closeyear": "1963",
+        "location": [
+            "38.903302370365026",
+            "-76.95031661814514"
+        ]
+    },
+    {
+        "address": "Mayfair Beauty Salon, Mayfair Ext Inc (beauty parlor)",
+        "openyear": "1963",
+        "closeyear": "1972",
+        "location": [
+            "38.900661207547586",
+            "-76.94720077844708"
+        ]
+    },
+    {
+        "address": "Mayfair Barber Shop",
+        "openyear": "1963",
+        "closeyear": "1972",
+        "location": [
+            "38.900653380054386",
+            "-76.94719131822524"
+        ]
+    },
+    {
+        "address": "Handcraft Deluxe Drycleaners",
+        "openyear": "1963",
+        "closeyear": "1972",
+        "location": [
+            "38.90063772506798",
+            "-76.94717239778154"
+        ]
+    },
+    {
+        "address": "Mayfair Dry Cleaners",
+        "openyear": "1963",
+        "closeyear": "1972",
+        "location": [
+            "38.9007081725068",
+            "-76.94725753977815"
+        ]
+    },
+    {
+        "address": "Cassell A I Land Corp The",
+        "openyear": "1963",
+        "closeyear": "1972",
+        "location": [
+            "38.900629897574774",
+            "-76.9471629375597"
+        ]
+    },
+    {
+        "address": "Mayfair Super Market",
+        "openyear": "1963",
+        "closeyear": "1972",
+        "location": [
+            "38.900614242588375",
+            "-76.947144017116"
+        ],
+        "type": "grocery"
+    },
+    {
+        "address": "Olympia Bakery Inc",
+        "openyear": "1963",
+        "closeyear": "1993",
+        "location": [
+            "38.899460950000005",
+            "-76.9272420258228"
+        ],
+        "type": "restaurant"
+    },
+    {
+        "address": "Mayfair-Parkside Center",
+        "openyear": "1972",
+        "closeyear": "1983",
+        "location": [
+            "38.902975",
+            "-76.94993"
+        ]
+    },
+    {
+        "address": "Simonson Excavating",
+        "openyear": "1983",
+        "closeyear": "2003",
+        "location": [
+            "38.899662",
+            "-76.92772518181819"
+        ]
+    },
+    {
+        "address": "The Consortium",
+        "openyear": "1993",
+        "closeyear": "2003",
+        "location": [
+            "38.9060193",
+            "-76.9523069"
+        ]
+    },
+    {
+        "address": "Grant Park Dialysis and Technicare Pharmacy",
+        "openyear": "1993",
+        "closeyear": "2003",
+        "location": [
+            "38.8994368",
+            "-76.9282584"
+        ]
+    },
+    {
+        "address": "Chandler Writers and Positive Energy",
+        "openyear": "1993",
+        "closeyear": "2003",
+        "location": [
+            "38.89982492999742",
+            "-76.92738242857939"
+        ]
+    },
+    {
+        "address": "Malvan & Schey Deanwood Funeral Home",
+        "openyear": "1943",
+        "closeyear": "1953",
+        "location": []
+    },
+    {
+        "address": "Burrell's Harage Auto Repairing",
+        "openyear": "1943",
+        "closeyear": "1953",
+        "location": []
+    },
+    {
+        "address": "Jones Drug Store",
+        "openyear": "1943",
+        "closeyear": "1953",
+        "location": []
+    },
+    {
+        "address": "Deanwood Music & Novelty Shop",
+        "openyear": "1943",
+        "closeyear": "1953",
+        "location": []
+    },
+    {
+        "address": "Modern Beauty Box",
+        "openyear": "1943",
+        "closeyear": "1963",
+        "location": []
+    },
+    {
+        "address": "Herman's Liquor Store",
+        "openyear": "1943",
+        "closeyear": "1963",
+        "location": [],
+        "type": "liquor"
+    },
+    {
+        "address": "Apex Beauty Salon",
+        "openyear": "1943",
+        "closeyear": "1953",
+        "location": []
+    },
+    {
+        "address": "Keene & Baker (barber shop)",
+        "openyear": "1943",
+        "closeyear": "1953",
+        "location": []
+    },
+    {
+        "address": "Washington Henry S & Sons (undertakers)",
+        "openyear": "1943",
+        "closeyear": "1983",
+        "location": []
+    },
+    {
+        "address": "Menick's Grocery Store",
+        "openyear": "1953",
+        "closeyear": "1983",
+        "location": [],
+        "type": "grocery"
+    },
+    {
+        "address": "William's Funeral Home",
+        "openyear": "1953",
+        "closeyear": "1972",
+        "location": []
+    },
+    {
+        "address": "King's Gasoline Service Center",
+        "openyear": "1953",
+        "closeyear": "1963",
+        "location": []
+    },
+    {
+        "address": "Glendale Amoco Service Station",
+        "openyear": "1953",
+        "closeyear": "1963",
+        "location": []
+    },
+    {
+        "address": "Terry's Auto Body & Fender",
+        "openyear": "1953",
+        "closeyear": "1972",
+        "location": []
+    },
+    {
+        "address": "Eiland Realty Co",
+        "openyear": "1953",
+        "closeyear": "1963",
+        "location": []
+    },
+    {
+        "address": "Federal Life Insurance Co Inc",
+        "openyear": "1953",
+        "closeyear": "1963",
+        "location": []
+    },
+    {
+        "address": "Deanwood Music Shop",
+        "openyear": "1953",
+        "closeyear": "1963",
+        "location": []
+    },
+    {
+        "address": "Official Cleaners",
+        "openyear": "1953",
+        "closeyear": "1972",
+        "location": []
+    },
+    {
+        "address": "Jackson Bros Radio & Television",
+        "openyear": "1953",
+        "closeyear": "1963",
+        "location": []
+    },
+    {
+        "address": "Tinsley's Dress Shop",
+        "openyear": "1953",
+        "closeyear": "1963",
+        "location": []
+    },
+    {
+        "address": "Washington's Funeral Home",
+        "openyear": "1953",
+        "closeyear": "1963",
+        "location": []
+    },
+    {
+        "address": "Ollie's Beauty Shop",
+        "openyear": "1953",
+        "closeyear": "1963",
+        "location": []
+    },
+    {
+        "address": "King's Gasoline Serv Center",
+        "openyear": "1963",
+        "closeyear": "1972",
+        "location": []
+    },
+    {
+        "address": "Advanced Auto Reprs",
+        "openyear": "1963",
+        "closeyear": "1972",
+        "location": []
+    },
+    {
+        "address": "Fran-Ru Beauty Salon",
+        "openyear": "1963",
+        "closeyear": "1983",
+        "location": []
+    },
+    {
+        "address": "Federal Life Division of Supreme Liberty Ins",
+        "openyear": "1963",
+        "closeyear": "1972",
+        "location": []
+    },
+    {
+        "address": "Supreme Life Ins Co of America",
+        "openyear": "1963",
+        "closeyear": "1983",
+        "location": []
+    },
+    {
+        "address": "Mindel's Grocery",
+        "openyear": "1963",
+        "closeyear": "1972",
+        "location": [],
+        "type": "grocery"
+    },
+    {
+        "address": "Van Park Drugs",
+        "openyear": "1963",
+        "closeyear": "1972",
+        "location": []
+    },
+    {
+        "address": "Northeast Lunch Room",
+        "openyear": "1963",
+        "closeyear": "1972",
+        "location": [],
+        "type": "restaurant"
+    },
+    {
+        "address": "Tom's Barber Shop",
+        "openyear": "1963",
+        "closeyear": "1972",
+        "location": []
+    },
+    {
+        "address": "Duplex Beauty Shop",
+        "openyear": "1963",
+        "closeyear": "1972",
+        "location": []
+    },
+    {
+        "address": "Tinsley's Shoe Rep",
+        "openyear": "1963",
+        "closeyear": "1972",
+        "location": []
+    },
+    {
+        "address": "Deanwood Liquors Inc",
+        "openyear": "1963",
+        "closeyear": "1972",
+        "location": [],
+        "type": "liquor"
+    },
+    {
+        "address": "Townsend Beauty Mart",
+        "openyear": "1963",
+        "closeyear": "1983",
+        "location": []
+    },
+    {
+        "address": "Washington Funeral Home",
+        "openyear": "1963",
+        "closeyear": "1972",
+        "location": []
+    },
+    {
+        "address": "Frankie's Phillips 66 Service Center",
+        "openyear": "1972",
+        "closeyear": "1983",
+        "location": []
+    },
+    {
+        "address": "McDonald's Restaurants",
+        "openyear": "1972",
+        "closeyear": "1983",
+        "location": [],
+        "type": "restaurant"
+    },
+    {
+        "address": "Bonanza Cleaners",
+        "openyear": "1972",
+        "closeyear": "1983",
+        "location": []
+    },
+    {
+        "address": "Tanner's Cleaners",
+        "openyear": "1972",
+        "closeyear": "1983",
+        "location": []
+    },
+    {
+        "address": "Deane Avenue Shell Station",
+        "openyear": "1972",
+        "closeyear": "1983",
+        "location": []
+    },
+    {
+        "address": "King Brothers Service Center",
+        "openyear": "1972",
+        "closeyear": "1983",
+        "location": []
+    },
+    {
+        "address": "Woody's Auto Body",
+        "openyear": "1972",
+        "closeyear": "1983",
+        "location": []
+    },
+    {
+        "address": "Terry's Auto Body & Fender Wks",
+        "openyear": "1972",
+        "closeyear": "1983",
+        "location": []
+    },
+    {
+        "address": "East-Atlantic Construction Co Inc",
+        "openyear": "1972",
+        "closeyear": "1983",
+        "location": []
+    },
+    {
+        "address": "Neighborhood Legal Services Program",
+        "openyear": "1972",
+        "closeyear": "1983",
+        "location": []
+    },
+    {
+        "address": "Nat's Barber Salon",
+        "openyear": "1972",
+        "closeyear": "1983",
+        "location": []
+    },
+    {
+        "address": "Electric Appliances-Repairing",
+        "openyear": "1972",
+        "closeyear": "1983",
+        "location": []
+    },
+    {
+        "address": "Deanwood Liquors",
+        "openyear": "1972",
+        "closeyear": "1983",
+        "location": [],
+        "type": "liquor"
+    },
+    {
+        "address": "Mason Bros Esso Service Station",
+        "openyear": "1972",
+        "closeyear": "1983",
+        "location": []
+    },
+    {
+        "address": "Pal's Beauty Nook (beauty shop)",
+        "openyear": "1972",
+        "closeyear": "1983",
+        "location": []
+    },
+    {
+        "address": "Frankies Phillps 66",
+        "openyear": "1983",
+        "closeyear": "1993",
+        "location": []
+    },
+    {
+        "address": "Deane Avenue Cleaners",
+        "openyear": "1983",
+        "closeyear": "1993",
+        "location": []
+    },
+    {
+        "address": "Terrys Auto Body Work",
+        "openyear": "1983",
+        "closeyear": "1993",
+        "location": []
+    },
+    {
+        "address": "Barnes Invest Service",
+        "openyear": "1983",
+        "closeyear": "1993",
+        "location": []
+    },
+    {
+        "address": "Buskeys Beauty Lounge",
+        "openyear": "1983",
+        "closeyear": "2003",
+        "location": []
+    },
+    {
+        "address": "N E R B Dental Examiners",
+        "openyear": "1983",
+        "closeyear": "1993",
+        "location": []
+    },
+    {
+        "address": "NATL Mercantile Agency",
+        "openyear": "1983",
+        "closeyear": "1993",
+        "location": []
+    },
+    {
+        "address": "Northeast Regional Dental",
+        "openyear": "1983",
+        "closeyear": "1993",
+        "location": []
+    },
+    {
+        "address": "Wash Funeral Home, Wash Henry S & Sons",
+        "openyear": "1983",
+        "closeyear": "1993",
+        "location": []
+    },
+    {
+        "address": "Suburban Liquors",
+        "openyear": "1983",
+        "closeyear": "1993",
+        "location": [],
+        "type": "liquor"
+    },
+    {
+        "address": "Deane Avenue Clnrs",
+        "openyear": "1993",
+        "closeyear": "2003",
+        "location": []
+    },
+    {
+        "address": "Wash Funeral Home",
+        "openyear": "1993",
+        "closeyear": "2003",
+        "location": []
+    },
+    {
+        "address": "D of C Govt (government building with clinics)",
+        "openyear": "1963",
+        "closeyear": "1972",
+        "location": [
+            "38.900560409747925",
+            "-76.95053266967591"
+        ]
+    },
+    {
+        "address": "Madden Realty Co",
+        "openyear": "1963",
+        "closeyear": "1983",
+        "location": [
+            "38.898255265115345",
+            "-76.93140231165508"
+        ]
+    },
+    {
+        "address": "Andrea's Beauty Salon",
+        "openyear": "1963",
+        "closeyear": "1972",
+        "location": [
+            "38.898255256820285",
+            "-76.93142515239677"
+        ]
+    },
+    {
+        "address": "Suburban Market",
+        "openyear": "1963",
+        "closeyear": "1972",
+        "location": [
+            "38.898255282632945",
+            "-76.93142667534387"
+        ],
+        "type": "grocery"
+    },
+    {
+        "address": "Pomps Beauty Shop",
+        "openyear": "1963",
+        "closeyear": "1972",
+        "location": [
+            "38.898255385883594",
+            "-76.93143276713228"
+        ]
+    },
+    {
+        "address": "Safeway Stores Inc",
+        "openyear": "1963",
+        "closeyear": "1983",
+        "location": [
+            "38.898844999999994",
+            "-76.92714088045264"
+        ],
+        "type": "grocery"
+    },
+    {
+        "address": "High's Dairy Products Corp",
+        "openyear": "1963",
+        "closeyear": "1972",
+        "location": [
+            "38.900954",
+            "-76.9508809"
+        ],
+        "type": "grocery"
+    },
+    {
+        "address": "Jimmies' Hardware Store",
+        "openyear": "1963",
+        "closeyear": "1983",
+        "location": [
+            "38.900954",
+            "-76.9508809"
+        ]
+    },
+    {
+        "address": "Bullock's Barber Shop",
+        "openyear": "1963",
+        "closeyear": "1972",
+        "location": [
+            "38.900954",
+            "-76.9508809"
+        ]
+    },
+    {
+        "address": "Spick & Span Market",
+        "openyear": "1963",
+        "closeyear": "1972",
+        "location": [
+            "38.900954",
+            "-76.9508809"
+        ],
+        "type": "grocery"
+    },
+    {
+        "address": "King's Fuel Oil Co",
+        "openyear": "1963",
+        "closeyear": "1972",
+        "location": [
+            "38.900954",
+            "-76.9508809"
+        ]
+    },
+    {
+        "address": "Blakey's Service Shop",
+        "openyear": "1972",
+        "closeyear": "1983",
+        "location": [
+            "38.898255385883594",
+            "-76.93143276713228"
+        ]
+    },
+    {
+        "address": "Ozzie's Record Shop",
+        "openyear": "1972",
+        "closeyear": "1983",
+        "location": [
+            "38.900954",
+            "-76.9508809"
+        ]
+    },
+    {
+        "address": "Crockett Cleaners",
+        "openyear": "1972",
+        "closeyear": "1983",
+        "location": [
+            "38.900954",
+            "-76.9508809"
+        ]
+    },
+    {
+        "address": "Guys & Dolls Hair RPR",
+        "openyear": "1983",
+        "closeyear": "2003",
+        "location": [
+            "38.898255685049435",
+            "-76.93139013356647"
+        ]
+    },
+    {
+        "address": "Nannie H B SC Inc",
+        "openyear": "1983",
+        "closeyear": "1993",
+        "location": [
+            "38.900954",
+            "-76.9508809"
+        ]
+    },
+    {
+        "address": "Super Pride Markets",
+        "openyear": "1983",
+        "closeyear": "1993",
+        "location": [
+            "38.898844999999994",
+            "-76.92714088045264"
+        ],
+        "type": "grocery"
+    },
+    {
+        "address": "Holly Farm Fried Chicken",
+        "openyear": "1983",
+        "closeyear": "1993",
+        "location": [
+            "38.900954",
+            "-76.9508809"
+        ]
+    },
+    {
+        "address": "Jimmies Hardware Str",
+        "openyear": "1983",
+        "closeyear": "1993",
+        "location": [
+            "38.900954",
+            "-76.9508809"
+        ]
+    },
+    {
+        "address": "Betty Brite Cleaners",
+        "openyear": "1983",
+        "closeyear": "1993",
+        "location": [
+            "38.900954",
+            "-76.9508809"
+        ]
+    },
+    {
+        "address": "Mayo's Esso Station",
+        "openyear": "1943",
+        "closeyear": "1953",
+        "location": [
+            "38.9016367",
+            "-76.9429221"
+        ]
+    },
+    {
+        "address": "Chesapeake Motor Co",
+        "openyear": "1943",
+        "closeyear": "1953",
+        "location": [
+            "38.9016367",
+            "-76.9429221"
+        ]
+    },
+    {
+        "address": "Kenilworth Building & Loan Association",
+        "openyear": "1943",
+        "closeyear": "1953",
+        "location": [
+            "38.9016367",
+            "-76.9429221"
+        ]
+    },
+    {
+        "address": "Springfield Fire and Marine Insurance",
+        "openyear": "1943",
+        "closeyear": "1953",
+        "location": [
+            "38.9016367",
+            "-76.9429221"
+        ]
+    },
+    {
+        "address": "District Grocery Stores Inc",
+        "openyear": "1943",
+        "closeyear": "1953",
+        "location": [
+            "38.89298095",
+            "-76.95035074960487"
+        ],
+        "type": "grocery"
+    },
+    {
+        "address": "Greenway Market",
+        "openyear": "1943",
+        "closeyear": "1953",
+        "location": [
+            "38.89298095",
+            "-76.95035074960487"
+        ],
+        "type": "grocery"
+    },
+    {
+        "address": "Dargan's Restaurant",
+        "openyear": "1943",
+        "closeyear": "1953",
+        "location": [
+            "38.893032",
+            "-76.9503589"
+        ],
+        "type": "restaurant"
+    },
+    {
+        "address": "Mademoiselle Beauty Salon",
+        "openyear": "1943",
+        "closeyear": "1953",
+        "location": [
+            "38.89421089411244",
+            "-76.94996446396821"
+        ]
+    },
+    {
+        "address": "Vasco Theresa beauty shop",
+        "openyear": "1943",
+        "closeyear": "1953",
+        "location": [
+            "38.89421089411244",
+            "-76.94996446396821"
+        ]
+    },
+    {
+        "address": "Senator Theater",
+        "openyear": "1943",
+        "closeyear": "1953",
+        "location": [
+            "38.8944917",
+            "-76.949881"
+        ]
+    },
+    {
+        "address": "NorBud Hosierty & Ready to Wear Shop",
+        "openyear": "1943",
+        "closeyear": "1953",
+        "location": [
+            "38.89434278744772",
+            "-76.94986682959298"
+        ]
+    },
+    {
+        "address": "Peoples Drug Stores",
+        "openyear": "1943",
+        "closeyear": "1953",
+        "location": [
+            "38.89437315229719",
+            "-76.94983922518438"
+        ]
+    },
+    {
+        "address": "Ace Wrecking Co Inc",
+        "openyear": "1943",
+        "closeyear": "1953",
+        "location": [
+            "38.89542954762109",
+            "-76.94905634920451"
+        ]
+    },
+    {
+        "address": "Howard's Cleaners & Launderers",
+        "openyear": "1943",
+        "closeyear": "1953",
+        "location": [
+            "38.8954709",
+            "-76.9486031"
+        ]
+    },
+    {
+        "address": "Raulin's Bakery",
+        "openyear": "1943",
+        "closeyear": "1953",
+        "location": [
+            "38.89578616750856",
+            "-76.94872146209434"
+        ],
+        "type": "restaurant"
+    },
+    {
+        "address": "Friedrich Ed Sales Corp",
+        "openyear": "1943",
+        "closeyear": "1953",
+        "location": [
+            "38.89591749645949",
+            "-76.94857621885598"
+        ]
+    },
+    {
+        "address": "Globe Slicing Machine Agency",
+        "openyear": "1943",
+        "closeyear": "1953",
+        "location": [
+            "38.89591749645949",
+            "-76.94857621885598"
+        ]
+    },
+    {
+        "address": "Washington Scale & Equipment Co",
+        "openyear": "1943",
+        "closeyear": "1953",
+        "location": [
+            "38.89591749645949",
+            "-76.94857621885598"
+        ]
+    },
+    {
+        "address": "A & M Construction Co",
+        "openyear": "1943",
+        "closeyear": "1953",
+        "location": [
+            "38.8965403",
+            "-76.9469911"
+        ]
+    },
+    {
+        "address": "Acme Laundry Co",
+        "openyear": "1943",
+        "closeyear": "1953",
+        "location": [
+            "38.897112772832294",
+            "-76.94734510409103"
+        ]
+    },
+    {
+        "address": "Buhrman Service Station",
+        "openyear": "1943",
+        "closeyear": "1953",
+        "location": [
+            "38.898955",
+            "-76.946152"
+        ]
+    },
+    {
+        "address": "Shell Dealer Service Stations",
+        "openyear": "1943",
+        "closeyear": "1953",
+        "location": [
+            "38.898955",
+            "-76.946152"
+        ]
+    },
+    {
+        "address": "Empire Construction Co ofc",
+        "openyear": "1943",
+        "closeyear": "1953",
+        "location": [
+            "38.89757202046652",
+            "-76.94705620091162"
+        ]
+    },
+    {
+        "address": "White Star Restaurant",
+        "openyear": "1943",
+        "closeyear": "1953",
+        "location": [
+            "38.89764476880492",
+            "-76.94701950438889"
+        ],
+        "type": "restaurant"
+    },
+    {
+        "address": "Baltimore & Ohio Railroad",
+        "openyear": "1943",
+        "closeyear": "1953",
+        "location": [
+            "38.906217",
+            "-76.936492"
+        ]
+    },
+    {
+        "address": "McDonald's Service Center",
+        "openyear": "1963",
+        "closeyear": "1972",
+        "location": [
+            "38.8909914",
+            "-76.9525011"
+        ]
+    },
+    {
+        "address": "Ariste Dry Cleaners & Dyers Inc",
+        "openyear": "1963",
+        "closeyear": "1972",
+        "location": [
+            "38.8911448",
+            "-76.9524605"
+        ]
+    },
+    {
+        "address": "Official Cleaners",
+        "openyear": "1963",
+        "closeyear": "1972",
+        "location": [
+            "38.89112640789178",
+            "-76.95191594467789"
+        ]
+    },
+    {
+        "address": "Top Flite Gas Station",
+        "openyear": "1963",
+        "closeyear": "1972",
+        "location": [
+            "38.89118954756744",
+            "-76.95186778232065"
+        ]
+    },
+    {
+        "address": "Minnesota Avenue Paint Co",
+        "openyear": "1963",
+        "closeyear": "1983",
+        "location": [
+            "38.891273733801654",
+            "-76.95180356584432"
+        ]
+    },
+    {
+        "address": "Winslow Paint Co",
+        "openyear": "1963",
+        "closeyear": "1972",
+        "location": [
+            "38.891273733801654",
+            "-76.95180356584432"
+        ]
+    },
+    {
+        "address": "Bulls Floyd H & Son Inc (trucking)",
+        "openyear": "1963",
+        "closeyear": "1972",
+        "location": [
+            "38.892449893420725",
+            "-76.95101680486687"
+        ]
+    },
+    {
+        "address": "American Security & Trust Co",
+        "openyear": "1963",
+        "closeyear": "1983",
+        "location": [
+            "38.893093",
+            "-76.950539"
+        ]
+    },
+    {
+        "address": "Malcolm Liquors",
+        "openyear": "1963",
+        "closeyear": "2003",
+        "location": [
+            "38.89298095",
+            "-76.95035074960487"
+        ],
+        "type": "liquor"
+    },
+    {
+        "address": "Byrd's Flying A Serv (serving station)",
+        "openyear": "1963",
+        "closeyear": "1972",
+        "location": [
+            "38.89310436666667",
+            "-76.95053056666667"
+        ]
+    },
+    {
+        "address": "U-Haul Co",
+        "openyear": "1963",
+        "closeyear": "1972",
+        "location": [
+            "38.89310436666667",
+            "-76.95053056666667"
+        ]
+    },
+    {
+        "address": "K n K Motor Sales Inc (used cars)",
+        "openyear": "1963",
+        "closeyear": "1972",
+        "location": [
+            "38.8933939",
+            "-76.9507725"
+        ]
+    },
+    {
+        "address": "Standard Drug Co Inc",
+        "openyear": "1963",
+        "closeyear": "1983",
+        "location": [
+            "38.8938142",
+            "-76.9497066"
+        ]
+    },
+    {
+        "address": "Toler Sunoco Service Station",
+        "openyear": "1963",
+        "closeyear": "1972",
+        "location": [
+            "38.8936214",
+            "-76.9503964"
+        ]
+    },
+    {
+        "address": "John's Bargain Store",
+        "openyear": "1963",
+        "closeyear": "1972",
+        "location": [
+            "38.893923605470626",
+            "-76.94993215863208"
+        ]
+    },
+    {
+        "address": "Alfred's Men's Shop",
+        "openyear": "1963",
+        "closeyear": "1972",
+        "location": [
+            "38.8940582",
+            "-76.9497495"
+        ]
+    },
+    {
+        "address": "A & P Food Stores",
+        "openyear": "1963",
+        "closeyear": "1983",
+        "location": [
+            "38.894003421882495",
+            "-76.94987263452832"
+        ],
+        "type": "grocery"
+    },
+    {
+        "address": "Stephanson's Butter Crust Pie Co",
+        "openyear": "1963",
+        "closeyear": "1972",
+        "location": [
+            "38.894056043935535",
+            "-76.9498321773892"
+        ],
+        "type": "restaurant"
+    },
+    {
+        "address": "Great Eastern Distributg Co",
+        "openyear": "1963",
+        "closeyear": "1972",
+        "location": [
+            "38.8944555",
+            "-76.9493151"
+        ]
+    },
+    {
+        "address": "Thrifty Beverage Stores",
+        "openyear": "1963",
+        "closeyear": "1983",
+        "location": [
+            "38.894045255460696",
+            "-76.95008556113378"
+        ],
+        "type": "convenience"
+    },
+    {
+        "address": "Weltman's Liquor Department Store",
+        "openyear": "1963",
+        "closeyear": "1972",
+        "location": [
+            "38.894045255460696",
+            "-76.95008556113378"
+        ],
+        "type": "liquor"
+    },
+    {
+        "address": "Joy Stores Inc",
+        "openyear": "1963",
+        "closeyear": "1972",
+        "location": [
+            "38.894213",
+            "-76.950217"
+        ],
+        "type": "convenience"
+    },
+    {
+        "address": "Safeway Stores Inc",
+        "openyear": "1963",
+        "closeyear": "1983",
+        "location": [
+            "38.8947842",
+            "-76.9491383"
+        ],
+        "type": "grocery"
+    },
+    {
+        "address": "The Young Men's Shop of Wash Inc",
+        "openyear": "1963",
+        "closeyear": "1983",
+        "location": [
+            "38.894261",
+            "-76.9501611"
+        ]
+    },
+    {
+        "address": "Duvall's Barber Shop",
+        "openyear": "1963",
+        "closeyear": "1983",
+        "location": [
+            "38.89421089411244",
+            "-76.94996446396821"
+        ]
+    },
+    {
+        "address": "Official Cleaners",
+        "openyear": "1963",
+        "closeyear": "1972",
+        "location": [
+            "38.89424402184279",
+            "-76.9499402445351"
+        ]
+    },
+    {
+        "address": "District Theaters",
+        "openyear": "1963",
+        "closeyear": "1972",
+        "location": [
+            "38.8944917",
+            "-76.949881"
+        ]
+    },
+    {
+        "address": "Mel's Children's Shop Inc",
+        "openyear": "1963",
+        "closeyear": "1972",
+        "location": [
+            "38.89431027730348",
+            "-76.94989180566888"
+        ]
+    },
+    {
+        "address": "Peoples Drug Stores Northeast Area ",
+        "openyear": "1963",
+        "closeyear": "1972",
+        "location": [
+            "38.89437315229719",
+            "-76.94983922518438"
+        ]
+    },
+    {
+        "address": "Little Tavern Shops No 23",
+        "openyear": "1963",
+        "closeyear": "1983",
+        "location": [
+            "38.89456236438054",
+            "-76.94968199405152"
+        ]
+    },
+    {
+        "address": "Palladium Tonsorial Shop",
+        "openyear": "1963",
+        "closeyear": "1972",
+        "location": [
+            "38.89528",
+            "-76.94918"
+        ]
+    },
+    {
+        "address": "High's Dairy Products Corp",
+        "openyear": "1963",
+        "closeyear": "1972",
+        "location": [
+            "38.8954367",
+            "-76.9486346"
+        ],
+        "type": "grocery"
+    },
+    {
+        "address": "Murphy's Radio & Telvision Service",
+        "openyear": "1963",
+        "closeyear": "1983",
+        "location": [
+            "38.8954709",
+            "-76.9486031"
+        ]
+    },
+    {
+        "address": "Benning Bakery",
+        "openyear": "1963",
+        "closeyear": "1972",
+        "location": [
+            "38.89578616750856",
+            "-76.94872146209434"
+        ],
+        "type": "restaurant"
+    },
+    {
+        "address": "Keystone Alloys Co of Wash",
+        "openyear": "1963",
+        "closeyear": "1972",
+        "location": [
+            "38.89598273811276",
+            "-76.94850320372912"
+        ]
+    },
+    {
+        "address": "Penn-Jersey Auto Stores Inc",
+        "openyear": "1963",
+        "closeyear": "1972",
+        "location": [
+            "38.8957371",
+            "-76.9482462"
+        ]
+    },
+    {
+        "address": "T B Glass Serv Inc (auto supplies)",
+        "openyear": "1963",
+        "closeyear": "1972",
+        "location": [
+            "38.89645761149514",
+            "-76.94799321666999"
+        ]
+    },
+    {
+        "address": "Thompson's Glass Service",
+        "openyear": "1963",
+        "closeyear": "1972",
+        "location": [
+            "38.89645761149514",
+            "-76.94799321666999"
+        ]
+    },
+    {
+        "address": "General Auto Parts Inc",
+        "openyear": "1963",
+        "closeyear": "1972",
+        "location": [
+            "38.89649483448541",
+            "-76.94795365000995"
+        ]
+    },
+    {
+        "address": "Pep Boys Manny Moo & Jacke The",
+        "openyear": "1963",
+        "closeyear": "1972",
+        "location": [
+            "38.8960589",
+            "-76.9479498"
+        ]
+    },
+    {
+        "address": "Century Metalcraft Corp",
+        "openyear": "1963",
+        "closeyear": "1972",
+        "location": [
+            "38.9016367",
+            "-76.9429221"
+        ]
+    },
+    {
+        "address": "Minnesota Ave Barber Shop",
+        "openyear": "1963",
+        "closeyear": "1983",
+        "location": [
+            "38.8961631",
+            "-76.9475206"
+        ]
+    },
+    {
+        "address": "Jackson's Carry Out Shop",
+        "openyear": "1963",
+        "closeyear": "1972",
+        "location": [
+            "38.8962253",
+            "-76.9474554"
+        ]
+    },
+    {
+        "address": "Hair Styles by Elmada",
+        "openyear": "1963",
+        "closeyear": "1972",
+        "location": [
+            "38.9016367",
+            "-76.9429221"
+        ]
+    },
+    {
+        "address": "Airway Centr of North East ",
+        "openyear": "1963",
+        "closeyear": "1972",
+        "location": [
+            "38.896281",
+            "-76.947406"
+        ]
+    },
+    {
+        "address": "Merando Incorporated (contractors)",
+        "openyear": "1963",
+        "closeyear": "1972",
+        "location": [
+            "38.897090732519956",
+            "-76.9473609783636"
+        ]
+    },
+    {
+        "address": "Zadmer Enterprises Inc",
+        "openyear": "1963",
+        "closeyear": "1972",
+        "location": [
+            "38.897090732519956",
+            "-76.9473609783636"
+        ]
+    },
+    {
+        "address": "General Auto & Plate Glass Co Inc",
+        "openyear": "1963",
+        "closeyear": "1983",
+        "location": [
+            "38.8972457925114",
+            "-76.94725096999196"
+        ]
+    },
+    {
+        "address": "Montague Fuel Co Inc",
+        "openyear": "1963",
+        "closeyear": "1983",
+        "location": [
+            "38.89867370025675",
+            "-76.94635619273284"
+        ]
+    },
+    {
+        "address": "Thompson Bros Service Station",
+        "openyear": "1963",
+        "closeyear": "1972",
+        "location": [
+            "38.898955",
+            "-76.946152"
+        ]
+    },
+    {
+        "address": "Greenhouse Bros (cleaners)",
+        "openyear": "1963",
+        "closeyear": "1983",
+        "location": [
+            "38.89747621350396",
+            "-76.9471074016082"
+        ]
+    },
+    {
+        "address": "De Earl Beauty Salon",
+        "openyear": "1963",
+        "closeyear": "1972",
+        "location": [
+            "38.89757202046652",
+            "-76.94705620091162"
+        ]
+    },
+    {
+        "address": "Super Cab Co Inc",
+        "openyear": "1963",
+        "closeyear": "1972",
+        "location": [
+            "38.9000134",
+            "-76.944595"
+        ]
+    },
+    {
+        "address": "Big D Liquors",
+        "openyear": "1963",
+        "closeyear": "1972",
+        "location": [
+            "38.900007",
+            "-76.9446111"
+        ],
+        "type": "liquor"
+    },
+    {
+        "address": "Hodge's Modern Beauty Salon",
+        "openyear": "1963",
+        "closeyear": "1972",
+        "location": [
+            "38.90022755697339",
+            "-76.94458151360949"
+        ]
+    },
+    {
+        "address": "Goucher's Amoco Service Station",
+        "openyear": "1963",
+        "closeyear": "1972",
+        "location": [
+            "38.90238850010863",
+            "-76.94189308319709"
+        ]
+    },
+    {
+        "address": "Empire Diaper-Linen Service Inc",
+        "openyear": "1963",
+        "closeyear": "1972",
+        "location": [
+            "38.9063882841958",
+            "-76.93632273091238"
+        ]
+    },
+    {
+        "address": "Henry Fuel Co Inc",
+        "openyear": "1963",
+        "closeyear": "1983",
+        "location": [
+            "38.90646169170828",
+            "-76.93625018701769"
+        ]
+    },
+    {
+        "address": "Diaper Serv Inc",
+        "openyear": "1963",
+        "closeyear": "1972",
+        "location": [
+            "38.90804016568533",
+            "-76.93421893496856"
+        ]
+    },
+    {
+        "address": "Dy-Dee Serv (diaper serv)",
+        "openyear": "1963",
+        "closeyear": "1972",
+        "location": [
+            "38.90804016568533",
+            "-76.93421893496856"
+        ]
+    },
+    {
+        "address": "Stewart's BP Auto Service Center",
+        "openyear": "1973",
+        "closeyear": "1983",
+        "location": [
+            "38.8909914",
+            "-76.9525011"
+        ]
+    },
+    {
+        "address": "Aristo Dry Cleaners & Dyers INc",
+        "openyear": "1973",
+        "closeyear": "1983",
+        "location": [
+            "38.8911448",
+            "-76.9524605"
+        ]
+    },
+    {
+        "address": "Hot Shoppes",
+        "openyear": "1973",
+        "closeyear": "1983",
+        "location": [
+            "38.8924601",
+            "-76.9506663"
+        ]
+    },
+    {
+        "address": "Gim Wah (restaurant)",
+        "openyear": "1973",
+        "closeyear": "1983",
+        "location": [
+            "38.893032",
+            "-76.9503589"
+        ],
+        "type": "restaurant"
+    },
+    {
+        "address": "Scott's Service Center",
+        "openyear": "1973",
+        "closeyear": "1983",
+        "location": [
+            "38.89310436666667",
+            "-76.95053056666667"
+        ]
+    },
+    {
+        "address": "M & S Auto Sales",
+        "openyear": "1973",
+        "closeyear": "1983",
+        "location": [
+            "38.8933939",
+            "-76.9507725"
+        ]
+    },
+    {
+        "address": "Jesse's Sunoco",
+        "openyear": "1973",
+        "closeyear": "1983",
+        "location": [
+            "38.89359746666667",
+            "-76.9504138"
+        ]
+    },
+    {
+        "address": "Thorn McAn Shoe Stores",
+        "openyear": "1973",
+        "closeyear": "1983",
+        "location": [
+            "38.89395021094125",
+            "-76.94991231726415"
+        ]
+    },
+    {
+        "address": "Al's Men's Wear Inc",
+        "openyear": "1973",
+        "closeyear": "1983",
+        "location": [
+            "38.8940582",
+            "-76.9497495"
+        ]
+    },
+    {
+        "address": "Duvall's Beauty Salon",
+        "openyear": "1973",
+        "closeyear": "1983",
+        "location": [
+            "38.8940582",
+            "-76.9497495"
+        ]
+    },
+    {
+        "address": "Woolworth F W Co",
+        "openyear": "1973",
+        "closeyear": "1983",
+        "location": [
+            "38.8940582",
+            "-76.9497495"
+        ]
+    },
+    {
+        "address": "Crescent Office Machine Co",
+        "openyear": "1973",
+        "closeyear": "1983",
+        "location": [
+            "38.89410850221836",
+            "-76.94979150488797"
+        ]
+    },
+    {
+        "address": "Norge Village-Laundry & Dry Cleaning",
+        "openyear": "1973",
+        "closeyear": "1983",
+        "location": [
+            "38.8944555",
+            "-76.9493151"
+        ]
+    },
+    {
+        "address": "Weltman's Liquor Dept Store",
+        "openyear": "1973",
+        "closeyear": "1983",
+        "location": [
+            "38.894045255460696",
+            "-76.95008556113378"
+        ],
+        "type": "liquor"
+    },
+    {
+        "address": "Community Nail Bank",
+        "openyear": "1973",
+        "closeyear": "1983",
+        "location": [
+            "38.89411151092139",
+            "-76.95003712226755"
+        ]
+    },
+    {
+        "address": "Holly Farms Fried Chicken",
+        "openyear": "1973",
+        "closeyear": "1983",
+        "location": [
+            "38.8948547",
+            "-76.9490976"
+        ],
+        "type": "restaurant"
+    },
+    {
+        "address": "Official Cleaners Launderers",
+        "openyear": "1973",
+        "closeyear": "1983",
+        "location": [
+            "38.89424402184279",
+            "-76.9499402445351"
+        ]
+    },
+    {
+        "address": "District Theatres Senator Theatr",
+        "openyear": "1973",
+        "closeyear": "1983",
+        "location": [
+            "38.8944917",
+            "-76.949881"
+        ]
+    },
+    {
+        "address": "National Beauty & Barber Supply",
+        "openyear": "1973",
+        "closeyear": "1983",
+        "location": [
+            "38.89431027730348",
+            "-76.94989180566888"
+        ]
+    },
+    {
+        "address": "Peoples Drug Stores",
+        "openyear": "1973",
+        "closeyear": "1983",
+        "location": [
+            "38.89437315229719",
+            "-76.94983922518438"
+        ]
+    },
+    {
+        "address": "King Record Shop",
+        "openyear": "1973",
+        "closeyear": "1983",
+        "location": [
+            "38.89535683763692",
+            "-76.94912193075885"
+        ]
+    },
+    {
+        "address": "Northeast Record Shop",
+        "openyear": "1973",
+        "closeyear": "1983",
+        "location": [
+            "38.89535683763692",
+            "-76.94912193075885"
+        ]
+    },
+    {
+        "address": "Guy's & Deil's (barber shop)",
+        "openyear": "1973",
+        "closeyear": "1983",
+        "location": [
+            "38.89564813681272",
+            "-76.94886029827362"
+        ]
+    },
+    {
+        "address": "B & B Beauty Supply Co",
+        "openyear": "1973",
+        "closeyear": "1983",
+        "location": [
+            "38.8954367",
+            "-76.9486346"
+        ]
+    },
+    {
+        "address": "Billy G Shirt Shop for Mim",
+        "openyear": "1973",
+        "closeyear": "1983",
+        "location": [
+            "38.89571731657716",
+            "-76.94879107191278"
+        ]
+    },
+    {
+        "address": "Carter's Auto Parts",
+        "openyear": "1973",
+        "closeyear": "1983",
+        "location": [
+            "38.89578616750856",
+            "-76.94872146209434"
+        ]
+    },
+    {
+        "address": "American Rescue Workers Thrift Stores",
+        "openyear": "1973",
+        "closeyear": "1983",
+        "location": [
+            "38.89591749645949",
+            "-76.94857621885598"
+        ]
+    },
+    {
+        "address": "King Enterprises",
+        "openyear": "1973",
+        "closeyear": "1983",
+        "location": [
+            "38.89598273811276",
+            "-76.94850320372912"
+        ]
+    },
+    {
+        "address": "Perm Jersey Auto Stores",
+        "openyear": "1973",
+        "closeyear": "1983",
+        "location": [
+            "38.8957371",
+            "-76.9482462"
+        ]
+    },
+    {
+        "address": "Thompson's Glass Co",
+        "openyear": "1973",
+        "closeyear": "1983",
+        "location": [
+            "38.89645761149514",
+            "-76.94799321666999"
+        ]
+    },
+    {
+        "address": "General Auto Parts Inc",
+        "openyear": "1973",
+        "closeyear": "1983",
+        "location": [
+            "38.89647622299027",
+            "-76.94797343333997"
+        ]
+    },
+    {
+        "address": "Conrad Trash Co",
+        "openyear": "1973",
+        "closeyear": "1983",
+        "location": [
+            "38.896550668970825",
+            "-76.94789430001991"
+        ]
+    },
+    {
+        "address": "Pep Boys Manny Moo & Jack The",
+        "openyear": "1973",
+        "closeyear": "1983",
+        "location": [
+            "38.8960589",
+            "-76.9479498"
+        ]
+    },
+    {
+        "address": "Cimade's Hair Stylist",
+        "openyear": "1973",
+        "closeyear": "1983",
+        "location": [
+            "38.9016367",
+            "-76.9429221"
+        ]
+    },
+    {
+        "address": "Zadmer Enterprises Inc contrs",
+        "openyear": "1973",
+        "closeyear": "1983",
+        "location": [
+            "38.897090732519956",
+            "-76.9473609783636"
+        ]
+    },
+    {
+        "address": "Atlantic Glass Wholesalers",
+        "openyear": "1973",
+        "closeyear": "1983",
+        "location": [
+            "38.8972457925114",
+            "-76.94725096999196"
+        ]
+    },
+    {
+        "address": "Etta's Hair Stylist",
+        "openyear": "1973",
+        "closeyear": "1983",
+        "location": [
+            "38.89733598074277",
+            "-76.94719040454903"
+        ]
+    },
+    {
+        "address": "Scott Reconditioning (car wash)",
+        "openyear": "1973",
+        "closeyear": "1983",
+        "location": [
+            "38.898955",
+            "-76.946152"
+        ]
+    },
+    {
+        "address": "Modern Beauty Salon",
+        "openyear": "1973",
+        "closeyear": "1983",
+        "location": [
+            "38.89757202046652",
+            "-76.94705620091162"
+        ]
+    },
+    {
+        "address": "Acty Service Station",
+        "openyear": "1973",
+        "closeyear": "1983",
+        "location": [
+            "38.9000134",
+            "-76.944595"
+        ]
+    },
+    {
+        "address": "Big D Liquors",
+        "openyear": "1973",
+        "closeyear": "1983",
+        "location": [
+            "38.89985741167425",
+            "-76.94504295770383"
+        ],
+        "type": "liquor"
+    },
+    {
+        "address": "Shirley's House of Beauty ",
+        "openyear": "1973",
+        "closeyear": "1983",
+        "location": [
+            "38.90022755697339",
+            "-76.94458151360949"
+        ]
+    },
+    {
+        "address": "Abney's American Service Station",
+        "openyear": "1973",
+        "closeyear": "1983",
+        "location": [
+            "38.90238850010863",
+            "-76.94189308319709"
+        ]
+    },
+    {
+        "address": "Community Linen Service",
+        "openyear": "1973",
+        "closeyear": "1983",
+        "location": [
+            "38.9063882841958",
+            "-76.93632273091238"
+        ]
+    },
+    {
+        "address": "Crib & Dy-Dee Service ",
+        "openyear": "1973",
+        "closeyear": "1983",
+        "location": [
+            "38.90804016568533",
+            "-76.93421893496856"
+        ]
+    },
+    {
+        "address": "Stewarts Mobile Service",
+        "openyear": "1983",
+        "closeyear": "1993",
+        "location": [
+            "38.8909914",
+            "-76.9525011"
+        ]
+    },
+    {
+        "address": "Bergmanns Laundry Cleaners",
+        "openyear": "1983",
+        "closeyear": "1993",
+        "location": [
+            "38.8911448",
+            "-76.9524605"
+        ]
+    },
+    {
+        "address": "Official Cleaner Laundry",
+        "openyear": "1983",
+        "closeyear": "1993",
+        "location": [
+            "38.89112640789178",
+            "-76.95191594467789"
+        ]
+    },
+    {
+        "address": "Alert Environmental, Benning Realty Co, Environmental Pest Control, Shirleys Realty Co",
+        "openyear": "1983",
+        "closeyear": "1993",
+        "location": [
+            "38.892449893420725",
+            "-76.95101680486687"
+        ]
+    },
+    {
+        "address": "A B Crane Service",
+        "openyear": "1983",
+        "closeyear": "1993",
+        "location": [
+            "38.89263615",
+            "-76.95144124938298"
+        ]
+    },
+    {
+        "address": "Chicken George Chicken",
+        "openyear": "1983",
+        "closeyear": "1993",
+        "location": [
+            "38.8924601",
+            "-76.9506663"
+        ],
+        "type": "restaurant"
+    },
+    {
+        "address": "Crest International Petroleum",
+        "openyear": "1983",
+        "closeyear": "1993",
+        "location": [
+            "38.89310436666667",
+            "-76.95053056666667"
+        ]
+    },
+    {
+        "address": "C&S Auto Sales",
+        "openyear": "1983",
+        "closeyear": "1993",
+        "location": [
+            "38.8933939",
+            "-76.9507725"
+        ]
+    },
+    {
+        "address": "Jesses Sunoco",
+        "openyear": "1983",
+        "closeyear": "2003",
+        "location": [
+            "38.89359746666667",
+            "-76.9504138"
+        ]
+    },
+    {
+        "address": "Standard Drug Co",
+        "openyear": "1983",
+        "closeyear": "1993",
+        "location": [
+            "38.8938142",
+            "-76.9497066"
+        ]
+    },
+    {
+        "address": "Chesapeake Telephone Center",
+        "openyear": "1983",
+        "closeyear": "1993",
+        "location": [
+            "38.89363185714286",
+            "-76.95014542857143"
+        ]
+    },
+    {
+        "address": "King Record Shop",
+        "openyear": "1983",
+        "closeyear": "1993",
+        "location": [
+            "38.8940582",
+            "-76.9497495"
+        ]
+    },
+    {
+        "address": "Trak Auto",
+        "openyear": "1983",
+        "closeyear": "2003",
+        "location": [
+            "38.894003421882495",
+            "-76.94987263452832"
+        ]
+    },
+    {
+        "address": "Shoe World",
+        "openyear": "1983",
+        "closeyear": "1993",
+        "location": [
+            "38.89408227307695",
+            "-76.94981184113858"
+        ]
+    },
+    {
+        "address": "Woolworth F W Co",
+        "openyear": "1983",
+        "closeyear": "2003",
+        "location": [
+            "38.8940598",
+            "-76.9503318"
+        ]
+    },
+    {
+        "address": "Northeast Wig Co",
+        "openyear": "1983",
+        "closeyear": "2003",
+        "location": [
+            "38.89410850221836",
+            "-76.94979150488797"
+        ]
+    },
+    {
+        "address": "Welmans Liquor Store",
+        "openyear": "1983",
+        "closeyear": "1993",
+        "location": [
+            "38.894045255460696",
+            "-76.95008556113378"
+        ],
+        "type": "liquor"
+    },
+    {
+        "address": "United National Bank Main",
+        "openyear": "1983",
+        "closeyear": "1993",
+        "location": [
+            "38.89411151092139",
+            "-76.95003712226755"
+        ]
+    },
+    {
+        "address": "American Rescue Workers",
+        "openyear": "1983",
+        "closeyear": "1993",
+        "location": [
+            "38.894261",
+            "-76.9501611"
+        ]
+    },
+    {
+        "address": "Holly Farm Fried Chicken",
+        "openyear": "1983",
+        "closeyear": "1993",
+        "location": [
+            "38.8948547",
+            "-76.9490976"
+        ],
+        "type": "restaurant"
+    },
+    {
+        "address": "Northeast Opticians",
+        "openyear": "1983",
+        "closeyear": "1993",
+        "location": [
+            "38.89421089411244",
+            "-76.94996446396821"
+        ]
+    },
+    {
+        "address": "Norken & Son Ins Asc",
+        "openyear": "1983",
+        "closeyear": "1993",
+        "location": [
+            "38.89424402184279",
+            "-76.9499402445351"
+        ]
+    },
+    {
+        "address": "Senator Theater",
+        "openyear": "1983",
+        "closeyear": "1993",
+        "location": [
+            "38.8944917",
+            "-76.949881"
+        ]
+    },
+    {
+        "address": "Natl BTY & BRSR Supply",
+        "openyear": "1983",
+        "closeyear": "1993",
+        "location": [
+            "38.89431027730348",
+            "-76.94989180566888"
+        ]
+    },
+    {
+        "address": "D Columbian Social Club",
+        "openyear": "1983",
+        "closeyear": "1993",
+        "location": [
+            "38.89557707108809",
+            "-76.94892756329159"
+        ]
+    },
+    {
+        "address": "Pats Plant&Gifts",
+        "openyear": "1983",
+        "closeyear": "1993",
+        "location": [
+            "38.89564813681272",
+            "-76.94886029827362"
+        ]
+    },
+    {
+        "address": "B&B Beauty Supply",
+        "openyear": "1983",
+        "closeyear": "1993",
+        "location": [
+            "38.8954367",
+            "-76.9486346"
+        ]
+    },
+    {
+        "address": "Larrys Fish Bowl",
+        "openyear": "1983",
+        "closeyear": "1993",
+        "location": [
+            "38.89571731657716",
+            "-76.94879107191278"
+        ]
+    },
+    {
+        "address": "Murphys Radio&TV",
+        "openyear": "1983",
+        "closeyear": "1993",
+        "location": [
+            "38.8954709",
+            "-76.9486031"
+        ]
+    },
+    {
+        "address": "Columbus Shoe Renewal",
+        "openyear": "1983",
+        "closeyear": "1993",
+        "location": [
+            "38.89578616750856",
+            "-76.94872146209434"
+        ]
+    },
+    {
+        "address": "Billys Thrift Barn",
+        "openyear": "1983",
+        "closeyear": "1993",
+        "location": [
+            "38.89591749645949",
+            "-76.94857621885598"
+        ]
+    },
+    {
+        "address": "H&H Auto Clinic",
+        "openyear": "1983",
+        "closeyear": "1993",
+        "location": [
+            "38.8957371",
+            "-76.9482462"
+        ]
+    },
+    {
+        "address": "Thompsons Glass Co, Thompsons Upholstery",
+        "openyear": "1983",
+        "closeyear": "2003",
+        "location": [
+            "38.896439",
+            "-76.948013"
+        ]
+    },
+    {
+        "address": "Pep Boys Auto ACSRS",
+        "openyear": "1983",
+        "closeyear": "1993",
+        "location": [
+            "38.8960589",
+            "-76.9479498"
+        ]
+    },
+    {
+        "address": "Minnesota Florists",
+        "openyear": "1983",
+        "closeyear": "1993",
+        "location": [
+            "38.8960197",
+            "-76.9476846"
+        ]
+    },
+    {
+        "address": "All Year Round Income, Delta Real Estate",
+        "openyear": "1983",
+        "closeyear": "1993",
+        "location": [
+            "38.89660650345623",
+            "-76.94783495002986"
+        ]
+    },
+    {
+        "address": "Fun & Games Variety Shop",
+        "openyear": "1983",
+        "closeyear": "1993",
+        "location": [
+            "38.8960739",
+            "-76.947601"
+        ]
+    },
+    {
+        "address": "Gills Valey",
+        "openyear": "1983",
+        "closeyear": "1993",
+        "location": [
+            "38.8961082",
+            "-76.9475687"
+        ]
+    },
+    {
+        "address": "H&R Block",
+        "openyear": "1983",
+        "closeyear": "1993",
+        "location": [
+            "38.8961082",
+            "-76.9475687"
+        ]
+    },
+    {
+        "address": "Superior Couriers",
+        "openyear": "1983",
+        "closeyear": "2003",
+        "location": [
+            "38.896643726446506",
+            "-76.94779538336982"
+        ]
+    },
+    {
+        "address": "Panchos Hair Galler",
+        "openyear": "1983",
+        "closeyear": "1993",
+        "location": [
+            "38.8961631",
+            "-76.9475206"
+        ]
+    },
+    {
+        "address": "Elmadas Hair Stylist",
+        "openyear": "1983",
+        "closeyear": "2003",
+        "location": [
+            "38.9016367",
+            "-76.9429221"
+        ]
+    },
+    {
+        "address": "Better TypeWriter SC",
+        "openyear": "1983",
+        "closeyear": "1993",
+        "location": []
+    },
+    {
+        "address": "Skips Beer Wine & CHS",
+        "openyear": "1983",
+        "closeyear": "1993",
+        "location": [
+            "38.89655058125867",
+            "-76.94761905054834"
+        ],
+        "type": "restaurant"
+    },
+    {
+        "address": "Murrys Steaks",
+        "openyear": "1983",
+        "closeyear": "1993",
+        "location": [
+            "38.8963179",
+            "-76.9473552"
+        ],
+        "type": "restaurant"
+    },
+    {
+        "address": "J&L Laundromat",
+        "openyear": "1983",
+        "closeyear": "1993",
+        "location": [
+            "38.8963642",
+            "-76.9473082"
+        ]
+    },
+    {
+        "address": "Greenway Liquors",
+        "openyear": "1993",
+        "closeyear": "2003",
+        "location": [
+            "38.8904737",
+            "-76.9529804"
+        ],
+        "type": "liquor"
+    },
+    {
+        "address": "Dannys Sub SH & Chinese",
+        "openyear": "1993",
+        "closeyear": "2003",
+        "location": [
+            "38.8909914",
+            "-76.9525011"
+        ]
+    },
+    {
+        "address": "Youngs Market",
+        "openyear": "1993",
+        "closeyear": "2003",
+        "location": [
+            "38.8911087",
+            "-76.9524866"
+        ],
+        "type": "grocery"
+    },
+    {
+        "address": "Bergmanns Laundry Cleaner",
+        "openyear": "1993",
+        "closeyear": "2003",
+        "location": [
+            "38.8911448",
+            "-76.9524605"
+        ]
+    },
+    {
+        "address": "M N J Woodworking Inc",
+        "openyear": "1993",
+        "closeyear": "2003",
+        "location": [
+            "38.8911448",
+            "-76.9524605"
+        ]
+    },
+    {
+        "address": "Silver Cleaners",
+        "openyear": "1993",
+        "closeyear": "2003",
+        "location": [
+            "38.8911448",
+            "-76.9524605"
+        ]
+    },
+    {
+        "address": "M B O Shoppe",
+        "openyear": "1993",
+        "closeyear": "2003",
+        "location": [
+            "38.89238663114024",
+            "-76.9510636016223"
+        ]
+    },
+    {
+        "address": "Shirleys Realty Co",
+        "openyear": "1993",
+        "closeyear": "2003",
+        "location": [
+            "38.892449893420725",
+            "-76.95101680486687"
+        ]
+    },
+    {
+        "address": "Min Av Service Center",
+        "openyear": "1993",
+        "closeyear": "2003",
+        "location": [
+            "38.89263615",
+            "-76.95144124938298"
+        ]
+    },
+    {
+        "address": "Mikes Carry Out",
+        "openyear": "1993",
+        "closeyear": "2003",
+        "location": [
+            "38.8924601",
+            "-76.9506663"
+        ]
+    },
+    {
+        "address": "Anns Amovo",
+        "openyear": "1993",
+        "closeyear": "2003",
+        "location": [
+            "38.8929129",
+            "-76.9512043979377"
+        ]
+    },
+    {
+        "address": "Amer Security Ofc",
+        "openyear": "1993",
+        "closeyear": "2003",
+        "location": [
+            "38.8929129",
+            "-76.9512043979377"
+        ]
+    },
+    {
+        "address": "Lucky Carry Out & Rest",
+        "openyear": "1993",
+        "closeyear": "2003",
+        "location": [
+            "38.893032",
+            "-76.9503589"
+        ]
+    },
+    {
+        "address": "Payless Shoe Source",
+        "openyear": "1993",
+        "closeyear": "2003",
+        "location": [
+            "38.8933939",
+            "-76.9507725"
+        ]
+    },
+    {
+        "address": "Burroughs DVLP Corp",
+        "openyear": "1993",
+        "closeyear": "2003",
+        "location": [
+            "38.8938142",
+            "-76.9497066"
+        ]
+    },
+    {
+        "address": "Citicorp Citibank",
+        "openyear": "1993",
+        "closeyear": "2003",
+        "location": [
+            "38.8938142",
+            "-76.9497066"
+        ]
+    },
+    {
+        "address": "Dear Realty Inc",
+        "openyear": "1993",
+        "closeyear": "2003",
+        "location": [
+            "38.893923605470626",
+            "-76.94993215863208"
+        ]
+    },
+    {
+        "address": "W&C Hair Salon",
+        "openyear": "1993",
+        "closeyear": "2003",
+        "location": [
+            "38.8940582",
+            "-76.9497495"
+        ]
+    },
+    {
+        "address": "King Record Shop ",
+        "openyear": "1993",
+        "closeyear": "2003",
+        "location": [
+            "38.8940582",
+            "-76.9497495"
+        ]
+    },
+    {
+        "address": "Giant Food",
+        "openyear": "1993",
+        "closeyear": "2003",
+        "location": [
+            "38.8936932",
+            "-76.9503442"
+        ],
+        "type": "grocery"
+    },
+    {
+        "address": "B M A of Anacostia",
+        "openyear": "1993",
+        "closeyear": "2003",
+        "location": [
+            "38.894056043935535",
+            "-76.9498321773892"
+        ]
+    },
+    {
+        "address": "Federal Music Supply",
+        "openyear": "1993",
+        "closeyear": "2003",
+        "location": [
+            "38.894045255460696",
+            "-76.95008556113378"
+        ]
+    },
+    {
+        "address": "Weltmans Liquor Str",
+        "openyear": "1993",
+        "closeyear": "2003",
+        "location": [
+            "38.894045255460696",
+            "-76.95008556113378"
+        ],
+        "type": "liquor"
+    },
+    {
+        "address": "Athletes Foot",
+        "openyear": "1993",
+        "closeyear": "2003",
+        "location": [
+            "38.8945655",
+            "-76.9491506"
+        ]
+    },
+    {
+        "address": "Susans Fashions",
+        "openyear": "1993",
+        "closeyear": "2003",
+        "location": [
+            "38.8947488",
+            "-76.9491669"
+        ]
+    },
+    {
+        "address": "Signet Bnk New Prod",
+        "openyear": "1993",
+        "closeyear": "2003",
+        "location": [
+            "38.89411151092139",
+            "-76.95003712226755"
+        ]
+    },
+    {
+        "address": "Unitd National Bnk of C",
+        "openyear": "1993",
+        "closeyear": "2003",
+        "location": [
+            "38.89411151092139",
+            "-76.95003712226755"
+        ]
+    },
+    {
+        "address": "US Postal",
+        "openyear": "1993",
+        "closeyear": "2003",
+        "location": [
+            "38.8949601",
+            "-76.9498183"
+        ]
+    },
+    {
+        "address": "Vashti",
+        "openyear": "1993",
+        "closeyear": "2003",
+        "location": [
+            "38.89557707108809",
+            "-76.94892756329159"
+        ]
+    },
+    {
+        "address": "Shim Deli",
+        "openyear": "1993",
+        "closeyear": "2003",
+        "location": [
+            "38.89564813681272",
+            "-76.94886029827362"
+        ],
+        "type": "restaurant"
+    },
+    {
+        "address": "Yellow House",
+        "openyear": "1993",
+        "closeyear": "2003",
+        "location": [
+            "38.8954709",
+            "-76.9486031"
+        ]
+    },
+    {
+        "address": "Columbus Shoe Renwl",
+        "openyear": "1993",
+        "closeyear": "2003",
+        "location": [
+            "38.89578616750856",
+            "-76.94872146209434"
+        ]
+    },
+    {
+        "address": "Block H&R",
+        "openyear": "1993",
+        "closeyear": "2003",
+        "location": [
+            "38.9016367",
+            "-76.9429221"
+        ]
+    },
+    {
+        "address": "Lees Fish Market 2D",
+        "openyear": "1993",
+        "closeyear": "2003",
+        "location": [
+            "38.89585225480623",
+            "-76.94864923398282"
+        ],
+        "type": "grocery"
+    },
+    {
+        "address": "DC Emp SV Comprehensive",
+        "openyear": "1993",
+        "closeyear": "2003",
+        "location": [
+            "38.895565304900565",
+            "-76.94867013818995"
+        ]
+    },
+    {
+        "address": "A H Productions",
+        "openyear": "1993",
+        "closeyear": "2003",
+        "location": [
+            "38.89591749645949",
+            "-76.94857621885598"
+        ]
+    },
+    {
+        "address": "African Heritage Dance",
+        "openyear": "1993",
+        "closeyear": "2003",
+        "location": [
+            "38.89591749645949",
+            "-76.94857621885598"
+        ]
+    },
+    {
+        "address": "A B T Inc",
+        "openyear": "1993",
+        "closeyear": "2003",
+        "location": [
+            "38.8957371",
+            "-76.9482462"
+        ]
+    },
+    {
+        "address": "Pep Boys Manny Joe",
+        "openyear": "1993",
+        "closeyear": "2003",
+        "location": [
+            "38.8960589",
+            "-76.9479498"
+        ]
+    },
+    {
+        "address": "MN Florists",
+        "openyear": "1993",
+        "closeyear": "2003",
+        "location": [
+            "38.8960197",
+            "-76.9476846"
+        ]
+    },
+    {
+        "address": "Gills Valet",
+        "openyear": "1993",
+        "closeyear": "2003",
+        "location": [
+            "38.8961082",
+            "-76.9475687"
+        ]
+    },
+    {
+        "address": "Grovers Barber Shop",
+        "openyear": "1993",
+        "closeyear": "2003",
+        "location": [
+            "38.8961631",
+            "-76.9475206"
+        ]
+    },
+    {
+        "address": "New Garden Carryout",
+        "openyear": "1993",
+        "closeyear": "2003",
+        "location": []
+    },
+    {
+        "address": "Murrys Steaks Inc",
+        "openyear": "1993",
+        "closeyear": "2003",
+        "location": [
+            "38.89655058125867",
+            "-76.94761905054834"
+        ],
+        "type": "restaurant"
+    },
+    {
+        "address": "Harlenquest Design",
+        "openyear": "1993",
+        "closeyear": "2003",
+        "location": [
+            "38.8963179",
+            "-76.9473552"
+        ]
+    },
+    {
+        "address": "Progrsv Life CT Inc",
+        "openyear": "1993",
+        "closeyear": "2003",
+        "location": [
+            "38.89806092601381",
+            "-76.94658615527186"
+        ]
+    },
+    {
+        "address": "Trifax Corporation",
+        "openyear": "1993",
+        "closeyear": "2003",
+        "location": [
+            "38.89824",
+            "-76.946524"
+        ]
+    },
+    {
+        "address": "Gary Upholstery Co ",
+        "openyear": "1993",
+        "closeyear": "2003",
+        "location": [
+            "38.898955",
+            "-76.946152"
+        ]
+    },
+    {
+        "address": "Scott Reconditioning",
+        "openyear": "1993",
+        "closeyear": "2003",
+        "location": [
+            "38.898955",
+            "-76.946152"
+        ]
+    },
+    {
+        "address": "Atlantic Glass Whistle",
+        "openyear": "1993",
+        "closeyear": "2003",
+        "location": [
+            "38.8991955",
+            "-76.94559004545088"
+        ]
+    },
+    {
+        "address": "Fiery Dragon Mustard",
+        "openyear": "1993",
+        "closeyear": "2003",
+        "location": [
+            "38.8991955",
+            "-76.94559004545088"
+        ]
+    },
+    {
+        "address": "Big D Liquors",
+        "openyear": "1993",
+        "closeyear": "2003",
+        "location": [
+            "38.9000134",
+            "-76.944595"
+        ],
+        "type": "liquor"
+    },
+    {
+        "address": "Thrifty Beverage Stores",
+        "openyear": "1993",
+        "closeyear": "2003",
+        "location": [
+            "38.9000134",
+            "-76.944595"
+        ],
+        "type": "convenience"
+    },
+    {
+        "address": "M B S Servs of Wash",
+        "openyear": "1993",
+        "closeyear": "2003",
+        "location": [
+            "38.9000632025521",
+            "-76.94478672449709"
+        ]
+    },
+    {
+        "address": "MBS Inc",
+        "openyear": "1993",
+        "closeyear": "2003",
+        "location": [
+            "38.9000632025521",
+            "-76.94478672449709"
+        ]
+    },
+    {
+        "address": "Newell Jas Decor Co",
+        "openyear": "1993",
+        "closeyear": "2003",
+        "location": [
+            "38.90014537976274",
+            "-76.94468411905329"
+        ]
+    },
+    {
+        "address": "Alston Seafood",
+        "openyear": "1993",
+        "closeyear": "2003",
+        "location": [
+            "38.90022755697339",
+            "-76.94458151360949"
+        ],
+        "type": "restaurant"
+    },
+    {
+        "address": "Metro Amoco",
+        "openyear": "1993",
+        "closeyear": "2003",
+        "location": [
+            "38.90238850010863",
+            "-76.94189308319709"
+        ]
+    },
+    {
+        "address": "Duvalls Towing ",
+        "openyear": "1993",
+        "closeyear": "2003",
+        "location": [
+            "38.903064",
+            "-76.941111"
+        ]
+    },
+    {
+        "address": "J&K Demolition",
+        "openyear": "1993",
+        "closeyear": "2003",
+        "location": [
+            "38.90303647129468",
+            "-76.94090034743813"
+        ]
+    },
+    {
+        "address": "Ridgley Bus Co In",
+        "openyear": "1993",
+        "closeyear": "2003",
+        "location": [
+            "38.906217",
+            "-76.936492"
+        ]
+    },
+    {
+        "address": "Carter Fuel Co",
+        "openyear": "1993",
+        "closeyear": "2003",
+        "location": [
+            "38.9063026420979",
+            "-76.93640736545619"
+        ]
+    },
+    {
+        "address": "Brown Fuel Oil Co",
+        "openyear": "1993",
+        "closeyear": "2003",
+        "location": [
+            "38.90646169170828",
+            "-76.93625018701769"
+        ]
+    },
+    {
+        "address": "1/2 High's Stores",
+        "openyear": "1943",
+        "closeyear": "1953",
+        "location": [
+            "38.90292802439024",
+            "-76.93995385365854"
+        ],
+        "type": "grocery"
+    },
+    {
+        "address": "Certified Food Market",
+        "openyear": "1943",
+        "closeyear": "1953",
+        "location": [
+            "38.902691",
+            "-76.939024"
+        ],
+        "type": "grocery"
+    },
+    {
+        "address": "Tip Top Market",
+        "openyear": "1943",
+        "closeyear": "1963",
+        "location": [
+            "38.90265707142857",
+            "-76.93818502380952"
+        ],
+        "type": "grocery"
+    },
+    {
+        "address": "Deanwood Pharmacy",
+        "openyear": "1943",
+        "closeyear": "1963",
+        "location": [
+            "38.9025756",
+            "-76.9379838"
+        ]
+    },
+    {
+        "address": "Deanwood Cleaners & Dyers",
+        "openyear": "1943",
+        "closeyear": "1972",
+        "location": [
+            "38.9025756",
+            "-76.9379225"
+        ]
+    },
+    {
+        "address": "Deanwood Market",
+        "openyear": "1943",
+        "closeyear": "1972",
+        "location": [
+            "38.902671000000005",
+            "-76.93733014285714"
+        ],
+        "type": "grocery"
+    },
+    {
+        "address": "District Grocery Stores Inc",
+        "openyear": "1943",
+        "closeyear": "1972",
+        "location": [
+            "38.902671000000005",
+            "-76.93733014285714"
+        ],
+        "type": "grocery"
+    },
+    {
+        "address": "Home Food Supply Store",
+        "openyear": "1943",
+        "closeyear": "1953",
+        "location": [
+            "38.9028363877551",
+            "-76.93730736734693"
+        ],
+        "type": "grocery"
+    },
+    {
+        "address": "Nation-Wide Service Grocers Inc",
+        "openyear": "1943",
+        "closeyear": "1963",
+        "location": [
+            "38.902572500000005",
+            "-76.93492485283227"
+        ],
+        "type": "grocery"
+    },
+    {
+        "address": "Deanwood Civilian Defense Committee",
+        "openyear": "1943",
+        "closeyear": "1953",
+        "location": [
+            "38.903612",
+            "-76.929485"
+        ]
+    },
+    {
+        "address": "1/2 High's Dairy Products Co",
+        "openyear": "1953",
+        "closeyear": "1963",
+        "location": [
+            "38.90292802439024",
+            "-76.93995385365854"
+        ],
+        "type": "grocery"
+    },
+    {
+        "address": "Deanwood Bake Shop",
+        "openyear": "1953",
+        "closeyear": "1963",
+        "location": [
+            "38.90267014285715",
+            "-76.93737208163265"
+        ],
+        "type": "restaurant"
+    },
+    {
+        "address": "Deanwood Self-Service Laundry",
+        "openyear": "1953",
+        "closeyear": "1963",
+        "location": [
+            "38.90274710209602",
+            "-76.93521720511698"
+        ]
+    },
+    {
+        "address": "Greater Deanwood Lodge",
+        "openyear": "1953",
+        "closeyear": "1972",
+        "location": [
+            "38.9029151847371",
+            "-76.9351680655627"
+        ]
+    },
+    {
+        "address": "Humpty Dumpty Market",
+        "openyear": "1963",
+        "closeyear": "1972",
+        "location": [
+            "38.90276832653061",
+            "-76.9400304489796"
+        ],
+        "type": "grocery"
+    },
+    {
+        "address": "Ford Motor Express Inc",
+        "openyear": "1963",
+        "closeyear": "1972",
+        "location": [
+            "38.90291985365854",
+            "-76.93984787804878"
+        ]
+    },
+    {
+        "address": "Washington Solomons Freight Line",
+        "openyear": "1963",
+        "closeyear": "1972",
+        "location": [
+            "38.90273140816327",
+            "-76.93955106122449"
+        ]
+    },
+    {
+        "address": "Wayfair Beauty Salon",
+        "openyear": "1963",
+        "closeyear": "1972",
+        "location": [
+            "38.902657",
+            "-76.93819"
+        ]
+    },
+    {
+        "address": "Joe's Valet",
+        "openyear": "1963",
+        "closeyear": "1993",
+        "location": [
+            "38.902669",
+            "-76.937428"
+        ]
+    },
+    {
+        "address": "High's Dairy Products Corp",
+        "openyear": "1963",
+        "closeyear": "1972",
+        "location": [
+            "38.902692",
+            "-76.936424"
+        ],
+        "type": "grocery"
+    },
+    {
+        "address": "Deanwood Laundromat",
+        "openyear": "1963",
+        "closeyear": "1972",
+        "location": [
+            "38.90274710209602",
+            "-76.93521720511698"
+        ]
+    },
+    {
+        "address": "Fairdeal Market",
+        "openyear": "1963",
+        "closeyear": "1972",
+        "location": [
+            "38.9030784",
+            "-76.9340796"
+        ],
+        "type": "grocery"
+    },
+    {
+        "address": "Sheriff Cleaners",
+        "openyear": "1963",
+        "closeyear": "1972",
+        "location": [
+            "38.9030817",
+            "-76.9340244"
+        ]
+    },
+    {
+        "address": "Al Franc's Hair Stylist",
+        "openyear": "1963",
+        "closeyear": "1983",
+        "location": [
+            "38.90394793012084",
+            "-76.92433826767088"
+        ]
+    },
+    {
+        "address": "Cobb Bakery & Delicacies",
+        "openyear": "1963",
+        "closeyear": "1983",
+        "location": [
+            "38.90395033522677",
+            "-76.9243254320003"
+        ],
+        "type": "restaurant"
+    },
+    {
+        "address": "Mack's Dry Cleaners",
+        "openyear": "1963",
+        "closeyear": "1972",
+        "location": [
+            "38.90395274033269",
+            "-76.92431259632974"
+        ]
+    },
+    {
+        "address": "Shahazz's Dry Cleaners",
+        "openyear": "1972",
+        "closeyear": "1983",
+        "location": [
+            "38.90395274033269",
+            "-76.92431259632974"
+        ]
+    },
+    {
+        "address": "Forman Bros Inc",
+        "openyear": "1983",
+        "closeyear": "1993",
+        "location": [
+            "38.9019493",
+            "-76.94090290340688"
+        ]
+    },
+    {
+        "address": "A & W Moving Co",
+        "openyear": "1983",
+        "closeyear": "1993",
+        "location": [
+            "38.902972",
+            "-76.9405"
+        ]
+    },
+    {
+        "address": "Travit Barber Shop",
+        "openyear": "1983",
+        "closeyear": "1993",
+        "location": [
+            "38.9026533",
+            "-76.9393775"
+        ]
+    },
+    {
+        "address": "Robinson's RDO & TV Service",
+        "openyear": "1983",
+        "closeyear": "1993",
+        "location": [
+            "38.902852097189395",
+            "-76.93896236065156"
+        ]
+    },
+    {
+        "address": "Mayfair Beauty Salon",
+        "openyear": "1983",
+        "closeyear": "1993",
+        "location": [
+            "38.902657",
+            "-76.93819"
+        ]
+    },
+    {
+        "address": "Parker's Drive In",
+        "openyear": "1983",
+        "closeyear": "1993",
+        "location": [
+            "38.902669571428575",
+            "-76.93740004081633"
+        ]
+    },
+    {
+        "address": "Parker's Barber Salon",
+        "openyear": "1983",
+        "closeyear": "1993",
+        "location": [
+            "38.90267014285715",
+            "-76.93737208163265"
+        ]
+    },
+    {
+        "address": "Kingdom Hall",
+        "openyear": "1983",
+        "closeyear": "1993",
+        "location": [
+            "38.902671000000005",
+            "-76.93733014285714"
+        ]
+    },
+    {
+        "address": "Suburban Market, Suburban Beauty Shop",
+        "openyear": "1983",
+        "closeyear": "1993",
+        "location": [
+            "38.9029855",
+            "-76.9364753"
+        ],
+        "type": "grocery"
+    },
+    {
+        "address": "Brown's Dave Wine",
+        "openyear": "1983",
+        "closeyear": "1993",
+        "location": [
+            "38.902572500000005",
+            "-76.93492485283227"
+        ],
+        "type": "liquor"
+    },
+    {
+        "address": "A & S Grocery",
+        "openyear": "1983",
+        "closeyear": "1993",
+        "location": [
+            "38.9030784",
+            "-76.9340796"
+        ],
+        "type": "grocery"
+    },
+    {
+        "address": "Billy's Valet",
+        "openyear": "1983",
+        "closeyear": "1993",
+        "location": [
+            "38.9030817",
+            "-76.9340244"
+        ]
+    },
+    {
+        "address": "Shabazz Cleaners",
+        "openyear": "1983",
+        "closeyear": "1993",
+        "location": [
+            "38.90395274033269",
+            "-76.92431259632974"
+        ]
+    }
+]
