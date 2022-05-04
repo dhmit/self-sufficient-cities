@@ -12,6 +12,7 @@ const DeanwoodHighwayCard = ({img_source}) => {
                     “Together, the uniting forces of our communication and transportation
                     systems are dynamic elements in the very name we bear – United States.
                     Without them, we would be a mere alliance of many separate parts."
+                    - Dwight D. Eisenhower
                     <a href={"#source-1"}
                        className={"citation-pointer"}
                        title="Dwight D. Eisenhower Presidential Library -
