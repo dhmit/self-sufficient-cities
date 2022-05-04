@@ -43,7 +43,6 @@ const DeanwoodHighwayCard = ({img_source}) => {
 
 DeanwoodHighwayCard.propTypes = {
     img_source: PropTypes.string,
-    resources: PropTypes.array
 };
 
 export default DeanwoodHighwayCard;

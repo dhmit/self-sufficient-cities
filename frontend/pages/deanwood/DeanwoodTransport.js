@@ -3,7 +3,9 @@ import {Container, Row, Col} from "react-bootstrap";
 import * as PropTypes from "prop-types";
 import DeanwoodNav from "./DeanwoodNav";
 import interstate_highway from "../../images/deanwood/interstate-highway.jpeg";
+import i295 from "../../images/deanwood/I295deanwoodkenilworth.png";
 import DeanwoodHighwayCard from "./DeanwoodHighwayCard";
+import DeanwoodI295Card from "./DeanwoodI295Card";
 
 export const DeanwoodTransport = ({resources}) => {
 
@@ -28,6 +30,15 @@ export const DeanwoodTransport = ({resources}) => {
                     <Col>
                         <DeanwoodHighwayCard
                             img_source={interstate_highway}
+                        />
+                    </Col>
+                </Row>
+
+                <Row>
+                    <Col md={4}/>
+                    <Col>
+                        <DeanwoodI295Card
+                            img_source={i295}
                         />
                     </Col>
                 </Row>
