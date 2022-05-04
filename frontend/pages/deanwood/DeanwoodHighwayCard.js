@@ -2,12 +2,7 @@ import React from "react";
 import * as PropTypes from "prop-types";
 import {Col, Image} from "react-bootstrap";
 
-import CityTag from "../../components/home/CityTag";
-
-const DeanwoodCard = ({img_source, title, text, resources}) => {
-
-    const sorted_tags = [...resources];
-    sorted_tags.sort();
+const DeanwoodHighwayCard = ({img_source}) => {
     return (
         <Col>
             <div className='city-card'>
@@ -46,11 +41,9 @@ const DeanwoodCard = ({img_source, title, text, resources}) => {
     );
 };
 
-DeanwoodCard.propTypes = {
+DeanwoodHighwayCard.propTypes = {
     img_source: PropTypes.string,
-    title: PropTypes.string,
-    text: PropTypes.string,
     resources: PropTypes.array
 };
 
-export default DeanwoodCard;
+export default DeanwoodHighwayCard;
