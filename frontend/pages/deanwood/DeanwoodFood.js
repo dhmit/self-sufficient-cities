@@ -16,7 +16,7 @@ export const DeanwoodFood = ({resources}) => {
         <Container className="city" id="deanwood-overview">
             <Row >
                 <Col md={3} className="nav-col mr-2">
-                    <h1>Food in Deanwood, D.C.</h1>
+                    <h1><u>Food in Deanwood, D.C.</u></h1>
                     <p>
                         In the modern day, Deanwood might be called a “food desert,” a
                         low-income census tract where a substantial number of residents have
@@ -69,7 +69,7 @@ export const DeanwoodFood = ({resources}) => {
                     <Row>
                     <Col md={4}/>
                     <Col>
-                        <h1>General Summary</h1>
+                        <h1><u>General Summary</u></h1>
                         <p>
                             In the modern day, Deanwood might be called a “food desert,” a
                             low-income census tract where a substantial number of residents have low
