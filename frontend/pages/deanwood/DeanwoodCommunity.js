@@ -6,6 +6,10 @@ import * as Text from "./DeanwoodCommunityText";
 import MapTest from "../../components/maps/MapTest";
 import Suburban_gardens from "../../images/suburban_gardens.png";
 import Deanwood_kiosk from "../../images/deanwood_kiosk.png";
+import Deanwood_burville from "../../images/Deanwood_Burville.jpeg";
+import Deanwood_first_baptist from "../../images/Deanwood_first_baptist_church.jpeg";
+import Deanwood_meeting from "../../images/Deanwood_Meeting.jpeg";
+
 import Citation from "../../components/global/Citation";
 
 // eslint-disable-next-line max-len
@@ -192,9 +196,30 @@ export const DeanwoodCommunity = ({resources, community_data, voronoi_data, path
                     </Col>
                 </Row>
                 {/* eslint-disable-next-line max-len */}
-                {DeanwoodProfile([], true, true, community_data, [], [],"Churches as" +
+                {DeanwoodProfile(Text.church1, true, true, community_data, [], [],"Churches as" +
                     " Centers of" +
                     " Community", "","","Religion")}
+                {DeanwoodProfile(Text.church2, false, false,[], [], "","",Deanwood_first_baptist)}
+                {DeanwoodProfile(Text.church3, false, false,[], [], "","",Deanwood_meeting)}
+                {DeanwoodProfile(Text.church4, false, false,[], [], "","",Deanwood_burville)}
+                <Row>
+                    <Col md = {4}/>
+                    <Col>
+                        <blockquote>
+                            {Text.noTaxQuote}
+                            {<a
+                                key="10"
+                                className={"citation-pointer"}
+                                title="Deanwood complaints"
+                                href={"#source-12"}>[12]
+                            </a>}
+                        </blockquote>
+                        <blockquote>
+                            -Carolyn Ricanek
+                        </blockquote>
+                    </Col>
+                </Row>
+                {DeanwoodProfile(Text.church5, false, false,[], [], "","","")}
                 {DeanwoodProfile(Text.conclusion, false, true, [], [], [],"Conclusion")}
                 <Col md={4}/>
                 <Col md={8} className="justify-content-around mt-5">
@@ -245,9 +270,25 @@ export const DeanwoodCommunity = ({resources, community_data, voronoi_data, path
                               link={"https://www.proquest.com/docview/2319094697/fulltext/B2DCBD808374483DPQ/1?accountid=12492"}
                     />
                     <Citation identifier={"source-9"}
+                              title={"Images of America: Washington D.C.'s Deanwood"}
+                              accessed={"Accessed April 22, 2022."}
+                              link={"https://www.abebooks.com/9780738553504/Washington-D.C.s-Deanwood-Images-America-0738553506/plp"}
+                    />
+                    <Citation identifier={"source-10"}
+                              title={"DEANWOOD CLOSE-KNIT D.C. COMMUNITY"}
+                              accessed={"Accessed April 22, 2022."}
+                              link={"https://www.washingtonpost.com/archive/realestate/1988/08/06/deanwood-close-knit-dc-community/123ee1fd-0e29-4464-ae83-4c248282c034/"}
+                    />
+                    <Citation identifier={"source-11"}
                               title={"Finding God on Every Corner: Deanwood"}
                               accessed={"Accessed April 22, 2022."}
                               link={"https://awolau.org/1151/place-holder-do-not-delete/finding-god-on-every-corner-deanwood/"}
+                    />
+
+                    <Citation identifier={"source-12"}
+                              title={"Is NE Area Getting Too Much Religion?"}
+                              accessed={"Accessed April 22, 2022."}
+                              link={"https://www.washingtonpost.com/archive/local/2005/02/03/is-ne-area-getting-too-much-religion/ee65576b-bbb0-4d98-8efc-66fe8aca464e/"}
                     />
                 </Col>
             </Row>
