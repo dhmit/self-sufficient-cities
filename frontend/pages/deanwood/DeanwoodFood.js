@@ -4,6 +4,11 @@ import * as PropTypes from "prop-types";
 import DeanwoodNav from "./DeanwoodNav";
 // import MapDeanwood from "../../components/maps/MapDeanwood";
 import FoodMap from "../../components/maps/FoodMap";
+import murry from "../../images/Murry.png";
+import safeway from "../../images/Safeway.png";
+import unfair from "../../images/PeoplesUnfair.png";
+import superpride from "../../images/SuperPride.png";
+import groceries from "../../images/DeanwoodGroceryMap.png";
 
 export const DeanwoodFood = ({resources}) => {
     return (
@@ -66,6 +71,23 @@ export const DeanwoodFood = ({resources}) => {
                     <Col>
                         <h1>General Summary</h1>
                         <p>
+                            In the modern day, Deanwood might be called a “food desert,” a
+                            low-income census tract where a substantial number of residents have low
+                            access to a supermarket or large grocery store, as defined by the
+                            Economic Research Service (ERS) in 2011. As of 2017, there are only two
+                            full-service grocery stores in Ward 7, the ward of DC that contains
+                            Deanwood, for a population of 80,000 people. But such a bleak statistic
+                            is not without history. Ashante Reese, in her book Black Food
+                            Geographies, points out that literature on the topic of food scarcity
+                            (involving racial biases or not) tends to frame “lack” as a terminal
+                            issue without struggle. These texts often paint a desolate picture of
+                            access and inaction for communities like Deanwood but fail to document
+                            how residents adapt and create their own opportunities in response.
+                            Deanwood has a rich history, particularly in the area of food, and with
+                            this project, we hope to illuminate how Deanwood residents sustained
+                            themselves even with a lack of outside support.
+                        </p>
+                        <p>
                             Throughout the 1900s, Deanwood received less government investment and
                             benefits compared to similar-sized White neighborhoods in DC, such as
                             Kenilworth. However, the ways in which the residents of Deanwood adapted
@@ -91,6 +113,10 @@ export const DeanwoodFood = ({resources}) => {
                             mother was interested in merchandising, so they “had stands in the Old
                             Market where we sold honey and flowers, fruits and vegetables.”
                         </p>
+
+                        <div>
+                            <img src={murry} alt="Logo" width={800} height={350}/>
+                        </div>
                         <p>
                             In this period, Deanwood was ripe with local entrepreneurs whose
                             businesses were integral parts of the community, just as they were
@@ -109,6 +135,11 @@ export const DeanwoodFood = ({resources}) => {
                             vendors). The cost of this switch, however, was the social relationships
                             formed through such communal activities.
                         </p>
+                         <div>
+                            <img src={safeway} alt="Logo" width={600} height={350}/>
+                             <></>
+                             <img src={unfair} alt="Logo" width={200} height={350}/>
+                        </div>
                         <p>
                             The transition to chain grocery stores was not smooth for Deanwood, a
                             community largely knit together by “businesses ran by and for the
@@ -140,6 +171,11 @@ export const DeanwoodFood = ({resources}) => {
                             about black food retailers.” However, the location closed within
                             the decade.
                         </p>
+                        <div>
+                            <img src={superpride} alt="Logo" width={500} height={350}/>
+                             <></>
+                             <img src={groceries} alt="Logo" width={300} height={350}/>
+                        </div>
 
                         <p>
                             Barry Scher, a spokesman for Giant Food Inc., a large chain grocery

@@ -28,13 +28,17 @@ const blueIcon = new LeafIcon({
     redIcon = new LeafIcon({
         iconUrl:
             "http://chart.apis.google.com/chart?chst=d_map_pin_letter&chld=%E2%80%A2|e85141&chf=a,s,ee00FFFF"
+    }),
+    purpleIcon = new LeafIcon({
+        iconUrl:
+            "http://chart.apis.google.com/chart?chst=d_map_pin_letter&chld=%E2%80%A2|a134eb&chf=a,s,ee00FFFF"
     });
 
 function setMarkerColor(type) {
     if (!type) {
         return blueIcon;
     } else if (type === "grocery") {
-        return blueIcon;
+        return purpleIcon;
     } else if (type === "convenience") {
         return greenIcon;
     } else if (type === "restaurant") {
@@ -228,10 +232,11 @@ export default class FoodMap extends React.Component {
             <div className="main-element">
                 <div>
                     <p><u><b> Map Key: </b></u></p>
-                    <p style={{color: "#abcdef"}}>Blue: Grocery</p>
+                    <p style={{color: "#a134eb"}}>Purple: Grocery</p>
                     <p style={{color: "#2ecc71"}}>Green: Convenience</p>
                     <p style={{color: "#ffc800"}}>Yellow: Restaurant</p>
                     <p style={{color: "#e85141"}}>Red: Liquor</p>
+                    <p style={{color: "#abcdef"}}>Blue: Other</p>
                 </div>
                 <div id="map" className={"pb-5"}>
                     <MapContainer
