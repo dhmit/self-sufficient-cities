@@ -297,7 +297,7 @@ def map_legend_page(request):
 
 def map_consolidated(request):
     """
-    Consolicated map page
+    Consolidated map page
     """
 
     context = {
@@ -305,6 +305,20 @@ def map_consolidated(request):
             'title': 'Map Consolidated page'
         },
         'component_name': 'MapConsolidated'
+    }
+    return render(request, 'index.html', context)
+
+
+def census_charts(request):
+    """
+    Census Data visualizations
+    """
+
+    context = {
+        'page_metadata': {
+            'title': 'Census Data visualizations page'
+        },
+        'component_name': 'CensusCharts'
     }
     return render(request, 'index.html', context)
 
@@ -332,6 +346,59 @@ def get_census_data(request):
         census_data = json.load(f)
 
     return JsonResponse(census_data)
+
+
+def get_1940_census_geodata(request):
+    """
+    API endopoint for getting the 1940 Census Tracts as a geojson file
+    """
+
+    with open("app/data/filtered_1940_tracts.geojson", encoding='utf-8') as f:
+        census_data = json.load(f)
+
+    return JsonResponse(census_data)
+
+
+def get_1940_deanwood_similarities(request):
+    """
+    API endpoint for getting the similarity scores for 1940 census tracts
+    """
+
+    with open("app/data/filtered_tract_distances.json", encoding='utf-8') as f:
+        census_data = json.load(f)
+
+    return JsonResponse(census_data)
+
+
+def get_1940_tract_classifications(request):
+    """
+    API endpoint for getting the cluster classifications of census tracts in 1940
+    """
+    with open("app/data/tract_labels.json", encoding='utf-8') as f:
+        classifications = json.load(f)
+
+    return JsonResponse(classifications)
+
+
+def get_1940_tract_data(request):
+    """
+    API endpoint to get the entries for each tract on the 1940s census
+    :param request:
+    :return:
+    """
+    with open("app/data/1940_tract_data.json", encoding='utf-8') as f:
+        data = json.load(f)
+
+    return JsonResponse(data)
+
+
+def get_deanwood_boundary_data(request):
+    """
+    Get the Deanwood geoJSON
+    """
+    with open("app/data/deanwood_boundary.geojson", encoding="utf-8") as f:
+        boundary = json.load(f)
+    return JsonResponse(boundary)
 
 
 def get_addresses(request):
