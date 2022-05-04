@@ -47,10 +47,11 @@ urlpatterns = [
     path('deanwood/', views_deanwood.overview),
     # path('deanwood/transportation', views_deanwood.transport),
     # path('deanwood/health', views_deanwood.health),
+    path('deanwood/food', views_deanwood.food),
     path('deanwood/community', views_deanwood.community),
     # path('deanwood/food', views_deanwood.food),
-    path('deanwood/future', views_deanwood.future),
     path('deanwood/housing', views_deanwood.housing),
+    path('deanwood/future', views_deanwood.future)
 ]
 
 api_urls = [
@@ -70,6 +71,7 @@ api_urls = [
     path('api/get_1940_tract_classifications', views.get_1940_tract_classifications),
     path('api/get_deanwood_boundary_data/', views.get_deanwood_boundary_data),
     path('api/get_addresses/', views.get_addresses),
+    path('api/get_food_addresses/', views.get_food_addresses),
     path('api/get_latlon/<address_str>', views.get_latlon),
     path('api/get_latlon/', views.get_all_latlon),
     path('api/get_address_data/', views.get_address_data),

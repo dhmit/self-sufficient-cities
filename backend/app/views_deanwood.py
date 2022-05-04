@@ -65,12 +65,21 @@ def community(request):
 
 
 
-# def food(request):
-#     """
-#     Deanwood food page
-#     """
-#     pass
-
+def food(request):
+    """
+     Deanwood food page
+     """
+    resources = []
+    context = {
+        'page_metadata': {
+            'title': 'Deanwood: Food Landscape'
+        },
+        'component_name': 'DeanwoodFood',
+        'component_props': {
+            'resources': resources
+        },
+    }
+    return render(request, 'index.html', context)
 
 def housing(request):
     """
