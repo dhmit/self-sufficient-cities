@@ -38,8 +38,7 @@ const COMPONENTS = {
     TimelineTest,
     API,
     MapConsolidated,
-    transportation
-    DeanwoodTransport
+    DeanwoodTransport,
     CensusCharts,
     DeanwoodOverview,
     FutureWorkOverview,
