@@ -12,7 +12,7 @@ import Slider from "@material-ui/core/Slider";
 const MAIN_LOCATION = {
     // coordinates: [38.9051606, -77.0036513],
     coordinates: [38.903760, -76.929470],
-    name: "Deanwood neighborhood, Washington DC",
+    name: "",
     date: "Test date",
     info: "Test info"
 };
