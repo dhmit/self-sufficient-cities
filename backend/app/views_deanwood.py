@@ -1,6 +1,5 @@
-from django.shortcuts import render
 import json
-
+from django.shortcuts import render
 
 def overview(request):
     """
@@ -40,13 +39,13 @@ def community(request):
     """
     resources = ["overview", "housing", "transport", "food", "community", "health", "future"]
     community_data = {}
-    with open("app/data/community.json", "r") as f:
+    with open("app/data/community.json", "r", encoding="utf-8") as f:
         community_data = json.load(f)
 
-    with open("app/data/voronoi_shapes.json", "r") as f:
+    with open("app/data/voronoi_shapes.json", "r", encoding="utf-8") as f:
         voronoi_data = json.load(f)
 
-    with open("app/data/paths.json", "r") as f:
+    with open("app/data/paths.json", "r", encoding="utf-8") as f:
         paths_data = json.load(f)
 
     context = {
