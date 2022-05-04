@@ -5,6 +5,7 @@ import MapHousing from "../../components/maps/MapHousing";
 import Deanwood_Historical_image from "../../images/Deanwood_historical_image.jpg";
 import CensusChartsV2 from "../../components/charts/CensusChartsV2";
 import Citation from "../../components/global/Citation";
+import DeanwoodNav from "./DeanwoodNav";
 
 export const DeanwoodHousing = ({resources, addresses}) => {
 
@@ -13,11 +14,11 @@ export const DeanwoodHousing = ({resources, addresses}) => {
             <Row>
                 <Col md={3} className="nav-col mr-2">
                     <h1>Deanwood Housing Changes Over Time</h1>
-                    <p className={"intro-text"}>
+                    <p>
                         Deanwood is “a historically stable, self-reliant, self-sufficient and
                         close-knit primarily African-American community” (Bissinger 2007).
                         <a className={"citation-pointer"} title={"Kelly B. Bissinger, " +
-                            "Conservation Districts: A Solution for the Deanwood Neighborhood?"}
+                        "Conservation Districts: A Solution for the Deanwood Neighborhood?"}
                            href={"#source-1"}>[1]
                         </a>
                         The city has been described as “a place where store owners know their
@@ -25,9 +26,10 @@ export const DeanwoodHousing = ({resources, addresses}) => {
                         and where churchgoers fill the streets Sunday mornings on their way to one
                         of the community's more than 20 churches” (Washington Post, 1988).
                         <a className={"citation-pointer"} title={"Rene M. Lynch, DEANWOOD " +
-                            "CLOSE-KNIT D.C. COMMUNITY"} href={"#source-2"}>[2]
+                        "CLOSE-KNIT D.C. COMMUNITY"} href={"#source-2"}>[2]
                         </a>
                     </p>
+                    <DeanwoodNav selected={"housing"} resources={resources}/>
 
                 </Col>
                 <Row className="mt-5 mb-4">
@@ -110,58 +112,55 @@ export const DeanwoodHousing = ({resources, addresses}) => {
                             researcher Nancy Wallace, “a black homeowner with a $429,000 mortgage
                             would pay an average of $640 more over the life of the loan.”
                             <a className={"citation-pointer"} title={"KHRISTOPHER J. BROOKS," +
-                                " Disparity in home lending costs"} href={"#source-5"}>[5]</a>
+                            " Disparity in home lending costs"} href={"#source-5"}>[5]</a>
                             An MIT undergrad study similarly found that minority groups pay 8%
                             higher rates of interest than White buyers, and face 14% higher
                             rejection rates for
                             loans <a className={"citation-pointer"} title={"Adam Zewe, Fighting" +
-                            " discrimination in mortgage lending"} href={"#source-6"}>[6]</a>.
+                        " discrimination in mortgage lending"} href={"#source-6"}>[6]</a>.
                             Furthermore, a 2021 study from Freddie Mac found that 12.5 percent of
                             appraisals for home purchases in Black neighborhoods and 15.4 percent in
                             Latino neighborhoods came in below the contract price, compared with 7.4
                             percent of appraisals in White neighborhoods
                             <a className={"citation-pointer"} title={"Racial and Ethnic Valuation" +
-                                " Gaps in Home Purchase Appraisals"} href={"#source-7"}>[7]</a>.
+                            " Gaps in Home Purchase Appraisals"} href={"#source-7"}>[7]</a>.
                             These studies show instances of racism in a wide variety of housing
                             practices, from higher interest rates, higher rejection rates for loans,
                             higher interest mortgages, and higher appraisals.
-
-
                         </p>
-                        <pre>{JSON.stringify(resources)}</pre>
                     </Col>
-                    <Col md={1}/>
+                    <Col md={4}/>
                     <Col md={8}>
                         <h2>Sources</h2>
                         <Citation identifier={"source-1"}
                                   title={"Kelly B. Bissinger, Conservation Districts: A Solution" +
-                                      " for the Deanwood Neighborhood?"}
+                                  " for the Deanwood Neighborhood?"}
                                   link={"https://repository.library.georgetown.edu/bitstream/" +
-                                      "handle/10822/761694/Kelly%20Bissinger.pdf?sequence=2&" +
-                                      "isAllowed=y"}/>
+                                  "handle/10822/761694/Kelly%20Bissinger.pdf?sequence=2&" +
+                                  "isAllowed=y"}/>
                         <Citation identifier={"source-2"}
                                   title={"Rene M. Lynch, DEANWOOD CLOSE-KNIT D.C. COMMUNITY"}
                                   link={"https://www.washingtonpost.com/archive/realestate/1988/" +
-                                      "08/06/deanwood-close-knit-dc-community/123ee1fd-0e29-" +
-                                      "4464-ae83-4c248282c034/"}/>
+                                  "08/06/deanwood-close-knit-dc-community/123ee1fd-0e29-" +
+                                  "4464-ae83-4c248282c034/"}/>
                         <Citation identifier={"source-3"}
                                   title={"Brightwood Housing Market"}
                                   link={"https://www.redfin.com/neighborhood/18375/DC/Washington" +
-                                      "-DC/Brightwood/housing-market"}/>
+                                  "-DC/Brightwood/housing-market"}/>
                         <Citation identifier={"source-4"}
                                   title={"Deanwood Housing Market"}
                                   link={"https://www.redfin.com/neighborhood/125450/DC/" +
-                                      "Washington-DC/Deanwood/housing-market"}/>
+                                  "Washington-DC/Deanwood/housing-market"}/>
                         <Citation identifier={"source-5"}
                                   title={"KHRISTOPHER J. BROOKS, Disparity in home lending costs" +
-                                      " minorities millions, researchers find"}
+                                  " minorities millions, researchers find"}
                                   link={"https://www.cbsnews.com/news/mortgage-discrimination-black-and-latino-paying-millions-more-in-interest-study-shows/"}/>
                         <Citation identifier={"source-6"}
                                   title={"Adam Zewe, Fighting discrimination in mortgage lending"}
                                   link={"https://news.mit.edu/2022/machine-learning-model-discrimination-lending-0330"}/>
                         <Citation identifier={"source-7"}
                                   title={"Racial and Ethnic Valuation Gaps in Home Purchase" +
-                                      " Appraisals"}
+                                  " Appraisals"}
                                   link={"https://www.freddiemac.com/fmac-resources/research/pdf/202109-Note-Appraisal-Gap.pdf"}/>
                     </Col>
                 </Row>
