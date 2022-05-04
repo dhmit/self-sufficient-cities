@@ -4,13 +4,13 @@ import * as PropTypes from "prop-types";
 import DeanwoodNav from "./DeanwoodNav";
 import MapDeanwood from "../../components/maps/MapDeanwood";
 
-import imgplaceholder from "../../images/deanwood/wy024016.jpeg";
+import interstate_highway from "../../images/deanwood/interstate-highway.jpeg";
 import DeanwoodCard from "./DeanwoodCard";
 
 
 const dummy_city_data = [
     {
-        img: imgplaceholder,
+        img: interstate_highway,
         title: "DEANWOOD, D.C.",
         text: "Explore the rise and fall of a self-sustaining neighborhood right in the US" +
             " capital.",
@@ -105,8 +105,9 @@ export const DeanwoodTransport = ({resources}) => {
                     <Col md={1}/>
                 </Row>
 
-                <Row xs={1} md={2}>
-                    {dummy_city_data.map((data, idx) => {
+                <Row>
+                    <Col md={4}/>
+                    <Col>{dummy_city_data.map((data, idx) => {
                         return (
                             <DeanwoodCard
                                 img_source={data.img}
@@ -116,8 +117,10 @@ export const DeanwoodTransport = ({resources}) => {
                                 key={idx}
                             />
                         );
-                    })}
+                    })}</Col>
                 </Row>
+
+                
             </Row>
         </Container>
     </>);
