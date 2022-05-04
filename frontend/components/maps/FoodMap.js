@@ -6,6 +6,7 @@ import Typography from "@material-ui/core/Typography";
 import Grid from "@material-ui/core/Grid";
 import Slider from "@material-ui/core/Slider";
 import * as L from "leaflet";
+import Legend from "./Legend";
 import {TimeControl} from "./MapMicro";
 
 
@@ -210,7 +211,7 @@ export default class FoodMap extends React.Component {
 
     render() {
         const validAddresses = this.state.markerData.filter((location) => (
-            (location.coordinates && location.coordinates.length === 2 &&
+            location.type && (location.coordinates && location.coordinates.length === 2 &&
                 location.openyear && location.closeyear &&
                 (location.openyear <= this.state.lastValid[1] &&
                     location.openyear >= this.state.lastValid[0]) ||
@@ -228,17 +229,9 @@ export default class FoodMap extends React.Component {
         ));
 
         return (<>
-            <h1><u>{this.state.mainLocation.name}</u> </h1>
+            <h1><u>{this.state.mainLocation.name}</u></h1>
             <div className="main-element">
-                <div>
-                    <p><u><b> Map Key: </b></u></p>
-                    <p style={{color: "#a134eb"}}>Purple: Grocery</p>
-                    <p style={{color: "#2ecc71"}}>Green: Convenience</p>
-                    <p style={{color: "#ffc800"}}>Yellow: Restaurant</p>
-                    <p style={{color: "#e85141"}}>Red: Liquor</p>
-                    <p style={{color: "#abcdef"}}>Blue: Other</p>
-                </div>
-                <div id="map" className={"pb-5"}>
+                <div id="map" className="pb-5">
                     <MapContainer
                         center={this.state.mainLocation.coordinates} zoom={13}
                         scrollWheelZoom={true}
@@ -248,6 +241,12 @@ export default class FoodMap extends React.Component {
                             url="http://stamen-tiles-a.a.ssl.fastly.net/toner-lite/{z}/{x}/{y}.png"
                         />
                         {markerObjects}
+                        <Legend options={[
+                            ["#a134eb", "Grocery"],
+                            ["#2ecc71", "Convenience"],
+                            ["#ffc800", "Restaurant"],
+                            ["#e85141", "Liquor"]
+                        ]}/>
                     </MapContainer>
                     {timeSlider(
                         "Select a Time Range Below",
