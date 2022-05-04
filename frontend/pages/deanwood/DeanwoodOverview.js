@@ -8,7 +8,7 @@ export const DeanwoodOverview = ({resources}) => {
 
     return (<>
         <Container className="city" id="deanwood-overview">
-            <Row >
+            <Row>
                 <Col md={3} sm={12} className="nav-col mr-2">
                     <h1>Deanwood, D.C.</h1>
                     <p>

@@ -8,7 +8,7 @@ const image_source = "https://commons.wikimedia.org/wiki/File:Deanwood_Washingto
 export const DeanwoodResident = ({resources}) => {
 
     return (<>
-        <Container className="city" id="deanwood-overview">
+        <Container className="city" id="deanwood-resident">
 
             <Row>
                 <h1>RESIDENT</h1>
@@ -18,7 +18,7 @@ export const DeanwoodResident = ({resources}) => {
 
             <Container>
                 <Card>
-                    <Card.Img src={deanwood_image}></Card.Img>
+                    <Card.Img src={deanwood_image}/>
                     <Card.ImgOverlay>
                         Licenced under CC BY 3.0. <a href={image_source}>Source.</a>
                     </Card.ImgOverlay>
