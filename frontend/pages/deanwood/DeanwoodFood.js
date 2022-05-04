@@ -71,23 +71,6 @@ export const DeanwoodFood = ({resources}) => {
                     <Col>
                         <h1><u>General Summary</u></h1>
                         <p>
-                            In the modern day, Deanwood might be called a “food desert,” a
-                            low-income census tract where a substantial number of residents have low
-                            access to a supermarket or large grocery store, as defined by the
-                            Economic Research Service (ERS) in 2011. As of 2017, there are only two
-                            full-service grocery stores in Ward 7, the ward of DC that contains
-                            Deanwood, for a population of 80,000 people. But such a bleak statistic
-                            is not without history. Ashante Reese, in her book Black Food
-                            Geographies, points out that literature on the topic of food scarcity
-                            (involving racial biases or not) tends to frame “lack” as a terminal
-                            issue without struggle. These texts often paint a desolate picture of
-                            access and inaction for communities like Deanwood but fail to document
-                            how residents adapt and create their own opportunities in response.
-                            Deanwood has a rich history, particularly in the area of food, and with
-                            this project, we hope to illuminate how Deanwood residents sustained
-                            themselves even with a lack of outside support.
-                        </p>
-                        <p>
                             Throughout the 1900s, Deanwood received less government investment and
                             benefits compared to similar-sized White neighborhoods in DC, such as
                             Kenilworth. However, the ways in which the residents of Deanwood adapted
