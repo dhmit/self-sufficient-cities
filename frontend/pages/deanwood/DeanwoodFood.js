@@ -69,7 +69,7 @@ export const DeanwoodFood = ({resources}) => {
                     <Row>
                     <Col md={4}/>
                     <Col>
-                        <h1><u>General Summary</u></h1>
+                        <h1><u>General summary</u></h1>
                         <p>
                             Throughout the 1900s, Deanwood received less government investment and
                             benefits compared to similar-sized White neighborhoods in DC, such as

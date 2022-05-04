@@ -50,8 +50,8 @@ function setMarkerColor(type) {
 }
 
 const MAIN_LOCATION = {
-    coordinates: [38.9047963808, -76.934579595],
-    name: "Food Map of Deanwood Neighborhood over Time",
+    coordinates: [38.9022, -76.9306637],
+    name: "Deanwood neighborhood's food map",
     date: "Test date",
     info: "Test info"
 };
@@ -233,7 +233,7 @@ export default class FoodMap extends React.Component {
             <div className="main-element">
                 <div id="map" className="pb-5">
                     <MapContainer
-                        center={this.state.mainLocation.coordinates} zoom={13}
+                        center={this.state.mainLocation.coordinates} zoom={14}
                         scrollWheelZoom={true}
                     >
                         <TileLayer
