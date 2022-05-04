@@ -8,14 +8,15 @@ const DeanwoodHighwayCard = ({img_source}) => {
             <h3>Federal Aid Highway Act of 1956</h3>
             <Image src={img_source} fluid/>
             <div>
-                <h4>Intro</h4>
                 <p>
                     “Together, the uniting forces of our communication and transportation
                     systems are dynamic elements in the very name we bear – United States.
                     Without them, we would be a mere alliance of many separate parts."
-                    Source: Dwight D. Eisenhower Presidential Library - An excerpt from
-                    President Eisenhower’s Message to Congress regarding highways, February 22,
-                    195
+                    <a href={"#source-1"}
+                       className={"citation-pointer"}
+                       title="Dwight D. Eisenhower Presidential Library -
+                       An excerpt from President Eisenhower’s Message to Congress
+                       regarding highways, February 22, 1955">[1]</a>
                 </p>
             </div>
 

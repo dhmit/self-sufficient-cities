@@ -6,6 +6,7 @@ import interstate_highway from "../../images/deanwood/interstate-highway.jpeg";
 import i295 from "../../images/deanwood/I295deanwoodkenilworth.png";
 import DeanwoodHighwayCard from "./DeanwoodHighwayCard";
 import DeanwoodI295Card from "./DeanwoodI295Card";
+import Citation from "../../components/global/Citation";
 
 export const DeanwoodTransport = ({resources}) => {
 
@@ -42,8 +43,16 @@ export const DeanwoodTransport = ({resources}) => {
                         />
                     </Col>
                 </Row>
-
-
+                <Row>
+                    <Col md={4}/>
+                    <Col md={8} className="justify-content-around mt-5">
+                        <h2>Sources</h2>
+                        <Citation identifier={"source-1"}
+                                  title={"Dwight D. Eisenhower Presidential Library - " +
+                                  "An excerpt from President Eisenhower’s Message to Congress " +
+                                  "regarding highways, February 22, 1955"}/>
+                    </Col>
+                </Row>
             </Row>
         </Container>
     </>);
