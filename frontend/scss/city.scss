@@ -70,8 +70,11 @@ h1 {
         border-radius: 0 !important;
         background-color: white;
         border: 1px solid black;
-        border-bottom: 0;
         color: black;
+
+        &:hover, &:active, &.selected {
+            background-color: $color-periwinkle;
+        }
     }
 
 }
