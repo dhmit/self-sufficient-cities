@@ -2,9 +2,9 @@ import React, {useState} from "react";
 import {Container, Row, Col, Button} from "react-bootstrap";
 import * as PropTypes from "prop-types";
 import DeanwoodCovid from "./Covid";
-import DeanwoodResident from "./Resident";
-import HealthTrends from "./Health_Trends";
-import HealthHome from "./HealthHome";
+import DeanwoodResident from "../../components/health/Resident";
+import HealthTrends from "../../components/health/Health_Trends";
+import HealthHome from "../../components/health/HealthHome";
 import DeanwoodNav from "./DeanwoodNav";
 
 // if putting resource bar back in, add {resources} within parameter parentheses below
