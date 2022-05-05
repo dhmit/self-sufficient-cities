@@ -17,7 +17,7 @@ import CensusCharts from "./components/charts/CensusCharts";
 
 // DEANWOOD COMPONENTS
 import DeanwoodOverview from "./pages/deanwood/DeanwoodOverview";
-import DeanwoodHealth from "./pages/deanwood/Health";
+import DeanwoodHealth from "./pages/deanwood/DeanwoodHealth";
 import DeanwoodTransport from "./pages/deanwood/DeanwoodTransport";
 import DeanwoodFood from "./pages/deanwood/DeanwoodFood";
 import DeanwoodCommunity from "./pages/deanwood/DeanwoodCommunity";
