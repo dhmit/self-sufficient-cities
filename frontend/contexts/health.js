@@ -101,7 +101,7 @@ export const chart_data = {
         data: [734.0,739.8,658.4,543.9,572.5,531.5,534.0],
         borderColor: "rgb(53, 162, 235)",
         backgroundColor: "rgba(53, 162, 235, 0.5)"
-    }],
+    }]
 };
 export const labels = {
     life_expectancy :["2000","2009-2013","2010-2014","2011-2015","2018"],
@@ -112,7 +112,7 @@ export const labels = {
     lead_poisoning: ["2008","2009","2010"],
     cancer :["2000","2001","2005","2007","2010","2012","2015"],
     hiv :["2000","2001","2005","2007","2010","2012"],
-    mortality : ["2006","2007","2008","2009","2010","2011","2012"],
+    mortality : ["2006","2007","2008","2009","2010","2011","2012"]
 };
 export const info = {
     life_expectancy: "What is Lorem Ipsum?\n" +
