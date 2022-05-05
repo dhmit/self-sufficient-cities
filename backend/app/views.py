@@ -364,6 +364,16 @@ def get_census_data(request):
 
     return JsonResponse(census_data)
 
+def get_community_data(request):
+    """
+    API endpoint for getting the census data in json format
+    """
+    with open("app/data/community.json", encoding="utf-8") as f:
+        community_data = json.load(f)
+
+    return JsonResponse(community_data)
+
+
 
 def get_1940_census_geodata(request):
     """
@@ -491,6 +501,14 @@ def get_address_data(request):
     return JsonResponse({"address_data": address_data})
 
 
+def get_food_addresses(request):
+    """Returning all addresses from file"""
+    with open("app/data/food_addresses_new.json", encoding="utf-8") as f:
+        address_data = json.load(f)
+
+    return JsonResponse({"address_data": address_data})
+
+
 def get_legend_testing(request):
     """Returning all addresses from file"""
     with open("app/data/legend_testing.json", encoding="utf-8") as f:
@@ -536,3 +554,8 @@ def api_page(request):
         'component_name': 'API'
     }
     return render(request, 'index.html', context)
+
+
+def ward_demographics(request):
+    with open('app/data/health/ward.json', encoding="utf-8") as f:
+        return JsonResponse(json.load(f))

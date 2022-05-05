@@ -25,7 +25,7 @@
         "indent": ["off"],
         "linebreak-style": ["off"],
         "max-classes-per-file": ["off"],
-        "max-len": ["warn", { "code": 100, "ignoreUrls": true }],
+        "max-len": ["warn", { "code": 120, "ignoreUrls": true }],
         "no-console": ["off"],
         "no-multi-spaces": ["error", { "ignoreEOLComments": true }],
         "no-multiple-empty-lines": ["off"],
