@@ -39,8 +39,8 @@ export const quoteContext = ["Most of these quotes come from former Deanwood res
        title="Vietnam War Timeline"
        href={"#source-1"}>[1]
     </a>,
-    "It is in this context that" +
-    " these former residents looked back on their childhood", "The quotes were collected by" +
+    "It is in this context that these former residents looked back on their childhood.",
+    "The quotes were collected by" +
     " the Anacostia Oral Histories project in 1975, just two years after Congress passed" +
     " the Home Rule Act of 1973.  The Act allowed the residents of the District of Columbia" +
     " to self-govern and elect a mayor and city council.",

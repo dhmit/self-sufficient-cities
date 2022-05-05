@@ -86,10 +86,10 @@ export const DeanwoodCommunity = ({resources, community_data, voronoi_data, path
     };
 
     return (<>
-        <Container className="city" id="deanwood-overview">
+        <Container className="city" id="deanwood-community">
             <Row>
                 <Col md={3} className="nav-col mr-2">
-                    <h1>Deanwood, D.C.</h1>
+                    <h1>Deanwood Community</h1>
                     <p>
                         The project tells the rise and fall of urban communities that grew their
                         own food in the 20th century United States. Taking the Deanwood
