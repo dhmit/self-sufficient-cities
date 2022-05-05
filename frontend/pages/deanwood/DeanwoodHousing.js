@@ -5,6 +5,9 @@ import MapHousing from "../../components/maps/MapHousing";
 // import Deanwood_Historical_image from "../../images/Deanwood_historical_image.jpg";
 import WymarHousing1 from "../../images/wy_043608.jpg";
 import WymarHousing1_modern from "../../images/wy_043608_modern.jpg";
+import WymarHousing2 from "../../images/wy_040108.jpg";
+import WymarHousing2_modern from "../../images/wy_040108_modern.jpg";
+
 import CensusChartsV2 from "../../components/charts/CensusChartsV2";
 import Citation from "../../components/global/Citation";
 import DeanwoodNav from "./DeanwoodNav";
@@ -33,13 +36,14 @@ export const DeanwoodHousing = ({resources, addresses}) => {
                     </p>
                     <DeanwoodNav selected={"housing"} resources={resources}/>
                 </Col>
-                <Row className="mt-5 mb-4">
+                <Row className="mt-5 mb-2">
                     <Col md={4}/>
                     <Col md={4} lg={4} className="p-0">
                         <Image className="img-wymer" src={WymarHousing1} fluid={true}/>
-                        <small className="text-right">John P. Wymer's description: Lee Street NE east of 50th Street. March
-                            27, 1949. <br/>Wymer, John P.&nbsp;
-                            <a href={"http://dchistory.pastperfectonline.com/photo/53C29669-CB57-476D-B73F-928837661923"}>
+                        <small className="text-right"> Lee Street NE east of 50th Street.
+                            March 27, 1949. Wymer, John P.&nbsp;
+                            <a href={"http://dchistory.pastperfectonline.com/photo/" +
+                            "53C29669-CB57-476D-B73F-928837661923"}>
                                 (source)
                             </a>
                         </small>
@@ -47,6 +51,27 @@ export const DeanwoodHousing = ({resources, addresses}) => {
                     <Col md={4} lg={4} className="p-0">
                         <Image className="img-wymer" src={WymarHousing1_modern} fluid={true}/>
                         <small className="text-right">Screengrab from "Return to Wymer's DC"
+                            <a href={"http://map.wymersdc.com/#"}>
+                                (source)
+                            </a>
+                        </small>
+                    </Col>
+                </Row>
+                <Row className="mb-2">
+                    <Col md={4}/>
+                    <Col md={4} lg={4} className="p-0">
+                        <Image className="img-wymer" src={WymarHousing2} fluid={true}/>
+                        <small className="text-right"> Oliver Street NE looking south from Quarles
+                            Street. July 3, 1948. Wymer, John P.&nbsp;
+                            <a href={"http://dchistory.pastperfectonline.com/" +
+                            "photo/B1BDA745-9CBF-4996-B415-784547415709"}>
+                                (source)
+                            </a>
+                        </small>
+                    </Col>
+                    <Col md={4} lg={4} className="p-0">
+                        <Image className="img-wymer" src={WymarHousing2_modern} fluid={true}/>
+                        <small className="text-right">Screengrab from "Return to Wymer's DC"&nbsp;
                             <a href={"http://map.wymersdc.com/#"}>
                                 (source)
                             </a>
