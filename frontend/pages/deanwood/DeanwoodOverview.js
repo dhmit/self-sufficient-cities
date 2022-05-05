@@ -37,7 +37,7 @@ export const DeanwoodOverview = ({resources}) => {
                         <Row xs={1} md={2} xl={3} className="justify-content-around mt-5">
                             <Col md={4}/>
                             <Col md={4}>
-                                <p className={"intro-text"}>
+                                <p>
                                     In the early 1920s, developers in Washington, DC bought up farms
                                     on land across the Anacostia River from the city center,
                                     territory that was newly incorporated into the city. The
@@ -58,10 +58,10 @@ export const DeanwoodOverview = ({resources}) => {
                             <Col md={4}>
                                 <blockquote>
                                     "Despite high rates of unemployment, census records from the
-                                    midst of the Great Depression show a remarkable fact. Among
-                                    Black residents of Deanwood, rates of homeowner occupancy, a
-                                    significant indicator of financial stability, were some of the
-                                    highest in the city"
+                                    midst of the Great Depression show a remarkable fact. <mark>Among
+                                    Black residents of Deanwood, rates of homeowner occupancy,</mark> a
+                                    significant indicator of financial stability, <mark>were some of the
+                                    highest in the city"</mark>
                                 </blockquote>
                             </Col>
                         </Row>
