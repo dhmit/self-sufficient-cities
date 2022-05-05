@@ -77,4 +77,25 @@ h1 {
         }
     }
 
+    .emphasized {
+        font-weight: 600;
+    }
+
+    .health-ward3 {
+        font-weight: 600;
+        color: #3d7dd2;
+    }
+
+    .health-ward7 {
+        font-weight: 600;
+        color: darkorange;
+        margin-top: 50px;
+    }
+
+    .graph-descriptions {
+        p {
+            margin-bottom: 0;
+        }
+    }
+
 }

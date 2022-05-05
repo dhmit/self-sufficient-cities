@@ -1,7 +1,7 @@
 import React, {useState} from "react";
 import {Container, Row, Col, Button} from "react-bootstrap";
 import * as PropTypes from "prop-types";
-import DeanwoodCovid from "./Covid";
+import DeanwoodCovid from "../../components/health/Covid";
 import DeanwoodResident from "../../components/health/Resident";
 import HealthTrends from "../../components/health/Health_Trends";
 import HealthHome from "../../components/health/HealthHome";
