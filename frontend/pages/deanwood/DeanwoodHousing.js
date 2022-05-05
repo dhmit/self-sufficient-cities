@@ -17,7 +17,7 @@ export const DeanwoodHousing = ({resources, addresses}) => {
     return (<>
         <Container className="city" id="deanwood-housing">
             <Row>
-                <Col md={3} className="nav-col mr-2">
+                <Col md={3} className="nav-col p-0 mr-2">
                     <h1>Deanwood Housing Changes Over Time</h1>
                     <p>
                         Deanwood is “a historically stable, self-reliant, self-sufficient and

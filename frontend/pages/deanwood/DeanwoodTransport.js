@@ -13,7 +13,7 @@ export const DeanwoodTransport = ({resources}) => {
     return (<>
         <Container className="city" id="deanwood-transport">
             <Row>
-                <Col md={3} className="nav-col mr-2">
+                <Col md={3} className="nav-col p-0 mr-2">
                     <h1>Deanwood, D.C.</h1>
                     <p>
                         The project tells the rise and fall of urban communities that grew their

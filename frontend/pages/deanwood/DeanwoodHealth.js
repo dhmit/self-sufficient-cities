@@ -21,7 +21,7 @@ export const DeanwoodOverview = ({resources}) => {
     const [displayState, setDisplayState] = useState("healthHome");
     return (<Container className="city" id="deanwood-health">
             <Row>
-                <Col md={3} xl={3} className="nav-col mr-2">
+                <Col md={3} xl={3} className="nav-col p-0 mr-2">
                     <h1>Health in Deanwood, D.C.</h1>
                     <p>
                         Deanwood lies in Ward 7 of the District of Columbia, home to over

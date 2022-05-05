@@ -15,7 +15,7 @@ export const DeanwoodFood = ({resources}) => {
         <>
             <Container className="city" id="deanwood-overview">
                 <Row>
-                    <Col md={3} className="nav-col mr-2">
+                    <Col md={3} className="nav-col p-0 mr-2">
                         <h1>Food in Deanwood, D.C.</h1>
                         <p>
                             In the modern day, Deanwood might be called a “food desert,” a
