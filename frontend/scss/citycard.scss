@@ -55,6 +55,12 @@
     display: flex;
     flex-wrap: wrap;
     margin-top: auto;
+
+    > a {
+        &:hover, &:active, &:focus {
+            color: black;
+        }
+    }
 }
 
 .city-tags > a {

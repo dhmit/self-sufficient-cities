@@ -6,9 +6,6 @@ import Typography from "@material-ui/core/Typography";
 import Grid from "@material-ui/core/Grid";
 import Slider from "@material-ui/core/Slider";
 
-// AFTERNOON TEAM
-
-
 const MAIN_LOCATION = {
     // coordinates: [38.9051606, -77.0036513],
     coordinates: [38.903760, -76.929470],
@@ -114,43 +111,43 @@ export class TimeControl extends React.Component {
         const [minLow, maxHigh] = this.props.defaultTime;
         // Code here must prevent crossing
         switch (this.state.active) {
-        case TimeControl.OFF:
-            break;
+            case TimeControl.OFF:
+                break;
 
-        case TimeControl.Forward:
-            let newLowest = currentLow + TimeControl.Forward;
-            if (newLowest > currentHigh) {
-                newLowest = minLow;
-            }
-            this.props.change(newLowest, currentHigh);
-            break;
+            case TimeControl.Forward:
+                let newLowest = currentLow + TimeControl.Forward;
+                if (newLowest > currentHigh) {
+                    newLowest = minLow;
+                }
+                this.props.change(newLowest, currentHigh);
+                break;
 
-        case TimeControl.Reverse:
-            let newHighest = currentHigh + TimeControl.Reverse;
-            if (newHighest < currentLow) {
-                newHighest = maxHigh;
-            }
-            this.props.change(currentLow, newHighest);
-            break;
+            case TimeControl.Reverse:
+                let newHighest = currentHigh + TimeControl.Reverse;
+                if (newHighest < currentLow) {
+                    newHighest = maxHigh;
+                }
+                this.props.change(currentLow, newHighest);
+                break;
 
-        default:
-            throw new Error("Should not get up to this point");
+            default:
+                throw new Error("Should not get up to this point");
 
         }
     }
     changeState = (change) => {
         switch (change) {
-        case TimeControl.Reverse:
-            return () => this.setState({active: TimeControl.Reverse});
+            case TimeControl.Reverse:
+                return () => this.setState({active: TimeControl.Reverse});
 
-        case TimeControl.Forward:
-            return () => this.setState({active: TimeControl.Forward});
+            case TimeControl.Forward:
+                return () => this.setState({active: TimeControl.Forward});
 
-        case TimeControl.OFF:
-            return () => this.setState({active: TimeControl.OFF});
+            case TimeControl.OFF:
+                return () => this.setState({active: TimeControl.OFF});
 
-        default:
-            throw new Error("Should not get to this point");
+            default:
+                throw new Error("Should not get to this point");
         }
 
     }
@@ -173,7 +170,6 @@ TimeControl.propTypes = {
 };
 
 
-
 export default class MapHousing extends React.Component {
     constructor(props) {
         super(props);
@@ -181,23 +177,14 @@ export default class MapHousing extends React.Component {
         this.state = {
             mainLocation: MAIN_LOCATION,
             markerData: [],
-            sliderState: [1920, 2022],
-            timeRange: [1920, 2022],
-            lastValid: [1920, 2022],
+            sliderState: [1980, 2022],
+            timeRange: [1980, 2022],
+            lastValid: [1980, 2022],
             names: ["Australia", "Canada", "USA", "Poland", "Spain", "France"]
         };
     }
 
     componentDidMount() {
-        // fetch("/api/get_address_data/")
-        //     .then(response => {
-        //         return response.json();
-        //     })
-        //     .then(data => {
-        //         this.setState({
-        //             markerData: [...this.state.markerData, ...data["address_data"]]
-        //         });
-        //     });
         this.setState({markerData: this.props.addresses});
     };
 
@@ -302,10 +289,6 @@ export default class MapHousing extends React.Component {
                         this.handleSliderInputChange,
                         this.handleSliderBlur
                     )}
-                    <TimeControl
-                        sliderState={this.state.sliderState} change={this.setSliderValue}
-                        defaultTime={this.state.timeRange}>
-                    </TimeControl>
                 </div>
             </div>
         </>);

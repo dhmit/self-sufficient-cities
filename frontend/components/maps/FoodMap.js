@@ -229,7 +229,7 @@ export default class FoodMap extends React.Component {
         ));
 
         return (<>
-            <h1><u>{this.state.mainLocation.name}</u></h1>
+            <h1>{this.state.mainLocation.name}</h1>
             <div className="main-element">
                 <div id="map" className="pb-5">
                     <MapContainer

@@ -116,7 +116,7 @@ def community(request):
     Deanwood community page
     """
     resources = ["overview", "housing", "transport", "food", "community", "health", "future"]
-    community_data = {}
+
     with open("app/data/community.json", "r", encoding="utf-8") as f:
         community_data = json.load(f)
 
@@ -146,7 +146,7 @@ def food(request):
     """
      Deanwood food page
      """
-    resources = []
+    resources = ["overview", "housing", "transport", "food", "community", "health", "future"]
     context = {
         'page_metadata': {
             'title': 'Deanwood: Food Landscape'
