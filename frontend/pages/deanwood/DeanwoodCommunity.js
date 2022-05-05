@@ -13,32 +13,34 @@ import Deanwood_meeting from "../../images/Deanwood_Meeting.jpeg";
 import Citation from "../../components/global/Citation";
 
 // eslint-disable-next-line max-len
-const DeanwoodProfile = (statement, hasMap = true, hasTitle = true, data = [], voronoi = [], paths=[],
-    title = "", source = "", alt_text = "", mapType="") => {
+const DeanwoodProfile = (statement, hasMap = true, hasTitle = true, data = [], voronoi = [], paths = [],
+                         title = "", source = "", alt_text = "", mapType = "") => {
     let right;
 
     if (hasMap) {
         // eslint-disable-next-line max-len
-        right = <Col><CommunityMap data={data} mapType={mapType} voronoi_data={voronoi} paths_data={paths}/></Col>;
-    }
-    else if (source) {
+        right = <Col><CommunityMap data={data} mapType={mapType} voronoi_data={voronoi}
+                                   paths_data={paths}/></Col>;
+    } else if (source) {
         right = <Col><Image src={source} alt={alt_text} fluid={true}/></Col>;
     }
 
-    // let statement_array = statement.split("\n");
     return (<div className={"Profile"}>
         <Row>
             <Col md={4}/>
             <Col>
                 {hasTitle && <h2>{title}</h2>}
-                {console.log(typeof(statement))}
-                {console.log(statement)}
+                {/* Iterate through statement. If item is string, the next item might be a
+                 citation. Check next for type not string. Add to paragraph if not string.
+                  Continue. */}
                 {statement.map((s, idx) => (
-                    <p key={idx} className={"intro-text"}>{s}</p>
+                    typeof s === "string" ? <p key={idx}>{s}{
+                        typeof statement[idx + 1] === "string" ? "" : statement[idx + 1]
+                    } </p> : ""
+
                 ))}
             </Col>
             {right}
-
         </Row>
     </div>);
 };
@@ -74,17 +76,16 @@ export const DeanwoodCommunity = ({resources, community_data, voronoi_data, path
     };
 
     const backward = () => {
-        if (imageNum === 0){
+        if (imageNum === 0) {
             setImage(numQuotes - 1);
-        }
-        else{
+        } else {
             setImage((imageNum - 1) % numQuotes);
         }
     };
 
     return (<>
         <Container className="city" id="deanwood-overview">
-            <Row >
+            <Row>
                 <Col md={3} className="nav-col mr-2">
                     <h1>Deanwood, D.C.</h1>
                     <p>
@@ -94,27 +95,26 @@ export const DeanwoodCommunity = ({resources, community_data, voronoi_data, path
                         consulted newspaper articles and census data to design an interactive
                         site.
                     </p>
-                    <DeanwoodNav selected={"overview"} resources={resources}/>
+                    <DeanwoodNav selected={"community"} resources={resources}/>
                 </Col>
                 <Row xs={1} md={2} className="Prime mt-5">
                     <Col md={4}/>
-                    <Col className = "Holder" >
-                        <Row className = "Carousel justify-content-between align-items-center">
-                            <Col className = "justify-content-center">
-                                <button onClick = {backward}>
+                    <Col className="Holder">
+                        <Row className="Carousel justify-content-between">
+                            <Col className="justify-content-center">
+                                {imageNum > 0 && <button onClick={backward}>
                                     Left
-                                </button>
+                                </button>}
                             </Col>
-                            <Col className = "col-9">
-                                <p className={"intro-text"}>
+                            <Col className="col-9">
+                                <blockquote>
                                     {Text.quotes[imageNum]}
-                                </p>
+                                </blockquote>
                             </Col>
-
-                            <Col className = "justify-content-center">
-                                <button onClick = {forward}>
+                            <Col className="justify-content-center">
+                                {imageNum < Text.quotes.length - 1 && <button onClick={forward}>
                                     Right
-                                </button>
+                                </button>}
                             </Col>
 
                         </Row>
@@ -122,7 +122,7 @@ export const DeanwoodCommunity = ({resources, community_data, voronoi_data, path
                 </Row>
                 {DeanwoodProfile(Text.quoteContext, false, false)}
                 <Row>
-                    <Col md = {4}/>
+                    <Col md={4}/>
                     <Col>
                         <h3>
                             {Text.uniqueDeanwood}
@@ -133,7 +133,7 @@ export const DeanwoodCommunity = ({resources, community_data, voronoi_data, path
                     "Lack of Public Infrastructure", Suburban_gardens,
                     "The Suburban Gardens amusement park")}
                 <Row>
-                    <Col md = {4}/>
+                    <Col md={4}/>
                     <Col>
                         <blockquote>
                             {Text.senatorTaxesQuote}
@@ -146,7 +146,7 @@ export const DeanwoodCommunity = ({resources, community_data, voronoi_data, path
                 {DeanwoodProfile(Text.selfReliance1, false, true, [], [], [],
                     "Self-Reliance and Farming")}
                 <Row>
-                    <Col md = {4}/>
+                    <Col md={4}/>
                     <Col>
                         <blockquote>
                             {Text.surplusQuote}
@@ -155,7 +155,7 @@ export const DeanwoodCommunity = ({resources, community_data, voronoi_data, path
 
                 </Row>
                 <Row>
-                    <Col md = {4}/>
+                    <Col md={4}/>
                     <Col>
                         <blockquote>
                             {Text.raiseChickensQuote}
@@ -163,9 +163,9 @@ export const DeanwoodCommunity = ({resources, community_data, voronoi_data, path
                     </Col>
                 </Row>
                 {/* eslint-disable-next-line max-len */}
-                {DeanwoodProfile(Text.selfReliance2, true, false, community_data, voronoi_data, paths_data,"", "", "", "Food")}
+                {DeanwoodProfile(Text.selfReliance2, true, false, community_data, voronoi_data, paths_data, "", "", "", "Food")}
                 <Row>
-                    <Col md = {4}/>
+                    <Col md={4}/>
                     <Col>
                         <blockquote>
                             {Text.lifesaverQuote}
@@ -179,7 +179,7 @@ export const DeanwoodCommunity = ({resources, community_data, voronoi_data, path
                 </Row>
                 {DeanwoodProfile(Text.selfReliance3, false, false)}
                 <Row>
-                    <Col md = {4}/>
+                    <Col md={4}/>
                     <Col>
                         <blockquote>
                             {Text.noStoresQuote}
@@ -193,14 +193,14 @@ export const DeanwoodCommunity = ({resources, community_data, voronoi_data, path
                     </Col>
                 </Row>
                 {/* eslint-disable-next-line max-len */}
-                {DeanwoodProfile(Text.church1, true, true, community_data, [], [],"Churches as" +
+                {DeanwoodProfile(Text.church1, true, true, community_data, [], [], "Churches as" +
                     " Centers of" +
-                    " Community", "","","Religion")}
-                {DeanwoodProfile(Text.church2, false, false,[], [], "","",Deanwood_first_baptist)}
-                {DeanwoodProfile(Text.church3, false, false,[], [], "","",Deanwood_meeting)}
-                {DeanwoodProfile(Text.church4, false, false,[], [], "","",Deanwood_burville)}
+                    " Community", "", "", "Religion")}
+                {DeanwoodProfile(Text.church2, false, false, [], [], "", "", Deanwood_first_baptist)}
+                {DeanwoodProfile(Text.church3, false, false, [], [], "", "", Deanwood_meeting)}
+                {DeanwoodProfile(Text.church4, false, false, [], [], "", "", Deanwood_burville)}
                 <Row>
-                    <Col md = {4}/>
+                    <Col md={4}/>
                     <Col>
                         <blockquote>
                             {Text.noTaxQuote}
@@ -216,8 +216,8 @@ export const DeanwoodCommunity = ({resources, community_data, voronoi_data, path
                         </blockquote>
                     </Col>
                 </Row>
-                {DeanwoodProfile(Text.church5, false, false,[], [], "","","")}
-                {DeanwoodProfile(Text.conclusion, false, true, [], [], [],"Conclusion")}
+                {DeanwoodProfile(Text.church5, false, false, [], [], "", "", "")}
+                {DeanwoodProfile(Text.conclusion, false, true, [], [], [], "Conclusion")}
                 <Col md={4}/>
                 <Col md={8} className="justify-content-around mt-5">
                     <h2>Sources</h2>
@@ -310,7 +310,6 @@ CommunityMap.propTypes = {
     voronoi_data: PropTypes.array,
     paths_data: PropTypes.array
 };
-
 
 
 export default DeanwoodCommunity;
