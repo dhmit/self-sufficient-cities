@@ -8,10 +8,17 @@ h1 {
     }
 }
 
+
 .city {
     padding-top: 0 !important;
     padding-bottom: 0 !important;
     display: flex;
+    &.container {
+        @include media-breakpoint-up("md") {
+            margin-right: 0 !important;
+            padding-right: 0 !important;
+        }
+    }
 
     .intro-text {
         justify-content: center;
@@ -22,6 +29,11 @@ h1 {
     .nav-col {
         @include media-breakpoint-up("lg") {
             position: fixed;
+        }
+
+        p {
+            overflow-y: scroll;
+            max-height: 50vh;
         }
     }
 
@@ -77,4 +89,7 @@ h1 {
         }
     }
 
+
+    .empty-space {
+    }
 }
