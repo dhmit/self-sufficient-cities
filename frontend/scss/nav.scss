@@ -48,6 +48,9 @@
         border: 0;
         margin: 0 auto;
         position: relative;
+        &.hidden {
+            display: none !important;
+        }
         &:hover, &:active {
             svg {
                 fill: #e85141;
