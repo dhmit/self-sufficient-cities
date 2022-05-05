@@ -1,7 +1,7 @@
 #!/bin/bash
 
-NAME="self-sustaining-cities"                                            # Name of the application
-DJANGODIR=/home/ubuntu/self-sustaining-cities/backend                    # Django project directory
+NAME="cities"                                            # Name of the application
+DJANGODIR=/home/ubuntu/cities/backend                    # Django project directory
 SOCKFILE=/home/ubuntu/run/gunicorn.sock 	                # we will communicate using this unix socket
 LOGFILE=/home/ubuntu/run/logs/gunicorn_supervisor.log
 NUM_WORKERS=4                                               # how many worker processes should Gunicorn spawn
@@ -11,7 +11,7 @@ echo "Starting $NAME as `whoami`"
 
 # Activate the virtual environment
 cd $DJANGODIR
-source /home/ubuntu/self-sustaining-cities/venv/bin/activate
+source /home/ubuntu/cities/venv/bin/activate
 
 # Create the run directory if it doesn't exist
 RUNDIR=$(dirname $SOCKFILE)
