@@ -2,8 +2,8 @@ import React from "react";
 import {Row, Col, Image} from "react-bootstrap";
 import Citation from "../../components/global/Citation";
 import cases_graph from "../../images/cases_graph.png";
-import lives_graph from "../../images/cases_graph.png";
-import tests_graph from "../../images/cases_graph.png";
+import lives_graph from "../../images/lives_graph.png";
+import tests_graph from "../../images/tests_graph.png";
 
 
 export const DeanwoodCovid = () => {
@@ -11,7 +11,7 @@ export const DeanwoodCovid = () => {
     return (
         <>
             <Row className={"p-0"}>
-                <p>The following graphs were compiled from OpenDataDC
+                <p className={"m-0"}>The following graphs were compiled from OpenDataDC
                     <a className={"citation-pointer"}
                        title={"DC COVID-19 Cases by Ward"}
                        href={"#source-1"}>[1]
