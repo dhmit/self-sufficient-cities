@@ -1,5 +1,6 @@
 import React, {useState} from "react";
 import DH_LOGO from "../../images/dh_logo.svg";
+import Apartment from "../../images/icons/apartment.svg";
 
 const Nav = () => {
     const [sidebar, setSidebar] = useState(false);
@@ -13,6 +14,9 @@ const Nav = () => {
             className={sidebar
                 ? "burger-open fixed-left navbar navbar-expand-sm"
                 : "fixed-left navbar navbar-expand-sm"}>
+            <a className="btn-home d-flex mt-2 mb-0" href="/">
+                <Apartment className={"text-center mx-auto"}/>
+            </a>
             <button onClick={toggleSidebar} id="burger-icon">
                 <div className="burger-item"/>
                 <div className="burger-item"/>
@@ -44,7 +48,7 @@ const Nav = () => {
                     </li>
                 </ul>
                 <a className="lab-link mb-3"
-                    href="https://digitalhumanities.mit.edu/" target="_blank" rel="noreferrer">
+                   href="https://digitalhumanities.mit.edu/" target="_blank" rel="noreferrer">
                     <img className="lab-image" src={DH_LOGO}/>
                 </a>
             </div>

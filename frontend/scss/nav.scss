@@ -43,7 +43,17 @@
         display: flex;
 
     }
-
+    .btn-home {
+        background-color: transparent;
+        border: 0;
+        margin: 0 auto;
+        position: relative;
+        &:hover, &:active {
+            svg {
+                fill: #e85141;
+            }
+        }
+    }
     .link-home {
         font-size: 1.25rem;
         font-weight: bold;
