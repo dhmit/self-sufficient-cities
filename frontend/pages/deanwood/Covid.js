@@ -7,7 +7,7 @@ import tests_graph from "../../images/cases_graph.png";
 export const DeanwoodCovid = () => {
 
     return (<>
-        <Row mt-3>
+        <Row className="mt-3">
             <Col>
                 <h5>Positive Cases:</h5>
                 <Image src={cases_graph}/>
