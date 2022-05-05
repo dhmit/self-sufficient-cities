@@ -22,7 +22,6 @@ const DeanwoodURL = "/api/get_deanwood_boundary_data/";
 //import data from "./community.json";
 
 
-
 export default class MapMacro extends React.Component {
     state = {
         position: [38.897665, -76.925919],
@@ -42,9 +41,7 @@ export default class MapMacro extends React.Component {
     }
 
 
-
     // load geojson data based on this.props.decade
-
 
 
     render() {
@@ -60,8 +57,6 @@ export default class MapMacro extends React.Component {
         let religionMarkers = [];
 
 
-
-
         const geos = this.props.data;
 
         for (let i = 0; i < geos.length; i++) {
@@ -72,7 +67,7 @@ export default class MapMacro extends React.Component {
             if (geos[i]["kind"] === "Food" && geos[i]["year"] === this.props.decade) {
                 // eslint-disable-next-line max-len
                 foodMarkers.push(
-                    <Marker key={i.toString()} position = {coords}>
+                    <Marker key={i.toString()} position={coords}>
                         <Popup>
                             <p>{geos[i]["name"]}</p>
                         </Popup>
@@ -83,47 +78,39 @@ export default class MapMacro extends React.Component {
             else if ((geos[i]["kind"] === "Health" || geos[i]["kind"] === "Pharmacy") && geos[i]["year"] === this.props.decade) {
                 // eslint-disable-next-line max-len
                 healthMarkers.push(
-                    <Marker key={i.toString()} position = {coords}>
+                    <Marker key={i.toString()} position={coords}>
                         <Popup>
                             <p>{geos[i]["name"]}</p>
                         </Popup>
                     </Marker>);
-            }
-
-            else if (geos[i]["kind"] === "Other" && geos[i]["year"] === this.props.decade) {
+            } else if (geos[i]["kind"] === "Other" && geos[i]["year"] === this.props.decade) {
                 // eslint-disable-next-line max-len
                 otherMarkers.push(
-                    <Marker key={i.toString()} position = {coords}>
+                    <Marker key={i.toString()} position={coords}>
                         <Popup>
                             <p>{geos[i]["name"]}</p>
                         </Popup>
                     </Marker>);
-            }
-
-            else if (geos[i]["kind"] === "Auto" && geos[i]["year"] === this.props.decade) {
+            } else if (geos[i]["kind"] === "Auto" && geos[i]["year"] === this.props.decade) {
                 // eslint-disable-next-line max-len
                 autoMarkers.push(
-                    <Marker key={i.toString()} position = {coords}>
+                    <Marker key={i.toString()} position={coords}>
                         <Popup>
                             <p>{geos[i]["name"]}</p>
                         </Popup>
                     </Marker>);
-            }
-
-            else if (geos[i]["kind"] === "Liquor" && geos[i]["year"] === this.props.decade) {
+            } else if (geos[i]["kind"] === "Liquor" && geos[i]["year"] === this.props.decade) {
                 // eslint-disable-next-line max-len
                 liquorMarkers.push(
-                    <Marker key={i.toString()} position = {coords}>
+                    <Marker key={i.toString()} position={coords}>
                         <Popup>
                             <p>{geos[i]["name"]}</p>
                         </Popup>
                     </Marker>);
-            }
-
-            else if (geos[i]["kind"] === "Religion" && geos[i]["year"] === this.props.decade) {
+            } else if (geos[i]["kind"] === "Religion" && geos[i]["year"] === this.props.decade) {
                 // eslint-disable-next-line max-len
                 religionMarkers.push(
-                    <Marker key={i.toString()} position = {coords}>
+                    <Marker key={i.toString()} position={coords}>
                         <Popup>
                             <p>{geos[i]["name"]}</p>
                         </Popup>
@@ -136,15 +123,15 @@ export default class MapMacro extends React.Component {
         const c = ["#56ebd3", "#115e41", "#88beef", "#4346ab", "#b88ae6", "#8711ac", "#e84fe1", "#1d70a5", "#37c454", "#c2df7d", "#719d47", "#1fa198", "#f8cca6", "#76480d", "#e37010", "#871d32", "#f48e9b", "#e21c7a", "#f73931", "#f9bd3a"];
         const redOptions = {color: "red"};
 
-        //console.log("here ", this.props.voronoi);
         let shapes = [];
         let v = this.props.voronoi;
         for (let i = 0; i < v.length; i++) {
             if (v[i]["year"] === this.props.decade) {
-                for (let j=0; j< v[i]["shapes"].length; j++) {
+                for (let j = 0; j < v[i]["shapes"].length; j++) {
                     shapes.push(
                         // eslint-disable-next-line max-len
-                        <Polygon id={j.toString()} pathOptions={{color:c[j]}} positions={v[i]["shapes"][j]}/>
+                        <Polygon id={j.toString()} pathOptions={{color: c[j]}}
+                                 positions={v[i]["shapes"][j]}/>
                     );
                 }
             }
@@ -152,21 +139,22 @@ export default class MapMacro extends React.Component {
         let omie = [];
         omie.push(
             // eslint-disable-next-line max-len
-            <Circle id={100} center={[38.89874393140099, -76.92357341077269]} pathOptions={redOptions} radius={75}/>
+            <Circle id={100} center={[38.89874393140099, -76.92357341077269]}
+                    pathOptions={redOptions} radius={75}/>
         );
 
         let paths = this.props.paths;
-        console.log(paths);
 
         for (let i = 0; i < paths.length; i++) {
             if (paths[i]["decade"] === this.props.decade) {
-                for (let j=0; j< paths[i]["paths"].length; j++) {
-                    console.log("path ", paths[i]["paths"][j]["path"]);
+                for (let j = 0; j < paths[i]["paths"].length; j++) {
                     omie.push(
                         // eslint-disable-next-line max-len
-                        <Polyline id={j.toString()} pathOptions={redOptions} positions={paths[i]["paths"][j]["path"]} pane={"markerPane"}>
+                        <Polyline id={j.toString()} pathOptions={redOptions}
+                                  positions={paths[i]["paths"][j]["path"]} pane={"markerPane"}>
                             {/* eslint-disable-next-line max-len */}
-                            <Tooltip sticky>{paths[i]["paths"][j]["distance"]} miles in {paths[i]["paths"][j]["time"]} minutes</Tooltip>
+                            <Tooltip sticky>{paths[i]["paths"][j]["distance"]} miles
+                                in {paths[i]["paths"][j]["time"]} minutes</Tooltip>
                         </Polyline>
                     );
                 }
@@ -174,15 +162,9 @@ export default class MapMacro extends React.Component {
         }
 
 
-
-
-
         let L = [];
-        //console.log(this.props.mapType);
         if (this.props.mapType === "Food") {
             L = [
-
-
                 <LayersControl.Overlay checked key={1} name="Voronoi Representation">
                     <LayerGroup>{shapes}</LayerGroup>
                 </LayersControl.Overlay>,
@@ -195,14 +177,13 @@ export default class MapMacro extends React.Component {
                 <LayersControl.Overlay key={2} name="Deanwood Boundaries">
                     <LayerGroup>{Object.keys(this.state.boundary).length > 0 &&
                     // eslint-disable-next-line max-len
-                    <GeoJSON pathOptions={{fillColor: "rgb(174,255,71)", color: "rgb(113,189,13)"}} data={this.state.boundary}/>}</LayerGroup>
+                    <GeoJSON pathOptions={{fillColor: "rgb(174,255,71)", color: "rgb(113,189,13)"}}
+                             data={this.state.boundary}/>}</LayerGroup>
                 </LayersControl.Overlay>,
 
                 <LayersControl.Overlay key={3} name="From Omie Cheek's House">
                     <LayerGroup>{omie}</LayerGroup>
                 </LayersControl.Overlay>
-
-
 
 
             ];
@@ -218,12 +199,13 @@ export default class MapMacro extends React.Component {
                 <LayersControl.Overlay checked key={2} name="Deanwood Boundaries">
                     <LayerGroup>{Object.keys(this.state.boundary).length > 0 &&
                     // eslint-disable-next-line max-len
-                    <GeoJSON pathOptions={{fillColor: "rgb(174,255,71)", color: "rgb(113,189,13)"}} data={this.state.boundary}/>}</LayerGroup>
+                    <GeoJSON pathOptions={{fillColor: "rgb(174,255,71)", color: "rgb(113,189,13)"}}
+                             data={this.state.boundary}/>}</LayerGroup>
                 </LayersControl.Overlay>
             ];
         }
 
-        let m =[];
+        let m = [];
         if (this.props.mapType === "Food") {
             m = foodMarkers;
         } else if (this.props.mapType === "Religion") {
@@ -239,14 +221,12 @@ export default class MapMacro extends React.Component {
                 />
 
 
-
                 {m}
 
 
                 <LayersControl position="topright">
                     {L}
                 </LayersControl>
-
 
 
             </MapContainer>
