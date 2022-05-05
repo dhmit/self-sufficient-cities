@@ -32,10 +32,11 @@ class KMeansPlot extends React.Component {
 
         // Make initial data
         this.radios = Object.keys(this.props.data[0]);
-        const initData = this.getData(this.radios[0], this.radios[1]);
+        const [initYAxis, initXAxis] = [...this.radios.slice(0, 2)];
+        const initData = this.getData(initXAxis, initYAxis);
         this.state = {
-            xAxis: this.radios[1],
-            yAxis: this.radios[0],
+            xAxis: initXAxis,
+            yAxis: initYAxis,
             data: initData
         };
     }
