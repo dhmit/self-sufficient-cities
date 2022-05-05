@@ -13,6 +13,7 @@ h1 {
     padding-top: 0 !important;
     padding-bottom: 0 !important;
     display: flex;
+
     &.container {
         @include media-breakpoint-up("md") {
             margin-right: 0 !important;
@@ -90,6 +91,24 @@ h1 {
     }
 
 
-    .empty-space {
+    .emphasized {
+        font-weight: 600;
+    }
+
+    .health-ward3 {
+        font-weight: 600;
+        color: #3d7dd2;
+    }
+
+    .health-ward7 {
+        font-weight: 600;
+        color: darkorange;
+        margin-top: 50px;
+    }
+
+    .graph-descriptions {
+        p {
+            margin-bottom: 0 !important;
+        }
     }
 }
