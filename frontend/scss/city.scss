@@ -12,6 +12,7 @@ h1 {
     padding-top: 0 !important;
     padding-bottom: 0 !important;
     display: flex;
+
     .intro-text {
         justify-content: center;
         font-family: "titillium_websemibold", sans-serif;
@@ -23,25 +24,57 @@ h1 {
             position: fixed;
         }
     }
-}
 
-.Profile{
-    padding-bottom: 5px;
-}
+    .img-wymer {
+        border: 2px solid black;
+    }
 
+    small {
+        font-size: 0.7em !important;
+        line-height: 0.7em !important;
+    }
 
+    .Profile {
+        padding-bottom: 5px;
+    }
 
-.Prime{
-    height: 10%;
-}
+    .carousel {
+        width: 100%;
+        height: 7em;
+        display: flex;
+        margin-bottom: 1em;
 
-.Holder{
-    width: 100%;
-    height: 100%;
-}
+        blockquote {
+            overflow-y: scroll;
+        }
 
-.Carousel{
-    width: 100%;
-    height: 100%;
-    display: flex;
+        button {
+            background-color: transparent;
+            border: 0;
+        }
+    }
+
+    // housing
+    .housing-charts {
+        h1 {
+            font-size: 1.4em;
+        }
+
+        h2 {
+            font-size: 1.2em;
+        }
+    }
+
+    // health
+    .btn.btn-primary.btn-health-tab {
+        border-radius: 0 !important;
+        background-color: white;
+        border: 1px solid black;
+        color: black;
+
+        &:hover, &:active, &.selected {
+            background-color: $color-periwinkle;
+        }
+    }
+
 }

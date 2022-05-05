@@ -10,7 +10,7 @@ export const Legend = ({options}) => {
 
     return (
         <div className="legend-container">
-            <h1>Map Legend</h1>
+            <h1>Legend</h1>
             {options.map((option, idx) => {
                 return <div key={idx} className={"marker-set"}>
                     <div key={`${idx}-marker`} className={"legend-marker"}

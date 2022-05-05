@@ -2,7 +2,7 @@ import React from "react";
 import housing from "./data/housing";
 import BarChart from "./BarChart";
 
-const getColor = () => `rgba(${(Math.random()/3 +.6)*255}, ${(Math.random()/3 +.6)*255}, 200, 0.7)`;
+const getColor = () => `rgba(${(Math.random() / 3 + .6) * 255}, ${(Math.random() / 3 + .6) * 255}, 200, 0.7)`;
 
 export default class CensusCharts extends React.Component {
     constructor(props) {
@@ -12,7 +12,7 @@ export default class CensusCharts extends React.Component {
         let housingValue = [];
         let key = "value";
         let name = "Housing Value";
-        for(let year in housing[key]) {
+        for (let year in housing[key]) {
             let bars = {
                 extra: [],
                 labels: housing[key][year].map(each => each.name),
@@ -42,7 +42,7 @@ export default class CensusCharts extends React.Component {
         let people = [];
         key = "people";
         name = "Number of people per household";
-        for(let year in housing[key]) {
+        for (let year in housing[key]) {
             let bars = {
                 extra: [],
                 labels: housing[key][year].map(each => each.name),
@@ -60,7 +60,7 @@ export default class CensusCharts extends React.Component {
         let rent = [];
         key = "rent";
         name = "Contract Rent";
-        for(let year in housing[key]) {
+        for (let year in housing[key]) {
             let bars = {
                 extra: [],
                 labels: housing[key][year].map(each => each.name),
@@ -85,15 +85,14 @@ export default class CensusCharts extends React.Component {
 
     render() {
 
-        return (<>
-            <h1>Census Data - Tract 78 - Deanwood</h1>
-
+        return (<div className="housing-charts">
+            <h1>Census data for tract 78 (includes Deanwood)</h1>
             <div>
                 <div>
                     <h2>Number of People per Household</h2>
                     {
-                        this.state.people.map((each,i) =>
-                            <BarChart data={each} key={i +"people"}/>)
+                        this.state.people.map((each, i) =>
+                            <BarChart data={each} key={i + "people"}/>)
                     }
                     <p>
                         Starting in the early 20th century the Great Migration saw six million
@@ -122,8 +121,8 @@ export default class CensusCharts extends React.Component {
                 <div>
                     <h2>Contract Rent</h2>
                     {
-                        this.state.rent.map((each,i) =>
-                            <BarChart data={each} key={i +"rent"}/>)
+                        this.state.rent.map((each, i) =>
+                            <BarChart data={each} key={i + "rent"}/>)
                     }
                     <p>
                         As the population of African Americans increased while the available acres
@@ -145,11 +144,11 @@ export default class CensusCharts extends React.Component {
                 <div>
                     <h2>Housing Values</h2>
                     {
-                        this.state.housingValue.map((each,i) =>
-                            <BarChart data={each} key={i +"housing"}/>)
+                        this.state.housingValue.map((each, i) =>
+                            <BarChart data={each} key={i + "housing"}/>)
                     }
                     <h2>Average Housing Values</h2>
-                    <BarChart data={this.state.average} />
+                    <BarChart data={this.state.average}/>
                     <p>
                         Median Housing Value in 1940 was $4k-5k. Median Housing Value in 1950 was
                         $10k-15k. Median Housing Value in 1960 was $10k-12.5k. The median household
@@ -158,7 +157,7 @@ export default class CensusCharts extends React.Component {
                         <br/>
                         <br/>
                         In 1960, a study of “Negro Housing in DC” found that African American
-                        populations could afford to buy houses with their incomes,  but they
+                        populations could afford to buy houses with their incomes, but they
                         weren’t allowed to buy in the suburbs, which had most of the new housing
                         but were only White buyers could get loans. Meanwhile, the crowding
                         problem only got worse. This reinforces the fact that economic
@@ -178,6 +177,6 @@ export default class CensusCharts extends React.Component {
                     </p>
                 </div>
             </div>
-        </>);
+        </div>);
     }
 }

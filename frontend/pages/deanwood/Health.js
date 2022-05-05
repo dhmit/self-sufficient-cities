@@ -44,7 +44,10 @@ export const DeanwoodHealth = ({resources}) => {
                         <ul className="list-inline">
                             {tabs.map((tab, idx) =>
                                 <li className="list-inline-item" key={`li-tab-${idx}`}>
-                                    <Button key={idx} onClick={() => setDisplayState(tab.label)}>
+                                    <Button
+                                        className={`btn-health-tab ${displayState === tab.label ? "selected" : ""}`}
+                                        key={idx}
+                                        onClick={() => setDisplayState(tab.label)}>
                                         {tab.name}
                                     </Button>
                                 </li>

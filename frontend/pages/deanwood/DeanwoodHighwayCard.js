@@ -5,20 +5,19 @@ import {Col, Image} from "react-bootstrap";
 const DeanwoodHighwayCard = ({img_source}) => {
     return (
         <Col>
-            <h3>Federal Aid Highway Act of 1956</h3>
             <Image src={img_source} fluid/>
             <div>
-                <p>
+                <blockquote className="mt-2 mb-4">
                     “Together, the uniting forces of our communication and transportation
                     systems are dynamic elements in the very name we bear – United States.
-                    Without them, we would be a mere alliance of many separate parts."
+                    <mark>Without them, we would be a mere alliance of many separate parts.</mark>"
                     - Dwight D. Eisenhower
                     <a href={"#source-1"}
                        className={"citation-pointer"}
                        title="Dwight D. Eisenhower Presidential Library -
                        An excerpt from President Eisenhower’s Message to Congress
                        regarding highways, February 22, 1955">[1]</a>
-                </p>
+                </blockquote>
             </div>
 
             <div>
