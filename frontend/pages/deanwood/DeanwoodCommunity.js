@@ -49,22 +49,19 @@ class CommunityMap extends React.Component {
     };
 
     render() {
-        return (<div>
-            {/* eslint-disable-next-line max-len */}
-            <button className={"communityButton"} onClick={() => this.setState({decade:1940})}>1940s</button>
-            {/* eslint-disable-next-line max-len */}
-            <button className={"communityButton"} onClick={() => this.setState({decade:1950})}>1950s</button>
-            {/* eslint-disable-next-line max-len */}
-            <button className={"communityButton"} onClick={() => this.setState({decade:1960})}>1960s</button>
-            {/* eslint-disable-next-line max-len */}
-            <button className={"communityButton"} onClick={() => this.setState({decade:1970})}>1970s</button>
-            {/* eslint-disable-next-line max-len */}
-            <button className={"communityButton"} onClick={() => this.setState({decade:1980})}>1980s</button>
-            {/* eslint-disable-next-line max-len */}
-            <button className={"communityButton"} onClick={() => this.setState({decade:1990})}>1990s</button>
-            {/* eslint-disable-next-line max-len */}
-            <MapTest decade = {this.state.decade} data = {this.props.data} mapType={this.props.mapType} voronoi = {this.props.voronoi_data} paths = {this.props.paths_data}/>
-        </div>);
+        return (<ul className="list-inline">
+            {[4, 5, 6, 7, 8, 9].map((num) => {
+                return <li key={`decade-${num}`} className="list-inline-item">
+                    <button className={"community-button"}
+                            onClick={() => this.setState({decade: parseInt(`19${num}0`)})}>
+                        19{num}0s
+                    </button>
+                </li>;
+            })
+            }
+            <MapTest decade={this.state.decade} data={this.props.data} mapType={this.props.mapType}
+                     voronoi={this.props.voronoi_data} paths={this.props.paths_data}/>
+        </ul>);
     }
 }
 
