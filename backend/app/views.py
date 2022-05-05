@@ -411,7 +411,7 @@ def get_1940_tract_data(request):
 
 def get_1940_kmeans_tract_data(request):
     """
-    API endpoint to get the entries for each tract on the 1940s census
+    API endpoint to get set of specific features for each tract on the 1940s census
     :param request:
     :return:
     """
