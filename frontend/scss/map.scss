@@ -86,3 +86,15 @@ div.map-dropdown-scroll::-webkit-scrollbar-thumb {
     background-image: linear-gradient(lightgray, lightgray);
     border-radius: 5px;
 }
+
+.radio-col {
+    display: flex;
+    flex-direction: column;
+}
+
+.radio-row {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    padding-bottom: 1em;
+}

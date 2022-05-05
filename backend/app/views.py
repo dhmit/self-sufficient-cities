@@ -35,6 +35,23 @@ from .models import Person, Event, Location
 from .serializers import PersonSerializer, EventSerializer, LocationSerializer
 from .helpers import address_to_coordinates
 
+KMEANS_DIMENSIONS = [
+    'Total Population',
+    'Total Area (sq. miles)',
+    'Population Density per sq. mile',
+    'Male',
+    'Female',
+    'White',
+    'Black',
+    'Total Housing Units',
+    'Total Housing Units: Occupied Housing Units',
+    'Employed Civilian Population 14 and Over',
+    'Occupied Housing Units: Owner: White',
+    'Occupied Housing Units: Owner: Black',
+    'Housing Units With Refrigeration Equipment',
+    'Occupied Housing Units: With Central Heating'
+]
+
 
 def index(request):
     """
@@ -390,6 +407,25 @@ def get_1940_tract_data(request):
         data = json.load(f)
 
     return JsonResponse(data)
+
+
+def get_1940_kmeans_tract_data(request):
+    """
+    API endpoint to get the entries for each tract on the 1940s census
+    :param request:
+    :return:
+    """
+    with open("app/data/1940_tract_data.json", encoding='utf-8') as f:
+        data = json.load(f)
+
+    filtered_data = {
+        "tracts": [
+            {dim: values[dim] for dim in KMEANS_DIMENSIONS}
+            for values in data.values()
+        ]
+    }
+
+    return JsonResponse(filtered_data)
 
 
 def get_deanwood_boundary_data(request):

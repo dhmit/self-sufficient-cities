@@ -1,11 +1,9 @@
 import React from "react";
-import {Container, Row, Col, ToggleButton} from "react-bootstrap";
+import {Container, Row, Col} from "react-bootstrap";
 import * as PropTypes from "prop-types";
 import axios from "axios";
 import DeanwoodNav from "../deanwood/DeanwoodNav";
 import CensusTractMap from "../../components/maps/CensusTractMap";
-
-
 import {
     Chart as ChartJS,
     LinearScale,
@@ -17,71 +15,122 @@ import {
 import {Scatter} from "react-chartjs-2";
 ChartJS.register(LinearScale, PointElement, LineElement, Tooltip, Legend);
 
-export const options = {
+const SCATTER_OPTIONS = {
     scales: {
+        x: {
+            beginAtZero: true
+        },
         y: {
             beginAtZero: true
         }
     }
 };
 
-export const data = {
-    datasets: [
-        {
-            label: "A dataset",
-            data: [{x: 0, y: 1}],
-            backgroundColor: "rgba(255, 99, 132, 1)"
-        }
-    ]
-};
-
-const RADIOS = [
-    {name: "x", value: 0},
-    {name: "y", value: 1}
-];
-
-class RadioButtons extends React.Component {
+class KMeansPlot extends React.Component {
     constructor(props) {
         super(props);
+
+        // Make initial data
+        this.radios = Object.keys(this.props.data[0]);
+        const initData = this.getData(this.radios[0], this.radios[1]);
         this.state = {
-            value: 0
+            xAxis: this.radios[1],
+            yAxis: this.radios[0],
+            data: initData
         };
     }
 
-    setRadioValue(newValue) {
-        this.setState({value: newValue});
+    getData(xDim, yDim) {
+        let newData = [];
+        for (const element of this.props.data) {
+            newData.push({
+                x: element[xDim],
+                y: element[yDim]
+            });
+        }
+        return newData;
+    }
+
+    onXChange(event) {
+        const newXAxis = event.target.value;
+        const newData = this.getData(newXAxis, this.state.yAxis);
+        this.setState({xAxis: newXAxis, data: newData});
+    }
+
+    onYChange(event) {
+        const newYAxis = event.target.value;
+        const newData = this.getData(this.state.xAxis, newYAxis);
+        this.setState({yAxis: newYAxis, data: newData});
     }
 
     render() {
+        const plotLabel = `${this.state.yAxis} vs. ${this.state.xAxis}`;
         return (
-            <div className={this.props.vertical ? "axis-toggle" : ""}>
-                {this.props.radios.map((radio, idx) => (
-                    <ToggleButton
-                        key={idx + Math.random()}
-                        id={`radio-${idx + Math.random()}`}
-                        type="radio"
-                        variant="secondary"
-                        name="radio"
-                        value={radio.value}
-                        checked={() => this.state.value === radio.value}
-                        onChange={(e) => this.setRadioValue(e.currentTarget.value)}
+            <div>
+                <div className="radio-row">
+                    <div
+                        className="radio-col"
+                        onChange={(e) => this.onYChange(e)}
                     >
-                        {radio.name}
-                    </ToggleButton>
-                ))}
+                        <h5>Y-Axis</h5>
+                        {this.radios.map((radio, idx) => (
+                            <div
+                                key={idx}
+                            >
+                                <input
+                                    type="radio"
+                                    value={radio}
+                                    name="radio-column-y"
+                                /> {radio}
+                            </div>
+                        ))}
+                    </div>
+                    <div
+                        className="radio-col"
+                        onChange={(e) => this.onXChange(e)}
+                    >
+                        <h5>X-Axis</h5>
+                        {this.radios.map((radio, idx) => (
+                            <div
+                                key={idx}
+                            >
+                                <input
+                                    type="radio"
+                                    value={radio}
+                                    name="radio-column-x"
+                                /> {radio}
+                            </div>
+                        ))}
+                    </div>
+                </div>
+                <Scatter
+                    md={4}
+                    options={SCATTER_OPTIONS}
+                    data={{
+                        datasets: [
+                            {
+                                label: plotLabel,
+                                data: this.state.data,
+                                backgroundColor: "rgba(255, 99, 132, 1)"
+                            }
+                        ]
+                    }}
+                />
             </div>
         );
     }
 }
 
 class FutureWorkOverview extends React.Component{
+    tracts;
 
     constructor(props) {
         super(props);
         this.state = {
             resources: props.resources,
             census_tracts: [],
-            deanwood_similarities: {}
+            deanwood_similarities: {},
+            kmeans_tract_data: []
         };
     }
 
@@ -98,9 +147,16 @@ class FutureWorkOverview extends React.Component{
             .then((res) => {
                 this.setState({deanwood_similarities: res.data});
             });
+
+        // load the kmeans data for the different tracts
+        axios.get("/api/get_1940_kmeans_tract_data")
+            .then((res) => {
+                this.setState({kmeans_tract_data: res.data.tracts});
+            });
     }
 
     render() {
+        const kmeans_data = this.state.kmeans_tract_data;
         return (<>
             <Container className="city" id="future-research-overview">
                 <Row >
@@ -197,10 +253,8 @@ class FutureWorkOverview extends React.Component{
                     </Row>
                     <Row>
                         <Col md={4} />
-                        <Col>
-                            <RadioButtons radios={RADIOS} vertical={true}/>
-                            <RadioButtons radios={RADIOS} vertical={false}/>
-                            <Scatter md={4} options={options} data={data} />
+                        <Col md={8}>
+                            {(kmeans_data.length > 0) ? <KMeansPlot data={kmeans_data} /> : <></>}
                         </Col>
                     </Row>
                     <Row>
@@ -244,17 +298,17 @@ class FutureWorkOverview extends React.Component{
                                 A custom machine learning model was created to identify other
                                 self-sustaining neighborhoods from the 1917-1919 Cost of Living
                                 in the United States census. Since this dataset is not divided
-                                per-tract, but per-city, the results will tell us with less
+                                per tract, but per city, the results will tell us with less
                                 accuracy of where self-sustaining neighborhoods are located, but
-                                will give us an adequate idea of which cities we are likely to
+                                will give us an adequate idea of in which cities we are likely to
                                 find them.
                             </p>
                             <p>
                                 The machine learning model was relatively shallow, using 10
                                 linear layers and 12 convolutional layers. Categorical data from
-                                this dataset was stored using one-hot encoding.in which data
-                                such as gender would be converted from “male” to [0, 1] and
-                                “female” to [1, 0].
+                                this dataset was stored using one-hot encoding, in which data
+                                such as gender would be converted from "male" to [0, 1] and
+                                "female" to [1, 0].
                             </p>
                             <p>
                                 The numerical data and categorical data were combined and assessed
@@ -266,17 +320,15 @@ class FutureWorkOverview extends React.Component{
                             </p>
                             <p>
                                 The matrix was then converted into an array of numbers using the
-                                model’s convolutional layers, These values were added to the
+                                model's convolutional layers. These values were added to the
                                 2136 numerical values and processed together to a single value
-                                ranging from 0 - 1 using the model’s linear layers. The output
+                                ranging from 0 - 1 using the model's linear layers. The output
                                 value represents the likelihood of a city containing a
-                                self-sustaining neighborhood. The method is unstable so frequency
-                                analysis was performed - (500 trials). The cities that ranked
-                                the highest on each trial were assigned a score based on their
-                                rank and the score was averaged for each rank to determine
-                            </p>
-                            <p>
-                                The following graphic represents the ranking of each city.
+                                self-sustaining neighborhood. To increase confidence in the results,
+                                500 trials of training were performed. The cities that ranked
+                                the highest on each trial were assigned a score of
+                                (# of tracts - ranking) squared, and the scores for all rounds
+                                were averaged to obtain the final ranking.
                             </p>
                         </Col>
                     </Row>
@@ -331,9 +383,8 @@ FutureWorkOverview.propTypes = {
     resources: PropTypes.array
 };
 
-RadioButtons.propTypes = {
-    radios: PropTypes.array,
-    vertical: PropTypes.bool
+KMeansPlot.propTypes = {
+    data: PropTypes.array
 };
 
 
