@@ -1,6 +1,7 @@
 import json
 from django.shortcuts import render
 
+
 def overview(request):
     """
     Deanwood homepage
@@ -17,6 +18,7 @@ def overview(request):
     }
 
     return render(request, 'index.html', context)
+
 
 def transport(request):
     """
@@ -35,11 +37,78 @@ def transport(request):
 
     return render(request, 'index.html', context)
 
-# def health(request):
-#     """
-#     Deanwood health page
-#     """
-#     pass
+
+def health(request):
+    """
+    Deanwood health page
+    """
+    resources = ["overview", "housing", "transport", "food", "community", "health", "future"]
+    context = {
+        'page_metadata': {
+            'title': 'Health'
+        },
+        'component_name': 'DeanwoodHealth',
+        'component_props': {
+            'resources': resources
+        },
+    }
+
+    return render(request, 'index.html', context)
+
+
+def resident(request):
+    """
+    Deanwood health page
+    """
+    resources = ["resident_profile", "covid_data", "health_trends"]
+    context = {
+        'page_metadata': {
+            'title': 'Resident'
+        },
+        'component_name': 'DeanwoodResident',
+        'component_props': {
+            'resources': resources
+        },
+    }
+
+    return render(request, 'index.html', context)
+
+
+def covid(request):
+    """
+    Deanwood health page
+    """
+    resources = ["resident_profile", "covid_data", "health_trends"]
+    context = {
+        'page_metadata': {
+            'title': 'COVID'
+        },
+        'component_name': 'DeanwoodCovid',
+        'component_props': {
+            'resources': resources
+        },
+    }
+
+    return render(request, 'index.html', context
+                  )
+
+
+def healthtrend(request):
+    """
+    Deanwood health page
+    """
+    resources = ["resident_profile", "covid_data", "health_trends"]
+    context = {
+        'page_metadata': {
+            'title': 'Health Trend'
+        },
+        'component_name': 'DeanwoodHealthtrend',
+        'component_props': {
+            'resources': resources
+        },
+    }
+
+    return render(request, 'index.html', context)
 
 
 def community(request):
@@ -73,7 +142,6 @@ def community(request):
     return render(request, 'index.html', context)
 
 
-
 def food(request):
     """
      Deanwood food page
@@ -89,6 +157,7 @@ def food(request):
         },
     }
     return render(request, 'index.html', context)
+
 
 def housing(request):
     """
@@ -124,6 +193,7 @@ def housing(request):
     }
 
     return render(request, 'index.html', context)
+
 
 def future(request):
     """

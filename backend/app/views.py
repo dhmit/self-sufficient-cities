@@ -518,3 +518,8 @@ def api_page(request):
         'component_name': 'API'
     }
     return render(request, 'index.html', context)
+
+
+def ward_demographics(request):
+    with open('app/data/health/ward.json', encoding="utf-8") as f:
+        return JsonResponse(json.load(f))

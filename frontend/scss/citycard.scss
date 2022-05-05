@@ -144,3 +144,11 @@
 .city-tag-future {
     @include city-tag($color-gold);
 }
+
+.city-tag-covid-data {
+    @include city-tag($color-red);
+}
+
+.city-tag-resident-profile {
+    @include city-tag($color-gold);
+}

@@ -10,7 +10,7 @@ import DeanwoodNav from "./DeanwoodNav";
 export const DeanwoodHousing = ({resources, addresses}) => {
 
     return (<>
-        <Container className="city" id="deanwood-overview">
+        <Container className="city" id="deanwood-housing">
             <Row>
                 <Col md={3} className="nav-col mr-2">
                     <h1>Deanwood Housing Changes Over Time</h1>
