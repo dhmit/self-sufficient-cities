@@ -15,16 +15,24 @@ module.exports = {
     },
     plugins: [
         new BundleTracker({filename: "./webpack-stats.json"}),
-        new MiniCssExtractPlugin({ filename: "[name].bundle.css" }),
+        new MiniCssExtractPlugin({filename: "[name].bundle.css"}),
         new ESLintPlugin(),
     ],
     module: {
         rules: [
             // eslint-disable-next-line max-len
-            {test: /\.(scss|css)$/, use: [MiniCssExtractPlugin.loader, "css-loader", "sass-loader"]},
+            {
+                test: /\.(scss|css)$/,
+                use: [MiniCssExtractPlugin.loader, "css-loader", "sass-loader"]
+            },
             {test: /\.js|.jsx$/, exclude: /node_modules/, use: "babel-loader"},
-            {test: /\.(png|jpe?g|gif|svg)$/i, use: [{loader: "file-loader"}]},
-            {test: /\.(woff|woff2|eot|ttf)$/, use: "url-loader"}
+            {test: /\.(png|jpe?g|gif)$/i, use: [{loader: "file-loader"}]},
+            {
+                test: /\.svg$/i,
+                issuer: /\.[jt]sx?$/,
+                use: ['@svgr/webpack'],
+            },
+            {test: /\.(woff|woff2|eot|ttf)$/, use: "url-loader"},
         ]
     }
 };
