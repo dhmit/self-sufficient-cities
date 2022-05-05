@@ -9,8 +9,10 @@ import Deanwood_kiosk from "../../images/deanwood_kiosk.png";
 import Deanwood_burville from "../../images/Deanwood_Burville.jpeg";
 import Deanwood_first_baptist from "../../images/Deanwood_first_baptist_church.jpeg";
 import Deanwood_meeting from "../../images/Deanwood_Meeting.jpeg";
-
 import Citation from "../../components/global/Citation";
+
+import ArrowRight from "../../images/icons/arrow-right.svg";
+import ArrowLeft from "../../images/icons/arrow-left.svg";
 
 // eslint-disable-next-line max-len
 const DeanwoodProfile = (statement, hasMap = true, hasTitle = true, data = [], voronoi = [], paths = [],
@@ -28,7 +30,7 @@ const DeanwoodProfile = (statement, hasMap = true, hasTitle = true, data = [], v
     return (<div className={"Profile"}>
         <Row>
             <Col md={4}/>
-            <Col>
+            <Col className="p-0">
                 {hasTitle && <h2>{title}</h2>}
                 {/* Iterate through statement. If item is string, the next item might be a
                  citation. Check next for type not string. Add to paragraph if not string.
@@ -97,27 +99,20 @@ export const DeanwoodCommunity = ({resources, community_data, voronoi_data, path
                     </p>
                     <DeanwoodNav selected={"community"} resources={resources}/>
                 </Col>
-                <Row xs={1} md={2} className="Prime mt-5">
+                <Row className="prime mt-5">
                     <Col md={4}/>
-                    <Col className="Holder">
-                        <Row className="Carousel justify-content-between">
-                            <Col className="justify-content-center">
-                                {imageNum > 0 && <button onClick={backward}>
-                                    Left
-                                </button>}
-                            </Col>
-                            <Col className="col-9">
-                                <blockquote>
-                                    {Text.quotes[imageNum]}
-                                </blockquote>
-                            </Col>
-                            <Col className="justify-content-center">
-                                {imageNum < Text.quotes.length - 1 && <button onClick={forward}>
-                                    Right
-                                </button>}
-                            </Col>
+                    <Col className="carousel">
+                        {imageNum > 0 && <button onClick={backward}>
+                            <ArrowLeft fill={"#888"} height={"20px"}/>
+                        </button>}
+                        <blockquote className="selected-text">
+                            {Text.quotes[imageNum]}
+                        </blockquote>
+                        {imageNum < Text.quotes.length - 1 &&
+                        <button onClick={forward}>
+                            <ArrowRight fill={"#888"} height={"20px"}/>
+                        </button>}
 
-                        </Row>
                     </Col>
                 </Row>
                 {DeanwoodProfile(Text.quoteContext, false, false)}

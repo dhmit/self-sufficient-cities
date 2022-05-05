@@ -12,6 +12,7 @@ h1 {
     padding-top: 0 !important;
     padding-bottom: 0 !important;
     display: flex;
+
     .intro-text {
         justify-content: center;
         font-family: "titillium_websemibold", sans-serif;
@@ -25,23 +26,23 @@ h1 {
     }
 }
 
-.Profile{
+.Profile {
     padding-bottom: 5px;
 }
 
 
-
-.Prime{
-    height: 10%;
-}
-
-.Holder{
+.carousel {
     width: 100%;
-    height: 100%;
-}
-
-.Carousel{
-    width: 100%;
-    height: 100%;
+    height: 7em;
     display: flex;
+    margin-bottom: 1em;
+
+    blockquote {
+        overflow-y: scroll;
+    }
+
+    button {
+        background-color: transparent;
+        border: 0;
+    }
 }
