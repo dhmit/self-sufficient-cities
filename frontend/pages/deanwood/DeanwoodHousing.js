@@ -9,7 +9,8 @@ import WymarHousing2_modern from "../../images/wy_040108_modern.jpg";
 import Lot_Historical_Image from "../../images/lot_historical_image.jpg";
 import Lot_Modern_Image from "../../images/lot_modern_image.jpeg";
 
-import Table2 from "../../components/maps/Table2";
+import Table_Deanwood from "../../components/maps/Table2";
+import Table_Brightwood from "../../components/maps/Table_Brightwood";
 import CensusChartsV2 from "../../components/charts/CensusChartsV2";
 import Citation from "../../components/global/Citation";
 import DeanwoodNav from "./DeanwoodNav";
@@ -77,8 +78,6 @@ export const DeanwoodHousing = ({resources, addresses}) => {
                     </small>
                 </Col>
                 <Col lg={4}/>
-                <Col lg={8} className="p-0"><MapHousing addresses={addresses}/></Col>
-                <Col lg={4}/>
                 <Col lg={6}>
                     <br/>
                     <br/>
@@ -113,29 +112,6 @@ export const DeanwoodHousing = ({resources, addresses}) => {
                         district, stressing the importance of both preserving the homes in the
                         owners’ family line and maintaining affordable prices.
                     </p>
-                    <h2>
-                        Comparison between Deanwood and Brightwood
-                    </h2>
-                    <p>
-                        Despite the rise in housing prices, Deanwood homes perform noticeably
-                        worse than nearby communities in the housing market. We compared
-                        Deanwood to Brightwood, a predominantly white neighborhood with houses
-                        of comparable size and style, on the other side of the city.
-                        Historically, houses in both neighborhoods remained in the family across
-                        generations. However, when houses were sold, Brightwood’s selling price
-                        was significantly higher than that Deanwood’s, with a median home value
-                        of $665,000
-                        <a className={"citation-pointer"} title={"Brightwood" +
-                        " Housing Market"} href={"#source-3"}>[3]</a>
-                        compared to Deanwood’s $391,740
-                        <a className={"citation-pointer"} title={"Brightwood" +
-                        " Housing Market"} href={"#source-4"}>[4]</a> . This signifies a 70%
-                        difference in the price of houses of comparable sizes. Despite the high
-                        selling value of Brightwood properties, the homes remain in the family,
-                        meaning that owners are able to afford their taxes and the neighborhood
-                        is not being gentrified.
-
-                    </p>
                     <p>
                         We looked into the Record of Deeds
                         <a className={"citation-pointer"} title={"Record of Deeds"}
@@ -165,7 +141,47 @@ export const DeanwoodHousing = ({resources, addresses}) => {
                         </small>
                     </Col>
 
-                    <Table2/>
+                    <Table_Deanwood/>
+                    <p>
+                        In the tables above, each instance that we see an exchange of $10 or $0
+                        of a lot, this usually indicates that the house was transferred from
+                        within the family, such as from parent to child. This illustrates
+                        instances of gentrification, as we can see houses in Deanwood that have
+                        remained in the family for decades, suddenly being sold for large amounts
+                        of worth. This is a possible indication that the rising housing prices
+                        made it unaffordable for families to continue living in their homes.
+                    </p>
+                    <h2>Map of Disappearing Households</h2>
+                    <p>
+                        In the map below, we track this phenomenon of houses that have remained
+                        within the family for decades suddenly being sold for large amounts; in a
+                        sense, a kind of "disappearance" of households.
+                    </p>
+                    <Col lg={4}/>
+                    <Col lg={8} className="p-0"><MapHousing addresses={addresses}/></Col>
+                    <h2>
+                        Comparison between Deanwood and Brightwood
+                    </h2>
+                    <p>
+                        Despite the rise in housing prices, Deanwood homes perform noticeably
+                        worse than nearby communities in the housing market. We compared
+                        Deanwood to Brightwood, a predominantly white neighborhood with houses
+                        of comparable size and style, on the other side of the city.
+                        Historically, houses in both neighborhoods remained in the family across
+                        generations. However, when houses were sold, Brightwood’s selling price
+                        was significantly higher than that Deanwood’s, with a median home value
+                        of $665,000
+                        <a className={"citation-pointer"} title={"Brightwood" +
+                        " Housing Market"} href={"#source-3"}>[3]</a>
+                        compared to Deanwood’s $391,740
+                        <a className={"citation-pointer"} title={"Brightwood" +
+                        " Housing Market"} href={"#source-4"}>[4]</a> . This signifies a 70%
+                        difference in the price of houses of comparable sizes. Despite the high
+                        selling value of Brightwood properties, the homes remain in the family,
+                        meaning that owners are able to afford their taxes and the neighborhood
+                        is not being gentrified.
+                    </p>
+                    <Table_Brightwood/>
                     <CensusChartsV2/>
                     <h2>
                         Similar instances of racism in housing practices
