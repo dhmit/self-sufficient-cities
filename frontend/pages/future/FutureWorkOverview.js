@@ -131,11 +131,16 @@ class FutureWorkOverview extends React.Component{
             resources: props.resources,
             census_tracts: [],
             deanwood_similarities: {},
-            kmeans_tract_data: []
+            kmeans_tract_data: [],
+            show_census_map: false,
+            show_kmeans: false
         };
+        this.onShowKMeans = this.onShowKMeans.bind(this);
+        this.onShowCensusMap = this.onShowCensusMap.bind(this);
     }
 
-    componentDidMount() {
+    onShowCensusMap(e) {
+        e.preventDefault();
 
         // load the census tract shapes
         axios.get("/api/get_1940_census_geodata")
@@ -149,11 +154,19 @@ class FutureWorkOverview extends React.Component{
                 this.setState({deanwood_similarities: res.data});
             });
 
+        this.setState({show_census_map: true});
+    }
+
+    onShowKMeans(e) {
+        e.preventDefault();
+
         // load the kmeans data for the different tracts
         axios.get("/api/get_1940_kmeans_tract_data")
             .then((res) => {
                 this.setState({kmeans_tract_data: res.data.tracts});
             });
+
+        this.setState({show_kmeans: true});
     }
 
     render() {
@@ -255,7 +268,17 @@ class FutureWorkOverview extends React.Component{
                     <Row>
                         <Col md={4} />
                         <Col md={8}>
-                            {(kmeans_data.length > 0) ? <KMeansPlot data={kmeans_data} /> : <></>}
+                            {(this.state.show_kmeans && kmeans_data.length > 0)
+                                ? <KMeansPlot data={kmeans_data} />
+                                : (
+                                    <button
+                                        onClick={this.onShowKMeans}
+                                        className='community-button'
+                                    >
+                                        Show Kmeans Visualization
+                                    </button>
+                                )
+                            }
                         </Col>
                     </Row>
                     <Row>
@@ -285,10 +308,22 @@ class FutureWorkOverview extends React.Component{
                     <Row>
                         <Col md={4}/>
                         <Col md={8}>
-                            <CensusTractMap
-                                census_tracts={this.state.census_tracts}
-                                deanwood_similarities={this.state.deanwood_similarities}
-                            />
+                            {this.state.show_census_map
+                                ? (
+                                    <CensusTractMap
+                                        census_tracts={this.state.census_tracts}
+                                        deanwood_similarities={this.state.deanwood_similarities}
+                                    />
+                                )
+                                : (
+                                    <button
+                                        onClick={this.onShowCensusMap}
+                                        className='community-button'
+                                    >
+                                        Show Tract Similarities
+                                    </button>
+                                )
+                            }
                         </Col>
                     </Row>
                     <Row className="mt-5">
