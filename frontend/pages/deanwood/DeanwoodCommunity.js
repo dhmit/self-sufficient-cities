@@ -53,7 +53,7 @@ const DeanwoodProfile = (statement, hasMap = true, hasTitle = true, data = [], v
 
 class CommunityMap extends React.Component {
     state = {
-        decade: 1980
+        decade: 1940
     };
 
     render() {
