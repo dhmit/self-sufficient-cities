@@ -10,7 +10,7 @@ module.exports = {
     },
     output: {
         path: path.resolve("./assets/bundles/"),
-        publicPath: "/assets/bundles/",
+        publicPath: "/static/bundles/",
         filename: "[name].bundle.js"
     },
     plugins: [
