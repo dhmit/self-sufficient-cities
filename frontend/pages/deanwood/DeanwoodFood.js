@@ -9,6 +9,10 @@ import safeway from "../../images/Safeway.png";
 import unfair from "../../images/PeoplesUnfair.png";
 import superpride from "../../images/SuperPride.png";
 import groceries from "../../images/DeanwoodGroceryMap.png";
+import income_map_2005 from "../../images/MedianIncome2005.PNG";
+import income_map_2015 from "../../images/MedianIncome2015.PNG";
+import goods from "../../images/CommonCommoditiesPrices.PNG";
+import income from "../../images/MedianIncomeDeanwood.PNG";
 import pharmacy from "../../images/strand_pharmacy.jpg";
 import theatre from "../../images/strand_theatre.png";
 
@@ -18,7 +22,7 @@ export const DeanwoodFood = ({resources}) => {
         <Container className="city" id="deanwood-overview">
             <Row >
                 <Col md={3} className="nav-col mr-2">
-                    <h1><u>Food in Deanwood, D.C.</u></h1>
+                    <h1>Food in Deanwood, D.C.</h1>
                     <p>
                         In the modern day, Deanwood might be called a “food desert,” a
                         low-income census tract where a substantial number of residents have
@@ -71,7 +75,7 @@ export const DeanwoodFood = ({resources}) => {
                     <Row>
                     <Col md={4}/>
                     <Col>
-                        <h1><u>General summary</u></h1>
+                        <h1>General summary</h1>
                         <p>
                             Throughout the 1900s, Deanwood received less government investment and
                             benefits compared to similar-sized White neighborhoods in DC, such as
@@ -248,6 +252,45 @@ export const DeanwoodFood = ({resources}) => {
                             healthy and well-informed, even if it requires more deliberation than
                             it might living with better access.
                         </p>
+                        <h1><u>Food Affordability</u></h1>
+                        <p>
+                            The flight of easily accessible food businesses is not the only concern for
+                            the growing level of food insecurity in Deanwood. Deanwood has been in the lower
+                            economic bracket compared the majority of Washington D.C.
+                        </p>
+                        <div>
+                            <img src={income_map_2005} alt="Logo" width={820} height={330}/>
+                        </div>
+                        <br></br>
+                        <div>
+                            <img src={income_map_2015} alt="Logo" width={820} height={330}/>
+                        </div>
+                        <div>
+                            <img src={income} alt="Logo" width={600} height={500} className={"center-img"}/>
+                            <div className="caption"> Notable points in the graph are the jumps between 1980-
+                            1990 and 2015-2020. Another major point of interest is the large period of
+                            stagnation between 1990-2015.</div>
+                        </div>
+                        <p>
+                            This on its own would not neccessarily be a pressing issue when it comes to
+                            food accessibility. After all, there was a point in time where Deanwood was food
+                            self-sufficient. However, when you look at the median income of Deanwood residents
+                            and compare it to rising inflation and the rising cost
+                            of common commodities, there is a significant disparity in the growth between the two.
+                            <b> Notice the period of stagnant economic growth in Deanwood residents between 1990-2015
+                                in the above graph. </b> Now compare this with price of common commodities between the
+                                same time period.
+                        </p>
+                        <div>
+                            <img src={goods} alt="Logo" width={700} height={470}/>
+                        </div>
+                        <p>
+                            The price of a lot of common goods (except chicken!) nearly doubled during this time frame,
+                            whereas the median income of Deanwood residents hardly increased at all. If food business
+                            disappear and the food that is accessible becomes increasingly less affordable,
+                            the problem of recent periods of food insecurity becomes quite evident.
+                        </p>
+
                     </Col>
                 </Row>
                 </Row>
