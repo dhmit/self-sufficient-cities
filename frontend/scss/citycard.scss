@@ -1,5 +1,5 @@
 .city-card {
-    border: 1px solid black;
+    border: 1.5px solid black;
     box-shadow: 2px 3px 4px lightgrey;
     padding: 5%;
     height: calc(100% - 5%);
@@ -8,8 +8,42 @@
     margin-bottom: 5%;
     transition: all .2s ease-in-out;
 
+    @include media-breakpoint-down("md") {
+        &:hover {
+            transform: scale(1) !important;
+        }
+    }
+    @include media-breakpoint-down("sm") {
+        border: 1.5px solid black;
+        img, p {
+            display: none;
+        }
+        &:hover {
+            transform: scale(1) !important;
+        }
+    }
+
     img {
         padding-bottom: 5%;
+    }
+
+    &.disabled {
+        color: #9a9a9a;
+        border: 1px solid #d9d9d9;
+        box-shadow: none;
+
+        &:hover {
+            transform: scale(1);
+        }
+
+        img {
+            opacity: 0.5;
+        }
+
+        a {
+            background-color: #cacaca;
+            color: #9a9a9a;
+        }
     }
 }
 
@@ -21,6 +55,17 @@
     display: flex;
     flex-wrap: wrap;
     margin-top: auto;
+
+    > a {
+        &:hover, &:active, &:focus {
+            color: black;
+        }
+    }
+}
+
+.city-tags > a {
+    border: 0;
+    font-size: 0.8em;
 }
 
 .city-links > a {
@@ -39,6 +84,41 @@
     }
 }
 
+
+.city-tags > .city-tag-overview {
+    background-color: $color-periwinkle;
+}
+
+.city-tags > .city-tag-housing {
+    background-color: $color-magenta;
+}
+
+.city-tags > .city-tag-transport {
+    background-color: $color-green;
+}
+
+.city-tags > .city-tag-health {
+    background-color: $color-periwinkle;
+}
+
+.city-tags > .city-tag-housing {
+    background-color: $color-green;
+}
+
+.city-tags > .city-tag-community {
+    background-color: $color-magenta;
+}
+
+.city-tags > .city-tag-food {
+    background-color: $color-red;
+}
+
+.city-tags > .city-tag-future {
+    background-color: $color-gold;
+}
+
+
+//-----
 .city-tag-overview {
     @include city-tag($color-periwinkle);
 }
@@ -52,7 +132,7 @@
 }
 
 .city-tag-health {
-    @include city-tag($color-gold);
+    @include city-tag($color-periwinkle);
 }
 
 .city-tag-housing {

@@ -347,6 +347,69 @@ def get_census_data(request):
 
     return JsonResponse(census_data)
 
+def get_community_data(request):
+    """
+    API endpoint for getting the census data in json format
+    """
+    with open("app/data/community.json", encoding="utf-8") as f:
+        community_data = json.load(f)
+
+    return JsonResponse(community_data)
+
+
+
+def get_1940_census_geodata(request):
+    """
+    API endopoint for getting the 1940 Census Tracts as a geojson file
+    """
+
+    with open("app/data/filtered_1940_tracts.geojson", encoding='utf-8') as f:
+        census_data = json.load(f)
+
+    return JsonResponse(census_data)
+
+
+def get_1940_deanwood_similarities(request):
+    """
+    API endpoint for getting the similarity scores for 1940 census tracts
+    """
+
+    with open("app/data/filtered_tract_distances.json", encoding='utf-8') as f:
+        census_data = json.load(f)
+
+    return JsonResponse(census_data)
+
+
+def get_1940_tract_classifications(request):
+    """
+    API endpoint for getting the cluster classifications of census tracts in 1940
+    """
+    with open("app/data/tract_labels.json", encoding='utf-8') as f:
+        classifications = json.load(f)
+
+    return JsonResponse(classifications)
+
+
+def get_1940_tract_data(request):
+    """
+    API endpoint to get the entries for each tract on the 1940s census
+    :param request:
+    :return:
+    """
+    with open("app/data/1940_tract_data.json", encoding='utf-8') as f:
+        data = json.load(f)
+
+    return JsonResponse(data)
+
+
+def get_deanwood_boundary_data(request):
+    """
+    Get the Deanwood geoJSON
+    """
+    with open("app/data/deanwood_boundary.geojson", encoding="utf-8") as f:
+        boundary = json.load(f)
+    return JsonResponse(boundary)
+
 
 def get_addresses(request):
     """
@@ -402,6 +465,14 @@ def get_address_data(request):
     return JsonResponse({"address_data": address_data})
 
 
+def get_food_addresses(request):
+    """Returning all addresses from file"""
+    with open("app/data/food_addresses_new.json", encoding="utf-8") as f:
+        address_data = json.load(f)
+
+    return JsonResponse({"address_data": address_data})
+
+
 def get_legend_testing(request):
     """Returning all addresses from file"""
     with open("app/data/legend_testing.json", encoding="utf-8") as f:
@@ -450,5 +521,5 @@ def api_page(request):
 
 
 def ward_demographics(request):
-    with open('app/data/health/ward.json') as f:
+    with open('app/data/health/ward.json', encoding="utf-8") as f:
         return JsonResponse(json.load(f))
