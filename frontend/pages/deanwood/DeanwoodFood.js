@@ -9,6 +9,8 @@ import safeway from "../../images/Safeway.png";
 import unfair from "../../images/PeoplesUnfair.png";
 import superpride from "../../images/SuperPride.png";
 import groceries from "../../images/DeanwoodGroceryMap.png";
+import pharmacy from "../../images/strand_pharmacy.jpg";
+import theatre from "../../images/strand_theatre.png";
 
 export const DeanwoodFood = ({resources}) => {
     return (
@@ -97,9 +99,19 @@ export const DeanwoodFood = ({resources}) => {
                             Market where we sold honey and flowers, fruits and vegetables.”
                         </p>
 
-                        <div>
-                            <img src={murry} alt="Logo" width={800} height={450} className="center-img"/>
-                        </div>
+                        <div >
+                            <img src={pharmacy} alt="Photograph of Strand Pharmacy" width={350}
+                                 height={300} padding={50} className="center-img"/>
+                            <p></p>
+                            <img src={theatre} alt="Photograph of Strand Theatre" height={300}
+                                 className="center-img"/>
+
+                            <div className="caption"> Princess Market and Strand Pharmacy,
+                                examples of local mom and pop stores in Deanwood
+                                <div></div> Source: DC History Center
+                            </div>
+
+                            </div>
                         <p>
                             In this period, Deanwood was ripe with local entrepreneurs whose
                             businesses were integral parts of the community, just as they were
@@ -107,6 +119,14 @@ export const DeanwoodFood = ({resources}) => {
                             was a family-owned business in Deanwood in the 1940s that went on to
                             become a successful chain store called Murry’s Steak.
                         </p>
+                        <div>
+                            <img src={murry} alt="Logo" width={800} height={450} className="center-img"/>
+                            <div className="caption"> Murry's Steak, a family-owned business that
+                                originated during the peak of Deanwood's entrepreneurial period.
+                                <div></div> Source:
+                                https://offbeatenpathdc.com/murrys-family-of-fine-food/
+                            </div>
+                        </div>
                         <p>
                             But Deanwood, despite the community’s relative self-sufficiency, was not
                             exempt from greater societal trends–namely, the phenomenon of the
@@ -136,6 +156,8 @@ export const DeanwoodFood = ({resources}) => {
                             Alliance v. Sanitary Grocery Co., 303 U.S. 552, which safeguards the
                             right to peacefully protest hiring discrimination.
                         </p>
+                        <blockquote > “Don't Buy Where You Can't Work” -The New Negro Alliance
+                        </blockquote>
                              <img src={unfair} alt="Logo" width={200} height={350} className="center-img"/>
                              <div className="caption"> Mary McLeod Bethune picketing outside
                                  People’s Drug Store with New Negro Alliance, August 3, 1939. <div></div>
@@ -159,8 +181,16 @@ export const DeanwoodFood = ({resources}) => {
                             close community ties while still retaining a modern supermarket feel.
                             According to Edward Brown, general manager in 1983, it was “not a
                             mom-and-pop store. [They had] to fight a lot of preconceived notions
-                            about black food retailers.” However, the location closed within
-                            the decade.
+                            about black food retailers.”
+
+                        </p>
+
+                        <blockquote > “Super Pride is not a mom-and-pop
+                            store. We've had to fight a lot
+                            of preconceived notions about black food retailers.” </blockquote>
+
+                        <p>
+                            However, the location closed within the decade.
                         </p>
                         <div>
                             <img src={superpride} alt="Logo" width={500} height={350} className="center-img"/>
@@ -202,6 +232,10 @@ export const DeanwoodFood = ({resources}) => {
                             It brings to mind images of barren emptiness and removes the nuance of
                             neighborhood response as well as non-supermarket adjacent food sources.
                         </p>
+                        <blockquote > “[The term food desert] overemphasizes lack
+                            and very rarely examines agency or resilience among community members.”
+                            -Ashante Reese
+                        </blockquote>
                         <p>
                             However, as in the past the residents of Deanwood adapt to their
                             conditions. The grocery store closest to Deanwood, a new Safeway, is
