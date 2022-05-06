@@ -35,13 +35,63 @@ export const DeanwoodResident = (_) => {
             <Container className="m-4">
                 <Row>
                     <Col>
-                        <p>Column for Ward 3 data.</p>
+                        <h2>Ward 3</h2>
+
+                        <Card>
+                            <Card.Body>
+                                <Card.Text>
+                                    <h5>Life expectancy: 86.1</h5>
+                                </Card.Text>
+                            </Card.Body>
+                        </Card>
+
+                        <Card>
+                            <Card.Body>
+                                <Card.Text>
+                                    <h5>Infant mortality: 0.13%</h5>
+                                </Card.Text>
+                            </Card.Body>
+                        </Card>
+
+                        <Card>
+                            <Card.Body>
+                                <Card.Text>
+                                    <h5>Disability rate: 17.3%</h5>
+                                </Card.Text>
+                            </Card.Body>
+                        </Card>
                     </Col>
+
                     <Col>
-                        <Image src={big_bois} width={400}></Image>
+                        <Image src={big_bois} width={500}></Image>
                     </Col>
+
                     <Col>
-                        <p>Column for Ward 7 data.</p>
+                        <h2>Ward 7</h2>
+
+                        <Card>
+                            <Card.Body>
+                                <Card.Text>
+                                    <h5>Life expectancy: 72.8</h5>
+                                </Card.Text>
+                            </Card.Body>
+                        </Card>
+
+                        <Card>
+                            <Card.Body>
+                                <Card.Text>
+                                    <h5>Infant mortality: 0.91%</h5>
+                                </Card.Text>
+                            </Card.Body>
+                        </Card>
+
+                        <Card>
+                            <Card.Body>
+                                <Card.Text>
+                                    <h5>Disability rate: 26.3%</h5>
+                                </Card.Text>
+                            </Card.Body>
+                        </Card>
                     </Col>
                 </Row>
             </Container>
