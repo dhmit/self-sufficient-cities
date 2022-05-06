@@ -53,10 +53,10 @@ export const quoteContext = ["Most of these quotes come from former Deanwood res
     " Deanwood, was governed by Congress. Appointed officials, separated from the realities" +
     " of living in Deanwood, made the decisions about day-to-day life there. The Oral" +
     " Histories project asked many questions in their interviews, but they all served to" +
-    " ask this fundamental question of the residents: “How did you manage on your own for" +
-    " so many decades?", "The answer is exemplified by Bailey Smith’s quote from the Deanwood" +
+    " ask this fundamental question of the residents: 'How did you manage on your own for" +
+    " so many decades?'", "The answer is exemplified by Bailey Smith’s quote from the Deanwood" +
     " Citizens’ Association community conversations meeting in 2020. To Deanwood residents," +
-    " self-reliance came in a myriad of forms and helped to facilitate the closeness, and" +
+    " self-reliance came in a myriad of forms and helped to facilitate the closeness and" +
     " sense of pride in the community that the interviewees exhibit.", "Of course, not" +
     " everything about living in Deanwood was positive. Residents had to make do with what" +
     " they had because they were denied other options, and that constant degradation" +
@@ -78,7 +78,7 @@ export const infrastructure1 = ["Greenspace was hard to come by. White people in
     " entrepreneurs built for black residents to relax and come together as an alternative to" +
     " the paid parks they were offered by the city. Their white counterparts had free public" +
     " parks.", "The Glen Echo amusement park along the Potomac River was only accessible to" +
-    " White people, so Lewis Giles Sr, a black architect, helped to design  Suburban Gardens, a" +
+    " white people, so Lewis Giles Sr, a black architect, helped to design  Suburban Gardens, a" +
     " welcome addition to Deanwood’s entertainment scene since there were no theaters in" +
     " Deanwood.",
     <a key="4"
@@ -86,7 +86,7 @@ export const infrastructure1 = ["Greenspace was hard to come by. White people in
        title="Remembering Suburban Gardens"
        href={"#source-4"}>[4]
     </a>,
-    "The most striking example of this denial of infrastructure comes from Mrs." +
+    "The most striking example of this denial of infrastructure came from Mrs." +
     " Ethel G Greene’s interview. She discussed her father’s efforts to convince the Senator" +
     " governing Deanwood for money to build new schools, sidewalks, water systems, lights, and" +
     " more:"];
@@ -101,7 +101,9 @@ export const infrastructure2 = ["As a result, throughout most of the early 1900s
 " Mrs. Cora Wilkerson started a kindergarten in her own home, welcoming kids from around" +
 " the neighborhood to learn together. Eventually, she succeeded in getting public" +
 " kindergarten started in the public schools in Deanwood.", "Deanwood also didn’t have a" +
-" public library until 2010, only having a small kiosk holding about 1000 books.",
+" public library for almost two thirds of the community's existence. Not until 1974 did they" +
+" get this tiny kiosk, which could only hold about 1000 books. Only in 2010 was a public library" +
+" finally built.",
     <a key="5"
        className={"citation-pointer"}
        title="Anybody want a Kiosk?"
@@ -109,7 +111,7 @@ export const infrastructure2 = ["As a result, throughout most of the early 1900s
     </a>];
 
 export const selfReliance1 = ["Due to a lack of municipal support, self-reliance came to" +
-" characterize the early decades of Deanwood’s. Residents cultivated and sold the produce" +
+" characterize the early decades of Deanwood. Residents cultivated and sold the produce" +
 " they grew in their own gardens, fetched their own water from wells, and cleaned their own" +
 " outhouses. Residents did not only support themselves, they supported one another:" +
 " children brought water to the homes of the elderly, and members of the community banded" +
@@ -158,8 +160,8 @@ export const church1 = ["With limited access to free parks, theaters, and librar
 "Churches, for example, would host picnics where people shared their home-grown food. " +
 "Other activities hosted by churches included charity, garage sales, sermons, and education " +
 "for children. ",
-    "The residents of deanwood recognized the necessity of churches, " +
-    "and would as a result, invest their time and money into these churches."];
+    "The residents of Deanwood recognized the necessity of churches, " +
+    "and would, as a result, invest their time and money into these churches."];
 
 export const church2 = ["The First Baptist Church of Deanwood was built entirely on " +
 "“donations of material and labor and never carried debt of any kind.”", "Any repairs were" +
@@ -168,17 +170,17 @@ export const church2 = ["The First Baptist Church of Deanwood was built entirely
                                            title="Images of America: Washington D.C.'s Deanwood"
                                            href={"#source-9"}>[9]
 </a>, "In the image to" +
-" the right, deanwood residents can be seen gathering to begin construction of the First" +
+" the left, Deanwood residents can be seen gathering to begin construction of the First" +
 " Baptist Church", "It can be seen that the lack of public infrastructure " +
-"and forced self-reliance, " +
-"encouraged Deanwood to develop tight bonds with churches as a way to survive. " +
+"and forced self-reliance " +
+"encouraged Deanwood to develop tight bonds through churches as a way to survive. " +
 "With churches, people had a way to socialize and exchange goods and services. " +
-"Without them, people wouldn’t have had centralized-bodies that could effectively " +
+"Without them, people wouldn’t have had centralized bodies that could effectively " +
 "galvanize people into improving their community."];
 
 export const church3 = ["", "", "", "", "As mentioned earlier, home-grown food was shared " +
 "among members of the church. " +
-"In the picture to the right , a monthly meeting with food is being held in a church member’s" +
+"In the picture to the left, a monthly meeting with food is being held in a church member’s" +
 " home.", <a key="9"
              className={"citation-pointer"}
              title="Images of America: Washington D.C.'s Deanwood"
@@ -202,7 +204,7 @@ export const church4 = ["", "Churches also had a positive effect on education. "
                                                href={"#source-10"}>[10]
 </a>,
     "It is evident that churches played a pivotal role in maintaining the successful self-sufficient " +
-    "deanwood of the 19th and 20th centuries",
+    "Deanwood of the 19th and 20th centuries",
     "Today, there are 20-30 churches within a 10-block radius, " +
     "according to Rev. Ronald Miner. These churches " +
     "still offer programs to help groups like the elderly.",
@@ -223,8 +225,7 @@ export const noTaxQuote = ["We have enough churches on this street … " +
 export const church5 = ["One can’t make a clear conclusion on why churches " +
 "aren’t as appreciated as before. But, it is clear that today’s " +
 "Deanwood is no longer self-sufficient. With the church playing " +
-"a smaller role in people’s lives, one can argue that some internal " +
-"or external factor stripped Deanwood of its ability to maintain its " +
+"a smaller role in people’s lives, one can argue that some factor stripped Deanwood of its ability to maintain its " +
 "community bonds through past self-reliant practices."];
 
 export const conclusion = ["To Deanwood residents, self-reliance served multiple roles: It was a" +
@@ -237,13 +238,13 @@ export const conclusion = ["To Deanwood residents, self-reliance served multiple
     " Evidently, food played a major role in forming and strengthening Deanwood’s community." +
     " Being able to go around the corner and visit Old Man Green to buy some eggs, or have milk" +
     " delivered to your door by the neighborhood kids every morning had a profound effect on" +
-    " personal bonds, so when these stores were driven out of business by supermarket chains" +
+    " personal bonds, so when these avenues were driven out of business by supermarket chains" +
     " that overpriced low-quality food, a fundamental aspect of Deanwood’s social glue" +
     " disappeared. The quotes above reflect this, for the interviewees sense this loss of" +
-    " connection to their neighbors.", "But not all is lost. Current Deanwood residents like" +
-    " Clarise are working on revitalizing Deanwood’s foodscape by rebuilding “forgotten” grocery" +
-    " store co-ops. She started developing the project in 2016. When it is completed, Clarise" +
-    " hopes that it will give people a greater feeling of control over their access to food," +
+    " connection to their neighbors.", "But not all is lost. Current Deanwood residents" +
+    " are working on revitalizing Deanwood’s foodscape by rebuilding “forgotten” grocery" +
+    " store co-ops. The project started developing in 2016. When it is completed, the organizers" +
+    " hope that it will give people a greater feeling of control over their access to food," +
     " especially during the pandemic."];
 
 
