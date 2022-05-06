@@ -30,6 +30,18 @@ const DeanwoodI295Card = ({img_source}) => {
                     Map of Kenilworth and Deanwood, split by I-295
                 </Figure.Caption>
             </Figure>
+
+            <div>
+                <p>
+                    It is also important to recognize that only the part of I-295 north of
+                    East Capitol Street divides neighborhoods that were previously connected.
+                    South of East Capitol St., however, the only regions between the Anacostia River
+                    and I-295 are green space and a military base. To the east of I-295 north
+                    of East Capitol St., families are majority black and low-income. West of
+                    I-295 is inhabited by low-income and/or majority-minority  people. These
+                    communities are most affected by air pollution produced by I-295.
+                </p>
+            </div>
         </Col>
     );
 };
