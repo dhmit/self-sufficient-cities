@@ -18,12 +18,15 @@ import ArrowLeft from "../../images/icons/arrow-left.svg";
 const DeanwoodProfile = (statement, hasMap = true, hasTitle = true, data = [], voronoi = [], paths = [],
                          title = "", source = "", alt_text = "", mapType = "") => {
     let right;
+    let map;
 
     if (hasMap) {
         // eslint-disable-next-line max-len
-        right = <Col><CommunityMap data={data} mapType={mapType} voronoi_data={voronoi}
-                                   paths_data={paths}/></Col>;
-    } else if (source) {
+        right = [];// <Col><CommunityMap data={data} mapType={mapType} voronoi_data={voronoi}
+        map = <CommunityMap data={data} mapType={mapType} voronoi_data={voronoi} paths_data={paths}/>;
+        // paths_data={paths}/></Col>;
+    }
+    else if (source) {
         right = <Col><Image src={source} alt={alt_text} fluid={true}/></Col>;
     }
 
@@ -41,6 +44,7 @@ const DeanwoodProfile = (statement, hasMap = true, hasTitle = true, data = [], v
                     } </p> : ""
 
                 ))}
+                {map}
             </Col>
             {right}
         </Row>
@@ -91,11 +95,12 @@ export const DeanwoodCommunity = ({resources, community_data, voronoi_data, path
                 <Col md={3} className="nav-col p-0 mr-2">
                     <h1>Deanwood Community</h1>
                     <p>
-                        The project tells the rise and fall of urban communities that grew their
-                        own food in the 20th century United States. Taking the Deanwood
-                        neighborhood in Washington, D.C. as their starting place, students
-                        consulted newspaper articles and census data to design an interactive
-                        site.
+                        Informed by analysis of oral histories, historical newspapers, and city
+                        directories, this page documents the tight-knit community that emerged in
+                        the face of systemic racism and how it changed over time. Deanwood's unique
+                        community history was attributed to the lack of public infrastructure
+                        implemented, the proactive practice of self-cultivation and the unifying
+                        influence of its churches.
                     </p>
                     <DeanwoodNav selected={"community"} resources={resources}/>
                 </Col>

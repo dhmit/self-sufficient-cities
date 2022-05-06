@@ -206,14 +206,26 @@ export default class MapMacro extends React.Component {
         }
 
         let m = [];
+        let caption;
         if (this.props.mapType === "Food") {
             m = foodMarkers;
+            caption = "Explore with different layers of the map using the layer control located" +
+                " on the top right corner of the map. In the voronoi representation, each" +
+                " colored polygon means that the marker" +
+                " located it encloses is the closest source of food for those living within that" +
+                " region. You may also explore how far and for how long Omie Cheek's would have" +
+                " to walk to grocery stores in each decade by hovering over the red paths.";
         } else if (this.props.mapType === "Religion") {
             m = religionMarkers;
+            caption = "This map displays the various churches and religious institutions located" +
+                " in Deanwood over time.";
         }
 
 
-        return <div id="map">
+
+
+
+        return <div className="mb-5" id="map">
             <MapContainer center={this.state.position} zoom={13} scrollWheelZoom={true}>
                 <TileLayer
                     attribution='&copy; <a href="https://www.openstreetmap.org/copyright">OpenStreetMap</a> contributors'
@@ -230,6 +242,7 @@ export default class MapMacro extends React.Component {
 
 
             </MapContainer>
+            <p><em>{caption}</em></p>
 
         </div>;
     }
