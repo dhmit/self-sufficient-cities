@@ -1,99 +1,74 @@
 import React from "react";
-import {Container, Row, Col, Card, Image} from "react-bootstrap";
+import {Card, Container, Row, Col, Image, Stack} from "react-bootstrap";
 import * as PropTypes from "prop-types";
-import deanwood_image from "../../images/deanwood.jpg";
 import big_bois from "../../images/big_bois.png";
-const image_source = "https://commons.wikimedia.org/wiki/File:Deanwood_Washington_DC.jpg";
+
 
 export const DeanwoodResident = (_) => {
+    const wardData = [
+        {
+            label: "Life expectancy",
+            ward3: "86.1 years",
+            ward7: "72.8 years"
+        },
+        {
+            label: "Infant mortality",
+            subLabel: "deaths per thousand live births",
+            ward3: "1.3",
+            ward7: "9.6"
+        },
+        {
+            label: "Disability rate",
+            subLabel: "due to health limitations",
+            ward3: "17.3%",
+            ward7: "26.3%"
+        }
+    ];
 
     return (<>
-        <Container className="city" id="deanwood-overview">
-            <Container className="m-4">
-                <Card>
-                    <Card.Img src={deanwood_image}></Card.Img>
-                    <Card.ImgOverlay>
-                        Licenced under CC BY 3.0. <a href={image_source}>Source.</a>
-                    </Card.ImgOverlay>
-                    <Card.Body>
-                        <Card.Title>A history of disparity</Card.Title>
-                        <Card.Text>
-                            Deanwood lies in Ward 7 of the District of Columbia, home to over
-                            80 thousand (mostly Black) inhabitants. A couple of miles across the
-                            Anacostia lies Ward 3, with about the same number of (mostly White)
-                            inhabitants. However, the small distance between the two wards belies
-                            a world of difference. The disparity between Ward 3 and Ward 7 is not
-                            just demographic or economic: as shown here, it extends to people's
-                            health. Those who, by accident of birth, lie in the wrong side of the
-                            divide can expect to lead lives that are ten years shorter and have
-                            higher rates of chronic diseases such as diabetes.
-                        </Card.Text>
-                    </Card.Body>
-                </Card>
-            </Container>
+        <Container fluid className="p-4">
+            <h2>A side-by-side comparison</h2>
 
-            <Container className="m-4">
-                <Row>
-                    <Col>
-                        <h2>Ward 3</h2>
+            <p>
+                Let's look at some key numbers that show the great disparity in the health of those
+                in Ward 3 and Ward 7 of the District of Columbia.
+            </p>
 
-                        <Card>
-                            <Card.Body>
-                                <Card.Text>
-                                    <h5>Life expectancy: 86.1</h5>
-                                </Card.Text>
-                            </Card.Body>
-                        </Card>
+            <Row>
+                <Col>
+                    <h3 align="center">Ward 3</h3>
+                </Col>
+                <Col>
+                    <h3 align="left">Ward 7</h3>
+                </Col>
+            </Row>
 
-                        <Card>
-                            <Card.Body>
-                                <Card.Text>
-                                    <h5>Infant mortality: 0.13%</h5>
-                                </Card.Text>
-                            </Card.Body>
-                        </Card>
+            <Container fluid>
+                <Image style={{position: "absolute"}} src={big_bois} width="40%" className="m-4"/>
 
-                        <Card>
-                            <Card.Body>
-                                <Card.Text>
-                                    <h5>Disability rate: 17.3%</h5>
-                                </Card.Text>
-                            </Card.Body>
-                        </Card>
-                    </Col>
+                <Stack gap={3}>
+                    {wardData.map((datum, idx) =>
+                        <Row key={idx}>
+                            <Col>
+                                <Card style={{width: "60%"}} className="m-0 p-0">
+                                    <Card.Body className="p-1">
+                                        <p>{datum.label}: {datum.ward3}</p>
+                                        <p style={{fontSize: "9px"}}>{datum.subLabel}</p>
+                                    </Card.Body>
+                                </Card>
+                            </Col>
 
-                    <Col>
-                        <Image src={big_bois} width={500}></Image>
-                    </Col>
-
-                    <Col>
-                        <h2>Ward 7</h2>
-
-                        <Card>
-                            <Card.Body>
-                                <Card.Text>
-                                    <h5>Life expectancy: 72.8</h5>
-                                </Card.Text>
-                            </Card.Body>
-                        </Card>
-
-                        <Card>
-                            <Card.Body>
-                                <Card.Text>
-                                    <h5>Infant mortality: 0.91%</h5>
-                                </Card.Text>
-                            </Card.Body>
-                        </Card>
-
-                        <Card>
-                            <Card.Body>
-                                <Card.Text>
-                                    <h5>Disability rate: 26.3%</h5>
-                                </Card.Text>
-                            </Card.Body>
-                        </Card>
-                    </Col>
-                </Row>
+                            <Col>
+                                <Card style={{width: "60%", alignItems: "right"}} className="m-0 p-0">
+                                    <Card.Body className="m-0 p-0 b-0">
+                                        <p>{datum.label}: {datum.ward7}</p>
+                                        <p style={{fontSize: "9px"}}>{datum.subLabel}</p>
+                                    </Card.Body>
+                                </Card>
+                            </Col>
+                        </Row>
+                    )}
+                </Stack>
             </Container>
 
         </Container>

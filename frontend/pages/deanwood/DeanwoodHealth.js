@@ -18,7 +18,7 @@ export const DeanwoodOverview = ({resources}) => {
             el: <DeanwoodResident/>
         }
     ];
-    const [displayState, setDisplayState] = useState("healthHome");
+    const [displayState, setDisplayState] = useState("residentProfile");
     return (<Container className="city" id="deanwood-health">
             <Row>
                 <Col md={3} xl={3} className="nav-col p-0 mr-2">
