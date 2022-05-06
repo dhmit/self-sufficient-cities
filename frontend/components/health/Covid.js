@@ -2,8 +2,8 @@ import React from "react";
 import {Row, Col, Image} from "react-bootstrap";
 import Citation from "../../components/global/Citation";
 import cases_graph from "../../images/cases_graph.png";
-import lives_graph from "../../images/cases_graph.png";
-import tests_graph from "../../images/cases_graph.png";
+import lives_graph from "../../images/lives_graph.png";
+import tests_graph from "../../images/tests_graph.png";
 
 
 export const DeanwoodCovid = () => {
@@ -11,7 +11,7 @@ export const DeanwoodCovid = () => {
     return (
         <>
             <Row className={"p-0"}>
-                <p>The following graphs were compiled from OpenDataDC
+                <p className={"m-0"}>The following graphs were compiled from OpenDataDC
                     <a className={"citation-pointer"}
                        title={"DC COVID-19 Cases by Ward"}
                        href={"#source-1"}>[1]
@@ -48,10 +48,10 @@ export const DeanwoodCovid = () => {
                 </Col>
             </Row>
 
-            <Row className="mt-4">
+            <Row className="p-0">
                 <Col md={6} className={"p-0"}>
                     <h5>Lives Lost:</h5>
-                    <Image src={lives_graph}/>
+                    <Image fluid={true} src={lives_graph}/>
                 </Col>
                 <Col md={6} className={"p-0 graph-descriptions"}>
                     <p className="emphasized mt-5">by 01/13/2022:</p>
@@ -66,10 +66,10 @@ export const DeanwoodCovid = () => {
                 </Col>
             </Row>
 
-            <Row className="mt-4">
-                <Col className={"p-0"}>
+            <Row className="p-0">
+                <Col md={6} className={"p-0"}>
                     <h5>Total Tests:</h5>
-                    <Image src={tests_graph}/>
+                    <Image fluid={true} src={tests_graph}/>
                 </Col>
                 <Col md={6} className={"p-0 graph-descriptions"}>
                     <p className="emphasized mt-5">by 01/10/2022:</p>

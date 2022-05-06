@@ -26,10 +26,26 @@ h1 {
         font-family: "titillium_websemibold", sans-serif;
         font-size: 0.9em;
     }
-
+    .column {
+        @include media-breakpoint-down(md) {
+            padding: 0;
+        }
+    }
     .nav-col {
-        @include media-breakpoint-up("lg") {
-            position: fixed;
+        @include media-breakpoint-up(lg) {
+            position: fixed !important;
+        }
+        @include media-breakpoint-down(md) {
+            p {
+                font-weight: bold;
+            }
+            .city-links {
+                font-size: 0.7em;
+                margin-bottom: 2em;
+                a > {
+                    margin: 0 0.2em 0.2em !important;
+                }
+            }
         }
 
         p {

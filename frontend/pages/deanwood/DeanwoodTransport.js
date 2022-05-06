@@ -4,16 +4,16 @@ import * as PropTypes from "prop-types";
 import DeanwoodNav from "./DeanwoodNav";
 import interstate_highway from "../../images/deanwood/interstate-highway.jpeg";
 import i295 from "../../images/deanwood/I295deanwoodkenilworth.png";
-import DeanwoodHighwayCard from "./DeanwoodHighwayCard";
-import DeanwoodI295Card from "./DeanwoodI295Card";
+import DeanwoodHighwayCard from "../../components/transport/DeanwoodHighwayCard";
+import DeanwoodI295Card from "../../components/transport/DeanwoodI295Card";
 import Citation from "../../components/global/Citation";
 
 export const DeanwoodTransport = ({resources}) => {
 
-    return (<>
+    return (
         <Container className="city" id="deanwood-transport">
             <Row>
-                <Col md={3} className="nav-col mr-2">
+                <Col lg={3} className="nav-col p-0 mr-2">
                     <h1>Deanwood, D.C.</h1>
                     <p>
                         The project tells the rise and fall of urban communities that grew their
@@ -25,37 +25,28 @@ export const DeanwoodTransport = ({resources}) => {
                     <DeanwoodNav selected={"transport"} resources={resources}/>
                 </Col>
 
-
-                <Row>
-                    <Col md={4}/>
-                    <Col>
-                        <DeanwoodHighwayCard
-                            img_source={interstate_highway}
-                        />
-                    </Col>
-                </Row>
-
-                <Row>
-                    <Col md={4}/>
-                    <Col>
-                        <DeanwoodI295Card
-                            img_source={i295}
-                        />
-                    </Col>
-                </Row>
-                <Row>
-                    <Col md={4}/>
-                    <Col md={8} className="justify-content-around mt-5">
-                        <h2>Sources</h2>
-                        <Citation identifier={"source-1"}
-                                  title={"Dwight D. Eisenhower Presidential Library - " +
-                                  "An excerpt from President Eisenhower’s Message to Congress " +
-                                  "regarding highways, February 22, 1955"}/>
-                    </Col>
-                </Row>
+                <Col lg={4}/>
+                <Col lg={8} className="column">
+                    <DeanwoodHighwayCard
+                        img_source={interstate_highway}
+                    />
+                </Col>
+                <Col lg={4}/>
+                <Col lg={8} className="column">
+                    <DeanwoodI295Card
+                        img_source={i295}
+                    />
+                </Col>
+                <Col lg={4}/>
+                <Col lg={8} className="justify-content-around mt-5">
+                    <h2>Sources</h2>
+                    <Citation identifier={"source-1"}
+                              title={"Dwight D. Eisenhower Presidential Library - " +
+                              "An excerpt from President Eisenhower’s Message to Congress " +
+                              "regarding highways, February 22, 1955"}/>
+                </Col>
             </Row>
-        </Container>
-    </>);
+        </Container>);
 
 };
 
