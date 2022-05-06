@@ -169,25 +169,14 @@ export const church2 = ["The First Baptist Church of Deanwood was built entirely
                                            className={"citation-pointer"}
                                            title="Images of America: Washington D.C.'s Deanwood"
                                            href={"#source-9"}>[9]
-</a>, "In the image to" +
-" the left, Deanwood residents can be seen gathering to begin construction of the First" +
-" Baptist Church", "It can be seen that the lack of public infrastructure " +
+</a>, "It can be seen that the lack of public infrastructure " +
 "and forced self-reliance " +
 "encouraged Deanwood to develop tight bonds through churches as a way to survive. " +
 "With churches, people had a way to socialize and exchange goods and services. " +
 "Without them, people wouldn’t have had centralized bodies that could effectively " +
 "galvanize people into improving their community."];
 
-export const church3 = ["", "", "", "", "As mentioned earlier, home-grown food was shared " +
-"among members of the church. " +
-"In the picture to the left, a monthly meeting with food is being held in a church member’s" +
-" home.", <a key="9"
-             className={"citation-pointer"}
-             title="Images of America: Washington D.C.'s Deanwood"
-             href={"#source-9"}>[9]
-</a>];
-
-export const church4 = ["", "Churches also had a positive effect on education. " +
+export const church3 = ["", "Churches also had a positive effect on education. " +
 "Recognizing the need for education, Contee AME Zion Church helped " +
 "start an elementary school" +
 " in its basement which it then upgraded to Burville " +
@@ -202,8 +191,10 @@ export const church4 = ["", "Churches also had a positive effect on education. "
                                                className={"citation-pointer"}
                                                title="DEANWOOD CLOSE-KNIT D.C. COMMUNITY"
                                                href={"#source-10"}>[10]
-</a>,
-    "It is evident that churches played a pivotal role in maintaining the successful self-sufficient " +
+</a>];
+
+export const church4 = ["It is evident that churches played a pivotal role in maintaining the" +
+" successful self-sufficient " +
     "Deanwood of the 19th and 20th centuries",
     "Today, there are 20-30 churches within a 10-block radius, " +
     "according to Rev. Ronald Miner. These churches " +

@@ -16,7 +16,7 @@ import ArrowLeft from "../../images/icons/arrow-left.svg";
 
 // eslint-disable-next-line max-len
 const DeanwoodProfile = (statement, hasMap = true, hasTitle = true, data = [], voronoi = [], paths = [],
-                         title = "", source = "", alt_text = "", mapType = "") => {
+                         title = "", source = "", alt_text = "", image_caption = "", mapType = "") => {
 
     let left;
     let map;
@@ -26,7 +26,10 @@ const DeanwoodProfile = (statement, hasMap = true, hasTitle = true, data = [], v
         left = [];
         map = <CommunityMap data={data} mapType={mapType} voronoi_data={voronoi} paths_data={paths}/>;
     } else if (source) {
-        left = <Col><Image src={source} alt={alt_text} fluid={true}/></Col>;
+        left = <Col>
+                <Image src={source} alt={alt_text} fluid={true}/>
+                <p><em>{image_caption}</em></p>
+            </Col>;
 
     }
 
@@ -171,7 +174,7 @@ export const DeanwoodCommunity = ({resources, community_data, voronoi_data, path
                     </Col>
                 </Row>
                 {/* eslint-disable-next-line max-len */}
-                {DeanwoodProfile(Text.selfReliance2, true, false, community_data, voronoi_data, paths_data, "", "", "", "Food")}
+                {DeanwoodProfile(Text.selfReliance2, true, false, community_data, voronoi_data, paths_data, "", "", "","", "Food")}
                 <Row>
                     <Col md={4}/>
                     <Col>
@@ -203,10 +206,41 @@ export const DeanwoodCommunity = ({resources, community_data, voronoi_data, path
                 {/* eslint-disable-next-line max-len */}
                 {DeanwoodProfile(Text.church1, true, true, community_data, [], [], "Churches as" +
                     " Centers of" +
-                    " Community", "", "", "Religion")}
-                {DeanwoodProfile(Text.church2, false, false, [], [], "", "", Deanwood_first_baptist)}
-                {DeanwoodProfile(Text.church3, false, false, [], [], "", "", Deanwood_meeting)}
-                {DeanwoodProfile(Text.church4, false, false, [], [], "", "", Deanwood_burville)}
+                    " Community", "", "", "", "Religion")}
+                {DeanwoodProfile(Text.church2, false, false,
+                    [], [], "", "", Deanwood_first_baptist,
+                    "Deanwood residents gathering to build the First Baptist Church",
+                    "Deanwood residents gathering to begin construction of the " +
+                    "First Baptist Church")}
+
+                <Row>
+                    <Col md={4}/>
+=                   <Col>
+                        <Image
+                            src={Deanwood_meeting}
+                            alt={"A monthly dinner meeting in church"}
+                            fluid={true}
+                        />
+                        <p>
+                            <em>
+                                Home-grown food was often shared among members of the church.
+                                Here, a monthly meeting with food is being held in a church member’s
+                                home
+                            </em>
+                            <a key="9"
+                                className={"citation-pointer"}
+                                title="Images of America: Washington D.C.'s Deanwood"
+                                href={"#source-9"}>[9]
+                            </a>
+                        </p>
+
+                    </Col>
+                </Row>
+                {DeanwoodProfile(Text.church3, false, false,
+                    [], [], "", "", Deanwood_burville,
+                    "The Burville Elementary School in Deanwood",
+                    "Burville Elementary School")}
+                {DeanwoodProfile(Text.church4, false, false, [], [], "", "", "")}
                 <Row>
                     <Col md={4}/>
                     <Col>
