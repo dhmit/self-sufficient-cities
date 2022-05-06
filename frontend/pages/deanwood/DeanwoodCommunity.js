@@ -17,22 +17,23 @@ import ArrowLeft from "../../images/icons/arrow-left.svg";
 // eslint-disable-next-line max-len
 const DeanwoodProfile = (statement, hasMap = true, hasTitle = true, data = [], voronoi = [], paths = [],
                          title = "", source = "", alt_text = "", mapType = "") => {
-    let right;
+
+    let left;
     let map;
 
     if (hasMap) {
         // eslint-disable-next-line max-len
-        right = [];// <Col><CommunityMap data={data} mapType={mapType} voronoi_data={voronoi}
+        left = [];
         map = <CommunityMap data={data} mapType={mapType} voronoi_data={voronoi} paths_data={paths}/>;
-        // paths_data={paths}/></Col>;
-    }
-    else if (source) {
-        right = <Col><Image src={source} alt={alt_text} fluid={true}/></Col>;
+    } else if (source) {
+        left = <Col><Image src={source} alt={alt_text} fluid={true}/></Col>;
+
     }
 
     return (<div className={"Profile"}>
         <Row>
             <Col md={4}/>
+            {left}
             <Col className="p-0">
                 {hasTitle && <h2>{title}</h2>}
                 {/* Iterate through statement. If item is string, the next item might be a
@@ -46,7 +47,6 @@ const DeanwoodProfile = (statement, hasMap = true, hasTitle = true, data = [], v
                 ))}
                 {map}
             </Col>
-            {right}
         </Row>
     </div>);
 };
@@ -127,11 +127,19 @@ export const DeanwoodCommunity = ({resources, community_data, voronoi_data, path
                         <h3>
                             {Text.uniqueDeanwood}
                         </h3>
+                        <Image
+                            src={Suburban_gardens}
+                            alt={"The Suburban Gardens amusement park"}
+                            fluid={true}
+                        />
+                        <p> <em>Amusement parks and other recreational venues were often only free
+                            for white people. Suburban Gardens was the first and only amusement
+                            park built in DC, and it gave black residents a place to relax and play.</em>
+                        </p>
                     </Col>
                 </Row>
                 {DeanwoodProfile(Text.infrastructure1, false, true, [], [], [],
-                    "Lack of Public Infrastructure", Suburban_gardens,
-                    "The Suburban Gardens amusement park")}
+                    "Lack of Public Infrastructure")}
                 <Row>
                     <Col md={4}/>
                     <Col>
