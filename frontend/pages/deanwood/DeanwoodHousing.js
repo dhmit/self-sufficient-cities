@@ -6,7 +6,10 @@ import WymarHousing1 from "../../images/wy_043608.jpg";
 import WymarHousing1_modern from "../../images/wy_043608_modern.jpg";
 import WymarHousing2 from "../../images/wy_040108.jpg";
 import WymarHousing2_modern from "../../images/wy_040108_modern.jpg";
+import Lot_Historical_Image from "../../images/lot_historical_image.jpg";
+import Lot_Modern_Image from "../../images/lot_modern_image.jpeg";
 
+import Table2 from "../../components/maps/Table2";
 import CensusChartsV2 from "../../components/charts/CensusChartsV2";
 import Citation from "../../components/global/Citation";
 import DeanwoodNav from "./DeanwoodNav";
@@ -133,6 +136,36 @@ export const DeanwoodHousing = ({resources, addresses}) => {
                         is not being gentrified.
 
                     </p>
+                    <p>
+                        We looked into the Record of Deeds
+                        <a className={"citation-pointer"} title={"Record of Deeds"}
+                           href={"#source-5"}>[5]</a>
+                        for various houses in Deanwood and
+                        Brightwood over the years to examine in detail their change in prices.
+                        For instance, we examine one specific lot, Lot 58 Square 5175, in Deanwood
+                        from 1940 to 2020. As we can see from the images below, this lot remained
+                        largely unchanged physically over the years, but its value has increased
+                        over the years.
+                    </p>
+                    <Col lg={4} className="p-0">
+                        <Image className="img-wymer" src={Lot_Historical_Image} fluid={true}/>
+                        <small className="text-right"> Lot 58 Square 5175 of Deanwood, 1948. &nbsp;
+                            <a href={"  http://dchistory.pastperfectonline.com/photo/" +
+                            "9BB858CC-1A8F-4ABF-A8F6-573360342202"}>
+                                (source)
+                            </a>
+                        </small>
+                    </Col>
+                    <Col lg={4} className="p-0">
+                        <Image className="img-wymer" src={Lot_Modern_Image} fluid={true}/>
+                        <small className="text-right">Screengrab from "Return to Wymer's DC"
+                            <a href={"http://map.wymersdc.com/#WY0433"}>
+                                (source)
+                            </a>
+                        </small>
+                    </Col>
+
+                    <Table2/>
                     <CensusChartsV2/>
                     <h2>
                         Similar instances of racism in housing practices
@@ -143,18 +176,18 @@ export const DeanwoodHousing = ({resources, addresses}) => {
                         researcher Nancy Wallace, “a black homeowner with a $429,000 mortgage
                         would pay an average of $640 more over the life of the loan.”
                         <a className={"citation-pointer"} title={"KHRISTOPHER J. BROOKS," +
-                        " Disparity in home lending costs"} href={"#source-5"}>[5]</a>
+                        " Disparity in home lending costs"} href={"#source-6"}>[6]</a>
                         An MIT undergrad study similarly found that minority groups pay 8%
                         higher rates of interest than White buyers, and face 14% higher
                         rejection rates for
                         loans <a className={"citation-pointer"} title={"Adam Zewe, Fighting" +
-                    " discrimination in mortgage lending"} href={"#source-6"}>[6]</a>.
+                    " discrimination in mortgage lending"} href={"#source-7"}>[7]</a>.
                         Furthermore, a 2021 study from Freddie Mac found that 12.5 percent of
                         appraisals for home purchases in Black neighborhoods and 15.4 percent in
                         Latino neighborhoods came in below the contract price, compared with 7.4
                         percent of appraisals in White neighborhoods
                         <a className={"citation-pointer"} title={"Racial and Ethnic Valuation" +
-                        " Gaps in Home Purchase Appraisals"} href={"#source-7"}>[7]</a>.
+                        " Gaps in Home Purchase Appraisals"} href={"#source-8"}>[8]</a>.
                         These studies show instances of racism in a wide variety of housing
                         practices, from higher interest rates, higher rejection rates for loans,
                         higher interest mortgages, and higher appraisals.
@@ -183,13 +216,16 @@ export const DeanwoodHousing = ({resources, addresses}) => {
                               link={"https://www.redfin.com/neighborhood/125450/DC/" +
                               "Washington-DC/Deanwood/housing-market"}/>
                     <Citation identifier={"source-5"}
+                              title={"Record of Deeds"}
+                              link={"https://countyfusion4.kofiletech.us/countyweb/loginDisplay.action?countyname=WashingtonDC"}/>
+                    <Citation identifier={"source-6"}
                               title={"KHRISTOPHER J. BROOKS, Disparity in home lending costs" +
                               " minorities millions, researchers find"}
                               link={"https://www.cbsnews.com/news/mortgage-discrimination-black-and-latino-paying-millions-more-in-interest-study-shows/"}/>
-                    <Citation identifier={"source-6"}
+                    <Citation identifier={"source-7"}
                               title={"Adam Zewe, Fighting discrimination in mortgage lending"}
                               link={"https://news.mit.edu/2022/machine-learning-model-discrimination-lending-0330"}/>
-                    <Citation identifier={"source-7"}
+                    <Citation identifier={"source-8"}
                               title={"Racial and Ethnic Valuation Gaps in Home Purchase" +
                               " Appraisals"}
                               link={"https://www.freddiemac.com/fmac-resources/research/pdf/202109-Note-Appraisal-Gap.pdf"}/>
