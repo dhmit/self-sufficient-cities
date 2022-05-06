@@ -7,7 +7,6 @@ import Grid from "@material-ui/core/Grid";
 import Slider from "@material-ui/core/Slider";
 import * as L from "leaflet";
 import Legend from "./Legend";
-import {TimeControl} from "./MapMicro";
 
 
 const LeafIcon = L.Icon.extend({
@@ -147,8 +146,8 @@ export default class FoodMap extends React.Component {
         this.setSliderValue(value);
     }
 
-    handleSliderInputChange = (event, bound) => {
-        this.setSliderValue(event.target.value === '' ? '' : Number(event.target.value));
+    handleSliderInputChange = (event) => {
+        this.setSliderValue(event.target.value === "" ? "" : Number(event.target.value));
     }
 
     handleSliderBlur = () => {

@@ -11,8 +11,8 @@ import superpride from "../../images/SuperPride.png";
 import groceries from "../../images/DeanwoodGroceryMap.png";
 import income_map_2005 from "../../images/MedianIncome2005.PNG";
 import income_map_2015 from "../../images/MedianIncome2015.PNG";
-import income from "../../images/CommonCommoditiesPrices.PNG";
-import goods from "../../images/MedianIncomeDeanwood.PNG";
+import goods from "../../images/CommonCommoditiesPrices.PNG";
+import income from "../../images/MedianIncomeDeanwood.PNG";
 
 export const DeanwoodFood = ({resources}) => {
     return (
@@ -232,7 +232,10 @@ export const DeanwoodFood = ({resources}) => {
                             <img src={income_map_2015} alt="Logo" width={820} height={330}/>
                         </div>
                         <div>
-                            <img src={goods} alt="Logo" width={600} height={500}/>
+                            <img src={income} alt="Logo" width={600} height={500} className={"center-img"}/>
+                            <div className="caption"> Notable points in the graph are the jumps between 1980-
+                            1990 and 2015-2020. Another major point of interest is the large period of
+                            stagnation between 1990-2015.</div>
                         </div>
                         <p>
                             This on its own would not neccessarily be a pressing issue when it comes to
@@ -245,7 +248,7 @@ export const DeanwoodFood = ({resources}) => {
                                 same time period.
                         </p>
                         <div>
-                            <img src={income} alt="Logo" width={700} height={470}/>
+                            <img src={goods} alt="Logo" width={700} height={470}/>
                         </div>
                         <p>
                             The price of a lot of common goods (except chicken!) nearly doubled during this time frame,
