@@ -2,7 +2,6 @@ import React from "react";
 import {Container, Row, Col, Image} from "react-bootstrap";
 import * as PropTypes from "prop-types";
 import MapHousing from "../../components/maps/MapHousing";
-// import Deanwood_Historical_image from "../../images/Deanwood_historical_image.jpg";
 import WymarHousing1 from "../../images/wy_043608.jpg";
 import WymarHousing1_modern from "../../images/wy_043608_modern.jpg";
 import WymarHousing2 from "../../images/wy_040108.jpg";

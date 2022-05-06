@@ -16,7 +16,7 @@ export const DeanwoodOverview = ({resources}) => {
                         care has left a lasting mark on the US urban landscape. In Boston in
                         2015, the average White family’s assets amounted to $247,500. The
                         average Black family’s assets totaled all of $8.00—the price of two
-                        McDonald’s happy <meals className=""></meals>
+                        McDonald’s happy meals
                         <a className={"citation-pointer"}
                            title="$8: The Complicated Story Behind One Of
                                The Most Repeated Statistics About Boston."
