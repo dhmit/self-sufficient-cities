@@ -48,6 +48,9 @@
         border: 0;
         margin: 0 auto;
         position: relative;
+        @include media-breakpoint-down(lg) {
+            display: none;
+        }
         &.hidden {
             display: none !important;
         }

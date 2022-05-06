@@ -14,7 +14,7 @@ const Nav = () => {
             className={sidebar
                 ? "burger-open fixed-left navbar navbar-expand-sm"
                 : "fixed-left navbar navbar-expand-sm"}>
-            <a className={`btn-home d-flex mt-2 mb-0 ${sidebar ? "hidden" : ""}`} href="/">
+            <a className={`btn-home d-lg-flex mt-2 mb-0 ${sidebar ? "hidden" : ""}`} href="/">
                 <Apartment className={"text-center mx-auto"}/>
             </a>
             <button onClick={toggleSidebar} id="burger-icon">

@@ -8,20 +8,49 @@ h1 {
     }
 }
 
+
 .city {
     padding-top: 0 !important;
     padding-bottom: 0 !important;
     display: flex;
+
+    &.container {
+        @include media-breakpoint-up("md") {
+            margin-right: 0 !important;
+            padding-right: 0 !important;
+        }
+    }
 
     .intro-text {
         justify-content: center;
         font-family: "titillium_websemibold", sans-serif;
         font-size: 0.9em;
     }
-
+    .column {
+        @include media-breakpoint-down(md) {
+            padding: 0;
+        }
+    }
     .nav-col {
-        @include media-breakpoint-up("lg") {
-            position: fixed;
+        @include media-breakpoint-up(lg) {
+            position: fixed !important;
+        }
+        @include media-breakpoint-down(md) {
+            p {
+                font-weight: bold;
+            }
+            .city-links {
+                font-size: 0.7em;
+                margin-bottom: 2em;
+                a > {
+                    margin: 0 0.2em 0.2em !important;
+                }
+            }
+        }
+
+        p {
+            overflow-y: scroll;
+            max-height: 50vh;
         }
     }
 
@@ -77,4 +106,25 @@ h1 {
         }
     }
 
+
+    .emphasized {
+        font-weight: 600;
+    }
+
+    .health-ward3 {
+        font-weight: 600;
+        color: #3d7dd2;
+    }
+
+    .health-ward7 {
+        font-weight: 600;
+        color: darkorange;
+        margin-top: 50px;
+    }
+
+    .graph-descriptions {
+        p {
+            margin-bottom: 0 !important;
+        }
+    }
 }

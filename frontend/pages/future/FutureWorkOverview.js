@@ -161,7 +161,7 @@ class FutureWorkOverview extends React.Component{
         return (<>
             <Container className="city" id="future-research-overview">
                 <Row >
-                    <Col md={3} className="nav-col mr-2">
+                    <Col md={3} className="nav-col p-0 mr-2">
                         <h1>Future Research</h1>
                         <p>
                         The project tells the rise and fall of urban communities that grew their

@@ -88,7 +88,7 @@ export const DeanwoodCommunity = ({resources, community_data, voronoi_data, path
     return (<>
         <Container className="city" id="deanwood-community">
             <Row>
-                <Col md={3} className="nav-col mr-2">
+                <Col md={3} className="nav-col p-0 mr-2">
                     <h1>Deanwood Community</h1>
                     <p>
                         The project tells the rise and fall of urban communities that grew their
