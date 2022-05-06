@@ -98,7 +98,7 @@ export const DeanwoodFood = ({resources}) => {
                         </p>
 
                         <div>
-                            <img src={murry} alt="Logo" width={800} height={350}/>
+                            <img src={murry} alt="Logo" width={800} height={450} className="center-img"/>
                         </div>
                         <p>
                             In this period, Deanwood was ripe with local entrepreneurs whose
@@ -119,10 +119,12 @@ export const DeanwoodFood = ({resources}) => {
                             formed through such communal activities.
                         </p>
                          <div>
-                            <img src={safeway} alt="Logo" width={600} height={350}/>
-                             <></>
-                             <img src={unfair} alt="Logo" width={200} height={350}/>
-                        </div>
+                            <img src={safeway} alt="Logo" width={600} height={350} className="center-img"/>
+                        <div className="caption"> Modern Safeway in Deanwood at
+                            322 40th St NE, Washington, DC 20019.  <div></div>
+                            Source: Google Maps </div>
+
+                         </div>
                         <p>
                             The transition to chain grocery stores was not smooth for Deanwood, a
                             community largely knit together by “businesses ran by and for the
@@ -134,6 +136,10 @@ export const DeanwoodFood = ({resources}) => {
                             Alliance v. Sanitary Grocery Co., 303 U.S. 552, which safeguards the
                             right to peacefully protest hiring discrimination.
                         </p>
+                             <img src={unfair} alt="Logo" width={200} height={350} className="center-img"/>
+                             <div className="caption"> Mary McLeod Bethune picketing outside
+                                 People’s Drug Store with New Negro Alliance, August 3, 1939. <div></div>
+                                 Unknown photographer (CC BY-NC 2.0) </div>
                         <p>
                             For Deanwood, in one instance, the entrance of a Safeway “cut through”
                             local food vendors business, according to Allison, a 68-year old
@@ -143,6 +149,8 @@ export const DeanwoodFood = ({resources}) => {
                             clientele. After mass complaint and food quality concerns, the location
                             closed in 1980.
                         </p>
+
+
                         <p>
                             In an attempt to rejuvenate the community-level food system lost in
                             Deanwood, a Baltimore-based chain of black grocery stores called
@@ -155,9 +163,13 @@ export const DeanwoodFood = ({resources}) => {
                             the decade.
                         </p>
                         <div>
-                            <img src={superpride} alt="Logo" width={500} height={350}/>
-                             <></>
-                             <img src={groceries} alt="Logo" width={300} height={350}/>
+                            <img src={superpride} alt="Logo" width={500} height={350} className="center-img"/>
+                            <div className="caption"> Sign from a former Super Pride Market in
+                                 Baltimore, Maryland. <div></div> Photograph by Eli Pousson, 2019
+                                 <div></div>Source: Baltimore Heritage
+                            </div>
+
+
                         </div>
 
                         <p>
@@ -176,7 +188,13 @@ export const DeanwoodFood = ({resources}) => {
                             stores in Ward 7 (which contains Deanwood) fell from four to two for a
                             population of 80.000 people.
                         </p>
-
+                        <div>
+                             <img src={groceries} alt="Logo" width={300} height={350} className="center-img"/>
+                             <div className="caption"> Grocery store locations and percentage Black
+                                 or African American population. <div></div>
+                                 Map courtesy of Emeline Renz (@mapgrrl).
+                             </div>
+                             </div>
                         <p>
                             So we return to Deanwood’s classification as a “food desert.” But as
                             Ashante Reese points out, such a simplified term “overemphasizes lack
