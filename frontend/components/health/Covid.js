@@ -48,10 +48,10 @@ export const DeanwoodCovid = () => {
                 </Col>
             </Row>
 
-            <Row className="mt-4">
+            <Row className="p-0">
                 <Col md={6} className={"p-0"}>
                     <h5>Lives Lost:</h5>
-                    <Image src={lives_graph}/>
+                    <Image fluid={true} src={lives_graph}/>
                 </Col>
                 <Col md={6} className={"p-0 graph-descriptions"}>
                     <p className="emphasized mt-5">by 01/13/2022:</p>
@@ -66,10 +66,10 @@ export const DeanwoodCovid = () => {
                 </Col>
             </Row>
 
-            <Row className="mt-4">
-                <Col className={"p-0"}>
+            <Row className="p-0">
+                <Col md={6} className={"p-0"}>
                     <h5>Total Tests:</h5>
-                    <Image src={tests_graph}/>
+                    <Image fluid={true} src={tests_graph}/>
                 </Col>
                 <Col md={6} className={"p-0 graph-descriptions"}>
                     <p className="emphasized mt-5">by 01/10/2022:</p>
