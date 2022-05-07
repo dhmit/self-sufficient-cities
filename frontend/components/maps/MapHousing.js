@@ -5,6 +5,7 @@ import Input from "@material-ui/core/Input";
 import Typography from "@material-ui/core/Typography";
 import Grid from "@material-ui/core/Grid";
 import Slider from "@material-ui/core/Slider";
+import * as L from "leaflet";
 
 const MAIN_LOCATION = {
     // coordinates: [38.9051606, -77.0036513],
@@ -13,6 +14,15 @@ const MAIN_LOCATION = {
     date: "Test date",
     info: "Test info"
 };
+
+const LeafIcon = L.Icon.extend({
+    options: {}
+});
+
+const blueIcon = new LeafIcon({
+    iconUrl:
+        "https://chart.apis.google.com/chart?chst=d_map_pin_letter&chld=%E2%80%A2|abcdef&chf=a,s,ee00FFFF"
+});
 
 function sliderInput(value, bound, defaultRange, inputChangeFunc, sliderBlurFunc) {
     const [minValue, maxValue] = defaultRange;
@@ -259,7 +269,7 @@ export default class MapHousing extends React.Component {
         ));
 
         const markerObjects = validAddresses.map((location, i) => (
-            <Marker key={i} position={location.coordinates}>
+            <Marker key={i} icon={blueIcon} position={location.coordinates}>
                 <Popup>
                     {location.address}
                 </Popup>

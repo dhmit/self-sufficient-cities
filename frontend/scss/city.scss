@@ -94,6 +94,9 @@ h1 {
     }
     .table {
         width: 100%;
+        td {
+            padding: 0.2em;
+        }
     }
     .table-container {
         max-height: 300px;

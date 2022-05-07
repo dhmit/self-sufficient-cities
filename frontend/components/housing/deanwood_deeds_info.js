@@ -40,7 +40,7 @@ const lot_58_square_5175 = <>
                 <mark>2022 (estimate)</mark>
             </td>
             <td>
-                <mark>~$611,334</mark>
+                <mark>&asymp;$611,334</mark>
             </td>
         </tr>
         </tbody>
@@ -86,7 +86,7 @@ const lot_89_square_5175 = <>
                 <mark>2022 (estimate)</mark>
             </td>
             <td>
-                <mark>~$567,523</mark>
+                <mark>&asymp;$567,523</mark>
             </td>
         </tr>
         </tbody>
@@ -128,7 +128,7 @@ const lot_63_square_5175 = <>
                 <mark>2022 (estimate)</mark>
             </td>
             <td>
-                <mark>~$421,523</mark>
+                <mark>&asymp;$421,523</mark>
             </td>
         </tr>
         </tbody>
@@ -170,7 +170,7 @@ const lot_54_square_5175 = <>
                 <mark>2022 (estimate)</mark>
             </td>
             <td>
-                <mark>~$614,547</mark>
+                <mark>&asymp;$614,547</mark>
             </td>
         </tr>
         </tbody>
@@ -208,7 +208,7 @@ const lot_90_square_5175 = <>
                 <mark>2022 (estimate)</mark>
             </td>
             <td>
-                <mark>~$218,820</mark>
+                <mark>&asymp;$218,820</mark>
             </td>
         </tr>
         </tbody>
@@ -258,7 +258,7 @@ const lot_65_square_5175 = <>
                 <mark>2022 (estimate)</mark>
             </td>
             <td>
-                <mark>~$218,820</mark>
+                <mark>&asymp;$218,820</mark>
             </td>
         </tr>
         </tbody>
@@ -292,7 +292,7 @@ const lot_80_square_5175 = <>
                 <mark>2022 (estimate)</mark>
             </td>
             <td>
-                <mark>~$408,533</mark>
+                <mark>&asymp;$408,533</mark>
             </td>
         </tr>
         </tbody>
@@ -326,7 +326,7 @@ const lot_59_square_5175 = <>
                 <mark>2022 (estimate)</mark>
             </td>
             <td>
-                <mark>~$408,533</mark>
+                <mark>&asymp;$408,533</mark>
             </td>
         </tr>
         </tbody>

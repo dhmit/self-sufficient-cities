@@ -50,7 +50,7 @@ export const DeanwoodHousing = ({resources, addresses}) => {
                         </a>
                     </small>
                 </Col>
-                <Col sm={6} md={6} lg={4} className="p-0">
+                <Col xs={12} sm={6} md={6} lg={4} className="p-0">
                     <Image className="img-wymer" src={WymarHousing1_modern} fluid={true}/>
                     <small className="text-right">Screengrab from "Return to Wymer's DC"
                         <a href={"http://map.wymersdc.com/#"}>
@@ -59,7 +59,7 @@ export const DeanwoodHousing = ({resources, addresses}) => {
                     </small>
                 </Col>
                 <Col lg={4}/>
-                <Col sm={6} md={6} lg={4} className="p-0">
+                <Col xs={12} sm={6} md={6} lg={4} className="p-0 mt-4">
                     <Image className="img-wymer" src={WymarHousing2} fluid={true}/>
                     <small className="text-right"> Oliver Street NE looking south from Quarles
                         Street. July 3, 1948. Wymer, John P.&nbsp;
@@ -69,7 +69,7 @@ export const DeanwoodHousing = ({resources, addresses}) => {
                         </a>
                     </small>
                 </Col>
-                <Col sm={6} md={6} lg={4} className="p-0">
+                <Col xs={12} sm={6} md={6} lg={4} className="p-0 mt-4">
                     <Image className="img-wymer" src={WymarHousing2_modern} fluid={true}/>
                     <small className="text-right">Screengrab from "Return to Wymer's DC"&nbsp;
                         <a href={"http://map.wymersdc.com/#"}>
@@ -77,10 +77,8 @@ export const DeanwoodHousing = ({resources, addresses}) => {
                         </a>
                     </small>
                 </Col>
-                <Col lg={4}/>
-                <Col lg={6}>
-                    <br/>
-                    <br/>
+                <Col lg={5} md={3}/>
+                <Col lg={6} className="mt-4">
                     <p>
                         Typically, it was very difficult for African Americans to obtain home
                         loans since predominantly black districts were generally redlined.
@@ -125,7 +123,7 @@ export const DeanwoodHousing = ({resources, addresses}) => {
                     </p>
                 </Col>
                 <Col lg={4}/>
-                <Col sm={6} md={6} lg={4} className="p-0">
+                <Col xs={12} sm={6} md={6} lg={4} className="p-0">
                     <Image className="img-wymer" src={Lot_Historical_Image} fluid={true}/>
                     <small className="text-right"> Lot 58 Square 5175 of Deanwood, 1948. &nbsp;
                         <a href={"  http://dchistory.pastperfectonline.com/photo/" +
@@ -134,7 +132,7 @@ export const DeanwoodHousing = ({resources, addresses}) => {
                         </a>
                     </small>
                 </Col>
-                <Col sm={6} md={6} lg={4} className="p-0">
+                <Col xs={12} sm={6} md={6} lg={4} className="p-0">
                     <Image className="img-wymer" src={Lot_Modern_Image} fluid={true}/>
                     <small className="text-right">Screengrab from "Return to Wymer's DC"
                         &nbsp;<a href={"http://map.wymersdc.com/#WY0433"}>
