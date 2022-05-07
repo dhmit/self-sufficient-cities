@@ -38,7 +38,7 @@ export const DeanwoodCovid = () => {
                     </p>
                     <p><span className={"emphasized"}>229</span> cases per 1000 people</p>
                     <p className="my-2">
-                        <span className={"health-ward7"}>Ward 7</span> had ≈
+                        <span className={"health-ward7"}>Ward 7</span> had &asymp;
                         <span className={"health-ward7"}>2.6</span>x more cases/person</p>
                     <span style={{"visibility": "hidden"}}>
                         I don't know yet why this is necessary, but the only thing' +
@@ -62,7 +62,7 @@ export const DeanwoodCovid = () => {
                         deaths</p>
                     <p><span className={"emphasized"}>2.5</span> deaths per 1000 people</p>
                     <p className="my-2"><span className={"health-ward7"}>Ward 7</span> had
-                        ≈ <span className={"health-ward7"}>3.5</span>x more deaths/person</p>
+                        &asymp;<span className={"health-ward7"}>3.5</span>x more deaths/person</p>
                 </Col>
             </Row>
 
@@ -80,7 +80,7 @@ export const DeanwoodCovid = () => {
                         tests</p>
                     <p><span className={"emphasized"}>3078</span> tests per 1000 people</p>
                     <p className="my-2"><span className={"health-ward3"}>Ward 3</span> had
-                        ≈ <span className={"health-ward3"}>1.14</span>x more tests/person</p>
+                        &asymp;<span className={"health-ward3"}>1.14</span>x more tests/person</p>
                 </Col>
             </Row>
             <Row className="mt-4">
