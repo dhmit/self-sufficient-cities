@@ -1,4 +1,4 @@
-#map {
+.map {
     height: 400px;
     border: 1px solid black;
 
@@ -6,6 +6,9 @@
         height: 100%;
     }
     width: 100%;
+    &.map-deeds {
+        height: 300px;
+    }
 }
 
 .main-element {

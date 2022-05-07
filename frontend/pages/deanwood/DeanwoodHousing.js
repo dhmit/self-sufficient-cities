@@ -7,10 +7,10 @@ import WymarHousing1_modern from "../../images/wy_043608_modern.jpg";
 import WymarHousing2 from "../../images/wy_040108.jpg";
 import WymarHousing2_modern from "../../images/wy_040108_modern.jpg";
 import Lot_Historical_Image from "../../images/lot_historical_image.jpg";
-import Lot_Modern_Image from "../../images/lot_modern_image.jpeg";
+import Lot_Modern_Image from "../../images/lot_modern_image.jpg";
 
-import Table_Deanwood from "../../components/maps/Table2";
-import Table_Brightwood from "../../components/maps/Table_Brightwood";
+import DeanwoodDeeds from "../../components/housing/DeanwoodDeeds";
+import BrightwoodDeeds from "../../components/housing/BrightwoodDeeds";
 import CensusChartsV2 from "../../components/charts/CensusChartsV2";
 import Citation from "../../components/global/Citation";
 import DeanwoodNav from "./DeanwoodNav";
@@ -39,8 +39,8 @@ export const DeanwoodHousing = ({resources, addresses}) => {
                     </p>
                     <DeanwoodNav selected={"housing"} resources={resources}/>
                 </Col>
-                <Col lg={4} md={2}/>
-                <Col lg={4} className="p-0">
+                <Col lg={4}/>
+                <Col sm={6} md={6} lg={4} className="p-0">
                     <Image className="img-wymer" src={WymarHousing1} fluid={true}/>
                     <small className="text-right"> Lee Street NE east of 50th Street.
                         March 27, 1949. Wymer, John P.&nbsp;
@@ -50,7 +50,7 @@ export const DeanwoodHousing = ({resources, addresses}) => {
                         </a>
                     </small>
                 </Col>
-                <Col lg={4} className="p-0">
+                <Col sm={6} md={6} lg={4} className="p-0">
                     <Image className="img-wymer" src={WymarHousing1_modern} fluid={true}/>
                     <small className="text-right">Screengrab from "Return to Wymer's DC"
                         <a href={"http://map.wymersdc.com/#"}>
@@ -58,8 +58,8 @@ export const DeanwoodHousing = ({resources, addresses}) => {
                         </a>
                     </small>
                 </Col>
-                <Col lg={4} md={2}/>
-                <Col lg={4} className="p-0">
+                <Col lg={4}/>
+                <Col sm={6} md={6} lg={4} className="p-0">
                     <Image className="img-wymer" src={WymarHousing2} fluid={true}/>
                     <small className="text-right"> Oliver Street NE looking south from Quarles
                         Street. July 3, 1948. Wymer, John P.&nbsp;
@@ -69,7 +69,7 @@ export const DeanwoodHousing = ({resources, addresses}) => {
                         </a>
                     </small>
                 </Col>
-                <Col lg={4} className="p-0">
+                <Col sm={6} md={6} lg={4} className="p-0">
                     <Image className="img-wymer" src={WymarHousing2_modern} fluid={true}/>
                     <small className="text-right">Screengrab from "Return to Wymer's DC"&nbsp;
                         <a href={"http://map.wymersdc.com/#"}>
@@ -123,25 +123,28 @@ export const DeanwoodHousing = ({resources, addresses}) => {
                         largely unchanged physically over the years, but its value has increased
                         over the years.
                     </p>
-                    <Col lg={4} className="p-0">
-                        <Image className="img-wymer" src={Lot_Historical_Image} fluid={true}/>
-                        <small className="text-right"> Lot 58 Square 5175 of Deanwood, 1948. &nbsp;
-                            <a href={"  http://dchistory.pastperfectonline.com/photo/" +
-                            "9BB858CC-1A8F-4ABF-A8F6-573360342202"}>
-                                (source)
-                            </a>
-                        </small>
-                    </Col>
-                    <Col lg={4} className="p-0">
-                        <Image className="img-wymer" src={Lot_Modern_Image} fluid={true}/>
-                        <small className="text-right">Screengrab from "Return to Wymer's DC"
-                            <a href={"http://map.wymersdc.com/#WY0433"}>
-                                (source)
-                            </a>
-                        </small>
-                    </Col>
-
-                    <Table_Deanwood/>
+                </Col>
+                <Col lg={4}/>
+                <Col sm={6} md={6} lg={4} className="p-0">
+                    <Image className="img-wymer" src={Lot_Historical_Image} fluid={true}/>
+                    <small className="text-right"> Lot 58 Square 5175 of Deanwood, 1948. &nbsp;
+                        <a href={"  http://dchistory.pastperfectonline.com/photo/" +
+                        "9BB858CC-1A8F-4ABF-A8F6-573360342202"}>
+                            (source)
+                        </a>
+                    </small>
+                </Col>
+                <Col sm={6} md={6} lg={4} className="p-0">
+                    <Image className="img-wymer" src={Lot_Modern_Image} fluid={true}/>
+                    <small className="text-right">Screengrab from "Return to Wymer's DC"
+                        &nbsp;<a href={"http://map.wymersdc.com/#WY0433"}>
+                            (source)
+                        </a>
+                    </small>
+                </Col>
+                <Col lg={4}/>
+                <Col lg={8} className="p-0 mt-5">
+                    <DeanwoodDeeds/>
                     <p>
                         In the tables above, each instance that we see an exchange of $10 or $0
                         of a lot, this usually indicates that the house was transferred from
@@ -157,8 +160,14 @@ export const DeanwoodHousing = ({resources, addresses}) => {
                         within the family for decades suddenly being sold for large amounts; in a
                         sense, a kind of "disappearance" of households.
                     </p>
-                    <Col lg={4}/>
-                    <Col lg={8} className="p-0"><MapHousing addresses={addresses}/></Col>
+
+                </Col>
+                <Col lg={4}/>
+                <Col lg={8} className="p-0">
+                    <MapHousing addresses={addresses}/>
+                </Col>
+                <Col lg={4}/>
+                <Col lg={8} className="mt-5 p-0">
                     <h2>
                         Comparison between Deanwood and Brightwood
                     </h2>
@@ -181,7 +190,11 @@ export const DeanwoodHousing = ({resources, addresses}) => {
                         meaning that owners are able to afford their taxes and the neighborhood
                         is not being gentrified.
                     </p>
-                    <Table_Brightwood/>
+                    <BrightwoodDeeds/>
+                </Col>
+                <Col lg={4}/>
+
+                <Col lg={6}>
                     <CensusChartsV2/>
                     <h2>
                         Similar instances of racism in housing practices
@@ -249,7 +262,8 @@ export const DeanwoodHousing = ({resources, addresses}) => {
                               title={"U.S. Decennial Census"}
                               link={"https://www.socialexplorer.com/explore-tables"}/>
                 </Col></Row>
-        </Container>);
+        </Container>)
+        ;
 
 };
 
