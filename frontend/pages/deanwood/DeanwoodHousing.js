@@ -245,6 +245,9 @@ export const DeanwoodHousing = ({resources, addresses}) => {
                               title={"Racial and Ethnic Valuation Gaps in Home Purchase" +
                               " Appraisals"}
                               link={"https://www.freddiemac.com/fmac-resources/research/pdf/202109-Note-Appraisal-Gap.pdf"}/>
+                    <Citation identifier={"source-8"}
+                              title={"U.S. Decennial Census"}
+                              link={"https://www.socialexplorer.com/explore-tables"}/>
                 </Col></Row>
         </Container>);
 
