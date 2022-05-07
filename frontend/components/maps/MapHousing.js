@@ -271,7 +271,7 @@ export default class MapHousing extends React.Component {
             <div id="map-housing" className="map pb-4">
                 <MapContainer
                     center={this.state.mainLocation.coordinates} zoom={17}
-                    scrollWheelZoom={true}>
+                    scrollWheelZoom={false}>
                     <TileLayer
                         attribution="&copy; <a href='https://www.openstreetmap.org/copyright'>OpenStreetMap</a> contributors"
                         url="http://stamen-tiles-a.a.ssl.fastly.net/toner/{z}/{x}/{y}.png"

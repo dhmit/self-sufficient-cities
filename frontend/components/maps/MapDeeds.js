@@ -14,9 +14,7 @@ const redIcon = new LeafIcon({
     iconUrl:
         "http://chart.apis.google.com/chart?chst=d_map_pin_letter&chld=%E2%80%A2|e85141&chf=a,s,ee00FFFF"
 });
-export const MapDeanwoodDeeds = ({selectMarker, markers, selected}) => {
-    const position = [38.904046, -76.929446];
-
+export const MapDeeds = ({selectMarker, markers, selected, position}) => {
     const markerObjects = markers.map((location, i) => (
         <Marker eventHandlers={{click: selectMarker.bind(location)}} key={i} position={location}
                 icon={location === selected ? redIcon : blueIcon}>
@@ -34,13 +32,14 @@ export const MapDeanwoodDeeds = ({selectMarker, markers, selected}) => {
         </div>);
 };
 
-MapDeanwoodDeeds.propTypes = {
+MapDeeds.propTypes = {
     markers: PropTypes.array,
     selected: PropTypes.array,
-    selectMarker: PropTypes.func
+    selectMarker: PropTypes.func,
+    position: PropTypes.array
 };
 
 
-export default MapDeanwoodDeeds;
+export default MapDeeds;
 
 

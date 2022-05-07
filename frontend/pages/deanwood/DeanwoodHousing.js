@@ -144,6 +144,9 @@ export const DeanwoodHousing = ({resources, addresses}) => {
                 </Col>
                 <Col lg={4}/>
                 <Col lg={8} className="p-0 mt-5">
+                    <h2 className="p-0">
+                        Deanwood Lots: value by year
+                    </h2>
                     <DeanwoodDeeds/>
                     <p>
                         In the tables above, each instance that we see an exchange of $10 or $0
@@ -190,6 +193,9 @@ export const DeanwoodHousing = ({resources, addresses}) => {
                         meaning that owners are able to afford their taxes and the neighborhood
                         is not being gentrified.
                     </p>
+                    <h2 className="p-0">
+                        Brightwood Lots: value by year
+                    </h2>
                     <BrightwoodDeeds/>
                 </Col>
                 <Col lg={4}/>

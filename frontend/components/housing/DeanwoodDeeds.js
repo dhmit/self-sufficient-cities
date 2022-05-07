@@ -8,7 +8,7 @@ const coordinates = info.coordinates;
 export const DeanwoodDeeds = () => {
 
     return (
-        <Deeds tables={tables} coordinates={coordinates}/>
+        <Deeds position={[38.904046, -76.929446]} tables={tables} coordinates={coordinates}/>
     );
 };
 

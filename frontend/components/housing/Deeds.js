@@ -1,9 +1,9 @@
 import React, {useState} from "react";
-import MapDeanwoodDeeds from "../maps/MapDeanwoodDeeds";
+import MapDeeds from "../maps/MapDeeds";
 import PropTypes from "prop-types";
 
 
-export const DeanwoodDeeds = ({tables, coordinates}) => {
+export const DeanwoodDeeds = ({tables, coordinates, position}) => {
     const [lotNum, setLotNum] = useState(0);
     const lots = Object.keys(tables);
 
@@ -25,9 +25,6 @@ export const DeanwoodDeeds = ({tables, coordinates}) => {
 
 
     return (<>
-        <h2 className="p-0">
-            Deanwood Lots: value by year
-        </h2>
         <div className="carousel">
             <div className="p-lg-3 p-sm-2 container">
                 <div className="p-0 row">
@@ -35,9 +32,10 @@ export const DeanwoodDeeds = ({tables, coordinates}) => {
                         <h5 className="tab-header">
                             {title}
                         </h5>
-                        <MapDeanwoodDeeds selectMarker={selectMarker}
-                                          markers={Object.values(coordinates)}
-                                          selected={coordinates[lots[lotNum]]}/>
+                        <MapDeeds position={position}
+                                  selectMarker={selectMarker}
+                                  markers={Object.values(coordinates)}
+                                  selected={coordinates[lots[lotNum]]}/>
                     </div>
                     <div className="pl-2 col-6 table-container">
                         {table}
@@ -50,7 +48,8 @@ export const DeanwoodDeeds = ({tables, coordinates}) => {
 
 DeanwoodDeeds.propTypes = {
     tables: PropTypes.object,
-    coordinates: PropTypes.object
+    coordinates: PropTypes.object,
+    position: PropTypes.array
 };
 
 
