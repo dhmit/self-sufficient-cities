@@ -2,7 +2,7 @@
     {
         "address": "Safeway",
         "openyear": "2000",
-        "closeyear": "2005",
+        "closeyear": "2022",
         "type": "grocery",
         "coordinates": [
             "38.893291",
@@ -11,7 +11,7 @@
     },
     {
         "address": "Dave Brown's Wine and Liquor",
-        "openyear": "2010",
+        "openyear": "2000",
         "closeyear": "2022",
         "type": "liquor",
         "coordinates": [
@@ -21,7 +21,7 @@
     },
     {
         "address": "Suburban Market",
-        "openyear": "2010",
+        "openyear": "2000",
         "closeyear": "2022",
         "type": "convenience",
         "coordinates": [
@@ -31,7 +31,7 @@
     },
     {
         "address": "A&S Grocery Store",
-        "openyear": "2010",
+        "openyear": "2000",
         "closeyear": "2022",
         "type": "grocery",
         "coordinates": [
@@ -41,7 +41,7 @@
     },
     {
         "address": "7-Eleven",
-        "openyear": "2010",
+        "openyear": "2000",
         "closeyear": "2022",
         "type": "convenience",
         "coordinates": [
@@ -51,7 +51,7 @@
     },
     {
         "address": "Uncle Lee's Liquor",
-        "openyear": "2010",
+        "openyear": "2000",
         "closeyear": "2022",
         "type": "liquor",
         "coordinates": [
@@ -61,7 +61,7 @@
     },
     {
         "address": "Wendy's",
-        "openyear": "2010",
+        "openyear": "2000",
         "closeyear": "2022",
         "type": "restaurant",
         "coordinates": [
@@ -71,7 +71,7 @@
     },
     {
         "address": "Subway",
-        "openyear": "2010",
+        "openyear": "2000",
         "closeyear": "2022",
         "type": "restaurant",
         "coordinates": [

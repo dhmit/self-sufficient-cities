@@ -12,9 +12,8 @@ body {
     height: 30px;
     border: 1px solid #999;
     font-size: 18px;
-    color: #0a47a1;
-    background-color: #eee;
-    border-radius: 5px;
+    color: black;
+    background-color: white;
     box-shadow: 4px 4px #ccc;
 }
 
@@ -23,8 +22,10 @@ body {
     border: 1px solid black;
 }
 
-.communityButton {
+.community-button {
     background-color: white;
+    border: 1px solid black;
+    margin-bottom: 0.5em;
 }
 
 .citation-pointer {

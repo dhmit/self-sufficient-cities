@@ -1,5 +1,4 @@
 import React, {useState} from "react";
-import {Container} from "react-bootstrap";
 import {chart_data, info,labels} from "../../contexts/health";
 
 import {
@@ -370,7 +369,7 @@ export default function HealthTrends() {
     };
 
     return (
-        <Container>
+        <>
             <select onChange={handleChange} className={"box"}>
                 <option disabled className="d-none">Choices</option>
                 <option value="life_expectancy">Life Expectancy</option>
@@ -385,6 +384,6 @@ export default function HealthTrends() {
             </select>
             <Line options={options} data={data}/>
             <p className={"description"}>{description}</p>
-        </Container>
+        </>
     );
 }
