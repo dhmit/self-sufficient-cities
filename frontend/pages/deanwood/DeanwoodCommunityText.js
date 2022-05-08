@@ -128,13 +128,13 @@ export const selfReliance1 = ["Due to a lack of municipal support, self-reliance
 " together to deliver sanitation services not provided by the government."];
 
 export const surplusQuote =
-    <blockquote>&#8220;But we had a lot of ground but very little money to pay for rent,
+    <blockquote className="m-4">&#8220;But we had a lot of ground but very little money to pay for rent,
         so we managed to eke out a living and they had ground to raise food. Some of the surplus
         they would take in to town to the market and got a little money that way&#8221;
         – Norman Dale 1975</blockquote>;
 
 export const raiseChickensQuote =
-    <blockquote>&#8220;We had an acre and a quarter down there, <mark>raised everything, beans and
+    <blockquote className="m-4">&#8220;We had an acre and a quarter down there, <mark>raised everything, beans and
         chickens, 300 chickens, fruit and berries of all kinds, flowers</mark> and we sold
         them in market&#8221; –Mrs. Ethel G Greene 1975</blockquote>;
 
@@ -149,7 +149,7 @@ export const selfReliance2 = ["However, this access to food and services through
 " simultaneously give back to the community by providing employment opportunities to its" +
 " residents and investing in projects that would benefit the neighborhood."];
 
-export const lifesaverQuote = <blockquote>
+export const lifesaverQuote = <blockquote className="mt-4">
     ‘It means a lifesaver to me,’ declared Omie Cheeks, 60, who had grown accustomed to
     carrying her groceries from the old Safeway to her home at 5348 Nannie Helen Burroughs Ave.,
     less than a block away. <mark>‘Only time I’ve ever felt neglected was when they took
