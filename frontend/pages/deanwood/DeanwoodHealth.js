@@ -155,18 +155,6 @@ export const DeanwoodHealth = ({resources}) => {
                               link={"https://opendata.dc.gov/datasets/dc-covid-19-cases-by-ward/explore?showTable=true"}/>
 
                 </Col>
-                {/*=======*/}
-                {/*                    </Row>*/}
-                {/*                    <Row>*/}
-                {/*                        <Col md={4} className={"p-0"}/>*/}
-                {/*                        <Col className={"p-0"}>{tabs.map((tab, idx) =>*/}
-                {/*                            <Container className={"p-0"} key={idx}>*/}
-                {/*                                {displayState === tab.label && tab.el}*/}
-                {/*                            </Container>*/}
-                {/*                        )}</Col>*/}
-                {/*                    </Row>*/}
-                {/*                </Col>*/}
-                {/*>>>>>>> 554e33ef8a3d9cb748063f379607b753c6bffe7d:frontend/pages/deanwood/DeanwoodHealth.js*/}
             </Row>
         </Container>
     );
