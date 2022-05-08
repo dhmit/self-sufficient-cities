@@ -94,11 +94,10 @@ export default class MapTimeSlider extends React.Component {
 
     render() {
         const validAddresses = this.props.data.length ? this.props.data.filter((location) => (
-            location.type && (location.coordinates && location.coordinates.length === 2 &&
-                this.state.sliderValue >= location.openyear &&
-                this.state.sliderValue <= location.closeyear &&
-                location.openyear && location.closeyear
-            )
+            location.coordinates && location.coordinates.length === 2 &&
+            this.state.sliderValue >= location.openyear &&
+            this.state.sliderValue <= location.closeyear &&
+            location.openyear && location.closeyear
         )) : [];
 
         const markerObjects = validAddresses.map((location, i) => (
@@ -115,13 +114,14 @@ export default class MapTimeSlider extends React.Component {
             <div className="main-element">
                 <div className="map mb-3">
                     <MapContainer
-                        center={this.props.mainLocation.coordinates} zoom={14}
+                        center={this.props.mainLocation.coordinates}
+                        zoom={this.props.zoom ? this.props.zoom : 14}
                         scrollWheelZoom={false}>
                         <TileLayer
                             attribution="&copy; <a href='https://www.openstreetmap.org/copyright'>OpenStreetMap</a> contributors"
                             url="http://stamen-tiles-a.a.ssl.fastly.net/toner-lite/{z}/{x}/{y}.png"/>
                         {markerObjects}
-                        <Legend options={this.props.legend}/>
+                        {this.props.legend.length ? <Legend options={this.props.legend}/> : <></>}
                     </MapContainer>
                     {timeSlider(
                         "Select a year below to see all food locations that existed in that" +
@@ -143,6 +143,7 @@ MapTimeSlider.propTypes = {
     data: PropTypes.array,
     setMarkerColor: PropTypes.func,
     legend: PropTypes.array,
-    timeRange: PropTypes.array
+    timeRange: PropTypes.array,
+    zoom: PropTypes.number
 };
 

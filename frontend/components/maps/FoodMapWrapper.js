@@ -6,6 +6,7 @@ import MapTimeSlider from "./MapTimeSlider";
 const LeafIcon = L.Icon.extend({
     options: {}
 });
+
 const iconUrl = "https://chart.apis.google.com/chart?chst=d_map_pin_letter&";
 const blueIcon = new LeafIcon({
         iconUrl: iconUrl + "chld=%E2%80%A2|abcdef&chf=a,s,ee00FFFF"
@@ -50,7 +51,7 @@ const legend = [
 ];
 
 
-export const FoodMap = () => {
+export const FoodMapWrapper = () => {
     const [data, setData] = useState([]);
 
     const fetchData = () => {
@@ -62,7 +63,6 @@ export const FoodMap = () => {
     useEffect(() => {
         fetchData().then(res => {
             setData(res.address_data);
-            console.log("fetching data, getting:", res.address_data);
         });
     }, []);
 
@@ -75,4 +75,4 @@ export const FoodMap = () => {
     );
 };
 
-export default FoodMap;
+export default FoodMapWrapper;

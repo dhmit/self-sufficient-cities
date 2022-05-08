@@ -2,7 +2,7 @@ import React from "react";
 import {Container, Row, Col, Image} from "react-bootstrap";
 import * as PropTypes from "prop-types";
 import DeanwoodNav from "./DeanwoodNav";
-import FoodMap from "../../components/maps/FoodMap";
+import FoodMapWrapper from "../../components/maps/FoodMapWrapper";
 import murry from "../../images/Murry.png";
 import safeway from "../../images/Safeway.png";
 import unfair from "../../images/PeoplesUnfair.png";
@@ -68,7 +68,7 @@ export const DeanwoodFood = ({resources}) => {
                 </Col>
                 <Col lg={4}/>
                 <Col lg={8} className="p-0 mt-4 mb-5">
-                    <FoodMap/>
+                    <FoodMapWrapper/>
                 </Col>
                 <Col lg={5}/>
                 <Col lg={6} className="p-0 mt-4">
