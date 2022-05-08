@@ -222,21 +222,15 @@ export default class MapMacro extends React.Component {
         }
 
 
-
-
-
         return <div className="mb-5" id="map">
-            <MapContainer center={[38.9041415988745, -76.93284109983243]} zoom={15} scrollWheelZoom={true}>
+            <MapContainer center={[38.9041415988745, -76.93284109983243]} zoom={15}
+                          scrollWheelZoom={false}>
                 <TileLayer
                     attribution='&copy; <a href="https://www.openstreetmap.org/copyright">OpenStreetMap</a> contributors'
                     url="http://stamen-tiles-a.a.ssl.fastly.net/toner-lite/{z}/{x}/{y}.png"
                 />
-
-
                 {m}
-
-
-                <LayersControl position="topright">
+                <LayersControl collapsed={false} position="topright">
                     {L}
                 </LayersControl>
 
