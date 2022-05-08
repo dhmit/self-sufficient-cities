@@ -5,6 +5,7 @@ import Input from "@material-ui/core/Input";
 import Typography from "@material-ui/core/Typography";
 import Grid from "@material-ui/core/Grid";
 import Slider from "@material-ui/core/Slider";
+import * as L from "leaflet";
 
 const MAIN_LOCATION = {
     // coordinates: [38.9051606, -77.0036513],
@@ -13,6 +14,15 @@ const MAIN_LOCATION = {
     date: "Test date",
     info: "Test info"
 };
+
+const LeafIcon = L.Icon.extend({
+    options: {}
+});
+
+const blueIcon = new LeafIcon({
+    iconUrl:
+        "https://chart.apis.google.com/chart?chst=d_map_pin_letter&chld=%E2%80%A2|abcdef&chf=a,s,ee00FFFF"
+});
 
 function sliderInput(value, bound, defaultRange, inputChangeFunc, sliderBlurFunc) {
     const [minValue, maxValue] = defaultRange;
@@ -41,8 +51,8 @@ function timeSlider(
 ) {
     const [minValue, maxValue] = defaultRange;
     return (
-        <div key={sliderName}>
-            <Typography id="range-slider" gutterBottom>
+        <div className="time-slider" key={sliderName}>
+            <Typography id="range-slider" className="mb-4" gutterBottom>
                 {sliderName}
             </Typography>
             <Grid container spacing={2} alignItems="center">
@@ -179,8 +189,7 @@ export default class MapHousing extends React.Component {
             markerData: [],
             sliderState: [1980, 2022],
             timeRange: [1980, 2022],
-            lastValid: [1980, 2022],
-            names: ["Australia", "Canada", "USA", "Poland", "Spain", "France"]
+            lastValid: [1980, 2022]
         };
     }
 
@@ -260,7 +269,7 @@ export default class MapHousing extends React.Component {
         ));
 
         const markerObjects = validAddresses.map((location, i) => (
-            <Marker key={i} position={location.coordinates}>
+            <Marker key={i} icon={blueIcon} position={location.coordinates}>
                 <Popup>
                     {location.address}
                 </Popup>
@@ -269,27 +278,25 @@ export default class MapHousing extends React.Component {
 
         return (<>
             <h1>{this.state.mainLocation.name}</h1>
-            <div className="main-element">
-                <div id="map" className="pb-4">
-                    <MapContainer
-                        center={this.state.mainLocation.coordinates} zoom={16}
-                        scrollWheelZoom={true}>
-                        <TileLayer
-                            attribution="&copy; <a href='https://www.openstreetmap.org/copyright'>OpenStreetMap</a> contributors"
-                            url="http://stamen-tiles-a.a.ssl.fastly.net/toner-lite/{z}/{x}/{y}.png"
-                        />
-                        {markerObjects}
-                    </MapContainer>
-                    {timeSlider(
-                        "Time Slider",
-                        this.state.sliderState,
-                        this.state.timeRange,
-                        this.state.lastValid,
-                        this.handleSliderChange,
-                        this.handleSliderInputChange,
-                        this.handleSliderBlur
-                    )}
-                </div>
+            <div id="map-housing" className="map pb-4">
+                <MapContainer
+                    center={this.state.mainLocation.coordinates} zoom={17}
+                    scrollWheelZoom={false}>
+                    <TileLayer
+                        attribution="&copy; <a href='https://www.openstreetmap.org/copyright'>OpenStreetMap</a> contributors"
+                        url="http://stamen-tiles-a.a.ssl.fastly.net/toner/{z}/{x}/{y}.png"
+                    />
+                    {markerObjects}
+                </MapContainer>
+                {timeSlider(
+                    "",
+                    this.state.sliderState,
+                    this.state.timeRange,
+                    this.state.lastValid,
+                    this.handleSliderChange,
+                    this.handleSliderInputChange,
+                    this.handleSliderBlur
+                )}
             </div>
         </>);
     }

@@ -93,6 +93,9 @@ export default class CensusCharts extends React.Component {
                     this.state.people.map((each, i) =>
                         <BarChart data={each} key={i + "people"}/>)
                 }
+                <a className={"citation-pointer"} title={"U.S. Census Data"} href={"#source-8"}>
+                    U.S. Census Data [8]
+                </a>
                 <p>
                     Starting in the early 20th century the Great Migration saw six million
                     African Americans move into northern and western cities. One such popular
@@ -123,6 +126,9 @@ export default class CensusCharts extends React.Component {
                     this.state.rent.map((each, i) =>
                         <BarChart data={each} key={i + "rent"}/>)
                 }
+                <a className={"citation-pointer"} title={"U.S. Census Data"} href={"#source-8"}>
+                    U.S. Census Data [8]
+                </a>
                 <p>
                     As the population of African Americans increased while the available acres
                     and housing stayed the same, prices went up. Tract 78 faced a higher
@@ -146,8 +152,14 @@ export default class CensusCharts extends React.Component {
                     this.state.housingValue.map((each, i) =>
                         <BarChart data={each} key={i + "housing"}/>)
                 }
+                <a className={"citation-pointer"} title={"U.S. Census Data"} href={"#source-8"}>
+                    U.S. Census Data [8]
+                </a>
                 <h2>Average Housing Values</h2>
                 <BarChart data={this.state.average}/>
+                <a className={"citation-pointer"} title={"U.S. Census Data"} href={"#source-8"}>
+                    U.S. Census Data [8]
+                </a>
                 <p>
                     Median Housing Value in 1940 was $4k-5k. Median Housing Value in 1950 was
                     $10k-15k. Median Housing Value in 1960 was $10k-12.5k. The median household

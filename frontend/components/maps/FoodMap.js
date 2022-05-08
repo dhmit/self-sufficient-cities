@@ -7,7 +7,6 @@ import Grid from "@material-ui/core/Grid";
 import Slider from "@material-ui/core/Slider";
 import * as L from "leaflet";
 import Legend from "./Legend";
-import {TimeControl} from "./MapMicro";
 
 
 const LeafIcon = L.Icon.extend({
@@ -50,26 +49,24 @@ function setMarkerColor(type) {
 }
 
 const MAIN_LOCATION = {
-    coordinates: [38.9022, -76.9306637],
-    name: "Deanwood neighborhood's food map",
-    date: "Test date",
-    info: "Test info"
+    coordinates: [38.90,-76.93],
+    name: "Map of food services over time"
 };
 
 function timeSlider(
-    sliderName, currentRange, defaultRange, lastValid,
+    sliderName, sliderValue, defaultRange,
     sliderChangeFunc, inputChangeFunc, sliderBlurFunc
 ) {
     const [minValue, maxValue] = defaultRange;
     return (
-        <div key={sliderName}>
+        <div className="time-slider" key={sliderName}>
             <Typography id="range-slider" gutterBottom>
                 {sliderName}
             </Typography>
             <Grid container spacing={2} alignItems="center">
                 <Grid item>
                     {sliderInput(
-                        currentRange[0],
+                        sliderValue,
                         "lower",
                         defaultRange,
                         inputChangeFunc,
@@ -78,22 +75,13 @@ function timeSlider(
                 </Grid>
                 <Grid item xs>
                     <Slider
-                        value={typeof lastValid === "object" ? lastValid : defaultRange}
+                        value={typeof sliderValue === "number" ? sliderValue: defaultRange[0]}
                         onChange={(e, v) => sliderChangeFunc(e, v)}
                         min={minValue}
                         max={maxValue}
                         valueLabelDisplay="auto"
                         aria-labelledby="range-slider"
                     />
-                </Grid>
-                <Grid item>
-                    {sliderInput(
-                        currentRange[1],
-                        "upper",
-                        defaultRange,
-                        inputChangeFunc,
-                        sliderBlurFunc
-                    )}
                 </Grid>
             </Grid>
         </div>
@@ -127,10 +115,8 @@ export default class FoodMap extends React.Component {
         this.state = {
             mainLocation: MAIN_LOCATION,
             markerData: [],
-            sliderState: [1900, 2022],
-            timeRange: [1900, 2022],
-            lastValid: [1900, 2022],
-            names: ["Australia", "Canada", "USA", "Poland", "Spain", "France"]
+            sliderValue: 1943,
+            timeRange: [1943, 2022]
         };
     }
 
@@ -147,76 +133,36 @@ export default class FoodMap extends React.Component {
     };
 
 
-    setSliderValue = (newLowerBound, newUpperBound) => {
+    setSliderValue = (newValue) => {
         this.setState({
-            sliderState: [newLowerBound, newUpperBound],
-            lastValid: [newLowerBound, newUpperBound]
+            sliderValue: newValue
         });
     }
 
     handleSliderChange = (event, value) => {
-        const [newLowerBound, newUpperBound] = value;
-        this.setSliderValue(newLowerBound, newUpperBound);
+        this.setSliderValue(value);
     }
 
-    handleSliderInputChange = (event, bound) => {
-        const [currentLowerValue, currentUpperValue] = this.state.sliderState;
-        const [minValue, maxValue] = this.state.timeRange;
-        let newSliderState = this.state.sliderState;
-        let newValidState = [...this.state.lastValid];
-        const isLower = (bound === "lower");
-        const isUpper = (bound === "upper");
-
-        if (event.target.value === "") {
-            this.setState({
-                sliderState: [isLower ? "" : currentLowerValue, isUpper ? "" : currentUpperValue],
-                lastValid: newValidState
-            });
-            return;
-        }
-
-        const newValue = Number(event.target.value);
-        // Only valid bound inputs will affect the slider by changing the newValidState
-        if (isLower) {
-            if (newValue <= currentUpperValue && newValue >= minValue) {
-                newValidState = [newValue, currentUpperValue];
-            }
-            newSliderState = [newValue, currentUpperValue];
-
-        } else if (isUpper) {
-            if (newValue >= currentLowerValue && newValue <= maxValue) {
-                newValidState = [currentLowerValue, newValue];
-            }
-            newSliderState = [currentLowerValue, newValue];
-        }
-
-        this.setState({
-            sliderState: newSliderState,
-            lastValid: newValidState
-        });
-    };
+    handleSliderInputChange = (event) => {
+        this.setSliderValue(event.target.value === "" ? "" : Number(event.target.value));
+    }
 
     handleSliderBlur = () => {
         // Used when slider changed by dragging after changing inputs
         // Needed if inputs are not bounded by the slider" maximum and minimum values
-        const [currentLowerValue, currentUpperValue] = this.state.sliderState;
-        const [minValue, maxValue] = this.state.timeRange;
-        const [lastLowerValid, lastUpperValid] = this.state.lastValid;
-        if (currentLowerValue < minValue || currentLowerValue > lastUpperValid) {
-            this.setSliderValue(lastLowerValid, currentUpperValue);
-        } else if (currentUpperValue > maxValue || currentUpperValue < lastLowerValid) {
-            this.setSliderValue(currentLowerValue, lastUpperValid);
+        if (value < this.state.timeRange[0]) {
+            this.setSliderValue(this.state.timeRange[0]);
+        } else if (value > this.state.timeRange[1]) {
+            this.setSliderValue(this.state.timeRange[1]);
         }
     };
 
     render() {
         const validAddresses = this.state.markerData.filter((location) => (
             location.type && (location.coordinates && location.coordinates.length === 2 &&
-                location.openyear && location.closeyear &&
-                (location.openyear <= this.state.lastValid[1] &&
-                    location.openyear >= this.state.lastValid[0]) ||
-                (location.closeyear <= this.state.lastValid[1] &&
-                    location.closeyear >= this.state.lastValid[0])
+                this.state.sliderValue >= location.openyear &&
+                this.state.sliderValue <= location.closeyear &&
+                location.openyear && location.closeyear
             )
         ));
 
@@ -231,10 +177,10 @@ export default class FoodMap extends React.Component {
         return (<>
             <h1>{this.state.mainLocation.name}</h1>
             <div className="main-element">
-                <div id="map" className="pb-5">
+                <div className="map pb-5">
                     <MapContainer
                         center={this.state.mainLocation.coordinates} zoom={14}
-                        scrollWheelZoom={true}
+                        scrollWheelZoom={false}
                     >
                         <TileLayer
                             attribution="&copy; <a href='https://www.openstreetmap.org/copyright'>OpenStreetMap</a> contributors"
@@ -249,18 +195,14 @@ export default class FoodMap extends React.Component {
                         ]}/>
                     </MapContainer>
                     {timeSlider(
-                        "Select a Time Range Below",
-                        this.state.sliderState,
+                        "Select a year below to see all food locations that existed in that" +
+                        " specific year.",
+                        this.state.sliderValue,
                         this.state.timeRange,
-                        this.state.lastValid,
                         this.handleSliderChange,
                         this.handleSliderInputChange,
                         this.handleSliderBlur
                     )}
-                    <TimeControl
-                        sliderState={this.state.sliderState} change={this.setSliderValue}
-                        defaultTime={this.state.timeRange}>
-                    </TimeControl>
                 </div>
             </div>
         </>);

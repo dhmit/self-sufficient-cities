@@ -73,6 +73,12 @@
     color: black;
     padding: 1% 2%;
     margin: 0.2em;
+    &:first-child {
+        margin-left: 0;
+    }
+    &:last-child {
+        margin-right: 0;
+    }
 }
 
 @mixin city-tag($theme: $color-gold) {
