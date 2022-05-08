@@ -67,7 +67,7 @@ export default class MapLegend extends React.Component {
                 <div className="event-selector">
                     <h3 className="event-selector-title">Event Selector</h3>
                 </div>
-                <div id="map">
+                <div className="map">
                     <MapContainer
                         center={this.state.mainLocation.coordinates} zoom={13}
                         scrollWheelZoom={true}

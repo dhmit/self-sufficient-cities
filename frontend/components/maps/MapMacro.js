@@ -49,7 +49,7 @@ export default class MapMacro extends React.Component {
     }
 
     render() {
-        return <div id="map">
+        return <div className="map">
             <h1>{this.state.location}</h1>
             <MapContainer center={this.state.position} zoom={13} scrollWheelZoom={true}>
                 <Marker position={this.state.position}/>
