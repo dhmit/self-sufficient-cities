@@ -12,6 +12,7 @@ h1 {
 .city {
     padding-top: 0 !important;
     padding-bottom: 0 !important;
+    padding-left: 0;
     display: flex;
 
     &.container {
@@ -78,14 +79,20 @@ h1 {
         display: block;
     }
 
-    .Profile {
-        padding-bottom: 5px;
-    }
-
     .carousel {
-        width: 100%;
         display: flex;
         margin-bottom: 1em;
+
+        &.community-carousel {
+            blockquote {
+                height: 100px;
+            }
+            border: 1px solid black;
+            padding: 2em;
+            @include media-breakpoint-down(md) {
+                padding: 0.8em;
+            }
+        }
 
         blockquote {
             overflow-y: scroll;

@@ -22,7 +22,7 @@ const DeanwoodURL = "/api/get_deanwood_boundary_data/";
 //import data from "./community.json";
 
 
-export default class MapMacro extends React.Component {
+export default class MapCommunity extends React.Component {
     state = {
         position: [38.897665, -76.925919],
         censustract: {},
@@ -165,23 +165,23 @@ export default class MapMacro extends React.Component {
         let L = [];
         if (this.props.mapType === "Food") {
             L = [
-                <LayersControl.Overlay checked key={1} name="Voronoi Representation">
+                <LayersControl.Overlay checked key={"voronoi"} name="Voronoi Representation">
                     <LayerGroup>{shapes}</LayerGroup>
                 </LayersControl.Overlay>,
 
-                <LayersControl.Overlay key={2} name="Census Tract Boundaries">
+                <LayersControl.Overlay key={"census"} name="Census Tract Boundaries">
                     <LayerGroup>{Object.keys(this.state.censustract).length > 0 &&
                     <GeoJSON data={this.state.censustract}/>}</LayerGroup>
                 </LayersControl.Overlay>,
 
-                <LayersControl.Overlay key={2} name="Deanwood Boundaries">
+                <LayersControl.Overlay key={"boundary"} name="Deanwood Boundaries">
                     <LayerGroup>{Object.keys(this.state.boundary).length > 0 &&
                     // eslint-disable-next-line max-len
                     <GeoJSON pathOptions={{fillColor: "rgb(174,255,71)", color: "rgb(113,189,13)"}}
                              data={this.state.boundary}/>}</LayerGroup>
                 </LayersControl.Overlay>,
 
-                <LayersControl.Overlay key={3} name="From Omie Cheek's House">
+                <LayersControl.Overlay key={"omie"} name="From Omie Cheek's House">
                     <LayerGroup>{omie}</LayerGroup>
                 </LayersControl.Overlay>
 
@@ -191,12 +191,12 @@ export default class MapMacro extends React.Component {
             L = [
 
 
-                <LayersControl.Overlay key={2} name="Census Tract Boundaries">
+                <LayersControl.Overlay key={"religion-census"} name="Census Tract Boundaries">
                     <LayerGroup>{Object.keys(this.state.censustract).length > 0 &&
                     <GeoJSON data={this.state.censustract}/>}</LayerGroup>
                 </LayersControl.Overlay>,
 
-                <LayersControl.Overlay checked key={2} name="Deanwood Boundaries">
+                <LayersControl.Overlay checked key={"religion-boundary"} name="Deanwood Boundaries">
                     <LayerGroup>{Object.keys(this.state.boundary).length > 0 &&
                     // eslint-disable-next-line max-len
                     <GeoJSON pathOptions={{fillColor: "rgb(174,255,71)", color: "rgb(113,189,13)"}}
@@ -222,7 +222,7 @@ export default class MapMacro extends React.Component {
         }
 
 
-        return <div className="mb-5" id="map">
+        return <div className="mb-5 map">
             <MapContainer center={[38.9041415988745, -76.93284109983243]} zoom={15}
                           scrollWheelZoom={false}>
                 <TileLayer
@@ -233,16 +233,13 @@ export default class MapMacro extends React.Component {
                 <LayersControl collapsed={false} position="topright">
                     {L}
                 </LayersControl>
-
-
             </MapContainer>
-            <p><em>{caption}</em></p>
-
+            <p><small>{caption}</small></p>
         </div>;
     }
 }
 
-MapMacro.propTypes = {
+MapCommunity.propTypes = {
     decade: PropTypes.number,
     data: PropTypes.array,
     mapType: PropTypes.string,

@@ -3,7 +3,7 @@ import {Container, Row, Col, Image} from "react-bootstrap";
 import * as PropTypes from "prop-types";
 import DeanwoodNav from "./DeanwoodNav";
 import * as Text from "./DeanwoodCommunityText";
-import MapTest from "../../components/maps/MapTest";
+import MapCommunity from "../../components/maps/MapCommunity";
 import Suburban_gardens from "../../images/suburban_gardens.png";
 import Deanwood_kiosk from "../../images/deanwood_kiosk.png";
 import Deanwood_burville from "../../images/Deanwood_Burville.jpeg";
@@ -23,38 +23,36 @@ const DeanwoodProfile = (statement, hasMap = true, hasTitle = true, data = [], v
 
     if (hasMap) {
         // eslint-disable-next-line max-len
-        left = [];
         map =
-            <CommunityMap data={data} mapType={mapType} voronoi_data={voronoi} paths_data={paths}/>;
+            <MapCommunityWrapper data={data} mapType={mapType} voronoi_data={voronoi}
+                                 paths_data={paths}/>;
     } else if (source) {
-        left = <Col lg={4} className="p-0">
+        left = <>
             <Image src={source} alt={alt_text} fluid={true}/>
             <small>{image_caption}</small>
-        </Col>;
+        </>;
 
     }
 
-    return (<div className={"Profile"}>
-        <Row>
-            <Col lg={4}/>
-            {left}
-            <Col className="pr-0">
-                {hasTitle && <h2>{title}</h2>}
-                {/* Iterate through statement. If item is string, the next item might be a
+    return (<>
+        {left ? <Col lg={4}/> : <Col lg={5}/>}
+        {left && <Col lg={4} className="p-0">{left}</Col>}
+        <Col lg={left ? 4 : 6} className="p-0">
+            {hasTitle && <h2 className="mt-3">{title}</h2>}
+            {/* Iterate through statement. If item is string, the next item might be a
                  citation. Check next for type not string. Add to paragraph if not string.
                   Continue. */}
-                {statement.map((s, idx) => (
-                    typeof s === "string" ? <p key={idx}>{s}{
-                        typeof statement[idx + 1] === "string" ? "" : statement[idx + 1]
-                    } </p> : ""
-                ))}
-                {map}
-            </Col>
-        </Row>
-    </div>);
+            {statement.map((s, idx) => (
+                typeof s === "string" ? <p key={idx}>{s}{
+                    typeof statement[idx + 1] === "string" ? "" : statement[idx + 1]
+                } </p> : ""
+            ))}
+            {map}
+        </Col>
+    </>);
 };
 
-class CommunityMap extends React.Component {
+class MapCommunityWrapper extends React.Component {
     state = {
         decade: 1940
     };
@@ -63,39 +61,41 @@ class CommunityMap extends React.Component {
         return (<ul className="list-inline">
             {[4, 5, 6, 7, 8, 9].map((num) => {
                 return <li key={`decade-${num}`} className="list-inline-item">
-                    <button className={"community-button"}
+                    <button className={`community-button
+                    ${this.state.decade === parseInt(`19${num}0`) ? "selected" : ""}`}
                             onClick={() => this.setState({decade: parseInt(`19${num}0`)})}>
                         19{num}0s
                     </button>
                 </li>;
             })
             }
-            <MapTest decade={this.state.decade} data={this.props.data} mapType={this.props.mapType}
-                     voronoi={this.props.voronoi_data} paths={this.props.paths_data}/>
+            <MapCommunity decade={this.state.decade} data={this.props.data}
+                          mapType={this.props.mapType} voronoi={this.props.voronoi_data}
+                          paths={this.props.paths_data}/>
         </ul>);
     }
 }
 
 export const DeanwoodCommunity = ({resources, community_data, voronoi_data, paths_data}) => {
-    const [imageNum, setImage] = useState(0);
+    const [quoteNum, setQuoteNum] = useState(0);
     const numQuotes = Text.quotes.length;
 
     const forward = () => {
-        setImage((imageNum + 1) % numQuotes);
+        setQuoteNum((quoteNum + 1) % numQuotes);
     };
 
     const backward = () => {
-        if (imageNum === 0) {
-            setImage(numQuotes - 1);
+        if (quoteNum === 0) {
+            setQuoteNum(numQuotes - 1);
         } else {
-            setImage((imageNum - 1) % numQuotes);
+            setQuoteNum((quoteNum - 1) % numQuotes);
         }
     };
 
     return (<>
         <Container className="city" id="deanwood-community">
             <Row>
-                <Col md={3} className="nav-col p-0 mr-2">
+                <Col lg={3} className="nav-col p-0 mr-2">
                     <h1>Deanwood Community</h1>
                     <p>
                         Informed by analysis of oral histories, historical newspapers, and city
@@ -107,103 +107,71 @@ export const DeanwoodCommunity = ({resources, community_data, voronoi_data, path
                     </p>
                     <DeanwoodNav selected={"community"} resources={resources}/>
                 </Col>
-                <Row className="prime mt-5">
-                    <Col md={4}/>
-                    <Col className="carousel">
-                        {imageNum > 0 && <button onClick={backward}>
-                            <ArrowLeft fill={"#888"} height={"20px"}/>
-                        </button>}
-                        <blockquote className="selected-text">
-                            {Text.quotes[imageNum]}
-                        </blockquote>
-                        {imageNum < Text.quotes.length - 1 &&
-                        <button onClick={forward}>
-                            <ArrowRight fill={"#888"} height={"20px"}/>
-                        </button>}
+                <Col lg={4}/>
+                <Col lg={8} className="community-carousel carousel">
+                    {quoteNum > 0 && <button onClick={backward}>
+                        <ArrowLeft fill={"#888"} height={"20px"}/>
+                    </button>}
+                    {Text.quotes[quoteNum]}
 
-                    </Col>
-                </Row>
+                    {quoteNum < Text.quotes.length - 1 &&
+                    <button onClick={forward}>
+                        <ArrowRight fill={"#888"} height={"20px"}/>
+                    </button>}
+
+                </Col>
                 {DeanwoodProfile(Text.quoteContext, false, false)}
-                <Row>
-                    <Col md={4}/>
-                    <Col>
-                        <h3>
-                            {Text.uniqueDeanwood}
-                        </h3>
-                        <Image
-                            src={Suburban_gardens}
-                            alt={"The Suburban Gardens amusement park"}
-                            fluid={true}
-                        />
-                        <small>Amusement parks and other recreational venues were often only free
-                            for white people. Suburban Gardens was the first and only amusement
-                            park built in DC, and it gave black residents a place to relax and
-                            play.
-                        </small>
-                    </Col>
-                </Row>
+                <Col lg={5}/>
+                <Col lg={6} className="p-0">
+                    <h4 className="mb-4">
+                        {Text.uniqueDeanwood}
+                    </h4>
+                </Col>
+                <Col lg={4}/>
+                <Col lg={8}>
+                    <Image
+                        src={Suburban_gardens}
+                        alt={"The Suburban Gardens amusement park"}
+                        fluid={true}
+                    />
+                    <small>Amusement parks and other recreational venues were often only free
+                        for white people. Suburban Gardens was the first and only amusement
+                        park built in DC, and it gave black residents a place to relax and
+                        play.
+                    </small>
+                </Col>
                 {DeanwoodProfile(Text.infrastructure1, false, true, [], [], [],
                     "Lack of Public Infrastructure")}
-                <Row>
-                    <Col md={4}/>
-                    <Col>
-                        <blockquote>
-                            {Text.senatorTaxesQuote}
-                        </blockquote>
-                    </Col>
-                </Row>
+                <Col lg={5}/>
+                <Col lg={6} className="p-0">
+                    {Text.senatorTaxesQuote}
+                </Col>
                 {DeanwoodProfile(Text.infrastructure2, false, false, [], [], [],
                     "", Deanwood_kiosk, "A small kiosk where Deanwood's books are kept")}
 
                 {DeanwoodProfile(Text.selfReliance1, false, true, [], [], [],
                     "Self-Reliance and Farming")}
-                <Row>
-                    <Col md={4}/>
-                    <Col>
-                        <blockquote>
-                            {Text.surplusQuote}
-                        </blockquote>
-                    </Col>
-
-                </Row>
-                <Row>
-                    <Col md={4}/>
-                    <Col>
-                        <blockquote>
-                            {Text.raiseChickensQuote}
-                        </blockquote>
-                    </Col>
-                </Row>
+                <Col lg={4}/>
+                <Col lg={4}>
+                    {Text.surplusQuote}
+                </Col>
+                <Col lg={4}>
+                    {Text.raiseChickensQuote}
+                </Col>
                 {/* eslint-disable-next-line max-len */}
                 {DeanwoodProfile(Text.selfReliance2, true, false, community_data, voronoi_data, paths_data, "", "", "", "", "Food")}
-                <Row>
-                    <Col md={4}/>
-                    <Col>
-                        <blockquote>
-                            {Text.lifesaverQuote}
-                            {<a key="6"
-                                className={"citation-pointer"}
-                                title="Black-owned Grocery Chain"
-                                href={"#source-6"}>[6]
-                            </a>}
-                        </blockquote>
-                    </Col>
-                </Row>
+                <Col lg={4}/>
+                <Col lg={8} className="mt-4 mb-4">
+                        {Text.lifesaverQuote}
+                </Col>
                 {DeanwoodProfile(Text.selfReliance3, false, false)}
-                <Row>
-                    <Col md={4}/>
-                    <Col>
-                        <blockquote>
-                            {Text.noStoresQuote}
-                            {<a
-                                key="8"
-                                className={"citation-pointer"}
-                                title="Deanwood: Affordability"
-                                href={"#source-8"}>[8]
-                            </a>}
-                        </blockquote>
-                    </Col>
-                </Row>
+                <Col lg={4}/>
+                <Col lg={8}>
+                    <blockquote>
+                        {Text.noStoresQuote}
+
+                    </blockquote>
+                </Col>
                 {/* eslint-disable-next-line max-len */}
                 {DeanwoodProfile(Text.church1, true, true, community_data, [], [], "Churches as" +
                     " Centers of" +
@@ -347,7 +315,7 @@ DeanwoodCommunity.propTypes = {
     paths_data: PropTypes.array
 };
 
-CommunityMap.propTypes = {
+MapCommunityWrapper.propTypes = {
     data: PropTypes.array,
     mapType: PropTypes.string,
     voronoi_data: PropTypes.array,
