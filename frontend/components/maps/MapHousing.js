@@ -5,9 +5,7 @@ import Input from "@material-ui/core/Input";
 import Typography from "@material-ui/core/Typography";
 import Grid from "@material-ui/core/Grid";
 import Slider from "@material-ui/core/Slider";
-
-// AFTERNOON TEAM
-
+import * as L from "leaflet";
 
 const MAIN_LOCATION = {
     // coordinates: [38.9051606, -77.0036513],
@@ -16,6 +14,15 @@ const MAIN_LOCATION = {
     date: "Test date",
     info: "Test info"
 };
+
+const LeafIcon = L.Icon.extend({
+    options: {}
+});
+
+const blueIcon = new LeafIcon({
+    iconUrl:
+        "https://chart.apis.google.com/chart?chst=d_map_pin_letter&chld=%E2%80%A2|abcdef&chf=a,s,ee00FFFF"
+});
 
 function sliderInput(value, bound, defaultRange, inputChangeFunc, sliderBlurFunc) {
     const [minValue, maxValue] = defaultRange;
@@ -44,8 +51,8 @@ function timeSlider(
 ) {
     const [minValue, maxValue] = defaultRange;
     return (
-        <div key={sliderName}>
-            <Typography id="range-slider" gutterBottom>
+        <div className="time-slider" key={sliderName}>
+            <Typography id="range-slider" className="mb-4" gutterBottom>
                 {sliderName}
             </Typography>
             <Grid container spacing={2} alignItems="center">
@@ -114,43 +121,43 @@ export class TimeControl extends React.Component {
         const [minLow, maxHigh] = this.props.defaultTime;
         // Code here must prevent crossing
         switch (this.state.active) {
-        case TimeControl.OFF:
-            break;
+            case TimeControl.OFF:
+                break;
 
-        case TimeControl.Forward:
-            let newLowest = currentLow + TimeControl.Forward;
-            if (newLowest > currentHigh) {
-                newLowest = minLow;
-            }
-            this.props.change(newLowest, currentHigh);
-            break;
+            case TimeControl.Forward:
+                let newLowest = currentLow + TimeControl.Forward;
+                if (newLowest > currentHigh) {
+                    newLowest = minLow;
+                }
+                this.props.change(newLowest, currentHigh);
+                break;
 
-        case TimeControl.Reverse:
-            let newHighest = currentHigh + TimeControl.Reverse;
-            if (newHighest < currentLow) {
-                newHighest = maxHigh;
-            }
-            this.props.change(currentLow, newHighest);
-            break;
+            case TimeControl.Reverse:
+                let newHighest = currentHigh + TimeControl.Reverse;
+                if (newHighest < currentLow) {
+                    newHighest = maxHigh;
+                }
+                this.props.change(currentLow, newHighest);
+                break;
 
-        default:
-            throw new Error("Should not get up to this point");
+            default:
+                throw new Error("Should not get up to this point");
 
         }
     }
     changeState = (change) => {
         switch (change) {
-        case TimeControl.Reverse:
-            return () => this.setState({active: TimeControl.Reverse});
+            case TimeControl.Reverse:
+                return () => this.setState({active: TimeControl.Reverse});
 
-        case TimeControl.Forward:
-            return () => this.setState({active: TimeControl.Forward});
+            case TimeControl.Forward:
+                return () => this.setState({active: TimeControl.Forward});
 
-        case TimeControl.OFF:
-            return () => this.setState({active: TimeControl.OFF});
+            case TimeControl.OFF:
+                return () => this.setState({active: TimeControl.OFF});
 
-        default:
-            throw new Error("Should not get to this point");
+            default:
+                throw new Error("Should not get to this point");
         }
 
     }
@@ -173,7 +180,6 @@ TimeControl.propTypes = {
 };
 
 
-
 export default class MapHousing extends React.Component {
     constructor(props) {
         super(props);
@@ -181,23 +187,13 @@ export default class MapHousing extends React.Component {
         this.state = {
             mainLocation: MAIN_LOCATION,
             markerData: [],
-            sliderState: [1920, 2022],
-            timeRange: [1920, 2022],
-            lastValid: [1920, 2022],
-            names: ["Australia", "Canada", "USA", "Poland", "Spain", "France"]
+            sliderState: [1980, 2022],
+            timeRange: [1980, 2022],
+            lastValid: [1980, 2022]
         };
     }
 
     componentDidMount() {
-        // fetch("/api/get_address_data/")
-        //     .then(response => {
-        //         return response.json();
-        //     })
-        //     .then(data => {
-        //         this.setState({
-        //             markerData: [...this.state.markerData, ...data["address_data"]]
-        //         });
-        //     });
         this.setState({markerData: this.props.addresses});
     };
 
@@ -273,7 +269,7 @@ export default class MapHousing extends React.Component {
         ));
 
         const markerObjects = validAddresses.map((location, i) => (
-            <Marker key={i} position={location.coordinates}>
+            <Marker key={i} icon={blueIcon} position={location.coordinates}>
                 <Popup>
                     {location.address}
                 </Popup>
@@ -282,31 +278,25 @@ export default class MapHousing extends React.Component {
 
         return (<>
             <h1>{this.state.mainLocation.name}</h1>
-            <div className="main-element">
-                <div id="map" className="pb-4">
-                    <MapContainer
-                        center={this.state.mainLocation.coordinates} zoom={16}
-                        scrollWheelZoom={true}>
-                        <TileLayer
-                            attribution="&copy; <a href='https://www.openstreetmap.org/copyright'>OpenStreetMap</a> contributors"
-                            url="http://stamen-tiles-a.a.ssl.fastly.net/toner-lite/{z}/{x}/{y}.png"
-                        />
-                        {markerObjects}
-                    </MapContainer>
-                    {timeSlider(
-                        "Time Slider",
-                        this.state.sliderState,
-                        this.state.timeRange,
-                        this.state.lastValid,
-                        this.handleSliderChange,
-                        this.handleSliderInputChange,
-                        this.handleSliderBlur
-                    )}
-                    <TimeControl
-                        sliderState={this.state.sliderState} change={this.setSliderValue}
-                        defaultTime={this.state.timeRange}>
-                    </TimeControl>
-                </div>
+            <div id="map-housing" className="map pb-4">
+                <MapContainer
+                    center={this.state.mainLocation.coordinates} zoom={17}
+                    scrollWheelZoom={false}>
+                    <TileLayer
+                        attribution="&copy; <a href='https://www.openstreetmap.org/copyright'>OpenStreetMap</a> contributors"
+                        url="http://stamen-tiles-a.a.ssl.fastly.net/toner/{z}/{x}/{y}.png"
+                    />
+                    {markerObjects}
+                </MapContainer>
+                {timeSlider(
+                    "",
+                    this.state.sliderState,
+                    this.state.timeRange,
+                    this.state.lastValid,
+                    this.handleSliderChange,
+                    this.handleSliderInputChange,
+                    this.handleSliderBlur
+                )}
             </div>
         </>);
     }

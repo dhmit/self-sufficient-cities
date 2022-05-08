@@ -7,21 +7,22 @@ import ErrorNotFoundComponent from "./components/global/ErrorNotFoundComponent";
 import ExampleId from "./components/ExampleId";
 import Home from "./pages/Home";
 import MapConsolidated from "./components/maps/MapConsolidated";
-import CensusCharts from "./components/charts/CensusCharts";
 import {Timeline} from "./pages/Timeline";
 import MapLegend from "./components/maps/MapLegend";
 import MapMicro from "./components/maps/MapMicro";
 import MapMacro from "./components/maps/MapMacro";
 import TimelineTest from "./components/timeline/TimelineTest";
 import API from "./pages/API";
+import CensusCharts from "./components/charts/CensusCharts";
 
 // DEANWOOD COMPONENTS
 import DeanwoodOverview from "./pages/deanwood/DeanwoodOverview";
+import DeanwoodHealth from "./pages/deanwood/DeanwoodHealth";
+import DeanwoodTransport from "./pages/deanwood/DeanwoodTransport";
 import DeanwoodFood from "./pages/deanwood/DeanwoodFood";
 import DeanwoodCommunity from "./pages/deanwood/DeanwoodCommunity";
 import DeanwoodHousing from "./pages/deanwood/DeanwoodHousing";
 import FutureWorkOverview from "./pages/future/FutureWorkOverview";
-
 
 const COMPONENT_PROPS_RAW = document.getElementById("component_props").text;
 const COMPONENT_NAME_RAW = document.getElementById("component_name").text;
@@ -39,12 +40,14 @@ const COMPONENTS = {
     TimelineTest,
     API,
     MapConsolidated,
-    DeanwoodFood,
     CensusCharts,
+    DeanwoodTransport,
+    DeanwoodFood,
     DeanwoodOverview,
-    FutureWorkOverview,
+    DeanwoodHousing,
+    DeanwoodHealth,
     DeanwoodCommunity,
-    DeanwoodHousing
+    FutureWorkOverview
 };
 
 const PreselectedComponent = COMPONENTS[COMPONENT_NAME || "ErrorNotFoundComponent"];

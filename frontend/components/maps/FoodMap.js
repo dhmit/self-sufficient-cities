@@ -49,10 +49,8 @@ function setMarkerColor(type) {
 }
 
 const MAIN_LOCATION = {
-    coordinates: [38.9022, -76.9306637],
-    name: "Deanwood Food Map Over Time",
-    date: "Test date",
-    info: "Test info"
+    coordinates: [38.90,-76.93],
+    name: "Map of food services over time"
 };
 
 function timeSlider(
@@ -61,7 +59,7 @@ function timeSlider(
 ) {
     const [minValue, maxValue] = defaultRange;
     return (
-        <div key={sliderName}>
+        <div className="time-slider" key={sliderName}>
             <Typography id="range-slider" gutterBottom>
                 {sliderName}
             </Typography>
@@ -118,8 +116,7 @@ export default class FoodMap extends React.Component {
             mainLocation: MAIN_LOCATION,
             markerData: [],
             sliderValue: 1943,
-            timeRange: [1943, 2022],
-            names: ["Australia", "Canada", "USA", "Poland", "Spain", "France"]
+            timeRange: [1943, 2022]
         };
     }
 
@@ -180,10 +177,10 @@ export default class FoodMap extends React.Component {
         return (<>
             <h1>{this.state.mainLocation.name}</h1>
             <div className="main-element">
-                <div id="map" className="pb-5">
+                <div className="map pb-5">
                     <MapContainer
                         center={this.state.mainLocation.coordinates} zoom={14}
-                        scrollWheelZoom={true}
+                        scrollWheelZoom={false}
                     >
                         <TileLayer
                             attribution="&copy; <a href='https://www.openstreetmap.org/copyright'>OpenStreetMap</a> contributors"

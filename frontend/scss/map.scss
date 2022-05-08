@@ -1,11 +1,14 @@
-#map {
+.map {
     height: 400px;
     border: 1px solid black;
 
     .leaflet-container {
         height: 100%;
     }
-    width: 90%;
+    width: 100%;
+    &.map-deeds {
+        height: 300px;
+    }
 }
 
 .main-element {
@@ -85,4 +88,16 @@ div.map-dropdown-scroll::-webkit-scrollbar-track {
 div.map-dropdown-scroll::-webkit-scrollbar-thumb {
     background-image: linear-gradient(lightgray, lightgray);
     border-radius: 5px;
+}
+
+.radio-col {
+    display: flex;
+    flex-direction: column;
+}
+
+.radio-row {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    padding-bottom: 1em;
 }

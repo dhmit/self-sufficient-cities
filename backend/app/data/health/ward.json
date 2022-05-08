@@ -1,0 +1,30 @@
+{
+    "wards": [
+        {
+            "ward": 3,
+            "population": 84271,
+            "race": {
+                "white": 2587,
+                "black": 77290,
+                "native_american": 331,
+                "asian": 357,
+                "pacific_islander": 28,
+                "other": 1775,
+                "two_or_more": 1903
+            }
+        },
+        {
+            "ward": 7,
+            "population": 84651,
+            "race": {
+                "white": 65437,
+                "black": 7141,
+                "native_american": 209,
+                "asian": 6481,
+                "pacific_islander": 56,
+                "other": 1310,
+                "two_or_more": 4017
+            }
+        }
+    ]
+}

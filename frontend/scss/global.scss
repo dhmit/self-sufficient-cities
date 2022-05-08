@@ -4,10 +4,28 @@ body {
 
 #main-container {
     padding: 1em 2em;
+
 }
 
-.communityButton {
+.box {
+    width: 180px;
+    height: 30px;
+    border: 1px solid #999;
+    font-size: 18px;
+    color: black;
     background-color: white;
+    box-shadow: 4px 4px #ccc;
+}
+
+.description {
+    padding: 10px;
+    border: 1px solid black;
+}
+
+.community-button {
+    background-color: white;
+    border: 1px solid black;
+    margin-bottom: 0.5em;
 }
 
 .citation-pointer {

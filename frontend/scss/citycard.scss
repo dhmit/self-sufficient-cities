@@ -55,6 +55,12 @@
     display: flex;
     flex-wrap: wrap;
     margin-top: auto;
+
+    > a {
+        &:hover, &:active, &:focus {
+            color: black;
+        }
+    }
 }
 
 .city-tags > a {
@@ -65,12 +71,17 @@
 .city-links > a {
     text-decoration: none;
     color: black;
-    margin-left: 0;
+    padding: 1% 2%;
+    margin: 0.2em;
+    &:first-child {
+        margin-left: 0;
+    }
+    &:last-child {
+        margin-right: 0;
+    }
 }
 
 @mixin city-tag($theme: $color-gold) {
-    padding: 1% 2%;
-    margin: 2%;
     border: 1px solid black;
     cursor: pointer;
     &.selected, &:hover, &:active {
@@ -142,5 +153,13 @@
 }
 
 .city-tag-future {
+    @include city-tag($color-gold);
+}
+
+.city-tag-covid-data {
+    @include city-tag($color-red);
+}
+
+.city-tag-resident-profile {
     @include city-tag($color-gold);
 }
