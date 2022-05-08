@@ -22,7 +22,7 @@ const DeanwoodURL = "/api/get_deanwood_boundary_data/";
 //import data from "./community.json";
 
 
-export default class MapMacro extends React.Component {
+export default class MapCommunity extends React.Component {
     state = {
         position: [38.897665, -76.925919],
         censustract: {},
@@ -165,23 +165,23 @@ export default class MapMacro extends React.Component {
         let L = [];
         if (this.props.mapType === "Food") {
             L = [
-                <LayersControl.Overlay checked key={1} name="Voronoi Representation">
+                <LayersControl.Overlay checked key={"voronoi"} name="Voronoi Representation">
                     <LayerGroup>{shapes}</LayerGroup>
                 </LayersControl.Overlay>,
 
-                <LayersControl.Overlay key={2} name="Census Tract Boundaries">
+                <LayersControl.Overlay key={"census"} name="Census Tract Boundaries">
                     <LayerGroup>{Object.keys(this.state.censustract).length > 0 &&
                     <GeoJSON data={this.state.censustract}/>}</LayerGroup>
                 </LayersControl.Overlay>,
 
-                <LayersControl.Overlay key={2} name="Deanwood Boundaries">
+                <LayersControl.Overlay key={"boundary"} name="Deanwood Boundaries">
                     <LayerGroup>{Object.keys(this.state.boundary).length > 0 &&
                     // eslint-disable-next-line max-len
                     <GeoJSON pathOptions={{fillColor: "rgb(174,255,71)", color: "rgb(113,189,13)"}}
                              data={this.state.boundary}/>}</LayerGroup>
                 </LayersControl.Overlay>,
 
-                <LayersControl.Overlay key={3} name="From Omie Cheek's House">
+                <LayersControl.Overlay key={"omie"} name="From Omie Cheek's House">
                     <LayerGroup>{omie}</LayerGroup>
                 </LayersControl.Overlay>
 
@@ -191,12 +191,12 @@ export default class MapMacro extends React.Component {
             L = [
 
 
-                <LayersControl.Overlay key={2} name="Census Tract Boundaries">
+                <LayersControl.Overlay key={"religion-census"} name="Census Tract Boundaries">
                     <LayerGroup>{Object.keys(this.state.censustract).length > 0 &&
                     <GeoJSON data={this.state.censustract}/>}</LayerGroup>
                 </LayersControl.Overlay>,
 
-                <LayersControl.Overlay checked key={2} name="Deanwood Boundaries">
+                <LayersControl.Overlay checked key={"religion-boundary"} name="Deanwood Boundaries">
                     <LayerGroup>{Object.keys(this.state.boundary).length > 0 &&
                     // eslint-disable-next-line max-len
                     <GeoJSON pathOptions={{fillColor: "rgb(174,255,71)", color: "rgb(113,189,13)"}}
@@ -206,36 +206,40 @@ export default class MapMacro extends React.Component {
         }
 
         let m = [];
+        let caption;
         if (this.props.mapType === "Food") {
             m = foodMarkers;
+            caption = "Explore with different layers of the map using the layer control located" +
+                " on the top right corner of the map. In the voronoi representation, each" +
+                " colored polygon means that the marker" +
+                " located it encloses is the closest source of food for those living within that" +
+                " region. You may also explore how far and for how long Omie Cheek's would have" +
+                " to walk to grocery stores in each decade by hovering over the red paths.";
         } else if (this.props.mapType === "Religion") {
             m = religionMarkers;
+            caption = "This map displays the various churches and religious institutions located" +
+                " in Deanwood over time.";
         }
 
 
-        return <div id="map">
-            <MapContainer center={this.state.position} zoom={13} scrollWheelZoom={true}>
+        return <div className="mb-5 map">
+            <MapContainer center={[38.9041415988745, -76.93284109983243]} zoom={15}
+                          scrollWheelZoom={false}>
                 <TileLayer
                     attribution='&copy; <a href="https://www.openstreetmap.org/copyright">OpenStreetMap</a> contributors'
                     url="http://stamen-tiles-a.a.ssl.fastly.net/toner-lite/{z}/{x}/{y}.png"
                 />
-
-
                 {m}
-
-
-                <LayersControl position="topright">
+                <LayersControl collapsed={false} position="topright">
                     {L}
                 </LayersControl>
-
-
             </MapContainer>
-
+            <p><small>{caption}</small></p>
         </div>;
     }
 }
 
-MapMacro.propTypes = {
+MapCommunity.propTypes = {
     decade: PropTypes.number,
     data: PropTypes.array,
     mapType: PropTypes.string,

@@ -3,7 +3,7 @@ import {Container, Row, Col, Image} from "react-bootstrap";
 import * as PropTypes from "prop-types";
 import DeanwoodNav from "./DeanwoodNav";
 import * as Text from "./DeanwoodCommunityText";
-import MapTest from "../../components/maps/MapTest";
+import MapCommunity from "../../components/maps/MapCommunity";
 import Suburban_gardens from "../../images/suburban_gardens.png";
 import Deanwood_kiosk from "../../images/deanwood_kiosk.png";
 import Deanwood_burville from "../../images/Deanwood_Burville.jpeg";
@@ -16,212 +16,206 @@ import ArrowLeft from "../../images/icons/arrow-left.svg";
 
 // eslint-disable-next-line max-len
 const DeanwoodProfile = (statement, hasMap = true, hasTitle = true, data = [], voronoi = [], paths = [],
-                         title = "", source = "", alt_text = "", mapType = "") => {
-    let right;
+                         title = "", source = "", alt_text = "", image_caption = "", mapType = "") => {
+
+    let left;
+    let map;
 
     if (hasMap) {
         // eslint-disable-next-line max-len
-        right = <Col><CommunityMap data={data} mapType={mapType} voronoi_data={voronoi}
-                                   paths_data={paths}/></Col>;
+        map =
+            <MapCommunityWrapper data={data} mapType={mapType} voronoi_data={voronoi}
+                                 paths_data={paths}/>;
     } else if (source) {
-        right = <Col><Image src={source} alt={alt_text} fluid={true}/></Col>;
+        left = <>
+            <Image src={source} alt={alt_text} fluid={true}/>
+            <small>{image_caption}</small>
+        </>;
+
     }
 
-    return (<div className={"Profile"}>
-        <Row>
-            <Col md={4}/>
-            <Col className="p-0">
-                {hasTitle && <h2>{title}</h2>}
-                {/* Iterate through statement. If item is string, the next item might be a
+    return (<>
+        {left ? <Col lg={4}/> : <Col lg={5}/>}
+        {left && <Col lg={4} className="p-0">{left}</Col>}
+        <Col lg={left ? 4 : 6} className={left ? "" : "p-0"}>
+            {hasTitle && <h2 className="mt-3">{title}</h2>}
+            {/* Iterate through statement. If item is string, the next item might be a
                  citation. Check next for type not string. Add to paragraph if not string.
                   Continue. */}
-                {statement.map((s, idx) => (
-                    typeof s === "string" ? <p key={idx}>{s}{
-                        typeof statement[idx + 1] === "string" ? "" : statement[idx + 1]
-                    } </p> : ""
-
-                ))}
-            </Col>
-            {right}
-        </Row>
-    </div>);
+            {statement.map((s, idx) => (
+                typeof s === "string" ? <p key={idx}>{s}{
+                    typeof statement[idx + 1] === "string" ? "" : statement[idx + 1]
+                } </p> : ""
+            ))}
+            {map}
+        </Col>
+    </>);
 };
 
-class CommunityMap extends React.Component {
+class MapCommunityWrapper extends React.Component {
     state = {
-        decade: 1980
+        decade: 1940
     };
 
     render() {
         return (<ul className="list-inline">
             {[4, 5, 6, 7, 8, 9].map((num) => {
                 return <li key={`decade-${num}`} className="list-inline-item">
-                    <button className={"community-button"}
+                    <button className={`community-button
+                    ${this.state.decade === parseInt(`19${num}0`) ? "selected" : ""}`}
                             onClick={() => this.setState({decade: parseInt(`19${num}0`)})}>
                         19{num}0s
                     </button>
                 </li>;
             })
             }
-            <MapTest decade={this.state.decade} data={this.props.data} mapType={this.props.mapType}
-                     voronoi={this.props.voronoi_data} paths={this.props.paths_data}/>
+            <MapCommunity decade={this.state.decade} data={this.props.data}
+                          mapType={this.props.mapType} voronoi={this.props.voronoi_data}
+                          paths={this.props.paths_data}/>
         </ul>);
     }
 }
 
 export const DeanwoodCommunity = ({resources, community_data, voronoi_data, paths_data}) => {
-    const [imageNum, setImage] = useState(0);
+    const [quoteNum, setQuoteNum] = useState(0);
     const numQuotes = Text.quotes.length;
 
     const forward = () => {
-        setImage((imageNum + 1) % numQuotes);
+        setQuoteNum((quoteNum + 1) % numQuotes);
     };
 
     const backward = () => {
-        if (imageNum === 0) {
-            setImage(numQuotes - 1);
+        if (quoteNum === 0) {
+            setQuoteNum(numQuotes - 1);
         } else {
-            setImage((imageNum - 1) % numQuotes);
+            setQuoteNum((quoteNum - 1) % numQuotes);
         }
     };
 
     return (<>
         <Container className="city" id="deanwood-community">
             <Row>
-                <Col md={3} className="nav-col p-0 mr-2">
+                <Col lg={3} className="nav-col p-0 mr-2">
                     <h1>Deanwood Community</h1>
                     <p>
-                        The project tells the rise and fall of urban communities that grew their
-                        own food in the 20th century United States. Taking the Deanwood
-                        neighborhood in Washington, D.C. as their starting place, students
-                        consulted newspaper articles and census data to design an interactive
-                        site.
+                        Informed by analysis of oral histories, historical newspapers, and city
+                        directories, this page documents the tight-knit community that emerged in
+                        the face of systemic racism and how it changed over time. Deanwood's unique
+                        community history was attributed to the lack of public infrastructure
+                        implemented, the proactive practice of self-cultivation and the unifying
+                        influence of its churches.
                     </p>
                     <DeanwoodNav selected={"community"} resources={resources}/>
                 </Col>
-                <Row className="prime mt-5">
-                    <Col md={4}/>
-                    <Col className="carousel">
-                        {imageNum > 0 && <button onClick={backward}>
-                            <ArrowLeft fill={"#888"} height={"20px"}/>
-                        </button>}
-                        <blockquote className="selected-text">
-                            {Text.quotes[imageNum]}
-                        </blockquote>
-                        {imageNum < Text.quotes.length - 1 &&
-                        <button onClick={forward}>
-                            <ArrowRight fill={"#888"} height={"20px"}/>
-                        </button>}
+                <Col lg={4}/>
+                <Col lg={8} className="community-carousel carousel">
+                    {quoteNum > 0 && <button onClick={backward}>
+                        <ArrowLeft fill={"#888"} height={"20px"}/>
+                    </button>}
+                    {Text.quotes[quoteNum]}
 
-                    </Col>
-                </Row>
+                    {quoteNum < Text.quotes.length - 1 &&
+                    <button onClick={forward}>
+                        <ArrowRight fill={"#888"} height={"20px"}/>
+                    </button>}
+
+                </Col>
                 {DeanwoodProfile(Text.quoteContext, false, false)}
-                <Row>
-                    <Col md={4}/>
-                    <Col>
-                        <h3>
-                            {Text.uniqueDeanwood}
-                        </h3>
-                    </Col>
-                </Row>
+                <Col lg={5}/>
+                <Col lg={6} className="p-0">
+                    <h4 className="mb-4">
+                        {Text.uniqueDeanwood}
+                    </h4>
+                </Col>
+                <Col lg={4}/>
+                <Col lg={8}>
+                    <Image
+                        src={Suburban_gardens}
+                        alt={"The Suburban Gardens amusement park"}
+                        fluid={true}
+                    />
+                    <small>Amusement parks and other recreational venues were often only free
+                        for white people. Suburban Gardens was the first and only amusement
+                        park built in DC, and it gave black residents a place to relax and
+                        play.
+                    </small>
+                </Col>
                 {DeanwoodProfile(Text.infrastructure1, false, true, [], [], [],
-                    "Lack of Public Infrastructure", Suburban_gardens,
-                    "The Suburban Gardens amusement park")}
-                <Row>
-                    <Col md={4}/>
-                    <Col>
-                        <blockquote>
-                            {Text.senatorTaxesQuote}
-                        </blockquote>
-                    </Col>
-                </Row>
+                    "Lack of Public Infrastructure")}
+                <Col lg={5}/>
+                <Col lg={6} className="p-0">
+                    {Text.senatorTaxesQuote}
+                </Col>
                 {DeanwoodProfile(Text.infrastructure2, false, false, [], [], [],
                     "", Deanwood_kiosk, "A small kiosk where Deanwood's books are kept")}
 
                 {DeanwoodProfile(Text.selfReliance1, false, true, [], [], [],
                     "Self-Reliance and Farming")}
-                <Row>
-                    <Col md={4}/>
-                    <Col>
-                        <blockquote>
-                            {Text.surplusQuote}
-                        </blockquote>
-                    </Col>
-
-                </Row>
-                <Row>
-                    <Col md={4}/>
-                    <Col>
-                        <blockquote>
-                            {Text.raiseChickensQuote}
-                        </blockquote>
-                    </Col>
-                </Row>
+                <Col lg={4}/>
+                <Col lg={4}>
+                    {Text.surplusQuote}
+                </Col>
+                <Col lg={4}>
+                    {Text.raiseChickensQuote}
+                </Col>
                 {/* eslint-disable-next-line max-len */}
-                {DeanwoodProfile(Text.selfReliance2, true, false, community_data, voronoi_data, paths_data, "", "", "", "Food")}
-                <Row>
-                    <Col md={4}/>
-                    <Col>
-                        <blockquote>
-                            {Text.lifesaverQuote}
-                            {<a key="6"
-                                className={"citation-pointer"}
-                                title="Black-owned Grocery Chain"
-                                href={"#source-6"}>[6]
-                            </a>}
-                        </blockquote>
-                    </Col>
-                </Row>
+                {DeanwoodProfile(Text.selfReliance2, true, false, community_data, voronoi_data, paths_data, "", "", "", "", "Food")}
+                <Col lg={4}/>
+                <Col lg={8} className="p-0 mt-4 mb-4">
+                    {Text.lifesaverQuote}
+                </Col>
                 {DeanwoodProfile(Text.selfReliance3, false, false)}
-                <Row>
-                    <Col md={4}/>
-                    <Col>
-                        <blockquote>
-                            {Text.noStoresQuote}
-                            {<a
-                                key="8"
-                                className={"citation-pointer"}
-                                title="Deanwood: Affordability"
-                                href={"#source-8"}>[8]
-                            </a>}
-                        </blockquote>
-                    </Col>
-                </Row>
+                <Col lg={4}/>
+                <Col lg={8} className="p-0 mt-4 mb-4">
+                    {Text.noStoresQuote}
+                </Col>
                 {/* eslint-disable-next-line max-len */}
                 {DeanwoodProfile(Text.church1, true, true, community_data, [], [], "Churches as" +
                     " Centers of" +
-                    " Community", "", "", "Religion")}
-                {DeanwoodProfile(Text.church2, false, false, [], [], "", "", Deanwood_first_baptist)}
-                {DeanwoodProfile(Text.church3, false, false, [], [], "", "", Deanwood_meeting)}
-                {DeanwoodProfile(Text.church4, false, false, [], [], "", "", Deanwood_burville)}
-                <Row>
-                    <Col md={4}/>
-                    <Col>
-                        <blockquote>
-                            {Text.noTaxQuote}
-                            {<a
-                                key="10"
-                                className={"citation-pointer"}
-                                title="Deanwood complaints"
-                                href={"#source-12"}>[12]
-                            </a>}
-                        </blockquote>
-                        <blockquote>
-                            -Carolyn Ricanek
-                        </blockquote>
-                    </Col>
-                </Row>
+                    " Community", "", "", "", "Religion")}
+                {DeanwoodProfile(Text.church2, false, false,
+                    [], [], "", "", Deanwood_first_baptist,
+                    "Deanwood residents gathering to build the First Baptist Church",
+                    "Deanwood residents gathering to begin construction of the " +
+                    "First Baptist Church")}
+
+                <Col lg={4}/>
+                <Col lg={8} className="p-0 mt-4 mb-4">
+                    <Image
+                        src={Deanwood_meeting}
+                        alt={"A monthly dinner meeting in church"}
+                        fluid={true}
+                    />
+                    <p>
+                        <small>
+                            Home-grown food was often shared among members of the church.
+                            Here, a monthly meeting with food is being held in a church member’s
+                            home <a key="9"
+                                    className={"citation-pointer"}
+                                    title="Images of America: Washington D.C.'s Deanwood"
+                                    href={"#source-9"}>[9] </a></small>
+                    </p>
+
+                </Col>
+                {DeanwoodProfile(Text.church3, false, false,
+                    [], [], "", "", Deanwood_burville,
+                    "The Burville Elementary School in Deanwood",
+                    "Burville Elementary School")}
+                {DeanwoodProfile(Text.church4, false, false, [], [], "", "", "")}
+                <Col lg={4}/>
+                <Col lg={8} className="p-0 mt-4 mb-4">
+                    {Text.noTaxQuote}
+                </Col>
                 {DeanwoodProfile(Text.church5, false, false, [], [], "", "", "")}
                 {DeanwoodProfile(Text.conclusion, false, true, [], [], [], "Conclusion")}
-                <Col md={4}/>
-                <Col md={8} className="justify-content-around mt-5">
+                <Col lg={4}/>
+                <Col lg={8} className="p-0 mt-4 mb-4">
                     <h2>Sources</h2>
                     <Citation
                         identifier={"source-1"}
                         title={"Vietnam War Timeline"}
                         accessed={"Accessed April 20, 2022."}
-                        link={"https://www.britannica.com/list/vietnam-war-timeline"}
-                    />
+                        link={"https://www.britannica.com/list/vietnam-war-timeline"}/>
                     <Citation identifier={"source-2"}
                               title={"D.C. Home Rule"}
                               accessed={"Accessed April 20, 2022."}
@@ -284,8 +278,6 @@ export const DeanwoodCommunity = ({resources, community_data, voronoi_data, path
                     />
                 </Col>
             </Row>
-
-
         </Container>
 
     </>);
@@ -299,7 +291,7 @@ DeanwoodCommunity.propTypes = {
     paths_data: PropTypes.array
 };
 
-CommunityMap.propTypes = {
+MapCommunityWrapper.propTypes = {
     data: PropTypes.array,
     mapType: PropTypes.string,
     voronoi_data: PropTypes.array,

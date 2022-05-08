@@ -26,6 +26,9 @@ body {
     background-color: white;
     border: 1px solid black;
     margin-bottom: 0.5em;
+    &.selected {
+        background-color: $color-magenta;
+    }
 }
 
 .citation-pointer {
