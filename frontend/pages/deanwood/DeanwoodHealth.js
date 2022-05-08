@@ -17,7 +17,9 @@ export const DeanwoodHealth = ({resources}) => {
             el: <DeanwoodResident/>
         }
     ];
-    const [displayState, setDisplayState] = useState("healthTrends");
+
+    const [displayState, setDisplayState] = useState("covidData");
+
     return (<Container className="city" id="deanwood-health">
             <Row>
                 <Col lg={3} className="nav-col p-0 mr-2">
@@ -32,14 +34,13 @@ export const DeanwoodHealth = ({resources}) => {
                         health. Those who, by accident of birth, lie in the wrong side of the
                         divide can expect to lead lives that are ten years shorter and have
                         higher rates of chronic diseases such as diabetes,heart diseases,HIV/AIDS
-                        and
-                        cancer.
+                        and cancer.
                     </p>
                     <DeanwoodNav selected={"health"} resources={resources}/>
                 </Col>
                 <Col lg={4}/>
                 <Col lg={8} className={"p-0 mt-sm-4"}>
-                    <ul className="list-inline">
+                    <ul className="health-tab-list list-inline">
                         {tabs.map((tab, idx) =>
                             <li className="list-inline-item" key={`li-tab-${idx}`}>
                                 <Button
@@ -61,7 +62,7 @@ export const DeanwoodHealth = ({resources}) => {
                 )}</Col>
 
                 <Col lg={4}/>
-                <Col lg={8}>
+                <Col lg={8} className="mt-5 mb-5">
                     <h2>Sources</h2>
                     <Citation identifier={"source-1"}
                               title={"Department of Energy and Environment,1996-2020 " +
@@ -149,6 +150,9 @@ export const DeanwoodHealth = ({resources}) => {
                               title={"District of Columbia Department of Health, Annual" +
                               " Epidemiology & Surveillance Report"}
                               link={"https://dchealth.dc.gov/sites/default/files/dc/sites/doh/publication/attachments/2019%20Annual%20Surveillance%20Report_09062019.pdf"}/>
+                    <Citation identifier={"source-17"}
+                              title={"DC COVID-19 Cases by Ward"}
+                              link={"https://opendata.dc.gov/datasets/dc-covid-19-cases-by-ward/explore?showTable=true"}/>
 
                 </Col>
                 {/*=======*/}
