@@ -86,7 +86,8 @@ export const FoodMap = () => {
         <MapTimeSlider setMarkerColor={setMarkerColor}
                        data={data}
                        legend={legend}
-                       main_location={main_location}/>
+                       timeRange={[1943, 2022]}
+                       mainLocation={main_location}/>
     );
 };
 
