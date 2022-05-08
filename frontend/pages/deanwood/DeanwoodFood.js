@@ -67,7 +67,9 @@ export const DeanwoodFood = ({resources}) => {
                     Nothing in Deanwood</i></span>
                 </Col>
                 <Col lg={4}/>
-                <Col lg={8} className="p-0 mt-4"><FoodMap/></Col>
+                <Col lg={8} className="p-0 mt-4">
+                    <FoodMap/>
+                </Col>
 
                 <Col lg={5}/>
                 <Col lg={6} className="p-0 mt-4">
@@ -374,10 +376,8 @@ export const DeanwoodFood = ({resources}) => {
     );
 };
 
-DeanwoodFood.propTypes =
-    {
-        resources: PropTypes.array
-    }
-;
+DeanwoodFood.propTypes = {
+    resources: PropTypes.array
+};
 
 export default DeanwoodFood;
