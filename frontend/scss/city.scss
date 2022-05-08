@@ -123,10 +123,14 @@ h1 {
     }
 
     // health
+    .health-tab-list {
+        border-bottom: 1px solid black;
+    }
     .btn.btn-primary.btn-health-tab {
         border-radius: 0 !important;
         background-color: white;
         border: 1px solid black;
+        border-bottom: 0;
         color: black;
 
         &:hover, &:active, &.selected {
@@ -134,9 +138,17 @@ h1 {
         }
     }
 
+    .card {
+        border-radius: 0;
+        border: 1px solid black;
+    }
 
     .emphasized {
         font-weight: 600;
+    }
+
+    .resident-sublabel {
+        font-size: 0.8em;
     }
 
     .health-ward3 {
@@ -159,6 +171,7 @@ h1 {
     .housing-table-header {
         width: 100%;
     }
+
 }
 
 
