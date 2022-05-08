@@ -24,20 +24,21 @@ const DeanwoodProfile = (statement, hasMap = true, hasTitle = true, data = [], v
     if (hasMap) {
         // eslint-disable-next-line max-len
         left = [];
-        map = <CommunityMap data={data} mapType={mapType} voronoi_data={voronoi} paths_data={paths}/>;
+        map =
+            <CommunityMap data={data} mapType={mapType} voronoi_data={voronoi} paths_data={paths}/>;
     } else if (source) {
-        left = <Col>
-                <Image src={source} alt={alt_text} fluid={true}/>
-                <p><em>{image_caption}</em></p>
-            </Col>;
+        left = <Col lg={4} className="p-0">
+            <Image src={source} alt={alt_text} fluid={true}/>
+            <small>{image_caption}</small>
+        </Col>;
 
     }
 
     return (<div className={"Profile"}>
         <Row>
-            <Col md={4}/>
+            <Col lg={4}/>
             {left}
-            <Col className="p-0">
+            <Col className="pr-0">
                 {hasTitle && <h2>{title}</h2>}
                 {/* Iterate through statement. If item is string, the next item might be a
                  citation. Check next for type not string. Add to paragraph if not string.
@@ -46,7 +47,6 @@ const DeanwoodProfile = (statement, hasMap = true, hasTitle = true, data = [], v
                     typeof s === "string" ? <p key={idx}>{s}{
                         typeof statement[idx + 1] === "string" ? "" : statement[idx + 1]
                     } </p> : ""
-
                 ))}
                 {map}
             </Col>
@@ -135,10 +135,11 @@ export const DeanwoodCommunity = ({resources, community_data, voronoi_data, path
                             alt={"The Suburban Gardens amusement park"}
                             fluid={true}
                         />
-                        <p> <em>Amusement parks and other recreational venues were often only free
+                        <small>Amusement parks and other recreational venues were often only free
                             for white people. Suburban Gardens was the first and only amusement
-                            park built in DC, and it gave black residents a place to relax and play.</em>
-                        </p>
+                            park built in DC, and it gave black residents a place to relax and
+                            play.
+                        </small>
                     </Col>
                 </Row>
                 {DeanwoodProfile(Text.infrastructure1, false, true, [], [], [],
@@ -174,7 +175,7 @@ export const DeanwoodCommunity = ({resources, community_data, voronoi_data, path
                     </Col>
                 </Row>
                 {/* eslint-disable-next-line max-len */}
-                {DeanwoodProfile(Text.selfReliance2, true, false, community_data, voronoi_data, paths_data, "", "", "","", "Food")}
+                {DeanwoodProfile(Text.selfReliance2, true, false, community_data, voronoi_data, paths_data, "", "", "", "", "Food")}
                 <Row>
                     <Col md={4}/>
                     <Col>
@@ -215,26 +216,26 @@ export const DeanwoodCommunity = ({resources, community_data, voronoi_data, path
 
                 <Row>
                     <Col md={4}/>
-=                   <Col>
-                        <Image
-                            src={Deanwood_meeting}
-                            alt={"A monthly dinner meeting in church"}
-                            fluid={true}
-                        />
-                        <p>
-                            <em>
-                                Home-grown food was often shared among members of the church.
-                                Here, a monthly meeting with food is being held in a church member’s
-                                home
-                            </em>
-                            <a key="9"
-                                className={"citation-pointer"}
-                                title="Images of America: Washington D.C.'s Deanwood"
-                                href={"#source-9"}>[9]
-                            </a>
-                        </p>
+                    = <Col>
+                    <Image
+                        src={Deanwood_meeting}
+                        alt={"A monthly dinner meeting in church"}
+                        fluid={true}
+                    />
+                    <p>
+                        <small>
+                            Home-grown food was often shared among members of the church.
+                            Here, a monthly meeting with food is being held in a church member’s
+                            home
+                        </small>
+                        <a key="9"
+                           className={"citation-pointer"}
+                           title="Images of America: Washington D.C.'s Deanwood"
+                           href={"#source-9"}>[9]
+                        </a>
+                    </p>
 
-                    </Col>
+                </Col>
                 </Row>
                 {DeanwoodProfile(Text.church3, false, false,
                     [], [], "", "", Deanwood_burville,
