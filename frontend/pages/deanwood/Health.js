@@ -65,7 +65,8 @@ export const DeanwoodHealth = ({resources}) => {
                  <Col md={8}>
                       <h2>Sources</h2>
                              <Citation identifier={"source-1"}
-                                       title={"Department of Energy and Environment,1996-2020 Ambient Air Quality Trends Report "}
+                                       title={"Department of Energy and Environment,1996-2020 " +
+                                       "Ambient Air Quality Trends Report "}
                                        link={"https://doee.dc.gov/sites/default/files/dc/sites/ddoe/service_content/attachments/2020%20Ambient%20Air%20Quality%20Trends%20Report.pdf"}/>
 
                              <Citation identifier={"source-2"}
