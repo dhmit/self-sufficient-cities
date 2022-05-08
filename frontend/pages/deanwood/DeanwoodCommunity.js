@@ -37,7 +37,7 @@ const DeanwoodProfile = (statement, hasMap = true, hasTitle = true, data = [], v
     return (<>
         {left ? <Col lg={4}/> : <Col lg={5}/>}
         {left && <Col lg={4} className="p-0">{left}</Col>}
-        <Col lg={left ? 4 : 6} className="p-0">
+        <Col lg={left ? 4 : 6} className={left ? "" : "p-0"}>
             {hasTitle && <h2 className="mt-3">{title}</h2>}
             {/* Iterate through statement. If item is string, the next item might be a
                  citation. Check next for type not string. Add to paragraph if not string.
@@ -161,16 +161,13 @@ export const DeanwoodCommunity = ({resources, community_data, voronoi_data, path
                 {/* eslint-disable-next-line max-len */}
                 {DeanwoodProfile(Text.selfReliance2, true, false, community_data, voronoi_data, paths_data, "", "", "", "", "Food")}
                 <Col lg={4}/>
-                <Col lg={8} className="mt-4 mb-4">
-                        {Text.lifesaverQuote}
+                <Col lg={8} className="p-0 mt-4 mb-4">
+                    {Text.lifesaverQuote}
                 </Col>
                 {DeanwoodProfile(Text.selfReliance3, false, false)}
                 <Col lg={4}/>
-                <Col lg={8}>
-                    <blockquote>
-                        {Text.noStoresQuote}
-
-                    </blockquote>
+                <Col lg={8} className="p-0 mt-4 mb-4">
+                    {Text.noStoresQuote}
                 </Col>
                 {/* eslint-disable-next-line max-len */}
                 {DeanwoodProfile(Text.church1, true, true, community_data, [], [], "Churches as" +
@@ -182,9 +179,8 @@ export const DeanwoodCommunity = ({resources, community_data, voronoi_data, path
                     "Deanwood residents gathering to begin construction of the " +
                     "First Baptist Church")}
 
-                <Row>
-                    <Col md={4}/>
-                    = <Col>
+                <Col lg={4}/>
+                <Col lg={8} className="p-0 mt-4 mb-4">
                     <Image
                         src={Deanwood_meeting}
                         alt={"A monthly dinner meeting in church"}
@@ -194,50 +190,32 @@ export const DeanwoodCommunity = ({resources, community_data, voronoi_data, path
                         <small>
                             Home-grown food was often shared among members of the church.
                             Here, a monthly meeting with food is being held in a church member’s
-                            home
-                        </small>
-                        <a key="9"
-                           className={"citation-pointer"}
-                           title="Images of America: Washington D.C.'s Deanwood"
-                           href={"#source-9"}>[9]
-                        </a>
+                            home <a key="9"
+                                    className={"citation-pointer"}
+                                    title="Images of America: Washington D.C.'s Deanwood"
+                                    href={"#source-9"}>[9] </a></small>
                     </p>
 
                 </Col>
-                </Row>
                 {DeanwoodProfile(Text.church3, false, false,
                     [], [], "", "", Deanwood_burville,
                     "The Burville Elementary School in Deanwood",
                     "Burville Elementary School")}
                 {DeanwoodProfile(Text.church4, false, false, [], [], "", "", "")}
-                <Row>
-                    <Col md={4}/>
-                    <Col>
-                        <blockquote>
-                            {Text.noTaxQuote}
-                            {<a
-                                key="10"
-                                className={"citation-pointer"}
-                                title="Deanwood complaints"
-                                href={"#source-12"}>[12]
-                            </a>}
-                        </blockquote>
-                        <blockquote>
-                            -Carolyn Ricanek
-                        </blockquote>
-                    </Col>
-                </Row>
+                <Col lg={4}/>
+                <Col lg={8} className="p-0 mt-4 mb-4">
+                    {Text.noTaxQuote}
+                </Col>
                 {DeanwoodProfile(Text.church5, false, false, [], [], "", "", "")}
                 {DeanwoodProfile(Text.conclusion, false, true, [], [], [], "Conclusion")}
-                <Col md={4}/>
-                <Col md={8} className="justify-content-around mt-5">
+                <Col lg={4}/>
+                <Col lg={8} className="p-0 mt-4 mb-4">
                     <h2>Sources</h2>
                     <Citation
                         identifier={"source-1"}
                         title={"Vietnam War Timeline"}
                         accessed={"Accessed April 20, 2022."}
-                        link={"https://www.britannica.com/list/vietnam-war-timeline"}
-                    />
+                        link={"https://www.britannica.com/list/vietnam-war-timeline"}/>
                     <Citation identifier={"source-2"}
                               title={"D.C. Home Rule"}
                               accessed={"Accessed April 20, 2022."}
@@ -300,8 +278,6 @@ export const DeanwoodCommunity = ({resources, community_data, voronoi_data, path
                     />
                 </Col>
             </Row>
-
-
         </Container>
 
     </>);

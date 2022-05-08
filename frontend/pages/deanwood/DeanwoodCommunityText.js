@@ -168,7 +168,8 @@ export const selfReliance3 = ["In 2000, Super Pride and its sister stores closed
     " business district that once was."];
 
 export const noStoresQuote =
-    <blockquote>'When you look around here, <mark>there are no stores</mark>,' Woods said. 'If you want to go
+    <blockquote>'When you look around here, <mark>there are no stores</mark>,' Woods said. 'If you
+        want to go
         to the grocery store you have to jump on the bus or drive 20 minutes away.'
         <a key="8" className="citation-pointer"
            title="Deanwood: Affordability" href={"#source-8"}>[8]
@@ -183,19 +184,17 @@ export const church1 = ["With limited access to free parks, theaters, and librar
 "for children. ", "The residents of Deanwood recognized the necessity of churches, " +
 "and would, as a result, invest their time and money into these churches."];
 
-export const church2 = ["The First Baptist Church of Deanwood was built entirely on " +
-"“donations of material and labor and never carried debt of any kind.”", "Any repairs were" +
-" performed by members of the church.",
-    <a key="9" className={"citation-pointer"} title="Images of America: Washington D.C.'s Deanwood"
-       href={"#source-9"}>[9]</a>,
-    "It can be seen that the lack of public infrastructure " +
-    "and forced self-reliance " +
-    "encouraged Deanwood to develop tight bonds through churches as a way to survive. " +
-    "With churches, people had a way to socialize and exchange goods and services. " +
-    "Without them, people wouldn’t have had centralized bodies that could effectively " +
-    "galvanize people into improving their community."];
+export const church2 = ["The First Baptist Church of Deanwood was built entirely on “donations" +
+" of material and labor and never carried debt of any kind.” Any repairs were performed " +
+"by members of the church.", <a key="9" className={"citation-pointer"}
+                                title="Images of America: Washington D.C.'s Deanwood"
+                                href={"#source-9"}>[9]</a>, "It can be seen that the lack of" +
+" public infrastructure and forced self-reliance encouraged Deanwood to develop tight " +
+"bonds through churches as a way to survive. With churches, people had a way to socialize and" +
+" exchange goods and services. Without them, people wouldn’t have had centralized bodies that" +
+" could effectively galvanize people into improving their community."];
 
-export const church3 = ["", "Churches also had a positive effect on education. " +
+export const church3 = ["Churches also had a positive effect on education. " +
 "Recognizing the need for education, Contee AME Zion Church helped " +
 "start an elementary school" +
 " in its basement which it then upgraded to Burville " +
@@ -212,26 +211,28 @@ export const church3 = ["", "Churches also had a positive effect on education. "
                                                href={"#source-10"}>[10]
 </a>];
 
-export const church4 = ["It is evident that churches played a pivotal role in maintaining the" +
-" successful self-sufficient " +
-"Deanwood of the 19th and 20th centuries",
+export const church4 = [
+    "It is evident that churches played a pivotal role in maintaining the" +
+    " successful self-sufficient Deanwood of the 19th and 20th centuries.",
     "Today, there are 20-30 churches within a 10-block radius, " +
     "according to Rev. Ronald Miner. These churches " +
     "still offer programs to help groups like the elderly.",
     "“It’s kind of like one team, and the idea is really to just reach out in a Christ-like" +
-    " way,” " +
-    "Rev Ronald Miner said.", <a key="11"
-                                 className={"citation-pointer"}
-                                 title="Finding God on Every Corner: Deanwood"
-                                 href={"#source-11"}>[11]
+    " way,” Rev Ronald Miner said.", <a key="11"
+                                        className={"citation-pointer"}
+                                        title="Finding God on Every Corner: Deanwood"
+                                        href={"#source-11"}>[11]
     </a>,
     "Though churches were once treated as integral to the community, " +
     "some people now see them as a drain. " +
     "In 2005, residents complained in the Washington Post about " +
     "the lack of tax income due to the abundance of tax-exempted buildings such as churches."];
 
-export const noTaxQuote = ["We have enough churches on this street … " +
-"We need a moratorium on building churches.\n”"];
+export const noTaxQuote =
+    <blockquote>We have enough churches on this street…
+        We need a moratorium on building churches. -Carolyn Ricanek<a
+            key="10" className={"citation-pointer"} title="Deanwood complaints"
+            href={"#source-12"}>[12]</a></blockquote>;
 
 export const church5 = ["One can’t make a clear conclusion on why churches " +
 "aren’t as appreciated as before. But, it is clear that today’s " +
