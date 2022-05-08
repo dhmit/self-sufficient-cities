@@ -21,16 +21,22 @@ h1 {
         }
     }
 
+    .row {
+        max-width: 100%;
+    }
+
     .intro-text {
         justify-content: center;
         font-family: "titillium_websemibold", sans-serif;
         font-size: 0.9em;
     }
+
     .column {
         @include media-breakpoint-down(md) {
             padding: 0;
         }
     }
+
     .nav-col {
         @include media-breakpoint-up(lg) {
             position: fixed !important;
@@ -42,6 +48,7 @@ h1 {
             .city-links {
                 font-size: 0.7em;
                 margin-bottom: 2em;
+
                 a > {
                     margin: 0 0.2em 0.2em !important;
                 }
@@ -56,6 +63,14 @@ h1 {
 
     .img-wymer {
         border: 2px solid black;
+    }
+
+    blockquote {
+        margin-bottom: 0;
+    }
+
+    .blockquote-credit {
+        float: left;
     }
 
     small {
@@ -92,17 +107,21 @@ h1 {
             font-size: 1.2em;
         }
     }
+
     .table {
         width: 100%;
+
         td {
             padding: 0.2em;
         }
     }
+
     .table-container {
         max-height: 300px;
         overflow-y: scroll;
 
     }
+
     // health
     .btn.btn-primary.btn-health-tab {
         border-radius: 0 !important;
@@ -136,7 +155,25 @@ h1 {
             margin-bottom: 0 !important;
         }
     }
+
     .housing-table-header {
         width: 100%;
     }
+}
+
+
+.center-img {
+
+    display: block;
+    margin-left: auto;
+    margin-right: auto;
+}
+
+.caption {
+    color: gray;
+    font-size: 12px;
+    text-align: center;
+    margin-bottom: 4px;
+
+
 }
