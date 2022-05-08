@@ -113,7 +113,7 @@ export default class MapTimeSlider extends React.Component {
         return (<>
             <h1>{this.props.mainLocation.name}</h1>
             <div className="main-element">
-                <div className="map pb-5">
+                <div className="map mb-3">
                     <MapContainer
                         center={this.props.mainLocation.coordinates} zoom={14}
                         scrollWheelZoom={false}>

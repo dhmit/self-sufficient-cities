@@ -1,42 +1,26 @@
 import React, {useState, useEffect} from "react";
-// import PropTypes from "prop-types";
-// import {MapContainer, Marker, Popup, TileLayer} from "react-leaflet";
-// import Input from "@material-ui/core/Input";
-// import Typography from "@material-ui/core/Typography";
-// import Grid from "@material-ui/core/Grid";
-// import Slider from "@material-ui/core/Slider";
 import * as L from "leaflet";
 import MapTimeSlider from "./MapTimeSlider";
-// import Legend from "./Legend";
-// import * as PropTypes from "prop-types";
-//
-// import DeanwoodFood from "../../pages/deanwood/DeanwoodFood";
-// import DeanwoodHealth from "../../pages/deanwood/DeanwoodHealth";
 
 
 const LeafIcon = L.Icon.extend({
     options: {}
 });
-
+const iconUrl = "https://chart.apis.google.com/chart?chst=d_map_pin_letter&";
 const blueIcon = new LeafIcon({
-        iconUrl:
-            "https://chart.apis.google.com/chart?chst=d_map_pin_letter&chld=%E2%80%A2|abcdef&chf=a,s,ee00FFFF"
+        iconUrl: iconUrl + "chld=%E2%80%A2|abcdef&chf=a,s,ee00FFFF"
     }),
     greenIcon = new LeafIcon({
-        iconUrl:
-            "https://chart.apis.google.com/chart?chst=d_map_pin_letter&chld=%E2%80%A2|2ecc71&chf=a,s,ee00FFFF"
+        iconUrl: iconUrl + "chld=%E2%80%A2|2ecc71&chf=a,s,ee00FFFF"
     }),
     yellowIcon = new LeafIcon({
-        iconUrl:
-            "https://chart.apis.google.com/chart?chst=d_map_pin_letter&chld=•|ffc800&chf=a,s,ee00FFFF"
+        iconUrl: iconUrl + "chld=•|ffc800&chf=a,s,ee00FFFF"
     }),
     redIcon = new LeafIcon({
-        iconUrl:
-            "http://chart.apis.google.com/chart?chst=d_map_pin_letter&chld=%E2%80%A2|e85141&chf=a,s,ee00FFFF"
+        iconUrl: iconUrl + "chld=%E2%80%A2|e85141&chf=a,s,ee00FFFF"
     }),
     purpleIcon = new LeafIcon({
-        iconUrl:
-            "http://chart.apis.google.com/chart?chst=d_map_pin_letter&chld=%E2%80%A2|a134eb&chf=a,s,ee00FFFF"
+        iconUrl: iconUrl + "chld=%E2%80%A2|a134eb&chf=a,s,ee00FFFF"
     });
 
 function setMarkerColor(type) {

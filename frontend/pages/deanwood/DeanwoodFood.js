@@ -67,10 +67,9 @@ export const DeanwoodFood = ({resources}) => {
                     Nothing in Deanwood</i></span>
                 </Col>
                 <Col lg={4}/>
-                <Col lg={8} className="p-0 mt-4">
+                <Col lg={8} className="p-0 mt-4 mb-5">
                     <FoodMap/>
                 </Col>
-
                 <Col lg={5}/>
                 <Col lg={6} className="p-0 mt-4">
                     <h1>General summary</h1>
