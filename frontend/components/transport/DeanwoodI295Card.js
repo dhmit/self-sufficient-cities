@@ -1,12 +1,12 @@
 import React from "react";
+import {Col} from "react-bootstrap";
+import MapDeanwood from "../maps/MapDeanwood";
 import * as PropTypes from "prop-types";
-import {Col, Figure} from "react-bootstrap";
 
-const DeanwoodI295Card = ({img_source}) => {
+const DeanwoodI295Card = ({deanwood_boundary, kenilworth_boundary}) => {
     return (
         <Col>
             <h3>I-295 and Deanwood</h3>
-            {/*<p>{text}</p>*/}
             <div>
                 <p>
                     The story of I-295 and Deanwood begins with the trend of Urban Renewal in
@@ -23,19 +23,20 @@ const DeanwoodI295Card = ({img_source}) => {
                 </p>
             </div>
 
-            <Figure>
-                <Figure.Image
-                    src={img_source}/>
-                <Figure.Caption>
-                    Map of Kenilworth and Deanwood, split by I-295
-                </Figure.Caption>
-            </Figure>
+            <MapDeanwood deanwoodBoundary={deanwood_boundary}
+                         kenilworthBoundary={kenilworth_boundary}
+                         zoom={14} position={[38.9052, -76.9336]}
+                         legend={[["rgb(0,89,255)", "Deanwood boundary"],
+                             ["rgb(255,114,0)", "Kenilworth boundary"]]}/>
+            <small>Map of Kenilworth and Deanwood, split by I-295</small>
         </Col>
     );
 };
 
+
 DeanwoodI295Card.propTypes = {
-    img_source: PropTypes.string
+    deanwood_boundary: PropTypes.object,
+    kenilworth_boundary: PropTypes.object
 };
 
 export default DeanwoodI295Card;

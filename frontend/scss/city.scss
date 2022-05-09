@@ -15,6 +15,12 @@ h1 {
     padding-left: 0;
     display: flex;
 
+    // 60px == nav width
+    @include media-breakpoint-up(sm) {
+        width: calc(100% - 60px) !important;
+        margin-left: 60px !important;
+    }
+
     &.container {
         @include media-breakpoint-up("md") {
             margin-right: 0 !important;
@@ -87,6 +93,7 @@ h1 {
             blockquote {
                 height: 100px;
             }
+
             border: 1px solid black;
             padding: 2em;
             @include media-breakpoint-down(md) {
@@ -133,6 +140,7 @@ h1 {
     .health-tab-list {
         border-bottom: 1px solid black;
     }
+
     .btn.btn-primary.btn-health-tab {
         border-radius: 0 !important;
         background-color: white;
@@ -183,7 +191,6 @@ h1 {
 
 
 .center-img {
-
     display: block;
     margin-left: auto;
     margin-right: auto;
@@ -196,4 +203,35 @@ h1 {
     margin-bottom: 4px;
 
 
+}
+
+
+#deanwood-overview, #deanwood-health {
+    mark {
+        background-color: $highlight-periwinkle;
+    }
+}
+
+#deanwood-housing, #deanwood-community {
+    mark {
+        background-color: $highlight-magenta;
+    }
+}
+
+#deanwood-transport {
+    mark {
+        background-color: $highlight-green;
+    }
+}
+
+#deanwood-food {
+    mark {
+        background-color: $highlight-red;
+    }
+}
+
+#deanwood-future {
+    mark {
+        background-color: $highlight-gold;
+    }
 }

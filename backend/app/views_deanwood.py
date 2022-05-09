@@ -6,6 +6,12 @@ def overview(request):
     """
     Deanwood homepage
     """
+    with open("app/data/2021_11_tract78.geojson", encoding="utf-8") as f:
+        census_boundary = json.load(f)
+
+    with open("app/data/deanwood_boundary.geojson", encoding="utf-8") as f:
+        deanwood_boundary = json.load(f)
+
     resources = ["overview", "housing", "transport", "food", "community", "health", "future"]
     context = {
         'page_metadata': {
@@ -13,7 +19,9 @@ def overview(request):
         },
         'component_name': 'DeanwoodOverview',
         'component_props': {
-            'resources': resources
+            'resources': resources,
+            'census_boundary': census_boundary,
+            'deanwood_boundary': deanwood_boundary
         },
     }
 
@@ -25,13 +33,22 @@ def transport(request):
     Deanwood transportation page
     """
     resources = ["overview", "housing", "transport", "food", "community", "health", "future"]
+
+    with open("app/data/deanwood_boundary.geojson", encoding="utf-8") as f:
+        deanwood_boundary = json.load(f)
+
+    with open("app/data/kenilworth_boundary.geojson", encoding="utf-8") as f:
+        kenilworth_boundary = json.load(f)
+
     context = {
         'page_metadata': {
             'title': 'Transportation in Deanwood, D.C.'
         },
         'component_name': 'DeanwoodTransport',
         'component_props': {
-            'resources': resources
+            'resources': resources,
+            'deanwood_boundary': deanwood_boundary,
+            'kenilworth_boundary': kenilworth_boundary
         },
     }
 

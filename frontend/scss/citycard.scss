@@ -107,7 +107,7 @@
 }
 
 .city-tags > .city-tag-housing {
-    background-color: $color-green;
+    background-color: $color-magenta;
 }
 
 .city-tags > .city-tag-community {
@@ -141,7 +141,7 @@
 }
 
 .city-tag-housing {
-    @include city-tag($color-green);
+    @include city-tag($color-magenta);
 }
 
 .city-tag-community {

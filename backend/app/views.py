@@ -364,6 +364,7 @@ def get_census_data(request):
 
     return JsonResponse(census_data)
 
+
 def get_community_data(request):
     """
     API endpoint for getting the census data in json format
@@ -372,7 +373,6 @@ def get_community_data(request):
         community_data = json.load(f)
 
     return JsonResponse(community_data)
-
 
 
 def get_1940_census_geodata(request):
@@ -443,6 +443,12 @@ def get_deanwood_boundary_data(request):
     Get the Deanwood geoJSON
     """
     with open("app/data/deanwood_boundary.geojson", encoding="utf-8") as f:
+        boundary = json.load(f)
+    return JsonResponse(boundary)
+
+
+def get_kenilworth_boundary_data(request):
+    with open("app/data/kenilworth_boundary.geojson", encoding="utf-8") as f:
         boundary = json.load(f)
     return JsonResponse(boundary)
 
