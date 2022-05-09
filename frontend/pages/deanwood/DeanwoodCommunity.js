@@ -95,7 +95,7 @@ export const DeanwoodCommunity = ({resources, community_data, voronoi_data, path
     return (<>
         <Container className="city" id="deanwood-community">
             <Row>
-                <Col lg={3} className="nav-col p-0 mr-2">
+                <Col lg={3} xl={2} className="nav-col p-0 mr-2">
                     <h1>Deanwood Community</h1>
                     <p>
                         Informed by analysis of oral histories, historical newspapers, and city

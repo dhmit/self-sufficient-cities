@@ -9,7 +9,7 @@ export const DeanwoodOverview = ({resources, census_boundary, deanwood_boundary}
     return (
         <Container className="city" id="deanwood-overview">
             <Row>
-                <Col lg={3} className="nav-col p-0 mr-2">
+                <Col lg={3} xl={2} className="nav-col p-0 mr-2">
                     <h1>Self-Sufficient City Deanwood, District of Columbia</h1>
                     <p>
                         Racial discrimination in access to housing, jobs, finance and health
