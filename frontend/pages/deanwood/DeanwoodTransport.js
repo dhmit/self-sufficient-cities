@@ -21,7 +21,7 @@ export const DeanwoodTransport = ({resources, deanwood_boundary, kenilworth_boun
                         consulted newspaper articles and census data to design an interactive
                         site.
                     </p>
-                    <DeanwoodNav selected={"transport"} resources={resources}/>
+                    <DeanwoodNav selected={"transportation"} resources={resources}/>
                 </Col>
 
                 <Col lg={4}/>

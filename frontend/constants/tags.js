@@ -1,25 +1,19 @@
 export const TAG_CLASS = {
     overview: "overview",
-    transport: "transport",
+    transportation: "transport",
     housing: "housing",
     health: "health",
     food: "food",
     community: "community",
-    future: "future",
-    resident_profile: "resident-profile",
-    covid_data: "covid-data",
-    health_trends : "health-trends"
+    future: "future"
 };
 
 export const TAG_DISPLAY_NAMES = {
     overview: "Overview",
-    transport: "Transport",
+    transportation: "Transportation",
     housing: "Housing",
     health: "Health",
     food: "Food",
     community: "Community",
-    future: "Future\u00a0Research",
-    resident_profile: "Resident Profile",
-    covid_data: "COVID Data",
-    health_trends: "Health Trends"
+    future: "Future\u00a0Research"
 };

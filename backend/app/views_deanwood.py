@@ -1,6 +1,9 @@
 import json
 from django.shortcuts import render
 
+deanwood_sections = ["overview", "housing", "food", "health", "transportation", "community",
+                     "future"]
+
 
 def overview(request):
     """
@@ -12,14 +15,13 @@ def overview(request):
     with open("app/data/deanwood_boundary.geojson", encoding="utf-8") as f:
         deanwood_boundary = json.load(f)
 
-    resources = ["overview", "housing", "transport", "food", "community", "health", "future"]
     context = {
         'page_metadata': {
             'title': 'Deanwood, D.C.'
         },
         'component_name': 'DeanwoodOverview',
         'component_props': {
-            'resources': resources,
+            'resources': deanwood_sections,
             'census_boundary': census_boundary,
             'deanwood_boundary': deanwood_boundary
         },
@@ -32,7 +34,6 @@ def transport(request):
     """
     Deanwood transportation page
     """
-    resources = ["overview", "housing", "transport", "food", "community", "health", "future"]
 
     with open("app/data/deanwood_boundary.geojson", encoding="utf-8") as f:
         deanwood_boundary = json.load(f)
@@ -46,7 +47,7 @@ def transport(request):
         },
         'component_name': 'DeanwoodTransport',
         'component_props': {
-            'resources': resources,
+            'resources': deanwood_sections,
             'deanwood_boundary': deanwood_boundary,
             'kenilworth_boundary': kenilworth_boundary
         },
@@ -59,69 +60,13 @@ def health(request):
     """
     Deanwood health page
     """
-    resources = ["overview", "housing", "transport", "food", "community", "health", "future"]
     context = {
         'page_metadata': {
             'title': 'Health'
         },
         'component_name': 'DeanwoodHealth',
         'component_props': {
-            'resources': resources
-        },
-    }
-
-    return render(request, 'index.html', context)
-
-
-def resident(request):
-    """
-    Deanwood health page
-    """
-    resources = ["resident_profile", "covid_data", "health_trends"]
-    context = {
-        'page_metadata': {
-            'title': 'Resident'
-        },
-        'component_name': 'DeanwoodResident',
-        'component_props': {
-            'resources': resources
-        },
-    }
-
-    return render(request, 'index.html', context)
-
-
-def covid(request):
-    """
-    Deanwood health page
-    """
-    resources = ["resident_profile", "covid_data", "health_trends"]
-    context = {
-        'page_metadata': {
-            'title': 'COVID'
-        },
-        'component_name': 'DeanwoodCovid',
-        'component_props': {
-            'resources': resources
-        },
-    }
-
-    return render(request, 'index.html', context
-                  )
-
-
-def healthtrend(request):
-    """
-    Deanwood health page
-    """
-    resources = ["resident_profile", "covid_data", "health_trends"]
-    context = {
-        'page_metadata': {
-            'title': 'Health Trend'
-        },
-        'component_name': 'DeanwoodHealthtrend',
-        'component_props': {
-            'resources': resources
+            'resources': deanwood_sections
         },
     }
 
@@ -132,7 +77,6 @@ def community(request):
     """
     Deanwood community page
     """
-    resources = ["overview", "housing", "transport", "food", "community", "health", "future"]
 
     with open("app/data/community.json", "r", encoding="utf-8") as f:
         community_data = json.load(f)
@@ -149,7 +93,7 @@ def community(request):
         },
         'component_name': 'DeanwoodCommunity',
         'component_props': {
-            'resources': resources,
+            'resources': deanwood_sections,
             'community_data': community_data,
             'voronoi_data': voronoi_data,
             'paths_data': paths_data
@@ -163,14 +107,13 @@ def food(request):
     """
      Deanwood food page
      """
-    resources = ["overview", "housing", "transport", "food", "community", "health", "future"]
     context = {
         'page_metadata': {
             'title': 'Deanwood: Food Landscape'
         },
         'component_name': 'DeanwoodFood',
         'component_props': {
-            'resources': resources
+            'resources': deanwood_sections
         },
     }
     return render(request, 'index.html', context)
@@ -180,14 +123,13 @@ def housing(request):
     """
     Deanwood housing page
     """
-    resources = ["overview", "housing", "transport", "food", "community", "health", "future"]
     context = {
         'page_metadata': {
             'title': 'Deanwood Housing'
         },
         'component_name': 'DeanwoodHousing',
         'component_props': {
-            'resources': resources,
+            'resources': deanwood_sections,
             'addresses': [{"address": "Smith Family", "openyear": 1900, "closeyear": 2004,
                            "coordinates": ["38.903760", "-76.929470"]},
                           {"address": "Johnson Family", "openyear": 1900, "closeyear": 1987,
@@ -216,14 +158,14 @@ def future(request):
     """
     Deanwood future page
     """
-    resources = ["overview", "housing", "transport", "food", "community", "health", "future"]
+
     context = {
         'page_metadata': {
             'title': 'Future Work'
         },
         'component_name': 'FutureWorkOverview',
         'component_props': {
-            'resources': resources
+            'resources': deanwood_sections
         },
     }
 

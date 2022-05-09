@@ -14,7 +14,8 @@ const city_data = [
         title: "DEANWOOD, D.C.",
         text: "Explore the rise and fall of a self-sustaining neighborhood right in the US" +
             " capital.",
-        resources: ["overview", "housing", "transport", "food", "community", "health", "future"],
+        resources: ["overview", "housing", "food", "health", "transportation", "community",
+            "future"],
         class: ""
     },
     {
