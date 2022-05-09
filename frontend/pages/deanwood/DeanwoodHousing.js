@@ -213,14 +213,14 @@ export const DeanwoodHousing = ({resources, addresses}) => {
                         An MIT undergrad study similarly found that minority groups pay 8%
                         higher rates of interest than White buyers, and face 14% higher
                         rejection rates for
-                        loans <a className={"citation-pointer"} title={"Adam Zewe, Fighting" +
-                    " discrimination in mortgage lending"} href={"#source-7"}>[7]</a>.
+                        loans.<a className={"citation-pointer"} title={"Adam Zewe, Fighting" +
+                    " discrimination in mortgage lending"} href={"#source-7"}>[7]</a>
                         Furthermore, a 2021 study from Freddie Mac found that 12.5 percent of
                         appraisals for home purchases in Black neighborhoods and 15.4 percent in
                         Latino neighborhoods came in below the contract price, compared with 7.4
-                        percent of appraisals in White neighborhoods
-                        <a className={"citation-pointer"} title={"Racial and Ethnic Valuation" +
-                        " Gaps in Home Purchase Appraisals"} href={"#source-8"}>[8]</a>.
+                        percent of appraisals in White neighborhoods.<a
+                        className={"citation-pointer"} title={"Racial and Ethnic Valuation" +
+                    " Gaps in Home Purchase Appraisals"} href={"#source-8"}>[8]</a>
                         These studies show instances of racism in a wide variety of housing
                         practices, from higher interest rates, higher rejection rates for loans,
                         higher interest mortgages, and higher appraisals.

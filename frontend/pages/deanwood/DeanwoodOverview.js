@@ -5,7 +5,7 @@ import DeanwoodNav from "./DeanwoodNav";
 import MapDeanwood from "../../components/maps/MapDeanwood";
 import Citation from "../../components/global/Citation";
 
-export const DeanwoodOverview = ({resources}) => {
+export const DeanwoodOverview = ({resources, census_boundary, deanwood_boundary}) => {
     return (
         <Container className="city" id="deanwood-overview">
             <Row>
@@ -62,7 +62,13 @@ export const DeanwoodOverview = ({resources}) => {
                     </blockquote>
                 </Col>
                 <Col lg={4}/>
-                <Col lg={8} className="column"><MapDeanwood/></Col>
+                <Col lg={8} className="column">
+                    <MapDeanwood censusBoundary={census_boundary}
+                                 deanwoodBoundary={deanwood_boundary}
+                                 legend={[["rgb(0,89,255)", "Deanwood boundary"],
+                                     ["rgb(255,114,0)", "Census boundary"]]}
+                                 zoom={14} position={[38.8999, -76.925919]}/>
+                </Col>
                 <Col lg={5}/>
                 <Col lg={6} className="mt-3 column">
                     <p>
@@ -214,7 +220,9 @@ export const DeanwoodOverview = ({resources}) => {
 };
 
 DeanwoodOverview.propTypes = {
-    resources: PropTypes.array
+    resources: PropTypes.array,
+    census_boundary: PropTypes.object,
+    deanwood_boundary: PropTypes.object
 };
 
 

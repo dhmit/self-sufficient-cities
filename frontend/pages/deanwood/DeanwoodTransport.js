@@ -3,12 +3,11 @@ import {Container, Row, Col} from "react-bootstrap";
 import * as PropTypes from "prop-types";
 import DeanwoodNav from "./DeanwoodNav";
 import interstate_highway from "../../images/deanwood/interstate-highway.jpeg";
-import i295 from "../../images/deanwood/I295deanwoodkenilworth.png";
 import DeanwoodHighwayCard from "../../components/transport/DeanwoodHighwayCard";
 import DeanwoodI295Card from "../../components/transport/DeanwoodI295Card";
 import Citation from "../../components/global/Citation";
 
-export const DeanwoodTransport = ({resources}) => {
+export const DeanwoodTransport = ({resources, deanwood_boundary, kenilworth_boundary}) => {
 
     return (
         <Container className="city" id="deanwood-transport">
@@ -33,9 +32,8 @@ export const DeanwoodTransport = ({resources}) => {
                 </Col>
                 <Col lg={4}/>
                 <Col lg={8} className="column">
-                    <DeanwoodI295Card
-                        img_source={i295}
-                    />
+                    <DeanwoodI295Card deanwood_boundary={deanwood_boundary}
+                                      kenilworth_boundary={kenilworth_boundary}/>
                 </Col>
                 <Col lg={4}/>
                 <Col lg={8} className="justify-content-around mt-5">
@@ -51,7 +49,9 @@ export const DeanwoodTransport = ({resources}) => {
 };
 
 DeanwoodTransport.propTypes = {
-    resources: PropTypes.array
+    resources: PropTypes.array,
+    deanwood_boundary: PropTypes.object,
+    kenilworth_boundary: PropTypes.object
 };
 
 
