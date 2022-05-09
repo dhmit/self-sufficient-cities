@@ -31,6 +31,23 @@ body {
     }
 }
 
+.future-button {
+    border: 1px solid black;
+    padding: 0.5em;
+    background-color: $color-gold;
+    &:hover, &:active {
+        background-color: white;
+    }
+}
+
+.future-map {
+    margin-top: 40px;
+}
+
+.future-map-select {
+    margin-top: -40px;
+}
+
 .citation-pointer {
     font-size: 0.6em;
     position: relative;

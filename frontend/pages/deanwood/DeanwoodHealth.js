@@ -18,7 +18,7 @@ export const DeanwoodHealth = ({resources}) => {
         }
     ];
 
-    const [displayState, setDisplayState] = useState("covidData");
+    const [displayState, setDisplayState] = useState("healthTrends");
 
     return (<Container className="city" id="deanwood-health">
             <Row>

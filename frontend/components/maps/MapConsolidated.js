@@ -413,7 +413,7 @@ export default class MapConsolidated extends React.Component {
                     <h3 className="event-selector-title">Event Selector</h3>
                     <MapDropdown name="Addresses" items={this.state.markerData}/>
                 </div>
-                <div id="map">
+                <div className="map">
                     <MapContainer
                         center={this.state.mainLocation.coordinates} zoom={13}
                         scrollWheelZoom={true}

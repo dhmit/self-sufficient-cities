@@ -112,8 +112,9 @@ class CensusTractMap extends React.Component {
 
     render() {
         return (
-            <div id="map">
+            <div className="map future-map">
                 <FormSelect
+                    className="future-map-select"
                     aria-label="Census Map Focus Selector"
                     onChange={(e) => this.onPosSelected(e)}
                 >
@@ -124,9 +125,8 @@ class CensusTractMap extends React.Component {
                 </FormSelect>
                 <MapContainer
                     center={this.state.start_pos}
-                    zoom={11} scrollWheelZoom={true}
-                    whenCreated={map => this.setState({map})}
-                >
+                    zoom={11} scrollWheelZoom={false}
+                    whenCreated={map => this.setState({map})}>
                     <TileLayer
                         attribution='&copy; <a href="https://www.openstreetmap.org/copyright">OpenStreetMap</a> contributors'
                         url="https://stamen-tiles-a.a.ssl.fastly.net/toner-lite/{z}/{x}/{y}.png"

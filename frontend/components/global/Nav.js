@@ -23,28 +23,16 @@ const Nav = () => {
                 <div className="burger-item"/>
             </button>
             <div className={sidebar ? "container-fluid shown" : "container-fluid"}>
-                <a className="navbar-brand link-home" href="/">Self-Sustaining Cities</a>
                 <ul className="navbar-nav me-auto">
+                    <li className="nav-item mr-2">
+                        <a className="navbar-brand nav-link link-home" href="/">
+                            Self-Sustaining Cities</a>
+                    </li>
                     <li className="nav-item mr-2">
                         <a className="nav-link" href={"/deanwood"}>Deanwood</a>
                     </li>
                     <li className="nav-item mr-2">
                         <a className="nav-link" href={"/api"}>API</a>
-                    </li>
-                    <li className="nav-item mr-2">
-                        <a className="nav-link" href={"/timeline"}>Timeline</a>
-                    </li>
-                    <li className="nav-item mr-2">
-                        <a className="nav-link" href={"/map-macro"}>MapMacro (morning)</a>
-                    </li>
-                    <li className="nav-item mr-2">
-                        <a className="nav-link" href={"/map-micro"}>MapMicro (afternoon)</a>
-                    </li>
-                    <li className="nav-item mr-2">
-                        <a className="nav-link" href={"/map-consolidated"}>MapConsolidated</a>
-                    </li>
-                    <li className="nav-item mr-2">
-                        <a className="nav-link" href={"/census-charts"}>Census Charts</a>
                     </li>
                 </ul>
                 <a className="lab-link mb-3"

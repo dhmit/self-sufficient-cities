@@ -9,7 +9,7 @@ export default class Map extends React.Component {
     // TODO: check if markers can be deterined using coordinates
 
     render() {
-        return <div id="map">
+        return <div className="map">
             <h1>{this.state.location}</h1>
             <MapContainer center={this.state.position} zoom={13} scrollWheelZoom={false}>
                 <TileLayer

@@ -1,7 +1,7 @@
 import React from "react";
 import {Container, Row, Col, Image} from "react-bootstrap";
 import * as PropTypes from "prop-types";
-import MapHousing from "../../components/maps/MapHousing";
+import HousingMapWrapper from "../../components/maps/HousingMapWrapper";
 import WymarHousing1 from "../../images/wy_043608.jpg";
 import WymarHousing1_modern from "../../images/wy_043608_modern.jpg";
 import WymarHousing2 from "../../images/wy_040108.jpg";
@@ -164,8 +164,8 @@ export const DeanwoodHousing = ({resources, addresses}) => {
 
                 </Col>
                 <Col lg={4}/>
-                <Col lg={8} className="p-0">
-                    <MapHousing addresses={addresses}/>
+                <Col lg={8} className="p-0 mb-4">
+                    <HousingMapWrapper addresses={addresses}/>
                 </Col>
                 <Col lg={4}/>
                 <Col lg={8} className="mt-5 p-0">
