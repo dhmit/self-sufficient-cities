@@ -16,6 +16,7 @@ import pharmacy from "../../images/strand_pharmacy.jpg";
 import pharmacy_modern from "../../images/strand_pharmacy_modern.jpg";
 import theatre from "../../images/strand_theatre.jpg";
 import theatre_modern from "../../images/strand_theatre_modern.jpg";
+import Citation from "../../components/global/Citation";
 
 export const DeanwoodFood = ({resources}) => {
     return (
@@ -30,7 +31,7 @@ export const DeanwoodFood = ({resources}) => {
                         Economic Research Service (ERS) in 2011. As of 2017, there are only two
                         full-service grocery stores in Ward 7, the ward of DC that contains
                         Deanwood, for a population of 80,000 people. But such a bleak statistic
-                        is not without history. Ashante Reese, in her book Black Food
+                        is not without history. Ashanté Reese, in her book Black Food
                         Geographies, points out that literature on the topic of food scarcity
                         (involving racial biases or not) tends to frame “lack” as a terminal
                         issue without struggle. These texts often paint a desolate picture of
@@ -339,12 +340,16 @@ export const DeanwoodFood = ({resources}) => {
                 <Col lg={6}>
                     <Image src={income_map_2005} fluid={true}/>
                     <Image src={income_map_2015} fluid={true}/>
+                    <small>
+                        Images courtesy of DC Heath Matters. <a href="https://www.dchealthmatters.
+                        org/indicators/index/view?indicatorId=315&localeId=56768&periodId=4523&">
+                        source
+                    </a>
+                    </small>
                     <Image src={income} fluid={true}/>
                     <small> Notable points in the graph
-                        are the jumps between 1980-
-                        1990 and 2015-2020. Another major point of interest
-                        is the large period of
-                        stagnation between 1990-2015.
+                        are the jumps between 1980- 1990 and 2015-2020. Another major point of
+                        interest is the large period of stagnation between 1990-2015.
                     </small>
                     <p>
                         This on its own would not neccessarily be a pressing
@@ -359,6 +364,12 @@ export const DeanwoodFood = ({resources}) => {
                         same time period.
                     </p>
                     <Image src={goods} fluid={true}/>
+                    <small>Consumer Price Index data.&nbsp;
+                        <a href="https://fred.stlouisfed.org/categories/9">(source 1)</a>
+                        &nbsp;
+                        <a href="https://www.bls.gov/charts/consumer-price-index/
+                        consumer-price-index-by-category.htm#">(source 2)</a>
+                    </small>
                     <p>
                         The price of a lot of common goods (except chicken!)
                         nearly doubled during this time frame,
@@ -370,6 +381,63 @@ export const DeanwoodFood = ({resources}) => {
                         quite evident.
                     </p>
                 </Col>
+                <Col lg={4}/>
+                <Col lg={8} className="mt-5 column">
+                    <h2>Sources</h2>
+                    <Citation
+                        identifier={"source-1"}
+                        title={"Groceteria.com. Exploring supermarket history since 1999."}
+                        link={"https://www.groceteria.com/about/a-quick-history-of-the-supermarket/"}
+                    />
+                    <Citation
+                        identifier={"source-2"}
+                        title={"The history of Deanwood’s local foodscape by Ashanté Reese"}
+                        link={"https://www.dcpolicycenter.org/publications/black-food-geographies/"}
+                    />
+                    <Citation
+                        identifier={"source-3"}
+                        title={"Black Food Geographies: Race, Self-Reliance, and Food Access in " +
+                        "Washington, D.C. University of North Carolina Press, 2019. By Ashanté Reese"}
+                        link={"http://www.jstor.org/stable/10.5149/9781469651521_reese"}
+                    />
+                    <Citation
+                        identifier={"source-4"}
+                        title={"East of the Anacostia River: Murry’s Steak’s"}
+                        link={"https://offbeatenpathdc.com/murrys-family-of-fine-food/"}
+                    />
+                    <Citation
+                        identifier={"source-5"}
+                        title={"“The New Negro Alliance: ‘Don’t Buy Where You Can’t Work.’”" +
+                        " Negro History Bulletin 49, no. 3 (1986): 3–8. By Gilbert Ware."}
+                        link={"http://www.jstor.org/stable/44176653."}
+                    />
+                    <Citation
+                        identifier={"source-6"}
+                        title={"Civil Rights Tour: Sanitary Grocery, “Don’t Buy Where You Can’t Work”"}
+                        link={"https://historicsites.dcpreservation.org/items/show/958"}
+                    />
+                    <Citation
+                        identifier={"source-7"}
+                        title={"Soul Food and Price Specials Sustain Super Pride Success, by" +
+                        " Isabel Wilkerson. The Washington Post."}
+                        link={"https://www.washingtonpost.com/archive/local/1983/01/12/" +
+                        "soul-food-and-price-specials-sustain-super-pride-success/" +
+                        "f43cb294-4151-4d2c-ad69-1a8dd5c85bfa/"}
+                    />
+                    <Citation
+                        identifier={"source-8"}
+                        title={"Super Pride reaches the end by Gus G. Sentementes. The Baltimore" +
+                        " Sun."}
+                        link={"https://www.baltimoresun.com/news/" +
+                        "bs-xpm-2000-11-08-0011080051-story.html"}
+                    />
+                    <Citation
+                        identifier={"source-9"}
+                        title={"The New Negro Alliance (1933-1940s) by Amber Eaton"}
+                        link={"https://www.blackpast.org/african-american-history/new-negro-alliance/"}
+                    />
+                </Col>
+
             </Row>
         </Container>
     );

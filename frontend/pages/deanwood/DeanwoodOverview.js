@@ -137,7 +137,7 @@ export const DeanwoodOverview = ({resources}) => {
                         carts. Peddlers from Anacostia traded in fresh produce from hand
                         carts across the city.<a
                         className={"citation-pointer"}
-                        title={"Ashante Reese, Black Food Geographies: " +
+                        title={"Ashanté Reese, Black Food Geographies: " +
                         "Race, Self-Reliance, and Food Access in Washington, D. C. " +
                         "(Chapel Hill,  University of North Carolina Press, 2019); " +
                         "42-3."}
@@ -200,7 +200,7 @@ export const DeanwoodOverview = ({resources}) => {
                               title={"Elizabeth Barker, oral history interviews, 1976-1981" +
                               " OH-31 Schlesinger Library, Radcliff."}/>
                     <Citation identifier={"source-9"}
-                              title={"Ashante Reese, Black Food Geographies: Race, " +
+                              title={"Ashanté Reese, Black Food Geographies: Race, " +
                               "Self-Reliance, and Food Access in Washington, " +
                               "D. C. (Chapel Hill,  " +
                               "University of North Carolina Press, 2019); 42-3."}/>
