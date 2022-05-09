@@ -12,7 +12,7 @@ export const DeanwoodTransport = ({resources, deanwood_boundary, kenilworth_boun
     return (
         <Container className="city" id="deanwood-transport">
             <Row>
-                <Col lg={3} className="nav-col p-0 mr-2">
+                <Col lg={3} xl={2} className="nav-col p-0 mr-2">
                     <h1>Deanwood, D.C.</h1>
                     <p>
                         The project tells the rise and fall of urban communities that grew their
