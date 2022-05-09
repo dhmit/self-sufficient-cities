@@ -62,7 +62,9 @@ export const FoodMapWrapper = () => {
 
     useEffect(() => {
         fetchData().then(res => {
-            setData(res.address_data);
+            setData(res.address_data.filter((loc) => {
+                return loc.type && loc.type.length > 1;
+            }));
         });
     }, []);
 
