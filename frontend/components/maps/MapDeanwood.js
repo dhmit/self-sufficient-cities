@@ -2,6 +2,7 @@ import axios from "axios";
 import React from "react";
 import {MapContainer, TileLayer, GeoJSON} from "react-leaflet";
 import Legend from "./Legend";
+
 const censusURL = "/api/get_census_data/";
 const DeanwoodURL = "/api/get_deanwood_boundary_data/";
 
@@ -26,22 +27,25 @@ export default class MapDeanwood extends React.Component {
 
     render() {
         return <div className="map">
-            <MapContainer center={this.state.position} zoom={13} scrollWheelZoom={true}>
+            <MapContainer center={this.state.position} zoom={14} scrollWheelZoom={true}>
                 <TileLayer
                     attribution='&copy; <a href="https://www.openstreetmap.org/copyright">OpenStreetMap</a> contributors'
-                    url="http://stamen-tiles-a.a.ssl.fastly.net/toner-lite/{z}/{x}/{y}.png"
+                    url="https://{s}.tile.openstreetmap.org/{z}/{x}/{y}.png"
                 />
                 {Object.keys(this.state.censustract).length > 0 &&
                 <GeoJSON data={this.state.censustract} key={"census"}
-                    pathOptions={{fillColor: "rgb(187, 198, 255)", opacity: "0.1"}}/>
+                         pathOptions={{
+                             color: "rgb(255,114,0)",
+                             fillOpacity: 0
+                         }}/>
                 };
                 {Object.keys(this.state.boundary).length > 0 &&
                 <GeoJSON data={this.state.boundary} key={"boundary"}
-                    pathOptions={{fillColor: "rgb(174,255,71)", color: "rgb(113,189,13)"}}
+                         pathOptions={{color: "rgb(0,95,255)", fillOpacity: 0}}
                 />
                 };
-                <Legend options={[["rgb(113,189,13)", "Deanwood boundary"],
-                    ["rgb(187, 198, 255)", "Census tract 78"]]} />
+                <Legend options={[["rgb(0,95,255)", "Deanwood boundary"],
+                    ["rgb(255,114,0)", "Census tract 78"]]}/>
             </MapContainer>
         </div>;
     }
