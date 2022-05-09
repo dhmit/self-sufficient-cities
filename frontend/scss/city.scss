@@ -48,6 +48,9 @@ h1 {
         @include media-breakpoint-up(lg) {
             position: fixed !important;
         }
+        @media only screen and (min-width: 1900px) {
+            max-width: 16% !important;
+        }
         @include media-breakpoint-down(md) {
             p {
                 font-weight: bold;
