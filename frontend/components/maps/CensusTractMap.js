@@ -112,8 +112,9 @@ class CensusTractMap extends React.Component {
 
     render() {
         return (
-            <div className="map">
+            <div className="map future-map">
                 <FormSelect
+                    className="future-map-select"
                     aria-label="Census Map Focus Selector"
                     onChange={(e) => this.onPosSelected(e)}
                 >
