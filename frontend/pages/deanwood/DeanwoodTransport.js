@@ -131,7 +131,7 @@ export const DeanwoodTransport = ({resources, deanwood_boundary, kenilworth_boun
                     />
                 </Col>
                 <Col lg={4}/>
-                <Col lg={8} className="column">
+                <Col lg={8} className="column mb-4">
                     <DeanwoodI295Card deanwood_boundary={deanwood_boundary}
                                       kenilworth_boundary={kenilworth_boundary}/>
                 </Col>
