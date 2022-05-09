@@ -10,18 +10,18 @@ const DeanwoodHighwayCard = ({img_source}) => {
                 <blockquote className="mt-2 mb-4">
                     “Together, the uniting forces of our communication and transportation
                     systems are dynamic elements in the very name we bear – United States.
-                    <mark>Without them, we would be a mere alliance of many separate parts.</mark>"
+                    Without them, we would be a mere alliance of many separate parts."
                     - Dwight D. Eisenhower
-                    <a href={"#source-1"}
+                    <a href={"#source-2"}
                        className={"citation-pointer"}
                        title="Dwight D. Eisenhower Presidential Library -
                        An excerpt from President Eisenhower’s Message to Congress
-                       regarding highways, February 22, 1955">[1]</a>
+                       regarding highways, February 22, 1955">[2]</a>
                 </blockquote>
             </div>
 
             <div>
-                <h4>The Federal Aid Highway Act of 1956 </h4>
+                <h2>The Federal Aid Highway Act of 1956 </h2>
                 <p>
                     The Federal Aid Highway Act was passed in June 1956. The law authorized the
                     construction of a 41,000-mile network of interstate highways that would span
@@ -49,10 +49,9 @@ const DeanwoodHighwayCard = ({img_source}) => {
                 </p>
                 <p>
                     When the Interstate Highway Act was first passed, most Americans supported
-                    it. However, people grew unhappy about the roadbuilding very soon. The
-                    highways divided communities and displaced people from their homes. Many
-                    people were forced to leave their old homes, hence the abandonment and decay
-                    in multiple cities.
+                    it. However, people quickly grew unhappy about the roadbuilding. <mark>The
+                    highways divided communities and displaced people from their homes</mark>,
+                    resulting in abandonment and decay in multiple cities.
                 </p>
             </div>
         </Col>

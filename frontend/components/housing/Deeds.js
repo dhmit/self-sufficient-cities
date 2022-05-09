@@ -1,5 +1,5 @@
 import React, {useState} from "react";
-import MapDeeds from "../maps/MapDeeds";
+import MapMarkers from "../maps/MapMarkers";
 import PropTypes from "prop-types";
 
 
@@ -32,10 +32,11 @@ export const DeanwoodDeeds = ({tables, coordinates, position}) => {
                         <h5 className="tab-header">
                             {title}
                         </h5>
-                        <MapDeeds position={position}
-                                  selectMarker={selectMarker}
-                                  markers={Object.values(coordinates)}
-                                  selected={coordinates[lots[lotNum]]}/>
+                        <MapMarkers position={position}
+                                    zoom={17}
+                                    selectMarker={selectMarker}
+                                    markers={Object.values(coordinates)}
+                                    selected={coordinates[lots[lotNum]]}/>
                     </div>
                     <div className="pl-2 col-6 table-container">
                         {table}

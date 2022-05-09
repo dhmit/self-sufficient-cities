@@ -6,15 +6,17 @@ import * as L from "leaflet";
 const LeafIcon = L.Icon.extend({
     options: {}
 });
+
+const iconUrl = "https://chart.apis.google.com/chart?chst=d_map_pin_letter&";
 const blueIcon = new LeafIcon({
-    iconUrl:
-        "https://chart.apis.google.com/chart?chst=d_map_pin_letter&chld=%E2%80%A2|abcdef&chf=a,s,ee00FFFF"
+    iconUrl: iconUrl + "chld=%E2%80%A2|abcdef&chf=a,s,ee00FFFF"
 });
+
 const redIcon = new LeafIcon({
-    iconUrl:
-        "http://chart.apis.google.com/chart?chst=d_map_pin_letter&chld=%E2%80%A2|e85141&chf=a,s,ee00FFFF"
+    iconUrl: iconUrl + "chld=%E2%80%A2|e85141&chf=a,s,ee00FFFF"
 });
-export const MapDeeds = ({selectMarker, markers, selected, position}) => {
+
+export const MapMarkers = ({selectMarker, markers, selected, position, zoom}) => {
     const markerObjects = markers.map((location, i) => (
         <Marker eventHandlers={{click: selectMarker.bind(location)}} key={i} position={location}
                 icon={location === selected ? redIcon : blueIcon}>
@@ -22,7 +24,7 @@ export const MapDeeds = ({selectMarker, markers, selected, position}) => {
     ));
     return (
         <div className="map map-deeds">
-            <MapContainer center={position} zoom={17} scrollWheelZoom={false}>
+            <MapContainer center={position} zoom={zoom} scrollWheelZoom={false}>
                 <TileLayer
                     attribution='&copy; <a href="https://www.openstreetmap.org/copyright">OpenStreetMap</a> contributors'
                     url="http://stamen-tiles-a.a.ssl.fastly.net/toner/{z}/{x}/{y}.png"
@@ -32,14 +34,15 @@ export const MapDeeds = ({selectMarker, markers, selected, position}) => {
         </div>);
 };
 
-MapDeeds.propTypes = {
+MapMarkers.propTypes = {
     markers: PropTypes.array,
     selected: PropTypes.array,
     selectMarker: PropTypes.func,
-    position: PropTypes.array
+    position: PropTypes.array,
+    zoom: PropTypes.number
 };
 
 
-export default MapDeeds;
+export default MapMarkers;
 
 

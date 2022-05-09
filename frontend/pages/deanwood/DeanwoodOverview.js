@@ -9,7 +9,7 @@ export const DeanwoodOverview = ({resources, census_boundary, deanwood_boundary}
     return (
         <Container className="city" id="deanwood-overview">
             <Row>
-                <Col lg={3} xl={2} className="nav-col p-0 mr-2">
+                <Col lg={3} className="nav-col p-0 mr-2">
                     <h1>Self-Sufficient City Deanwood, District of Columbia</h1>
                     <p>
                         Racial discrimination in access to housing, jobs, finance and health
@@ -66,7 +66,7 @@ export const DeanwoodOverview = ({resources, census_boundary, deanwood_boundary}
                     <MapDeanwood censusBoundary={census_boundary}
                                  deanwoodBoundary={deanwood_boundary}
                                  legend={[["rgb(0,89,255)", "Deanwood boundary"],
-                                     ["rgb(255,114,0)", "Census boundary"]]}
+                                     ["rgb(241,138,255)", "Census boundary"]]}
                                  zoom={14} position={[38.8999, -76.925919]}/>
                 </Col>
                 <Col lg={5}/>

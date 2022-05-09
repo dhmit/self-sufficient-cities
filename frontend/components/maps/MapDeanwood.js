@@ -29,7 +29,7 @@ export default class MapDeanwood extends React.Component {
     render() {
         return <div className="map">
             <MapContainer center={this.props.position} zoom={this.props.zoom}
-                          scrollWheelZoom={true}>
+                          scrollWheelZoom={false}>
                 <TileLayer
                     attribution='&copy; <a href="https://www.openstreetmap.org/copyright">OpenStreetMap</a> contributors'
                     url="https://{s}.tile.openstreetmap.org/{z}/{x}/{y}.png"
