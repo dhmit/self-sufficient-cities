@@ -86,7 +86,7 @@ export const DeanwoodTransport = ({resources, deanwood_boundary, kenilworth_boun
                         systems. The following images taken in 1963 by the District Department of
                         Transportation<a className={"citation-pointer"} title={"District" +
                         " Department" + "of Transportation"} href={"#source-3"}>[3]</a> show the
-                        state of Deanwood's roads, most of which were unpaved.</p>
+                        state of Deanwood's roads, some unpaved.</p>
                     <Streets places={deanwood_coordinates} position={[38.9049703, -76.9347685]}
                              zoom={14}/>
                 </Col>
