@@ -4,6 +4,8 @@ import {Container, Row, Col} from "react-bootstrap";
 import HomePageCard from "../components/home/HomePageCard";
 import deanwood_img from "../images/wymar.jpg";
 import detroit_img from "../images/detroit.png";
+import tn_img from "../images/tn.png";
+
 import Citation from "../components/global/Citation";
 
 const city_data = [
@@ -23,18 +25,12 @@ const city_data = [
         class: "disabled"
     },
     {
-        img: deanwood_img,
+        img: tn_img,
         title: "MEMPHIS, TN",
         text: "Research to come",
         resources: ["overview", "housing", "community", "health"],
         class: "disabled"
     }
-    // {
-    //     img: dh_logo,
-    //     title: "Sampleville",
-    //     text: "More coming soon?",
-    //     resources: ["oral_history", "timeline"]
-    // }
 ];
 
 export default class Home extends React.Component {
