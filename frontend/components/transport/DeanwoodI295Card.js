@@ -6,7 +6,7 @@ import * as PropTypes from "prop-types";
 const DeanwoodI295Card = ({deanwood_boundary, kenilworth_boundary}) => {
     return (
         <Col>
-            <h3>I-295 and Deanwood</h3>
+            <h2>I-295 and Deanwood</h2>
             <div>
                 <p>
                     When African Americans moved to Deanwood, white people began to move out.
