@@ -15,6 +15,12 @@ h1 {
     padding-left: 0;
     display: flex;
 
+    // 60px == nav width
+    @include media-breakpoint-up(sm) {
+        width: calc(100% - 60px) !important;
+        margin-left: 60px !important;
+    }
+
     &.container {
         @include media-breakpoint-up("md") {
             margin-right: 0 !important;
@@ -183,7 +189,6 @@ h1 {
 
 
 .center-img {
-
     display: block;
     margin-left: auto;
     margin-right: auto;
