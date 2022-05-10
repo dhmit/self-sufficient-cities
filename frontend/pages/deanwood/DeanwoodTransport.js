@@ -110,7 +110,8 @@ export const DeanwoodTransport = ({resources, deanwood_boundary, kenilworth_boun
                 <Col lg={4}/>
                 <Col lg={8}>
                     <p>In segregated Deanwood, residents had access to fewer governmental support
-                        systems. The following images taken in 1963 by the District Department of
+                        systems and programs than at other places around the city. The following
+                        images taken in 1963 by the District Department of
                         Transportation<a className={"citation-pointer"} title={"District" +
                         " Department" + "of Transportation"} href={"#source-3"}>[3]</a> show the
                         state of Deanwood's roads, some unpaved.</p>
