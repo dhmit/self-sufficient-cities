@@ -190,6 +190,21 @@ h1 {
         width: 100%;
     }
 
+
+    .video.embed-responsive-item {
+        @include media-breakpoint-down(lg) {
+            width: 400px;
+        }
+         @include media-breakpoint-only(lg) {
+            max-width: 100%;
+        }
+        @include media-breakpoint-up(xl) {
+            width: 100%;
+            height: 240px;
+        }
+    }
+
+
 }
 
 

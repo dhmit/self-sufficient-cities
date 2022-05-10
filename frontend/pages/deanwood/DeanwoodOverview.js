@@ -151,14 +151,17 @@ export const DeanwoodOverview = ({resources, census_boundary, deanwood_boundary}
                     </p>
                 </Col>
                 <Col lg={5}/>
-                <Col lg={3} sm={6}>
-                    <video className="col-lg-12 col-sm-12" loop autoPlay muted>
-                        <source src={veggie_movie} type="video/mp4"/>
-                    </video>
+                <Col lg={3}>
+                    <div className="embed-responsive embed-responsive-4by3">
+                        <video className="video embed-responsive-item" loop autoPlay muted
+                               controls>
+                            <source src={veggie_movie} type="video/mp4"/>
+                        </video>
                     <small>Archival footage of a DC farmer's market <a
                         href={"https://catalog.archives.gov/id/7095"}>(source)</a>.</small>
+                    </div>
                 </Col>
-                <Col lg={4} sm={6}>
+                <Col lg={4}>
                     <p>
                         After building a small house, residents, many of them former
                         farmers, used the rest of their land for chicken coops, kitchen
