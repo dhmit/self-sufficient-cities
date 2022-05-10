@@ -253,3 +253,30 @@ h1 {
         background-color: $highlight-gold;
     }
 }
+
+
+#deanwood-overview {
+    .map-hidden {
+        visibility: hidden;
+        height: 0px;
+        position: relative;
+        top: 0;
+    }
+    .map-shown {
+        visibility: visible;
+        position: relative;
+        top: 0;
+    }
+    .community-button {
+        float: right;
+        font-size: 0.7em;
+        margin-top: 0.2em;
+        &:hover {
+            background-color: $color-periwinkle;
+        }
+        @include media-breakpoint-down(md) {
+            font-size: 0.5em;
+            margin-top: 0.6em;
+        }
+    }
+}

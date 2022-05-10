@@ -45,13 +45,6 @@ export const DeanwoodTransport = ({resources, deanwood_boundary, kenilworth_boun
             <Row>
                 <Col lg={3} className="nav-col p-0 mr-2">
                     <h1>Transportation in Deanwood, D.C.</h1>
-                    <p>
-                        The project tells the rise and fall of urban communities that grew their
-                        own food in the 20th century United States. Taking the Deanwood
-                        neighborhood in Washington, D.C. as their starting place, students
-                        consulted newspaper articles and census data to design an interactive
-                        site.
-                    </p>
                     <DeanwoodNav selected={"transportation"} resources={resources}/>
                 </Col>
                 <Col lg={4}/>

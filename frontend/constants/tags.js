@@ -15,5 +15,5 @@ export const TAG_DISPLAY_NAMES = {
     health: "Health",
     food: "Food",
     community: "Community",
-    future: "Future\u00a0Research"
+    future: "Searching\u00a0For\u00a0Patterns"
 };

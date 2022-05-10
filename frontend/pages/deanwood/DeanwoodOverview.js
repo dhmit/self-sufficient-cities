@@ -4,8 +4,8 @@ import * as PropTypes from "prop-types";
 import DeanwoodNav from "./DeanwoodNav";
 import MapDeanwood from "../../components/maps/MapDeanwood";
 import Citation from "../../components/global/Citation";
-import deanwood_1921 from "../../images/deanwood/deanwood-1921.jpg";
-import deanwood_1921_outline from "../../images/deanwood/deanwood-1921-outline.jpg";
+import deanwood_1907 from "../../images/deanwood/Deanwood1907_composite.jpg";
+import deanwood_1921 from "../../images/deanwood/Deanwood1921_composite.jpg";
 import children from "../../images/deanwood/wy-048909.jpg";
 import veggie_movie from "../../images/deanwood/veggies.mp4";
 
@@ -15,9 +15,9 @@ export const DeanwoodOverview = ({
                                      deanwood_boundary,
                                      ward7_boundary
                                  }) => {
-    const [showOutline, setShowOutline] = useState(false);
-    const toggleOutline = () => {
-        setShowOutline(!showOutline);
+    const [show1921, setShow1921] = useState(false);
+    const switchYear = () => {
+        setShow1921(!show1921);
     };
     return (
         <Container className="city" id="deanwood-overview">
@@ -67,21 +67,34 @@ export const DeanwoodOverview = ({
                 </Col>
                 <Col lg={4}/>
                 <Col lg={8} className="column mb-4">
-                    {showOutline
-                        ? <Image src={deanwood_1921_outline} fluid/>
-                        : <Image src={deanwood_1921} fluid/>}
+                    <h4>{show1921 ? "1921" : "1907"} Deanwood Map
+                        <button className={"community-button"} onClick={switchYear}>{
+                            show1921 ? "Show the 1907 map" : "Show the 1921 map"
+                        }</button>
+                    </h4>
 
-                    <small>1921 Baist's real estate map, showing part of
-                        present-day Deanwood from Anacostia Road to the east.<a
-                            className={"citation-pointer"}
-                            title={"Baist, G. Wm, Wm. E Baist, and H. V Baist. " +
-                            "Baist's real estate atlas of surveys of Washington, " +
-                            "District of Columbia: complete in four volumes. " +
-                            "[Philadelphia: G.W. Baist, to 1921, 1919] Map."}
-                            href={"#source-3"}>[3]</a></small>
-                    <button onClick={toggleOutline} className={"mt-2 community-button"}>
-                        {showOutline ? "Hide outline" : "Show outline"}
-                    </button>
+                    <Image className={`${show1921 ? "map-hidden" : "map-shown"}`}
+                           src={deanwood_1907} fluid/>
+                    <Image className={`${show1921 ? "map-shown" : "map-hidden"}`}
+                           src={deanwood_1921} fluid/>
+                    {show1921 ? <small>Above, a student's composite map from 1907 Baist's
+                            real estate atlas of surveys of Washington.<a
+                                className={"citation-pointer"}
+                                title={"Baist, G. Wm, Wm. E Baist, and H. V Baist. Baist's " +
+                                "real estate atlas of surveys of Washington, " +
+                                "District of Columbia: complete in four volumes. " +
+                                "Philadelphia: G.W. Baist, 1907."}
+                                href={"#source-3"}>[3]</a></small>
+                        : <small>Above, a student's composite map from 1921 Baist's
+                            real estate atlas of surveys of Washington.<a
+                                className={"citation-pointer"}
+                                title={"Baist, G. Wm, Wm. E Baist, and H. V Baist. " +
+                                "Baist's real estate atlas of surveys of Washington, " +
+                                "District of Columbia: complete in four volumes. " +
+                                "[Philadelphia: G.W. Baist, to 1921, 1919] Map."}
+                                href={"#source-4"}>[4]</a></small>
+                    }
+
                 </Col>
 
                 <Col lg={4}/>
@@ -111,16 +124,16 @@ export const DeanwoodOverview = ({
                         to Black people.<a className={"citation-pointer"}
                                            title={"Anita Blake and Irene Donnelly, " +
                                            "Anacostia Oral History Project: 16."}
-                                           href={"#source-3"}>[3]</a>
+                                           href={"#source-5"}>[5]</a>
                         As Normal Dale remembered in 1975, “You had no
                         decent jobs. It was understood that Negroes had an inferior
                         status, and that was it.”
-                        <a className={"citation-pointer"} href={"#source-4"}
+                        <a className={"citation-pointer"} href={"#source-6"}
                            title={"Norman E. Dale, Anacostia Oral History Project," +
                            " 1975, survey instrument 4-197071, tape #13, " +
                            "John Kinard Collection JK Book, " +
                            "Transcriptions Oral Histories, box 37, ACM archives."}>
-                            [4]
+                            [6]
                         </a>
                     </p>
                 </Col>
@@ -139,7 +152,7 @@ export const DeanwoodOverview = ({
                            title="United States Census Bureau. “Sixteenth census of
                                        the United States: 1940. Population and housing.”
                                        Hathi Trust. 1942."
-                           href={"#source-5"}>[5]</a>
+                           href={"#source-7"}>[7]</a>
                         Black Deanwood residents managed to own their homes when most
                         White Americans could not afford them. How did Deanwood
                         residents manage to achieve the American dream of homeownership
@@ -151,7 +164,7 @@ export const DeanwoodOverview = ({
                         of an acre.<a className={"citation-pointer"}
                                       title="District of Columbia,
                                                   Property Records Search"
-                                      href={"#source-6"}>[6]</a>
+                                      href={"#source-8"}>[8]</a>
 
                     </p>
                 </Col>
@@ -179,7 +192,7 @@ export const DeanwoodOverview = ({
                         className={"citation-pointer"}
                         title={"Anita Blake and Irene Donnelly, Anacostia Oral" +
                         " History Project, 1975, survey instrument 4-197071, tape #29."}
-                        href={"#source-7"}>[7]</a>
+                        href={"#source-5"}>[5]</a>
                     </p>
                 </Col>
                 <Col lg={5}/>
@@ -190,7 +203,7 @@ export const DeanwoodOverview = ({
                         className={"citation-pointer"}
                         title={"Elizabeth Barker, oral history interviews, " +
                         "1976-1981 OH-31 Schlesinger Library, Radcliff."}
-                        href={"#source-8"}>[8]</a> Some grew more than enough food for
+                        href={"#source-9"}>[9]</a> Some grew more than enough food for
                         themselves. They sold them from their back doors or street
                         carts. Peddlers from Anacostia traded in fresh produce from hand
                         carts across the city.<a
@@ -199,7 +212,7 @@ export const DeanwoodOverview = ({
                         "Race, Self-Reliance, and Food Access in Washington, D. C. " +
                         "(Chapel Hill,  University of North Carolina Press, 2019); " +
                         "42-3."}
-                        href={"#source-9"}>[9]</a> As late as 1949, Deanwood had the
+                        href={"#source-10"}>[10]</a> As late as 1949, Deanwood had the
                         look and feel of a self-contained agricultural village, though
                         it existed inside city boundaries.
                     </p>
@@ -215,7 +228,7 @@ export const DeanwoodOverview = ({
                         title="1960 Neighbors Inc DC Housing Report,
                                     “Housing in Washington, DC,” the United States Commission on
                                     Civil Rights, (Washington, DC: 1960)."
-                        href={"#source-10"}>[10]</a> More people crowded into the same
+                        href={"#source-11"}>[11]</a> More people crowded into the same
                         small rooms. Housing
                         deteriorated. Rates of home-owner occupancy dropped.
                     </p>
@@ -245,42 +258,43 @@ export const DeanwoodOverview = ({
                     <Citation identifier={"source-2"}
                               title={"Musgrove, Chocolate City (2014)."}/>
                     <Citation identifier={"source-3"}
-                              link={"https://www.loc.gov/item/map40000002/"}
+                              link={"https://www.loc.gov/resource/g3851bm.gct00132d/?sp=17"}
+                              title={"Baist, G. Wm, Wm. E Baist, and H. V Baist. Baist's " +
+                              "real estate atlas of surveys of Washington, " +
+                              "District of Columbia: complete in four volumes. " +
+                              "Philadelphia: G.W. Baist, 1907."}/>
+                    <Citation identifier={"source-4"}
+                              link={"https://www.loc.gov/resource/g3851bm.gct00135d/?sp=16"}
                               title={"Baist, G. Wm, Wm. E Baist, and H. V Baist. " +
                               "Baist's real estate atlas of surveys of Washington, " +
                               "District of Columbia: complete in four volumes. " +
                               "[Philadelphia: G.W. Baist, to 1921, 1919] Map."}/>
-                    <Citation identifier={"source-3"}
+                    <Citation identifier={"source-5"}
                               title={"Anita Blake and Irene Donnelly, " +
                               "Anacostia Oral History Project: 16."}/>
-                    <Citation identifier={"source-4"}
+                    <Citation identifier={"source-6"}
                               title={"Norman E. Dale, Anacostia Oral History Project, 1975, " +
                               "survey instrument 4-197071, tape #13, " +
                               "John Kinard Collection JK Book, Transcriptions Oral Histories," +
                               " box 37, ACM archives."}/>
-                    <Citation identifier={"source-5"}
+                    <Citation identifier={"source-7"}
                               title={"United States Census Bureau. “Sixteenth census of the" +
                               " United States: 1940. Population and housing.” " +
                               "Hathi Trust. 1942."}
                               link={"https://babel.hathitrust.org/cgi/pt?" +
                               "id=mdp.39015019193161&view=1up&seq=638"}/>
-                    <Citation identifier={"source-6"}
+                    <Citation identifier={"source-8"}
                               title={"District of Columbia, Property Records Search,"}
                               link={"https://register.shelby.tn.us/search/index.php"}/>
-                    <Citation identifier={"source-7"}
-                              title={"Anita Blake and Irene Donnelly, " +
-                              "Anacostia Oral History Project, 1975, survey instrument " +
-                              "4-197071, tape #29."}
-                    />
-                    <Citation identifier={"source-8"}
+                    <Citation identifier={"source-9"}
                               title={"Elizabeth Barker, oral history interviews, 1976-1981" +
                               " OH-31 Schlesinger Library, Radcliff."}/>
-                    <Citation identifier={"source-9"}
+                    <Citation identifier={"source-10"}
                               title={"Ashanté Reese, Black Food Geographies: Race, " +
                               "Self-Reliance, and Food Access in Washington, " +
                               "D. C. (Chapel Hill,  " +
                               "University of North Carolina Press, 2019); 42-3."}/>
-                    <Citation identifier={"source-10"} title={"1960 Neighbors Inc DC Housing" +
+                    <Citation identifier={"source-11"} title={"1960 Neighbors Inc DC Housing" +
                     " Report, “Housing in Washington, DC,” the United States " +
                     "Commission on Civil Rights, (Washington, DC: 1960)."}/>
                 </Col>

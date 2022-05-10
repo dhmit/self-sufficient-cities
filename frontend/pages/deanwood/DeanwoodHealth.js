@@ -33,7 +33,7 @@ export const DeanwoodHealth = ({resources}) => {
                         just demographic or economic: as shown here, it extends to people's
                         health. Those who, by accident of birth, lie in the wrong side of the
                         divide can expect to lead lives that are ten years shorter and have
-                        higher rates of chronic diseases such as diabetes,heart diseases,HIV/AIDS
+                        higher rates of chronic diseases such as diabetes, heart diseases, HIV/AIDS
                         and cancer.
                     </p>
                     <DeanwoodNav selected={"health"} resources={resources}/>
