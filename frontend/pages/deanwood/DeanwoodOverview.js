@@ -9,7 +9,12 @@ import deanwood_1921_outline from "../../images/deanwood/deanwood-1921-outline.j
 import children from "../../images/deanwood/wy-048909.jpg";
 import veggie_movie from "../../images/deanwood/veggies.mp4";
 
-export const DeanwoodOverview = ({resources, census_boundary, deanwood_boundary}) => {
+export const DeanwoodOverview = ({
+                                     resources,
+                                     census_boundary,
+                                     deanwood_boundary,
+                                     ward7_boundary
+                                 }) => {
     const [showOutline, setShowOutline] = useState(false);
     const toggleOutline = () => {
         setShowOutline(!showOutline);
@@ -157,8 +162,8 @@ export const DeanwoodOverview = ({resources, census_boundary, deanwood_boundary}
                                controls>
                             <source src={veggie_movie} type="video/mp4"/>
                         </video>
-                    <small>Archival footage of a DC farmer's market <a
-                        href={"https://catalog.archives.gov/id/7095"}>(source)</a>.</small>
+                        <small>Archival footage of a DC farmer's market <a
+                            href={"https://catalog.archives.gov/id/7095"}>(source)</a>.</small>
                     </div>
                 </Col>
                 <Col lg={4}>
@@ -216,12 +221,16 @@ export const DeanwoodOverview = ({resources, census_boundary, deanwood_boundary}
                     </p>
                 </Col>
                 <Col lg={4}/>
-                <Col lg={8} className="column">
+                <Col lg={8} className="column mt-4">
                     <MapDeanwood censusBoundary={census_boundary}
                                  deanwoodBoundary={deanwood_boundary}
+                                 ward7Boundary={ward7_boundary}
+                                 mapStyle={"bw"}
                                  legend={[["rgb(0,89,255)", "Deanwood boundary"],
-                                     ["rgb(241,138,255)", "Census boundary"]]}
-                                 zoom={14} position={[38.8999, -76.925919]}/>
+                                     ["rgb(241,138,255)", "Census tract 78 boundary"],
+                                     ["rgb(255,115,0)", "Ward 7 boundary"]]}
+                                 zoom={12} position={[38.88, -76.925919]}/>
+                    <small>This map shows the boundaries used for student research.</small>
                 </Col>
                 <Col lg={4}/>
                 <Col lg={8} className="mt-5 column">
@@ -283,7 +292,8 @@ export const DeanwoodOverview = ({resources, census_boundary, deanwood_boundary}
 DeanwoodOverview.propTypes = {
     resources: PropTypes.array,
     census_boundary: PropTypes.object,
-    deanwood_boundary: PropTypes.object
+    deanwood_boundary: PropTypes.object,
+    ward7_boundary: PropTypes.object
 };
 
 
