@@ -1,7 +1,7 @@
 import React, {useState} from "react";
 import MapMarkers from "../maps/MapMarkers";
 import PropTypes from "prop-types";
-import {Image} from "react-bootstrap";
+import {Col, Image} from "react-bootstrap";
 
 export const Streets = ({position, places}) => {
     const coordinates = places.map(p => {
@@ -30,7 +30,7 @@ export const Streets = ({position, places}) => {
         <div className="carousel">
             <div className="p-lg-3 p-sm-2 container">
                 <div className="p-0 row">
-                    <div className="p-0 col-6">
+                    <Col lg={6} md={4} sm={3} className="p-0">
                         <h5 className="tab-header">
                             {title}
                         </h5>
@@ -39,10 +39,10 @@ export const Streets = ({position, places}) => {
                                     zoom={14}
                                     markers={coordinates}
                                     selected={selected}/>
-                    </div>
-                    <div className="pl-2 col-6 mt-4">
+                    </Col>
+                    <Col lg={6} md={8} sm={9} className="pl-2 mt-lg-4 mt-sm-5">
                         <Image src={image} fluid={true}/>
-                    </div>
+                    </Col>
                 </div>
             </div>
         </div>
