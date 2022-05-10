@@ -77,15 +77,7 @@ export const DeanwoodOverview = ({
                            src={deanwood_1907} fluid/>
                     <Image className={`${show1921 ? "map-shown" : "map-hidden"}`}
                            src={deanwood_1921} fluid/>
-                    {show1921 ? <small>Above, a student's composite map from 1907 Baist's
-                            real estate atlas of surveys of Washington.<a
-                                className={"citation-pointer"}
-                                title={"Baist, G. Wm, Wm. E Baist, and H. V Baist. Baist's " +
-                                "real estate atlas of surveys of Washington, " +
-                                "District of Columbia: complete in four volumes. " +
-                                "Philadelphia: G.W. Baist, 1907."}
-                                href={"#source-3"}>[3]</a></small>
-                        : <small>Above, a student's composite map from 1921 Baist's
+                    {show1921 ? <small>Above, a student's composite map from 1921 Baist's
                             real estate atlas of surveys of Washington.<a
                                 className={"citation-pointer"}
                                 title={"Baist, G. Wm, Wm. E Baist, and H. V Baist. " +
@@ -93,6 +85,14 @@ export const DeanwoodOverview = ({
                                 "District of Columbia: complete in four volumes. " +
                                 "[Philadelphia: G.W. Baist, to 1921, 1919] Map."}
                                 href={"#source-4"}>[4]</a></small>
+                        : <small>Above, a student's composite map from 1907 Baist's
+                            real estate atlas of surveys of Washington.<a
+                                className={"citation-pointer"}
+                                title={"Baist, G. Wm, Wm. E Baist, and H. V Baist. Baist's " +
+                                "real estate atlas of surveys of Washington, " +
+                                "District of Columbia: complete in four volumes. " +
+                                "Philadelphia: G.W. Baist, 1907."}
+                                href={"#source-3"}>[3]</a></small>
                     }
 
                 </Col>
