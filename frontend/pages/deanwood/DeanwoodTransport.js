@@ -74,29 +74,13 @@ export const DeanwoodTransport = ({resources, deanwood_boundary, kenilworth_boun
                         This story is not unique to Deanwood. "Urban renewal systematically
                         destroyed many African American communities and businesses and...failed to
                         safeguard the rights and well-being of those forcibly relocated from those
-                        homes and businesses" write Thomas et. al
-                        <a className={"citation-pointer"} title={"Code of the" +
-                        " The Racial Origin of Zoning in American Cities"}
-                           href={"#source-2"}>[2]</a>.
+                        homes and businesses" writes Christopher Silver.<a
+                        className={"citation-pointer"}
+                        title={"THE RACIAL ORIGINS OF ZONING IN AMERICAN CITIES"}
+                        href={"#source-2"}>[2]</a>
                     </p>
                 </Col>
-                <Col lg={4}/>
-                <Col lg={8}>
-                    <p>In segregated Deanwood, residents had access to fewer governmental support
-                        systems. The following images taken in 1963 by the District Department of
-                        Transportation<a className={"citation-pointer"} title={"District" +
-                        " Department" + "of Transportation"} href={"#source-3"}>[3]</a> show the
-                        state of Deanwood's roads, some unpaved.</p>
-                    <Streets places={deanwood_coordinates} position={[38.9049703, -76.9347685]}
-                             zoom={14}/>
-                </Col>
 
-                <Col lg={4}/>
-                <Col lg={8}>
-                    <p>Near the Anacostia river, roads looked a little better.</p>
-                    <Streets places={northeast_coordinates} position={[38.893501, -76.9573368]}
-                             zoom={14}/>
-                </Col>
                 <Col lg={4}/>
                 <Col lg={2} className="column mt-2">
                     <Image src={wymer_deanwood_info} height={"200px"} fluid={true}/>
@@ -123,6 +107,23 @@ export const DeanwoodTransport = ({resources, deanwood_boundary, kenilworth_boun
                             paved street system.</mark>"
                     </p>
                 </Col>
+                <Col lg={4}/>
+                <Col lg={8}>
+                    <p>In segregated Deanwood, residents had access to fewer governmental support
+                        systems. The following images taken in 1963 by the District Department of
+                        Transportation<a className={"citation-pointer"} title={"District" +
+                        " Department" + "of Transportation"} href={"#source-3"}>[3]</a> show the
+                        state of Deanwood's roads, some unpaved.</p>
+                    <Streets places={deanwood_coordinates} position={[38.9049703, -76.9347685]}
+                             zoom={14}/>
+                </Col>
+
+                <Col lg={4}/>
+                <Col lg={8}>
+                    <p>Near the Anacostia river, the roads told a different story.</p>
+                    <Streets places={northeast_coordinates} position={[38.893501, -76.9573368]}
+                             zoom={14}/>
+                </Col>
 
                 <Col lg={4}/>
                 <Col lg={8} className="column mt-4">
@@ -144,10 +145,12 @@ export const DeanwoodTransport = ({resources, deanwood_boundary, kenilworth_boun
                     " District of Columbia"} link={"https://heinonline.org/HOL" +
                     "/P?h=hein.sstatutes/cdcocol0002&i=247"}/>
                     <Citation identifier={"source-2"}
-                              title={"The Code of the District of Columbia"}
-                              link={"https://heinonline-org.libproxy.mit.edu/HOL/Page?" +
-                              "collection=sstatutes&handle=hein.sstatutes/" +
-                              "cdcocol0002&id=247&men_tab=srchresults"}/>
+                              title={"Christopher Silver, The Racial Origin of Zoning in" +
+                              " American Cities,” Manning Thomas, June and Marsha Ritzdorf eds. " +
+                              "Urban Planning and the African American Community: In the Shadows. " +
+                              "Thousand Oaks, CA: Sage Publications, 1997: 23-42."}
+                              link={"https://eportfolios.macaulay.cuny.edu/" +
+                              "goldwyn17/files/2017/01/silver-racialoriginsofzoning.pdf"}/>
                     <Citation identifier={"source-3"}
                               title={"District Department of Transportation, “Deanwood,”" +
                               "DDOT Historic Collections"}
@@ -156,17 +159,10 @@ export const DeanwoodTransport = ({resources, deanwood_boundary, kenilworth_boun
                               title={"Dwight D. Eisenhower Presidential Library - " +
                               "An excerpt from President Eisenhower’s Message to Congress " +
                               "regarding highways, February 22, 1955"}/>
-                    <Citation identifier={"source-4"}
-                              title={"Christopher Silver, The Racial Origin of Zoning in" +
-                              " American Cities,” Manning Thomas, June and Marsha Ritzdorf eds. " +
-                              "Urban Planning and the African American Community: In the Shadows. " +
-                              "Thousand Oaks, CA: Sage Publications, 1997: 23-42."}/>
-
                 </Col>
             </Row>
         </Container>
-    )
-        ;
+    );
 
 };
 
