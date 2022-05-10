@@ -64,6 +64,7 @@ api_urls = [
     path('api/locations/<int:location_id>', views.location, name="api_location"),
     path('api/locations', views.locations, name="api_locations"),
     path('api/get_census_data/', views.get_census_data),
+    path('api/get_dc_ward7_geojson', views.get_dc_ward7_geojson),
     path('api/get_1940_census_geodata', views.get_1940_census_geodata),
     path('api/get_1940_deanwood_similarities', views.get_1940_deanwood_similarities),
     path('api/get_1940_tract_data', views.get_1940_tract_data),
