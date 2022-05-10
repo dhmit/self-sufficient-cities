@@ -28,6 +28,11 @@ module.exports = {
             {test: /\.js|.jsx$/, exclude: /node_modules/, use: "babel-loader"},
             {test: /\.(png|jpe?g|gif)$/i, use: [{loader: "file-loader"}]},
             {
+                test: /\.mp4$/,
+                use: 'file-loader?name=videos/[name].[ext]',
+            },
+
+            {
                 test: /\.svg$/i,
                 issuer: /\.[jt]sx?$/,
                 use: ['@svgr/webpack'],
