@@ -365,6 +365,16 @@ def get_census_data(request):
     return JsonResponse(census_data)
 
 
+def get_dc_ward7_geojson(request):
+    """
+    DC Ward 7 GeoJSON
+    """
+    with open("app/data/dc_ward7.geojson", encoding="utf-8") as f:
+        ward7 = json.load(f)
+
+    return JsonResponse(ward7)
+
+
 def get_community_data(request):
     """
     API endpoint for getting the census data in json format

@@ -15,6 +15,9 @@ def overview(request):
     with open("app/data/deanwood_boundary.geojson", encoding="utf-8") as f:
         deanwood_boundary = json.load(f)
 
+    with open("app/data/dc_ward7.geojson", encoding="utf-8") as f:
+        dc_ward7 = json.load(f)
+
     context = {
         'page_metadata': {
             'title': 'Deanwood, D.C.'
@@ -23,7 +26,8 @@ def overview(request):
         'component_props': {
             'resources': deanwood_sections,
             'census_boundary': census_boundary,
-            'deanwood_boundary': deanwood_boundary
+            'deanwood_boundary': deanwood_boundary,
+            'ward7_boundary': dc_ward7
         },
     }
 
