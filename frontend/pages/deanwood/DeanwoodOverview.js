@@ -1,11 +1,19 @@
-import React from "react";
-import {Container, Row, Col} from "react-bootstrap";
+import React, {useState} from "react";
+import {Container, Row, Col, Image} from "react-bootstrap";
 import * as PropTypes from "prop-types";
 import DeanwoodNav from "./DeanwoodNav";
 import MapDeanwood from "../../components/maps/MapDeanwood";
 import Citation from "../../components/global/Citation";
+import deanwood_1921 from "../../images/deanwood/deanwood-1921.jpg";
+import deanwood_1921_outline from "../../images/deanwood/deanwood-1921-outline.jpg";
+import children from "../../images/deanwood/wy-048909.jpg";
+import veggie_movie from "../../images/deanwood/veggies.mp4";
 
 export const DeanwoodOverview = ({resources, census_boundary, deanwood_boundary}) => {
+    const [showOutline, setShowOutline] = useState(false);
+    const toggleOutline = () => {
+        setShowOutline(!showOutline);
+    };
     return (
         <Container className="city" id="deanwood-overview">
             <Row>
@@ -33,7 +41,7 @@ export const DeanwoodOverview = ({resources, census_boundary, deanwood_boundary}
                     <DeanwoodNav selected={"overview"} resources={resources}/>
                 </Col>
                 <Col lg={4}/>
-                <Col lg={4} className="column">
+                <Col lg={8} className="column">
                     <p>
                         In the early 1920s, developers in Washington, DC bought up farms
                         on land across the Anacostia River from the city center,
@@ -52,25 +60,42 @@ export const DeanwoodOverview = ({resources, census_boundary, deanwood_boundary}
 
                     </p>
                 </Col>
-                <Col lg={4} className="p-0 mt-sm-2 mt-lg-0 column">
-                    <blockquote>
-                        "Despite high rates of unemployment, census records from the
-                        midst of the Great Depression show a remarkable fact. <mark>Among
-                        Black residents of Deanwood, rates of homeowner occupancy,</mark> a
-                        significant indicator of financial stability, <mark>were some of the
-                        highest in the city"</mark>
-                    </blockquote>
-                </Col>
                 <Col lg={4}/>
-                <Col lg={8} className="column">
-                    <MapDeanwood censusBoundary={census_boundary}
-                                 deanwoodBoundary={deanwood_boundary}
-                                 legend={[["rgb(0,89,255)", "Deanwood boundary"],
-                                     ["rgb(241,138,255)", "Census boundary"]]}
-                                 zoom={14} position={[38.8999, -76.925919]}/>
+                <Col lg={8} className="column mb-4">
+                    {showOutline
+                        ? <Image src={deanwood_1921_outline} fluid/>
+                        : <Image src={deanwood_1921} fluid/>}
+
+                    <small>1921 Baist's real estate map, showing part of
+                        present-day Deanwood from Anacostia Road to the east.<a
+                            className={"citation-pointer"}
+                            title={"Baist, G. Wm, Wm. E Baist, and H. V Baist. " +
+                            "Baist's real estate atlas of surveys of Washington, " +
+                            "District of Columbia: complete in four volumes. " +
+                            "[Philadelphia: G.W. Baist, to 1921, 1919] Map."}
+                            href={"#source-3"}>[3]</a></small>
+                    <button onClick={toggleOutline} className={"mt-2 community-button"}>
+                        {showOutline ? "Hide outline" : "Show outline"}
+                    </button>
                 </Col>
-                <Col lg={5}/>
-                <Col lg={6} className="mt-3 column">
+
+                <Col lg={4}/>
+                <Col lg={4} className="mt-3 column">
+                    <Image src={children} fluid
+                           alt={"Three Black children smiling, standing in front of a dilapidated house outside of\n" +
+                           "                        Deanwood (Marshall Heights)."}/>
+                    <small>John P. Wymer's photograph showing three Black children smiling, standing
+                        in front of a dilapidated house
+                        outside of Deanwood (Marshall Heights). <a
+                            href={"http://dchistory.pastperfectonline.com/" +
+                            "photo/763BE269-A519-44FF-A89F-849312590250"}>(source)</a>.</small>
+                </Col>
+                <Col lg={4} className="mt-sm-4 mt-lg-0">
+                    <blockquote className="mb-2">
+                        "You had no decent jobs. <mark>It was understood that Negroes had an
+                        inferior
+                        status, and that was it."</mark>
+                    </blockquote>
                     <p>
                         As in many historically Black neighborhoods, Deanwood residents
                         had trouble finding regular employment. Long-standing patterns
@@ -78,12 +103,11 @@ export const DeanwoodOverview = ({resources, census_boundary, deanwood_boundary}
                         increasingly from spending time in non-Black sections of the
                         city. The highest ambition, Anita Blake remembered, was to get a
                         job at the US Mint. The lowest level government jobs were open
-                        to Black people.
-                        <a className={"citation-pointer"}
-                           title={"Anita Blake and Irene Donnelly, " +
-                           "Anacostia Oral History Project: 16."}
-                           href={"#source-3"}>[3]</a> As Normal Dale
-                        remembered in 1975, “You had no
+                        to Black people.<a className={"citation-pointer"}
+                                           title={"Anita Blake and Irene Donnelly, " +
+                                           "Anacostia Oral History Project: 16."}
+                                           href={"#source-3"}>[3]</a>
+                        As Normal Dale remembered in 1975, “You had no
                         decent jobs. It was understood that Negroes had an inferior
                         status, and that was it.”
                         <a className={"citation-pointer"} href={"#source-4"}
@@ -94,6 +118,10 @@ export const DeanwoodOverview = ({resources, census_boundary, deanwood_boundary}
                             [4]
                         </a>
                     </p>
+                </Col>
+                <Col lg={5}/>
+                <Col lg={6} className="mt-4">
+
                     <p>
                         Despite high rates of unemployment, census records from the
                         midst of the Great Depression show a remarkable fact. Among
@@ -121,6 +149,16 @@ export const DeanwoodOverview = ({resources, census_boundary, deanwood_boundary}
                                       href={"#source-6"}>[6]</a>
 
                     </p>
+                </Col>
+                <Col lg={5}/>
+                <Col lg={3} sm={6}>
+                    <video className="col-lg-12 col-sm-12" loop autoPlay muted>
+                        <source src={veggie_movie} type="video/mp4"/>
+                    </video>
+                    <small>Archival footage of a DC farmer's market <a
+                        href={"https://catalog.archives.gov/id/7095"}>(source)</a>.</small>
+                </Col>
+                <Col lg={4} sm={6}>
                     <p>
                         After building a small house, residents, many of them former
                         farmers, used the rest of their land for chicken coops, kitchen
@@ -133,7 +171,13 @@ export const DeanwoodOverview = ({resources, census_boundary, deanwood_boundary}
                         className={"citation-pointer"}
                         title={"Anita Blake and Irene Donnelly, Anacostia Oral" +
                         " History Project, 1975, survey instrument 4-197071, tape #29."}
-                        href={"#source-7"}>[7]</a> Children learned to garden at school
+                        href={"#source-7"}>[7]</a>
+                    </p>
+                </Col>
+                <Col lg={5}/>
+                <Col lg={6} className="mt-4">
+                    <p>
+                        Children learned to garden at school
                         with their own vegetable beds.<a
                         className={"citation-pointer"}
                         title={"Elizabeth Barker, oral history interviews, " +
@@ -169,6 +213,14 @@ export const DeanwoodOverview = ({resources, census_boundary, deanwood_boundary}
                     </p>
                 </Col>
                 <Col lg={4}/>
+                <Col lg={8} className="column">
+                    <MapDeanwood censusBoundary={census_boundary}
+                                 deanwoodBoundary={deanwood_boundary}
+                                 legend={[["rgb(0,89,255)", "Deanwood boundary"],
+                                     ["rgb(241,138,255)", "Census boundary"]]}
+                                 zoom={14} position={[38.8999, -76.925919]}/>
+                </Col>
+                <Col lg={4}/>
                 <Col lg={8} className="mt-5 column">
                     <h2>Sources</h2>
                     <Citation
@@ -180,6 +232,12 @@ export const DeanwoodOverview = ({resources, census_boundary, deanwood_boundary}
                     />
                     <Citation identifier={"source-2"}
                               title={"Musgrove, Chocolate City (2014)."}/>
+                    <Citation identifier={"source-3"}
+                              link={"https://www.loc.gov/item/map40000002/"}
+                              title={"Baist, G. Wm, Wm. E Baist, and H. V Baist. " +
+                              "Baist's real estate atlas of surveys of Washington, " +
+                              "District of Columbia: complete in four volumes. " +
+                              "[Philadelphia: G.W. Baist, to 1921, 1919] Map."}/>
                     <Citation identifier={"source-3"}
                               title={"Anita Blake and Irene Donnelly, " +
                               "Anacostia Oral History Project: 16."}/>
