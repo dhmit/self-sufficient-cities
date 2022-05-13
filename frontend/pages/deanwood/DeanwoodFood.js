@@ -336,8 +336,8 @@ export const DeanwoodFood = ({resources}) => {
                         D.C.
                     </p>
                 </Col>
-                <Col lg={5}/>
-                <Col lg={6}>
+                <Col lg={4}/>
+                <Col lg={8}>
                     <Image src={income_map_2005} fluid={true}/>
                     <Image src={income_map_2015} fluid={true}/>
                     <small>
@@ -346,6 +346,9 @@ export const DeanwoodFood = ({resources}) => {
                         source
                     </a>
                     </small>
+                </Col>
+                <Col lg={5}/>
+                <Col lg={6}>
                     <Image src={income} fluid={true}/>
                     <small> Notable points in the graph
                         are the jumps between 1980- 1990 and 2015-2020. Another major point of
