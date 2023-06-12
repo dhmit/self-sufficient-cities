@@ -1,2 +1,5 @@
-# Self Sustaining Cities
+# Self-Sufficient Cities
 
+Self-Sufficient Cities was a project by the [MIT Programs in Digital Humanities](https://digitalhumanities.mit.edu/) in collaboration with our Spring 2022 Faculty Fellow, [Kate Brown](https://sts-program.mit.edu/people/sts-faculty/kate-brown/), Professor of Science, Technology, and Society at MIT. 
+
+This project uses techniques of web development, data visualization, mapping, timelines, and database design to grapple with the puzzle that in one of the world’s wealthiest countries, 36 million people presently experience food insecurity, while a majority of Americans suffer from diet-related diseases. Students developed an online, interactive mapping and timeline project that tells the story of the rise and fall of urban communities that grew their own food in the 20th century United States. Using population and agricultural census documents, oral histories, sample household survey data, photos, maps, aerial photography, and satellite imagery, the project enables users to travel through time and space to see how changes in landscapes, land use, and infrastructure affect community well-being.
