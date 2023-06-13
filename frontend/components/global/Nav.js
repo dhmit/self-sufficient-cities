@@ -32,8 +32,11 @@ const Nav = () => {
                         <a className="nav-link" href={"/deanwood"}>Deanwood</a>
                     </li>
                     <li className="nav-item mr-2">
-                        <a className="nav-link" href={"/api"}>API</a>
+                        <a className="nav-link" href={"/about"}>About</a>
                     </li>
+                    {/* <li className="nav-item mr-2">
+                        <a className="nav-link" href={"/api"}>API</a>
+                    </li> */}
                 </ul>
                 <a className="lab-link mb-3"
                    href="https://digitalhumanities.mit.edu/" target="_blank" rel="noreferrer">

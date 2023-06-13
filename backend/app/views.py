@@ -67,6 +67,20 @@ def index(request):
 
     return render(request, 'index.html', context)
 
+def about(request):
+    """
+    About page
+    """
+
+    context = {
+        'page_metadata': {
+            'title': 'About page'
+        },
+        'component_name': 'About'
+    }
+
+    return render(request, 'index.html', context)
+
 
 def example(request, example_id=None):
     """

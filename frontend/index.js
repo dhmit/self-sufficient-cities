@@ -6,6 +6,7 @@ import Base from "./components/global/Base";
 import ErrorNotFoundComponent from "./components/global/ErrorNotFoundComponent";
 import ExampleId from "./components/ExampleId";
 import Home from "./pages/Home";
+import About from "./pages/About";
 import MapConsolidated from "./components/maps/MapConsolidated";
 import {Timeline} from "./pages/Timeline";
 import MapLegend from "./components/maps/MapLegend";
@@ -33,6 +34,7 @@ const COMPONENTS = {
     ErrorNotFoundComponent,
     ExampleId,
     Home,
+    About,
     Timeline,
     MapMicro,
     MapLegend,
