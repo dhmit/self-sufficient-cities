@@ -1,5 +1,5 @@
 import React from "react";
-import {Container, Row, Col} from "react-bootstrap";
+import {Container, Row, Col, Modal, Button} from "react-bootstrap";
 
 import HomePageCard from "../components/home/HomePageCard";
 import deanwood_img from "../images/wymar.jpg";
@@ -35,8 +35,34 @@ const city_data = [
 ];
 
 export default class Home extends React.Component {
+
+    constructor(props) {
+        super(props);
+        this.state = {
+            show: true
+        };
+    }
+    
+      
     render() {
+        const handleClose = () => this.setState({show: false});
+
         return <>
+            <Modal show={this.state.show} onHide={handleClose}>
+                <Modal.Header closeButton>
+                    <Modal.Title>Archived Copy</Modal.Title>
+                </Modal.Header>
+                <Modal.Body>
+                    Self-Sufficient Cities was a project by the <a href = "https://digitalhumanities.mit.edu/">MIT Programs in Digital Humanities</a> in collaboration with our Spring 2022 Faculty Fellow, <a href = "https://sts-program.mit.edu/people/sts-faculty/kate-brown/">Kate Brown</a>, Professor of Science, Technology, and Society at MIT. The project has been archived, and is no longer being actively maintained. 
+                    <br/><br/>
+                    The project contains student work, and there may be features which are incomplete or inaccurate
+                </Modal.Body>
+                <Modal.Footer>
+                    <Button variant="secondary" onClick={handleClose}>
+                        Close
+                    </Button>
+                </Modal.Footer>
+            </Modal>
             <Container>
                 <Row xs={1} md={2} className='justify-content-around'>
                     <Col md={4} className={"city-heading"}>
